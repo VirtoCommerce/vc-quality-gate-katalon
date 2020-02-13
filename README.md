@@ -1,0 +1,1 @@
+# vc-quality-gate-katalon
