@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SearchCorrectValue</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f9cf1738-2c42-4a48-b4d2-9754847d2717</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1c9700fe-7806-4cf0-8972-488f1189f46e</id>
+      <masked>false</masked>
+      <name>variable</name>
+   </variable>
+</TestCaseEntity>
