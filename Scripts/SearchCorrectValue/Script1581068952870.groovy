@@ -29,8 +29,15 @@ String SearchResult = 'beats'
 
 WebUI.setText(findTestObject('Header/Search line'), SearchResult)
 
-WebUI.verifyTextPresent(SearchResult, false)
+String TextinHelper = WebUI.getText(findTestObject('Header/SearchLineHelper'))
 
+System.out.println(TextinHelper);
+
+int indexSearchlineHelper = TextinHelper.indexOf(SearchResult);
+
+if(indexSearchlineHelper == - 1) {
+	System.out.println('Слова в хелпере нет');
+ } else {
 WebUI.click(findTestObject('Header/ButtonSearchHeader'))
 
 String SearchResultUp = SearchResult.toUpperCase()
@@ -41,24 +48,23 @@ String SearchResultCheck = ('YOUR SEARCH FOR "' + SearchResultUp) + '" REVEALED 
 
 WebUI.verifyElementText(findTestObject('SearchResultPage/H2SearchResultTitle'), SearchResultCheck)
 
-List<String> SearchResultItem = WebUI.findWebElements(findTestObject('Object Repository/Page_Electronics/ItemSearchResult'),2)
+List<String> SearchResultItem = WebUI.findWebElements(findTestObject('Object Repository/Page_Electronics/ItemSearchResult'), 
+    2)
 
 for (int i = 0; i < SearchResultItem.size(); i++) {
- String ProductNameSearchResultItem = SearchResultItem[i].findElement(By.tagName('p')).getText();
- String LowerProductNameSearch = ProductNameSearchResultItem.toLowerCase()
- System.out.println(ProductNameSearchResultItem)
- int indexSearch = LowerProductNameSearch.indexOf(SearchResultLow)
- //WebUI.verifyMatch(LowerProductNameSearch, SearchResultLow, false)
- 
+    String ProductNameSearchResultItem = (SearchResultItem[i]).findElement(By.tagName('p')).getText()
+
+    String LowerProductNameSearch = ProductNameSearchResultItem.toLowerCase()
+
+    int indexSearch = LowerProductNameSearch.indexOf(SearchResultLow)
 }
 
-//int totalelementsfind = SearchResultItem.size()
+WebUI.verifyElementPresent(findTestObject('SearchResultPage/PriceSearchResultItem'), 0)
 
-/*System.out.println(totalelementsfind)
-
-WebUI.getText(findTestObject(null))
-
-WebUI.verifyMatch('', '', false)
+WebUI.verifyElementPresent(findTestObject('SearchResultPage/PTagSearchResultItem'), 0)
 
 
-*/
+ }
+
+
+

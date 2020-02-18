@@ -27,9 +27,7 @@ String DeCurrentUrl = WebUI.getUrl()
 
 WebUI.verifyMatch(DeCurrentUrl, 'https://qa-demovc-store.azurewebsites.net/de-DE/', false)
 
-WebUI.verifyElementText(findTestObject('Header/CartHeaderButton'), 'Warenkorb')
+String GetTextPlaceholder = WebUI.getText(findTestObject('Object Repository/Header/SignInButtonHeader'))
 
-//WebUI.acceptAlert()
-
-//WebUI.acceptAlert()
+WebUI.verifyMatch(GetTextPlaceholder, 'Anmelden', false)
 

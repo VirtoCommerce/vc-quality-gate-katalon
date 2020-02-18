@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//a[@class = 'header-cart-btn cart-toggle ng-scope']</value>
+         <value>id(&quot;electronics&quot;)/header[@class=&quot;site-header&quot;]/div[@class=&quot;wrapper&quot;]/div[@class=&quot;grid--full&quot;]/div[@class=&quot;grid-item large--two-third text-center large--text-right&quot;]/a[@class=&quot;header-cart-btn cart-toggle ng-scope&quot;][count(. | //a[@class = 'header-cart-btn cart-toggle ng-scope' and (not(contains(text(), 'Quote')) or not(contains(., 'Quote')))]) = count(//a[@class = 'header-cart-btn cart-toggle ng-scope' and (not(contains(text(), 'Quote')) or not(contains(., 'Quote')))])]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,14 +38,14 @@
       <value>/en-US/cart</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
+      <isSelected>true</isSelected>
+      <matchCondition>not contain</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Cart</value>
+      <value>Quote</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>

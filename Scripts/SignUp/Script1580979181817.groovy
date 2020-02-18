@@ -52,7 +52,9 @@ WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUPPAge'), GlobalVariab
 
 WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
 
-WebUI.takeScreenshot()
+String GetText = findTestObject('Object Repository/Header/HeaderLogoutText').getText();
+
+WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
 
 WebUI.click(findTestObject('Header/HeaderLogoutButton'))
 

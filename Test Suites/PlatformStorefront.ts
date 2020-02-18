@@ -11,39 +11,93 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>79f9146d-e5ee-4f62-8861-88151ebe9758</testSuiteGuid>
    <testCaseLink>
-      <guid>6bee8957-7bfb-4754-a106-6de2b950c008</guid>
+      <guid>1c4b51e0-fa9b-40fb-8c02-8318e7449958</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SignUp</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ecf0129f-50d1-436f-8885-6f0d2d7c2f6a</guid>
+      <guid>3f208fa7-0087-4dda-94da-44042287abf2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SignIn</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3c5cd4e9-2625-45e9-90a0-cd70cc18df9f</guid>
+      <guid>764f3b2b-23d2-4fcc-8750-5ed716bb12a6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Anonymous_QuoteRequest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>53a624cf-4085-4c3d-af00-38cb352d8794</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/ChangeLocalization</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>477de1df-57f8-45cc-b2dd-13d1d6e66ea3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/ChangeStore</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9935edd3-8d23-43bf-9dfe-e6529fb3b2f7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Filtering</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>43bed128-d240-4868-9a93-73ead1667520</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Logo</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a7ae109e-d633-42ea-a260-e5605c89e0a8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Login_Quote_Request</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>422fa32b-40d9-479f-be55-fbe019a4ea76</guid>
+      <guid>bd20f6c4-4e19-4477-9ef5-404684f214b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/NewsLetter</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a4f4f79e-562f-47ef-8275-7d1ff5c1ffe7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SearchCorrectValue</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>1c9700fe-7806-4cf0-8972-488f1189f46e</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7ea27fc1-5863-4533-af24-8838e898bdb7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SearchIncorrectValue</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>96dc1327-a297-4cf2-add9-e4702ac91634</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddProductToCart_Login_ProcessOrder</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a9e29817-354f-4742-abbe-064fe6d011b3</guid>
+      <guid>fceb8722-76fe-423a-823b-59c916c02e65</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/AddProductToCart_Anonim_ProcessOrder</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ab2d9090-2c86-4df4-86f8-c0fc61915edf</guid>
+      <guid>d6df5cd2-90e8-41df-b983-b57a8d220352</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SignUp</testCaseId>
+      <testCaseId>Test Cases/Sorting</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

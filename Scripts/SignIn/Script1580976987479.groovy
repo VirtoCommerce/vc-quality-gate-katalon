@@ -21,17 +21,21 @@ WebUI.waitForPageLoad(2)
 
 WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
-WebUI.setText(findTestObject('Page_Electronics/EmailCustomerLogin'), 'TestUser1')
+WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), 'admin')
 
-WebUI.setText(findTestObject('Page_Electronics/PasswordCustomerLogin'), 'TestUser1')
+WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), 'store')
 
-WebUI.click(findTestObject('Page_Electronics/SignInSubmitButton'))
+WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
 
 WebUI.takeScreenshot('screenshots/login.png')
 
-WebUI.click(findTestObject('Page_Electronics/HeaderLogoutButton'))
+String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
 
-WebUI.takeScreenshot('screenshots/logout.png')
+WebUI.verifyMatch(GetText, 'admin', false)
 
-WebUI.closeBrowser()
+WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
+
+
+
+
 

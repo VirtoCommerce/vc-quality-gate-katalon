@@ -84,5 +84,7 @@ WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/Payment
 
 WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'))
 
-WebUI.takeScreenshot()
+WebUI.verifyElementPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/GetInvoiceButton'), 30)
+
+WebUI.verifyElementPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/BillingAddressThankyoupage'), 30)
 
