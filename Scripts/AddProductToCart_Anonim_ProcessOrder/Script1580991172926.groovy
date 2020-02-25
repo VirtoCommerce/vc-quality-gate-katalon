@@ -76,5 +76,5 @@ WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/Payment
 
 WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'))
 
-WebUI.takeScreenshot()
+
 

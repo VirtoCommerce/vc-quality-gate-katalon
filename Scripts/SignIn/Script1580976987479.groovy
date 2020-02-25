@@ -21,9 +21,9 @@ WebUI.waitForPageLoad(2)
 
 WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
-WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), 'admin')
+WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), GlobalVariable.UserLogPass)
 
-WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), 'store')
+WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), GlobalVariable.UserLogPass)
 
 WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
 

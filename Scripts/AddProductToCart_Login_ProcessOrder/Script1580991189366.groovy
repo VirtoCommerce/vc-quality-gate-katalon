@@ -19,9 +19,9 @@ WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
 
 WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
-WebUI.setText(findTestObject('SignInPage/EmailCustomerLogin'), 'TestUser1')
+WebUI.setText(findTestObject('SignInPage/EmailCustomerLogin'), GlobalVariable.UserLogPass)
 
-WebUI.setText(findTestObject('SignInPage/PasswordCustomerLogin'), 'TestUser1')
+WebUI.setText(findTestObject('SignInPage/PasswordCustomerLogin'), GlobalVariable.UserLogPass)
 
 WebUI.click(findTestObject('SignInPage/SignInSubmitButton'))
 
