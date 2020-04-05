@@ -17,13 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/en-US/')
 
-WebUI.click(findTestObject('Header/SignInButtonHeader'))
-
-WebUI.setText(findTestObject('SignInPage/EmailCustomerLogin'), GlobalVariable.UserLogPass)
-
-WebUI.setText(findTestObject('SignInPage/PasswordCustomerLogin'), GlobalVariable.UserLogPass)
-
-WebUI.click(findTestObject('SignInPage/SignInSubmitButton'))
+WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass ], FailureHandling.OPTIONAL)
 
 WebUI.navigateToUrl('https://qa-demovc-store.azurewebsites.net/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 

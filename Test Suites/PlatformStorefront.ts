@@ -20,7 +20,7 @@
       <guid>3f208fa7-0087-4dda-94da-44042287abf2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SignIn</testCaseId>
+      <testCaseId>Test Cases/Logout</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>764f3b2b-23d2-4fcc-8750-5ed716bb12a6</guid>
