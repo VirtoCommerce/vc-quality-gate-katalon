@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.click(findTestObject('Page_Electronics/a_Headphones'))
 
@@ -30,6 +30,7 @@ s = s.substring(0, s.indexOf(')'))
 List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
     2)
 
-
 WebUI.verifyEqual(s, ProductsInCategoryPage.size())
+
+WebUI.closeBrowser()
 

@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.click(findTestObject('Header/Search line'))
 
@@ -24,10 +24,11 @@ String SearchResultIncorrect = 'qwerty'
 WebUI.setText(findTestObject('Header/Search line'), SearchResultIncorrect)
 
 //WebUI.verifyTextPresent(SearchResult, false)
-
 WebUI.click(findTestObject('Header/ButtonSearchHeader'))
 
 String SearchResultCheck = 'SEARCH FOR PRODUCTS ON OUR SITE'
 
 WebUI.verifyElementText(findTestObject('SearchResultPage/H2IncorrectSearchPage'), SearchResultCheck)
+
+WebUI.closeBrowser()
 

@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.verifyElementClickable(findTestObject('Breadcrumb/LastItemBreadcrumbs'))
 
@@ -36,4 +36,6 @@ String ExpectedUrlHome = 'https://qa-demovc-store.azurewebsites.net/en-US/'
 String CurrentUrlHome = WebUI.getUrl()
 
 WebUI.verifyEqual(CurrentUrlHome, ExpectedUrlHome)
+
+WebUI.closeBrowser()
 

@@ -15,9 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
-WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass ], FailureHandling.OPTIONAL)
+WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
+    FailureHandling.OPTIONAL)
 
 WebUI.mouseOver(findTestObject('Page_Electronics/Camcorders'))
 
@@ -81,4 +82,6 @@ WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateO
 WebUI.verifyElementPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/GetInvoiceButton'), 30)
 
 WebUI.verifyElementPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/BillingAddressThankyoupage'), 30)
+
+WebUI.closeBrowser()
 

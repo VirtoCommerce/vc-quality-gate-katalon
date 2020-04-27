@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.mouseOver(findTestObject('Header/StoreMenu'))
 
@@ -28,4 +28,6 @@ String B2BCurrentUrl = WebUI.getUrl()
 WebUI.verifyMatch(B2BCurrentUrl, 'https://qa-demovc-store.azurewebsites.net/B2B-store/', false)
 
 WebUI.takeScreenshot()
+
+WebUI.closeBrowser()
 
