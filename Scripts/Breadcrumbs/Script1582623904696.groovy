@@ -17,18 +17,25 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser(GlobalVariable.StoreURL)
 
-WebUI.click(findTestObject('Header/Search line'))
+WebUI.verifyElementClickable(findTestObject('Breadcrumb/LastItemBreadcrumbs'))
 
-String SearchResultIncorrect = 'qwerty'
+WebUI.click(findTestObject('Breadcrumb/ItemBreadCrumbs'))
 
-WebUI.setText(findTestObject('Header/Search line'), SearchResultIncorrect)
+String ExpectedUrl = 'https://qa-demovc-store.azurewebsites.net/en-US/camcorders/aerial-imaging-drones'
 
-//WebUI.verifyTextPresent(SearchResult, false)
-WebUI.click(findTestObject('Header/ButtonSearchHeader'))
+String CurrentUrl = WebUI.getUrl()
 
-String SearchResultCheck = 'SEARCH FOR PRODUCTS ON OUR SITE'
+WebUI.verifyEqual(CurrentUrl, ExpectedUrl)
 
-WebUI.verifyElementText(findTestObject('SearchResultPage/H2IncorrectSearchPage'), SearchResultCheck)
+WebUI.navigateToUrl('https://qa-demovc-store.azurewebsites.net/en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
+
+WebUI.click(findTestObject('Breadcrumb/HomeBreadCrumbs'))
+
+String ExpectedUrlHome = 'https://qa-demovc-store.azurewebsites.net/en-US/'
+
+String CurrentUrlHome = WebUI.getUrl()
+
+WebUI.verifyEqual(CurrentUrlHome, ExpectedUrlHome)
 
 WebUI.closeBrowser()
 

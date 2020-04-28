@@ -21,7 +21,7 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.click(findTestObject('Header/Search line'))
 
@@ -31,40 +31,38 @@ WebUI.setText(findTestObject('Header/Search line'), SearchResult)
 
 String TextinHelper = WebUI.getText(findTestObject('Header/SearchLineHelper'))
 
-System.out.println(TextinHelper);
+System.out.println(TextinHelper)
 
-int indexSearchlineHelper = TextinHelper.indexOf(SearchResult);
+int indexSearchlineHelper = TextinHelper.indexOf(SearchResult)
 
-if(indexSearchlineHelper == - 1) {
-	System.out.println('Слова в хелпере нет');
- } else {
-WebUI.click(findTestObject('Header/ButtonSearchHeader'))
+if (indexSearchlineHelper == -1) {
+    System.out.println('Слова в хелпере нет')
+} else {
+    WebUI.click(findTestObject('Header/ButtonSearchHeader'))
 
-String SearchResultUp = SearchResult.toUpperCase()
+    String SearchResultUp = SearchResult.toUpperCase()
 
-String SearchResultLow = SearchResult.toLowerCase()
+    String SearchResultLow = SearchResult.toLowerCase()
 
-String SearchResultCheck = ('YOUR SEARCH FOR "' + SearchResultUp) + '" REVEALED THE FOLLOWING:'
+    String SearchResultCheck = ('YOUR SEARCH FOR "' + SearchResultUp) + '" REVEALED THE FOLLOWING:'
 
-WebUI.verifyElementText(findTestObject('SearchResultPage/H2SearchResultTitle'), SearchResultCheck)
+    WebUI.verifyElementText(findTestObject('SearchResultPage/H2SearchResultTitle'), SearchResultCheck)
 
-List<String> SearchResultItem = WebUI.findWebElements(findTestObject('Object Repository/Page_Electronics/ItemSearchResult'), 
-    2)
+    List<String> SearchResultItem = WebUI.findWebElements(findTestObject('Object Repository/Page_Electronics/ItemSearchResult'), 
+        2)
 
-for (int i = 0; i < SearchResultItem.size(); i++) {
-    String ProductNameSearchResultItem = (SearchResultItem[i]).findElement(By.tagName('p')).getText()
+    for (int i = 0; i < SearchResultItem.size(); i++) {
+        String ProductNameSearchResultItem = (SearchResultItem[i]).findElement(By.tagName('p')).getText()
 
-    String LowerProductNameSearch = ProductNameSearchResultItem.toLowerCase()
+        String LowerProductNameSearch = ProductNameSearchResultItem.toLowerCase()
 
-    int indexSearch = LowerProductNameSearch.indexOf(SearchResultLow)
+        int indexSearch = LowerProductNameSearch.indexOf(SearchResultLow)
+    }
+    
+    WebUI.verifyElementPresent(findTestObject('SearchResultPage/PriceSearchResultItem'), 0)
+
+    WebUI.verifyElementPresent(findTestObject('SearchResultPage/PTagSearchResultItem'), 0)
+
+    WebUI.closeBrowser()
 }
-
-WebUI.verifyElementPresent(findTestObject('SearchResultPage/PriceSearchResultItem'), 0)
-
-WebUI.verifyElementPresent(findTestObject('SearchResultPage/PTagSearchResultItem'), 0)
-
-
- }
-
-
 

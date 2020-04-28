@@ -15,20 +15,22 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
 
-WebUI.click(findTestObject('Header/Search line'))
+WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
-String SearchResultIncorrect = 'qwerty'
+WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), login)
 
-WebUI.setText(findTestObject('Header/Search line'), SearchResultIncorrect)
+WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), password)
 
-//WebUI.verifyTextPresent(SearchResult, false)
-WebUI.click(findTestObject('Header/ButtonSearchHeader'))
+WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
 
-String SearchResultCheck = 'SEARCH FOR PRODUCTS ON OUR SITE'
+WebUI.takeScreenshot('screenshots/login.png')
 
-WebUI.verifyElementText(findTestObject('SearchResultPage/H2IncorrectSearchPage'), SearchResultCheck)
+String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
 
-WebUI.closeBrowser()
+WebUI.verifyMatch(GetText, 'admin', false)
+
+
+
+
 

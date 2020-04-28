@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.time.TimeCategory as TimeCategory
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.click(findTestObject('Header/SignUpButtonHeader'))
 
@@ -52,11 +52,13 @@ WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUPPAge'), GlobalVariab
 
 WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
 
-String GetText = findTestObject('Object Repository/Header/HeaderLogoutText').getText();
+String GetText = findTestObject('Object Repository/Header/HeaderLogoutText').getText()
 
 WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
 
 WebUI.click(findTestObject('Header/HeaderLogoutButton'))
 
-WebUI.acceptAlert()
+not_run: WebUI.acceptAlert()
+
+WebUI.closeBrowser()
 

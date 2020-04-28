@@ -9,46 +9,26 @@
          <key>XPATH</key>
          <value>//body[@id='aerial-imaging-drones']/main/nav</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//nav[@class = 'breadcrumb']</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>nav</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
       <value>breadcrumb</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value>
-  Home
-  
-    
-      
-        
-          ›
-          
-          Camcorders
-        
-      
-        
-      
-      ›
-      Aerial Imaging &amp; Drones
-  
-  
-</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
