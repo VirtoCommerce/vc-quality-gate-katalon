@@ -14,9 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.time.TimeCategory
+import groovy.time.TimeCategory as TimeCategory
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.click(findTestObject('Header/SignUpButtonHeader'))
 
@@ -35,16 +35,14 @@ WebUI.click(findTestObject('SignUpPage/InputLastNameSignUpPage'))
 WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), 'User')
 
 WebUI.click(findTestObject('SignUpPage/InputPasswordSignUpPage'))
-	
-use(TimeCategory, { 
-        today = new Date()	
-    })
-	
 
+use(TimeCategory, { 
+        today = new Date()
+    })
 
 String todaysDate = today.format('MMddyyyy')
 
-GlobalVariable.UserLogPass = "TestUser" + todaysDate;
+GlobalVariable.UserLogPass = ('TestUser' + todaysDate)
 
 WebUI.setText(findTestObject('SignUpPage/InputPasswordSignUpPage'), GlobalVariable.UserLogPass)
 
@@ -54,7 +52,13 @@ WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUPPAge'), GlobalVariab
 
 WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
 
-WebUI.takeScreenshot()
+String GetText = findTestObject('Object Repository/Header/HeaderLogoutText').getText()
+
+WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
 
 WebUI.click(findTestObject('Header/HeaderLogoutButton'))
+
+not_run: WebUI.acceptAlert()
+
+WebUI.closeBrowser()
 

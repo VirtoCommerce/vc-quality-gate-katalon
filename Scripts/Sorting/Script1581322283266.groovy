@@ -22,7 +22,7 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
 import java.util.Arrays as Arrays
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.waitForPageLoad(2)
 
@@ -33,7 +33,7 @@ WebUI.click(findTestObject('Page_Electronics/AeriaImagingDrones'))
 List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
     2)
 
-float[] ArrayFloatPrice = new float[ProductsInCategoryPage.size()]
+float[] ArrayFloatPrice = new float[]
 
 for (int i = 0; i < ProductsInCategoryPage.size(); i++) {
     String ProductPrice = (ProductsInCategoryPage[i]).findElement(By.tagName('small')).getText()
@@ -56,7 +56,7 @@ WebUI.selectOptionByIndex(findTestObject('Object Repository/AerialImagingCategor
 List<String> SortingProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
     2)
 
-float[] ArrayFloatPriceSorting = new float[ProductsInCategoryPage.size()]
+float[] ArrayFloatPriceSorting = new float[]
 
 for (int i = 0; i < SortingProductsInCategoryPage.size(); i++) {
     String ProductPrice = (SortingProductsInCategoryPage[i]).findElement(By.tagName('small')).getText()
@@ -73,5 +73,8 @@ float FirstNumberFloatPriceSorting = ArrayFloatPriceSorting[0]
 float LastNumberFloatPriceSorting = ArrayFloatPriceSorting[(ArrayFloatPriceSorting.size() - 1)]
 
 WebUI.verifyEqual(FirstNumberFloatPriceSorting, LastNumberFloatPrice)
+
 WebUI.verifyEqual(LastNumberFloatPriceSorting, FirstNumberFloatPrice)
+
+WebUI.closeBrowser()
 

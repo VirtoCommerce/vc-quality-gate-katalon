@@ -9,42 +9,26 @@
          <key>XPATH</key>
          <value>//body[@id='electronics']/header/div/div/div[2]/div/span</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@ng-bind = 'customer.firstName || customer.userName']</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>site-header--meta-links medium-down--hide</value>
+      <value>a</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>ng-bind</name>
       <type>Main</type>
-      <value>
-                        
-                        
-                            Logged in as Test · Log out
-                        
-                        
-                    </value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>id(&quot;electronics&quot;)/header[@class=&quot;site-header&quot;]/div[@class=&quot;wrapper&quot;]/div[@class=&quot;grid--full&quot;]/div[@class=&quot;grid-item large--two-third text-center large--text-right&quot;]/div[@class=&quot;site-header--text-links&quot;]/span[@class=&quot;site-header--meta-links medium-down--hide&quot;]</value>
+      <value>customer.firstName || customer.userName</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

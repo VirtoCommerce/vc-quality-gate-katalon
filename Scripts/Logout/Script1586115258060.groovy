@@ -15,23 +15,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.waitForPageLoad(2)
 
-WebUI.click(findTestObject('Header/SignInButtonHeader'))
+WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
+    FailureHandling.OPTIONAL)
 
-WebUI.setText(findTestObject('Page_Electronics/EmailCustomerLogin'), 'TestUser1')
-
-WebUI.setText(findTestObject('Page_Electronics/PasswordCustomerLogin'), 'TestUser1')
-
-WebUI.click(findTestObject('Page_Electronics/SignInSubmitButton'))
-
-WebUI.takeScreenshot('screenshots/login.png')
-
-WebUI.click(findTestObject('Page_Electronics/HeaderLogoutButton'))
-
-WebUI.takeScreenshot('screenshots/logout.png')
+WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
 
 WebUI.closeBrowser()
 

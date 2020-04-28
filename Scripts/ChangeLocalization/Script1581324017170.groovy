@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.mouseOver(findTestObject('Header/StoreMenu'))
 
@@ -27,9 +27,9 @@ String DeCurrentUrl = WebUI.getUrl()
 
 WebUI.verifyMatch(DeCurrentUrl, 'https://qa-demovc-store.azurewebsites.net/de-DE/', false)
 
-WebUI.verifyElementText(findTestObject('Header/CartHeaderButton'), 'Warenkorb')
+String GetTextPlaceholder = WebUI.getText(findTestObject('Object Repository/Header/SignInButtonHeader'))
 
-//WebUI.acceptAlert()
+WebUI.verifyMatch(GetTextPlaceholder, 'Anmelden', false)
 
-//WebUI.acceptAlert()
+WebUI.closeBrowser()
 

@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser('https://qa-demovc-store.azurewebsites.net/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
 WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
 
@@ -66,4 +66,6 @@ WebUI.selectOptionByIndex(findTestObject('QuoteRequestPage/SelectStateBillingQuo
 WebUI.check(findTestObject('QuoteRequestPage/CheckBillingEqualShipping'))
 
 WebUI.click(findTestObject('QuoteRequestPage/SubmitQuoteRequest'))
+
+WebUI.closeBrowser()
 
