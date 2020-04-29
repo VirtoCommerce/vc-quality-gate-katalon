@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
+WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.verifyElementVisible(findTestObject('Header/logo'))
 
@@ -25,7 +25,7 @@ WebUI.click(findTestObject('Header/logo'))
 
 String CurrentUrl = WebUI.getUrl()
 
-WebUI.verifyMatch(CurrentUrl, 'https://qa-demovc-store.azurewebsites.net/en-US/', false)
+WebUI.verifyMatch(CurrentUrl, GlobalVariable.StoreURL + 'en-US/', false)
 
 WebUI.closeBrowser()
 

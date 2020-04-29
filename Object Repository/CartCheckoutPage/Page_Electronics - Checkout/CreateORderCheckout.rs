@@ -9,6 +9,16 @@
          <key>XPATH</key>
          <value>//button[@name='button']</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = '
+            Create order
+            
+        ' or . = '
+            Create order
+            
+        ')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -17,10 +27,11 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
+      <value>span
+</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>

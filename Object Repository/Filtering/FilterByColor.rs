@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//aside[@id='collectionFilters']/div/div[2]/ul/li[3]/a</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@title = concat('Show products matching tag ' , &quot;'&quot; , 'Silver') and (text() = 'Silver (2)' or . = 'Silver (2)')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -20,7 +24,7 @@
       <value>a</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>

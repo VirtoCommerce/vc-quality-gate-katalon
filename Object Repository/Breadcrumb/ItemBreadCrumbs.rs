@@ -9,18 +9,22 @@
          <key>XPATH</key>
          <value>//body[@id='3dr-solo-quadcopter-no-gimbal']/main/nav/a[3]</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Aerial Imaging &amp; Drones' or . = 'Aerial Imaging &amp; Drones')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>

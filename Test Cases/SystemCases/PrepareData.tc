@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>NewsLetter</name>
+   <name>PrepareData</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>5697abfe-195a-4cac-819c-a1b225d2188e</testCaseGuid>
+   <testCaseGuid>9a5a8d4b-9733-4e6f-bb31-c9c98fb7f365</testCaseGuid>
 </TestCaseEntity>

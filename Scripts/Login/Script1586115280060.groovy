@@ -15,22 +15,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-
 WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
-WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), login)
+def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
+def Login = DataFromFile.Login
+def Password = DataFromFile.Password
 
-WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), password)
+if( Login !=""&& Password!="" ){
+	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), Login)
+	
+	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), Password)
+ }else{
+	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), login)
+
+	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), password)
+ }
+
+
 
 WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
-
-WebUI.takeScreenshot('screenshots/login.png')
 
 String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
 
 WebUI.verifyMatch(GetText, 'admin', false)
-
-
-
-
 

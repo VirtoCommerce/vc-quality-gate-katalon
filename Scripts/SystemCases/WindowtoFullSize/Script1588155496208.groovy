@@ -14,19 +14,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
 
-def Email = DataFromFile.Email
+WebUI.openBrowser(GlobalVariable.StoreURL)
 
-
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
-
-
-WebUI.focus(findTestObject('Page_Electronics/NewsletterFooterInput'))
-
-WebUI.setText(findTestObject('Page_Electronics/NewsletterFooterInput'), Email)
-
-WebUI.click(findTestObject('Page_Electronics/NewsletterSubscibeButton'))
-
-WebUI.closeBrowser()
-
+WebUI.maximizeWindow()
