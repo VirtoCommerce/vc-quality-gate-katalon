@@ -46,9 +46,13 @@ WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), LastName)
 
 WebUI.click(findTestObject('SignUpPage/InputPasswordSignUpPage'))
 
+// need to refact ---------- start
+
 use(TimeCategory, { 
         today = new Date()
     })
+
+// need to refact ---------- end
 
 String todaysDate = today.format('MMddyyyy')
 
