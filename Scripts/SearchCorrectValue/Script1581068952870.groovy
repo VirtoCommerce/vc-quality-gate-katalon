@@ -40,7 +40,7 @@ System.out.println(SearchResult)
 int indexSearchlineHelper = TextinHelper.indexOf(SearchResult)
 
 if (indexSearchlineHelper == -1) {
-   System.out.println('Слова в хелпере нет')
+   System.out.println('word is absent in the helper')
 } else {
     WebUI.click(findTestObject('Header/ButtonSearchHeader'))
 

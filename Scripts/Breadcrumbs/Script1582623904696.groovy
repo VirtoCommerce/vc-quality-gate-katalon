@@ -17,23 +17,23 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(GlobalVariable.StoreURL + 'en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
+WebUI.navigateToUrl(GlobalVariable.StoreURL + '/en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
 
 WebUI.verifyElementClickable(findTestObject('Breadcrumb/LastItemBreadcrumbs'))
 
 WebUI.click(findTestObject('Breadcrumb/a_Camcorders'))
 
-String ExpectedUrl = GlobalVariable.StoreURL + 'en-US/camcorders'
+String ExpectedUrl = GlobalVariable.StoreURL + '/en-US/camcorders'
 
 String CurrentUrl = WebUI.getUrl()
 
 WebUI.verifyEqual(CurrentUrl, ExpectedUrl)
 
-WebUI.navigateToUrl(GlobalVariable.StoreURL + 'en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
+WebUI.navigateToUrl(GlobalVariable.StoreURL + '/en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
 
 WebUI.click(findTestObject('Breadcrumb/HomeBreadCrumbs'))
 
-String ExpectedUrlHome = GlobalVariable.StoreURL + 'en-US/'
+String ExpectedUrlHome = GlobalVariable.StoreURL + '/en-US/'
 
 String CurrentUrlHome = WebUI.getUrl()
 

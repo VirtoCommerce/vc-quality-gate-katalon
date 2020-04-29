@@ -31,6 +31,3 @@ WebUI.click(findTestObject('Header/ButtonSearchHeader'))
 String SearchResultCheck = 'SEARCH FOR PRODUCTS ON OUR SITE'
 
 WebUI.verifyElementText(findTestObject('SearchResultPage/H2IncorrectSearchPage'), SearchResultCheck)
-
-//WebUI.closeBrowser()
-
