@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
+WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Page_Electronics/a_Headphones'))
 
@@ -25,12 +25,15 @@ String s = WebUI.getText(findTestObject('Filtering/FilterByColor'))
 
 s = s.substring(s.indexOf('(') + 1)
 
+
 s = s.substring(0, s.indexOf(')'))
+
 
 List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
     2)
 
 WebUI.verifyEqual(s, ProductsInCategoryPage.size())
+
 
 WebUI.closeBrowser()
 

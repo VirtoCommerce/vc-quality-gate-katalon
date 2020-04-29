@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//body[@id='aerial-imaging-drones']/main/div/div/div/div</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@class, 'grid-item large--one-quarter medium--one-third small--one-half')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -21,10 +25,10 @@
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
+      <matchCondition>contains</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>grid-item large--one-quarter medium--one-third small--one-half comparable</value>
+      <value>grid-item large--one-quarter medium--one-third small--one-half</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

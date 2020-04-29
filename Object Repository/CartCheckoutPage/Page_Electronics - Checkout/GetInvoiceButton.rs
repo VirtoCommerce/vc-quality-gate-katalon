@@ -7,9 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[(text() = 'Get invoice
-' or . = 'Get invoice
-') and @class = 'btn-text']</value>
+         <value>//span[(text() = 'Get invoice' or . = 'Get invoice') and @class = 'btn-text']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -26,8 +24,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Get invoice
-</value>
+      <value>Get invoice</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>

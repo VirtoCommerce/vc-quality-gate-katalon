@@ -16,7 +16,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.time.TimeCategory as TimeCategory
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
+def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
+
+def Email = DataFromFile.Email
+
+def FirstName = DataFromFile.FirstName
+
+def LastName = DataFromFile.LastName
+
+
+WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+
 
 WebUI.click(findTestObject('Header/SignUpButtonHeader'))
 
@@ -24,15 +34,15 @@ WebUI.verifyElementText(findTestObject('SignUpPage/H1SignUpPage'), 'CREATE ACCOU
 
 WebUI.click(findTestObject('SignUpPage/InputEmailSignUPPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputEmailSignUPPage'), 'atz@virtoway.com')
+WebUI.setText(findTestObject('SignUpPage/InputEmailSignUPPage'), Email)
 
 WebUI.click(findTestObject('SignUpPage/InputFirstNameSignUPPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUPPage'), 'Test')
+WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUPPage'), FirstName)
 
 WebUI.click(findTestObject('SignUpPage/InputLastNameSignUpPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), 'User')
+WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), LastName)
 
 WebUI.click(findTestObject('SignUpPage/InputPasswordSignUpPage'))
 
