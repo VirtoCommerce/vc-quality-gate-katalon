@@ -15,20 +15,22 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
+def DataFromFile =  WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
+
+def IncorrectSearchRequest = DataFromFile.IncorrectSearchRequest
+
+WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Header/Search line'))
 
-String SearchResultIncorrect = 'qwerty'
 
-WebUI.setText(findTestObject('Header/Search line'), SearchResultIncorrect)
+WebUI.setText(findTestObject('Header/Search line'), IncorrectSearchRequest)
 
-//WebUI.verifyTextPresent(SearchResult, false)
 WebUI.click(findTestObject('Header/ButtonSearchHeader'))
 
 String SearchResultCheck = 'SEARCH FOR PRODUCTS ON OUR SITE'
 
 WebUI.verifyElementText(findTestObject('SearchResultPage/H2IncorrectSearchPage'), SearchResultCheck)
 
-WebUI.closeBrowser()
+//WebUI.closeBrowser()
 

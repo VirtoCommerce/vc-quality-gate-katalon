@@ -21,22 +21,26 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
+def DataFromFile =  WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
+
+def CorrectSearchRequest = DataFromFile.CorrectSearchRequest
+
+WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+
 
 WebUI.click(findTestObject('Header/Search line'))
 
-String SearchResult = 'beats'
+String SearchResult = CorrectSearchRequest
 
 WebUI.setText(findTestObject('Header/Search line'), SearchResult)
 
-String TextinHelper = WebUI.getText(findTestObject('Header/SearchLineHelper'))
-
+String TextinHelper = WebUI.getText(findTestObject('Header/SearchLineHelper')).toLowerCase()
 System.out.println(TextinHelper)
-
+System.out.println(SearchResult)
 int indexSearchlineHelper = TextinHelper.indexOf(SearchResult)
 
 if (indexSearchlineHelper == -1) {
-    System.out.println('Слова в хелпере нет')
+   System.out.println('Слова в хелпере нет')
 } else {
     WebUI.click(findTestObject('Header/ButtonSearchHeader'))
 

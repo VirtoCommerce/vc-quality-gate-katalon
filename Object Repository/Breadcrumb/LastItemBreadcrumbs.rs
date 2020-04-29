@@ -9,11 +9,15 @@
          <key>XPATH</key>
          <value>//body[@id='3dr-solo-quadcopter-no-gimbal']/main/nav/span[4]</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//span[(text() = '3DR Solo Quadcopter (No Gimbal)' or . = '3DR Solo Quadcopter (No Gimbal)')]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>

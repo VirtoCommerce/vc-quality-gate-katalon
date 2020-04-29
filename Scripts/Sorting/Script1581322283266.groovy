@@ -22,7 +22,8 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
 import java.util.Arrays as Arrays
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
+WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+
 
 WebUI.waitForPageLoad(2)
 
@@ -33,7 +34,7 @@ WebUI.click(findTestObject('Page_Electronics/AeriaImagingDrones'))
 List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
     2)
 
-float[] ArrayFloatPrice = new float[]
+float[] ArrayFloatPrice = new float[ProductsInCategoryPage.size()]
 
 for (int i = 0; i < ProductsInCategoryPage.size(); i++) {
     String ProductPrice = (ProductsInCategoryPage[i]).findElement(By.tagName('small')).getText()
@@ -56,7 +57,7 @@ WebUI.selectOptionByIndex(findTestObject('Object Repository/AerialImagingCategor
 List<String> SortingProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
     2)
 
-float[] ArrayFloatPriceSorting = new float[]
+float[] ArrayFloatPriceSorting = new float[SortingProductsInCategoryPage.size()]
 
 for (int i = 0; i < SortingProductsInCategoryPage.size(); i++) {
     String ProductPrice = (SortingProductsInCategoryPage[i]).findElement(By.tagName('small')).getText()

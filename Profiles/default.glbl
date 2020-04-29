@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'TestUser04292020'</initValue>
       <name>UserLogPass</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

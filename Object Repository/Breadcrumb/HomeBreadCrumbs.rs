@@ -9,6 +9,10 @@
          <key>XPATH</key>
          <value>//body[@id='3dr-solo-quadcopter-no-gimbal']/main/nav/a</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@title = 'Back to the frontpage' and (text() = 'Home' or . = 'Home')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
@@ -20,7 +24,7 @@
       <value>a</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>href</name>
       <type>Main</type>

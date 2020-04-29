@@ -15,7 +15,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.openBrowser(GlobalVariable.StoreURL)
+WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+
 
 WebUI.mouseOver(findTestObject('Header/StoreMenu'))
 
@@ -25,7 +26,7 @@ WebUI.click(findTestObject('Header/de-DELanguage'))
 
 String DeCurrentUrl = WebUI.getUrl()
 
-WebUI.verifyMatch(DeCurrentUrl, 'https://qa-demovc-store.azurewebsites.net/de-DE/', false)
+WebUI.verifyMatch(DeCurrentUrl, GlobalVariable.StoreURL + 'de-DE/', false)
 
 String GetTextPlaceholder = WebUI.getText(findTestObject('Object Repository/Header/SignInButtonHeader'))
 
