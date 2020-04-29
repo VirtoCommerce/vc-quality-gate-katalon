@@ -33,13 +33,13 @@ def Apt = DataFromFile.Apt
 def Zip = DataFromFile.Zip
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.navigateToUrl(GlobalVariable.StoreURL + 'en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
+WebUI.navigateToUrl(GlobalVariable.StoreURL + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
 WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
 
 WebUI.click(findTestObject('PopupAddToQuoteRequest/ButtonGoToQuote'))
 
-WebUI.navigateToUrl(GlobalVariable.StoreURL + 'en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
+WebUI.navigateToUrl(GlobalVariable.StoreURL + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
 WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
 

@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://qa-demovc-store.azurewebsites.net/'</initValue>
+      <initValue>'https://qa-demovc-store.azurewebsites.net'</initValue>
       <name>StoreURL</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
