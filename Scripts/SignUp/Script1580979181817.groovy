@@ -14,7 +14,13 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.time.TimeCategory as TimeCategory
+import java.util.Iterator as Iterator
+import java.util.List as List
+import org.openqa.selenium.By as By
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.WebElement as WebElement
+import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
+import java.util.Arrays as Arrays
 
 def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
 
@@ -24,9 +30,7 @@ def FirstName = DataFromFile.FirstName
 
 def LastName = DataFromFile.LastName
 
-
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
-
 
 WebUI.click(findTestObject('Header/SignUpButtonHeader'))
 
@@ -46,17 +50,9 @@ WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), LastName)
 
 WebUI.click(findTestObject('SignUpPage/InputPasswordSignUpPage'))
 
-// need to refact ---------- start
+def userLogPass = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/GetCurrentDate'), [:], FailureHandling.STOP_ON_FAILURE)
 
-use(TimeCategory, { 
-        today = new Date()
-    })
-
-// need to refact ---------- end
-
-String todaysDate = today.format('MMddyyyy')
-
-GlobalVariable.UserLogPass = ('TestUser' + todaysDate)
+GlobalVariable.UserLogPass = userLogPass
 
 WebUI.setText(findTestObject('SignUpPage/InputPasswordSignUpPage'), GlobalVariable.UserLogPass)
 
@@ -66,13 +62,13 @@ WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUPPAge'), GlobalVariab
 
 WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
 
-String GetText = findTestObject('Object Repository/Header/HeaderLogoutText').getText()
+String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
 
-WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
+WebUI.verifyMatch(GetText, FirstName, false)
 
 WebUI.click(findTestObject('Header/HeaderLogoutButton'))
 
-not_run: WebUI.acceptAlert()
+
 
 WebUI.closeBrowser()
 
