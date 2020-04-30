@@ -11,19 +11,14 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[(text() = '
-            Create order
-            
-        ' or . = '
-            Create order
-            
-        ')]</value>
+         <value>//span
+[(text() = 'Create order' or . = 'Create order')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -42,10 +37,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>
-            Create order
-            
-        </value>
+      <value>Create order</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

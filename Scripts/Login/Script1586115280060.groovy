@@ -20,22 +20,29 @@ WebUI.click(findTestObject('Header/SignInButtonHeader'))
 def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
 def Login = DataFromFile.Login
 def Password = DataFromFile.Password
+def FirstName = DataFromFile.FirstName
 
 if( Login !=""&& Password!="" ){
 	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), Login)
 	
 	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), Password)
+	
+	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
+	
+	String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+	
+	WebUI.verifyMatch(GetText, FirstName, false)
  }else{
 	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), login)
 
 	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), password)
+	
+	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
+	
+	String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+	
+	//WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
  }
 
 
-
-WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
-
-String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
-
-WebUI.verifyMatch(GetText, 'admin', false)
 

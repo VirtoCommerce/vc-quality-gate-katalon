@@ -23,12 +23,6 @@
       <testCaseId>Test Cases/Logout</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>764f3b2b-23d2-4fcc-8750-5ed716bb12a6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Anonymous_QuoteRequest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>53a624cf-4085-4c3d-af00-38cb352d8794</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -51,12 +45,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Logo</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a7ae109e-d633-42ea-a260-e5605c89e0a8</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Login_Quote_Request</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bd20f6c4-4e19-4477-9ef5-404684f214b6</guid>
