@@ -94,7 +94,10 @@ WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/Payment
 
 WebUI.waitForPageLoad(2)
 
-WebUI.waitForElementClickable(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 10)
+WebUI.scrollToElement(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 0)
+
+not_run: WebUI.waitForElementClickable(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 
+    10)
 
 WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'))
 

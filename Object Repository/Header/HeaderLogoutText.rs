@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//a[@ng-bind = 'customer.firstName || customer.userName']</value>
+         <value>//a[@ng-bind = 'customer.firstName || customer.userName' and @href = '/en-US/account']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -29,6 +29,13 @@
       <name>ng-bind</name>
       <type>Main</type>
       <value>customer.firstName || customer.userName</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>/en-US/account</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
