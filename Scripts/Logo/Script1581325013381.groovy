@@ -23,9 +23,9 @@ WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
 WebUI.click(findTestObject('Header/logo'))
 
-String CurrentUrl = WebUI.getUrl()
+WebUI.delay(GlobalVariable.delayForLoadPage)
 
-WebUI.verifyMatch(CurrentUrl, GlobalVariable.StoreURL + '/en-US/', false)
+WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.StoreURL + '/en-US/', false)
 
 WebUI.closeBrowser()
 
