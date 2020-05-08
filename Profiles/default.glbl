@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://ci.virtocommerce.com:8090'</initValue>
+      <initValue>'http://ci.virtocommerce.com:8083'</initValue>
       <name>StoreURL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

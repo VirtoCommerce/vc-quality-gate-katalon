@@ -22,53 +22,29 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
 import java.util.Arrays as Arrays
 
-def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
-
-def Email = DataFromFile.Email
-
-def FirstName = DataFromFile.FirstName
-
-def LastName = DataFromFile.LastName
+def DataFromFile = CustomKeywords.'services.PrepareData.userDateReturn'()
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Header/SignUpButtonHeader'))
 
-WebUI.verifyElementText(findTestObject('SignUpPage/H1SignUpPage'), 'CREATE ACCOUNT')
+WebUI.setText(findTestObject('SignUpPage/InputEmailSignUpPage'), DataFromFile.Email)
 
-WebUI.click(findTestObject('SignUpPage/InputEmailSignUPPage'))
+WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUpPage'), DataFromFile.FirstName)
 
-WebUI.setText(findTestObject('SignUpPage/InputEmailSignUPPage'), Email)
+WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), DataFromFile.LastName)
 
-WebUI.click(findTestObject('SignUpPage/InputFirstNameSignUPPage'))
+def sss = CustomKeywords.'services.Date.returnCurrentLinuxDate'()
 
-WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUPPage'), FirstName)
-
-WebUI.click(findTestObject('SignUpPage/InputLastNameSignUpPage'))
-
-WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), LastName)
-
-WebUI.click(findTestObject('SignUpPage/InputPasswordSignUpPage'))
-
-def userLogPass = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/GetCurrentDate'), [:], FailureHandling.STOP_ON_FAILURE)
-
-GlobalVariable.UserLogPass = userLogPass
+WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUpPage'), GlobalVariable.UserLogPass)
 
 WebUI.setText(findTestObject('SignUpPage/InputPasswordSignUpPage'), GlobalVariable.UserLogPass)
 
-WebUI.click(findTestObject('SignUpPage/InputUserNameSignUPPAge'))
-
-WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUPPAge'), GlobalVariable.UserLogPass)
-
 WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
 
-String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
-
-WebUI.verifyMatch(GetText, FirstName, false)
+WebUI.verifyMatch(WebUI.getText(findTestObject('Header/HeaderLogoutText')), DataFromFile.FirstName, false)
 
 WebUI.click(findTestObject('Header/HeaderLogoutButton'))
-
-
 
 WebUI.closeBrowser()
 

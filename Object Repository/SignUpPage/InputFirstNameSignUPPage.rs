@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>InputFirstNameSignUPPage</name>
+   <name>InputFirstNameSignUpPage</name>
    <tag></tag>
    <elementGuidId>fd593f2e-ced0-4a37-84d6-630dfe3bcebd</elementGuidId>
    <selectorCollection>

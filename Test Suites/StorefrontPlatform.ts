@@ -47,12 +47,6 @@
       <testCaseId>Test Cases/Logo</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>bd20f6c4-4e19-4477-9ef5-404684f214b6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/NewsLetter</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>a4f4f79e-562f-47ef-8275-7d1ff5c1ffe7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
