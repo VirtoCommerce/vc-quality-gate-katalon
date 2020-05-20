@@ -17,12 +17,6 @@
       <testCaseId>Test Cases/SignUp</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3f208fa7-0087-4dda-94da-44042287abf2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Logout</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>53a624cf-4085-4c3d-af00-38cb352d8794</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -37,7 +31,7 @@
    <testCaseLink>
       <guid>9935edd3-8d23-43bf-9dfe-e6529fb3b2f7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Filtering</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -45,12 +39,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Logo</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>bd20f6c4-4e19-4477-9ef5-404684f214b6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/NewsLetter</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a4f4f79e-562f-47ef-8275-7d1ff5c1ffe7</guid>
@@ -73,19 +61,19 @@
    <testCaseLink>
       <guid>96dc1327-a297-4cf2-add9-e4702ac91634</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/AddProductToCart_Login_ProcessOrder</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>fceb8722-76fe-423a-823b-59c916c02e65</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/AddProductToCart_Anonim_ProcessOrder</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d6df5cd2-90e8-41df-b983-b57a8d220352</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Sorting</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
