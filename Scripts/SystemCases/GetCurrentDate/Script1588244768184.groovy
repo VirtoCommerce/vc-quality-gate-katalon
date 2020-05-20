@@ -23,11 +23,6 @@ import java.text.*;
 
 Date dateNow = new Date();
 
-System.out.println (dateNow)
-
 SimpleDateFormat todaysDate = new SimpleDateFormat("yyyyMMddhhmmss");
 
-
 GlobalVariable.UserLogPass = ('TestUser' + todaysDate.format(dateNow))
-
-return GlobalVariable.UserLogPass

@@ -23,10 +23,9 @@ WebUI.mouseOver(findTestObject('Header/ChangeStoreMenu'))
 
 WebUI.click(findTestObject('Header/B2bStoreLink'))
 
-String B2BCurrentUrl = WebUI.getUrl()
+WebUI.delay(GlobalVariable.delayForLoadPage)
 
-WebUI.verifyMatch(B2BCurrentUrl, GlobalVariable.StoreURL + '/B2B-store/', false)
-
+WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.StoreURL + '/B2B-store/', false)
 
 WebUI.closeBrowser()
 

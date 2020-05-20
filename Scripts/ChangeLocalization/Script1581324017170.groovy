@@ -17,16 +17,15 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-
 WebUI.mouseOver(findTestObject('Header/StoreMenu'))
 
 WebUI.mouseOver(findTestObject('Header/LanguageMenu'))
 
 WebUI.click(findTestObject('Header/de-DELanguage'))
 
-String DeCurrentUrl = WebUI.getUrl()
+WebUI.delay(GlobalVariable.delayForLoadPage)
 
-WebUI.verifyMatch(DeCurrentUrl, GlobalVariable.StoreURL + '/de-DE/', false)
+WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.StoreURL + '/de-DE/', false)
 
 String GetTextPlaceholder = WebUI.getText(findTestObject('Object Repository/Header/SignInButtonHeader'))
 

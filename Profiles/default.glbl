@@ -11,7 +11,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://ci.virtocommerce.com:8083'</initValue>
+      <initValue>'https://qa-demovc3-store.azurewebsites.net'</initValue>
       <name>StoreURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>3</initValue>
+      <name>delayForLoadPage</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
