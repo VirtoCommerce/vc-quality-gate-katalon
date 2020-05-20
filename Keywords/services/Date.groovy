@@ -18,6 +18,7 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import java.text.*
+import java.time.Instant
 
 import internal.GlobalVariable
 
@@ -26,10 +27,6 @@ public class Date {
 	@Keyword
 	public static String returnCurrentLinuxDate(){
 
-		SimpleDateFormat simpleDate = new SimpleDateFormat("yyyyMMddhhmmss")
-		
-		Date dateNow = new Date()
-		
-		return simpleDate.format(dateNow)
+		return Instant.now().getEpochSecond()
 	}
 }

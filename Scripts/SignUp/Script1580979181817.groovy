@@ -24,17 +24,17 @@ import java.util.Arrays as Arrays
 
 def DataFromFile = CustomKeywords.'services.PrepareData.userDateReturn'()
 
+GlobalVariable.UserLogPass = 'TestUserName' + CustomKeywords.'services.Date.returnCurrentLinuxDate'()
+
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Header/SignUpButtonHeader'))
 
-WebUI.setText(findTestObject('SignUpPage/InputEmailSignUpPage'), DataFromFile.Email)
+WebUI.setText(findTestObject('SignUpPage/InputEmailSignUpPage'), GlobalVariable.UserLogPass + DataFromFile.Email)
 
 WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUpPage'), DataFromFile.FirstName)
 
 WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), DataFromFile.LastName)
-
-def sss = CustomKeywords.'services.Date.returnCurrentLinuxDate'()
 
 WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUpPage'), GlobalVariable.UserLogPass)
 
@@ -42,7 +42,7 @@ WebUI.setText(findTestObject('SignUpPage/InputPasswordSignUpPage'), GlobalVariab
 
 WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
 
-WebUI.verifyMatch(WebUI.getText(findTestObject('Header/HeaderLogoutText')), DataFromFile.FirstName, false)
+WebUI.verifyMatch(WebUI.getText(findTestObject('Header/HeaderUserAccountLinkText')), DataFromFile.FirstName, false)
 
 WebUI.click(findTestObject('Header/HeaderLogoutButton'))
 

@@ -29,7 +29,7 @@ if( Login !=""&& Password!="" ){
 	
 	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
 	
-	String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+	String GetText = WebUI.getText(findTestObject('Header/HeaderUserAccountLinkText'))
 	
 	WebUI.verifyMatch(GetText, FirstName, false)
  }else{
@@ -39,7 +39,7 @@ if( Login !=""&& Password!="" ){
 	
 	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
 	
-	String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+	String GetText = WebUI.getText(findTestObject('Header/HeaderUserAccountLinkText'))
 	//Need variable for FirstName 
 	//WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
  }
