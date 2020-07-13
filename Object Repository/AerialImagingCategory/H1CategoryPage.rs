@@ -6,6 +6,10 @@
    <elementGuidId>670655d5-9087-467d-8c9d-d66080d17662</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//h1[@class = 'section-header--title section-header--left']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//body[@id='aerial-imaging-drones']/main/div/div/header/h1</value>
       </entry>
@@ -13,7 +17,7 @@
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -27,7 +31,7 @@
       <value>section-header--title section-header--left</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>

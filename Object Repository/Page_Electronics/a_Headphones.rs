@@ -6,14 +6,18 @@
    <elementGuidId>d3702559-8343-480e-8650-c105a17c8ebe</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//a[contains(@href, '/en-US/headphones') and (text() = 'Headphones' or . = 'Headphones')]</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//ul[@id='accessibleNav']/li[4]/a</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -21,10 +25,10 @@
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
+      <matchCondition>contains</matchCondition>
       <name>href</name>
       <type>Main</type>
-      <value>https://qa-demovc-store.azurewebsites.net/en-US/headphones</value>
+      <value>/en-US/headphones</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

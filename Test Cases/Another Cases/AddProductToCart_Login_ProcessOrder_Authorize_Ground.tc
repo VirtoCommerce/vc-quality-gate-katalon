@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AddProductToCart_Login_ProcessOrder_Authorize_Ground</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c6e6dc7a-9686-48cd-b78f-2b09165978c1</testCaseGuid>
+</TestCaseEntity>
