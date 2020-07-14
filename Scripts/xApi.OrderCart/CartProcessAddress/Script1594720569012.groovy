@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-//WebUI.callTestCase(findTestCase('DRAFT.Order process/SignIn_FromCart'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], FailureHandling.OPTIONAL)
+//WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromCart'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], FailureHandling.OPTIONAL)
 
 def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'),
 	5, FailureHandling.OPTIONAL)
