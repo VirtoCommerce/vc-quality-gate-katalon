@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AddProductToCart_Login_Use_Remove_Coupone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d74a7628-bdef-40a6-892e-1a57f00c0bbb</testCaseGuid>
+</TestCaseEntity>

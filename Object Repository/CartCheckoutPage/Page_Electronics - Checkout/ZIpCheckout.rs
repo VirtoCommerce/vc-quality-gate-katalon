@@ -6,6 +6,10 @@
    <elementGuidId>69e6f45c-9493-451a-af5a-ef06ff27a11a</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@name = 'PostalCode' and @required = 'required']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//input[@id='PostalCode']</value>
       </entry>
@@ -20,14 +24,14 @@
       <value>PostalCode</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
       <value>PostalCode</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>placeholder</name>
       <type>Main</type>
@@ -38,10 +42,10 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>form-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required</value>
+      <value>form-label ng-binding</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>required</name>
       <type>Main</type>

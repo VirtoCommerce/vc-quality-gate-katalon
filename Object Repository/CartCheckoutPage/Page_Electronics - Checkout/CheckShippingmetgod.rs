@@ -6,18 +6,18 @@
    <elementGuidId>f1252f49-7f0e-4bcf-84f0-3bcf11247690</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='Shipping method'])[2]/following::label[1]</value>
+         <key>BASIC</key>
+         <value>//*[@for = 'FixedRate:Air']</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//input[@id = 'FixedRate:Ground']</value>
+         <key>XPATH</key>
+         <value>(.//*[normalize-space(text()) and normalize-space(.)='Shipping method'])[2]/following::label[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -31,7 +31,7 @@
       <value>radio__label ng-binding</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
@@ -57,6 +57,13 @@
       <name>xpath</name>
       <type>Main</type>
       <value>/html[@class=&quot;multi-step windows chrome desktop page--no-banner page--logo-main page--show js flexbox flexboxlegacy rgba multiplebgs boxshadow opacity cssanimations csstransitions generatedcontent svg inlinesvg cors boxsizing display-table pointerevents placeholder mediaqueries floating-labels ng-scope&quot;]/body[@class=&quot;ng-scope&quot;]/div[@class=&quot;content&quot;]/div[@class=&quot;wrap vc-form&quot;]/div[@class=&quot;wrap&quot;]/div[@class=&quot;main&quot;]/div[@class=&quot;main__content&quot;]/vc-checkout-wizard[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;edit_checkout animate-floating-labels&quot;]/div[@class=&quot;step__sections&quot;]/vc-checkout-wizard-step[@class=&quot;ng-scope ng-isolate-scope&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;edit_checkout animate-floating-labels ng-scope&quot;]/div[@class=&quot;section section--shipping-method&quot;]/div[@class=&quot;section__content&quot;]/vc-checkout-shipping-methods[@class=&quot;ng-isolate-scope&quot;]/form[@class=&quot;step ng-dirty ng-valid-parse ng-valid ng-valid-required&quot;]/div[@class=&quot;content-box ng-scope&quot;]/div[@class=&quot;content-box__row ng-scope&quot;]/div[@class=&quot;radio-wrapper&quot;]/label[@class=&quot;radio__label ng-binding&quot;]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>FixedRate:Air</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

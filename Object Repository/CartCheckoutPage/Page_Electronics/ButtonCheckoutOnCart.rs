@@ -9,6 +9,16 @@
          <key>XPATH</key>
          <value>(//button[@type='button'])[2]</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = '
+                            
+                            Checkout
+                        ' or . = '
+                            
+                            Checkout
+                        ')]</value>
+      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AddProductToCart_ProcessOrder_Login</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9ff3ac4d-daf7-4fc3-9047-c636e50780de</testCaseGuid>
+</TestCaseEntity>
