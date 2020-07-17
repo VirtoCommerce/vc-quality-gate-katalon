@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>SignUp</name>
+   <name>VerifiElementAfterQuoteProcessUser</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>bbfaa2c9-e236-48fd-8abd-d9cf272d9a0f</testCaseGuid>
+   <testCaseGuid>f81be96f-5714-422b-a3a7-e4dc9264cde6</testCaseGuid>
 </TestCaseEntity>
