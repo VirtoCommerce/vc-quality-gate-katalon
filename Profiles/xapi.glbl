@@ -74,4 +74,9 @@
       <initValue>'VALUE'</initValue>
       <name>priceFromPopup</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://dev-xapi-admin.azurewebsites.net'</initValue>
+      <name>backUrl</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
