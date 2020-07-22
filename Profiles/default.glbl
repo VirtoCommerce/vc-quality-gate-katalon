@@ -11,7 +11,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'kno1'</initValue>
+      <initValue>'ce3d045144724f2b9ad070180f3c7b82'</initValue>
+      <name>api_key</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://qa-demovc3-admin.azurewebsites.net'</initValue>
+      <name>urlBack</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'kno'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -78,5 +88,10 @@
       <description></description>
       <initValue>'TestUser3'</initValue>
       <name>UserLogPass</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'CONTACT_ID'</initValue>
+      <name>contactId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
