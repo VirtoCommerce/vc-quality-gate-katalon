@@ -17,13 +17,14 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-
 WebUI.waitForPageLoad(2)
 
-WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
-    FailureHandling.OPTIONAL)
+//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
+WebUI.callTestCase(findTestCase('Test Cases/xApi.OrderCart/SignIn_Header'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
+
+WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
 
 WebUI.closeBrowser()
 

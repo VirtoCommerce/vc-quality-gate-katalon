@@ -22,14 +22,14 @@ import org.openqa.selenium.WebElement as WebElement
 import org.openqa.selenium.firefox.FirefoxDriver as FirefoxDriver
 import java.util.Arrays as Arrays
 
-def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
+/*def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
 
 def Email = DataFromFile.Email
 
 def FirstName = DataFromFile.FirstName
 
 def LastName = DataFromFile.LastName
-
+*/
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('Header/SignUpButtonHeader'))
@@ -38,15 +38,15 @@ WebUI.verifyElementText(findTestObject('SignUpPage/H1SignUpPage'), 'CREATE ACCOU
 
 WebUI.click(findTestObject('SignUpPage/InputEmailSignUPPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputEmailSignUPPage'), Email)
+WebUI.setText(findTestObject('SignUpPage/InputEmailSignUPPage'), GlobalVariable.email)
 
 WebUI.click(findTestObject('SignUpPage/InputFirstNameSignUPPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUPPage'), FirstName)
+WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUPPage'), GlobalVariable.firstName)
 
 WebUI.click(findTestObject('SignUpPage/InputLastNameSignUpPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), LastName)
+WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), GlobalVariable.lastName)
 
 WebUI.click(findTestObject('SignUpPage/InputPasswordSignUpPage'))
 
@@ -64,7 +64,7 @@ WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
 
 String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
 
-WebUI.verifyMatch(GetText, FirstName, false)
+WebUI.verifyMatch(GetText, GlobalVariable.firstName, false)
 
 WebUI.click(findTestObject('Header/HeaderLogoutButton'))
 
