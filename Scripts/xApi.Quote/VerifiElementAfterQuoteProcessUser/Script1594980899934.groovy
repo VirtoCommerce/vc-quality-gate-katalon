@@ -15,30 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('Header/SignInButtonHeader'))
+WebUI.verifyElementPresent(findTestObject('QuoteRequestPage/H4Quoterequests'), 0)
 
-if (GlobalVariable.userName != "" && GlobalVariable.userPassword != ""){
-	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), GlobalVariable.userName)
-	
-	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), GlobalVariable.userPassword)
-	
-	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
-	
-	String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
-	
-	WebUI.verifyMatch(GetText, GlobalVariable.firstName, false)
-	
-	//Temp aothorization from cart 
-
-//	}else{
-//
-//	 	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), GlobalVariable.userName)
-//		
-//		WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), GlobalVariable.userPassword)
-//		
-//		WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
- 
-	}
-
-
+WebUI.closeBrowser()
 
