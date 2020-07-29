@@ -25,7 +25,7 @@ WebUI.click(findTestObject('Header/B2bStoreLink'))
 
 String B2BCurrentUrl = WebUI.getUrl()
 
-WebUI.verifyMatch(B2BCurrentUrl, GlobalVariable.StoreURL + '/B2B-store/', false)
+WebUI.verifyMatch(B2BCurrentUrl, GlobalVariable.urlFront + '/B2B-store/', false)
 
 
 WebUI.closeBrowser()

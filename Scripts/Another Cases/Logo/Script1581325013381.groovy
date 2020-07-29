@@ -25,7 +25,7 @@ WebUI.click(findTestObject('Header/logo'))
 
 String CurrentUrl = WebUI.getUrl()
 
-WebUI.verifyMatch(CurrentUrl, GlobalVariable.StoreURL + '/en-US/', false)
+WebUI.verifyMatch(CurrentUrl, GlobalVariable.urlFront + '/en-US/', false)
 
 WebUI.closeBrowser()
 

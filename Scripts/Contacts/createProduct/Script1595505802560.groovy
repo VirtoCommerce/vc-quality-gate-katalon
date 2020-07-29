@@ -14,7 +14,26 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper
 
-WebUI.openBrowser(GlobalVariable.urlFront)
+def categoryRequest = findTestObject('backWebServices/searchCategory')
+categoryResponse = WS.sendRequestAndVerify(categoryRequest)
 
-WebUI.maximizeWindow()
+def responseJson = new JsonSlurper().parseText(categoryResponse.getResponseBodyContent());
+def orderJson = (responseJson.'results')
+//println ("HERE RESULTS : " + orderJson)
+for (Map map : orderJson) {
+	if (map.name == GlobalVariable.categoryName) {
+		GlobalVariable.categoryId = map.id
+		println ("HERE MAP : " + GlobalVariable.categoryId)
+		break;
+	}
+	
+}
+
+def productRequest = findTestObject('backWebServices/createProduct')
+productResponse = WS.sendRequestAndVerify(productRequest)
+
+def productJson = new JsonSlurper().parseText(productResponse.getResponseBodyContent());
+GlobalVariable.sku = productJson.id
+//println ("HERE SKU : " + GlobalVariable.sku)

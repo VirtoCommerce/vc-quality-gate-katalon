@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>createProduct</name>
+   <name>searchCategory</name>
    <tag></tag>
-   <elementGuidId>929eca15-9be8-4fb2-b095-d016a79f9a26</elementGuidId>
+   <elementGuidId>57a27f8c-adcb-49d3-bd87-fb4c57b274f8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${GlobalVariable.sku}\&quot;,\n  \&quot;name\&quot;: \&quot;QweDrink\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${GlobalVariable.categoryId}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;take\&quot;: 10\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/catalogs/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

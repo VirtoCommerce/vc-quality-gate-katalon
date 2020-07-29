@@ -39,13 +39,13 @@ WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:],
 WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
     FailureHandling.OPTIONAL)
 
-WebUI.navigateToUrl(GlobalVariable.StoreURL + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
+WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
 WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
 
 WebUI.click(findTestObject('PopupAddToQuoteRequest/ButtonGoToQuote'))
 
-WebUI.navigateToUrl(GlobalVariable.StoreURL + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
+WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
 WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
 

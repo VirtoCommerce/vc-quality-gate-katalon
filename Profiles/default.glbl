@@ -7,7 +7,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'https://qa-demovc3-store.azurewebsites.net'</initValue>
-      <name>StoreURL</name>
+      <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -93,5 +93,25 @@
       <description></description>
       <initValue>'CONTACT_ID'</initValue>
       <name>contactId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'VALUE'</initValue>
+      <name>catalogId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'VALUE'</initValue>
+      <name>categoryId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Electronics'</initValue>
+      <name>categoryName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QWESKU03'</initValue>
+      <name>sku</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
