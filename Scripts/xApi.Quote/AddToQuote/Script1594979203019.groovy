@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.navigateToUrl(GlobalVariable.StoreURL + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
+WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
 WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
 

@@ -26,7 +26,7 @@ WebUI.click(findTestObject('Header/de-DELanguage'))
 
 String DeCurrentUrl = WebUI.getUrl()
 
-WebUI.verifyMatch(DeCurrentUrl, GlobalVariable.StoreURL + '/de-DE/', false)
+WebUI.verifyMatch(DeCurrentUrl, GlobalVariable.urlFront + '/de-DE/', false)
 
 String GetTextPlaceholder = WebUI.getText(findTestObject('Object Repository/Header/SignInButtonHeader'))
 
