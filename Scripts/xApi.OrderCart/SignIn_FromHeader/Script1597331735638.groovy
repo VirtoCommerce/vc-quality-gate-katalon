@@ -15,16 +15,20 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
-WebUI.waitForPageLoad(2)
+if (GlobalVariable.userName != "" && GlobalVariable.userPassword != ""){
+	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), GlobalVariable.userName)
+	
+	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), GlobalVariable.userPassword)
+	
+	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
+	
+	String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+	
+	WebUI.verifyMatch(GetText, GlobalVariable.firstName, false)
+	
+	}
 
-//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
-
-WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
-
-WebUI.closeBrowser()
 

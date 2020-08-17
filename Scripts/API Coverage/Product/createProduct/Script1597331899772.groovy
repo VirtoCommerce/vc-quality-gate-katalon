@@ -14,17 +14,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper
 
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+def productRequest = findTestObject('API/backWebServices/createProduct')
+productResponse = WS.sendRequestAndVerify(productRequest)
 
-WebUI.waitForPageLoad(2)
-
-//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
-
-WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
-
-WebUI.closeBrowser()
-
+def productJson = new JsonSlurper().parseText(productResponse.getResponseBodyContent());
+GlobalVariable.productId = productJson.id
+println ("PRODUCT ID : " + GlobalVariable.productId)

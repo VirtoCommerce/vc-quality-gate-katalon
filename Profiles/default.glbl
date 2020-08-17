@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'kno'</initValue>
+      <initValue>'QweUser'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Qwe'</initValue>
+      <initValue>'QweJohn'</initValue>
       <name>contactName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -41,12 +41,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'User'</initValue>
+      <initValue>'Qwe'</initValue>
       <name>firstName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Last'</initValue>
+      <initValue>'Rty'</initValue>
       <name>lastName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -101,17 +101,42 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'Electronics'</initValue>
+      <name>catalogName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'VALUE'</initValue>
       <name>categoryId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Electronics'</initValue>
+      <initValue>'Cell phones'</initValue>
       <name>categoryName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>Product SKU</description>
       <initValue>'QWESKU03'</initValue>
       <name>sku</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Electronics'</initValue>
+      <name>storeId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>token</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'PRICELIST_ID'</initValue>
+      <name>pricelistId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'PRODUCT_ID'</initValue>
+      <name>productId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

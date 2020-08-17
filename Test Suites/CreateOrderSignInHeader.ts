@@ -11,6 +11,18 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>05a781db-a096-4594-b05c-724f34bccfa8</testSuiteGuid>
    <testCaseLink>
+      <guid>429b6e80-1f47-4569-91b9-782f92b7ff52</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9c7acb74-e364-4e00-bf72-df4dcd80baae</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/UserCreation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>33a48e54-1a27-4a4c-bfeb-67ca7c223f76</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -19,8 +31,8 @@
    <testCaseLink>
       <guid>065c0e77-e6da-40f7-9f8a-93ee842a537e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/SignIn_Header</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromHeader</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -43,7 +55,7 @@
    <testCaseLink>
       <guid>6ad2b7a5-d2bf-44be-ac8b-846cbab7b506</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/xApi.OrderCart/CouponeAdd</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -51,24 +63,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/xApi.OrderCart/CouponeRemove</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a7a88cf7-4a0f-4a38-8a5c-e276f78a6d5b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromCart</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>d4a69d5f-192f-4895-874e-3d61a63afda8</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>a5e1c932-fd65-4645-9974-53e73001c643</variableId>
-      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>ea5340ac-ba74-4653-949f-cc08d8cb3e36</guid>

@@ -14,17 +14,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper
 
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+def categoryRequest = findTestObject('API/backWebServices/searchCategory')
+def categoryResponse = WS.sendRequestAndVerify(categoryRequest)
 
-WebUI.waitForPageLoad(2)
-
-//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
-
-WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
-
-WebUI.closeBrowser()
-
+def categoryJson = new JsonSlurper().parseText(categoryResponse.getResponseBodyContent());
+def categoryJson2 = (categoryJson.'items')
+println ("HERE RESULTS : " + categoryJson2)
+for (Map map : categoryJson2) {
+	if (map.name == GlobalVariable.categoryName) {
+		GlobalVariable.categoryId = map.id
+		println ("CATEGORY ID : " + GlobalVariable.categoryId)
+		break;
+	}
+}

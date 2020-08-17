@@ -20,7 +20,7 @@
       <guid>bb6ea9ee-9a1b-4d08-bd9e-ba9b3b5c799c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/SignIn_Header</testCaseId>
+      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromHeader</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
