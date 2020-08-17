@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>xapi</name>
+   <name>Docker-v3</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://dev-xapi-public.azurewebsites.net'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8089'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://dev-xapi-admin.azurewebsites.net'</initValue>
+      <initValue>'ce3d045144724f2b9ad070180f3c7b82'</initValue>
+      <name>api_key</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://docker.virtocommerce.com:8109'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

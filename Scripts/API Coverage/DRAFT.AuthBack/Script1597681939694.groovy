@@ -15,16 +15,4 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.waitForPageLoad(2)
-
-//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
-
-WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
-
-WebUI.closeBrowser()
-
+WS.sendRequestAndVerify(findTestObject('API/frontWebServices/AuthBack'))

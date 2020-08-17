@@ -11,6 +11,18 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>3130eaa0-2fc1-4369-80d7-76398ab446cb</testSuiteGuid>
    <testCaseLink>
+      <guid>190ee4eb-eb68-4d66-8399-8243dd175308</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>63383aef-1f13-43c2-804e-97ef08f72ef3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/UserCreation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>33a48e54-1a27-4a4c-bfeb-67ca7c223f76</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -25,13 +37,13 @@
    <testCaseLink>
       <guid>6ad2b7a5-d2bf-44be-ac8b-846cbab7b506</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/xApi.OrderCart/CouponeAdd</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f240af21-7249-46cc-936a-08c8882c082b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/xApi.OrderCart/CouponeRemove</testCaseId>
    </testCaseLink>
    <testCaseLink>

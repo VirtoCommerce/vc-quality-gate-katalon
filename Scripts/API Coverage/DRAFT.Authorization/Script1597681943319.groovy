@@ -15,16 +15,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter
+import groovy.json.JsonSlurper
 
-WebUI.waitForPageLoad(2)
 
-//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
+// STEP | Authorization request to get Token
+def request = findTestObject('API/frontWebServices/getToken')
 
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
+List<UrlEncodedBodyParameter> body = new ArrayList<UrlEncodedBodyParameter>()
+body.add(new UrlEncodedBodyParameter("grant_type","password"))
+body.add(new UrlEncodedBodyParameter("scope","offline_access"))
+body.add(new UrlEncodedBodyParameter("username",GlobalVariable.userName))
+body.add(new UrlEncodedBodyParameter("password",GlobalVariable.userPassword))
 
-WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
+println(body);
 
-WebUI.closeBrowser()
+request.setBodyContent(new HttpUrlEncodedBodyContent(body))
 
+response = WS.sendRequestAndVerify(request)
+println("TOKEN IS : " + response)
+
+// STEP | Parse request and save token to the GlobalVariable
+def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+GlobalVariable.token = responseJson.token_type+ " " +responseJson.access_token

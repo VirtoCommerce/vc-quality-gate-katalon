@@ -15,16 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+import groovy.json.JsonSlurper
 
-WebUI.waitForPageLoad(2)
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/createAccount/createContact'))
 
-//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
-
-WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
-
-WebUI.closeBrowser()
-
+def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+GlobalVariable.contactId = responseJson.id
+println ("GlobVar is: "+GlobalVariable.contactId)

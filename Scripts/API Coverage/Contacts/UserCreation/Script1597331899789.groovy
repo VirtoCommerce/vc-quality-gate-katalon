@@ -15,16 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+//Create a new User using GlobalVariable.memberId
 
-WebUI.waitForPageLoad(2)
-
-//WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
-
-WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
-
-WebUI.closeBrowser()
-
+//println ("GlobVar is: "+GlobalVariable.memberId)
+//println ("GlobVar is: "+GlobalVariable.userName)
+//WS.delay(10)
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/createAccount/createUser'))
