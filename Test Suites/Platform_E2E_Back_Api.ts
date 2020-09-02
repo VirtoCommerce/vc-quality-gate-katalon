@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>TEMP.API</name>
+   <name>Platform_E2E_Back_Api</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -11,15 +11,27 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>e3194ce9-cecc-4a0b-b2d5-10c8a3423bd7</testSuiteGuid>
    <testCaseLink>
+      <guid>6cfeebe0-a8b4-4daf-baf3-7e8dc120e90f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6d9ff844-efa2-4f38-b8be-2780133f8fab</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>429b6e80-1f47-4569-91b9-782f92b7ff52</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9c7acb74-e364-4e00-bf72-df4dcd80baae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/UserCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -41,6 +53,12 @@
       <testCaseId>Test Cases/API Coverage/Product/createProduct</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>2f6c7e14-57f2-4987-b25c-822785e77cfd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Product/updateStockProduct</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>1eb2a7fc-7579-49a1-b579-7c8acf06455f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -59,9 +77,9 @@
       <testCaseId>Test Cases/API Coverage/Pricelist/updatePricelist</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2f6c7e14-57f2-4987-b25c-822785e77cfd</guid>
+      <guid>a8faca40-9667-46fd-9721-16864955fce4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Product/updateStockProduct</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/DropIndex</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

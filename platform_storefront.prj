@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>platform_storefront</name>
+   <name>Platform v3</name>
    <tag></tag>
    <UUID>971e8ea2-f549-4f2f-8f49-b5f770a58d12</UUID>
    <migratedVersion>5.9.0</migratedVersion>

@@ -16,6 +16,4 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/pricelist/DRAFT.updatePricelist'))
-
-WS.sendRequest(findTestObject('API/backWebServices/pricelist/addProductPrice'))
+WS.sendRequest(findTestObject('API/backWebServices/ProductAddPrice'))

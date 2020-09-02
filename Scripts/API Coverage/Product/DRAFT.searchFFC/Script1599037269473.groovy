@@ -15,4 +15,29 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('API/frontWebServices/AuthBack'))
+import groovy.json.JsonSlurper
+
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/DRAFT/DRAFT.searchFFC'))
+//
+//JsonSlurper responseJson = new JsonSlurper()
+//def parsedResult = responseJson.parseText(response.getResponseBodyContent())
+//def localMemberId = parsedResult.'results'
+//def memberId = localMemberId[0].'id'
+
+
+def orderList = new JsonSlurper().parseText(response.getResponseBodyContent())
+
+ArrayList ordersArray = orderList.get('results')
+println ("NAME : " + ordersArray.name)
+String namex = "Los Angeles Branch"
+if (ordersArray.name == namex ) {
+	//Save orderID to Global variable
+	println ("FFC ID : " + ordersArray.get('id'))
+	//GlobalVariable.ffcId = ordersArray[0].id
+//println ("ORDER ID : " + GlobalVariable.orderId)
+//println ("orderNumber : " + GlobalVariable.orderNumber)
+
+}
+
+
+

@@ -15,10 +15,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter
 import groovy.json.JsonSlurper
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateContact'))
 
+// STEP | Authorization request to get Token
+def request = findTestObject('API/frontWebServices/DRAFT.AuthFrontToken')
+
+List<UrlEncodedBodyParameter> body = new ArrayList<UrlEncodedBodyParameter>()
+body.add(new UrlEncodedBodyParameter("grant_type","password"))
+body.add(new UrlEncodedBodyParameter("scope","offline_access"))
+body.add(new UrlEncodedBodyParameter("username",GlobalVariable.userName))
+body.add(new UrlEncodedBodyParameter("password",GlobalVariable.userPassword))
+
+println(body);
+
+request.setBodyContent(new HttpUrlEncodedBodyContent(body))
+
+response = WS.sendRequestAndVerify(request)
+println("TOKEN IS : " + response)
+
+// STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-GlobalVariable.contactId = responseJson.id
-println ("GlobVar is: "+GlobalVariable.contactId)
+GlobalVariable.token = responseJson.token_type+ " " +responseJson.access_token

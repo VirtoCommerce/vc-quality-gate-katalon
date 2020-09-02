@@ -91,12 +91,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'CONTACT_ID'</initValue>
+      <initValue>''</initValue>
       <name>contactId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'VALUE'</initValue>
+      <initValue>''</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -106,7 +106,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'VALUE'</initValue>
+      <initValue>''</initValue>
       <name>categoryId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -131,12 +131,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PRICELIST_ID'</initValue>
+      <initValue>''</initValue>
+      <name>cookie</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
       <name>pricelistId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PRODUCT_ID'</initValue>
+      <initValue>''</initValue>
       <name>productId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ffcId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
