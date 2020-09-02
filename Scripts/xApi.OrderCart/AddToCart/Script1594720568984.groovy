@@ -15,11 +15,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-//WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Object Repository/Page_Electronics/CookiesAcceptButton'))
 
-WebUI.click(findTestObject('Object Repository/Page_Electronics/a_Headphones'))
+WebUI.click(findTestObject('Object Repository/Page_Electronics/a_Cell phones'))
 
-WebUI.verifyElementText(findTestObject('AerialImagingCategory/H1CategoryPage'), 'HEADPHONES')
+WebUI.verifyElementText(findTestObject('AerialImagingCategory/H1CategoryPage'), 'CELL PHONES')
 //---
 WebUI.click(findTestObject('AerialImagingCategory/ButtonAddToCartIcon'))
 
@@ -27,12 +27,14 @@ WebUI.verifyElementText(findTestObject('PopupAddToCart/Page_Aerial Imaging  Dron
 
 GlobalVariable.priceFromPopup = WebUI.getText(findTestObject('Object Repository/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/SpanPriceInPopup'))
 
+//println ("PRICE FROM POPUP IS : "+GlobalVariable.priceFromPopup)
+
 WebUI.click(findTestObject('PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/ButtonGoToCart'))
 
 WebUI.mouseOver(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SpanItemTotal'))
 
 GlobalVariable.itemsTotalFromCart = WebUI.getText(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/SpanItemTotal'))
 
-println ("PRICE IS : "+GlobalVariable.itemsTotalFromCart)
+println ("TOTAL PRICE IS : "+GlobalVariable.itemsTotalFromCart)
 
 WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics/ButtonCheckoutOnCart'))

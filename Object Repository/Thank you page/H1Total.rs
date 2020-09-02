@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>DivSubtotal</name>
+   <name>H1Total</name>
    <tag></tag>
-   <elementGuidId>73756629-bd41-4f65-bd90-f83b45195b94</elementGuidId>
+   <elementGuidId>a3b1d6c7-284b-459e-9468-3ec670c155b7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[@ng-bind = '$ctrl.order.total.formattedAmount']</value>
+         <value>//small[@ng-bind = 'order.total.formattedAmount']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,13 +17,13 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
+      <value>small</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ng-bind</name>
       <type>Main</type>
-      <value>$ctrl.order.total.formattedAmount</value>
+      <value>order.total.formattedAmount</value>
    </webElementProperties>
 </WebElementEntity>

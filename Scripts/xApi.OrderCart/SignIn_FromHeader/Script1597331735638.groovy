@@ -18,6 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.click(findTestObject('Header/SignInButtonHeader'))
 
 if (GlobalVariable.userName != "" && GlobalVariable.userPassword != ""){
+	
 	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), GlobalVariable.userName)
 	
 	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), GlobalVariable.userPassword)

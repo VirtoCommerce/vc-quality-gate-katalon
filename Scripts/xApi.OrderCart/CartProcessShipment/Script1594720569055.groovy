@@ -19,5 +19,3 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ShippingMethodCheckout'))
 
 WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CheckShippingmetgod'))
-
-//WebUI.waitForPageLoad(2)

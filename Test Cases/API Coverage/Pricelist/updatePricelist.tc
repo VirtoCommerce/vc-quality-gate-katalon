@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Relate new pricelist to new product</description>
    <name>updatePricelist</name>
    <tag></tag>
    <comment></comment>
