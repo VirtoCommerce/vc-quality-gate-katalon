@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.updatePricelist</name>
+   <name>AccountCreateContact</name>
    <tag></tag>
-   <elementGuidId>7f634854-3dd5-4ef4-9d2b-74a0613650fa</elementGuidId>
+   <elementGuidId>f44fa7f2-cd46-4bdb-9769-aa1ed5dcb810</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  //\&quot;name\&quot;: \&quot;QwePricelist\&quot;,\n  \&quot;prices\&quot;: [\n    {\n      \&quot;pricelistId\&quot;: \&quot;9a978b1e-ab9f-4522-9b1b-8249725ba6f7\&quot;,\n      \&quot;productId\&quot;: \&quot;3f5dfb4e-eae7-43ae-a0e2-7750e884953b\&quot;,\n      \&quot;sale\&quot;: 555,\n      \&quot;list\&quot;: 999,\n      \&quot;startDate\&quot;: \&quot;2020-08-10T09:59:39.979Z\&quot;\n    }\n  ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n    \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n    \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n    //\&quot;memberType\&quot;: \&quot;HotContact\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/contacts</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

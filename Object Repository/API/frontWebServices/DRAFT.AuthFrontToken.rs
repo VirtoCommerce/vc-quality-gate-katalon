@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>getToken</name>
+   <name>DRAFT.AuthFrontToken</name>
    <tag></tag>
    <elementGuidId>4184fe62-3ccb-489f-9fbd-033492096e02</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

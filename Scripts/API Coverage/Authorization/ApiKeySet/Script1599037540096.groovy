@@ -14,28 +14,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrlEncodedBodyContent
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
+import groovy.json.JsonSlurper as JsonSlurper
 
-import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent
-import com.kms.katalon.core.testobject.UrlEncodedBodyParameter
-import groovy.json.JsonSlurper
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeySet'))
 
-
-// STEP | Authorization request to get Token
-def request = findTestObject('API/frontWebServices/getToken')
-
-List<UrlEncodedBodyParameter> body = new ArrayList<UrlEncodedBodyParameter>()
-body.add(new UrlEncodedBodyParameter("grant_type","password"))
-body.add(new UrlEncodedBodyParameter("scope","offline_access"))
-body.add(new UrlEncodedBodyParameter("username",GlobalVariable.userName))
-body.add(new UrlEncodedBodyParameter("password",GlobalVariable.userPassword))
-
-println(body);
-
-request.setBodyContent(new HttpUrlEncodedBodyContent(body))
-
-response = WS.sendRequestAndVerify(request)
-println("TOKEN IS : " + response)
-
-// STEP | Parse request and save token to the GlobalVariable
-def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-GlobalVariable.token = responseJson.token_type+ " " +responseJson.access_token
+responseX = WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeyGet'))
+def responseJsonX = new JsonSlurper().parseText(responseX.getResponseBodyContent())
+println('API KEY : ' + responseJsonX)

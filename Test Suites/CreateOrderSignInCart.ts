@@ -11,18 +11,6 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>3130eaa0-2fc1-4369-80d7-76398ab446cb</testSuiteGuid>
    <testCaseLink>
-      <guid>190ee4eb-eb68-4d66-8399-8243dd175308</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>63383aef-1f13-43c2-804e-97ef08f72ef3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/UserCreation</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>33a48e54-1a27-4a4c-bfeb-67ca7c223f76</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

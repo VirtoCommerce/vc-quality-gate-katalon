@@ -20,4 +20,4 @@ import internal.GlobalVariable as GlobalVariable
 //println ("GlobVar is: "+GlobalVariable.memberId)
 //println ("GlobVar is: "+GlobalVariable.userName)
 //WS.delay(10)
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/createAccount/createUser'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateUser'))

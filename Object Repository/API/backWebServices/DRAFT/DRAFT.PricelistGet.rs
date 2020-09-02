@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>createPricelistAssignment</name>
+   <name>DRAFT.PricelistGet</name>
    <tag></tag>
-   <elementGuidId>6dbbb122-cd63-4f1e-a9f8-024856493e49</elementGuidId>
+   <elementGuidId>8fefc800-4c4f-4ca5-a522-edb0d2c3b012</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;catalogId\&quot;: \&quot;${GlobalVariable.catalogId}\&quot;,\n    \&quot;pricelistId\&quot;: \&quot;${GlobalVariable.pricelistId}\&quot;,\n    \&quot;name\&quot;: \&quot;QweAssignment\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;QwePricelist\&quot;,\n//  \&quot;description\&quot;: \&quot;string\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;\n//  \&quot;outerId\&quot;: \&quot;Electronics\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists/1a720522-8c9d-4ada-be63-62aafe569a70</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
