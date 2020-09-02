@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>DivSubtotal</name>
+   <name>DivTotal</name>
    <tag></tag>
-   <elementGuidId>73756629-bd41-4f65-bd90-f83b45195b94</elementGuidId>
+   <elementGuidId>8bf7b19c-015c-4a75-a00d-e96e41a6b791</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
