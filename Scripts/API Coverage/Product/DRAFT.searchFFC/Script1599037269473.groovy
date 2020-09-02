@@ -24,7 +24,6 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/DRAFT/DRA
 //def localMemberId = parsedResult.'results'
 //def memberId = localMemberId[0].'id'
 
-
 def orderList = new JsonSlurper().parseText(response.getResponseBodyContent())
 
 ArrayList ordersArray = orderList.get('results')
@@ -34,10 +33,20 @@ if (ordersArray.name == namex ) {
 	//Save orderID to Global variable
 	println ("FFC ID : " + ordersArray.get('id'))
 	//GlobalVariable.ffcId = ordersArray[0].id
-//println ("ORDER ID : " + GlobalVariable.orderId)
-//println ("orderNumber : " + GlobalVariable.orderNumber)
-
 }
 
 
-
+// Example for FFC get
+//def categoryRequest = findTestObject('API/backWebServices/...')
+//def categoryResponse = WS.sendRequestAndVerify(categoryRequest)
+//
+//def categoryJson = new JsonSlurper().parseText(categoryResponse.getResponseBodyContent());
+//def categoryJson2 = (categoryJson.'items')
+//println ("HERE RESULTS : " + categoryJson2)
+//for (Map map : categoryJson2) {
+//	if (map.name == GlobalVariable.categoryName) {
+//		GlobalVariable.categoryId = map.id
+//		println ("CATEGORY ID : " + GlobalVariable.categoryId)
+//		break;
+//	}
+//}
