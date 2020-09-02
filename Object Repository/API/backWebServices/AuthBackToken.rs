@@ -23,7 +23,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/connect/token?grant_type=password&amp;scope=offline_access&amp;username=admin&amp;password=store</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/connect/token</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
