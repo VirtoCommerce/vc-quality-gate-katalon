@@ -15,48 +15,50 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/ALogin'), 5, FailureHandling.OPTIONAL)
+//def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/ALogin'), 5, FailureHandling.OPTIONAL)
+def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 5, FailureHandling.OPTIONAL)
+
 if (CheckAddressResult == false) {
 	
-	WebUI.selectOptionByIndex(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 1)
+	WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
 	
-	} else {
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), GlobalVariable.email)
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'), GlobalVariable.firstName)
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'), GlobalVariable.lastName)
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'), GlobalVariable.company)
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'), GlobalVariable.address)
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'), GlobalVariable.apt)
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'), GlobalVariable.city)
-
-    WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectCountry'), 2)
-
-    WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
-
-    WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'))
-
-    WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'), GlobalVariable.zip)
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), GlobalVariable.email)
+	
+		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'))
+	
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'), GlobalVariable.firstName)
+	
+		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'))
+	
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'), GlobalVariable.lastName)
+	
+		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'))
+	
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'), GlobalVariable.company)
+	
+		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'))
+	
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'), GlobalVariable.address)
+	
+		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'))
+	
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'), GlobalVariable.apt)
+	
+		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'))
+	
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'), GlobalVariable.city)
+	
+		WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectCountry'), 2)
+	
+		WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
+	
+		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'))
+	
+		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'), GlobalVariable.zip)
+	
+		} else {
+	
+		WebUI.selectOptionByIndex(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 1)
 
 }
 
