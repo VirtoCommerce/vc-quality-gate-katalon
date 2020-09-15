@@ -17,11 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.mouseOver(findTestObject('Header/StoreMenu'))
+WebUI.mouseOver(findTestObject('UI/Header/StoreMenu'))
 
-WebUI.mouseOver(findTestObject('Header/ChangeStoreMenu'))
+WebUI.mouseOver(findTestObject('UI/Header/ChangeStoreMenu'))
 
-WebUI.click(findTestObject('Header/B2bStoreLink'))
+WebUI.click(findTestObject('UI/Header/B2bStoreLink'))
 
 String B2BCurrentUrl = WebUI.getUrl()
 

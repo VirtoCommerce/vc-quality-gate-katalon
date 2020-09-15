@@ -16,6 +16,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ShippingMethodCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/ShippingMethodCheckout'))
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CheckShippingmetgod'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CheckShippingmetgod'))

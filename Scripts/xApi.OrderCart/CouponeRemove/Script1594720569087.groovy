@@ -15,6 +15,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SpanRemove'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/SpanRemove'))
 
-WebUI.verifyElementNotPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/PCouponeValid'), 0)
+WebUI.verifyElementNotPresent(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/PCouponeValid'), 0)

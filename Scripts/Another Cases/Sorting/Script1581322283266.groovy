@@ -27,11 +27,11 @@ WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:],
 
 WebUI.waitForPageLoad(2)
 
-WebUI.mouseOver(findTestObject('Page_Electronics/a_Camcorders'))
+WebUI.mouseOver(findTestObject('UI/Page_Electronics/a_Camcorders'))
 
-WebUI.click(findTestObject('Page_Electronics/AeriaImagingDrones'))
+WebUI.click(findTestObject('UI/Page_Electronics/AeriaImagingDrones'))
 
-List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
+List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('UI/AerialImagingCategory/ItemProduct'), 
     2)
 
 float[] ArrayFloatPrice = new float[ProductsInCategoryPage.size()]
@@ -52,9 +52,9 @@ float FirstNumberFloatPrice = ArrayFloatPrice[0]
 
 float LastNumberFloatPrice = ArrayFloatPrice[(ArrayFloatPrice.size() - 1)]
 
-WebUI.selectOptionByIndex(findTestObject('Object Repository/AerialImagingCategory/SortBySelect'), 4)
+WebUI.selectOptionByIndex(findTestObject('UI/AerialImagingCategory/SortBySelect'), 4)
 
-List<String> SortingProductsInCategoryPage = WebUI.findWebElements(findTestObject('Object Repository/AerialImagingCategory/ItemProduct'), 
+List<String> SortingProductsInCategoryPage = WebUI.findWebElements(findTestObject('UI/AerialImagingCategory/ItemProduct'), 
     2)
 
 float[] ArrayFloatPriceSorting = new float[SortingProductsInCategoryPage.size()]

@@ -19,9 +19,9 @@ WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:],
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
 
-WebUI.verifyElementClickable(findTestObject('Breadcrumb/LastItemBreadcrumbs'))
+WebUI.verifyElementClickable(findTestObject('UI/Breadcrumb/LastItemBreadcrumbs'))
 
-WebUI.click(findTestObject('Breadcrumb/a_Camcorders'))
+WebUI.click(findTestObject('UI/Breadcrumb/a_Camcorders'))
 
 String ExpectedUrl = GlobalVariable.urlFront + '/en-US/camcorders'
 
@@ -31,7 +31,7 @@ WebUI.verifyEqual(CurrentUrl, ExpectedUrl)
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/camcorders/aerial-imaging-drones/3dr-solo-quadcopter-no-gimbal')
 
-WebUI.click(findTestObject('Breadcrumb/HomeBreadCrumbs'))
+WebUI.click(findTestObject('UI/Breadcrumb/HomeBreadCrumbs'))
 
 String ExpectedUrlHome = GlobalVariable.urlFront + '/en-US/'
 

@@ -28,13 +28,13 @@ def CorrectSearchRequest = DataFromFile.CorrectSearchRequest
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 
-WebUI.click(findTestObject('Header/Search line'))
+WebUI.click(findTestObject('UI/Header/Search line'))
 
 String SearchResult = CorrectSearchRequest
 
-WebUI.setText(findTestObject('Header/Search line'), SearchResult)
+WebUI.setText(findTestObject('UI/Header/Search line'), SearchResult)
 
-String TextinHelper = WebUI.getText(findTestObject('Header/SearchLineHelper')).toLowerCase()
+String TextinHelper = WebUI.getText(findTestObject('UI/Header/SearchLineHelper')).toLowerCase()
 System.out.println(TextinHelper)
 System.out.println(SearchResult)
 int indexSearchlineHelper = TextinHelper.indexOf(SearchResult)
@@ -42,7 +42,7 @@ int indexSearchlineHelper = TextinHelper.indexOf(SearchResult)
 if (indexSearchlineHelper == -1) {
    System.out.println('word is absent in the helper')
 } else {
-    WebUI.click(findTestObject('Header/ButtonSearchHeader'))
+    WebUI.click(findTestObject('UI/Header/ButtonSearchHeader'))
 
     String SearchResultUp = SearchResult.toUpperCase()
 
@@ -50,9 +50,9 @@ if (indexSearchlineHelper == -1) {
 
     String SearchResultCheck = ('YOUR SEARCH FOR "' + SearchResultUp) + '" REVEALED THE FOLLOWING:'
 
-    WebUI.verifyElementText(findTestObject('SearchResultPage/H2SearchResultTitle'), SearchResultCheck)
+    WebUI.verifyElementText(findTestObject('UI/SearchResultPage/H2SearchResultTitle'), SearchResultCheck)
 
-    List<String> SearchResultItem = WebUI.findWebElements(findTestObject('Object Repository/Page_Electronics/ItemSearchResult'), 
+    List<String> SearchResultItem = WebUI.findWebElements(findTestObject('UI/Page_Electronics/ItemSearchResult'), 
         2)
 
     for (int i = 0; i < SearchResultItem.size(); i++) {
@@ -63,9 +63,9 @@ if (indexSearchlineHelper == -1) {
         int indexSearch = LowerProductNameSearch.indexOf(SearchResultLow)
     }
     
-    WebUI.verifyElementPresent(findTestObject('SearchResultPage/PriceSearchResultItem'), 0)
+    WebUI.verifyElementPresent(findTestObject('UI/SearchResultPage/PriceSearchResultItem'), 0)
 
-    WebUI.verifyElementPresent(findTestObject('SearchResultPage/PTagSearchResultItem'), 0)
+    WebUI.verifyElementPresent(findTestObject('UI/SearchResultPage/PTagSearchResultItem'), 0)
 
     WebUI.closeBrowser()
 }

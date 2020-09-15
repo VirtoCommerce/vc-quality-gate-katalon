@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
-WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
+WebUI.click(findTestObject('UI/ProductPage/AddtoQouteProductPage'))
 
-WebUI.click(findTestObject('PopupAddToQuoteRequest/ButtonGoToQuote'))
+WebUI.click(findTestObject('UI/PopupAddToQuoteRequest/ButtonGoToQuote'))
 

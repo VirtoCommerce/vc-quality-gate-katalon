@@ -77,6 +77,12 @@
       <testCaseId>Test Cases/API Coverage/Pricelist/updatePricelist</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>c540c1f1-c337-40af-95ab-253ebc4811da</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Product/createPromo</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>a8faca40-9667-46fd-9721-16864955fce4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

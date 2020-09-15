@@ -15,10 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'))
 
-WebUI.getText(findTestObject('Thank you page/H1Subtotal'))
+WebUI.getText(findTestObject('UI/Thank you page/H1Subtotal'))
 
-def PriceFromTotalBlock = WebUI.getText(findTestObject('Thank you page/H1Total'))
+def PriceFromTotalBlock = WebUI.getText(findTestObject('UI/Thank you page/H1Total'))
 
 WebUI.verifyEqual(GlobalVariable.priceFromPopup, PriceFromTotalBlock)

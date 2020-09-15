@@ -22,7 +22,7 @@ WebUI.waitForPageLoad(2)
 //WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
 WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Object Repository/Header/HeaderLogoutButton'))
+WebUI.click(findTestObject('UI/Header/HeaderLogoutButton'))
 
 WebUI.verifyTextNotPresent(GlobalVariable.firstName, false)
 

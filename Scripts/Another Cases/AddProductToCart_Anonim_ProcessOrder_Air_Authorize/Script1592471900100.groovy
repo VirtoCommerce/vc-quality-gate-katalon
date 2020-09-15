@@ -35,88 +35,88 @@ def Zip = DataFromFile.Zip
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.mouseOver(findTestObject('Page_Electronics/Theater'))
+WebUI.mouseOver(findTestObject('UI/Page_Electronics/Theater'))
 
-WebUI.click(findTestObject('Page_Electronics/Theater'))
+WebUI.click(findTestObject('UI/Page_Electronics/Theater'))
 
-WebUI.verifyElementText(findTestObject('AerialImagingCategory/H1CategoryPage'), 'HOME THEATER')
+WebUI.verifyElementText(findTestObject('UI/AerialImagingCategory/H1CategoryPage'), 'HOME THEATER')
 
-WebUI.click(findTestObject('AerialImagingCategory/ButtonAddToCartIcon'))
+WebUI.click(findTestObject('UI/AerialImagingCategory/ButtonAddToCartIcon'))
 
-WebUI.verifyElementText(findTestObject('PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/H1PopupProductAddedTocart'), 
+WebUI.verifyElementText(findTestObject('UI/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/H1PopupProductAddedTocart'), 
     'PRODUCT IS ADDED TO CART')
-def PriceFromPopup = WebUI.getText(findTestObject('Object Repository/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/SpanPriceInPopup'))
+def PriceFromPopup = WebUI.getText(findTestObject('UI/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/SpanPriceInPopup'))
 
-WebUI.click(findTestObject('PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/ButtonGoToCart'))
+WebUI.click(findTestObject('UI/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/ButtonGoToCart'))
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics/ButtonCheckoutOnCart'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics/ButtonCheckoutOnCart'))
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), Email)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), Email)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'), FirstName)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'), FirstName)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'), LastName)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'), LastName)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'), Company)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'), Company)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'), Address)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'), Address)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'), Apt)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'), Apt)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'), City)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'), City)
 
-WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectCountry'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/SelectCountry'), 2)
 
-WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'))
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'), Zip)
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'), Zip)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ShippingMethodCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/ShippingMethodCheckout'))
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CheckShippingmethodAir'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CheckShippingmethodAir'))
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/PaymentBtnCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/PaymentBtnCheckout'))
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AuthorizeNetCheck'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/AuthorizeNetCheck'))
 
 WebUI.waitForPageLoad(2)
 
-WebUI.scrollToElement(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 0)
+WebUI.scrollToElement(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 0)
 
-not_run: WebUI.waitForElementClickable(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 
+not_run: WebUI.waitForElementClickable(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 
     10)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'))
 
-WebUI.waitForElementNotVisible(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 10)
+WebUI.waitForElementNotVisible(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/CreateORderCheckout'), 10)
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputCardNumber'), '4242424242424242')
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/InputCardNumber'), '4242424242424242')
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputCardCVV'), '111')
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/InputCardCVV'), '111')
 
-WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputCardDate'), '11/22')
+WebUI.setText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/InputCardDate'), '11/22')
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputSubmitCard'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/InputSubmitCard'))
 
-WebUI.getText(findTestObject('Thank you page/H1Subtotal'))
+WebUI.getText(findTestObject('UI/Thank you page/H1Subtotal'))
 
-def PriceFromTotalBlock = WebUI.getText(findTestObject('Thank you page/H1Subtotal'))
+def PriceFromTotalBlock = WebUI.getText(findTestObject('UI/Thank you page/H1Subtotal'))
 
 WebUI.verifyEqual(PriceFromPopup, PriceFromTotalBlock)
 

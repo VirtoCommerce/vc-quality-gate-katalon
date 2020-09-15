@@ -15,26 +15,26 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('Object Repository/Page_Electronics/CookiesAcceptButton'))
+WebUI.click(findTestObject('UI/Page_Electronics/CookiesAcceptButton'))
 
-WebUI.click(findTestObject('Object Repository/Page_Electronics/a_Cell phones'))
+WebUI.click(findTestObject('UI/Page_Electronics/a_Cell phones'))
 
-WebUI.verifyElementText(findTestObject('AerialImagingCategory/H1CategoryPage'), 'CELL PHONES')
+WebUI.verifyElementText(findTestObject('UI/AerialImagingCategory/H1CategoryPage'), 'CELL PHONES')
 //---
-WebUI.click(findTestObject('AerialImagingCategory/ButtonAddToCartIcon'))
+WebUI.click(findTestObject('UI/AerialImagingCategory/ButtonAddToCartIcon'))
 
-WebUI.verifyElementText(findTestObject('PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/H1PopupProductAddedTocart'), 'PRODUCT IS ADDED TO CART')
+WebUI.verifyElementText(findTestObject('UI/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/H1PopupProductAddedTocart'), 'PRODUCT IS ADDED TO CART')
 
-GlobalVariable.priceFromPopup = WebUI.getText(findTestObject('Object Repository/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/SpanPriceInPopup'))
+GlobalVariable.priceFromPopup = WebUI.getText(findTestObject('UI/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/SpanPriceInPopup'))
 
 //println ("PRICE FROM POPUP IS : "+GlobalVariable.priceFromPopup)
 
-WebUI.click(findTestObject('PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/ButtonGoToCart'))
+WebUI.click(findTestObject('UI/PopupAddToCart/Page_Aerial Imaging  Drones - Electronics/ButtonGoToCart'))
 
-WebUI.mouseOver(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SpanItemTotal'))
+WebUI.mouseOver(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/SpanItemTotal'))
 
-GlobalVariable.itemsTotalFromCart = WebUI.getText(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/SpanItemTotal'))
+GlobalVariable.itemsTotalFromCart = WebUI.getText(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/SpanItemTotal'))
 
 println ("TOTAL PRICE IS : "+GlobalVariable.itemsTotalFromCart)
 
-WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics/ButtonCheckoutOnCart'))
+WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics/ButtonCheckoutOnCart'))
