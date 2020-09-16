@@ -6,8 +6,8 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8089'</initValue>
-      <name>urlFront</name>
+      <initValue>'https://docker.virtocommerce.com:8084'</initValue>
+     <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8109'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8104'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
