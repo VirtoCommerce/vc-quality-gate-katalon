@@ -30,6 +30,6 @@ DataFromFile.City = data.getValue(7, 1)
 DataFromFile.CorrectSearchRequest = data.getValue(8, 1)
 DataFromFile.IncorrectSearchRequest = data.getValue(9, 1)
 DataFromFile.Zip = data.getValue(10, 1)
-DataFromFile.Login = data.getValue(11, 1)
-DataFromFile.Password = data.getValue(12, 1)
+DataFromFile.Login = "kno"
+DataFromFile.Password = "Password1!"
 return DataFromFile

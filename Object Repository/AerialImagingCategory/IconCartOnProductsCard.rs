@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>id(&quot;aerial-imaging-drones&quot;)/main[@class=&quot;wrapper main-content&quot;]/div[@class=&quot;grid grid-border&quot;]/div[@class=&quot;grid-item large--four-fifths grid-border--left&quot;]/div[@class=&quot;grid-uniform&quot;]/div[@class=&quot;grid-item large--one-quarter medium--one-third small--one-half comparable&quot;]/a[@class=&quot;product-grid-item Click&quot;]/div[@class=&quot;product-item--other&quot;]/button[@class=&quot;btn btn-secondary AddShopCart ng-scope&quot;]/span[@class=&quot;icon icon-cart&quot;]</value>
+         <value>//span[@class = 'icon icon-cart' and (not(contains(text(), 'Cart')) or not(contains(., 'Cart')))]</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -17,25 +17,32 @@
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
       <value>icon icon-cart</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;aerial-imaging-drones&quot;)/main[@class=&quot;wrapper main-content&quot;]/div[@class=&quot;grid grid-border&quot;]/div[@class=&quot;grid-item large--four-fifths grid-border--left&quot;]/div[@class=&quot;grid-uniform&quot;]/div[@class=&quot;grid-item large--one-quarter medium--one-third small--one-half comparable&quot;]/a[@class=&quot;product-grid-item Click&quot;]/div[@class=&quot;product-item--other&quot;]/button[@class=&quot;btn btn-secondary AddShopCart ng-scope&quot;]/span[@class=&quot;icon icon-cart&quot;]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>not contain</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Cart</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
