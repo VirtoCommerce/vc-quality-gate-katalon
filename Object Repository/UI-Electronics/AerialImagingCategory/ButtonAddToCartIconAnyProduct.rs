@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>ButtonAddToCartIcon</name>
+   <name>ButtonAddToCartIconAnyProduct</name>
    <tag></tag>
-   <elementGuidId>e8be523b-cc45-4810-beec-64981941ce5d</elementGuidId>
+   <elementGuidId>f8d72b9f-c848-4890-82be-2c952975e0ea</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[@interactor-arg = '${GlobalVariable.productId}' and @title = 'Add to cart']</value>
+         <value>//button[@title = 'Add to cart']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -27,7 +27,7 @@
       <value>button</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>interactor-arg</name>
       <type>Main</type>

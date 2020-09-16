@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentFolderCreate</name>
+   <name>StoreContentStatsGet</name>
    <tag></tag>
-   <elementGuidId>b0ec81a5-32d9-411d-a2e4-8adfac2b49bb</elementGuidId>
+   <elementGuidId>a077b638-49b1-4f9a-9e7d-8510b455c4c1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;qwefolder1\&quot;,\n  \&quot;type\&quot;: \&quot;QweType\&quot;\n  //\&quot;url\&quot;: \&quot;string\&quot;,\n  //\&quot;relativeUrl\&quot;: \&quot;string\&quot;,\n  //\&quot;parentUrl\&quot;: \&quot;string\&quot;,\n  //\&quot;modifiedDate\&quot;: \&quot;2020-09-15T19:47:10.460Z\&quot;,\n  //\&quot;createdDate\&quot;: \&quot;2020-09-15T19:47:10.460Z\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,12 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-<<<<<<< HEAD
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}/folder</restUrl>
-=======
-   <restUrl>${GlobalVariable.urlBack}/api/content/{contentType}/${GlobalVariable.storeId}/folder</restUrl>
->>>>>>> origin/dev
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.storeId}/stats</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

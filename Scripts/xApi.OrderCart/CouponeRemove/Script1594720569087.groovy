@@ -18,3 +18,5 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SpanRemove'))
 
 WebUI.verifyElementNotPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/PCouponeValid'), 0)
+
+WebUI.verifyElementVisible(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SpanApply'))

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>Webstore-v3-Docker</name>
+   <name>Electronic-v3-Docker</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://webstore-storefront.qa.govirto.com/B2B-store'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8083'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'https://docker.virtocommerce.com:8103'</initValue>
       <name>urlBack</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'TEMP'</initValue>
+      <name>contentType</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
