@@ -15,10 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('UI/CartCheckoutPage/Page_Electronics - Checkout/ALogin'))
+WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ALogin'))
 
-WebUI.setText(findTestObject('UI/SignInPage/EmailCustomerLogin'), GlobalVariable.userName)
+WebUI.setText(findTestObject('UI-Electronics/SignInPage/EmailCustomerLogin'), GlobalVariable.userName)
 
-WebUI.setText(findTestObject('UI/SignInPage/PasswordCustomerLogin'), GlobalVariable.userPassword)
+WebUI.setText(findTestObject('UI-Electronics/SignInPage/PasswordCustomerLogin'), GlobalVariable.userPassword)
 
-WebUI.click(findTestObject('UI/SignInPage/SignInSubmitButton'))
+WebUI.click(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'))

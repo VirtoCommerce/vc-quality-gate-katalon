@@ -17,11 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('UI/Page_Electronics/a_Headphones'))
+WebUI.click(findTestObject('UI-Electronics/Page_Electronics/a_Headphones'))
 
-WebUI.click(findTestObject('UI/Filtering/FilterByColor'))
+WebUI.click(findTestObject('UI-Electronics/Filtering/FilterByColor'))
 
-String s = WebUI.getText(findTestObject('UI/Filtering/FilterByColor'))
+String s = WebUI.getText(findTestObject('UI-Electronics/Filtering/FilterByColor'))
 
 s = s.substring(s.indexOf('(') + 1)
 
@@ -29,7 +29,7 @@ s = s.substring(s.indexOf('(') + 1)
 s = s.substring(0, s.indexOf(')'))
 
 
-List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('UI/AerialImagingCategory/ItemProduct'), 
+List<String> ProductsInCategoryPage = WebUI.findWebElements(findTestObject('UI-Electronics/AerialImagingCategory/ItemProduct'), 
     2)
 
 WebUI.verifyEqual(s, ProductsInCategoryPage.size())

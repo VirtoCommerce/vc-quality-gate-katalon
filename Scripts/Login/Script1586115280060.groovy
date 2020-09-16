@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('UI/Header/SignInButtonHeader'))
+WebUI.click(findTestObject('UI-Electronics/Header/SignInButtonHeader'))
 
 def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
 def Login = DataFromFile.Login
@@ -23,23 +23,23 @@ def Password = DataFromFile.Password
 def FirstName = DataFromFile.FirstName
 
 if( Login !=""&& Password!="" ){
-	WebUI.setText(findTestObject('UI/SignInPage/EmailCustomerLogin'), Login)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/EmailCustomerLogin'), Login)
 	
-	WebUI.setText(findTestObject('UI/SignInPage/PasswordCustomerLogin'), Password)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/PasswordCustomerLogin'), Password)
 	
-	WebUI.click(findTestObject('UI/SignInPage/SignInSubmitButton'))
+	WebUI.click(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'))
 	
-	String GetText = WebUI.getText(findTestObject('UI/Header/HeaderLogoutText'))
+	String GetText = WebUI.getText(findTestObject('UI-Electronics/Header/HeaderLogoutText'))
 	
 	WebUI.verifyMatch(GetText, FirstName, false)
  }else{
-	WebUI.setText(findTestObject('UI/SignInPage/EmailCustomerLogin'), login)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/EmailCustomerLogin'), login)
 
-	WebUI.setText(findTestObject('UI/SignInPage/PasswordCustomerLogin'), password)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/PasswordCustomerLogin'), password)
 	
-	WebUI.click(findTestObject('UI/SignInPage/SignInSubmitButton'))
+	WebUI.click(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'))
 	
-	String GetText = WebUI.getText(findTestObject('UI/Header/HeaderLogoutText'))
+	String GetText = WebUI.getText(findTestObject('UI-Electronics/Header/HeaderLogoutText'))
 	//Need variable for FirstName 
 	//WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
  }

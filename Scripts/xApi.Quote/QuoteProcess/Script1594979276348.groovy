@@ -15,41 +15,41 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/EmailQuoteRequestPage'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/EmailQuoteRequestPage'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/EmailQuoteRequestPage'), GlobalVariable.email)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/EmailQuoteRequestPage'), GlobalVariable.email)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/FirstNameBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/FirstNameBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/FirstNameBillingQuote'), GlobalVariable.firstName)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/FirstNameBillingQuote'), GlobalVariable.firstName)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/LastNameBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/LastNameBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/LastNameBillingQuote'), GlobalVariable.lastName)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/LastNameBillingQuote'), GlobalVariable.lastName)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/AddressBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/AddressBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/AddressBillingQuote'), GlobalVariable.address)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/AddressBillingQuote'), GlobalVariable.address)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/input_Company_BillingAddressOrganization'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/input_Company_BillingAddressOrganization'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/input_Company_BillingAddressOrganization'), GlobalVariable.company)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/input_Company_BillingAddressOrganization'), GlobalVariable.company)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/ZipQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/ZipQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/ZipQuote'), GlobalVariable.zip)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/ZipQuote'), GlobalVariable.zip)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/CityBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/CityBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/CityBillingQuote'), GlobalVariable.city)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/CityBillingQuote'), GlobalVariable.city)
 
-WebUI.selectOptionByIndex(findTestObject('UI/QuoteRequestPage/SelectCountryBillingQuote'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI-Electronics/QuoteRequestPage/SelectCountryBillingQuote'), 2)
 
-WebUI.selectOptionByIndex(findTestObject('UI/QuoteRequestPage/SelectStateBillingQuote'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI-Electronics/QuoteRequestPage/SelectStateBillingQuote'), 2)
 
-WebUI.check(findTestObject('UI/QuoteRequestPage/CheckBillingEqualShipping'))
+WebUI.check(findTestObject('UI-Electronics/QuoteRequestPage/CheckBillingEqualShipping'))
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/SubmitQuoteRequest'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/SubmitQuoteRequest'))
 
 
 

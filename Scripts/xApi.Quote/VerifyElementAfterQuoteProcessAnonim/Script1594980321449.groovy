@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.verifyElementPresent(findTestObject('UI/SignInPage/SignInSubmitButton'), 0)
+WebUI.verifyElementPresent(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'), 0)
 
 WebUI.closeBrowser()
 

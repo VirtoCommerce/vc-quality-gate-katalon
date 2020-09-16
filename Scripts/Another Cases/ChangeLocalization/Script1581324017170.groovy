@@ -18,17 +18,17 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 
-WebUI.mouseOver(findTestObject('UI/Header/StoreMenu'))
+WebUI.mouseOver(findTestObject('UI-Electronics/Header/StoreMenu'))
 
-WebUI.mouseOver(findTestObject('UI/Header/LanguageMenu'))
+WebUI.mouseOver(findTestObject('UI-Electronics/Header/LanguageMenu'))
 
-WebUI.click(findTestObject('UI/Header/de-DELanguage'))
+WebUI.click(findTestObject('UI-Electronics/Header/de-DELanguage'))
 
 String DeCurrentUrl = WebUI.getUrl()
 
 WebUI.verifyMatch(DeCurrentUrl, GlobalVariable.urlFront + '/de-DE/', false)
 
-String GetTextPlaceholder = WebUI.getText(findTestObject('UI/Header/SignInButtonHeader'))
+String GetTextPlaceholder = WebUI.getText(findTestObject('UI-Electronics/Header/SignInButtonHeader'))
 
 WebUI.verifyMatch(GetTextPlaceholder, 'Anmelden', false)
 

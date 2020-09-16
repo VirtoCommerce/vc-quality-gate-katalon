@@ -17,11 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementVisible(findTestObject('UI/Header/logo'))
+WebUI.verifyElementVisible(findTestObject('UI-Electronics/Header/logo'))
 
-WebUI.click(findTestObject('UI/Header/SignInButtonHeader'))
+WebUI.click(findTestObject('UI-Electronics/Header/SignInButtonHeader'))
 
-WebUI.click(findTestObject('UI/Header/logo'))
+WebUI.click(findTestObject('UI-Electronics/Header/logo'))
 
 String CurrentUrl = WebUI.getUrl()
 

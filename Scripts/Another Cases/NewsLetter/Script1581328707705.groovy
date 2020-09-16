@@ -22,11 +22,11 @@ def Email = DataFromFile.Email
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 
-WebUI.focus(findTestObject('UI/Page_Electronics/NewsletterFooterInput'))
+WebUI.focus(findTestObject('UI-Electronics/Page_Electronics/NewsletterFooterInput'))
 
-WebUI.setText(findTestObject('UI/Page_Electronics/NewsletterFooterInput'), Email)
+WebUI.setText(findTestObject('UI-Electronics/Page_Electronics/NewsletterFooterInput'), Email)
 
-WebUI.click(findTestObject('UI/Page_Electronics/NewsletterSubscibeButton'))
+WebUI.click(findTestObject('UI-Electronics/Page_Electronics/NewsletterSubscibeButton'))
 
 WebUI.closeBrowser()
 

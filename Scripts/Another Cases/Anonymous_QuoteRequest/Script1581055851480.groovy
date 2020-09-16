@@ -35,52 +35,52 @@ WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:],
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
-WebUI.click(findTestObject('UI/ProductPage/AddtoQouteProductPage'))
+WebUI.click(findTestObject('UI-Electronics/ProductPage/AddtoQouteProductPage'))
 
-WebUI.click(findTestObject('UI/PopupAddToQuoteRequest/ButtonGoToQuote'))
+WebUI.click(findTestObject('UI-Electronics/PopupAddToQuoteRequest/ButtonGoToQuote'))
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
-WebUI.click(findTestObject('UI/ProductPage/AddtoQouteProductPage'))
+WebUI.click(findTestObject('UI-Electronics/ProductPage/AddtoQouteProductPage'))
 
-WebUI.click(findTestObject('UI/PopupAddToQuoteRequest/ButtonGoToQuote'))
+WebUI.click(findTestObject('UI-Electronics/PopupAddToQuoteRequest/ButtonGoToQuote'))
 //
-WebUI.click(findTestObject('UI/QuoteRequestPage/EmailQuoteRequestPage'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/EmailQuoteRequestPage'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/EmailQuoteRequestPage'), Email)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/EmailQuoteRequestPage'), Email)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/FirstNameBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/FirstNameBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/FirstNameBillingQuote'), FirstName)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/FirstNameBillingQuote'), FirstName)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/LastNameBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/LastNameBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/LastNameBillingQuote'), LastName)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/LastNameBillingQuote'), LastName)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/AddressBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/AddressBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/AddressBillingQuote'), Address)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/AddressBillingQuote'), Address)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/input_Company_BillingAddressOrganization'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/input_Company_BillingAddressOrganization'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/input_Company_BillingAddressOrganization'), Company)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/input_Company_BillingAddressOrganization'), Company)
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/ZipQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/ZipQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/ZipQuote'), Zip)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/ZipQuote'), Zip)
 
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/CityBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/CityBillingQuote'))
 
-WebUI.setText(findTestObject('UI/QuoteRequestPage/CityBillingQuote'), City)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/CityBillingQuote'), City)
 
-WebUI.selectOptionByIndex(findTestObject('UI/QuoteRequestPage/SelectCountryBillingQuote'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI-Electronics/QuoteRequestPage/SelectCountryBillingQuote'), 2)
 
-WebUI.selectOptionByIndex(findTestObject('UI/QuoteRequestPage/SelectStateBillingQuote'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI-Electronics/QuoteRequestPage/SelectStateBillingQuote'), 2)
 
-WebUI.check(findTestObject('UI/QuoteRequestPage/CheckBillingEqualShipping'))
+WebUI.check(findTestObject('UI-Electronics/QuoteRequestPage/CheckBillingEqualShipping'))
 
-WebUI.click(findTestObject('UI/QuoteRequestPage/SubmitQuoteRequest'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/SubmitQuoteRequest'))
 
 WebUI.closeBrowser()
 
