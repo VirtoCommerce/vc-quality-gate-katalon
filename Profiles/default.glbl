@@ -91,7 +91,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'e8c9be3e-9c39-440b-b6ba-d9a6ff62df74'</initValue>
       <name>contactId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -141,7 +141,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'efeb9b88-4ecd-40a0-8998-839c4597a46f'</initValue>
       <name>productId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

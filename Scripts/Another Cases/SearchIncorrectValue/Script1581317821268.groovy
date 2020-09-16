@@ -21,13 +21,13 @@ def IncorrectSearchRequest = DataFromFile.IncorrectSearchRequest
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Header/Search line'))
+WebUI.click(findTestObject('UI-Electronics/Header/Search line'))
 
 
-WebUI.setText(findTestObject('Header/Search line'), IncorrectSearchRequest)
+WebUI.setText(findTestObject('UI-Electronics/Header/Search line'), IncorrectSearchRequest)
 
-WebUI.click(findTestObject('Header/ButtonSearchHeader'))
+WebUI.click(findTestObject('UI-Electronics/Header/ButtonSearchHeader'))
 
 String SearchResultCheck = 'SEARCH FOR PRODUCTS ON OUR SITE'
 
-WebUI.verifyElementText(findTestObject('SearchResultPage/H2IncorrectSearchPage'), SearchResultCheck)
+WebUI.verifyElementText(findTestObject('UI-Electronics/SearchResultPage/H2IncorrectSearchPage'), SearchResultCheck)

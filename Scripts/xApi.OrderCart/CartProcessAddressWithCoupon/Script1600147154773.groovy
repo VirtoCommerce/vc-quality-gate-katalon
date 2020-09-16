@@ -16,54 +16,54 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 //def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/ALogin'), 5, FailureHandling.OPTIONAL)
-def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 5, FailureHandling.OPTIONAL)
+def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 5, FailureHandling.OPTIONAL)
 
 if (CheckAddressResult == false) {
 	
-	WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
+	WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), GlobalVariable.email)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), GlobalVariable.email)
 	
-		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'))
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'), GlobalVariable.firstName)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/FirstNameCheckout'), GlobalVariable.firstName)
 	
-		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'))
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'), GlobalVariable.lastName)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/LastNameCheckout'), GlobalVariable.lastName)
 	
-		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'))
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'), GlobalVariable.company)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/CompanyCheckout'), GlobalVariable.company)
 	
-		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'))
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'), GlobalVariable.address)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/AddressCheckout'), GlobalVariable.address)
 	
-		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'))
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'), GlobalVariable.apt)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/AptCheckout'), GlobalVariable.apt)
 	
-		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'))
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'), GlobalVariable.city)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/CityCheckout'), GlobalVariable.city)
 	
-		WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectCountry'), 2)
+		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectCountry'), 2)
 	
-		WebUI.selectOptionByIndex(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
+		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
 	
-		WebUI.click(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'))
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'))
 	
-		WebUI.setText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'), GlobalVariable.zip)
+		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'), GlobalVariable.zip)
 	
 		} else {
 	
-		WebUI.selectOptionByIndex(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 1)
+		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 1)
 
 }
-		//GlobalVariable.priceFromPopup = WebUI.getText(findTestObject('CartCheckoutPage/Page_Electronics - Checkout/DivSubtotalInCart'))
+		//GlobalVariable.priceFromPopup = WebUI.getText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/DivSubtotalInCart'))
 		//println ("PRICE FROM POPUP IS : "+GlobalVariable.priceFromPopup)
-		GlobalVariable.itemsTotalFromCart = WebUI.getText(findTestObject('Object Repository/Page_Electronics - Checkout/SpanTotal'))
+		GlobalVariable.itemsTotalFromCart = WebUI.getText(findTestObject('UI-Electronics/Page_Electronics - Checkout/SpanTotal'))
 		def TotalWithoutDollar = GlobalVariable.itemsTotalFromCart;
 		TotalWithoutDollar = TotalWithoutDollar.substring(1);
 		//GlobalVariable.itemsTotalFromCart = Float.parseFloat(GlobalVariable.itemsTotalFromCart)

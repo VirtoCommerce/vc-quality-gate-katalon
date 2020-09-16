@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('Object Repository/CartCheckoutPage/Page_Electronics - Checkout/ALogin'))
+WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ALogin'))
 
 def DataFromFile = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/PrepareData'), [:], FailureHandling.STOP_ON_FAILURE)
 def Login = DataFromFile.Login
@@ -23,23 +23,23 @@ def Password = DataFromFile.Password
 def FirstName = DataFromFile.FirstName
 
 if( Login !=""&& Password!="" ){
-	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), Login)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/EmailCustomerLogin'), Login)
 	
-	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), Password)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/PasswordCustomerLogin'), Password)
 	
-	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
+	WebUI.click(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'))
 	
-	String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+	String GetText = WebUI.getText(findTestObject('UI-Electronics/Header/HeaderLogoutText'))
 	
 	WebUI.verifyMatch(GetText, FirstName, false)
  }else{
-	WebUI.setText(findTestObject('Object Repository/SignInPage/EmailCustomerLogin'), login)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/EmailCustomerLogin'), login)
 
-	WebUI.setText(findTestObject('Object Repository/SignInPage/PasswordCustomerLogin'), password)
+	WebUI.setText(findTestObject('UI-Electronics/SignInPage/PasswordCustomerLogin'), password)
 	
-	WebUI.click(findTestObject('Object Repository/SignInPage/SignInSubmitButton'))
+	WebUI.click(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'))
 	
-	//String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+	//String GetText = WebUI.getText(findTestObject('UI-Electronics/Header/HeaderLogoutText'))
 	//Need variable for FirstName 
 	//WebUI.verifyMatch(GetText, GlobalVariable.UserLogPass, false)
  }

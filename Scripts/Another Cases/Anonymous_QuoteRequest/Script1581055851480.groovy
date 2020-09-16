@@ -35,52 +35,52 @@ WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:],
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
-WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
+WebUI.click(findTestObject('UI-Electronics/ProductPage/AddtoQouteProductPage'))
 
-WebUI.click(findTestObject('PopupAddToQuoteRequest/ButtonGoToQuote'))
+WebUI.click(findTestObject('UI-Electronics/PopupAddToQuoteRequest/ButtonGoToQuote'))
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')
 
-WebUI.click(findTestObject('ProductPage/AddtoQouteProductPage'))
+WebUI.click(findTestObject('UI-Electronics/ProductPage/AddtoQouteProductPage'))
 
-WebUI.click(findTestObject('PopupAddToQuoteRequest/ButtonGoToQuote'))
+WebUI.click(findTestObject('UI-Electronics/PopupAddToQuoteRequest/ButtonGoToQuote'))
 //
-WebUI.click(findTestObject('QuoteRequestPage/EmailQuoteRequestPage'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/EmailQuoteRequestPage'))
 
-WebUI.setText(findTestObject('QuoteRequestPage/EmailQuoteRequestPage'), Email)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/EmailQuoteRequestPage'), Email)
 
-WebUI.click(findTestObject('QuoteRequestPage/FirstNameBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/FirstNameBillingQuote'))
 
-WebUI.setText(findTestObject('QuoteRequestPage/FirstNameBillingQuote'), FirstName)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/FirstNameBillingQuote'), FirstName)
 
-WebUI.click(findTestObject('QuoteRequestPage/LastNameBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/LastNameBillingQuote'))
 
-WebUI.setText(findTestObject('QuoteRequestPage/LastNameBillingQuote'), LastName)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/LastNameBillingQuote'), LastName)
 
-WebUI.click(findTestObject('QuoteRequestPage/AddressBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/AddressBillingQuote'))
 
-WebUI.setText(findTestObject('QuoteRequestPage/AddressBillingQuote'), Address)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/AddressBillingQuote'), Address)
 
-WebUI.click(findTestObject('QuoteRequestPage/input_Company_BillingAddressOrganization'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/input_Company_BillingAddressOrganization'))
 
-WebUI.setText(findTestObject('QuoteRequestPage/input_Company_BillingAddressOrganization'), Company)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/input_Company_BillingAddressOrganization'), Company)
 
-WebUI.click(findTestObject('QuoteRequestPage/ZipQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/ZipQuote'))
 
-WebUI.setText(findTestObject('QuoteRequestPage/ZipQuote'), Zip)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/ZipQuote'), Zip)
 
 
-WebUI.click(findTestObject('QuoteRequestPage/CityBillingQuote'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/CityBillingQuote'))
 
-WebUI.setText(findTestObject('QuoteRequestPage/CityBillingQuote'), City)
+WebUI.setText(findTestObject('UI-Electronics/QuoteRequestPage/CityBillingQuote'), City)
 
-WebUI.selectOptionByIndex(findTestObject('QuoteRequestPage/SelectCountryBillingQuote'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI-Electronics/QuoteRequestPage/SelectCountryBillingQuote'), 2)
 
-WebUI.selectOptionByIndex(findTestObject('QuoteRequestPage/SelectStateBillingQuote'), 2)
+WebUI.selectOptionByIndex(findTestObject('UI-Electronics/QuoteRequestPage/SelectStateBillingQuote'), 2)
 
-WebUI.check(findTestObject('QuoteRequestPage/CheckBillingEqualShipping'))
+WebUI.check(findTestObject('UI-Electronics/QuoteRequestPage/CheckBillingEqualShipping'))
 
-WebUI.click(findTestObject('QuoteRequestPage/SubmitQuoteRequest'))
+WebUI.click(findTestObject('UI-Electronics/QuoteRequestPage/SubmitQuoteRequest'))
 
 WebUI.closeBrowser()
 
