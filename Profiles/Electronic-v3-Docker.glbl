@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8083'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8093'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,12 +16,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8103'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8113'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TEMP'</initValue>
+      <initValue>'themes'</initValue>
       <name>contentType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qwefolder'</initValue>
+      <name>folderName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://localhost:10645/cms-content'</initValue>
+      <name>parentUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentStoreStatsGet</name>
+   <name>MenuLinkUpdate</name>
    <tag></tag>
-   <elementGuidId>a077b638-49b1-4f9a-9e7d-8510b455c4c1</elementGuidId>
+   <elementGuidId>5b0d8e7d-dda1-46c3-a5e7-c1f0103f5f1e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;name\&quot;:\&quot;footer\&quot;,\n    \&quot;storeId\&quot;:\&quot;Electronics\&quot;,\n    \&quot;language\&quot;:\&quot;fr-FR\&quot;,\n    \&quot;menuLinks\&quot;:[\n      {\n        \&quot;title\&quot;:\&quot;À propos de nous\&quot;,\n        \&quot;url\&quot;:\&quot;~/pages/about_us\&quot;,\n        \&quot;priority\&quot;:10,\n        \&quot;menuLinkListId\&quot;:\&quot;375fb2474fa745daa8174139f537014c\&quot;,\n        \&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n        \&quot;id\&quot;:\&quot;8874a5a4a6bb47ac9256d750e868307b\&quot;\n      },\n      {\n        \&quot;title\&quot;:\&quot;termes et conditions\&quot;,\n        \&quot;url\&quot;:\&quot;#\&quot;,\n        \&quot;priority\&quot;:0,\n        \&quot;menuLinkListId\&quot;:\&quot;375fb2474fa745daa8174139f537014c\&quot;,\n        \&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n        \&quot;id\&quot;:\&quot;9baae3f3cfd343d3b6e6b6a25720c7ee\&quot;\n      }],\n    \&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n    \&quot;id\&quot;:\&quot;375fb2474fa745daa8174139f537014c\&quot;\n  }\n]\n&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.storeId}/stats</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/cms/${GlobalVariable.storeId}/menu</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

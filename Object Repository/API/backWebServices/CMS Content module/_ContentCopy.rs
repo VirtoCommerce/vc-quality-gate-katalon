@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentGet</name>
+   <name>_ContentCopy</name>
    <tag></tag>
-   <elementGuidId>20192eb4-d1a7-43ec-a073-572b730e3bb5</elementGuidId>
+   <elementGuidId>a6b7c3c1-6a24-4554-bb45-f73a73206ce7</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/copy?srcPath=&amp;destPath=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
