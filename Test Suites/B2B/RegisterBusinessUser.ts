@@ -26,7 +26,7 @@
       <guid>0235fe54-5628-4c06-9068-b851ea683d1f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/B2B/CommonCase/ProcessInfoAboutUser</testCaseId>
+      <testCaseId>Test Cases/B2B/CommonCase/ProcessInfoAboutUserBusiness</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7c7bf571-2b5a-4371-be75-a22a5c10357c</guid>
@@ -44,7 +44,7 @@
       <guid>232188e9-19c7-4fab-8441-001b6bbcec0f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/B2B/CommonCase/ProcessCredentials</testCaseId>
+      <testCaseId>Test Cases/B2B/CommonCase/ProcessCredentialsBusiness</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>af838a4a-1b81-4581-97cf-c4b0e7400648</guid>

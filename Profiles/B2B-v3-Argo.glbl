@@ -89,4 +89,14 @@
       <initValue>'TestCity'</initValue>
       <name>City</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'testbus@test.ru'</initValue>
+      <name>EmailBusiness</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'User Name Business'</initValue>
+      <name>UserNameBusiness</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
