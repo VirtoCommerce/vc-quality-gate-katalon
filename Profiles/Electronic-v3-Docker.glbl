@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8093'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8097'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8113'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8117'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -33,5 +33,15 @@
       <description></description>
       <initValue>'http://localhost:10645/cms-content'</initValue>
       <name>parentUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'eae69428-1ed8-4f3a-ba02-feb8ebe13414'</initValue>
+      <name>munuListId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QweLink'</initValue>
+      <name>menuName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

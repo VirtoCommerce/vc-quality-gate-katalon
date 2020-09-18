@@ -15,17 +15,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/_ContentGet'))
+//WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/_ContentGet'))
 
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentFolderCreate'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentSearch'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/ContentFolderCreate'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/ContentSearch'))
 WS.delay(10)
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentStatsStoreGet'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentDelete'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/ContentStatsStoreGet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/ContentDelete'))
 
 //Failed if no theme
-//WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/CMS Content module/ContentSearch'))
+//WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/ContentSearch'))
 
 
 

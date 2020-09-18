@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>CMS_module</name>
+   <name>moduleContent_menu</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>3df84a7c-d575-4576-a076-fc2a44068e3c</testCaseGuid>
+   <testCaseGuid>7d621408-2ecb-4b10-9613-463e215e66cf</testCaseGuid>
 </TestCaseEntity>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MenuLinkGet</name>
+   <name>MenuLinkNameGet-true</name>
    <tag></tag>
-   <elementGuidId>89a47f87-0f2c-4481-863a-ee004116aaae</elementGuidId>
+   <elementGuidId>0fdcfa4c-c63b-4874-a596-71c92605fd1d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/cms/${GlobalVariable.storeId}/menu</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/cms/${GlobalVariable.storeId}/menu/checkname?name=123&amp;language=&amp;id=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
