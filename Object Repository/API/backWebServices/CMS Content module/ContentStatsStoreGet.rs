@@ -36,17 +36,53 @@
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'1'</defaultValue>
+      <description></description>
+      <id>db587bef-a069-492f-9ac7-ed4234bafd56</id>
+      <masked>false</masked>
+      <name>themesCount</name>
+   </variables>
+   <variables>
+      <defaultValue>'6'</defaultValue>
+      <description></description>
+      <id>aa0691e7-7324-42c9-aaed-7aba38523ef4</id>
+      <masked>false</masked>
+      <name>pagesCount</name>
+   </variables>
+   <variables>
+      <defaultValue>'1'</defaultValue>
+      <description></description>
+      <id>0419d93b-26f0-452c-bd50-67b28e679b1c</id>
+      <masked>false</masked>
+      <name>blogsCount</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
+import internal.GlobalVariable as GlobalVariable
 
 import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-WS.verifyElementPropertyValue(response, 'themesCount', 2)
+
+if (GlobalVariable.contentType == &quot;themes&quot;) {
+    WS.verifyElementPropertyValue(response, 'themesCount', 2)
+} else if (GlobalVariable.contentType == &quot;blogs&quot;) {
+    WS.verifyElementPropertyValue(response, 'blogsCount', 2)
+}
+
+
+//RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+//def variables = request.getVariables()
+//def bCount = variables.get(&quot;blogsCount&quot;)
+//println(&quot;VARS : &quot; + bCount)
+
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)</verificationScript>
+WS.verifyResponseStatusCode(response, 200)
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>_ContentGet</name>
+   <name>DRAFT.ContentFileNew</name>
    <tag></tag>
-   <elementGuidId>20192eb4-d1a7-43ec-a073-572b730e3bb5</elementGuidId>
+   <elementGuidId>bc2251d7-5489-4844-b79f-519852154477</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
+  &quot;contentType&quot;: &quot;multipart/form-data&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;,
+  &quot;parameters&quot;: []
 }</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyType>form-data</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>multipart/form-data</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?relativeUrl=</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?folderUrl=qasd</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

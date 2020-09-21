@@ -15,19 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/_ContentGet'))
-
-
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/moduleContent/MenuLinkUpdate'))
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/moduleContent/MenuLinkGet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkUpdate'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkGet'))
 
 WS.delay(10)
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/moduleContent/MenuLinkIdGet'))
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/moduleContent/MenuLinkDelete'))
 
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/moduleContent/MenuLinkIdGet'))
-
-//Failed if no theme
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/moduleContent/ContentSearch'))
-
-//WS.sendRequestAndVerify()
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkIdGet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkDelete'))

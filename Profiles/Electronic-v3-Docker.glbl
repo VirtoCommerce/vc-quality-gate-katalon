@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8097'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8081'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,12 +16,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8117'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8101'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'themes'</initValue>
+      <initValue>''</initValue>
       <name>contentType</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

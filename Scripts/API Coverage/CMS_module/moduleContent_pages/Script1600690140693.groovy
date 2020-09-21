@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-GlobalVariable.contentType = "themes"
+GlobalVariable.contentType = "pages"
 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentFolderCreate'))
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentSearch'))

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentUpload</name>
+   <name>_ContentGet</name>
    <tag></tag>
-   <elementGuidId>82c502d1-02c8-4790-9009-4a4c2ad00620</elementGuidId>
+   <elementGuidId>20192eb4-d1a7-43ec-a073-572b730e3bb5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?archivePath=D:\Downloads\hot-quality-gate-katalon-dev.zip</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?relativeUrl=qweblog/qweblog.md</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
