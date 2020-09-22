@@ -15,23 +15,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-//import com.kms.katalon.core.testobject.impl.HttpBodyContent
+import com.kms.katalon.core.testobject.RestRequestObjectBuilder
 import com.kms.katalon.core.testobject.FormDataBodyParameter
 import groovy.json.JsonSlurper as JsonSlurper
 
 def request = findTestObject('API/backWebServices/CMS Content module/DRAFT.ContentFileNew')
 
 List<FormDataBodyParameter> body = new ArrayList()
-body.add(new FormDataBodyParameter('name1', 'passw'))
-//body.add(new FormDataBodyParameter('type', '', 'blob'))
-//body.add(new UrlEncodedBodyParameter('username', 'admin'))
-//body.add(new UrlEncodedBodyParameter('password', 'store'))
-
+body.add(new FormDataBodyParameter('qwetest.md', '', 'blob'))
 request.setBodyContent(new FormDataBodyParameter(body))
-println("REQUEST IS : " + request)
 response = WS.sendRequestAndVerify(request)
-
-
-// STEP | Parse request and save token to the GlobalVariable
-//def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-//GlobalVariable.token = ((responseJson.token_type + ' ') + responseJson.access_token)
+println("REQUEST IS : " + request)

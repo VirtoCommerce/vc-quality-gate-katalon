@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Create, check status, delete in Pages section</description>
    <name>moduleContent_pages</name>
    <tag></tag>
    <comment></comment>

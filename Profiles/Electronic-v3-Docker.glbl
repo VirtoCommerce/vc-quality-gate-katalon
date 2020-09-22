@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8081'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8084'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8101'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8104'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -26,7 +26,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qwefolder'</initValue>
+      <initValue>'qwetestfolder'</initValue>
       <name>folderName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -41,7 +41,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QweLink'</initValue>
+      <initValue>'QweMenuLink'</initValue>
       <name>menuName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -11,10 +11,28 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>cef74671-325c-4b46-80ff-9e47f3c3f443</testSuiteGuid>
    <testCaseLink>
+      <guid>cdb4920f-b80b-446d-b43b-57ecaf19fbae</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a10dafa4-2574-4c75-813d-e9728e61f0d7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>c3c22e43-2a12-47d2-9d33-319f2abc77c1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_theme</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>13e8e52d-841a-46ee-9178-70cbbf2024c2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_pages</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c39e91d0-e28c-4890-afec-d532c1ce4da4</guid>
@@ -27,11 +45,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_blog</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>13e8e52d-841a-46ee-9178-70cbbf2024c2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_pages</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
