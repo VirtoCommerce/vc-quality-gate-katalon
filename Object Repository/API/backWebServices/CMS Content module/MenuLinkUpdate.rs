@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;id\&quot;: \&quot;${GlobalVariable.munuListId}\&quot;,\n    \&quot;name\&quot;: \&quot;${GlobalVariable.menuName}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${GlobalVariable.storeId}\&quot;,\n    \&quot;language\&quot;: \&quot;fr-FR\&quot;,\n    \&quot;menuLinks\&quot;: [\n        {\n            \&quot;priority\&quot;: 10,\n            \&quot;title\&quot;: \&quot;QweLinkTitle\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages/about_us\&quot;\n        },\n        {\n            \&quot;priority\&quot;: 0,\n            \&quot;title\&quot;: \&quot;QweLinkTitle 2\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages\&quot;\n        }\n    ]\n    //\&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -46,7 +46,7 @@ import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

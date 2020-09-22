@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${GlobalVariable.folderName}\&quot;,\n  \&quot;type\&quot;: \&quot;folder\&quot;,\n  //\&quot;url\&quot;: \&quot;string\&quot;,\n  //\&quot;relativeUrl\&quot;: \&quot;string\&quot;,\n  //\&quot;parentUrl\&quot;: \&quot;${GlobalVariable.folderName}\&quot;,\n  //\&quot;modifiedDate\&quot;: \&quot;2020-09-15T19:47:10.460Z\&quot;,\n  //\&quot;createdDate\&quot;: \&quot;2020-09-15T19:47:10.460Z\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/{contentType}/${GlobalVariable.storeId}/folder</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}/folder</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -46,7 +46,7 @@ import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

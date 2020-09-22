@@ -121,13 +121,13 @@
    <testCaseLink>
       <guid>6d34fb1b-f7c6-4791-bfa3-1df81e58ecd2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/xApi.OrderCart/CouponeAdd</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>245ecb78-8e06-41ba-a23a-f95e36d5e9be</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/xApi.OrderCart/CouponeRemove</testCaseId>
    </testCaseLink>
    <testCaseLink>

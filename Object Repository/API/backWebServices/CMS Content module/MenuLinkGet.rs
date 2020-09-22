@@ -43,8 +43,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import com.kms.katalon.core.util.KeywordUtil
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+assertThat(response.getResponseText()).contains(GlobalVariable.munuListId)
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>

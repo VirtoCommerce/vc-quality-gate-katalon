@@ -32,41 +32,41 @@ def LastName = DataFromFile.LastName
 */
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('Header/SignUpButtonHeader'))
+WebUI.click(findTestObject('UI-Electronics/Header/SignUpButtonHeader'))
 
-WebUI.verifyElementText(findTestObject('SignUpPage/H1SignUpPage'), 'CREATE ACCOUNT')
+WebUI.verifyElementText(findTestObject('UI-Electronics/SignUpPage/H1SignUpPage'), 'CREATE ACCOUNT')
 
-WebUI.click(findTestObject('SignUpPage/InputEmailSignUPPage'))
+WebUI.click(findTestObject('UI-Electronics/SignUpPage/InputEmailSignUPPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputEmailSignUPPage'), GlobalVariable.email)
+WebUI.setText(findTestObject('UI-Electronics/SignUpPage/InputEmailSignUPPage'), GlobalVariable.email)
 
-WebUI.click(findTestObject('SignUpPage/InputFirstNameSignUPPage'))
+WebUI.click(findTestObject('UI-Electronics/SignUpPage/InputFirstNameSignUPPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputFirstNameSignUPPage'), GlobalVariable.firstName)
+WebUI.setText(findTestObject('UI-Electronics/SignUpPage/InputFirstNameSignUPPage'), GlobalVariable.firstName)
 
-WebUI.click(findTestObject('SignUpPage/InputLastNameSignUpPage'))
+WebUI.click(findTestObject('UI-Electronics/SignUpPage/InputLastNameSignUpPage'))
 
-WebUI.setText(findTestObject('SignUpPage/InputLastNameSignUpPage'), GlobalVariable.lastName)
+WebUI.setText(findTestObject('UI-Electronics/SignUpPage/InputLastNameSignUpPage'), GlobalVariable.lastName)
 
-WebUI.click(findTestObject('SignUpPage/InputPasswordSignUpPage'))
+WebUI.click(findTestObject('UI-Electronics/SignUpPage/InputPasswordSignUpPage'))
 
 def userLogPass = WebUI.callTestCase(findTestCase('Test Cases/SystemCases/GetCurrentDate'), [:], FailureHandling.STOP_ON_FAILURE)
 
 GlobalVariable.UserLogPass = userLogPass
 
-WebUI.setText(findTestObject('SignUpPage/InputPasswordSignUpPage'), GlobalVariable.UserLogPass)
+WebUI.setText(findTestObject('UI-Electronics/SignUpPage/InputPasswordSignUpPage'), GlobalVariable.UserLogPass)
 
-WebUI.click(findTestObject('SignUpPage/InputUserNameSignUPPAge'))
+WebUI.click(findTestObject('UI-Electronics/SignUpPage/InputUserNameSignUPPAge'))
 
-WebUI.setText(findTestObject('SignUpPage/InputUserNameSignUPPAge'), GlobalVariable.UserLogPass)
+WebUI.setText(findTestObject('UI-Electronics/SignUpPage/InputUserNameSignUPPAge'), GlobalVariable.UserLogPass)
 
-WebUI.click(findTestObject('SignUpPage/SubminSignUpPage'))
+WebUI.click(findTestObject('UI-Electronics/SignUpPage/SubminSignUpPage'))
 
-String GetText = WebUI.getText(findTestObject('Header/HeaderLogoutText'))
+String GetText = WebUI.getText(findTestObject('UI-Electronics/Header/HeaderLogoutText'))
 
 WebUI.verifyMatch(GetText, GlobalVariable.firstName, false)
 
-WebUI.click(findTestObject('Header/HeaderLogoutButton'))
+WebUI.click(findTestObject('UI-Electronics/Header/HeaderLogoutButton'))
 
 
 
