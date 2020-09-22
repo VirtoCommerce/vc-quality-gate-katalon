@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8083'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8084'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,12 +16,32 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8103'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8104'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TEMP'</initValue>
+      <initValue>''</initValue>
       <name>contentType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qwetestfolder'</initValue>
+      <name>folderName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://localhost:10645/cms-content'</initValue>
+      <name>parentUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'eae69428-1ed8-4f3a-ba02-feb8ebe13414'</initValue>
+      <name>munuListId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QweMenuLink'</initValue>
+      <name>menuName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

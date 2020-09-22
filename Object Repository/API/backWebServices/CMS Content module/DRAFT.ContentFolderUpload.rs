@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentStoreStatsGet</name>
+   <name>DRAFT.ContentFolderUpload</name>
    <tag></tag>
-   <elementGuidId>a077b638-49b1-4f9a-9e7d-8510b455c4c1</elementGuidId>
+   <elementGuidId>82c502d1-02c8-4790-9009-4a4c2ad00620</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -19,7 +19,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>application/x-zip-compressed</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,9 +28,16 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>multipart/form-data</value>
+   </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.storeId}/stats</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?archivePath=D:\Downloads\hot-quality-gate-katalon-dev.zip</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

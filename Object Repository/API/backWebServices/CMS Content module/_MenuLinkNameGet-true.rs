@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentMove</name>
+   <name>_MenuLinkNameGet-true</name>
    <tag></tag>
-   <elementGuidId>4c2eb935-a167-424c-b06a-118f2d880a85</elementGuidId>
+   <elementGuidId>0fdcfa4c-c63b-4874-a596-71c92605fd1d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/{contentType}/${GlobalVariable.storeId}/move</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/cms/${GlobalVariable.storeId}/menu/checkname?name=123&amp;language=&amp;id=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
