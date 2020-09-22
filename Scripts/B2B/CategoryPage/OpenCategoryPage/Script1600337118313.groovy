@@ -27,7 +27,10 @@ WebUI.click(findTestObject('UI-B2B/Menu/ACarriageBolts'))
 
 WebUI.waitForElementVisible(findTestObject('UI-B2B/CategoryPage/StrongPrice'), 0)
 
+GlobalVariable.PriceFromCatalog = WebUI.getText(findTestObject('UI-B2B/CategoryPage/StrongPrice'));
 
+GlobalVariable.PriceFromCatalog = (GlobalVariable.PriceFromCatalog.replace('$',''))
+println ('PRICE:' + GlobalVariable.PriceFromCatalog)
 
 WebUI.setText(findTestObject('UI-B2B/CategoryPage/InputQTYProduct'), '12')
 

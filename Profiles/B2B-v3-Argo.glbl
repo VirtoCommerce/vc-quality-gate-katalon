@@ -99,4 +99,9 @@
       <initValue>'User Name Business'</initValue>
       <name>UserNameBusiness</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>PriceFromCatalog</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

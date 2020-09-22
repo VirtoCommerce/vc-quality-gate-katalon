@@ -15,5 +15,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/InputQTY'))
+
+WebUI.setText(findTestObject('UI-B2B/CartAndCheckoutPage/InputQTY'), '20')
+
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AUpdate'))
+
+println('TOTAL:' + WebUI.getText(findTestObject('UI-B2B/CartAndCheckoutPage/SpanTotal')))
+
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AProceedToCheckout'))
 

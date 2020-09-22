@@ -27,9 +27,14 @@ WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ASelectShippingMethod'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/APaymentMethod'))
 
-WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/InputPaymentMethod'))
+WebUI.waitForElementClickable(findTestObject('UI-B2B/CartAndCheckoutPage/SpanSwitch'), 20)
+
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/SpanSwitch'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonUpdate'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonCreateOrder'))
+
+WebUI.verifyTextPresent(' ORDER HAS SUCCESSFULLY BEEN SUBMITTED. YOU WILL BE SENT AN EMAIL NOTIFICATION AS SOON AS YOUR ORDER IS READY.', 
+    false)
 
