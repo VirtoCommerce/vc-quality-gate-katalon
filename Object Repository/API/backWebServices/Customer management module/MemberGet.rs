@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AccountCreateContact</name>
+   <name>MemberGet</name>
    <tag></tag>
-   <elementGuidId>f44fa7f2-cd46-4bdb-9769-aa1ed5dcb810</elementGuidId>
+   <elementGuidId>cfa854ca-d1a8-4749-acc0-645d2aa66f3d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n    \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n    \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n  \t\&quot;id\&quot;: \&quot;${GlobalVariable.contactId}\&quot;,\n    //\&quot;memberType\&quot;: \&quot;HotContact\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,29 +29,37 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/contacts</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/members?ids=ab7d6b7b-7965-418c-92a7-5165478e95f8&amp;responseGroup=&amp;memberTypes=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'ab7d6b7b-7965-418c-92a7-5165478e95f8'</defaultValue>
+      <description></description>
+      <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import com.kms.katalon.core.util.KeywordUtil
 import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
+
+
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
