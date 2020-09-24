@@ -38,3 +38,23 @@ WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonCreateOrder'))
 WebUI.verifyTextPresent(' ORDER HAS SUCCESSFULLY BEEN SUBMITTED. YOU WILL BE SENT AN EMAIL NOTIFICATION AS SOON AS YOUR ORDER IS READY.', 
     false)
 
+def spanSubTotal = WebUI.getText(findTestObject('UI-B2B/OrderCompletePage/SpanSubtotal'))
+def spanShipping = WebUI.getText(findTestObject('UI-B2B/OrderCompletePage/SpanShipping')) 
+def spanTax = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanTaxTotal')) 
+def spanDiscount = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanDiscount')) 
+def spanTotal = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanTotal')) 
+spanSubTotal = (spanSubTotal.replace('$',''))
+spanShipping = (spanShipping.replace('$',''))
+spanTax = (spanTax.replace('$',''))
+spanDiscount = (spanDiscount.replace('$',''))
+spanTotal = (spanTotal.replace('$',''))
+float FloatSpanShipping = Float.parseFloat(spanShipping);
+float FloatSpanSubtotal = Float.parseFloat(spanSubTotal);
+float FloatSpanTax = Float.parseFloat(spanTax);
+float FloatSpanDiscount = Float.parseFloat(spanDiscount);
+float FloatSpanTotal = Float.parseFloat(spanTotal);
+float FloatResult = FloatSpanShipping + FloatSpanSubtotal + FloatSpanTax - FloatSpanDiscount
+String FloatSpanTotalString = String.format("%.2f", FloatSpanTotal);
+String FloatResultString = String.format("%.2f", FloatResult);
+System.out.println (FloatResult)
+WebUI.verifyEqual(FloatResultString, FloatSpanTotalString)

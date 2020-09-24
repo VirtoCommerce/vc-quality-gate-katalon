@@ -104,4 +104,9 @@
       <initValue>''</initValue>
       <name>PriceFromCatalog</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>TotalFromCategory</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
