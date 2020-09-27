@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;string\&quot;,\n  \&quot;storeId\&quot;: \&quot;string\&quot;,\n  \&quot;language\&quot;: \&quot;string\&quot;,\n  \&quot;menuLinks\&quot;: [\n    {\n      \&quot;title\&quot;: \&quot;string\&quot;,\n      \&quot;url\&quot;: \&quot;string\&quot;,\n      \&quot;priority\&quot;: 0,\n      \&quot;menuLinkListId\&quot;: \&quot;string\&quot;,\n      \&quot;associatedObjectId\&quot;: \&quot;string\&quot;,\n      \&quot;associatedObjectName\&quot;: \&quot;string\&quot;,\n      \&quot;associatedObjectType\&quot;: \&quot;string\&quot;,\n      \&quot;securityScopes\&quot;: [\n        \&quot;string\&quot;\n      ],\n      \&quot;outerId\&quot;: \&quot;string\&quot;,\n      \&quot;createdDate\&quot;: \&quot;2020-09-15T19:47:27.910Z\&quot;,\n      \&quot;modifiedDate\&quot;: \&quot;2020-09-15T19:47:27.910Z\&quot;,\n      \&quot;createdBy\&quot;: \&quot;string\&quot;,\n      \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n      \&quot;id\&quot;: \&quot;string\&quot;\n    }\n  ],\n  \&quot;securityScopes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;outerId\&quot;: \&quot;string\&quot;,\n  \&quot;createdDate\&quot;: \&quot;2020-09-15T19:47:27.910Z\&quot;,\n  \&quot;modifiedDate\&quot;: \&quot;2020-09-15T19:47:27.910Z\&quot;,\n  \&quot;createdBy\&quot;: \&quot;string\&quot;,\n  \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n  \&quot;id\&quot;: \&quot;string\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;id\&quot;: \&quot;${GlobalVariable.munuListId}\&quot;,\n    \&quot;name\&quot;: \&quot;${GlobalVariable.menuName}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${GlobalVariable.storeId}\&quot;,\n    \&quot;language\&quot;: \&quot;fr-FR\&quot;,\n    \&quot;menuLinks\&quot;: [\n        {\n            \&quot;priority\&quot;: 10,\n            \&quot;title\&quot;: \&quot;QweLinkTitle\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages/about_us\&quot;\n        },\n        {\n            \&quot;priority\&quot;: 0,\n            \&quot;title\&quot;: \&quot;QweLinkTitle 2\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages\&quot;\n        }\n    ]\n    //\&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -46,7 +46,7 @@ import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

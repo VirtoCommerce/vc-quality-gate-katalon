@@ -21,11 +21,13 @@ WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/InputQTY'))
 WebUI.setText(findTestObject('UI-B2B/CartAndCheckoutPage/InputQTY'), '20')
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AUpdate'))
+
 def TotalFromCart = WebUI.getText(findTestObject('UI-B2B/CartAndCheckoutPage/SpanTotal')).replace('$', '')
 float val = Float.parseFloat(TotalFromCart)
 String firstResult = String.format("%.2f", val);
 GlobalVariable.TotalFromCategory = String.format("%.2f", GlobalVariable.TotalFromCategory);
 WebUI.verifyEqual(firstResult, GlobalVariable.TotalFromCategory)
+
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AProceedToCheckout'))
 

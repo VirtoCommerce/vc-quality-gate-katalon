@@ -149,4 +149,9 @@
       <initValue>''</initValue>
       <name>ffcId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>organizationId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentUpload</name>
+   <name>VendorsSearch_</name>
    <tag></tag>
-   <elementGuidId>82c502d1-02c8-4790-9009-4a4c2ad00620</elementGuidId>
+   <elementGuidId>b055c985-1ec2-418a-a4d6-308131bb2b7a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    \&quot;memberId\&quot;: null,\n    \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;skip\&quot;: 0,\n    \&quot;take\&quot;: 2\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/vendors/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -46,7 +46,7 @@ import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

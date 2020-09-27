@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MenuLinkNameGet</name>
+   <name>OrganizationsCreate</name>
    <tag></tag>
-   <elementGuidId>0fdcfa4c-c63b-4874-a596-71c92605fd1d</elementGuidId>
+   <elementGuidId>5bdf6396-0890-41fe-88ca-38a190fb47c5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;ZXC Organization\&quot;,\n  \&quot;memberType\&quot;: \&quot;HotOrganization\&quot;,\n  \&quot;id\&quot;:\&quot;037f0630-bde0-4a3c-a991-ad0e5cbfe61e\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/cms/${GlobalVariable.storeId}/menu/checkname</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/organizations</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +38,16 @@
    <soapServiceFunction></soapServiceFunction>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentMove</name>
+   <name>_ContentMove</name>
    <tag></tag>
    <elementGuidId>4c2eb935-a167-424c-b06a-118f2d880a85</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/{contentType}/${GlobalVariable.storeId}/move</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/{contentType}/${GlobalVariable.storeId}/move?oldUrl=&amp;newUrl=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

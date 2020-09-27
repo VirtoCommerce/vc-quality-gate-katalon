@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentCopy</name>
+   <name>ContactsCreateBulk</name>
    <tag></tag>
-   <elementGuidId>a6b7c3c1-6a24-4554-bb45-f73a73206ce7</elementGuidId>
+   <elementGuidId>142c396c-8150-4eff-ac3c-0a51a61ac95d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;[\n    {\n        \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n        \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n        \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n        \&quot;id\&quot;: \&quot;${GlobalVariable.contactId}\&quot;,\n        //\&quot;memberType\&quot;: \&quot;HotContact\&quot;\n    }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/copy</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/contacts</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +38,16 @@
    <soapServiceFunction></soapServiceFunction>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)

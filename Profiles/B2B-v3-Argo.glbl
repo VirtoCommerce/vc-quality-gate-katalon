@@ -104,6 +104,7 @@
       <initValue>''</initValue>
       <name>PriceFromCatalog</name>
    </GlobalVariableEntity>
+
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>

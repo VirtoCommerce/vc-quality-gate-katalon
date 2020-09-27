@@ -31,9 +31,11 @@ GlobalVariable.PriceFromCatalog = WebUI.getText(findTestObject('UI-B2B/CategoryP
 
 GlobalVariable.PriceFromCatalog = (GlobalVariable.PriceFromCatalog.replace('$',''))
 
+
 float val = Float.parseFloat(GlobalVariable.PriceFromCatalog);
 
 GlobalVariable.TotalFromCategory = val * 20;
+
 WebUI.setText(findTestObject('UI-B2B/CategoryPage/InputQTYProduct'), '12')
 
 WebUI.click(findTestObject('UI-B2B/CategoryPage/ButtonAddToCart'))
