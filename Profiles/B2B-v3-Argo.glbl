@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://webstore-storefront.qa.govirto.com/B2B-store/account#/dashboard'</initValue>
+      <initValue>'http://webstore-storefront.qa.govirto.com/B2B-store/account#/'</initValue>
       <name>urlAfterLogin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -46,7 +46,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestUserName'</initValue>
+      <initValue>'TestUserName2'</initValue>
       <name>UserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -56,7 +56,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'test1@test.ru'</initValue>
+      <initValue>'test3@test.ru'</initValue>
       <name>Email</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -96,7 +96,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'User Name Business'</initValue>
+      <initValue>'UserNameBusiness1'</initValue>
       <name>UserNameBusiness</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
