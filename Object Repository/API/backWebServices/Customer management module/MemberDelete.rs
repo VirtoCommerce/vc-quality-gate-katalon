@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberSearch</name>
+   <name>MemberDelete</name>
    <tag></tag>
-   <elementGuidId>14c00c3b-b9c0-432b-8ba6-f7e0b0353adb</elementGuidId>
+   <elementGuidId>c78c94cd-c6ab-4385-ba92-2f98a03c6102</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    \&quot;memberId\&quot;: null,\n    \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;skip\&quot;: 0,\n    \&quot;take\&quot;: 2\n}&quot;,
+  &quot;text&quot;: &quot;&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members/search</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/members?ids=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

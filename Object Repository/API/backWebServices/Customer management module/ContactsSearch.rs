@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberSearch</name>
+   <name>ContactsSearch</name>
    <tag></tag>
-   <elementGuidId>14c00c3b-b9c0-432b-8ba6-f7e0b0353adb</elementGuidId>
+   <elementGuidId>2e3fdcdc-c469-40a1-9523-eb42e8b82bf2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members/search</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/contacts/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

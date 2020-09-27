@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentDelete</name>
+   <name>MemberOrganizationsGet</name>
    <tag></tag>
-   <elementGuidId>c78c94cd-c6ab-4385-ba92-2f98a03c6102</elementGuidId>
+   <elementGuidId>196119fe-ed50-4eb6-8783-a57cde65fcd2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -29,8 +29,8 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members?ids=</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/members/organizations</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,10 +43,16 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import com.kms.katalon.core.util.KeywordUtil
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
+
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
+
+
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

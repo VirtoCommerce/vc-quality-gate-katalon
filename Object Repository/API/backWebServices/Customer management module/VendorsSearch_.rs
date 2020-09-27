@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberSearch</name>
+   <name>VendorsSearch_</name>
    <tag></tag>
-   <elementGuidId>14c00c3b-b9c0-432b-8ba6-f7e0b0353adb</elementGuidId>
+   <elementGuidId>b055c985-1ec2-418a-a4d6-308131bb2b7a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members/search</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/vendors/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
