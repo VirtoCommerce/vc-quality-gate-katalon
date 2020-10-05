@@ -15,10 +15,5 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-import groovy.json.JsonSlurper
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/EmployeesCreate'))
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/ContactsCreate'))
-
-//def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-//GlobalVariable.contactId = responseJson.id
-//println ("GlobVar is: "+GlobalVariable.contactId)
