@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members?ids=ab7d6b7b-7965-418c-92a7-5165478e95f8&amp;responseGroup=&amp;memberTypes=</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/members?ids=&amp;responseGroup=&amp;memberTypes=Contact</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

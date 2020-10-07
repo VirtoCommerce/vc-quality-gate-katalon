@@ -14,11 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreate'))
 
-//def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-//GlobalVariable.contactId = responseJson.id
-//println ("GlobVar is: "+GlobalVariable.contactId)
+KeywordUtil.logInfo("Member search test case")
+    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGet'))

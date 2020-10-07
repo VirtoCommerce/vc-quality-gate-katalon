@@ -14,11 +14,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreate'))
 
-//def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-//GlobalVariable.contactId = responseJson.id
-//println ("GlobVar is: "+GlobalVariable.contactId)
+KeywordUtil.logInfo("Member creation test case")
+List <String> memberType =  GlobalVariable.memberType
+
+WebUI.comment("TYPE IS : " + memberType)
+
+for (int i; i < memberType.size(); i++) {
+    KeywordUtil.logInfo('Create user type ' + memberType.get(i))
+
+    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', 
+            [('memberType') : memberType.get(i)]))
+
+    def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+    (GlobalVariable.memberTypeId[i]) = memberJson.id 
+    //WebUI.comment("TYPE ID IS : " + GlobalVariable.memberTypeId)
+}
