@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>1147dbd6-e3e7-4aac-8289-fee16f042021</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
