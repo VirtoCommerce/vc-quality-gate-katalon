@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>Docker</name>
+   <tag></tag>
+   <defaultProfile>false</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://docker.virtocommerce.com:8091'</initValue>
+      <name>urlFront</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://docker.virtocommerce.com:8111'</initValue>
+      <name>urlBack</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>
