@@ -107,6 +107,11 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
+      <name>employeeId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

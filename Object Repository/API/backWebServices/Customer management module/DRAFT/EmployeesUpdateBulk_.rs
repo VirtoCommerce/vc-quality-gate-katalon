@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n        \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n        \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n        \&quot;id\&quot;: \&quot;3d73e824-8598-4517-a073-ba0990aa4343\&quot;,\n    }\n]&quot;,
+  &quot;text&quot;: &quot;[\n    {\n        \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n        \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n        \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n        \&quot;id\&quot;: \&quot;${GlobalVariable.employeeId}\&quot;\n    }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -26,7 +26,7 @@
       <matchCondition>equals</matchCondition>
       <name>api_key</name>
       <type>Main</type>
-      <value>b482842a-22ab-4eac-b251-21e5fdcdf79c</value>
+      <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>

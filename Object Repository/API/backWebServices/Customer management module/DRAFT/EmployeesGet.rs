@@ -26,11 +26,11 @@
       <matchCondition>equals</matchCondition>
       <name>api_key</name>
       <type>Main</type>
-      <value>b482842a-22ab-4eac-b251-21e5fdcdf79c</value>
+      <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/employees?ids=3d73e824-8598-4517-a073-ba0990aa4343</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/employees?ids=${GlobalVariable.employeeId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
