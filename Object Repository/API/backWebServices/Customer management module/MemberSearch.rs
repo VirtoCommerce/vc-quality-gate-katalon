@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    \&quot;memberId\&quot;: null,\n    \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;skip\&quot;: 0,\n    \&quot;take\&quot;: 2\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;responseGroup\&quot;: \&quot;None\&quot;,\n  //\&quot;memberId\&quot;: \&quot;${memberId}\&quot;,\n  //\&quot;searchPhrase\&quot;: \&quot;Bulk\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -36,17 +36,31 @@
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
+   <variables>
+      <defaultValue>'d35854a1-114d-4b42-8017-524985237773'</defaultValue>
+      <description></description>
+      <id>72dbce37-d3d2-4134-a142-f5dd7be43f8c</id>
+      <masked>false</masked>
+      <name>memberId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import com.kms.katalon.core.util.KeywordUtil
 
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+
+def variables = request.getVariables()
+def variable = variables.get('memberId')
+
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

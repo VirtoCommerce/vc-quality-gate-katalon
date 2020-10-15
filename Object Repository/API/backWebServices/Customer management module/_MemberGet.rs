@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberGetAllInOrganizations_</name>
+   <name>_MemberGet</name>
    <tag></tag>
-   <elementGuidId>c372534a-c1d9-44b6-8ead-7cc9add739fc</elementGuidId>
+   <elementGuidId>cfa854ca-d1a8-4749-acc0-645d2aa66f3d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -30,14 +30,14 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members/${id}/organozations?id=</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/members?ids=${id}&amp;responseGroup=&amp;memberTypes=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>'ab7d6b7b-7965-418c-92a7-5165478e95f8'</defaultValue>
+      <defaultValue>'fd185823-065c-46e6-9b5c-0f53faf95bcd'</defaultValue>
       <description></description>
       <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
       <masked>false</masked>

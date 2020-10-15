@@ -18,18 +18,6 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
 
-KeywordUtil.logInfo("Member creation test case")
-List <String> memberType = GlobalVariable.memberType
-
-WebUI.comment("TYPE IS : " + memberType)
-
-for (int i; i < memberType.size(); i++) {
-    KeywordUtil.logInfo('Create user type ' + memberType.get(i))
-
-    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', [('memberType') : memberType.get(i)]))
-
-    def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-    (GlobalVariable.memberId[i]) = memberJson.id 
-    
-    WebUI.comment("TYPE ID IS : " + GlobalVariable.memberId)
-}
+KeywordUtil.logInfo("Member search ORGANIZATIONS test case")
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberOrganizationsGet'))
+WS.delay(10)

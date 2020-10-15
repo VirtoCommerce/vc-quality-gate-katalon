@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>MemberDelete</name>
+   <name>MemberDeleteBulk</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>de256edd-ac2e-4fef-aa47-31965fbe3fc9</testCaseGuid>
+   <testCaseGuid>b47d6232-90e7-4958-89ff-e3f2ac2301e1</testCaseGuid>
 </TestCaseEntity>

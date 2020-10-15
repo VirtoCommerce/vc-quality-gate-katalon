@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>MemberSearch</name>
+   <name>MemberGitId</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>3f0c4240-c9d9-4f9f-b734-cc28e436e33d</testCaseGuid>
+   <testCaseGuid>55965258-0dc2-4976-a9c7-7bac95f17a91</testCaseGuid>
 </TestCaseEntity>
