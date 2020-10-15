@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberDelete</name>
+   <name>_MemberGetAllInOrganizations</name>
    <tag></tag>
-   <elementGuidId>c78c94cd-c6ab-4385-ba92-2f98a03c6102</elementGuidId>
+   <elementGuidId>c372534a-c1d9-44b6-8ead-7cc9add739fc</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -29,17 +29,17 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members?ids=${Id}</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/members/${id}/organozations?id=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>'c1c17260-b193-46bf-b2c6-3b85d825f711'</defaultValue>
+      <defaultValue>'ab7d6b7b-7965-418c-92a7-5165478e95f8'</defaultValue>
       <description></description>
-      <id>c549f318-b70b-4c4c-821d-aaa90099f61d</id>
+      <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
       <masked>false</masked>
       <name>id</name>
    </variables>
@@ -50,10 +50,16 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import com.kms.katalon.core.util.KeywordUtil
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
+
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
+
+
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

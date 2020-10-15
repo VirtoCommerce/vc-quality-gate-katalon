@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;memberType\&quot;: \&quot;string\&quot;,\n  \&quot;memberTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;group\&quot;: \&quot;string\&quot;,\n  \&quot;groups\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;memberId\&quot;: \&quot;string\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;responseGroup\&quot;: \&quot;string\&quot;,\n  \&quot;objectType\&quot;: \&quot;string\&quot;,\n  \&quot;objectTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;objectIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;keyword\&quot;: \&quot;string\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;string\&quot;,\n  \&quot;languageCode\&quot;: \&quot;string\&quot;,\n  \&quot;sort\&quot;: \&quot;string\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 0\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;deepSearch\&quot;: true,\n  \&quot;keyword\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n  \&quot;sort\&quot;: \&quot;memberType:desc;name:asc\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -51,7 +51,7 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

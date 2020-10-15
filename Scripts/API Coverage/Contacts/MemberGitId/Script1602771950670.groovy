@@ -18,5 +18,18 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
 
-KeywordUtil.logInfo("Member search test case")
-    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGet'))
+KeywordUtil.logInfo("Member Get by ID test case")
+
+//def mtid = GlobalVariable.memberId
+//
+//def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : mtid[0]]))
+
+List <String> memberTypeId = GlobalVariable.memberId
+
+for (int i; i < memberTypeId.size(); i++) {
+    KeywordUtil.logInfo('INFO user ID : ' + memberTypeId.get(i))
+
+    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : memberTypeId.get(i)]))
+}
+
+WS.delay(10)

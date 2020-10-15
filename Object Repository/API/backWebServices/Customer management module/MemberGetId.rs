@@ -37,7 +37,7 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>'ab7d6b7b-7965-418c-92a7-5165478e95f8'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
       <masked>false</masked>
@@ -45,6 +45,7 @@
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
@@ -53,13 +54,13 @@ import com.kms.katalon.core.util.KeywordUtil
 import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
 
-
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
+//WS.verifyElementPropertyValue(response, 'id', ${id})
 
-
-
-</verificationScript>
+//def variables = request.getVariables()
+//def variable = variables.get('id')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -16,5 +16,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/index'))
-WebUI.comment("Waiting for drop index 5 sec")
-WS.delay(5)
+
+WebUI.comment('Waiting for drop index 3 sec')
+
+WS.delay(3)
+

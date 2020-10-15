@@ -15,21 +15,23 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import groovy.json.JsonSlurper
 
+KeywordUtil.logInfo("Member delete test case")
 
-KeywordUtil.logInfo("Member creation test case")
-List <String> memberType = GlobalVariable.memberType
+def mtid = GlobalVariable.memberId
+    KeywordUtil.logInfo('Delete user type ' + mtid)
 
-WebUI.comment("TYPE IS : " + memberType)
-
-for (int i; i < memberType.size(); i++) {
-    KeywordUtil.logInfo('Create user type ' + memberType.get(i))
-
-    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', [('memberType') : memberType.get(i)]))
-
-    def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-    (GlobalVariable.memberId[i]) = memberJson.id 
-    
     WebUI.comment("TYPE ID IS : " + GlobalVariable.memberId)
-}
+    
+    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberDelete', [('id') : GlobalVariable.memberId[0]]))
+
+
+
+//List <String> memberTypeId = GlobalVariable.memberId
+//
+//for (int i; i < memberTypeId.size(); i++) {
+//    KeywordUtil.logInfo('Delete user type ' + memberTypeId.get(i))
+//
+//    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberDelete', 
+//            [('id') : memberTypeId.get(i)]))
+//}

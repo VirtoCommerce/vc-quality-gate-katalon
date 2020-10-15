@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>MemberCreation</name>
+   <name>MemberUpdate</name>
    <tag></tag>
    <comment>TYPE IS : &quot; + memberType</comment>
-   <testCaseGuid>e9f0ac01-5bb1-4a1f-a6b9-67058f197888</testCaseGuid>
+   <testCaseGuid>d7f19634-9e5f-4150-b9d2-223ec03f322c</testCaseGuid>
 </TestCaseEntity>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberCreateBulk</name>
+   <name>_MemberCreateBulk</name>
    <tag></tag>
    <elementGuidId>6fe8548c-947b-422a-bce1-9bf82deb3496</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

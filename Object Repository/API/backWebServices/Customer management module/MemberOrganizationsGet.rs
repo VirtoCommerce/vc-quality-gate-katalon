@@ -48,6 +48,7 @@ import internal.GlobalVariable as GlobalVariable
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+assertThat(response.getResponseText()).contains(GlobalVariable.firstName)
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberGet</name>
+   <name>_MemberDelete</name>
    <tag></tag>
-   <elementGuidId>cfa854ca-d1a8-4749-acc0-645d2aa66f3d</elementGuidId>
+   <elementGuidId>c78c94cd-c6ab-4385-ba92-2f98a03c6102</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <followRedirects>false</followRedirects>
@@ -29,17 +29,17 @@
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members?ids=&amp;responseGroup=&amp;memberTypes=Contact</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/members?ids=${Id}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceFunction></soapServiceFunction>
    <variables>
-      <defaultValue>'ab7d6b7b-7965-418c-92a7-5165478e95f8'</defaultValue>
+      <defaultValue>'123'</defaultValue>
       <description></description>
-      <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
+      <id>19928168-0635-454e-838c-89bccc442608</id>
       <masked>false</masked>
       <name>id</name>
    </variables>
@@ -50,16 +50,10 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import com.kms.katalon.core.util.KeywordUtil
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
-
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
-
-
-
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
