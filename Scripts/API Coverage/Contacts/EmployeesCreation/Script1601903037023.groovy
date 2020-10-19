@@ -24,4 +24,4 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer 
 // STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 (GlobalVariable.employeeId) = responseJson.id
-KeywordUtil.logInfo(GlobalVariable.employeeId)
+KeywordUtil.logInfo(responseJson.id)
