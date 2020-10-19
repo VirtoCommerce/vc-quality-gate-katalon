@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>1147dbd6-e3e7-4aac-8289-fee16f042021</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -33,12 +33,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/EmployeesCreation</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>30ec59a9-2755-4131-aee1-d6bbc73bf13d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3ed3379c-80c3-446c-ad25-ea48bd2148b8</guid>

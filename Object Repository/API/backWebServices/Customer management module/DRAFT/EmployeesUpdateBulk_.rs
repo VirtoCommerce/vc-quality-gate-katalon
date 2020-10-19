@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n        \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n        \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n        \&quot;id\&quot;: \&quot;${GlobalVariable.employeeId}\&quot;\n    }\n]&quot;,
+  &quot;text&quot;: &quot;[\n    {\n        \&quot;fullName\&quot;: \&quot;TEST\&quot;,\n        \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n        \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n        \&quot;id\&quot;: \&quot;${GlobalVariable.employeeId}\&quot;\n    }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
