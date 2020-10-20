@@ -14,18 +14,20 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import groovy.json.JsonSlurper as JsonSlurper
 
-KeywordUtil.logInfo('Get organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGet'))
+KeywordUtil.logInfo('Organization search test case')
 
-// STEP | Parse request and save to the GlobalVariable
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
+
+//WS.delay(10)
+
+// STEP | Parse request and verify with  GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 KeywordUtil.logInfo(response.getResponseBodyContent())
 
-KeywordUtil.logInfo('Organization Name: ' + responseJson.name[0])
+KeywordUtil.logInfo('Organization Name: ' + responseJson.results[0].name)
 KeywordUtil.logInfo('Organization NameD. Global: ' + GlobalVariable.organizationName)
 
-WS.verifyEqual(responseJson.name[0], (GlobalVariable.organizationName))
-
+WS.verifyEqual(responseJson.results[0].name, (GlobalVariable.organizationName))

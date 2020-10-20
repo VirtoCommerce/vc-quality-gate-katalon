@@ -41,6 +41,12 @@
       <testCaseId>Test Cases/API Coverage/Contacts/OrganizationGetId</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>22e26d19-d559-4f15-9248-feeffab2d395</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationSearch</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>afe942c5-5826-4c00-8520-909be115be73</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
