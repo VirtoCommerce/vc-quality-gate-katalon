@@ -30,4 +30,4 @@ KeywordUtil.logInfo(response.getResponseBodyContent())
 KeywordUtil.logInfo('Organization Name: ' + responseJson.results[0].name)
 KeywordUtil.logInfo('Organization NameD. Global: ' + GlobalVariable.organizationName)
 
-WS.verifyEqual(responseJson.results[0].name, (GlobalVariable.organizationName))
+WS.verifyEqual(responseJson.results[0].name[0], (GlobalVariable.organizationName))
