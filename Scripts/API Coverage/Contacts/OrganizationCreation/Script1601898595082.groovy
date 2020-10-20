@@ -24,3 +24,4 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer 
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 (GlobalVariable.organizationId) = responseJson.id
 KeywordUtil.logInfo('Organization ID: ' + responseJson.id)
+KeywordUtil.logInfo('Organization ID. Global: ' + GlobalVariable.organizationId)
