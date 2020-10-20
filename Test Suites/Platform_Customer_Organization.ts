@@ -34,4 +34,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/OrganizationGet</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>afe942c5-5826-4c00-8520-909be115be73</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationDeleteBulk</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
