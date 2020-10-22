@@ -23,6 +23,12 @@
       <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>9461cf1e-85f8-474c-8915-be62251cd3ed</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationCreation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>429b6e80-1f47-4569-91b9-782f92b7ff52</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

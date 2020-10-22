@@ -19,4 +19,4 @@ WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - C
 
 WebUI.verifyElementNotPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/PCouponeValid'), 0)
 
-WebUI.verifyElementVisible(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SpanApply'))
+WebUI.verifyElementVisible(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SpanApplyDisable'))
