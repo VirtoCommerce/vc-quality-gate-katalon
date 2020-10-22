@@ -119,6 +119,12 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
+      <guid>4c06ed17-23bb-4592-a4a0-d58a5f3e8248</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/xApi.OrderCart/Logout_FromHeader</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>5d926e80-26d7-4f5f-9993-922c88149635</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -135,6 +141,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/xApi.OrderCart/CouponeRemove</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4cab1bc6-a09f-4c20-bef4-0ef816e5bf9d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromCart</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d4a69d5f-192f-4895-874e-3d61a63afda8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>a5e1c932-fd65-4645-9974-53e73001c643</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>bde5d6b5-cfdf-4584-9260-b64c430d732d</guid>
