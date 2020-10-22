@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>SpanApply</name>
+   <name>SpanApplyEnable</name>
    <tag></tag>
    <elementGuidId>298ec364-1529-473a-b946-5c4e95f403d2</elementGuidId>
    <selectorCollection>

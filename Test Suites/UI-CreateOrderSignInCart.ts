@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>DRAFT.UI-CreateOrderSignInCart</name>
+   <name>UI-CreateOrderSignInCart</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -15,6 +15,30 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/SystemCases/WindowtoFullSize</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3b254265-06e9-43c3-898a-3b7798abf398</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromHeader</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>c31602a6-2e3c-4ad8-8afb-c1e477038b71</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>40bab080-7371-4662-a731-143f22101a5d</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>585baa08-b7d6-4cca-a1f8-ad95507d668c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/xApi.OrderCart/Logout_FromHeader</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4fef82b1-1a38-4bc1-8f2b-6b6d651ee9f3</guid>
