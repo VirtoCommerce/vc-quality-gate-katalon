@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    \&quot;memberId\&quot;: null,\n    \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.XXXXXXXXX}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;skip\&quot;: 0,\n    \&quot;take\&quot;: 2\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    //\&quot;memberId\&quot;: \&quot;${GlobalVariable.organizationId}\&quot;,\n    \&quot;objectType\&quot;: \&quot;Member\&quot;, \n    \&quot;keyword\&quot;: \&quot;${GlobalVariable.organizationName}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;skip\&quot;: 0,\n    \&quot;take\&quot;: 20\n  \n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/organizations</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/organizations/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

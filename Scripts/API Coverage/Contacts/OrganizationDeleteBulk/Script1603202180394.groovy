@@ -14,14 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-KeywordUtil.logInfo('Create organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsCreate'))
+KeywordUtil.logInfo('Organization delete BULK test case')
 
-// STEP | Parse request and save token to the GlobalVariable
-def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-(GlobalVariable.organizationId) = responseJson.id
-KeywordUtil.logInfo('Organization ID: ' + responseJson.id)
-KeywordUtil.logInfo('Organization ID. Global: ' + GlobalVariable.organizationId)
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsDelete'))
+

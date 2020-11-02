@@ -96,6 +96,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'QWEOrganization'</initValue>
+      <name>organizationName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>''</initValue>
       <name>memberId</name>
    </GlobalVariableEntity>
