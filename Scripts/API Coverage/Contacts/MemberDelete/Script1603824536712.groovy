@@ -16,22 +16,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-KeywordUtil.logInfo("Member delete test case")
-
-// TEMP SOLUTION
-//def mtid = GlobalVariable.memberId
-//    KeywordUtil.logInfo('Delete user type ' + mtid)
-//
-//    WebUI.comment("TYPE ID IS : " + GlobalVariable.memberId)
-//    
-//    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', [('id') : GlobalVariable.memberId]))
-//
+WebUI.comment("TEST CASE: Member delete")
 
 
-List <String> memberTypeId = GlobalVariable.memberId
-
-for (int i; i < memberTypeId.size(); i++) {
-    KeywordUtil.logInfo('Delete user type ' + memberTypeId.get(i))
-
-    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', [('id') : memberTypeId.get(i)]))
-}
+// Delete ferst member by Id from list
+WebUI.comment("MEMBER ID IS : " + GlobalVariable.memberId[0])
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', [('id') : GlobalVariable.memberId[0]]))

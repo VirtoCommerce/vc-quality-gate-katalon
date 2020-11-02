@@ -15,9 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-//Create a new User using GlobalVariable.memberId
+//Create a new User using GlobalVariable.memberId with random email
 
-//println ("GlobVar is: "+GlobalVariable.memberId)
-//println ("GlobVar is: "+GlobalVariable.userName)
-//WS.delay(10)
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateUser'))
+Random rnd = new Random()
+// DEBUG CODE | Create random usernames
+//GlobalVariable.userName = GlobalVariable.userName+rnd.nextInt(20)
+//println("TEST : " + GlobalVariable.userName)
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateUser', [('email') : String.valueOf(rnd), ('userName') : GlobalVariable.userName]))

@@ -16,9 +16,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-def productRequest = findTestObject('API/backWebServices/ProductCreate')
-productResponse = WS.sendRequestAndVerify(productRequest)
+//def productRequest = 
+productResponse = WS.sendRequestAndVerify(findTestObject('API/backWebServices/ProductCreate'))
 
 def productJson = new JsonSlurper().parseText(productResponse.getResponseBodyContent());
 GlobalVariable.productId = productJson.id
-println ("PRODUCT ID : " + GlobalVariable.productId)
+WebUI.comment("PRODUCT ID IS : " + GlobalVariable.productId)

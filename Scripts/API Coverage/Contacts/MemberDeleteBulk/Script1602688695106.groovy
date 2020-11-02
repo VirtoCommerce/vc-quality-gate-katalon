@@ -16,17 +16,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-KeywordUtil.logInfo("Members delete BULK test case")
+WebUI.comment("TEST CASE: Members BULK delete")
 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDeleteBulk'))
-
-
-
-//List <String> memberTypeId = GlobalVariable.memberId
-//
-//for (int i; i < memberTypeId.size(); i++) {
-//    KeywordUtil.logInfo('Delete user type ' + memberTypeId.get(i))
-//
-//    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', 
-//            [('id') : memberTypeId.get(i)]))
-//}

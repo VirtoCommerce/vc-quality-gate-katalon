@@ -6,10 +6,11 @@
    <elementGuidId>02ded382-2731-4c2a-878c-e4bb6aac9738</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${GlobalVariable.storeId}\&quot;,\n    \&quot;memberId\&quot;: \&quot;${GlobalVariable.contactId}\&quot;,\n    \&quot;userName\&quot;: \&quot;${GlobalVariable.userName}\&quot;,\n    \&quot;email\&quot;: \&quot;${email}\&quot;,\n    \&quot;password\&quot;: \&quot;${GlobalVariable.userPassword}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${GlobalVariable.storeId}\&quot;,\n    \&quot;memberId\&quot;: \&quot;${GlobalVariable.contactId}\&quot;,\n    \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n    \&quot;email\&quot;: \&quot;${email}\&quot;,\n    \&quot;password\&quot;: \&quot;${GlobalVariable.userPassword}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,6 +29,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/create</restUrl>
@@ -35,7 +37,10 @@
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'Customer'</defaultValue>
       <description></description>
@@ -49,6 +54,13 @@
       <id>a3d703c1-361c-43e3-b208-a6256af06bdf</id>
       <masked>false</masked>
       <name>email</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>83cc8a71-dedb-422c-91bf-4fe75d94a932</id>
+      <masked>false</masked>
+      <name>userName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -14,22 +14,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
 
-KeywordUtil.logInfo("Member Get by ID test case")
+WebUI.comment("TEST CASE: Member get by ID")
 
 //def mtid = GlobalVariable.memberId
-//
 //def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : mtid[0]]))
 
 List <String> memberTypeId = GlobalVariable.memberId
 
 for (int i; i < memberTypeId.size(); i++) {
-    KeywordUtil.logInfo('INFO user ID : ' + memberTypeId.get(i))
+    WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
 
     WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : memberTypeId.get(i)]))
 }
-
-WS.delay(10)

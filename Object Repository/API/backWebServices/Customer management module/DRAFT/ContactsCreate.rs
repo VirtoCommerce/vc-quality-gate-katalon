@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n  \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n  \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,  \n  \&quot;organizations\&quot;: [\n    //\&quot;${GlobalVariable.organizationId}\&quot;\n  ],\n  \&quot;isActive\&quot;: true,\n  \&quot;memberType\&quot;: \&quot;Contact\&quot;,\n  \&quot;addresses\&quot;: [\n    {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n\t    \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n\t\t\&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;name\&quot;: \&quot;Qwest\&quot;,\n        \&quot;line1\&quot;: \&quot;Test adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Test adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;X34656703\&quot;,\n        \&quot;city\&quot;: \&quot;Test city\&quot;,\n        \&quot;regionName\&quot;: \&quot;test region\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;\n    }\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;+132456987\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;emp@qwe.com\&quot;\n  ],\n    \&quot;groups\&quot;: [\n        \&quot;TEST UG1\&quot;,\n        \&quot;TEST UG2\&quot;\n    ],\n\n  //\&quot;id\&quot;: \&quot;string\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n  \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n  \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,  \n  \&quot;organizations\&quot;: [\n    \&quot;${orgId}\&quot;\n  ],\n  \&quot;isActive\&quot;: true,\n  \&quot;memberType\&quot;: \&quot;Contact\&quot;,\n  \&quot;addresses\&quot;: [\n    {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n\t    \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n\t\t\&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;name\&quot;: \&quot;Qwest\&quot;,\n        \&quot;email\&quot;: \&quot;qwest@qwest.com\&quot;,\n        \&quot;line1\&quot;: \&quot;Test adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Test adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;X34656703\&quot;,\n        \&quot;city\&quot;: \&quot;Test city\&quot;,\n        \&quot;regionName\&quot;: \&quot;Alaska\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;\n    }\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;+132456987\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;emp@qwe.com\&quot;\n  ],\n    \&quot;groups\&quot;: [\n        \&quot;TEST UG1\&quot;,\n        \&quot;TEST UG2\&quot;\n    ],\n\n  //\&quot;id\&quot;: \&quot;string\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>bba2cc07-95ed-4181-a0ba-be9026e91801</id>
+      <masked>false</masked>
+      <name>orgId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

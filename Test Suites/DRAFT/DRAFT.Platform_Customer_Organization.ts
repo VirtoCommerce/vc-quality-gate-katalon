@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_Customer_Organization</name>
+   <name>DRAFT.Platform_Customer_Organization</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,11 +9,12 @@
    <pageLoadTimeout>5</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>5fe22f9d-bba0-4440-b1f0-4abbd7f5e867</testSuiteGuid>
    <testCaseLink>
       <guid>1147dbd6-e3e7-4aac-8289-fee16f042021</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>

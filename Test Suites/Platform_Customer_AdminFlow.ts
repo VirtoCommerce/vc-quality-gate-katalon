@@ -48,6 +48,12 @@
       <testCaseId>Test Cases/API Coverage/Contacts/MemberGitId</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>8470c148-9486-41ac-b4a5-3cb8219a05c2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberSearch</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>85a5abbe-2a60-4e4f-8e52-9101e89445ad</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -60,21 +66,21 @@
       <testCaseId>Test Cases/API Coverage/Contacts/MemberUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8470c148-9486-41ac-b4a5-3cb8219a05c2</guid>
+      <guid>ea4994f5-3e99-44da-bbb6-7f9a42df939e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/MemberSearch</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e322ca74-2dc0-4604-bf63-c5fed473276d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d43206e0-37be-44f8-b88c-88b7f9f5815d</guid>
+      <guid>6801def5-dd5a-4c4e-9e04-1ec9ca4c5f76</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberDeleteBulk</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

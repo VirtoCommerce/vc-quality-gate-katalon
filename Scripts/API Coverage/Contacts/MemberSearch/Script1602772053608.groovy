@@ -18,6 +18,5 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
 
-KeywordUtil.logInfo("Member search test case")
+WebUI.comment("TEST CASE: Member search")
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch', [('id') : GlobalVariable.memberId[0]]))
-WS.delay(10)

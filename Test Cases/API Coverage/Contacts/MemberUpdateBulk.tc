@@ -3,6 +3,6 @@
    <description></description>
    <name>MemberUpdateBulk</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE: Member BULK update</comment>
    <testCaseGuid>35daaf4d-f4fe-4139-9c12-cab4323abbaf</testCaseGuid>
 </TestCaseEntity>

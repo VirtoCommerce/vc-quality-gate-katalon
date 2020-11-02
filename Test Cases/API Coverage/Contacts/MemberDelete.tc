@@ -3,6 +3,7 @@
    <description></description>
    <name>MemberDelete</name>
    <tag></tag>
-   <comment>TYPE ID IS : &quot; + GlobalVariable.memberId</comment>
+   <comment>TEST CASE: Member delete
+MEMBER ID IS : &quot; + GlobalVariable.memberId[0]</comment>
    <testCaseGuid>de256edd-ac2e-4fef-aa47-31965fbe3fc9</testCaseGuid>
 </TestCaseEntity>

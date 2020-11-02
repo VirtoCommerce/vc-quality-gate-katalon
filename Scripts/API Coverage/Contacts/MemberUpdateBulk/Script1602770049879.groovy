@@ -15,16 +15,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import groovy.json.JsonSlurper
+import groovy.json.JsonSlurper as JsonSlurper
 
+WebUI.comment('TEST CASE: Member BULK update')
 
-KeywordUtil.logInfo("Member update BULK test case")
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdateBulk', [('id') : GlobalVariable.memberId[
+            0], ('memberType') : GlobalVariable.memberType[0]]))
 
-//for (int i; i < memberId.size(); i++) {
-//    KeywordUtil.logInfo('INFO MEMBER ID : ' + memberId.get(i))
-//    KeywordUtil.logInfo('INFO user type : ' + memberType.get(i))
+WS.delay(10)
 
-    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdateBulk', [('id') : GlobalVariable.memberId[0], ('memberType') : GlobalVariable.memberType[0]]))
-//}
-
-WS.delay(15)

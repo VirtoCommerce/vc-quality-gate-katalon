@@ -20,7 +20,7 @@ import groovy.json.JsonSlurper
 WebUI.comment("TEST CASE: Member creation")
 List <String> memberType = GlobalVariable.memberType
 
-WebUI.comment("TYPE IS : " + memberType)
+WebUI.comment("TYPES IS : " + memberType)
 
 for (int i; i < memberType.size(); i++) {
     WebUI.comment('Create user type ' + memberType.get(i))
@@ -29,6 +29,5 @@ for (int i; i < memberType.size(); i++) {
 
     def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
     (GlobalVariable.memberId[i]) = memberJson.id 
-    
     WebUI.comment("TYPE ID IS : " + GlobalVariable.memberId)
 }

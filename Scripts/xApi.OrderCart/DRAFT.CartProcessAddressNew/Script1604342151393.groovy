@@ -15,12 +15,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-//def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ALogin'), 5, FailureHandling.OPTIONAL)
-def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 5, FailureHandling.OPTIONAL)
+def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ALogin'), 5, FailureHandling.OPTIONAL)
+//def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 5, FailureHandling.OPTIONAL)
 
 if (CheckAddressResult == false) {
 	
-	    WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
+	WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
+
+} else {
+		
+		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
 	
 		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), GlobalVariable.email)
 	
@@ -50,17 +54,11 @@ if (CheckAddressResult == false) {
 	
 		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectCountry'), 2)
 	
-		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
-	
 		WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'))
 	
 		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/ZIpCheckout'), GlobalVariable.zip)
 	
-		} else {
-	
-		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
-		
-		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 1)
+		//WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 1)
 
 }
 

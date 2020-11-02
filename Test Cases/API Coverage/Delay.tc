@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Delay 10 sec</description>
    <name>Delay</name>
    <tag></tag>
    <comment></comment>

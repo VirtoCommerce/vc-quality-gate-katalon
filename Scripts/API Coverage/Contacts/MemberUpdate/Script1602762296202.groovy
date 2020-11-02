@@ -18,13 +18,13 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
 
-KeywordUtil.logInfo("Member update test case")
+WebUI.comment("TEST CASE: Member update")
 List <String> memberType = GlobalVariable.memberType
 List <String> memberId = GlobalVariable.memberId
 
 for (int i; i < memberId.size(); i++) {
-    KeywordUtil.logInfo('MEMBER ID IS : ' + memberId.get(i))
-    KeywordUtil.logInfo('MEMBER TYPE IS : ' + memberType.get(i))
+    WebUI.comment("MEMBER ID IS : " + memberId.get(i))
+    WebUI.comment("MEMBER TYPE IS : " + memberType.get(i))
 
     WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdate', [('id') : memberId.get(i), ('memberType') : memberType.get(i)]))
 }
