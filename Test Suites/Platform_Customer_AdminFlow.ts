@@ -9,6 +9,7 @@
    <pageLoadTimeout>5</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8704074e-b819-445e-bd2c-2a0cfcc21ba4</testSuiteGuid>
    <testCaseLink>
       <guid>2bb63c84-5c9f-4c5b-808a-96d908f386a3</guid>
@@ -61,13 +62,19 @@
    <testCaseLink>
       <guid>8470c148-9486-41ac-b4a5-3cb8219a05c2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberSearch</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e322ca74-2dc0-4604-bf63-c5fed473276d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d43206e0-37be-44f8-b88c-88b7f9f5815d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberDeleteBulk</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

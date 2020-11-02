@@ -91,7 +91,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'037f0630-bde0-4a3c-a991-ad0e5cbfe61e'</initValue>
+      <initValue>''</initValue>
       <name>organizationId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -106,7 +106,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'e8c9be3e-9c39-440b-b6ba-d9a6ff62df74'</initValue>
+      <initValue>''</initValue>
       <name>contactId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -161,7 +161,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'efeb9b88-4ecd-40a0-8998-839c4597a46f'</initValue>
+      <initValue>''</initValue>
       <name>productId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

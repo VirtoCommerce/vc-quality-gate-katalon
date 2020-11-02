@@ -9,6 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>e3194ce9-cecc-4a0b-b2d5-10c8a3423bd7</testSuiteGuid>
    <testCaseLink>
       <guid>6cfeebe0-a8b4-4daf-baf3-7e8dc120e90f</guid>
@@ -32,7 +33,7 @@
       <guid>9c7acb74-e364-4e00-bf72-df4dcd80baae</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/UserCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/UserCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>86eabe26-6d6a-4c98-968c-21f7c8514400</guid>

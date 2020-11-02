@@ -23,8 +23,8 @@ List <String> memberType = GlobalVariable.memberType
 List <String> memberId = GlobalVariable.memberId
 
 for (int i; i < memberId.size(); i++) {
-    KeywordUtil.logInfo('INFO MEMBER ID : ' + memberId.get(i))
-    KeywordUtil.logInfo('INFO user type : ' + memberType.get(i))
+    KeywordUtil.logInfo('MEMBER ID IS : ' + memberId.get(i))
+    KeywordUtil.logInfo('MEMBER TYPE IS : ' + memberType.get(i))
 
     WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdate', [('id') : memberId.get(i), ('memberType') : memberType.get(i)]))
 }

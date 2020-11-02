@@ -14,15 +14,20 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrlEncodedBodyContent
-import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
 import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreateBulk'))
+def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+GlobalVariable.contactId = responseJson.id
+WebUI.comment('ContactId is: ' + GlobalVariable.contactId)
+WebUI.comment('ContactId is: ' + GlobalVariable.contactId[0])
 
-//STEP | set new API key to Admin user
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeySet'))
+WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [:], FailureHandling.STOP_ON_FAILURE)
 
-//STEP | check API key of Admin user
-responseX = WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeyGet'))
-def responseJsonX = new JsonSlurper().parseText(responseX.getResponseBodyContent())
-WebUI.comment('API KEY : ' + responseJsonX)
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsGetIdBulk', [('contactId1') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
+
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsUpdateBulk', [('contactId') : GlobalVariable.contactId[0]]))
+WS.delay(10)
+
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsDeleteBulk', [('contactId') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
