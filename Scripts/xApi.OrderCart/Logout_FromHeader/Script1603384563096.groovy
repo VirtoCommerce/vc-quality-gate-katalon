@@ -15,21 +15,4 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('UI-Electronics/Header/SignInButtonHeader'))
-
-if (GlobalVariable.userName != "" && GlobalVariable.userPassword != ""){
-	
-	WebUI.setText(findTestObject('UI-Electronics/SignInPage/EmailCustomerLogin'), GlobalVariable.userName)
-	
-	WebUI.setText(findTestObject('UI-Electronics/SignInPage/PasswordCustomerLogin'), GlobalVariable.userPassword)
-	
-	WebUI.click(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'))
-	
-	String GetText = WebUI.getText(findTestObject('UI-Electronics/Header/HeaderLogoutText'))
-	
-	WebUI.verifyMatch(GetText, GlobalVariable.userName, false)
-	
-	}
-
-
-
+WebUI.click(findTestObject('UI-Electronics/Header/HeaderLogoutButton'))

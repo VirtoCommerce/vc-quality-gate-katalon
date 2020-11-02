@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_E2E_Back_Api</name>
+   <name>DRAFT.Platform_E2E_Back_Api</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -19,7 +19,7 @@
    <testCaseLink>
       <guid>6d9ff844-efa2-4f38-b8be-2780133f8fab</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
