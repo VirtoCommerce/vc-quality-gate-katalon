@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContactsGet</name>
+   <name>_ContactsSearch</name>
    <tag></tag>
-   <elementGuidId>9ecb1036-21cb-47f3-a3a6-b60284d5335d</elementGuidId>
+   <elementGuidId>2e3fdcdc-c469-40a1-9523-eb42e8b82bf2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;fullName\&quot;: \&quot;${GlobalVariable.contactName}\&quot;,\n    \&quot;firstName\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n    \&quot;lastName\&quot;: \&quot;${GlobalVariable.lastName}\&quot;,\n  \t\&quot;id\&quot;: \&quot;${GlobalVariable.contactId}\&quot;,\n    //\&quot;memberType\&quot;: \&quot;HotContact\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    //\&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    //\&quot;memberId\&quot;: null,\n    \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    //\&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;skip\&quot;: 0,\n    \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,30 +29,28 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/contacts?ids=</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/contacts/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
-
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

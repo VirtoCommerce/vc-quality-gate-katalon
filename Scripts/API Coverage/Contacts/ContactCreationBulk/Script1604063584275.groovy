@@ -14,19 +14,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-KeywordUtil.logInfo("Members delete BULK test case")
+import groovy.json.JsonSlurper
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDeleteBulk'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreateBulk'))
 
-
-
-//List <String> memberTypeId = GlobalVariable.memberId
-//
-//for (int i; i < memberTypeId.size(); i++) {
-//    KeywordUtil.logInfo('Delete user type ' + memberTypeId.get(i))
-//
-//    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', 
-//            [('id') : memberTypeId.get(i)]))
-//}
+//def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+//GlobalVariable.contactId = responseJson.id
+//println ("GlobVar is: "+GlobalVariable.contactId)

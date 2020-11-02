@@ -19,6 +19,6 @@ import groovy.json.JsonSlurper
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreate'))
 
-//def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-//GlobalVariable.contactId = responseJson.id
-//println ("GlobVar is: "+GlobalVariable.contactId)
+def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+GlobalVariable.contactId = responseJson.id
+println ("ContactId is: "+GlobalVariable.contactId)

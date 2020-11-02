@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>DRAFT.MemberDelete</name>
+   <name>MemberDelete</name>
    <tag></tag>
-   <comment>TYPE ID IS : &quot; + mtid[0]</comment>
+   <comment>TYPE ID IS : &quot; + GlobalVariable.memberId</comment>
    <testCaseGuid>de256edd-ac2e-4fef-aa47-31965fbe3fc9</testCaseGuid>
 </TestCaseEntity>
