@@ -14,14 +14,20 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import groovy.json.JsonSlurper as JsonSlurper
 
-KeywordUtil.logInfo('Create organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsCreate'))
+KeywordUtil.logInfo('Organization search test case')
 
-// STEP | Parse request and save token to the GlobalVariable
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
+
+//WS.delay(10)
+
+// STEP | Parse request and verify with  GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-(GlobalVariable.organizationId) = responseJson.id
-KeywordUtil.logInfo('Organization ID: ' + responseJson.id)
-KeywordUtil.logInfo('Organization ID. Global: ' + GlobalVariable.organizationId)
+KeywordUtil.logInfo(response.getResponseBodyContent())
+
+KeywordUtil.logInfo('Organization Name: ' + responseJson.results[0].name)
+KeywordUtil.logInfo('Organization NameD. Global: ' + GlobalVariable.organizationName)
+
+WS.verifyEqual(responseJson.results[0].name[0], (GlobalVariable.organizationName))

@@ -17,11 +17,16 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-KeywordUtil.logInfo('Create organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsCreate'))
+KeywordUtil.logInfo('Get organization')
+
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGetId'))
 
 // STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-(GlobalVariable.organizationId) = responseJson.id
-KeywordUtil.logInfo('Organization ID: ' + responseJson.id)
-KeywordUtil.logInfo('Organization ID. Global: ' + GlobalVariable.organizationId)
+
+KeywordUtil.logInfo(response.getResponseBodyContent())
+KeywordUtil.logInfo('Organization Name: ' + (responseJson.name))
+KeywordUtil.logInfo('Organization NameD. Global: ' + GlobalVariable.organizationName)
+
+WS.verifyEqual(responseJson.name, GlobalVariable.organizationName)
+

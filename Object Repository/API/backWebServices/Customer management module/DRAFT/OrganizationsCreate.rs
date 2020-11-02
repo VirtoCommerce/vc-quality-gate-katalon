@@ -9,7 +9,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;QweOrganization\&quot;,\n  \&quot;memberType\&quot;: \&quot;Organization\&quot;,\n  \&quot;id\&quot;: \&quot;${GlobalVariable.organizationId}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${GlobalVariable.organizationName}\&quot;,\n  \&quot;memberType\&quot;: \&quot;Organization\&quot;,\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
