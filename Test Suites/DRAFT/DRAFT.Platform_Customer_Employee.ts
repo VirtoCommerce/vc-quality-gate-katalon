@@ -39,7 +39,7 @@
       <guid>30ec59a9-2755-4131-aee1-d6bbc73bf13d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3ed3379c-80c3-446c-ad25-ea48bd2148b8</guid>

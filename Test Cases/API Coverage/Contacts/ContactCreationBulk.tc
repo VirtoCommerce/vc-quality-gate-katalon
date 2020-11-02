@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create contact BULK</description>
-   <name>ContactCreationBulk</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>bab8a38d-a1a0-4dfa-8809-cc525b51da2a</testCaseGuid>
-</TestCaseEntity>

@@ -45,7 +45,7 @@
       <guid>f6a4b3da-d948-4b74-b939-47d82bd5f1c1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/UserCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/UserCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b99e0eb0-9214-47db-9526-850a423c696d</guid>
@@ -57,6 +57,6 @@
       <guid>e6c3ec17-3330-43a4-b4ee-653ba6ec5675</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

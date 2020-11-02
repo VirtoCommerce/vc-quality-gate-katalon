@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_Contact</name>
+   <name>Platform_start</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,17 +10,23 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>48521ac6-ff06-4e58-ba6f-94d1febb406a</testSuiteGuid>
+   <testSuiteGuid>aca72a3a-8864-47a9-b9a7-ae1f94b51293</testSuiteGuid>
    <testCaseLink>
-      <guid>1f7a6caf-3f8d-41f8-9609-36165a550e0c</guid>
+      <guid>0bc1cc6e-8fbc-42e9-8761-bf4239be15b2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCycle</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6efdae0c-0dd8-4334-95d6-4fbed0835fba</guid>
+      <guid>cc2cf10f-e4b0-4d07-abdf-fd9fc8767642</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCycleBulk</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1bafa477-5e97-45ca-9034-d0d46e51b217</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
