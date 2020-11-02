@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Get contact</description>
-   <name>ContactGetId</name>
+   <name>DRAFT.ContactGetId</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>54cb4643-28ca-4077-a15b-4acc6bd11fab</testCaseGuid>

@@ -27,7 +27,7 @@
       <guid>429b6e80-1f47-4569-91b9-782f92b7ff52</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9c7acb74-e364-4e00-bf72-df4dcd80baae</guid>

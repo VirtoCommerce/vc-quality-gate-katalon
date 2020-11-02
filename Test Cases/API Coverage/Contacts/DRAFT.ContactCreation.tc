@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create contact</description>
+   <name>DRAFT.ContactCreation</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>da7b5bd3-a0d2-43fe-a984-0eb59c582fb8</testCaseGuid>
+</TestCaseEntity>

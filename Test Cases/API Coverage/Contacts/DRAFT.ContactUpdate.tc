@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Update contact</description>
-   <name>ContactUpdate</name>
+   <name>DRAFT.ContactUpdate</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>a18f8bae-e309-4b01-948c-3d2aafb8ce2e</testCaseGuid>

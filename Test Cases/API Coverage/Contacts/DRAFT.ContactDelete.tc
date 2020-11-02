@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Delete contact</description>
-   <name>ContactDelete</name>
+   <name>DRAFT.ContactDelete</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>5f1c87be-d820-4910-8cf5-04ef84057ccc</testCaseGuid>

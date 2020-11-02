@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Create contact</description>
-   <name>ContactCreation</name>
+   <name>ContactCycleBulk</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>da7b5bd3-a0d2-43fe-a984-0eb59c582fb8</testCaseGuid>
+   <testCaseGuid>fdd66a19-d894-48b2-a6ad-c0a895abf93c</testCaseGuid>
 </TestCaseEntity>

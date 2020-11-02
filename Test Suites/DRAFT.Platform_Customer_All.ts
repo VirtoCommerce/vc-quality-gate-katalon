@@ -57,6 +57,6 @@
       <guid>e6c3ec17-3330-43a4-b4ee-653ba6ec5675</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactCreation</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

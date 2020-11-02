@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
 
-WebUI.comment("Member creation test case")
+WebUI.comment("TEST CASE: Member creation")
 List <String> memberType = GlobalVariable.memberType
 
 WebUI.comment("TYPE IS : " + memberType)

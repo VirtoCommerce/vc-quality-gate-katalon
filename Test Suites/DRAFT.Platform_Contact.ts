@@ -21,19 +21,19 @@
       <guid>84d619d3-6722-4f86-bf3f-d500075fdabc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>514e3aa1-4443-422d-84ec-623b62309018</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactGetId</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactGetId</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b558ef5b-6529-4d03-b54a-aab8776571a2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>12ad5a0b-c7cf-4cc7-8210-c4bef8040323</guid>
@@ -45,6 +45,6 @@
       <guid>b4a1e565-fb0c-4915-a6a4-32a558b15b4d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/DRAFT.ContactDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
