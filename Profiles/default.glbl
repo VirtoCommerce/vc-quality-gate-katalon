@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://qa-demovc3-store.azurewebsites.net'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8083'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://qa-demovc3-admin.azurewebsites.net'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8103'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -76,6 +76,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>''</initValue>
+      <name>contentType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'VALUE'</initValue>
       <name>itemsTotalFromCart</name>
    </GlobalVariableEntity>
@@ -91,12 +96,32 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'e8c9be3e-9c39-440b-b6ba-d9a6ff62df74'</initValue>
+      <initValue>''</initValue>
+      <name>organizationId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QweOrganization'</initValue>
+      <name>organizationName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>memberId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
       <name>contactId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
+      <name>employeeId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -106,13 +131,23 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'0d4ad9bab9184d69a6e586effdf9c2ea'</initValue>
       <name>categoryId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'Cell phones'</initValue>
       <name>categoryName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>DON'T DELETE THIS ID</description>
+      <initValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</initValue>
+      <name>productId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>pricelistId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Product SKU</description>
@@ -133,16 +168,6 @@
       <description></description>
       <initValue>''</initValue>
       <name>cookie</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>pricelistId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'efeb9b88-4ecd-40a0-8998-839c4597a46f'</initValue>
-      <name>productId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

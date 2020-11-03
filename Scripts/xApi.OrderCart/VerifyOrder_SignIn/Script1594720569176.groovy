@@ -20,3 +20,5 @@ WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - C
 WebUI.verifyElementPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/GetInvoiceButton'), 30)
 
 WebUI.verifyElementPresent(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/BillingAddressThankyoupage'), 30)
+
+WebUI.closeBrowser()

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Delay 10 sec</description>
+   <name>Delay</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e7c07b61-65cb-4aa8-b057-a397e374c5bd</testCaseGuid>
+</TestCaseEntity>

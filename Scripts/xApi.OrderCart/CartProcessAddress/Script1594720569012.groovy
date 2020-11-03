@@ -20,7 +20,7 @@ def CheckAddressResult = WebUI.verifyElementPresent(findTestObject('UI-Electroni
 
 if (CheckAddressResult == false) {
 	
-	WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
+	    WebUI.click(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'))
 	
 		WebUI.setText(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/InputEmailCheckout'), GlobalVariable.email)
 	
@@ -58,6 +58,8 @@ if (CheckAddressResult == false) {
 	
 		} else {
 	
+		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectRegion'), 2)
+		
 		WebUI.selectOptionByIndex(findTestObject('UI-Electronics/CartCheckoutPage/Page_Electronics - Checkout/SelectAddress'), 1)
 
 }

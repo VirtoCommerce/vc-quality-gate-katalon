@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MemberDelete</name>
+   <tag></tag>
+   <comment>TEST CASE: Member delete
+MEMBER ID IS : &quot; + GlobalVariable.memberId[0]</comment>
+   <testCaseGuid>de256edd-ac2e-4fef-aa47-31965fbe3fc9</testCaseGuid>
+</TestCaseEntity>

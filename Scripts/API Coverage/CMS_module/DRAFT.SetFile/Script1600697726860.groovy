@@ -19,10 +19,36 @@ import com.kms.katalon.core.testobject.RestRequestObjectBuilder
 import com.kms.katalon.core.testobject.FormDataBodyParameter
 import groovy.json.JsonSlurper as JsonSlurper
 
-def request = findTestObject('API/backWebServices/CMS Content module/DRAFT.ContentFileNew')
+import com.kms.katalon.core.testobject.ConditionType as ConditionType
+//import com.kms.katalon.core.testobject.RestRequestObjectBuilder
+import com.kms.katalon.core.testobject.TestObjectProperty as TestObjectProperty
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter
+import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 
-List<FormDataBodyParameter> body = new ArrayList()
-body.add(new FormDataBodyParameter('qwetest.md', '', 'blob'))
-request.setBodyContent(new FormDataBodyParameter(body))
-response = WS.sendRequestAndVerify(request)
-println("REQUEST IS : " + request)
+def request = findTestObject('API/backWebServices/CMS Content module/DRAFT.ContentFileNew')
+//
+//List<FormDataBodyParameter> body = new ArrayList()
+//body.add(new FormDataBodyParameter('qwetest.md', '', 'blob'))
+//request.setBodyContent(new FormDataBodyParameter(body))
+//response = WS.sendRequestAndVerify(request)
+//println("REQUEST IS : " + request)
+
+
+
+def builder = new RestRequestObjectBuilder()
+
+'Create a new POST object using builder'
+def requestObject = builder
+  .withRestRequestMethod("POST")
+  .withRestUrl(request)
+  .withHttpHeaders([
+      new TestObjectProperty("Content-Type", ConditionType.EQUALS, "multipart/form-data")
+  ])
+  .withMultipartFormDataBodyContent([
+      new withMultipartFormDataBodyContent("qwetest.md", "", "blob"),
+  ])
+  .build()
+   
+def response = WS.sendRequest(requestObject)
+
+assert response.getStatusCode() == 200

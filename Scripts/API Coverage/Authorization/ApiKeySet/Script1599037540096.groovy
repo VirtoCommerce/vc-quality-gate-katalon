@@ -18,8 +18,11 @@ import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrl
 import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
 import groovy.json.JsonSlurper as JsonSlurper
 
+
+//STEP | set new API key to Admin user
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeySet'))
 
+//STEP | check API key of Admin user
 responseX = WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeyGet'))
 def responseJsonX = new JsonSlurper().parseText(responseX.getResponseBodyContent())
-println('API KEY : ' + responseJsonX)
+WebUI.comment('API KEY : ' + responseJsonX)

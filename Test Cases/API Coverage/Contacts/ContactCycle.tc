@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Contact cycle test</description>
+   <name>ContactCycle</name>
+   <tag></tag>
+   <comment>ContactId is: &quot; + GlobalVariable.contactId</comment>
+   <testCaseGuid>4602b76f-7978-4d39-873e-337f6c748543</testCaseGuid>
+</TestCaseEntity>
