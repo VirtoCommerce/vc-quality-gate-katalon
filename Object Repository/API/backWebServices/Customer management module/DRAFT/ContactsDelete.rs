@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContactsDeleteBulk</name>
+   <name>ContactsDelete</name>
    <tag></tag>
    <elementGuidId>28477bf3-6bf3-4cd1-b8df-204ffd30efdd</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

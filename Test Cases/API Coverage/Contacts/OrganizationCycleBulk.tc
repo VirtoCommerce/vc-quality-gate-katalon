@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create organization</description>
+   <name>OrganizationCycleBulk</name>
+   <tag></tag>
+   <comment>TEST CASE : Create BULK organization
+TEST CASE: Organization search
+OPA : &quot; + orgId
+TEST CASE : Update organization</comment>
+   <testCaseGuid>24adbbc6-4a9a-439d-b4c6-18740ae576ca</testCaseGuid>
+</TestCaseEntity>

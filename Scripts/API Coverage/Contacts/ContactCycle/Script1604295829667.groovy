@@ -22,7 +22,7 @@ def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent()
 GlobalVariable.contactId = responseJson.id
 WebUI.comment('ContactId is: ' + GlobalVariable.contactId)
 
-WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 WS.delay(15)
 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/AddressesUpdate', [('contactId') : GlobalVariable.contactId])) 
@@ -35,4 +35,4 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsGetId'))
 WS.delay(10)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsDeleteBulk', [('contactId') : GlobalVariable.contactId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsDelete', [('contactId') : GlobalVariable.contactId]))

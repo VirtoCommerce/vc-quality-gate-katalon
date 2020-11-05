@@ -15,19 +15,28 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import groovyjarjarantlr.collections.List
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreateBulk'))
-def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-GlobalVariable.contactId = responseJson.id
-WebUI.comment('ContactId is: ' + GlobalVariable.contactId)
-WebUI.comment('ContactId is: ' + GlobalVariable.contactId[0])
+
+WebUI.comment('TEST CASE : Create BULK organization')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsCreateBulk'))
 
 WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsGetIdBulk', [('contactId1') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
+WebUI.comment('TEST CASE: Organization search')
+responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
+def responseOrgJson = new JsonSlurper().parseText(responseOrg.getResponseBodyContent())
+orgId = responseOrgJson.results.id
+WebUI.comment('OPA : ' + orgId)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsUpdateBulk', [('contactId') : GlobalVariable.contactId[0]]))
-WS.delay(10)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsDelete', [('contactId') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
+WebUI.comment('TEST CASE : Update BULK organization')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsUpdateBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
+
+
+WebUI.comment('TEST CASE: Get organizations by Id')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
+
+
+WebUI.comment('TEST CASE: Organization BULK delete')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsDelete', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))

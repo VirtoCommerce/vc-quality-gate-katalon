@@ -96,12 +96,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'154dbeaf-ba9b-40c9-a2bd-df9b4b07e1de'</initValue>
       <name>organizationId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QweOrganization'</initValue>
+      <initValue>'Qwe Organization'</initValue>
       <name>organizationName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

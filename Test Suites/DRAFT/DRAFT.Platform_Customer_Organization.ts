@@ -24,6 +24,18 @@
       <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>88420835-b07d-4a05-85a1-e36e1d8c0010</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationCreationBulk</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>22e26d19-d559-4f15-9248-feeffab2d395</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationSearch</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>96e158b3-af71-487a-a0d4-623e492bce10</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -33,7 +45,7 @@
       <guid>6c20a3cd-b270-43c9-8a83-cd4e8fb88431</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationGet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationGetIdBulk</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2b5bd5b7-2ee0-47b0-985f-94cd45e94737</guid>
@@ -42,15 +54,21 @@
       <testCaseId>Test Cases/API Coverage/Contacts/OrganizationGetId</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>22e26d19-d559-4f15-9248-feeffab2d395</guid>
+      <guid>7811e39a-2a1d-4b4b-9cc3-03dd4a7e3630</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/DropIndex</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9a193afb-62e2-43c4-94c4-76e79bf2ab23</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>afe942c5-5826-4c00-8520-909be115be73</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/OrganizationDeleteBulk</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

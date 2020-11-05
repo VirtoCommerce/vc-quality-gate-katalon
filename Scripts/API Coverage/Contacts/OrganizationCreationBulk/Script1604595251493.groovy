@@ -15,15 +15,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Get organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGetId', [('organizationId') : GlobalVariable.organizationId]))
+WebUI.comment('TEST CASE : Create organization')
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsCreateBulk'))
 
 // STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-
-WebUI.comment('Organization Name: ' + (responseJson.name))
-WebUI.comment('Organization NameD. Global: ' + GlobalVariable.organizationName)
-
-WS.verifyEqual(responseJson.name, GlobalVariable.organizationName)
+GlobalVariable.organizationId = responseJson.id
+WebUI.comment('Organization ID. Global: ' + GlobalVariable.organizationId)

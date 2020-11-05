@@ -17,17 +17,15 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper as JsonSlurper
 
-KeywordUtil.logInfo('Organization search test case')
+WebUI.comment('TEST CASE: Organization search')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
 
-//WS.delay(10)
 
 // STEP | Parse request and verify with  GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-KeywordUtil.logInfo(response.getResponseBodyContent())
 
-KeywordUtil.logInfo('Organization Name: ' + responseJson.results[0].name)
-KeywordUtil.logInfo('Organization NameD. Global: ' + GlobalVariable.organizationName)
+WebUI.comment('Organization Name: ' + responseJson.results[0].name)
+WebUI.comment('Organization NameD. Global: ' + GlobalVariable.organizationName)
 
-WS.verifyEqual(responseJson.results[0].name[0], (GlobalVariable.organizationName))
+WS.verifyEqual(responseJson.results[0].name, (GlobalVariable.organizationName))
