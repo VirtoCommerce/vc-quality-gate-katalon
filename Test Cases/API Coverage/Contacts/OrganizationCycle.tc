@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create organization</description>
+   <name>OrganizationCycle</name>
+   <tag></tag>
+   <comment>TEST CASE : Create organization
+Organization ID. Global: &quot; + GlobalVariable.organizationId
+TEST CASE : Update organization
+TEST CASE : Get organization
+TEST CASE: Organization delete
+TEST CASE: Organization search</comment>
+   <testCaseGuid>460331ce-9d70-4889-b05e-586274739eff</testCaseGuid>
+</TestCaseEntity>

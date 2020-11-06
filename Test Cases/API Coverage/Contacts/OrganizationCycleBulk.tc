@@ -5,7 +5,10 @@
    <tag></tag>
    <comment>TEST CASE : Create BULK organization
 TEST CASE: Organization search
-OPA : &quot; + orgId
-TEST CASE : Update organization</comment>
+Organization ID : &quot; + orgId
+TEST CASE : Update BULK organization
+TEST CASE: Get organizations by Id
+TEST CASE: Organization BULK delete
+TEST CASE: Organization search</comment>
    <testCaseGuid>24adbbc6-4a9a-439d-b4c6-18740ae576ca</testCaseGuid>
 </TestCaseEntity>

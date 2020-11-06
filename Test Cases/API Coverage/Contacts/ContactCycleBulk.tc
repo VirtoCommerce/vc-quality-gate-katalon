@@ -3,6 +3,7 @@
    <description>Create contact</description>
    <name>ContactCycleBulk</name>
    <tag></tag>
-   <comment></comment>
+   <comment>ContactId is: &quot; + GlobalVariable.contactId
+ContactId is: &quot; + GlobalVariable.contactId[0]</comment>
    <testCaseGuid>fdd66a19-d894-48b2-a6ad-c0a895abf93c</testCaseGuid>
 </TestCaseEntity>

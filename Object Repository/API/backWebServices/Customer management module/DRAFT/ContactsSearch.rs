@@ -51,7 +51,6 @@ import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-WS.verifyElementPropertyValue(response, 'results[0].firstName', &quot;Qwe&quot;)
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>

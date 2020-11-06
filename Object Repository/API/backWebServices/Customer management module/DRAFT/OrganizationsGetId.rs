@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/organizations/${organizationId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/organizations/${orgId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -46,7 +46,7 @@
       <description></description>
       <id>ac3046d1-8d54-4ebc-86da-90ab8074c724</id>
       <masked>false</masked>
-      <name>organizationId</name>
+      <name>orgaId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
