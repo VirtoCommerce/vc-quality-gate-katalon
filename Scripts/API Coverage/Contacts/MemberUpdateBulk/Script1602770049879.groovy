@@ -17,10 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper as JsonSlurper
 
+
+// Updated member buy BULK request
 WebUI.comment('TEST CASE: Member BULK update')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdateBulk', [('id1') : GlobalVariable.memberId[0], ('id2') : GlobalVariable.memberId[1]]))
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdateBulk', [('id') : GlobalVariable.memberId[
-            0], ('memberType') : GlobalVariable.memberType[0]]))
-
-WS.delay(10)
-
+// Check updated member
+//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
+//WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')

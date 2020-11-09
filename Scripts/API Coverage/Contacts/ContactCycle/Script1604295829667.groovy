@@ -33,7 +33,7 @@ WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandlin
 // Search new contact
 WebUI.comment('TEST CASE: Contact search')
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsSearch'))
-WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', "Qwe")
+WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
 WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
 
 

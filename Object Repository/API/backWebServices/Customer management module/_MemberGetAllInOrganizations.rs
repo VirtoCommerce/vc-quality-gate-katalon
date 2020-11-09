@@ -38,14 +38,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'2ab530d8-1606-4126-92e3-904ffd476099'</defaultValue>
-      <description></description>
+      <defaultValue>'d690f3df-8782-4dcc-99be-a1f644220e50'</defaultValue>
+      <description>b2b test organization</description>
       <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
       <masked>false</masked>
       <name>orgId</name>
    </variables>
    <variables>
-      <defaultValue>'64cd7ca1-b5ba-4721-bc74-918b11dc4835'</defaultValue>
+      <defaultValue>'cb0a5340-f9fb-4f49-bd62-9d03518868ff'</defaultValue>
       <description></description>
       <id>3df71bbe-6c78-4be2-adbf-2c947e7eb9e9</id>
       <masked>false</masked>

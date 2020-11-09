@@ -3,6 +3,12 @@
    <description>Contact cycle test</description>
    <name>ContactCycle</name>
    <tag></tag>
-   <comment>ContactId is: &quot; + GlobalVariable.contactId</comment>
+   <comment>TEST CASE : Create contact
+ContactId is: &quot; + GlobalVariable.contactId
+TEST CASE: Contact search
+TEST CASE : Update contact
+TEST CASE : Update address
+TEST CASE: Get contact by Id
+TEST CASE: Delete contact</comment>
    <testCaseGuid>4602b76f-7978-4d39-873e-337f6c748543</testCaseGuid>
 </TestCaseEntity>

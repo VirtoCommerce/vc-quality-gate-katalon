@@ -33,7 +33,7 @@
       <guid>008d9757-1e47-4bd4-8636-8b48d09f0497</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/MemberGetAllInOrganizations</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/_MemberGetAllInOrganizations</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a035631f-13fe-4bf5-9ec0-304a00faa66a</guid>

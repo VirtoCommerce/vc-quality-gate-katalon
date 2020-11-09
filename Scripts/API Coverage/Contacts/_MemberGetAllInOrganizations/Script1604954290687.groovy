@@ -13,10 +13,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-// Delete all created members 
-WebUI.comment("TEST CASE: Members BULK delete")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDeleteBulk'))
+// Get all member organizations || Need explanation for request
+WebUI.comment("TEST CASE: Get member in organization")
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberGetAllInOrganizations'))

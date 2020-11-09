@@ -17,15 +17,9 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
 
-WebUI.comment("TEST CASE: Member get by ID")
+WebUI.comment("TEST CASE: Members BULK Create")
+responseBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreateBulk'))
 
-//def mtid = GlobalVariable.memberId
-//def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : mtid[0]]))
-
-List <String> memberTypeId = GlobalVariable.memberId
-
-for (int i; i < memberTypeId.size(); i++) {
-    WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
-
-    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : memberTypeId.get(i)]))
-}
+def memberJson = new JsonSlurper().parseText(responseBulk.getResponseBodyContent())
+GlobalVariable.memberId = memberJson.id
+WebUI.comment("MEMBER ID IS : " + GlobalVariable.memberId)

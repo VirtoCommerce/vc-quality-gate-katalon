@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>_MemberGet</name>
+   <name>_MemberGetIdGroup</name>
    <tag></tag>
    <elementGuidId>cfa854ca-d1a8-4749-acc0-645d2aa66f3d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -9,12 +9,8 @@
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -42,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'64cd7ca1-b5ba-4721-bc74-918b11dc4835'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
       <masked>false</masked>
@@ -62,9 +58,6 @@ import internal.GlobalVariable as GlobalVariable
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
-
-
-
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

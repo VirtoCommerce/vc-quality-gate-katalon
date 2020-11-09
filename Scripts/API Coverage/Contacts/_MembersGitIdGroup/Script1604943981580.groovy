@@ -14,9 +14,19 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import groovy.json.JsonSlurper
 
 
-// Delete all created members 
-WebUI.comment("TEST CASE: Members BULK delete")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDeleteBulk'))
+WebUI.comment("TEST CASE: Member get by ID group")
+
+//def mtid = GlobalVariable.memberId
+//def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : mtid[0]]))
+
+List <String> memberTypeId = GlobalVariable.memberId
+
+for (int i; i < memberTypeId.size(); i++) {
+    WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
+
+    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberGetIdGroup', [('id') : memberTypeId.get(i)]))
+	WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')
+}
