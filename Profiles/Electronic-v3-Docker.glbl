@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8086'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8098'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8106'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8118'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -46,12 +46,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>['Vendor', 'Employee', 'Organization', 'Contact']</initValue>
+      <initValue>['Organization', 'Contact', 'Vendor', 'Employee']</initValue>
       <name>memberType</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>['6f1bba8d-27a6-4c6d-9efc-7c9c7ebc9d99', 'f6094b87-2903-4750-a667-dde288be20ea', '713378cb-087c-4cca-b424-d81f9e310eb4', 'baa95026-47d5-4094-b132-4d9aa9dc67af']</initValue>
+      <initValue>['89b7b0cc-378c-4d07-a883-6812c648057f', '5370ae29-0edc-42e5-8b46-cfb5da1fd29e']</initValue>
       <name>memberId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

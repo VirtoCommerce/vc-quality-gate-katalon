@@ -14,17 +14,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonOutput as JsonOutput
 
-KeywordUtil.logInfo('Get employee')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/EmployeesCreate'))
+// Create new Contact and save Id
+WebUI.comment('TEST CASE : GET employee')
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/EmployeesGet', [('id') : GlobalVariable.employeeId]))
 
-
-// STEP | Print json result
-def pretty = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(pretty)
-
-//STEP 2 Verify name
-KeywordUtil.logInfo('Verify if full name after sending request is correct or not')
-WS.verifyElementPropertyValue(response, 'fullName', GlobalVariable.contactName)
+//def name = GlobalVariable.contactName
+//WebUI.comment(name)
+//
+////Verify name
+//WebUI.comment('Verify if full name after sending request is correct or not')
+//WS.verifyElementPropertyValue(response, 'fullName', name)

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create organization</description>
+   <name>OrganizationUpdateBulk</name>
+   <tag></tag>
+   <comment>TEST CASE : Update organization</comment>
+   <testCaseGuid>dba476f4-5587-4efe-9c53-083037045976</testCaseGuid>
+</TestCaseEntity>

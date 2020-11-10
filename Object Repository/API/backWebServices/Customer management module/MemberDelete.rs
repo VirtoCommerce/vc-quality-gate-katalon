@@ -53,12 +53,8 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import com.kms.katalon.core.util.KeywordUtil
 
-//RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-//def variables = request.getVariables()
-//def variable = variables.get('id')
-//KeywordUtil.logInfo(variables.get('id'))
 
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 204)</verificationScript>

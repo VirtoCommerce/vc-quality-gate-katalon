@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MemberCreationBulk</name>
+   <tag></tag>
+   <comment>TEST CASE: Members BULK Create
+MEMBER ID IS : &quot; + GlobalVariable.memberId</comment>
+   <testCaseGuid>bb0fdb78-68c5-4f5f-9c08-30805c4c5502</testCaseGuid>
+</TestCaseEntity>

@@ -6,10 +6,11 @@
    <elementGuidId>7f3bd7ad-9d6f-4ef9-9422-c6f251968d39</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;isActive\&quot;: true,\n        \&quot;outerId\&quot;: \&quot;12345\&quot;,\n        \&quot;storeId\&quot;: \&quot;${GlobalVariable.distributorId}\&quot;,\n        \&quot;name\&quot;: \&quot;ZXC Outlet\&quot;,\n        \&quot;id\&quot;: \&quot;402ebe1a-d50a-464b-91a5-c9b2ec90eeb2\&quot;,\n        \&quot;memberType\&quot;: \&quot;HotOutlet\&quot;,\n        \&quot;parentId\&quot;: \&quot;${GlobalVariable.organizationId}\&quot;,\n        \&quot;address\&quot;: {\n            \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n            \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n            \&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n            \&quot;name\&quot;: \&quot;Qwest\&quot;,\n            \&quot;line1\&quot;: \&quot;Test adress line 1\&quot;,\n            \&quot;line2\&quot;: \&quot;Test adress line 2\&quot;,\n            \&quot;postalCode\&quot;: \&quot;X34656703\&quot;,\n            \&quot;city\&quot;: \&quot;Test city\&quot;,\n            \&quot;region\&quot;: \&quot;test region\&quot;,\n            \&quot;countryName\&quot;: \&quot;United States\&quot;,\n            \&quot;countryCode\&quot;: \&quot;USA\&quot;\n        },\n        \&quot;groups\&quot;: [\n            \&quot;TEST UG1\&quot;,\n            \&quot;TEST UG2\&quot;\n        ],\n        \&quot;salesRepresentative\&quot;: {\n            \&quot;firstName\&quot;: \&quot;Far\&quot;,\n            \&quot;lastName\&quot;: \&quot;Dar\&quot;,\n            \&quot;phone\&quot;: \&quot;12313246789\&quot;,\n            \&quot;email\&quot;: \&quot;testemail345@test.com\&quot;\n        }\n    }\n]&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;name\&quot;: \&quot;${name1}\&quot;,\n    \&quot;description\&quot;: \&quot;Updated Org1\&quot;,\n    \&quot;id\&quot;: \&quot;${orgId1}\&quot;,\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG1\&quot;,\n      \&quot;TEST UG2\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;0123456789\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test@test.com\&quot;\n    ]\n  },\n  {\n    \&quot;name\&quot;: \&quot;Qwe OrgBulkUpd2\&quot;,\n    \&quot;description\&quot;: \&quot;Updated Org2\&quot;,\n    \&quot;id\&quot;: \&quot;${orgId2}\&quot;,\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG1\&quot;,\n      \&quot;TEST UG2\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;0123456789\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test@test.com\&quot;\n    ]\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,6 +29,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/organizations/bulk</restUrl>
@@ -35,7 +37,31 @@
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0a0aaca9-10df-4759-b815-cf9f13e8ed4c</id>
+      <masked>false</masked>
+      <name>orgId1</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>09044439-1181-4b19-bf86-27bfb40d4e7e</id>
+      <masked>false</masked>
+      <name>orgId2</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c153ac3b-33c7-4fa5-a299-858410602b4a</id>
+      <masked>false</masked>
+      <name>name1</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -51,7 +77,7 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

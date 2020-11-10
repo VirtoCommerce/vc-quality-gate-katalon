@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create organization</description>
+   <name>OrganizationUpdate</name>
+   <tag></tag>
+   <comment>TEST CASE : Create organization
+Organization ID. Global: &quot; + GlobalVariable.organizationId</comment>
+   <testCaseGuid>d94aa9c4-59c5-4c0f-a95f-c6e816f2ab29</testCaseGuid>
+</TestCaseEntity>

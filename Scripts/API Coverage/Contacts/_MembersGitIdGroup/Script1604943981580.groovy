@@ -14,18 +14,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import groovy.json.JsonSlurper
 
-KeywordUtil.logInfo('Get organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGet'))
 
-// STEP | Parse request and save to the GlobalVariable
-def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-KeywordUtil.logInfo(response.getResponseBodyContent())
+WebUI.comment("TEST CASE: Member get by ID group")
 
-KeywordUtil.logInfo('Organization Name: ' + responseJson.name[0])
-KeywordUtil.logInfo('Organization NameD. Global: ' + GlobalVariable.organizationName)
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
+WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkContact')
 
-WS.verifyEqual(responseJson.name[0], (GlobalVariable.organizationName))
 
+// Temborary solution Bulk update check
+//List <String> memberTypeId = GlobalVariable.memberId
+//
+//for (int i; i < memberTypeId.size(); i++) {
+//    WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
+//
+//    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberGetIdGroup', [('id') : memberTypeId.get(i)]))
+//	WS.verifyElementPropertyValue(responseGet, 'firstName', 'JohnFirst')
+//}

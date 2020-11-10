@@ -27,5 +27,7 @@ List <String> memberTypeId = GlobalVariable.memberId
 for (int i; i < memberTypeId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
 
-    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : memberTypeId.get(i)]))
-}
+    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : memberTypeId.get(i)]))
+	WS.verifyElementPropertyValue(responseGet, 'name', 'Qwe Updated')
+	//WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
+	}

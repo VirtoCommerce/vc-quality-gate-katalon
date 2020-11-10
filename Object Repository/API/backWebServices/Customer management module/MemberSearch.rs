@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;responseGroup\&quot;: \&quot;None\&quot;,\n  //\&quot;memberId\&quot;: \&quot;${memberId}\&quot;,\n  //\&quot;searchPhrase\&quot;: \&quot;Bulk\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20\n}&quot;,
+  &quot;text&quot;: &quot;{\n  //\&quot;responseGroup\&quot;: \&quot;None\&quot;,\n  //\&quot;searchPhrase\&quot;: \&quot;Bulk\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'d35854a1-114d-4b42-8017-524985237773'</defaultValue>
+      <defaultValue>'8184dc56-0742-4dc2-87d6-61261a2b19e8'</defaultValue>
       <description></description>
       <id>72dbce37-d3d2-4134-a142-f5dd7be43f8c</id>
       <masked>false</masked>
@@ -59,9 +59,6 @@ import com.kms.katalon.core.util.KeywordUtil
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-WS.verifyElementPropertyValue(response, 'results[0].firstName', &quot;Qwe&quot;)
-
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>

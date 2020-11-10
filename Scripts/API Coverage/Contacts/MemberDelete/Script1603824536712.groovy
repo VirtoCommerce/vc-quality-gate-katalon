@@ -18,7 +18,20 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment("TEST CASE: Member delete")
 
+// Delete member by Id from list
+List <String> memberId = GlobalVariable.memberId
 
-// Delete ferst member by Id from list
-WebUI.comment("MEMBER ID IS : " + GlobalVariable.memberId[0])
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', [('id') : GlobalVariable.memberId[0]]))
+for (int i; i < memberId.size(); i++) {
+	WebUI.comment("MEMBER ID IS : " + memberId.get(i))
+	WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', [('id') : memberId.get(i)]))
+}
+
+
+// Re-index important to search items
+WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+
+
+// Search new contact. Count 0 in result - contact was deleted
+WebUI.comment("TEST CASE: Member search")
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch'))
+WS.verifyElementPropertyValue(responseSearch, 'totalCount', 0)

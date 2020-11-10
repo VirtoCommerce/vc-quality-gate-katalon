@@ -14,9 +14,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper
 
 
+// Search new members. Created count = 4 and check firstName in results
 WebUI.comment("TEST CASE: Member search")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch', [('id') : GlobalVariable.memberId[0]]))
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch'))
+WS.verifyElementPropertyValue(responseSearch, 'totalCount', 4)
+WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)

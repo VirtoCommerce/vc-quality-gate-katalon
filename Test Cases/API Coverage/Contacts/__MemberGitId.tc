@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>MemberGitId</name>
+   <name>__MemberGitId</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE: Member get by ID</comment>
    <testCaseGuid>55965258-0dc2-4976-a9c7-7bac95f17a91</testCaseGuid>
 </TestCaseEntity>

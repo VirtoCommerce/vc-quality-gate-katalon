@@ -14,10 +14,10 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-import groovy.json.JsonSlurper
+import groovy.json.JsonSlurper as JsonSlurper
 
 
-KeywordUtil.logInfo("Test case: Get member in organization")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberGetAllInOrganizations', [('orgId') : GlobalVariable.organizationId, ('memberId') : GlobalVariable.contactId]))
-WS.delay(10)
+
+/////  RECHEK
+WebUI.comment('TEST CASE : Update BULK organization')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsUpdateBulk', [('id') : GlobalVariable.organizationId]))

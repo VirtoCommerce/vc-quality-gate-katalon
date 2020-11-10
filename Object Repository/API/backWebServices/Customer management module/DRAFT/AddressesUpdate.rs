@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst 11\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast 11\&quot;,\n    \&quot;name\&quot;: \&quot;QwestUpdated\&quot;,\n    \&quot;line1\&quot;: \&quot;Test adress line 1\&quot;,\n    \&quot;line2\&quot;: \&quot;Test adress line 2\&quot;,\n    \&quot;postalCode\&quot;: \&quot;X34656703\&quot;,\n    \&quot;city\&quot;: \&quot;Updated city\&quot;,\n    \&quot;regionName\&quot;: \&quot;Updated region\&quot;,\n    \&quot;countryName\&quot;: \&quot;United States\&quot;,\n    \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n    \&quot;phone\&quot;: \&quot;000111222333\&quot;,\n    \&quot;email\&quot;: \&quot;update@update.com\&quot;\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst 12\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast 12\&quot;,\n    \&quot;name\&quot;: \&quot;${name}\&quot;,\n    \&quot;line1\&quot;: \&quot;Test adress line 1\&quot;,\n    \&quot;line2\&quot;: \&quot;Test adress line 2\&quot;,\n    \&quot;postalCode\&quot;: \&quot;4656703\&quot;,\n    \&quot;city\&quot;: \&quot;Updated city\&quot;,\n    \&quot;regionName\&quot;: \&quot;Updated region\&quot;,\n    \&quot;countryName\&quot;: \&quot;United States\&quot;,\n    \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n    \&quot;phone\&quot;: \&quot;000111222333\&quot;,\n    \&quot;email\&quot;: \&quot;update@update.com\&quot;\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -47,6 +47,13 @@
       <id>4b2f0af2-4558-4924-bb67-8c202239b39d</id>
       <masked>false</masked>
       <name>contactId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>9d8a88ff-406d-4f69-b32f-621e291d852f</id>
+      <masked>false</masked>
+      <name>name</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
