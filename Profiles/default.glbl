@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QweJohn'</initValue>
+      <initValue>'Qwe John'</initValue>
       <name>contactName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -116,7 +116,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'f493e39d-370e-45a7-88d6-273cb9843898'</initValue>
       <name>employeeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -140,7 +140,7 @@
       <name>categoryName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>DON'T DELETE THIS ID</description>
+      <description>DON'T DELETE THIS ID - Using in Order E2E test</description>
       <initValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</initValue>
       <name>productId</name>
    </GlobalVariableEntity>

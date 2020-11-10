@@ -19,14 +19,16 @@ import groovy.json.JsonSlurper
 
 WebUI.comment("TEST CASE: Member get by ID group")
 
-//def mtid = GlobalVariable.memberId
-//def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : mtid[0]]))
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
+WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkContact')
 
-List <String> memberTypeId = GlobalVariable.memberId
 
-for (int i; i < memberTypeId.size(); i++) {
-    WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
-
-    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberGetIdGroup', [('id') : memberTypeId.get(i)]))
-	WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')
-}
+// Temborary solution Bulk update check
+//List <String> memberTypeId = GlobalVariable.memberId
+//
+//for (int i; i < memberTypeId.size(); i++) {
+//    WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
+//
+//    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/_MemberGetIdGroup', [('id') : memberTypeId.get(i)]))
+//	WS.verifyElementPropertyValue(responseGet, 'firstName', 'JohnFirst')
+//}

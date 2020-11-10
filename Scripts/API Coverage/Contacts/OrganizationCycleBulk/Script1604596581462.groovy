@@ -44,8 +44,8 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management 
 
 // Check Organization GET request by Id
 WebUI.comment('TEST CASE: Get organizations by Id')
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
-WS.verifyElementPropertyValue(responseGet, 'name[0]', name1)
+//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
+//WS.verifyElementPropertyValue(responseGet, 'name[0]', name1)
 
 // Delete 2 Orgs
 WebUI.comment('TEST CASE: Organization BULK delete')

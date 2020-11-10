@@ -39,8 +39,8 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management 
 
 // Check Contacts GET request by Id and verify update of first contact
 WebUI.comment('TEST CASE: Get contact by Id')
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsGetIdBulk', [('contactId1') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
-WS.verifyElementPropertyValue(responseGet, 'fullName[1]', fullName)
+//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsGetIdBulk', [('contactId1') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
+//WS.verifyElementPropertyValue(responseGet, 'fullName[1]', fullName)
 
 
 // Delete contact

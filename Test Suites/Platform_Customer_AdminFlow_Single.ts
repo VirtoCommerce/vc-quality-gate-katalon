@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_Customer_AdminFlow</name>
+   <name>Platform_Customer_AdminFlow_Single</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -11,18 +11,6 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8704074e-b819-445e-bd2c-2a0cfcc21ba4</testSuiteGuid>
-   <testCaseLink>
-      <guid>2bb63c84-5c9f-4c5b-808a-96d908f386a3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>11883f8e-a090-461b-8e48-090bf76a5a05</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
-   </testCaseLink>
    <testCaseLink>
       <guid>93729668-c893-4b08-949b-854cec218c85</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -56,7 +44,7 @@
    <testCaseLink>
       <guid>22aacbea-6968-4314-bf02-75d04fca00b0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -68,7 +56,7 @@
    <testCaseLink>
       <guid>ea4994f5-3e99-44da-bbb6-7f9a42df939e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>

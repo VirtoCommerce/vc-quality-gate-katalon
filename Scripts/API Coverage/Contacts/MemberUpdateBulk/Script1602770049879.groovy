@@ -20,8 +20,12 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 // Updated member buy BULK request
 WebUI.comment('TEST CASE: Member BULK update')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdateBulk', [('id1') : GlobalVariable.memberId[0], ('id2') : GlobalVariable.memberId[1]]))
+WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariable.memberType[1])
+
+
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdateBulk', [('id1') : GlobalVariable.memberId[0], ('memberType1') : GlobalVariable.memberType[1]]))
 
 // Check updated member
 //responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
 //WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')
+

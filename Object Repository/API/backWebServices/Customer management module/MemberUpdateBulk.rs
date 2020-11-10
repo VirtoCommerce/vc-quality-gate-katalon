@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;name\&quot;: \&quot;Qwe BulkUpd1\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n    \&quot;fullName\&quot;: \&quot;Qwe BulkUpd\&quot;,\n    //\&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n    \&quot;id\&quot;: \&quot;${id1}\&quot;,\n    \&quot;addresses\&quot;: [\n      {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n        \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n        \&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Upd region\&quot;,\n        \&quot;city\&quot;: \&quot;Upd city\&quot;,\n        \&quot;line1\&quot;: \&quot;Upd adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Upd adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;001122\&quot;,\n        \&quot;name\&quot;: \&quot;Qwesttttt\&quot;\n      }\n    ],\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG0\&quot;,\n      \&quot;TEST UG10\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;000000001\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test1@test.com\&quot;\n    ]\n  },\n  {\n    \&quot;name\&quot;: \&quot;Qwe BulkUpd2\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n    \&quot;fullName\&quot;: \&quot;Qwe BulkUpd\&quot;,\n    //\&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n    \&quot;id\&quot;: \&quot;${id2}\&quot;,\n    \&quot;addresses\&quot;: [\n      {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n        \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n        \&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Upd region\&quot;,\n        \&quot;city\&quot;: \&quot;Upd city\&quot;,\n        \&quot;line1\&quot;: \&quot;Upd adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Upd adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;001122\&quot;,\n        \&quot;name\&quot;: \&quot;Qwesssst\&quot;\n      }\n    ],\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG0\&quot;,\n      \&quot;TEST UG20\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;000000002\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test2@test.com\&quot;\n    ]\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;id\&quot;: \&quot;${id1}\&quot;,\n    //\&quot;id\&quot;: \&quot;${GlobalVariable.memberId[0]}\&quot;,\n    \&quot;name\&quot;: \&quot;Qwe BulkContact\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n    \&quot;fullName\&quot;: \&quot;Qwe BulkContact\&quot;,\n    //\&quot;memberType\&quot;: \&quot;\&quot;,\n    \&quot;memberType\&quot;: \&quot;${memberType1}\&quot;,\n    //\&quot;memberType\&quot;: \&quot;${GlobalVariable.memberType[0]}\&quot;,\n    \&quot;addresses\&quot;: [\n      {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n        \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n        \&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Upd region\&quot;,\n        \&quot;city\&quot;: \&quot;Upd city\&quot;,\n        \&quot;line1\&quot;: \&quot;Upd adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Upd adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;001122\&quot;,\n        \&quot;name\&quot;: \&quot;Qwesttttt\&quot;\n      }\n    ],\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG0\&quot;,\n      \&quot;TEST UG10\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;000000001\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test1@test.com\&quot;\n    ]\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,14 +42,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'0'</defaultValue>
       <description></description>
       <id>a2b03e0e-3b87-4d4e-901b-56472e21d7c6</id>
       <masked>false</masked>
       <name>id1</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'1'</defaultValue>
       <description></description>
       <id>08c2ac0d-50e2-4441-be3d-5666965d61a2</id>
       <masked>false</masked>
@@ -60,7 +60,14 @@
       <description></description>
       <id>1f85b36b-39fa-42c8-ac25-64f29bc0518e</id>
       <masked>false</masked>
-      <name>memberType</name>
+      <name>memberType1</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4f8c1e5c-2f6d-4c7b-8d7d-be60990534e5</id>
+      <masked>false</masked>
+      <name>memberType2</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -74,6 +81,7 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 204)

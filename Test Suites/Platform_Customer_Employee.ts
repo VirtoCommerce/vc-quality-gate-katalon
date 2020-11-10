@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>DRAFT.Platform_Customer_Employee</name>
+   <name>Platform_Customer_Employee</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -12,34 +12,16 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>330aee4f-b4e5-41eb-abcd-3aee3fcc5b6d</testSuiteGuid>
    <testCaseLink>
-      <guid>1147dbd6-e3e7-4aac-8289-fee16f042021</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a512b4bf-2905-4bad-b433-8a7610ea8286</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>96e158b3-af71-487a-a0d4-623e492bce10</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/OrganizationCreation</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>fe2975be-bdba-4186-81ec-09b386f4d83a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/EmployeesCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>30ec59a9-2755-4131-aee1-d6bbc73bf13d</guid>
+      <guid>8c82aae4-2627-447d-a4fc-6815f15fbf4c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3ed3379c-80c3-446c-ad25-ea48bd2148b8</guid>
@@ -52,5 +34,17 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/EmployeesUpdateBulk</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e0a306a7-a421-4a5a-96ae-1ae88546c35d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cf925b28-a89c-44a6-b9a4-c344eb96e3e8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberDeleteBulk</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

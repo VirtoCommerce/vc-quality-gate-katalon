@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create contact</description>
+   <description>Create contact cycle Bulk</description>
    <name>ContactCycleBulk</name>
    <tag></tag>
-   <comment>ContactId is: &quot; + GlobalVariable.contactId
-ContactId is: &quot; + GlobalVariable.contactId[0]</comment>
+   <comment>TEST CASE : Create BULK contact
+ContactId is: &quot; + GlobalVariable.contactId[0]
+ContactId is: &quot; + GlobalVariable.contactId
+TEST CASE : Update BULK contacts
+TEST CASE: Get contact by Id
+TEST CASE: Delete contacts</comment>
    <testCaseGuid>fdd66a19-d894-48b2-a6ad-c0a895abf93c</testCaseGuid>
 </TestCaseEntity>

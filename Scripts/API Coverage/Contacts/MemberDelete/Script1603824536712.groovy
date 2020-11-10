@@ -27,6 +27,10 @@ for (int i; i < memberId.size(); i++) {
 }
 
 
+// Re-index important to search items
+WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+
+
 // Search new contact. Count 0 in result - contact was deleted
 WebUI.comment("TEST CASE: Member search")
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch'))
