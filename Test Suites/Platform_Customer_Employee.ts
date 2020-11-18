@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>e0a306a7-a421-4a5a-96ae-1ae88546c35d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>

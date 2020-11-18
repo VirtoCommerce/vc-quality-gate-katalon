@@ -6,6 +6,7 @@
    <elementGuidId>4184fe62-3ccb-489f-9fbd-033492096e02</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
@@ -13,8 +14,12 @@
   &quot;charset&quot;: &quot;UTF-8&quot;,
   &quot;parameters&quot;: [
     {
-      &quot;name&quot;: &quot;&quot;,
-      &quot;value&quot;: &quot;&quot;
+      &quot;name&quot;: &quot;customer[user_name]&quot;,
+      &quot;value&quot;: &quot;qweuser&quot;
+    },
+    {
+      &quot;name&quot;: &quot;customer[password]&quot;,
+      &quot;value&quot;: &quot;Password1!&quot;
     }
   ]
 }</httpBodyContent>
@@ -26,14 +31,18 @@
       <type>Main</type>
       <value>application/x-www-form-urlencoded</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlFront}/en-US/account/login?customer[user_name]=kno&amp;customer[password]=Password1!</restUrl>
+   <restUrl>${GlobalVariable.urlFront}/en-US/account/login</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject

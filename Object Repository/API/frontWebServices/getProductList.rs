@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MemberDeleteBulk</name>
+   <name>getProductList</name>
    <tag></tag>
-   <elementGuidId>74c1e500-2cab-4a44-83d2-aa1158ac23ce</elementGuidId>
+   <elementGuidId>0c6aafaf-a4e3-4db8-b842-09017588436b</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;deepSearch\&quot;: true,\n  \&quot;keyword\&quot;: \&quot;${keyword}\&quot;,\n  \&quot;sort\&quot;: \&quot;memberType:desc;name:asc\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \n  \&quot;keyword\&quot;: \&quot;AutoDrink\&quot;,\n  \&quot;terms\&quot;: [\n    {\n      \&quot;name\&quot;: \&quot;AutoDrink\&quot;,\n      \&quot;value\&quot;: \&quot;\&quot;\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -25,14 +25,21 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>api_key</name>
+      <name>Authorization</name>
       <type>Main</type>
-      <value>${GlobalVariable.api_key}</value>
+      <value>${GlobalVariable.token}</value>
+   </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Cookie</name>
+      <type>Main</type>
+      <value>${GlobalVariable.cookiesFfc}</value>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members/delete</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlFront}/storefrontapi/hot/catalog</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,13 +48,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>9c2d4316-80e1-4d5c-be9b-1fd07411ac8b</id>
-      <masked>false</masked>
-      <name>keyword</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -59,11 +59,16 @@ import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
-
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
-</verificationScript>
+if (response.statusCode == 200){
+	KeywordUtil.logInfo(&quot;Get product list in catalog.&quot;
+		+ &quot; Response status: &quot; + response.statusCode)
+} else {
+	KeywordUtil.logInfo(&quot;Error: Get product list in catalog.&quot;
+		+ &quot; Response status: &quot; + response.statusCode
+		+ &quot;, Response body: &quot; + response.responseBodyContent)
+}
+
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AccountCreateUser</name>
+   <name>ResetPassword</name>
    <tag></tag>
-   <elementGuidId>02ded382-2731-4c2a-878c-e4bb6aac9738</elementGuidId>
+   <elementGuidId>0e6447fd-5315-4931-ac20-982a6b1efe42</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n    \&quot;memberId\&quot;: \&quot;${contactId}\&quot;,\n    \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n    \&quot;email\&quot;: \&quot;${email}\&quot;,\n    \&quot;password\&quot;: \&quot;${GlobalVariable.userPassword}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;,\n  \&quot;forcePasswordChangeOnNextSignIn\&quot;:false\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/create</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpassword</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,39 +42,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'Customer'</defaultValue>
+      <defaultValue>'qweqwe'</defaultValue>
       <description></description>
-      <id>7f1a7b63-82a7-4032-9bb7-fe9ec79c79be</id>
-      <masked>false</masked>
-      <name>userType</name>
-   </variables>
-   <variables>
-      <defaultValue>'qwer@qwer.qwe'</defaultValue>
-      <description></description>
-      <id>a3d703c1-361c-43e3-b208-a6256af06bdf</id>
-      <masked>false</masked>
-      <name>email</name>
-   </variables>
-   <variables>
-      <defaultValue>'AutoUser'</defaultValue>
-      <description></description>
-      <id>83cc8a71-dedb-422c-91bf-4fe75d94a932</id>
+      <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
    <variables>
-      <defaultValue>'0'</defaultValue>
+      <defaultValue>'1!Password'</defaultValue>
       <description></description>
-      <id>4ae1a995-80e2-4d39-a6f1-38336b971569</id>
+      <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
       <masked>false</masked>
-      <name>storeId</name>
-   </variables>
-   <variables>
-      <defaultValue>'0'</defaultValue>
-      <description></description>
-      <id>c0974235-1eef-4f16-a598-bc5505a4e1e3</id>
-      <masked>false</masked>
-      <name>contactId</name>
+      <name>newPassword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -83,13 +62,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
+JsonOutput.prettyPrint(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+WS.verifyElementPropertyValue(response, 'succeeded', true)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

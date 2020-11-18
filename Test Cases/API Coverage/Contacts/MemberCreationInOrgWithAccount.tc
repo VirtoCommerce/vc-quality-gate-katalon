@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MemberCreationInOrgWithAccount</name>
+   <tag></tag>
+   <comment>TEST CASE: Member creation
+TYPES IS : &quot; + memberType</comment>
+   <testCaseGuid>fe65e2e6-8d42-4360-ace3-9054eefab5a4</testCaseGuid>
+</TestCaseEntity>

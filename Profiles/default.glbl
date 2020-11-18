@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8088'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8082'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8108'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8102'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -106,12 +106,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>['Organization', 'Contact', 'Vendor', 'Employee']</initValue>
+      <name>memberType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>''</initValue>
       <name>memberId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'30de5c8c-bb5a-4072-ac60-70b36df1f08b'</initValue>
+      <description>Delele? 30de5c8c-bb5a-4072-ac60-70b36df1f08b</description>
+      <initValue>''</initValue>
       <name>contactId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

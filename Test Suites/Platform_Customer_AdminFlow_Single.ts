@@ -44,7 +44,7 @@
    <testCaseLink>
       <guid>22aacbea-6968-4314-bf02-75d04fca00b0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -56,7 +56,7 @@
    <testCaseLink>
       <guid>ea4994f5-3e99-44da-bbb6-7f9a42df939e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>
