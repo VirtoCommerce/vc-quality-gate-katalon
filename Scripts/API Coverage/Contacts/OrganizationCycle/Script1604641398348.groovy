@@ -52,5 +52,5 @@ WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandlin
 
 // Search deleted org. Count 0 in result - org was deleted
 WebUI.comment('TEST CASE: Organization search')
-responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
+responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
 WS.verifyElementPropertyValue(responseOrg, 'totalCount', 0)

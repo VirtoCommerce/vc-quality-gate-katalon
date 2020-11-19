@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create organization</description>
+   <description>Organization cycle test Bulk</description>
    <name>OrganizationCycle</name>
    <tag></tag>
    <comment>TEST CASE : Create organization
-Organization ID. Global: &quot; + GlobalVariable.organizationId
+Organization ID : &quot; + GlobalVariable.organizationId
 TEST CASE : Update organization
 TEST CASE : Get organization
 TEST CASE: Organization delete

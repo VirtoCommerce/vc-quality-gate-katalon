@@ -4,8 +4,10 @@
    <name>MemberCreationInOrgWithAccount</name>
    <tag></tag>
    <comment>TEST CASE: Org creation
-TYPE ID IS : &quot; + GlobalVariable.memberId
 TEST CASE: Contact creation
-TYPE ID IS : &quot; + GlobalVariable.contactId</comment>
+TEST CASE: Account user creation
+TEST CASE: Reset to new password
+TEST CASE: Delete user
+TEST CASE: Members BULK delete</comment>
    <testCaseGuid>fe65e2e6-8d42-4360-ace3-9054eefab5a4</testCaseGuid>
 </TestCaseEntity>

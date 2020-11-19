@@ -29,5 +29,5 @@ for (int i; i < memberType.size(); i++) {
 
     def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
     (GlobalVariable.memberId[i]) = memberJson.id 
-    WebUI.comment(memberType.get(i) + " ID IS : " + GlobalVariable.memberId)
+    WebUI.comment(memberType.get(i) + " ID is : " + GlobalVariable.memberId[i])
 }

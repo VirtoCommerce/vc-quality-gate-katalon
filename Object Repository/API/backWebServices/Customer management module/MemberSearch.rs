@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  //\&quot;responseGroup\&quot;: \&quot;None\&quot;,\n  //\&quot;searchPhrase\&quot;: \&quot;Bulk\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.firstName}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 20\n}&quot;,
+  &quot;text&quot;: &quot;{\n  //\&quot;responseGroup\&quot;: \&quot;None\&quot;,\n  //\&quot;searchPhrase\&quot;: \&quot;Qwe\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;${searchPhrase}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -47,6 +47,13 @@
       <id>72dbce37-d3d2-4134-a142-f5dd7be43f8c</id>
       <masked>false</masked>
       <name>memberId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>32519d71-1549-4c06-9115-3bf3b305ff7c</id>
+      <masked>false</masked>
+      <name>searchPhrase</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

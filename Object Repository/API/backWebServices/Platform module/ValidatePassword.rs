@@ -55,15 +55,17 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-JsonOutput.prettyPrint(response.responseBodyContent)
+def memberJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(memberJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+WS.verifyElementPropertyValue(response, 'succeeded', true)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_Customer_Contact</name>
+   <name>DRAFT.OrgContact</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,17 +10,11 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>f1950f0e-4465-4a28-b8cf-ca702122ff7f</testSuiteGuid>
+   <testSuiteGuid>36007699-128f-4b21-9213-ea3aff666a05</testSuiteGuid>
    <testCaseLink>
-      <guid>a3c843ac-fb0b-43b8-90bb-48a8a665e20f</guid>
+      <guid>424330bb-574d-4eec-88f9-bc8520223731</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCycle</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>17411abf-9e96-4928-afab-40e71610f661</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/ContactCycleBulk</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberCreationInOrgWithAccount</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -18,8 +18,8 @@ import groovy.json.JsonSlurper as JsonSlurper
 import groovyjarjarantlr.collections.List
 
 
-// Create 2 new organizations
-WebUI.comment('TEST CASE : Create BULK organization')
+
+WebUI.comment('TEST CASE : Create 2 new organizations BULK')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsCreateBulk'))
 
 
@@ -27,28 +27,25 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management 
 WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
-// Search new organizations and save Id's
-WebUI.comment('TEST CASE: Organization search')
-responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
+WebUI.comment('TEST CASE : Search new organizations and save Ids')
+responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
 def responseOrgJson = new JsonSlurper().parseText(responseOrg.getResponseBodyContent())
 orgId = responseOrgJson.results.id
 WebUI.comment('Organization ID : ' + orgId)
 WS.verifyElementPropertyValue(responseOrg, 'totalCount', 2)
 
 
-// Update Orgs
-WebUI.comment('TEST CASE : Update BULK organization')
+WebUI.comment('TEST CASE : Update organization BULK')
 name1 = 'Qwe OrgBulkUpd1'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsUpdateBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1], ('name1') : name1]))
 
 
-// Check Organization GET request by Id
-WebUI.comment('TEST CASE: Get organizations by Id')
+WebUI.comment('TEST CASE : Check Organization GET request by Id')
 //responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
 //WS.verifyElementPropertyValue(responseGet, 'name[0]', name1)
 
-// Delete 2 Orgs
-WebUI.comment('TEST CASE: Organization BULK delete')
+
+WebUI.comment('TEST CASE : Delete created organization BULK')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsDelete', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
 
 
@@ -56,7 +53,6 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management 
 WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
-// Search deleted orgs. Count 0 in result - orgs were deleted
-WebUI.comment('TEST CASE: Organization search')
-responseOrg1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
+WebUI.comment('TEST CASE : Search deleted orgs. Count 0 in result - orgs were deleted')
+responseOrg1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
 WS.verifyElementPropertyValue(responseOrg1, 'totalCount', 0)

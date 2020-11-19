@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create organization</description>
+   <description>Organization cycle test</description>
    <name>OrganizationCycleBulk</name>
    <tag></tag>
    <comment>TEST CASE : Create BULK organization

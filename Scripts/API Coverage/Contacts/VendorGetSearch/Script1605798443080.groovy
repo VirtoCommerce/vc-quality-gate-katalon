@@ -14,24 +14,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-
-WebUI.comment("TEST CASE: Member delete")
-
-// Delete member by Id from list
-List <String> memberId = GlobalVariable.memberId
-
-for (int i; i < memberId.size(); i++) {
-	WebUI.comment("MEMBER ID IS : " + memberId.get(i))
-	WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDelete', [('id') : memberId.get(i)]))
-}
+import groovy.json.JsonSlurper as JsonSlurper
 
 
-// Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.comment('Vendor ID : ' + GlobalVariable.memberId[2])
+
+WebUI.comment('TEST CASE : Vendor Get by Id 1 check')
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/DRAFT/VendorsGetId', [('id') : GlobalVariable.memberId[2]] ))
 
 
-// Search new contact. Count 0 in result - contact was deleted
-WebUI.comment("TEST CASE: Member search")
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch', [('searchPhrase') : GlobalVariable.firstName] ))
-WS.verifyElementPropertyValue(responseSearch, 'totalCount', 0)
+WebUI.comment('TEST CASE : Vendor Get by Id 2 check')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/VendorsGetIdsBulk', [('id') : GlobalVariable.memberId[2]] ))
+
+
+WebUI.comment('TEST CASE : Vendor seach')
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/DRAFT/VendorsSearch_', [('searchPhrase') : GlobalVariable.firstName] ))
