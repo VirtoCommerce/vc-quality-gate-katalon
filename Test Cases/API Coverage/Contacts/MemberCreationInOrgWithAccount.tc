@@ -3,7 +3,9 @@
    <description></description>
    <name>MemberCreationInOrgWithAccount</name>
    <tag></tag>
-   <comment>TEST CASE: Member creation
-TYPES IS : &quot; + memberType</comment>
+   <comment>TEST CASE: Org creation
+TYPE ID IS : &quot; + GlobalVariable.memberId
+TEST CASE: Contact creation
+TYPE ID IS : &quot; + GlobalVariable.contactId</comment>
    <testCaseGuid>fe65e2e6-8d42-4360-ace3-9054eefab5a4</testCaseGuid>
 </TestCaseEntity>

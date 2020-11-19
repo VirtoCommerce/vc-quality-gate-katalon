@@ -25,7 +25,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlFront}/en-US/account/login</restUrl>
+   <restUrl>${GlobalVariable.urlFront}/connect/token</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

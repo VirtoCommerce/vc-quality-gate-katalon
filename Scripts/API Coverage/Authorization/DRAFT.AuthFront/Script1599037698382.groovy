@@ -21,7 +21,8 @@ import groovy.json.JsonSlurper
 
 
 // STEP | Authorization request to get Token
-def request = findTestObject('API/frontWebServices/DRAFT.AuthFrontToken')
+//def request = findTestObject('API/frontWebServices/DRAFT.AuthFrontToken')
+def request = findTestObject('API/frontWebServices/getToken')
 
 List<UrlEncodedBodyParameter> body = new ArrayList<UrlEncodedBodyParameter>()
 body.add(new UrlEncodedBodyParameter("grant_type","password"))

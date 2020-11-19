@@ -27,10 +27,12 @@ WebUI.comment("TYPE ID IS : " + GlobalVariable.memberId)
 
 
 WebUI.comment("TEST CASE: Contact creation")
-def response2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', [('memberType') : GlobalVariable.memberType[1], ('organizations') : GlobalVariable.memberId[0]]))
-def memberJson2 = JsonOutput.prettyPrint(response2.getResponseBodyContent())
-GlobalVariable.contactId = memberJson2
-WebUI.comment("TYPE ID IS : " + GlobalVariable.contactId)
+println ('RESPONSE : ' + GlobalVariable.memberId[0])
+//def response2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', [('memberType') : GlobalVariable.memberType[1], ('organizations') : GlobalVariable.memberId[0]]))
+//def response2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', [('organizations') : GlobalVariable.memberId[0]]))
+//def memberJson2 = JsonOutput.prettyPrint(response2.getResponseBodyContent())
+//GlobalVariable.contactId = memberJson2
+//WebUI.comment("TYPE ID IS : " + GlobalVariable.contactId)
 
 
 //WebUI.comment("TEST CASE: Account user creation")

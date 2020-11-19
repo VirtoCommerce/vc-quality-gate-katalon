@@ -111,7 +111,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>[]</initValue>
       <name>memberId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
