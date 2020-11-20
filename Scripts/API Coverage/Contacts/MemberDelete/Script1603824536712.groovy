@@ -33,5 +33,5 @@ WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandlin
 
 // Search new contact. Count 0 in result - contact was deleted
 WebUI.comment("TEST CASE: Member search")
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch'))
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch', [('searchPhrase') : GlobalVariable.firstName] ))
 WS.verifyElementPropertyValue(responseSearch, 'totalCount', 0)

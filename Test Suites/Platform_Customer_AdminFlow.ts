@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_Customer_AdminFlow_Single</name>
+   <name>Platform_Customer_AdminFlow</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -11,6 +11,18 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8704074e-b819-445e-bd2c-2a0cfcc21ba4</testSuiteGuid>
+   <testCaseLink>
+      <guid>8c9de67d-bd95-4fce-ac8c-e8f1f7dd5cf4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8a5e0ed5-0de3-449a-a27e-fa1941038260</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
    <testCaseLink>
       <guid>93729668-c893-4b08-949b-854cec218c85</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -22,6 +34,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/DropIndex</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bad36605-8bdd-4915-ad2b-d028dcb4cb28</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/VendorGetSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>190ee105-9863-418a-8a01-4a52e02560bb</guid>
@@ -70,5 +88,41 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0432778b-6392-46c2-a579-82923d281e64</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberCreationBulk</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>fb353073-7702-4d01-97cb-585dcf3d63e6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/DropIndex</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>13d3bd04-d058-4535-a520-b23daf10b865</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/EmployeesUpdateBulk</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>17cb6e06-56f5-44c1-8a78-b6013313bf67</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/_MembersGitIdGroup</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c7600397-393a-4c09-a08a-32fc6b55637e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberDeleteBulk</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1153d7af-1de3-4ce2-be8d-7b90f92c38d9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberCreationInOrgWithAccount</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

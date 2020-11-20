@@ -49,7 +49,7 @@
       <name>memberType</name>
    </variables>
    <variables>
-      <defaultValue>'8d6f4013-4cb7-4290-b2f0-651d0688e1fd'</defaultValue>
+      <defaultValue>'448605d3-40a4-4aa8-87de-3caf97feee85'</defaultValue>
       <description></description>
       <id>145bccc0-f440-4468-bd8b-93166c761028</id>
       <masked>false</masked>

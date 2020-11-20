@@ -19,7 +19,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 WebUI.comment('TEST CASE: Organization search')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsSearch', [('searchPhrase') : GlobalVariable.firstName] ))
 
 
 // STEP | Parse request and verify with  GlobalVariable

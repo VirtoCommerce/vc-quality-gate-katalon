@@ -18,7 +18,10 @@ import internal.GlobalVariable as GlobalVariable
 //Create a new User using GlobalVariable.memberId with random email
 
 Random rnd = new Random()
+
 // DEBUG CODE | Create random usernames
 //GlobalVariable.userName = GlobalVariable.userName+rnd.nextInt(20)
-//println("TEST : " + GlobalVariable.userName)
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateUser', [('email') : String.valueOf(rnd), ('userName') : GlobalVariable.userName]))
+//println("USER : " + GlobalVariable.userName)
+
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateUser', [('email') : rnd.nextInt(100)+'@email.com', ('userName') : GlobalVariable.userName, ('storeId') : GlobalVariable.storeId, ('contactId') : GlobalVariable.contactId]))
+//WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateUser', [('email') : rnd.next(100)+'@email.com', ('userName') : GlobalVariable.userName]))
