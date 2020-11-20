@@ -18,5 +18,5 @@ import internal.GlobalVariable as GlobalVariable
 //STEP | Get cookies and save
 Map headerResponse = response.getHeaderFields()
 List cookies = headerResponse["Set-Cookie"]
-GlobalVariable.cookie = cookies
-println("Cookie : " + GlobalVariable.cookie)
+GlobalVariable.cookies = cookies
+println("Cookie : " + GlobalVariable.cookies)

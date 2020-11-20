@@ -14,7 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.webui.driver.DriverFactory
+import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
+import org.openqa.selenium.WebDriver as WebDriver
+import org.openqa.selenium.Cookie as Cookie
 
 WebUI.openBrowser(GlobalVariable.urlFront+'/en-US/account/login')
 
@@ -44,8 +46,30 @@ WebUI.click(findTestObject('UI-Electronics/SignInPage/SignInSubmitButton'))
 
 driver = DriverFactory.getWebDriver()
 //x = driver.manage().getCookies() // all cookies
-x = driver.manage().getCookieNamed("cookie") // part of cookies
-println('COOKIE : ' + x )
-WebUI.closeBrowser()
+//x = driver.manage().getCookieNamed("cookie") // part of cookies
+//println('COOKIE : ' + x )
 
+
+String cookieString = ''
+// get all the cookies
+Set<Cookie> cookieCollection = driver.manage().getCookies()
+println(cookieCollection)
+
+
+// a list of the cookies we want to use in our API calls later (these will get copied) ** must match EXACTLY
+def interestingCookies = ['ASP.NETSession', '.AspNetCookies']
+// loop through each cookie and append COOKIENAME=COOKIEVALUE; to the temp variable
+for (Cookie currentCookie : cookieCollection) {
+	if (interestingCookies.contains(currentCookie.getName())) {
+		cookieString += (((currentCookie.getName() + '=') + currentCookie.getValue()) + '; ')
+	}
+}
+// print the cookies for debugging
+println(cookieString)
+// set the cookies to our global variable. This is the most important bit!
+GlobalVariable.cookies = cookieString
+
+
+// done! close the browser
+WebUI.closeBrowser()
 

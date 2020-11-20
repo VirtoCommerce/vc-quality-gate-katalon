@@ -172,7 +172,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>cookie</name>
+      <name>cookies</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
