@@ -18,10 +18,10 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 // Create new Contact and save Id
 WebUI.comment('TEST CASE : Create employee')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/EmployeesCreate'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Employees/EmployeesCreate'))
 
 
 // STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 GlobalVariable.employeeId = responseJson.id
-WebUI.comment("ID IS : " + GlobalVariable.employeeId)
+WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)

@@ -19,7 +19,7 @@ import groovy.json.JsonSlurper
 
 
 //STEP | Create contact
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreate'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsCreate'))
 
 //STEP | Get Id of created contact
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())

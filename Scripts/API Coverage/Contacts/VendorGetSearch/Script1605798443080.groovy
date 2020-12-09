@@ -20,12 +20,12 @@ import groovy.json.JsonSlurper as JsonSlurper
 WebUI.comment('Vendor ID : ' + GlobalVariable.memberId[2])
 
 WebUI.comment('TEST CASE : Vendor Get by Id 1 check')
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/DRAFT/VendorsGetId', [('id') : GlobalVariable.memberId[2]] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Vendors/VendorsGetId', [('id') : GlobalVariable.memberId[2]] ))
 
 
-WebUI.comment('TEST CASE : Vendor Get by Id 2 check')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/VendorsGetIdsBulk', [('id') : GlobalVariable.memberId[2]] ))
+WebUI.comment('TEST CASE : Vendor Get by Id BULK 2 check')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Vendors/VendorsGetIdsBulk', [('id') : GlobalVariable.memberId[2]] ))
 
 
 WebUI.comment('TEST CASE : Vendor seach')
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/DRAFT/VendorsSearch_', [('searchPhrase') : GlobalVariable.firstName] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Vendors/VendorsSearch', [('searchPhrase') : GlobalVariable.firstName] ))

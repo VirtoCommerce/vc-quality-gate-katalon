@@ -14,14 +14,14 @@
    <testCaseLink>
       <guid>8889b802-b6b0-4823-b7e4-7f5e969210ee</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>78159426-9d65-4216-b1d3-45f7c9aa74fa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a3c843ac-fb0b-43b8-90bb-48a8a665e20f</guid>
@@ -64,6 +64,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/EmployeesUpdateBulk</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2e34aed5-f77a-4e3d-9f6b-14fbfb161843</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c08a80cb-1084-42af-a4d5-809d77dbb379</guid>

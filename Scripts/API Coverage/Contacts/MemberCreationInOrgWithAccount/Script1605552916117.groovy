@@ -25,32 +25,32 @@ import groovy.json.JsonOutput
 
 
 WebUI.comment("TEST CASE : Create new organization")
-def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', [('memberType') : GlobalVariable.memberType[0]] ))
+def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberCreate', [('memberType') : GlobalVariable.memberType[0]] ))
 def memberJson = new JsonSlurper().parseText(responseMemberCreate.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id
 
 
 WebUI.comment("TEST CASE : Create contact in the organization")
-def responseMemberCreateInOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreateInOrg', [('memberType') : GlobalVariable.memberType[1], ('orgId') : GlobalVariable.memberId]))
+def responseMemberCreateInOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberCreateInOrg', [('memberType') : GlobalVariable.memberType[1], ('orgId') : GlobalVariable.memberId]))
 def memberJson2 = new JsonSlurper().parseText(responseMemberCreateInOrg.getResponseBodyContent())
 GlobalVariable.contactId = memberJson2.id
 
 
 WebUI.comment('TEST CASE : Check Contact in Org')
-responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : GlobalVariable.contactId]))
+responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : GlobalVariable.contactId]))
 WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', GlobalVariable.memberId)
 
 
 WebUI.comment('TEST CASE : Remove Org and Contact relation')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsUpdate', [('contactId') : GlobalVariable.contactId, ('fullName') : GlobalVariable.contactName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsUpdate', [('contactId') : GlobalVariable.contactId, ('fullName') : GlobalVariable.contactName]))
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE: Check Contact in Org')
-responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberGetId', [('id') : GlobalVariable.contactId]))
+responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : GlobalVariable.contactId]))
 WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', null)
 
 
@@ -70,13 +70,13 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/Platform module/Dele
 
 
 WebUI.comment(" TEST CASE : Delete all created members")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDeleteBulk', [('keyword') : GlobalVariable.firstName] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDeleteBulk', [('keyword') : GlobalVariable.firstName] ))
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE : Search members. Count 0 in result - contact was deleted')
-responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
+responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
 WS.verifyElementPropertyValue(responseContactsSearch, 'totalCount', 0)

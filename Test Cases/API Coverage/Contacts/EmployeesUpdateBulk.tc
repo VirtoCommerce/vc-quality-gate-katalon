@@ -3,6 +3,7 @@
    <description></description>
    <name>EmployeesUpdateBulk</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE : Update BULK employee
+Verify if full name after sending request is correct or not</comment>
    <testCaseGuid>925f9cec-c322-42fb-9856-cd5b4f66e201</testCaseGuid>
 </TestCaseEntity>

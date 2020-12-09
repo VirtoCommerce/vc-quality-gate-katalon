@@ -20,19 +20,19 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
 // Create new Contact and save Id
 WebUI.comment('TEST CASE : Create contact')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsCreate'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsCreate'))
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 GlobalVariable.contactId = responseJson.id
 WebUI.comment('ContactId is: ' + GlobalVariable.contactId)
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 // Search new contact
 WebUI.comment('TEST CASE: Contact search')
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsSearch'))
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsSearch'))
 WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
 WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
 
@@ -40,32 +40,32 @@ WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
 // Update contact
 WebUI.comment('TEST CASE : Update contact')
 fullName = 'Qwe ContactUpdated'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsUpdate', [('contactId') : GlobalVariable.contactId, ('fullName') : fullName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsUpdate', [('contactId') : GlobalVariable.contactId, ('fullName') : fullName]))
 
 
 // Add address to contact
 WebUI.comment('TEST CASE : Update address')
 name = 'QwestUpdated'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/AddressesUpdate', [('contactId') : GlobalVariable.contactId, ('name') : name]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/AddressesUpdate', [('contactId') : GlobalVariable.contactId, ('name') : name]))
 
 
 // Check Contact GET request by Id and verify updates
 WebUI.comment('TEST CASE: Get contact by Id')
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsGetId'))
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsGetId'))
 WS.verifyElementPropertyValue(responseGet, 'fullName', fullName)
 WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 
 
 // Delete contact
 WebUI.comment('TEST CASE: Delete contact')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsDelete', [('contactId') : GlobalVariable.contactId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsDelete', [('contactId') : GlobalVariable.contactId]))
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 // Search new contact. Count 0 in result - contact was deleted
 WebUI.comment('TEST CASE: Contact search')
-responseSearch1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/ContactsSearch', [('searchPhrase') : GlobalVariable.firstName] ))
+responseSearch1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsSearch', [('searchPhrase') : GlobalVariable.firstName] ))
 WS.verifyElementPropertyValue(responseSearch1, 'totalCount', 0)

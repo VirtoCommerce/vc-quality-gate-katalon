@@ -14,14 +14,14 @@
    <testCaseLink>
       <guid>8c9de67d-bd95-4fce-ac8c-e8f1f7dd5cf4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/AuthBackToken</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8a5e0ed5-0de3-449a-a27e-fa1941038260</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Authorization/ApiKeySet</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>93729668-c893-4b08-949b-854cec218c85</guid>
@@ -33,7 +33,7 @@
       <guid>487edca4-8392-4c5e-bfff-06b881361470</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/DropIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bad36605-8bdd-4915-ad2b-d028dcb4cb28</guid>
@@ -45,7 +45,7 @@
       <guid>190ee105-9863-418a-8a01-4a52e02560bb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/_MemberGetAllInOrganizations</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberGetAllInOrganizations</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>44eee1cb-6b57-4140-b195-24c6f951ed78</guid>
@@ -81,7 +81,7 @@
       <guid>21a7aa77-bdf6-45b1-88aa-91698b243ec7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/__MemberGitId</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberGitId</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e322ca74-2dc0-4604-bf63-c5fed473276d</guid>
@@ -99,19 +99,19 @@
       <guid>fb353073-7702-4d01-97cb-585dcf3d63e6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/DropIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>13d3bd04-d058-4535-a520-b23daf10b865</guid>
+      <guid>15514ee3-136d-4233-8c5d-e708cc810c89</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/EmployeesUpdateBulk</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberUpdateBulk</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>17cb6e06-56f5-44c1-8a78-b6013313bf67</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/_MembersGitIdGroup</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Contacts/MembersGitIdGroup</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c7600397-393a-4c09-a08a-32fc6b55637e</guid>

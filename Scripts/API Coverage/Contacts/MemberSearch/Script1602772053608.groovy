@@ -19,6 +19,6 @@ import groovy.json.JsonSlurper
 
 // Search new members. Created count = 4 and check firstName in results
 WebUI.comment("TEST CASE: Member search")
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberSearch', [('searchPhrase') : GlobalVariable.firstName] ))
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', [('searchPhrase') : GlobalVariable.firstName] ))
 WS.verifyElementPropertyValue(responseSearch, 'totalCount', 4)
 WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
