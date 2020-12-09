@@ -3,12 +3,12 @@
    <description>Organization cycle test</description>
    <name>OrganizationCycleBulk</name>
    <tag></tag>
-   <comment>TEST CASE : Create BULK organization
-TEST CASE: Organization search
+   <comment>TEST CASE : Create 2 new organizations BULK
+TEST CASE : Search new organizations and save Ids
 Organization ID : &quot; + orgId
-TEST CASE : Update BULK organization
-TEST CASE: Get organizations by Id
-TEST CASE: Organization BULK delete
-TEST CASE: Organization search</comment>
+TEST CASE : Update organization BULK
+TEST CASE : Check Organization GET request by Id
+TEST CASE : Delete created organization BULK
+TEST CASE : Search deleted orgs. Count 0 in result - orgs were deleted</comment>
    <testCaseGuid>24adbbc6-4a9a-439d-b4c6-18740ae576ca</testCaseGuid>
 </TestCaseEntity>

@@ -19,7 +19,9 @@ import groovy.json.JsonSlurper as JsonSlurper
 import groovy.json.JsonOutput as JsonOutput
 
 WebUI.comment('TEST CASE : Update BULK employee')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/EmployeesUpdateBulk_', [('id') : GlobalVariable.employeeId]))
+
+WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Employees/EmployeesUpdateBulk', [('id') : GlobalVariable.employeeId]))
 
 //// STEP | Print json result
 //def pretty = JsonOutput.prettyPrint(response.getResponseBodyContent())
@@ -27,4 +29,5 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer 
 
 //STEP 2 Verify name
 WebUI.comment('Verify if full name after sending request is correct or not')
-WS.verifyElementPropertyValue(response, '[0].fullName', 'Qwe JohnUpd')
+WS.verifyElementPropertyValue(response, '[0].id', GlobalVariable.employeeId)
+//WS.verifyElementPropertyValue(response, '[0].fullName', 'Qwe JohnUpd')

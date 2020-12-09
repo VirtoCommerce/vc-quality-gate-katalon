@@ -21,7 +21,7 @@
       <guid>bb6ea9ee-9a1b-4d08-bd9e-ba9b3b5c799c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromHeader</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/SignIn_FromHeader</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -39,18 +39,18 @@
       <guid>37ed623a-4df6-4a91-af1c-b663c0d98d57</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.Quote/AddToQuote</testCaseId>
+      <testCaseId>Test Cases/UI-Quote/AddToQuote</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8d4c7da2-f9e2-4444-82af-64794bc1bb87</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.Quote/QuoteProcess</testCaseId>
+      <testCaseId>Test Cases/UI-Quote/QuoteProcess</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e95348b2-07e8-4caf-b0b8-e74e0d2049cf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.Quote/VerifiElementAfterQuoteProcessUser</testCaseId>
+      <testCaseId>Test Cases/UI-Quote/VerifiElementAfterQuoteProcessUser</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
