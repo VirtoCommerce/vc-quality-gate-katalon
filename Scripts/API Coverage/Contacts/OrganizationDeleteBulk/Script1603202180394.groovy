@@ -16,7 +16,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-KeywordUtil.logInfo('Organization delete BULK test case')
+WebUI.comment('TEST CASE: Organization BULK delete')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsDelete'))
-
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsDelete', [('orgId1') : GlobalVariable.organizationId]))

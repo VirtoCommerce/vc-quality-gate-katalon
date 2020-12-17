@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8083'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8082'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8103'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8102'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QweJohn'</initValue>
+      <initValue>'Qwe John'</initValue>
       <name>contactName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -96,27 +96,32 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'154dbeaf-ba9b-40c9-a2bd-df9b4b07e1de'</initValue>
       <name>organizationId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'QweOrganization'</initValue>
+      <initValue>'Qwe Organization'</initValue>
       <name>organizationName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
-      <name>memberId</name>
+      <initValue>['Organization', 'Contact', 'Vendor', 'Employee']</initValue>
+      <name>memberType</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>['', '', '7549d2ad-d3dd-4922-b0ad-2e17d4245148', '']</initValue>
+      <name>memberId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Delele? 30de5c8c-bb5a-4072-ac60-70b36df1f08b</description>
       <initValue>''</initValue>
       <name>contactId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'f493e39d-370e-45a7-88d6-273cb9843898'</initValue>
       <name>employeeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -140,7 +145,7 @@
       <name>categoryName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>DON'T DELETE THIS ID</description>
+      <description>DON'T DELETE THIS ID - Using in Order E2E test</description>
       <initValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</initValue>
       <name>productId</name>
    </GlobalVariableEntity>
@@ -167,7 +172,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>cookie</name>
+      <name>cookies</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

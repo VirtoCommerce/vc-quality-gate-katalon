@@ -16,5 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-WebUI.comment("TEST CASE: Member search ORGANIZATIONS test case")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberOrganizationsGet'))
+
+// Get list member-organization | Verify created org by assertThat "firstName"
+WebUI.comment("TEST CASE: Member search ORGANIZATIONS")
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberOrganizationsGet'))

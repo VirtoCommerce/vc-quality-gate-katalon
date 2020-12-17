@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8086'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8084'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8106'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8104'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -43,15 +43,5 @@
       <description></description>
       <initValue>'QweMenuLink'</initValue>
       <name>menuName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>['Vendor', 'Employee', 'Organization', 'Contact']</initValue>
-      <name>memberType</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>['6f1bba8d-27a6-4c6d-9efc-7c9c7ebc9d99', 'f6094b87-2903-4750-a667-dde288be20ea', '713378cb-087c-4cca-b424-d81f9e310eb4', 'baa95026-47d5-4094-b132-4d9aa9dc67af']</initValue>
-      <name>memberId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

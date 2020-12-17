@@ -15,13 +15,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-KeywordUtil.logInfo('Create employee')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/EmployeesCreate'))
+// Create new Contact and save Id
+WebUI.comment('TEST CASE : Create employee')
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Employees/EmployeesCreate'))
 
 
 // STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-(GlobalVariable.employeeId) = responseJson.id
-KeywordUtil.logInfo(GlobalVariable.employeeId)
+GlobalVariable.employeeId = responseJson.id
+WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)

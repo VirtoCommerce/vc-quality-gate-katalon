@@ -16,6 +16,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+
+// Delete all created members 
 WebUI.comment("TEST CASE: Members BULK delete")
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberDeleteBulk'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDeleteBulk', [('keyword') : GlobalVariable.firstName] ))

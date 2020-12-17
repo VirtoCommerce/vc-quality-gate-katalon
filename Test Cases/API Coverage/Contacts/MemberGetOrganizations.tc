@@ -3,6 +3,6 @@
    <description></description>
    <name>MemberGetOrganizations</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE: Member search ORGANIZATIONS</comment>
    <testCaseGuid>72076e0d-4051-4e5e-98c9-ee444774f7e1</testCaseGuid>
 </TestCaseEntity>

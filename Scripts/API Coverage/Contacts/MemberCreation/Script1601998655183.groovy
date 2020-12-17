@@ -25,9 +25,9 @@ WebUI.comment("TYPES IS : " + memberType)
 for (int i; i < memberType.size(); i++) {
     WebUI.comment('Create user type ' + memberType.get(i))
 
-    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreate', [('memberType') : memberType.get(i)]))
+    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberCreate', [('memberType') : memberType.get(i)]))
 
     def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
     (GlobalVariable.memberId[i]) = memberJson.id 
-    WebUI.comment("TYPE ID IS : " + GlobalVariable.memberId)
+    WebUI.comment(memberType.get(i) + " ID is : " + GlobalVariable.memberId[i])
 }

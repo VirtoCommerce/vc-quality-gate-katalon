@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>OrganizationGetIdBulk</name>
+   <tag></tag>
+   <comment>TEST CASE: Get organizations by Id
+Organization Name: &quot; + responseJson.name[0]
+Organization NameD. Global: &quot; + GlobalVariable.organizationName</comment>
+   <testCaseGuid>28f9c533-d03b-4c75-94fc-1f63ecb26472</testCaseGuid>
+</TestCaseEntity>

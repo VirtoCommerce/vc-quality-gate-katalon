@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Check request GET for &quot;b2b test organization&quot;</description>
    <name>MemberGetAllInOrganizations</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE: Get member in organization</comment>
    <testCaseGuid>c690f2fc-3fa2-46fc-917d-03dfa40ab14b</testCaseGuid>
 </TestCaseEntity>

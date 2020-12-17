@@ -21,7 +21,7 @@
       <guid>3b254265-06e9-43c3-898a-3b7798abf398</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromHeader</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/SignIn_FromHeader</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -39,31 +39,31 @@
       <guid>585baa08-b7d6-4cca-a1f8-ad95507d668c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/Logout_FromHeader</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/Logout_FromHeader</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4fef82b1-1a38-4bc1-8f2b-6b6d651ee9f3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/AddToCart</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/AddToCart</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6ad2b7a5-d2bf-44be-ac8b-846cbab7b506</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/CouponeAdd</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/CouponeAdd</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f240af21-7249-46cc-936a-08c8882c082b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/CouponeRemove</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/CouponeRemove</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8bbbf90b-b85f-48b6-a72d-68e7a2ed6ca1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/SignIn_FromCart</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/SignIn_FromCart</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -81,24 +81,24 @@
       <guid>ea5340ac-ba74-4653-949f-cc08d8cb3e36</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/CartProcessAddress</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/CartProcessAddress</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7d382bdb-d32d-42ed-9885-f02b4413ae1a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/CartProcessShipment</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/CartProcessShipment</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9e2e0f27-7d0b-42bc-be3c-1576526011ea</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/CartProcessPayment</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/CartProcessPayment</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d8fd7592-7437-4581-acc9-bb16d5b72be2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/xApi.OrderCart/VerifyOrder_SignIn</testCaseId>
+      <testCaseId>Test Cases/UI-OrderCart/VerifyOrder_SignIn</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

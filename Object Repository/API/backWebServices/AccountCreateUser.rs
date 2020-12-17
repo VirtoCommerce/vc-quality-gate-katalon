@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${GlobalVariable.storeId}\&quot;,\n    \&quot;memberId\&quot;: \&quot;${GlobalVariable.contactId}\&quot;,\n    \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n    \&quot;email\&quot;: \&quot;${email}\&quot;,\n    \&quot;password\&quot;: \&quot;${GlobalVariable.userPassword}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n    \&quot;memberId\&quot;: \&quot;${contactId}\&quot;,\n    \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n    \&quot;email\&quot;: \&quot;${email}\&quot;,\n    \&quot;password\&quot;: \&quot;${GlobalVariable.userPassword}\&quot;,\n    \&quot;roles\&quot;: [\n    {\n      \&quot;name\&quot;:\&quot;Use api\&quot;,\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -56,11 +56,25 @@
       <name>email</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'AutoUser'</defaultValue>
       <description></description>
       <id>83cc8a71-dedb-422c-91bf-4fe75d94a932</id>
       <masked>false</masked>
       <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4ae1a995-80e2-4d39-a6f1-38336b971569</id>
+      <masked>false</masked>
+      <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c0974235-1eef-4f16-a598-bc5505a4e1e3</id>
+      <masked>false</masked>
+      <name>contactId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -70,11 +84,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
 import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
+def memberJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(memberJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
