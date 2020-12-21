@@ -44,5 +44,4 @@ settings/
 settings/internal/com.kms.katalon.integration.analytics.properties
 settings/internal/com.kms.katalon.integration.jira.properties
 settings/internal/com.kms.katalon.testcase.properties
-
 settings/internal/com.kms.katalon.composer.testcase.properties
