@@ -179,4 +179,14 @@
       <initValue>''</initValue>
       <name>ffcId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Default culture name for GraphQL requests</description>
+      <initValue>'en-Us'</initValue>
+      <name>gql_cultureName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Default currency code for GraphQL requests</description>
+      <initValue>'USD'</initValue>
+      <name>gql_currencyCode</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
