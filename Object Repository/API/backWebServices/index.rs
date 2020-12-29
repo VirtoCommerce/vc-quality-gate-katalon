@@ -6,11 +6,10 @@
    <elementGuidId>c21cda3a-0e76-41df-9e2d-bbc25c8c3c08</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;documentType\&quot;: \&quot;Product\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Member\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Category\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    }\n]&quot;,
+  &quot;text&quot;: &quot;[\n    {\n        \&quot;documentType\&quot;: \&quot;Product\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Member\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Category\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,7 +28,6 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/search/indexes/index</restUrl>
@@ -39,8 +37,6 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>-1</socketTimeout>
-   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'Product'</defaultValue>
       <description></description>
