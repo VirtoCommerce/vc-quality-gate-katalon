@@ -5,6 +5,7 @@ import internal.GlobalVariable as Globals
 
 WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/indexWithoutDeleting'))
 
-WebUI.comment('Waiting for drop index 3 sec')
-
-WS.delay(Globals.indexDelay)
+// Delay to prevent getting 404 from SearchModule
+def delay = Globals.indexDelay
+WebUI.comment('Waiting for build index ${delay} sec')
+WS.delay(delay)
