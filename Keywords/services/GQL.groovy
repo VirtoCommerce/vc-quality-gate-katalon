@@ -40,7 +40,6 @@ public class GQL {
 				.post(body)
 				.build()
 		response = client.newCall(request).execute()
-		return response
 	}
 
 	/**
@@ -54,13 +53,11 @@ public class GQL {
 
 	/**
 	 * Check if JSON response of GraphQL request contains proper structure.
-	 * Use after sending request.
+	 * Use after sending request. !!Caution - do not verify twice on the same request. 
 	 */
 	@Keyword
 	def verifyPayloadContainsData(){
 		def responseText = response.body().string()
-		println "Responce: "
-		println responseText
 		JsonSlurper parser = new JsonSlurper()
 		def payload = parser.parseText(responseText)
 		assert payload.data != null
