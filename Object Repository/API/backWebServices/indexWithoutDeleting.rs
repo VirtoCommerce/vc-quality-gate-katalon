@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>index</name>
+   <name>indexWithoutDeleting</name>
    <tag></tag>
-   <elementGuidId>c21cda3a-0e76-41df-9e2d-bbc25c8c3c08</elementGuidId>
+   <elementGuidId>d6809cad-e4b9-47e1-93d9-ec520e2b4fe4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;documentType\&quot;: \&quot;Product\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Member\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Category\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    }\n]&quot;,
+  &quot;text&quot;: &quot;[\n    {\n        \&quot;documentType\&quot;: \&quot;Product\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Member\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Category\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

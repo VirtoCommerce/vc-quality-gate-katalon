@@ -189,4 +189,9 @@
       <initValue>'USD'</initValue>
       <name>gql_currencyCode</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Minimum delay for preventing 404 error from search module</description>
+      <initValue>5</initValue>
+      <name>indexDelay</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

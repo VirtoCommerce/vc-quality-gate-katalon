@@ -6,11 +6,6 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://localhost:10645/graphql'</initValue>
-      <name>graphQlUrl</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'http://localhost:10645'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
