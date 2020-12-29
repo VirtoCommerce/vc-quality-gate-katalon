@@ -1,7 +1,7 @@
 package services
 import com.kms.katalon.core.annotation.Keyword
 import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable as Globals
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -19,8 +19,9 @@ public class GQL {
 	/**
 	 * Default constructor.
 	 */
-	public GQL(String url){
-		this.url = url
+	public GQL(){
+		def platformUrl = Globals.urlBack
+		this.url = platformUrl.substring(0, platformUrl.length() - (platformUrl.endsWith("/") ? 1 : 0)) + '/graphql'
 	}
 
 	/**
@@ -58,6 +59,7 @@ public class GQL {
 	@Keyword
 	def verifyPayloadContainsData(){
 		def responseText = response.body().string()
+		println "Responce: "
 		println responseText
 		JsonSlurper parser = new JsonSlurper()
 		def payload = parser.parseText(responseText)

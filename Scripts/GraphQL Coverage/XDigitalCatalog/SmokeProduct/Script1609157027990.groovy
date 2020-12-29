@@ -1,6 +1,7 @@
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable as Globals
 import services.GQL as GQL
 
-GQL gql = new GQL(GlovalVariable.urlBack)
-def response = gql.sendRequest("{\"query\":{product(id: \"${GlobalVariable.productId}\", storeId: \"${GlobalVariable.storeId}\", cultureName: \"${GlobalVariable.gql_cultureName}\", currencyCode: \"${GlobalVariable.gql_currencyCode}\"){id}}")
+GQL gql = new GQL()
+def query = "{\"query\":\"{ product(id: \\\"${Globals.productId}\\\", storeId: \\\"${Globals.storeId}\\\", cultureName: \\\"${Globals.gql_cultureName}\\\", currencyCode: \\\"${Globals.gql_currencyCode}\\\") { id }}\"}"
+def response = gql.sendRequest(query)
 gql.verifyPayloadContainsData()

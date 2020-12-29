@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Default description</description>
+   <description>Check if GraphQL server response for simple request properly.</description>
    <name>SmokeProduct</name>
    <tag></tag>
    <comment></comment>
