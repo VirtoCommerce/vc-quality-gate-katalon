@@ -191,7 +191,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Minimum delay for preventing 404 error from search module</description>
-      <initValue>5</initValue>
+      <initValue>10</initValue>
       <name>indexDelay</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -18,12 +18,6 @@
       <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9f88b30d-f368-4b1d-8783-25a5dd5b066f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>5cb32558-a190-45ed-a7e4-8fa4142d6a10</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -40,5 +34,29 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/SmokeProduct</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>fb7bfe2e-eb86-4339-93ca-a137aa4247cb</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/Products_Sort_ASC</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a37e88d8-9737-4290-a7f8-63b3836e98a9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/Products_Sort_DESC</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ff1796cb-c85b-4781-b670-b48bdd19ff2e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/Products_Sort_Scoring</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4f186a37-216d-4f1e-b747-a45e6d3e6135</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/Products_Sort_Default</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
