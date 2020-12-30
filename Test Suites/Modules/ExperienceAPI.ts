@@ -47,4 +47,16 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/Products_Sort_DESC</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>ff1796cb-c85b-4781-b670-b48bdd19ff2e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/Products_Sort_Scoring</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4f186a37-216d-4f1e-b747-a45e6d3e6135</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/GraphQL Coverage/XDigitalCatalog/Products_Sort_Default</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
