@@ -21,6 +21,8 @@ WebUI.comment('TEST CASE: Get background job status')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Platform module/BackgroundJobStatus'))
 
+WS.verifyElementPropertyValue(response, 'id', "1")
+WS.verifyElementPropertyValue(response, 'completed', true)
 
 
 
