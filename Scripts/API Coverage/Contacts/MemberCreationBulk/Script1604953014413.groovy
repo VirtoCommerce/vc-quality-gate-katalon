@@ -21,7 +21,7 @@ WebUI.comment("TEST CASE: Members BULK Create")
 
 //WebUI.comment("MEMBER ORG ID IS : " + GlobalVariable.memberType[0])
 
-responseBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberCreateBulk'))
+responseBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberCreateBulk'))
 
 def memberJson = new JsonSlurper().parseText(responseBulk.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id

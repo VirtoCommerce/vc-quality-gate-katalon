@@ -18,7 +18,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Get organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsGetId', [('orgId') : GlobalVariable.organizationId]))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsGetId', [('orgId') : GlobalVariable.organizationId]))
 
 // STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())

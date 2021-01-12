@@ -17,4 +17,4 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 WebUI.comment('TEST CASE : Update organization')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsUpdate', [('id') : GlobalVariable.organizationId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsUpdate', [('id') : GlobalVariable.organizationId]))

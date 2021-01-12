@@ -20,7 +20,7 @@ WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:],
 WebUI.waitForPageLoad(2)
 
 //WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.userName, ('password') : GlobalVariable.userPassword],    FailureHandling.OPTIONAL)
-WebUI.callTestCase(findTestCase('xApi.OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('UI-OrderCart/SignIn_FromHeader'), [:], FailureHandling.STOP_ON_FAILURE)
 
 WebUI.click(findTestObject('UI-Electronics/Header/HeaderLogoutButton'))
 

@@ -19,4 +19,4 @@ import groovy.json.JsonSlurper
 
 // Get list member-organization | Verify created org by assertThat "firstName"
 WebUI.comment("TEST CASE: Member search ORGANIZATIONS")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberOrganizationsGet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberOrganizationsGet'))

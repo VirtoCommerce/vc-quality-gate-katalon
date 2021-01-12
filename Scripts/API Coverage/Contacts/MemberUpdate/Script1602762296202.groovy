@@ -26,5 +26,5 @@ for (int i; i < memberId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberId.get(i))
     WebUI.comment("MEMBER TYPE IS : " + memberType.get(i))
 
-    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/MemberUpdate', [('id') : memberId.get(i), ('memberType') : memberType.get(i)]))
+    WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberUpdate', [('id') : memberId.get(i), ('memberType') : memberType.get(i)]))
 }

@@ -20,4 +20,4 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 /////  RECHEK
 WebUI.comment('TEST CASE : Update BULK organization')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/DRAFT/OrganizationsUpdateBulk', [('id') : GlobalVariable.organizationId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsUpdateBulk', [('id') : GlobalVariable.organizationId]))
