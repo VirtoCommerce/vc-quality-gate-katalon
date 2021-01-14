@@ -20,7 +20,7 @@
    <testCaseLink>
       <guid>32467063-cf21-47e1-aa90-31cdb0ec8cf8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -28,5 +28,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/GetInstalledModules</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9f29c886-6c76-459f-a4cf-05a576db7dc3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/GetDependentModules</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

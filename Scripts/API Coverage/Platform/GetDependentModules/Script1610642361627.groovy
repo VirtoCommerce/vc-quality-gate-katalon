@@ -24,9 +24,8 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Platform 
 
 WS.verifyElementPropertyValue(response, '[0].title', "Authorize.Net DPM payment gateway")
 WS.verifyElementPropertyValue(response, '[0].description', "APIs and UI for Authorize.Net Direct Post Method (DPM) payment gateway")
-WS.verifyElementPropertyValue(response, '[0].authors', '[Virto Commerce]')
-WS.verifyElementPropertyValue(response, '[0].owners', '[Virto Commerce]')
 WS.verifyElementPropertyValue(response, '[0].projectUrl', "https://virtocommerce.com/apps/extensions/authorizenet-dpm-payment-gateway")
-WS.verifyElementPropertyValue(response, '[0].isRemovable', false)
-WS.verifyElementPropertyValue(response, '[0].isInstalled', false)
+WS.verifyElementPropertyValue(response, '[0].requireLicenseAcceptance', false)
+WS.verifyElementPropertyValue(response, '[0].releaseNotes', "First version.")
 WS.verifyElementPropertyValue(response, '[0].id', "VirtoCommerce.AuthorizeNet")
+WS.verifyElementPropertyValue(response, '[0].owners', "[Virto Commerce]")
