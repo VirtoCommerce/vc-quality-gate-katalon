@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8092'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8082'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8112'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8102'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -191,7 +191,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Minimum delay for preventing 404 error from search module</description>
-      <initValue>10</initValue>
+      <initValue>15</initValue>
       <name>indexDelay</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

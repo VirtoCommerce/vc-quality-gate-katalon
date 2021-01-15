@@ -18,6 +18,12 @@
       <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>50740825-ef4a-446c-908d-024e7deb0c60</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>5cb32558-a190-45ed-a7e4-8fa4142d6a10</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
