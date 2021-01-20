@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ReloadModules</name>
+   <tag></tag>
+   <comment>TEST CASE: Get installed modules</comment>
+   <testCaseGuid>e980e7a4-bd29-4dd5-8ada-4379e548f89d</testCaseGuid>
+</TestCaseEntity>

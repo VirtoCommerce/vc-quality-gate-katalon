@@ -35,4 +35,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/GetDependentModules</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>80d3228c-4f42-4335-9473-c6beaf8747c4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ReloadModules</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
