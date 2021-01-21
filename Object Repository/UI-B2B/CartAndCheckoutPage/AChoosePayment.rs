@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>SpanSwitch</name>
+   <name>AChoosePayment</name>
    <tag></tag>
    <elementGuidId>d8d3322c-6f55-4785-aaab-5900c7030ffe</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[@class = 'switch']</value>
+         <value>//a[@ng-click = 'activate(paymentMethod)']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,13 +17,13 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>span</value>
+      <value>a</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>ng-click</name>
       <type>Main</type>
-      <value>switch</value>
+      <value>activate(paymentMethod)</value>
    </webElementProperties>
 </WebElementEntity>
