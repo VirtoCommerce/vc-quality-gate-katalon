@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>ASelectShippingMethod</name>
+   <name>InputPersonal</name>
    <tag></tag>
-   <elementGuidId>d478b31a-aceb-425b-b432-6c3edda89cee</elementGuidId>
+   <elementGuidId>c4fae668-a467-415e-8bbc-e06904733296</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//a[(text() = 'Select' or . = 'Select')]</value>
+         <value>//input[@value = 'Personal']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,13 +17,13 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>a</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>value</name>
       <type>Main</type>
-      <value>Select</value>
+      <value>Personal</value>
    </webElementProperties>
 </WebElementEntity>

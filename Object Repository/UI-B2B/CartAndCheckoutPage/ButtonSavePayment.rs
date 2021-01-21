@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>ButtonAddToCart</name>
+   <name>ButtonSavePayment</name>
    <tag></tag>
-   <elementGuidId>9bb18839-7389-4bd5-a7ea-76badc79b3cf</elementGuidId>
+   <elementGuidId>1822669e-9bd0-46ea-bdb0-55b9452a6b48</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[@title = 'Add to cart' and contains(@ng-click, 'product')]</value>
+         <value>//button[(text() = 'Save' or . = 'Save') and @ng-click = 'close(checkout.paymentMethod)']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -22,15 +22,15 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>text</name>
       <type>Main</type>
-      <value>Add to cart</value>
+      <value>Save</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>contains</matchCondition>
+      <matchCondition>equals</matchCondition>
       <name>ng-click</name>
       <type>Main</type>
-      <value>product</value>
+      <value>close(checkout.paymentMethod)</value>
    </webElementProperties>
 </WebElementEntity>

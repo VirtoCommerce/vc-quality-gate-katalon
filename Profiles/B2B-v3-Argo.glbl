@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://webstore-storefront.qa.govirto.com/B2B-store/'</initValue>
+      <initValue>'https://webstore-storefront.qa.govirto.com/B2B-store/'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://webstore-storefront.qa.govirto.com/B2B-store/account#/'</initValue>
+      <initValue>'https://webstore-storefront.qa.govirto.com/B2B-store/account#/'</initValue>
       <name>urlAfterLogin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -56,7 +56,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'test3@test.ru'</initValue>
+      <initValue>'test1@test.ru'</initValue>
       <name>Email</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -91,7 +91,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'testbus@test.ru'</initValue>
+      <initValue>'testbus1@test.ru'</initValue>
       <name>EmailBusiness</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -104,7 +104,6 @@
       <initValue>''</initValue>
       <name>PriceFromCatalog</name>
    </GlobalVariableEntity>
-
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
