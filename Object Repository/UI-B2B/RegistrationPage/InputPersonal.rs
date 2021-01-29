@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>ButtonCreateOrder</name>
+   <name>InputPersonal</name>
    <tag></tag>
-   <elementGuidId>d2fa1e71-6816-486e-ab52-b722e760ccd6</elementGuidId>
+   <elementGuidId>c4fae668-a467-415e-8bbc-e06904733296</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[@ng-click = 'createOrder()']</value>
+         <value>//input[@value = 'Personal']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,13 +17,13 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
+      <value>input</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ng-click</name>
+      <name>value</name>
       <type>Main</type>
-      <value>createOrder()</value>
+      <value>Personal</value>
    </webElementProperties>
 </WebElementEntity>

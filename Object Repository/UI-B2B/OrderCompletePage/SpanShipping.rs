@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[@class = 'pull-right ng-binding ng-scope' and @ng-bind = 'field.formattedAmount']</value>
+         <value>//span[@class = 'pull-right ng-binding ng-scope' and @ng-bind = '$ctrl.field.formattedAmount']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,6 +31,20 @@
       <matchCondition>equals</matchCondition>
       <name>ng-bind</name>
       <type>Main</type>
-      <value>field.formattedAmount</value>
+      <value>$ctrl.field.formattedAmount</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-if</name>
+      <type>Main</type>
+      <value>!$ctrl.options.complete</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>contains</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Shipping</value>
    </webElementProperties>
 </WebElementEntity>

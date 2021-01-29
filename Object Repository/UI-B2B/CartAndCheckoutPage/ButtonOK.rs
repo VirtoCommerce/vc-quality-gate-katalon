@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>SpanSwitch</name>
+   <name>ButtonOK</name>
    <tag></tag>
-   <elementGuidId>d8d3322c-6f55-4785-aaab-5900c7030ffe</elementGuidId>
+   <elementGuidId>4cf53f14-0c56-44ce-b3dd-d8842efa3a27</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[@class = 'switch']</value>
+         <value>//button[@ng-click = 'close(checkout.shipmentMethod)']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -15,15 +15,15 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>tag</name>
+      <name>ng-click</name>
       <type>Main</type>
-      <value>span</value>
+      <value>close(checkout.shipmentMethod)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>tag</name>
       <type>Main</type>
-      <value>switch</value>
+      <value>button</value>
    </webElementProperties>
 </WebElementEntity>
