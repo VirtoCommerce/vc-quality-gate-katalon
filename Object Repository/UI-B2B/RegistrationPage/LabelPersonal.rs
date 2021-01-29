@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>SpanPersonal</name>
+   <name>LabelPersonal</name>
    <tag></tag>
    <elementGuidId>c4fae668-a467-415e-8bbc-e06904733296</elementGuidId>
    <selectorCollection>
