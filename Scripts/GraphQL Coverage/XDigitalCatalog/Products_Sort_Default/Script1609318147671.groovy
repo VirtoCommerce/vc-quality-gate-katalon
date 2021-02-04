@@ -29,4 +29,4 @@ get = { field, json -> field.tokenize(".").inject(json) { map, f -> map[f] }}
 itemName = get jsonFieldName, payload
 
 // Check if payload contains information about requested product
-assert itemName[0].name == "3DR X8-M Octocopter for Visual-Spectrum Aerial Maps (915 MHz)"
+assert itemName[0].name == "DJI Spreading Wings S1000+ Professional Octocopter"
