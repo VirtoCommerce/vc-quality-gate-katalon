@@ -14,22 +14,32 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper as JsonSlurper
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputFirstName'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputFirstName'), GlobalVariable.FirstNameB2B)
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', 
+        [('searchPhrase') : GlobalVariable.FirstName]))
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputLastName'))
+JsonSlurper slurper = new JsonSlurper()
+Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputLastName'), GlobalVariable.LastName)
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputEmail'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputEmail'), GlobalVariable.EmailBusiness)
+//Block Account
+def userName = productJson.results[0].securityAccounts[0].userName
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Platform module/DeleteUser', [('userName') : userName]))
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputPhone'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPhone'), GlobalVariable.Phone)
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputSubmitContinueFirstStep'))
+//Block Organization
+def organizationID = productJson.results[0].organizations[0]
+println('Organization:' + organizationID)
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/Organizations/OrganizationsDelete', 
+        [('orgId1') : organizationID]))
+
+
+
+//Block Contact
+def ContactId = productJson.results[0].id
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDelete', [('id') : ContactId]))
 

@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AShippingAddress'))
 
-WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ASelectAddress'))
+not_run: WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ASelectAddress'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonSave'))
 

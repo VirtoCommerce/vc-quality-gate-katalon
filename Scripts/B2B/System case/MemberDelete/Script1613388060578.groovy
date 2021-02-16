@@ -14,22 +14,24 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputFirstName'))
+WebUI.comment("TEST CASE: Member delete")
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputFirstName'), GlobalVariable.FirstNameB2B)
+// Delete member by Id from list
+List <String> memberId = GlobalVariable.memberId
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputLastName'))
+for (int i; i < memberId.size(); i++) {
+	WebUI.comment("MEMBER ID IS : " + memberId.get(i))
+	WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDelete', [('id') : memberId.get(i)]))
+}
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputLastName'), GlobalVariable.LastName)
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputEmail'))
+// Re-index important to search items
+WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputEmail'), GlobalVariable.EmailBusiness)
 
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputPhone'))
-
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPhone'), GlobalVariable.Phone)
-
-WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputSubmitContinueFirstStep'))
-
+// Search new contact. Count 0 in result - contact was deleted
+WebUI.comment("TEST CASE: Member search")
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', [('searchPhrase') : GlobalVariable.FirstNameB2B] ))
+WS.verifyElementPropertyValue(responseSearch, 'totalCount', 0)

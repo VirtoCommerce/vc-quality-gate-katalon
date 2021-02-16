@@ -53,9 +53,45 @@
       <testCaseId>Test Cases/B2B/CommonCase/CheckAfterLoginRegister</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>650f262c-f4fd-484d-8846-12247a69a302</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CategoryPage/OpenCategoryPage</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ff5ca5b6-b232-491a-a9ca-15a36c14fa01</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CategoryPage/CheckProductInCart</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>18d8d316-e570-4a6e-b992-53e4addae2bb</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CategoryPage/CheckoutInfo</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>34d7bda9-02a7-443d-ab5b-a6d7e4946d58</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/B2B/CommonCase/Logout</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>193c9d87-370a-40a3-a019-e90b5a649751</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>408d02df-b3e4-46df-8be4-56d9f103af3e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1cc3add6-8ecc-4d6a-8ea4-c4a8fbfdd528</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/System case/DeleteCustomerAndAccountPersonal</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'https://webstore-platform.qa.govirto.com'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -36,7 +36,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Test Firstname'</initValue>
+      <initValue>'TestUserName2'</initValue>
       <name>FirstName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -91,12 +91,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'testbus1@test.ru'</initValue>
+      <initValue>'testbus2@test.ru'</initValue>
       <name>EmailBusiness</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'UserNameBusiness1'</initValue>
+      <initValue>'UserNameBusinessB2B2'</initValue>
       <name>UserNameBusiness</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -108,5 +108,20 @@
       <description></description>
       <initValue>''</initValue>
       <name>TotalFromCategory</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'TestUserNameB2B'</initValue>
+      <name>FirstNameB2B</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>contactId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>memberId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

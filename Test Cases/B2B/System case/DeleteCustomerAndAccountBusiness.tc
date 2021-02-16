@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DeleteCustomerAndAccountBusiness</name>
+   <tag></tag>
+   <comment>TEST CASE: Member search</comment>
+   <testCaseGuid>7bd3f89c-4cd7-466f-8646-cb9833f7beda</testCaseGuid>
+</TestCaseEntity>
