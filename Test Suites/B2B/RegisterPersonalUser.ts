@@ -79,14 +79,20 @@
    <testCaseLink>
       <guid>193c9d87-370a-40a3-a019-e90b5a649751</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>408d02df-b3e4-46df-8be4-56d9f103af3e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f65542f1-fe3a-4a58-b316-8f2c7915e33e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/BuildIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1cc3add6-8ecc-4d6a-8ea4-c4a8fbfdd528</guid>

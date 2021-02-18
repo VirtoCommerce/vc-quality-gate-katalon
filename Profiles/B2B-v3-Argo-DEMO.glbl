@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>B2B-v3-Argo</name>
+   <name>B2B-v3-Argo-DEMO</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://webstore-storefront.qa.govirto.com/B2B-store/'</initValue>
+      <initValue>'https://webstore-storefront.demo.govirto.com/B2B-store/'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://webstore-platform.qa.govirto.com'</initValue>
+      <initValue>'https://webstore-platform.demo.govirto.com'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://webstore-storefront.qa.govirto.com/B2B-store/account#/'</initValue>
+      <initValue>'https://webstore-storefront.demo.govirto.com/B2B-store/account#/'</initValue>
       <name>urlAfterLogin</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -91,7 +91,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'testbus2@test.ru'</initValue>
+      <initValue>'testbus3@test.ru'</initValue>
       <name>EmailBusiness</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
