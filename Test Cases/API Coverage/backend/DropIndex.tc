@@ -3,6 +3,6 @@
    <description>Drop index for Products, Category, Member</description>
    <name>DropIndex</name>
    <tag></tag>
-   <comment>Waiting for drop index 5 sec</comment>
+   <comment>Waiting for drop index 3 sec</comment>
    <testCaseGuid>bdfcddda-6235-4670-a8a0-d119dbe84026</testCaseGuid>
 </TestCaseEntity>
