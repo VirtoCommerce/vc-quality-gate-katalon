@@ -30,7 +30,7 @@
       <name>Password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>to delete?</description>
       <initValue>'https://webstore-storefront.qa.govirto.com/B2B-store/account#/'</initValue>
       <name>urlAfterLogin</name>
    </GlobalVariableEntity>

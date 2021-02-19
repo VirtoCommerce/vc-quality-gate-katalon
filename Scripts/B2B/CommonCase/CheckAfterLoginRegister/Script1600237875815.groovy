@@ -21,5 +21,6 @@ WebUI.verifyElementPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
 
 WebUI.verifyElementPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
 
-WebUI.verifyEqual(WebUI.getUrl(), GlobalVariable.urlAfterLogin)
+String url = GlobalVariable.urlFront + 'account#/'
 
+WebUI.verifyEqual(WebUI.getUrl(), url)
