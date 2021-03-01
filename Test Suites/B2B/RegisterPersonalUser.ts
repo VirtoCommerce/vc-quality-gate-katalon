@@ -9,7 +9,6 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>d281e825-4a1b-4258-8c95-13181d396317</testSuiteGuid>
    <testCaseLink>
       <guid>8089598c-a739-4782-b875-b726a1fe5346</guid>
@@ -78,6 +77,24 @@
       <testCaseId>Test Cases/B2B/CommonCase/Logout</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>b993cd26-f02a-463f-9901-aa0de75f92e3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CommonCase/Login</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7df03bd7-d65d-42f7-a279-6fe6d2431d2d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CommonCase/CheckAfterLoginRegister</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e7aa48c3-3613-4b32-a2ea-34988a8dd8c9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CommonCase/Logout</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>193c9d87-370a-40a3-a019-e90b5a649751</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -100,5 +117,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/B2B/System case/DeleteCustomerAndAccountPersonal</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c8386718-1cd7-4ee2-86d6-8748cde823cd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/BuildIndex</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -3,6 +3,6 @@
    <description>Drop index for Products, Category, Member</description>
    <name>BuildIndex</name>
    <tag></tag>
-   <comment>Waiting for drop index 5 sec</comment>
+   <comment>Waiting for build index ${delay} sec</comment>
    <testCaseGuid>d5622083-e358-4bc2-8c9b-d28e5695c75c</testCaseGuid>
 </TestCaseEntity>

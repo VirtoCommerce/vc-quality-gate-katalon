@@ -17,15 +17,15 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputUserName'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputUserName'), GlobalVariable.UserName)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputUserName'), GlobalVariable.FirstName)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPassword'), GlobalVariable.Password)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPassword'), GlobalVariable.FirstName)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'), GlobalVariable.Password)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'), GlobalVariable.FirstName)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputSubmitSubmit'))
 

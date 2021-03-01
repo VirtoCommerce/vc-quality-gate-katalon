@@ -21,22 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'b2badmin'</initValue>
-      <name>Login</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'Password1!'</initValue>
-      <name>Password</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>to delete?</description>
-      <initValue>'https://webstore-storefront.qa.govirto.com/B2B-store/account#/'</initValue>
-      <name>urlAfterLogin</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'TestUserName2'</initValue>
+      <initValue>'AutoTestUser'</initValue>
       <name>FirstName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -46,17 +31,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'TestUserName2'</initValue>
-      <name>UserName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'TestAddress'</initValue>
       <name>Address</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'test1@test.ru'</initValue>
+      <initValue>'autotestuse1r@test.ru'</initValue>
       <name>Email</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -123,5 +103,10 @@
       <description></description>
       <initValue>''</initValue>
       <name>memberId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>10</initValue>
+      <name>indexDelay</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
