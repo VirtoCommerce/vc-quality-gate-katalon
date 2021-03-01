@@ -16,16 +16,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
-// Search new members. Created count = 4 and check firstName in results
-WebUI.comment('TEST CASE: Member search')
-
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', 
         [('searchPhrase') : GlobalVariable.FirstNameB2B]))
-
-//WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
-//WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.FirstNameB2B)
-//def productJson = new JsonSlurper().parseText(responseSearch.getResponseBodyContent())
-//def response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/Contacts/ContactsDelete'))
 
 JsonSlurper slurper = new JsonSlurper()
 Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
@@ -35,18 +27,6 @@ Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
 //Block Account
 def userName = productJson.results[0].securityAccounts[0].userName
 WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Platform module/DeleteUser', [('userName') : userName]))
-/*List<String> ArrayUserName = userName
-for (int i; i < ArrayUserName.size(); i++) {
-    List<String> ArrayUserNameId = ArrayUserName
-    for (int j; j < ArrayUserNameId.size(); j++) {
-        println('For account:' + ArrayUserNameId.get(j))
-        WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Platform module/DeleteUser', [('userName') : ArrayUserNameId.get(
-                              j)]))
-    }
-}
-*/
-
-
 
 //Block Organization
 def organizationID = productJson.results[0].organizations[0]
@@ -54,9 +34,6 @@ println('Organization:' + organizationID)
 WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/Organizations/OrganizationsDelete', 
         [('orgId1') : organizationID]))
 
-
-
-//Block Contact
 def ContactId = productJson.results[0].id
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDelete', [('id') : ContactId]))
 
