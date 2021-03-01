@@ -21,7 +21,7 @@
             <profileName>B2B-v3-Argo-QA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/B2B/RegisterBusinessUser</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -30,7 +30,7 @@
             <profileName>B2B-v3-Argo-QA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/B2B/RegisterPersonalUser</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
