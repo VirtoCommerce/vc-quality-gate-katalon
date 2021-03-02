@@ -23,7 +23,3 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 
 WS.verifyElementPropertyValue(response, 'id', "1")
 WS.verifyElementPropertyValue(response, 'completed', true)
-
-
-
-

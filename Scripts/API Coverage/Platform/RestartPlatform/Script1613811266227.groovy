@@ -19,6 +19,6 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Get background job status')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Platform module/RestartPlatform'))
+response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/ResetPassword'))
 
 WS.delay(120)
