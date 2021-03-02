@@ -15,10 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkUpdate'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkGet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkGet'))
 
 WS.delay(10)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkIdGet'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/MenuLinkDelete'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkDelete'))

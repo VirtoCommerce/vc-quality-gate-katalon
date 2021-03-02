@@ -1,25 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>searchCatalog</name>
+   <name>DRAFT.ContentFolderUpload</name>
    <tag></tag>
-   <elementGuidId>57a27f8c-adcb-49d3-bd87-fb4c57b274f8</elementGuidId>
+   <elementGuidId>82c502d1-02c8-4790-9009-4a4c2ad00620</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.catalogName}\&quot;,\n  \&quot;take\&quot;: 10\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
+  &quot;contentType&quot;: &quot;multipart/form-data&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;,
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;123&quot;,
+      &quot;value&quot;: &quot;D:\\Dropbox\\exported_data_SD.zip&quot;,
+      &quot;type&quot;: &quot;File&quot;,
+      &quot;contentType&quot;: &quot;application/zip&quot;
+    }
+  ]
 }</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyType>form-data</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>multipart/form-data</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,26 +36,32 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>multipart/form-data</value>
+   </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/catalogs/search</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?folderUrl=D:\Downloads\exported_data_SD_d.zip</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
-
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)

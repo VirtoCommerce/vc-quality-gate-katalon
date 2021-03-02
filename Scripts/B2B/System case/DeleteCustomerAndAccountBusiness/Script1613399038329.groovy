@@ -31,9 +31,9 @@ WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Pl
 //Block Organization
 def organizationID = productJson.results[0].organizations[0]
 println('Organization:' + organizationID)
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/Organizations/OrganizationsDelete', 
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsDelete', 
         [('orgId1') : organizationID]))
 
 def ContactId = productJson.results[0].id
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDelete', [('id') : ContactId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDelete', [('id') : ContactId]))
 

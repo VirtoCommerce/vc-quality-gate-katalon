@@ -20,7 +20,7 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
 // Create new Contacts and save Ids
 WebUI.comment('TEST CASE : Create BULK contact')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsCreateBulk'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsCreateBulk'))
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 GlobalVariable.contactId = responseJson.id
 WebUI.comment('ContactId is: ' + GlobalVariable.contactId[0])
@@ -34,18 +34,18 @@ WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], Failur
 // Update contacts
 WebUI.comment('TEST CASE : Update BULK contacts')
 fullName = 'Qwe ContactUpdated'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsUpdateBulk', [('contactId') : GlobalVariable.contactId[0], ('fullName') : fullName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdateBulk', [('contactId') : GlobalVariable.contactId[0], ('fullName') : fullName]))
 
 
 // Check Contacts GET request by Id and verify update of first contact
 WebUI.comment('TEST CASE: Get contact by Id')
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsGetIdBulk', [('contactId1') : GlobalVariable.contactId[0]])) 
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetIdBulk', [('contactId1') : GlobalVariable.contactId[0]])) 
 WS.verifyElementPropertyValue(responseGet, 'fullName[0]', fullName)
 
 
 // Delete contact
 WebUI.comment('TEST CASE: Delete contacts')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsDelete', [('contactId') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsDelete', [('contactId') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
 
 
 // Re-index important to search items
@@ -53,5 +53,5 @@ WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], Failur
 
 
 // Search new contact. Count 0 in result - contact was deleted
-responseSearch1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsSearch'))
+responseSearch1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch'))
 WS.verifyElementPropertyValue(responseSearch1, 'totalCount', 0)

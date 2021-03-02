@@ -20,9 +20,9 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 
 //STEP | set new API key to Admin user
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeySet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeySet'))
 
 //STEP | check API key of Admin user
-responseX = WS.sendRequestAndVerify(findTestObject('API/backWebServices/ApiKeyGet'))
+responseX = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet'))
 def responseJsonX = new JsonSlurper().parseText(responseX.getResponseBodyContent())
 WebUI.comment('API KEY : ' + responseJsonX)

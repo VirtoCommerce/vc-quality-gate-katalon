@@ -6,6 +6,7 @@
    <elementGuidId>07a52ed2-e910-4897-a0fc-c758ab14a3a1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
@@ -28,6 +29,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions</restUrl>
@@ -35,7 +37,10 @@
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'AutoTestId'</defaultValue>
       <description></description>

@@ -25,24 +25,24 @@ import groovy.json.JsonOutput
 
 
 WebUI.comment("TEST CASE : Create new organization")
-def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberCreate', [('memberType') : GlobalVariable.memberType[0]] ))
+def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [('memberType') : GlobalVariable.memberType[0]] ))
 def memberJson = new JsonSlurper().parseText(responseMemberCreate.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id
 
 
 WebUI.comment("TEST CASE : Create contact in the organization")
-def responseMemberCreateInOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberCreateInOrg', [('memberType') : GlobalVariable.memberType[1], ('orgId') : GlobalVariable.memberId]))
+def responseMemberCreateInOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreateInOrg', [('memberType') : GlobalVariable.memberType[1], ('orgId') : GlobalVariable.memberId]))
 def memberJson2 = new JsonSlurper().parseText(responseMemberCreateInOrg.getResponseBodyContent())
 GlobalVariable.contactId = memberJson2.id
 
 
 WebUI.comment('TEST CASE : Check Contact in Org')
-responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : GlobalVariable.contactId]))
+responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.contactId]))
 WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', GlobalVariable.memberId)
 
 
 WebUI.comment('TEST CASE : Remove Org and Contact relation')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Contacts/ContactsUpdate', [('contactId') : GlobalVariable.contactId, ('fullName') : GlobalVariable.contactName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdate', [('contactId') : GlobalVariable.contactId, ('fullName') : GlobalVariable.contactName]))
 
 
 // Re-index important to search items
@@ -50,27 +50,27 @@ WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], Failur
 
 
 WebUI.comment('TEST CASE: Check Contact in Org')
-responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : GlobalVariable.contactId]))
+responseContactsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.contactId]))
 WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', null)
 
 
 WebUI.comment("TEST CASE : Create user in account-contact")
 GlobalVariable.userName = 'tempuser'
 Random rnd = new Random()
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/AccountCreateUser', [('email') : rnd.nextInt(100)+'@email.com', ('userName') : GlobalVariable.userName, ('contactId') : GlobalVariable.contactId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', [('email') : rnd.nextInt(100)+'@email.com', ('userName') : GlobalVariable.userName, ('contactId') : GlobalVariable.contactId]))
 
 
 WebUI.comment("TEST CASE : Update user password as admin way")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Platform module/ResetPassword', [ ('userName') : GlobalVariable.userName] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ResetPassword', [ ('userName') : GlobalVariable.userName] ))
 
 
 WebUI.comment("TEST CASE : Delete created user")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Platform module/DeleteUser', [ ('userName') : GlobalVariable.userName] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DeleteUser', [ ('userName') : GlobalVariable.userName] ))
 //WS.delay(10)
 
 
 WebUI.comment(" TEST CASE : Delete all created members")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDeleteBulk', [('keyword') : GlobalVariable.firstName] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDeleteBulk', [('keyword') : GlobalVariable.firstName] ))
 
 
 // Re-index important to search items
@@ -78,5 +78,5 @@ WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], Failur
 
 
 WebUI.comment('TEST CASE : Search members. Count 0 in result - contact was deleted')
-responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
+responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
 WS.verifyElementPropertyValue(responseContactsSearch, 'totalCount', 0)

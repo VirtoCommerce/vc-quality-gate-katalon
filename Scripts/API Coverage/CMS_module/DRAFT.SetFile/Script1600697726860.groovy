@@ -25,7 +25,7 @@ import com.kms.katalon.core.testobject.TestObjectProperty as TestObjectProperty
 import com.kms.katalon.core.testobject.UrlEncodedBodyParameter
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 
-def request = findTestObject('API/backWebServices/CMS Content module/DRAFT.ContentFileNew')
+def request = findTestObject('API/backWebServices/VirtoCommerce.Content/DRAFT.ContentFileNew')
 //
 //List<FormDataBodyParameter> body = new ArrayList()
 //body.add(new FormDataBodyParameter('qwetest.md', '', 'blob'))

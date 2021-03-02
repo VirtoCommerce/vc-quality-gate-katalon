@@ -23,7 +23,7 @@ List <String> memberId = GlobalVariable.memberId
 
 for (int i; i < memberId.size(); i++) {
 	WebUI.comment("MEMBER ID IS : " + memberId.get(i))
-	WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDelete', [('id') : memberId.get(i)]))
+	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDelete', [('id') : memberId.get(i)]))
 }
 
 
@@ -33,5 +33,5 @@ WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], Failur
 
 // Search new contact. Count 0 in result - contact was deleted
 WebUI.comment("TEST CASE: Member search")
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', [('searchPhrase') : GlobalVariable.firstName] ))
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', [('searchPhrase') : GlobalVariable.firstName] ))
 WS.verifyElementPropertyValue(responseSearch, 'totalCount', 0)
