@@ -20,7 +20,7 @@
    <testCaseLink>
       <guid>4c84e486-5f0b-4995-b151-4cf15fb90a49</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
