@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Login</name>
+   <name>Platform_restart</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
-   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>0ca24adb-caef-40c2-bfca-e26b79634014</testSuiteGuid>
+   <testSuiteGuid>0b550698-45bc-43bf-8937-fe7fc9423e9f</testSuiteGuid>
    <testCaseLink>
-      <guid>80542613-31ae-446b-9c1f-f5f9013a626a</guid>
+      <guid>1589c985-efb2-4203-a9b7-ea14e6f2693c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/B2B/System case/WindowsFullSize</testCaseId>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8bde63fd-485a-4dd8-83d5-6ff3a5c4b673</guid>
+      <guid>4c84e486-5f0b-4995-b151-4cf15fb90a49</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/B2B/CommonCase/Login</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5464e31e-c196-46bc-8486-c6abc63b5455</guid>
+      <guid>33163827-25e8-4805-bd2c-35e4842d133f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/B2B/CommonCase/CheckAfterLoginRegister</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/RestartPlatform</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>364d05ce-ab85-4dc4-bb6c-2ec9acbbf940</guid>
+      <guid>3b3b4fc0-cfeb-478a-870b-6030ed4920cf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/B2B/CommonCase/Logout</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/BackgroundJobGetStatus</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

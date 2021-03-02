@@ -21,11 +21,11 @@ WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputUserName'), GlobalVar
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPassword'), GlobalVariable.Password)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPassword'), GlobalVariable.UserNameBusiness)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'), GlobalVariable.Password)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'), GlobalVariable.UserNameBusiness)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputSubmitSubmit'))
 

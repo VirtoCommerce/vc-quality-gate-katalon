@@ -14,24 +14,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment("TEST CASE: Member delete")
+WebUI.comment('TEST CASE: Get background job status')
 
-// Delete member by Id from list
-List <String> memberId = GlobalVariable.memberId
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Platform module/RestartPlatform'))
 
-for (int i; i < memberId.size(); i++) {
-	WebUI.comment("MEMBER ID IS : " + memberId.get(i))
-	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDelete', [('id') : memberId.get(i)]))
-}
-
-
-// Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
-
-
-// Search new contact. Count 0 in result - contact was deleted
-WebUI.comment("TEST CASE: Member search")
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', [('searchPhrase') : GlobalVariable.FirstNameB2B] ))
-WS.verifyElementPropertyValue(responseSearch, 'totalCount', 0)
+WS.delay(120)

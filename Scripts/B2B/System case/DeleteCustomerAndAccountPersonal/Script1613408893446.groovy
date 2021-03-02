@@ -24,21 +24,10 @@ JsonSlurper slurper = new JsonSlurper()
 Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
 
 
-
+println('productJson:' + productJson)
 //Block Account
 def userName = productJson.results[0].securityAccounts[0].userName
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DeleteUser', [('userName') : userName]))
-
-
-
-//Block Organization
-def organizationID = productJson.results[0].organizations[0]
-println('Organization:' + organizationID)
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsDelete', 
-        [('orgId1') : organizationID]))
-
-
-
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Platform module/DeleteUser', [('userName') : userName]))
 //Block Contact
 def ContactId = productJson.results[0].id
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDelete', [('id') : ContactId]))

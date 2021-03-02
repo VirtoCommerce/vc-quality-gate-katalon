@@ -17,8 +17,6 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AShippingAddress'))
 
-not_run: WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ASelectAddress'))
-
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonSave'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AShippingMethod'))
@@ -38,8 +36,6 @@ WebUI.mouseOver(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonSavePayment'))
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonSavePayment'))
 
 WebUI.waitForElementClickable(findTestObject('UI-B2B/CartAndCheckoutPage/SpanCreateOrder'), 20)
-
-not_run: WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonUpdate'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/SpanCreateOrder'))
 
@@ -81,8 +77,6 @@ float FloatResult = ((FloatSpanShipping + FloatSpanSubtotal) + FloatSpanTax) - F
 String FloatSpanTotalString = String.format('%.2f', FloatSpanTotal)
 
 String FloatResultString = String.format('%.2f', FloatResult)
-
-System.out.println(FloatResult)
 
 WebUI.verifyEqual(FloatResultString, FloatSpanTotalString)
 
