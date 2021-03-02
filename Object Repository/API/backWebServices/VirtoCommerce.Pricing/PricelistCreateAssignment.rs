@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>index</name>
+   <name>PricelistCreateAssignment</name>
    <tag></tag>
-   <elementGuidId>c21cda3a-0e76-41df-9e2d-bbc25c8c3c08</elementGuidId>
+   <elementGuidId>6dbbb122-cd63-4f1e-a9f8-024856493e49</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;documentType\&quot;: \&quot;Product\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Member\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Category\&quot;,\n        \&quot;deleteExistingIndex\&quot;: true\n    }\n]&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;catalogId\&quot;: \&quot;${GlobalVariable.catalogId}\&quot;,\n    \&quot;pricelistId\&quot;: \&quot;${GlobalVariable.pricelistId}\&quot;,\n    \&quot;name\&quot;: \&quot;QweAssignment\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,22 +29,18 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/search/indexes/index</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <variables>
-      <defaultValue>'Product'</defaultValue>
-      <description></description>
-      <id>3aab33c8-825a-468f-a8b4-e701a4ea8274</id>
-      <masked>false</masked>
-      <name>documentType</name>
-   </variables>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -54,6 +51,8 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager
 import groovy.json.JsonSlurper
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)

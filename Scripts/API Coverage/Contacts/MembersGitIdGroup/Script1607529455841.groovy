@@ -20,7 +20,7 @@ import groovy.json.JsonSlurper
 WebUI.comment("TEST CASE: Member get by ID group")
 
 println(GlobalVariable.memberId[0])
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
 WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkContact')
 
 
@@ -30,6 +30,6 @@ WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkContact')
 //for (int i; i < memberTypeId.size(); i++) {
 //    WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
 //
-//    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetIdGroup', [('id') : memberTypeId.get(i)]))
+//    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetIdGroup', [('id') : memberTypeId.get(i)]))
 //	WS.verifyElementPropertyValue(responseGet, 'firstName', 'JohnFirst')
 //}

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>searchCategory</name>
+   <name>PricelistCreate</name>
    <tag></tag>
-   <elementGuidId>178af07a-3358-46f1-8acc-c2780c8350d4</elementGuidId>
+   <elementGuidId>f44fa7f2-cd46-4bdb-9769-aa1ed5dcb810</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.categoryName}\&quot;,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;QwePricelist\&quot;,\n  \&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;\n//  \&quot;outerId\&quot;: \&quot;Electronics\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,14 +29,18 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/search/categories</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

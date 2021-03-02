@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 WebUI.comment('TEST CASE : Create organization')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsCreate'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsCreate'))
 
 // STEP | Parse request and save token to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())

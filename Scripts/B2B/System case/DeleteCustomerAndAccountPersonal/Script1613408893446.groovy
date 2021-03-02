@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberSearch', 
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', 
         [('searchPhrase') : GlobalVariable.FirstName]))
 
 JsonSlurper slurper = new JsonSlurper()
@@ -27,19 +27,19 @@ Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
 
 //Block Account
 def userName = productJson.results[0].securityAccounts[0].userName
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Platform module/DeleteUser', [('userName') : userName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DeleteUser', [('userName') : userName]))
 
 
 
 //Block Organization
 def organizationID = productJson.results[0].organizations[0]
 println('Organization:' + organizationID)
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/Customer management module/Organizations/OrganizationsDelete', 
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsDelete', 
         [('orgId1') : organizationID]))
 
 
 
 //Block Contact
 def ContactId = productJson.results[0].id
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberDelete', [('id') : ContactId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDelete', [('id') : ContactId]))
 

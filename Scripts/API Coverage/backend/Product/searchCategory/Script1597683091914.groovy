@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-def categoryRequest = findTestObject('API/backWebServices/searchCategory')
+def categoryRequest = findTestObject('API/backWebServices/VirtoCommerce.Catalog/searchCategory')
 def categoryResponse = WS.sendRequestAndVerify(categoryRequest)
 
 def categoryJson = new JsonSlurper().parseText(categoryResponse.getResponseBodyContent());
