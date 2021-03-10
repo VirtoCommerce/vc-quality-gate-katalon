@@ -224,4 +224,9 @@
       <initValue>'QweMenuLink'</initValue>
       <name>menuName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>to use in platform modules section</description>
+      <initValue>'3.16.0-alpha.512'</initValue>
+      <name>storeModuleVersion</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
