@@ -26,4 +26,11 @@
       <type>Main</type>
       <value>Save</value>
    </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>close(checkout.paymentMethod)</value>
+   </webElementProperties>
 </WebElementEntity>

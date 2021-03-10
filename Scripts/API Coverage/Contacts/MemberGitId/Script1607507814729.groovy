@@ -20,14 +20,14 @@ import groovy.json.JsonSlurper
 WebUI.comment("TEST CASE: Member get by ID")
 
 //def mtid = GlobalVariable.memberId
-//def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : mtid[0]]))
+//def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : mtid[0]]))
 
 List <String> memberTypeId = GlobalVariable.memberId
 
 for (int i; i < memberTypeId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
 
-    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : memberTypeId.get(i)]))
+    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : memberTypeId.get(i)]))
 	WS.verifyElementPropertyValue(responseGet, 'name', 'Qwe Updated')
 	//WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 	}

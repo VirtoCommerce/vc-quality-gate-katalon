@@ -14,7 +14,17 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.github.kklisura.cdt.protocol.commands.Fetch as Fetch
+import com.github.kklisura.cdt.protocol.commands.Page as Page
+import com.github.kklisura.cdt.services.ChromeDevToolsService as ChromeDevToolsService
+import com.katalon.cdp.CdpUtils as CdpUtils
+import com.kms.katalon.core.util.internal.Base64 as Base64
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.testobject.ConditionType
+import com.kms.katalon.core.testobject.TestObject as TestObject
+
+
 
 WebUI.openBrowser(GlobalVariable.urlFront)
-
 WebUI.maximizeWindow()

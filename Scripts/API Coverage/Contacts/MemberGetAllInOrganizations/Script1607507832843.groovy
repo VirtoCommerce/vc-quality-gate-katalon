@@ -17,4 +17,4 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 
 // Get all member organizations || Need explanation for request
 WebUI.comment("TEST CASE: Get member in organization")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetAllInOrganizations'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetAllInOrganizations'))

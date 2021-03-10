@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[@title = 'Add to cart' and contains(@ng-click, concat('product[' , &quot;'&quot; , 'ec235043d51848249e90ef170c371a1c' , &quot;'&quot; , '].quantity'))]</value>
+         <value>//button[@title = 'Add to cart' and contains(@ng-click, 'product')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,6 +31,6 @@
       <matchCondition>contains</matchCondition>
       <name>ng-click</name>
       <type>Main</type>
-      <value>product['ec235043d51848249e90ef170c371a1c'].quantity</value>
+      <value>product</value>
    </webElementProperties>
 </WebElementEntity>

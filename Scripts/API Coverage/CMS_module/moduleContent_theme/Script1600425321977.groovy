@@ -17,10 +17,10 @@ import internal.GlobalVariable as GlobalVariable
 
 GlobalVariable.contentType = "themes"
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentFolderCreate'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentSearch'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch'))
 
 WS.delay(10)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentStatsStoreGet'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/CMS Content module/ContentDelete'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete'))

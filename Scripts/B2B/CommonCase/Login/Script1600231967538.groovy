@@ -17,11 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.click(findTestObject('UI-B2B/LoginPage/InputLogin'))
 
-WebUI.setText(findTestObject('UI-B2B/LoginPage/InputLogin'), GlobalVariable.Login)
+WebUI.setText(findTestObject('UI-B2B/LoginPage/InputLogin'), GlobalVariable.FirstName)
 
 WebUI.click(findTestObject('UI-B2B/LoginPage/InputPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/LoginPage/InputPassword'), GlobalVariable.Password)
+WebUI.setText(findTestObject('UI-B2B/LoginPage/InputPassword'), GlobalVariable.FirstName)
 
 WebUI.click(findTestObject('UI-B2B/LoginPage/InputSubmitLogin'))
 

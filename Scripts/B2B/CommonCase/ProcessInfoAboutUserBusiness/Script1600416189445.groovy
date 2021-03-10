@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputFirstName'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputFirstName'), GlobalVariable.FirstName)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputFirstName'), GlobalVariable.FirstNameB2B)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputLastName'))
 

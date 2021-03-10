@@ -53,9 +53,51 @@
       <testCaseId>Test Cases/B2B/CommonCase/CheckAfterLoginRegister</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>ecc69af2-bd72-43e1-b3fe-b8a78425615d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CategoryPage/OpenCategoryPage</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7cd56f42-e1b8-4abc-922c-24569ccf4653</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CategoryPage/CheckProductInCart</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ff735f98-ecab-4443-bfb8-45000cfcff52</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/CategoryPage/CheckoutInfo</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>b862ee9e-ce81-41f5-9a12-ffc73d059fac</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/B2B/CommonCase/Logout</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7bb85365-9808-4607-9563-bb3d4a092ad2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>696da2e8-8cf1-4f4b-9529-7ac50c14c416</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e4f332df-803b-4ef9-b0a8-3bb488e8a081</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/BuildIndex</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f6131f5d-ddf8-4794-998f-51d5ba30d5d3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/B2B/System case/DeleteCustomerAndAccountBusiness</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

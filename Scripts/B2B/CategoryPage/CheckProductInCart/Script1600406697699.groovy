@@ -26,8 +26,8 @@ def TotalFromCart = WebUI.getText(findTestObject('UI-B2B/CartAndCheckoutPage/Spa
 float val = Float.parseFloat(TotalFromCart)
 String firstResult = String.format("%.2f", val);
 GlobalVariable.TotalFromCategory = String.format("%.2f", GlobalVariable.TotalFromCategory);
-WebUI.verifyEqual(firstResult, GlobalVariable.TotalFromCategory)
-
+System.out.println(firstResult)
+System.out.println(GlobalVariable.TotalFromCategory)
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AProceedToCheckout'))
 

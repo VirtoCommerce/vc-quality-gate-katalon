@@ -15,9 +15,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/index'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
 
-WebUI.comment('Waiting for drop index 3 sec')
+WebUI.comment('Waiting for drop index 10 sec')
 
-WS.delay(3)
-
+WS.delay(10)
