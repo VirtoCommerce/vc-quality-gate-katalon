@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DeleteUser</name>
+   <name>UserCreate</name>
    <tag></tag>
-   <elementGuidId>9e0b760e-1be4-4c89-8e72-236eff960f82</elementGuidId>
+   <elementGuidId>58604d52-c335-450b-9817-dfe72c7f28cf</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;roles\&quot;:[\n      \n   ],\n   \&quot;userType\&quot;:\&quot;Manager\&quot;,\n   \&quot;status\&quot;:\&quot;New\&quot;,\n   \&quot;userName\&quot;:\&quot;${GlobalVariable.userName}\&quot;,\n   \&quot;email\&quot;:\&quot;${GlobalVariable.email}\&quot;,\n   \&quot;password\&quot;:\&quot;${GlobalVariable.userPassword}\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users?names=${GlobalVariable.userName}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/create</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,13 +41,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>a3145a1e-3fd7-4cca-8993-f644f80c947a</id>
-      <masked>false</masked>
-      <name>userName</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -55,17 +48,16 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
-
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def memberJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(memberJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
-WS.verifyElementPropertyValue(response, 'succeeded', true)</verificationScript>
+
+WS.verifyElementPropertyValue(response, 'succeeded', true)
+WS.verifyElementPropertyValue(response, 'errors', '[]')</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
