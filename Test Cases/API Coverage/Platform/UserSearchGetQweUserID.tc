@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UserSearchGetQweUserID</name>
+   <tag></tag>
+   <comment>TEST CASE: Create new user
+User ID is : &quot; + GlobalVariable.userID</comment>
+   <testCaseGuid>fc6db953-dead-47f6-8f2c-adc02d64e638</testCaseGuid>
+</TestCaseEntity>

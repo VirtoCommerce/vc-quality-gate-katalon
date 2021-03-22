@@ -36,9 +36,15 @@
       <testCaseId>Test Cases/API Coverage/Platform/UserCreateAlreadyExisted</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
+      <guid>4513241e-0e6b-49f1-9c54-a6fabca6b75a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserSearchGetQweUserID</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
