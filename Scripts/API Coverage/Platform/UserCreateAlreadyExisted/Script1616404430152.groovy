@@ -21,5 +21,6 @@ WebUI.comment('TEST CASE: Create new user')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate'))
 
-WS.verifyElementPropertyValue(response, 'succeeded', true)
-WS.verifyElementPropertyValue(response, 'errors', '[]')
+WS.verifyElementPropertyValue(response, 'succeeded', false)
+WS.verifyElementPropertyValue(response, 'errors', '[User name \'QweUser\' is already taken., Email \'qwe@qwe.com\' is already taken.]')
+	

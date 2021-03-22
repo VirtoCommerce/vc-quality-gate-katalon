@@ -30,6 +30,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/UserCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>3341693e-1b30-4222-a246-8ff02ac9e72b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserCreateAlreadyExisted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -57,7 +57,7 @@ def memberJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(memberJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
 
-WS.verifyElementPropertyValue(response, 'succeeded', true)
-WS.verifyElementPropertyValue(response, 'errors', '[]')</verificationScript>
+
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
