@@ -3,6 +3,6 @@
    <description></description>
    <name>UserUpdateAccountType</name>
    <tag></tag>
-   <comment>TEST CASE: Search user and update userID</comment>
+   <comment>TEST CASE: Update user by account type</comment>
    <testCaseGuid>cadf00a5-fd91-40a8-91df-88ca81cded74</testCaseGuid>
 </TestCaseEntity>

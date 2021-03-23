@@ -18,7 +18,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Send verification email')
-WebUI.comment("${GlobalVariable.userID}")
+
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSendVerificationEmail'))
 
 

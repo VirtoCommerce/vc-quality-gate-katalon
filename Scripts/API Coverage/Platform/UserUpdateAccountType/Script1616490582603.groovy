@@ -23,12 +23,13 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	[('userName')  : GlobalVariable.userName,
 	 ('userEmail') : GlobalVariable.email,
 	 ('userID') : GlobalVariable.userID,
-	 ('userType') : "Customer"		
+	 ('userType') : "Customer",
+	 ('emailConfirmed')	: "false"	
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 WS.verifyElementPropertyValue(response, 'errors', '[]')
 
-//verify that updates appllies
+//verify that updates applly
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch',
 	[ ('userName') : GlobalVariable.userName
 		]))
@@ -42,7 +43,8 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	[('userName')  : GlobalVariable.userName,
 	 ('userEmail') : GlobalVariable.email,
 	 ('userID') : GlobalVariable.userID,
-	 ('userType') : "Manager"
+	 ('userType') : "Manager",
+	 ('emailConfirmed')	: "false"
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 WS.verifyElementPropertyValue(response, 'errors', '[]')

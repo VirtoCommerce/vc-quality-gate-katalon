@@ -60,6 +60,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/UserUpdateAccountType</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>127847db-2cbb-44c8-b32d-693fa924e678</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateVerifiedEmail</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>713c4f5f-6f85-4151-9839-b216d41f2055</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

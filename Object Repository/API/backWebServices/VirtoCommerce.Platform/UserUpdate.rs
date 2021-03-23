@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n   \&quot;email\&quot;: \&quot;${userEmail}\&quot;,\n   \&quot;id\&quot;: \&quot;${userID}\&quot;,\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n   \&quot;email\&quot;: \&quot;${userEmail}\&quot;,\n   \&quot;id\&quot;: \&quot;${userID}\&quot;,\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

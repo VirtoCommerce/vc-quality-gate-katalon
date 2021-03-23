@@ -24,7 +24,8 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	[('userName')  : GlobalVariable.userName,
 	 ('userEmail') : "upd@upd.upd",
 	 ('userID') : GlobalVariable.userID,
-	 ('userType') : "Manager"		
+	 ('userType') : "Manager",
+	 ('emailConfirmed')	: "false"
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 WS.verifyElementPropertyValue(response, 'errors', '[]')
@@ -43,7 +44,8 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	[('userName')  : GlobalVariable.userName,
 	 ('userEmail') : GlobalVariable.email,
 	 ('userID') : GlobalVariable.userID,
-	 ('userType') : "Manager"
+	 ('userType') : "Manager",
+	 ('emailConfirmed')	: "false"
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 WS.verifyElementPropertyValue(response, 'errors', '[]')
