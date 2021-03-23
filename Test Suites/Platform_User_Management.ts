@@ -39,12 +39,30 @@
       <guid>4513241e-0e6b-49f1-9c54-a6fabca6b75a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserSearchGetQweUserID</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/UserSearchSetUserID</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e7703aed-85b6-4e92-a25a-ba142f6e726e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateLogin</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>878aef55-d730-4fc0-a96a-ddaccba176c3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateEmail</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>eb6f74de-a1fa-479b-9922-ae2c8e786168</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateAccountType</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
