@@ -39,7 +39,7 @@ WebUI.waitForElementClickable(findTestObject('UI-B2B/CartAndCheckoutPage/SpanCre
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/SpanCreateOrder'))
 
-WebUI.verifyTextPresent(' ORDER HAS SUCCESSFULLY BEEN SUBMITTED. YOU WILL BE SENT AN EMAIL NOTIFICATION AS SOON AS YOUR ORDER IS READY.', 
+WebUI.verifyTextPresent('has been successfully submitted. You will be notified via email when your order is ready for shipping', 
     false)
 
 def spanSubTotal = WebUI.getText(findTestObject('UI-B2B/OrderCompletePage/SpanSubtotal'))
