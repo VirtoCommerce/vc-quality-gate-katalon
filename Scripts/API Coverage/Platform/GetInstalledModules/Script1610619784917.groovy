@@ -22,30 +22,26 @@ WebUI.comment('TEST CASE: Get installed modules')
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/GetInstalledModules'))
 
 WS.verifyElementPropertyValue(response, '[0].title', 'Authorize.Net DPM payment gateway')
-
 WS.verifyElementPropertyValue(response, '[0].description', 'APIs and UI for Authorize.Net Direct Post Method (DPM) payment gateway')
-
 WS.verifyElementPropertyValue(response, '[0].authors', '[Virto Commerce]')
-
 WS.verifyElementPropertyValue(response, '[0].owners', '[Virto Commerce]')
-
 WS.verifyElementPropertyValue(response, '[0].projectUrl', 'https://virtocommerce.com/apps/extensions/authorizenet-dpm-payment-gateway')
-
 WS.verifyElementPropertyValue(response, '[0].isRemovable', false)
-
 WS.verifyElementPropertyValue(response, '[0].isInstalled', true)
-
 WS.verifyElementPropertyValue(response, '[0].id', 'VirtoCommerce.AuthorizeNet')
 
 responseText = response.getResponseText();
 def json = new JsonSlurper().parseText(responseText)
 WebUI.comment( json.results.size().toString());
 
+//loop is to find store module and set stoe version to global variables, because we do not know what number of modules is in demo version, and when store is
 for (def i : (0..json.results.size()) ) {
 	//WebUI.comment(json.title[i].toString())
 	if((json.id[i] == "VirtoCommerce.Store"))  {
 		GlobalVariable.storeModuleVersion = json.version[i].toString()
 		WebUI.comment(json.version[i].toString())
+		//exit the loop if store module is found
+		break;
 	}
 	WebUI.comment(GlobalVariable.storeModuleVersion)
 	
