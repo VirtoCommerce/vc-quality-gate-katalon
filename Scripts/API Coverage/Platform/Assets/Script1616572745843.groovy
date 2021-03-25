@@ -27,7 +27,8 @@ folderUrl = GlobalVariable.localUrl+'/assets/'+GlobalVariable.folderName
 
  
 //WebUI.comment('TEST CASE: Assets. Check list on QA environment. Without /assets in url')
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [('folderName') : '${GlobalVariable.localUrl}/${GlobalVariable.folderName}']))
+//folderUrl = GlobalVariable.localUrl + '/' + GlobalVariable.folderName
+//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [('folderName') : GlobalVariable.localUrl + '/' + GlobalVariable.folderName]))
 
 
 
@@ -48,7 +49,7 @@ uploadFileLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vi
 
 
 
-//WS.delay(10)
+WS.delay(10)
 WebUI.comment('TEST CASE: Assets. Delete file')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [
 	('folderName') : folderUrl + '/' + fileNameUrl
