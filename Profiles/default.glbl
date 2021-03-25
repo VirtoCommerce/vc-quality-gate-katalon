@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8092'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8084'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8112'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8104'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -206,7 +206,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qwetestfolder'</initValue>
+      <initValue>'qwefolder'</initValue>
       <name>folderName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -223,5 +223,10 @@
       <description></description>
       <initValue>'QweMenuLink'</initValue>
       <name>menuName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets. Depends on environment</description>
+      <initValue>'http://localhost:9104'</initValue>
+      <name>localUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
