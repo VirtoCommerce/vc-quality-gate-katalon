@@ -15,18 +15,22 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/InputQTY'))
 
-WebUI.setText(findTestObject('UI-B2B/CartAndCheckoutPage/InputQTY'), '20')
+WebUI.setText(findTestObject('UI-B2B/CartAndCheckoutPage/InputQTY'), '1')
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AUpdate'))
 
 def TotalFromCart = WebUI.getText(findTestObject('UI-B2B/CartAndCheckoutPage/SpanTotal')).replace('$', '')
+
 float val = Float.parseFloat(TotalFromCart)
-String firstResult = String.format("%.2f", val);
-GlobalVariable.TotalFromCategory = String.format("%.2f", GlobalVariable.TotalFromCategory);
+
+String firstResult = String.format('%.2f', val)
+
+GlobalVariable.TotalFromCategory = String.format('%.2f', GlobalVariable.TotalFromCategory)
+
 System.out.println(firstResult)
+
 System.out.println(GlobalVariable.TotalFromCategory)
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AProceedToCheckout'))
