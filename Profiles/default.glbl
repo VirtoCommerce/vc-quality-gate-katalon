@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8084'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8087'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8104'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8107'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -226,7 +226,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>for Assets. Depends on environment</description>
-      <initValue>'http://localhost:9104'</initValue>
+      <initValue>'http://localhost:9107'</initValue>
       <name>localUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
