@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//strong[contains(@ng-bind, 'prices')]</value>
+         <value>//strong[@ng-bind = concat('prices[' , &quot;'&quot; , 'e1d43be2-8ab8-4378-bb95-43cc9269fd06' , &quot;'&quot; , '].actualPrice.formattedAmount')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,9 +21,9 @@
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>contains</matchCondition>
+      <matchCondition>equals</matchCondition>
       <name>ng-bind</name>
       <type>Main</type>
-      <value>prices</value>
+      <value>prices['e1d43be2-8ab8-4378-bb95-43cc9269fd06'].actualPrice.formattedAmount</value>
    </webElementProperties>
 </WebElementEntity>

@@ -17,9 +17,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/AAccount'))
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ALogOut'))
+WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/ALogOut'))
+WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
 
 WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
 
