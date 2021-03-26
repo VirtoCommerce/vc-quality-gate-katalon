@@ -8,57 +8,65 @@ import internal.GlobalVariable as GlobalVariable
 
 
 WebUI.comment('TEST CASE: Assets. Create new folder')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
-	('folderName') : GlobalVariable.folderName,
-	('parentUrl') : ''
-	]))
-
-
-
-WebUI.comment('TEST CASE: Assets. Check list on CI environment. Added /assets in url')
-assetsList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
-	('folderName') : GlobalVariable.localUrl+'/assets'
-	]))
-//check if new folder in the list
-WS.verifyElementPropertyValue(assetsList, 'results[1].name', GlobalVariable.folderName)
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [('folderName') : GlobalVariable.folderName, ('parentUrl') : '']))
 //save folder URL
-folderUrl = GlobalVariable.localUrl+'/assets/'+GlobalVariable.folderName
+folderUrl = GlobalVariable.localUrl + '/' + GlobalVariable.folderName
+
+
+
+//WebUI.comment('TEST CASE: Assets. Check list on CI environment. Added /assets in url')
+//assetsList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+//	('folderName') : GlobalVariable.localUrl+'/assets'
+//	]))
+////check if new folder in the list
+//WS.verifyElementPropertyValue(assetsList, 'results[1].name', GlobalVariable.folderName)
+////save folder URL
+//folderUrl = GlobalVariable.localUrl+'/assets/'+GlobalVariable.folderName
 
 
  
-//WebUI.comment('TEST CASE: Assets. Check list on QA environment. Without /assets in url')
-//folderUrl = GlobalVariable.localUrl + '/' + GlobalVariable.folderName
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [('folderName') : GlobalVariable.localUrl + '/' + GlobalVariable.folderName]))
-
-
-
 WebUI.comment('TEST CASE: Assets. Upload file by URL')
-uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetUploadFile', [
+uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
 	('folderUrl') : folderUrl, 
 	('url') : 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
 	]))
-//save uploaded file name 
-fileNameUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].name')
+//get file url 
+uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
 
 
 
-WebUI.comment('TEST CASE: Assets. Upload file from local')
-uploadFileLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetUploadFile', [
-	('folderUrl') : folderUrl
-	]))
+//WebUI.comment('TEST CASE: Assets. Upload file from local')
+//uploadFileLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+//	('folderUrl') : folderUrl
+//	]))
 
 
 
-WS.delay(10)
+WebUI.comment('TEST CASE: Assets. Check list on QA environment. Without /assets in url')
+getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [('folderName') : folderUrl]))
+//check is items are present inside the folder
+WS.verifyElementPropertyValue(getList, 'totalCount', 1)
+
+
+
+WebUI.comment('TEST CASE: Assets. Check access to file')
+fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileAccess', [('fileUrl') : uploadFileUrl]))
+WS.verifyResponseStatusCode(fileAccessA, 200)
+
+
+//WS.delay(10)
 WebUI.comment('TEST CASE: Assets. Delete file')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [
-	('folderName') : folderUrl + '/' + fileNameUrl
-]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [('itemName') : uploadFileUrl]))
+
+
+
+WebUI.comment('TEST CASE: Assets. Check access to file')
+fileAccessB = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileAccess', [('fileUrl') : uploadFileUrl]))
+WS.verifyResponseStatusCode(fileAccessB , 404)
 
 
 
 WebUI.comment('TEST CASE: Assets. Delete folder')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [
-	('folderName') : folderUrl 
-]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [('itemName') : folderUrl]))
+
 
