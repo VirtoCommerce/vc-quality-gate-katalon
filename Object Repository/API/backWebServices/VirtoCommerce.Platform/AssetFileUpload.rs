@@ -15,7 +15,7 @@
   &quot;parameters&quot;: [
     {
       &quot;name&quot;: &quot;file1&quot;,
-      &quot;value&quot;: &quot;D:\\Downloads\\123.zip&quot;,
+      &quot;value&quot;: &quot;&quot;,
       &quot;type&quot;: &quot;File&quot;,
       &quot;contentType&quot;: &quot;application/zip&quot;
     }
