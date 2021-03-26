@@ -11,6 +11,7 @@ WebUI.comment('TEST CASE: Assets. Create new folder')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [('folderName') : GlobalVariable.folderName, ('parentUrl') : '']))
 //save folder URL
 folderUrl = GlobalVariable.localUrl + '/' + GlobalVariable.folderName
+println folderUrl
 
 
 
