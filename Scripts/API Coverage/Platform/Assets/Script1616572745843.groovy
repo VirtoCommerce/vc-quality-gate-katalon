@@ -44,6 +44,7 @@ uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
 
 WebUI.comment('TEST CASE: Assets. Check list on QA environment. Without /assets in url')
 getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [('folderName') : folderUrl]))
+//check is items are present inside the folder
 WS.verifyElementPropertyValue(getList, 'totalCount', 1)
 
 
@@ -53,13 +54,12 @@ fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 WS.verifyResponseStatusCode(fileAccessA, 200)
 
 
-WS.delay(10)
+//WS.delay(10)
 WebUI.comment('TEST CASE: Assets. Delete file')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [('itemName') : uploadFileUrl]))
 
 
 
-WS.delay(10)
 WebUI.comment('TEST CASE: Assets. Check access to file')
 fileAccessB = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileAccess', [('fileUrl') : uploadFileUrl]))
 WS.verifyResponseStatusCode(fileAccessB , 404)
