@@ -44,6 +44,7 @@ uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
 
 WebUI.comment('TEST CASE: Assets. Check list on QA environment. Without /assets in url')
 getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [('folderName') : folderUrl]))
+//check is items are present inside the folder
 WS.verifyElementPropertyValue(getList, 'totalCount', 1)
 
 
