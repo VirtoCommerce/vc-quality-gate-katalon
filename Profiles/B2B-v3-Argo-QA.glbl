@@ -109,4 +109,49 @@
       <initValue>10</initValue>
       <name>indexDelay</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'7829d35f417e4dd98851f51322f32c23'</initValue>
+      <name>catalogId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Bolts'</initValue>
+      <name>catalogName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'4fbaca886f014767a52f3f38b9df648f'</initValue>
+      <name>categoryId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Carriage Bolts'</initValue>
+      <name>categoryName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'e1d43be2-8ab8-4378-bb95-43cc9269fd06'</initValue>
+      <name>productId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'0456b3ebc0a24c0ab7054ec9a5cea78e'</initValue>
+      <name>pricelistId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'PCQ-15160279'</initValue>
+      <name>sku</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>storeId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ffcId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
