@@ -16,4 +16,5 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
+//for tests
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/ProductAddPrice'))
