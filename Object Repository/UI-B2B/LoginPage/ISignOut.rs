@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>StrongPrice</name>
+   <name>ISignOut</name>
    <tag></tag>
-   <elementGuidId>d9bcfa25-5807-4c2d-a307-61d6156bb6f4</elementGuidId>
+   <elementGuidId>ccb598de-8f55-47db-bfe0-a88516fb68fd</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//strong[@ng-bind = concat('prices[' , &quot;'&quot; , 'e1d43be2-8ab8-4378-bb95-43cc9269fd06' , &quot;'&quot; , '].actualPrice.formattedAmount')]</value>
+         <value>//i[@class = 'fa fa-sign-out']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -17,13 +17,13 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>strong</value>
+      <value>i</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ng-bind</name>
+      <name>class</name>
       <type>Main</type>
-      <value>prices['e1d43be2-8ab8-4378-bb95-43cc9269fd06'].actualPrice.formattedAmount</value>
+      <value>fa fa-sign-out</value>
    </webElementProperties>
 </WebElementEntity>

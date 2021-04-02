@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8089'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8087'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8109'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8107'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -206,7 +206,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qwetestfolder'</initValue>
+      <initValue>'qwefolder'</initValue>
       <name>folderName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -228,5 +228,10 @@
       <description>to use in platform modules section</description>
       <initValue>'3.16.0-alpha.512'</initValue>
       <name>storeModuleVersion</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets. Depends on environment</description>
+      <initValue>'http://localhost:9107'</initValue>
+      <name>localUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
