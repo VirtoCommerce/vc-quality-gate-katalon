@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'QweUser'</defaultValue>
+      <description></description>
+      <id>18be38b2-f2a8-4368-8077-5a8267e6db5a</id>
+      <masked>false</masked>
+      <name>userName</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

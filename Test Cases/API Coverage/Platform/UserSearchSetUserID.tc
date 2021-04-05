@@ -3,7 +3,7 @@
    <description></description>
    <name>UserSearchSetUserID</name>
    <tag></tag>
-   <comment>TEST CASE: Search user and update userID
+   <comment>TEST CASE: Search user and set userID
 User ID is : &quot; + GlobalVariable.userID</comment>
    <testCaseGuid>fc6db953-dead-47f6-8f2c-adc02d64e638</testCaseGuid>
 </TestCaseEntity>

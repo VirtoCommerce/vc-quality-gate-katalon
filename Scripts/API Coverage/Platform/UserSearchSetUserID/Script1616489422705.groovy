@@ -27,7 +27,6 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 WS.verifyElementPropertyValue(response, 'users[0].userName', 'QweUser')
 
 //set user ID inn global variables
-def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-GlobalVariable.userID = responseJson.users[0].id
+GlobalVariable.userID = WS.getElementPropertyValue(response, 'users[0].id')
 WebUI.comment('User ID is : ' + GlobalVariable.userID)
 

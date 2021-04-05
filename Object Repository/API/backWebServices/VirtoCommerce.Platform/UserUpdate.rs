@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n   \&quot;email\&quot;: \&quot;${userEmail}\&quot;,\n   \&quot;id\&quot;: \&quot;${userID}\&quot;,\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n   \&quot;email\&quot;: \&quot;${userEmail}\&quot;,\n   \&quot;id\&quot;: \&quot;${GlobalVariable.userID}\&quot;,\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,34 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'AutoUser'</defaultValue>
+      <description></description>
+      <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
+      <masked>false</masked>
+      <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>'qwer@qwer.qwe'</defaultValue>
+      <description></description>
+      <id>73dd08ad-e5c2-4242-84fa-fe21a969cbc1</id>
+      <masked>false</masked>
+      <name>userEmail</name>
+   </variables>
+   <variables>
+      <defaultValue>'Manager'</defaultValue>
+      <description></description>
+      <id>852b8fa8-c9a3-4b89-bad8-c8115364e1d4</id>
+      <masked>false</masked>
+      <name>userType</name>
+   </variables>
+   <variables>
+      <defaultValue>'true'</defaultValue>
+      <description></description>
+      <id>24f7e443-af4a-4483-862a-e8e15c22f77c</id>
+      <masked>false</masked>
+      <name>emailConfirmed</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
