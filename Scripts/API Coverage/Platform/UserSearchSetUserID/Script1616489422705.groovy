@@ -19,14 +19,12 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Search user and set userID')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch',
-	[ ('userName') : "QweUser"
-		]))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
+	('userName') : GlobalVariable.userName
+	]))
 
 //verify that received requested user 
-WS.verifyElementPropertyValue(response, 'users[0].userName', 'QweUser')
+WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
 
-//set user ID inn global variables
-GlobalVariable.userID = WS.getElementPropertyValue(response, 'users[0].id')
-WebUI.comment('User ID is : ' + GlobalVariable.userID)
-
+//set user ID in global variables
+GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')

@@ -19,8 +19,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Send verification email')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSendVerificationEmail',
-	[('userName')  : GlobalVariable.userName ]))
-
-
-
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSendVerificationEmail', [
+	('userId') : GlobalVariable.userId
+	]))
+// No verification for this response because body is empty

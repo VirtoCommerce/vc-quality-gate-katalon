@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${userName}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 20\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${userName}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 5\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -55,14 +55,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
+
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
-
-
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

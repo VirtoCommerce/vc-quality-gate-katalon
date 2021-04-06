@@ -3,6 +3,6 @@
    <description></description>
    <name>UserDelete</name>
    <tag></tag>
-   <comment>TEST CASE: Create new user</comment>
+   <comment>TEST CASE: Delete user</comment>
    <testCaseGuid>74e34394-d713-4d57-bab6-ab0ddf1e17aa</testCaseGuid>
 </TestCaseEntity>

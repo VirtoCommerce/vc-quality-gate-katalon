@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n   \&quot;email\&quot;: \&quot;${userEmail}\&quot;,\n   \&quot;id\&quot;: \&quot;${GlobalVariable.userID}\&quot;,\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n   \&quot;email\&quot;: \&quot;${userEmail}\&quot;,\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n   \&quot;id\&quot;: \&quot;${userId}\&quot;,\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -69,6 +69,13 @@
       <masked>false</masked>
       <name>emailConfirmed</name>
    </variables>
+   <variables>
+      <defaultValue>GlobalVariable.userId</defaultValue>
+      <description></description>
+      <id>c69bffe4-66b9-423f-acf2-b036c7f8d1d9</id>
+      <masked>false</masked>
+      <name>userId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -76,14 +83,14 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

@@ -17,37 +17,40 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Update username for user')
+WebUI.comment('TEST CASE: Update userName/email/userType')
 
+//set new userName in global variables
+GlobalVariable.userName = GlobalVariable.userName + "UPD"
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate',
-	[('userName')  : GlobalVariable.userName + "UPD",
-	 ('userEmail') : GlobalVariable.email + "UPD",
-	 ('userID') : GlobalVariable.userID,
-	 ('userType') : "Customer",
-	 ('emailConfirmed')	: "false"
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
+	('userName')  : GlobalVariable.userName,
+	('userEmail') : GlobalVariable.email + "UPD",
+	('userId') : GlobalVariable.userId,
+	('userType') : "Manager",
+	('emailConfirmed')	: "false"
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 WS.verifyElementPropertyValue(response, 'errors', '[]')
+
 
 //verify that updates appllies
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch',
-	[ ('userName') : "QweUserUPD"
-		]))
-WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName + "UPD")
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
+	('userName') : GlobalVariable.userName
+	]))
+WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
 WS.verifyElementPropertyValue(response, 'users[0].email', GlobalVariable.email + "UPD")
-WS.verifyElementPropertyValue(response, 'users[0].id', GlobalVariable.userID)
-WS.verifyElementPropertyValue(response, 'users[0].userType', "Customer")
+WS.verifyElementPropertyValue(response, 'users[0].id', GlobalVariable.userId)
+WS.verifyElementPropertyValue(response, 'users[0].userType', "Manager")
 WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', "false")
 
-//set user back to initial state
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate',
-	[('userName')  :GlobalVariable.userName,
-	 ('userEmail') : GlobalVariable.email,
-	 ('userID') : GlobalVariable.userID,
-	 ('userType') : "Manager",
-	 ('emailConfirmed')	: "true"
-	]))
-WS.verifyElementPropertyValue(response, 'succeeded', true)
-WS.verifyElementPropertyValue(response, 'errors', '[]')
 
+//set user back to initial state
+//response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
+//	('userName') : GlobalVariable.userName,
+//	('userEmail') : GlobalVariable.email,
+//	('userId') : GlobalVariable.userId,
+//	('userType') : "Customer"
+//	('emailConfirmed')	: "true"
+//	]))
+//WS.verifyElementPropertyValue(response, 'succeeded', true)
+//WS.verifyElementPropertyValue(response, 'errors', '[]')

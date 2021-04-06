@@ -12,22 +12,10 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>59ebe03b-a80b-48fb-acdd-b8ee916be764</testSuiteGuid>
    <testCaseLink>
-      <guid>1589c985-efb2-4203-a9b7-ea14e6f2693c</guid>
+      <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>4c84e486-5f0b-4995-b151-4cf15fb90a49</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d4dc0038-d7e2-486a-aa36-476f92c2daa3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/UserCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/UserCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3341693e-1b30-4222-a246-8ff02ac9e72b</guid>
@@ -54,7 +42,7 @@
       <testCaseId>Test Cases/API Coverage/Platform/UserSendVerifictaionEmail</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
+      <guid>eee0eeed-2e9b-44fc-b615-dd8335b879e3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserDelete</testCaseId>

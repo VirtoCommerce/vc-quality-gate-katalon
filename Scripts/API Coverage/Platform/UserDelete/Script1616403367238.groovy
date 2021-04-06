@@ -17,7 +17,18 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Delee user')
+WebUI.comment('TEST CASE: Delete user')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DeleteUser', [('userName') : '']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DeleteUser', [
+	('userName') : GlobalVariable.userName]
+))
+WS.verifyElementPropertyValue(response, 'succeeded', true)
+WS.verifyElementPropertyValue(response, 'errors', '[]')
 
+
+//verify that user is deleted
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
+	('userName') : GlobalVariable.userName
+	]))
+WS.verifyElementPropertyValue(response, 'totalCount', 0)
+WS.verifyElementPropertyValue(response, 'results', '[]')

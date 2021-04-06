@@ -17,12 +17,14 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Create already existed user')
+WebUI.comment('TEST CASE: Create new user')
 
-//Random rnd = new Random()
+// create unique email
+GlobalVariable.email = new Random().nextInt(100)+'@email.com'
+
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', [
 	('email') : GlobalVariable.email, 
 	('userName') : GlobalVariable.userName
 	]))
 
-WS.verifyElementPropertyValue(response, 'succeeded', false)
+WS.verifyElementPropertyValue(response, 'succeeded', true)
