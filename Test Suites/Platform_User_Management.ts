@@ -24,10 +24,10 @@
       <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c95f86f1-8939-451a-8311-a1d4262a4a4f</guid>
+      <guid>d4dc0038-d7e2-486a-aa36-476f92c2daa3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserCreate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/backend/UserCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3341693e-1b30-4222-a246-8ff02ac9e72b</guid>
@@ -45,25 +45,7 @@
       <guid>e7703aed-85b6-4e92-a25a-ba142f6e726e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateLogin</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>878aef55-d730-4fc0-a96a-ddaccba176c3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateEmail</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>eb6f74de-a1fa-479b-9922-ae2c8e786168</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateAccountType</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>127847db-2cbb-44c8-b32d-693fa924e678</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserUpdateVerifiedEmail</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/UserUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>713c4f5f-6f85-4151-9839-b216d41f2055</guid>

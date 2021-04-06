@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>UserUpdateEmail</name>
-   <tag></tag>
-   <comment>TEST CASE: Update user by email</comment>
-   <testCaseGuid>2959162c-c898-47a0-b061-5e775eb6708a</testCaseGuid>
-</TestCaseEntity>

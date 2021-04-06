@@ -42,14 +42,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'AutoUser'</defaultValue>
+      <defaultValue>GlobalVariable.UserName</defaultValue>
       <description></description>
       <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
    <variables>
-      <defaultValue>'qwer@qwer.qwe'</defaultValue>
+      <defaultValue>GlobalVariable.Email</defaultValue>
       <description></description>
       <id>73dd08ad-e5c2-4242-84fa-fe21a969cbc1</id>
       <masked>false</masked>
