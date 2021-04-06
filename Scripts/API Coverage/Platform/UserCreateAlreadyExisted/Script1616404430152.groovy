@@ -19,14 +19,6 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Create new user')
 
-/*response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', 
-	[('userType') : 'Customer',
-	 ('email') : 'qwer@qwer.qwe', 
-	 ('userName') : GlobalVariable.userName, 
-	 ('storeId') : GlobalVariable.storeId, 
-	 ('contactId') : GlobalVariable.contactId
-	 ]))
-*/
 Random rnd = new Random()
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', 
 	[('email') : rnd.nextInt(100)+'@email.com', 
