@@ -23,7 +23,7 @@ WebUI.comment('TEST CASE: Update userName/email/userType')
 GlobalVariable.userName = GlobalVariable.userName + "UPD"
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
-	('userName')  : GlobalVariable.userName,
+	('userName') : GlobalVariable.userName,
 	('userEmail') : GlobalVariable.email + "UPD",
 	('userId') : GlobalVariable.userId,
 	('userType') : "Manager",

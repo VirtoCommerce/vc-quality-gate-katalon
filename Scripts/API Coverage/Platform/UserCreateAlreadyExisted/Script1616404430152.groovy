@@ -19,7 +19,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Create already existed user')
 
-//Random rnd = new Random()
+
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', [
 	('email') : GlobalVariable.email, 
 	('userName') : GlobalVariable.userName
