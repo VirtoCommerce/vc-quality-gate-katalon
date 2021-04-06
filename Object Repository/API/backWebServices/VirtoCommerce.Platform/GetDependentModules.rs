@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductAddPrice</name>
+   <name>GetDependentModules</name>
    <tag></tag>
-   <elementGuidId>a3b8b881-42f9-45aa-a8ab-60f1de85a5f3</elementGuidId>
+   <elementGuidId>f376c27c-802c-4208-93b9-0a88654793a2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n    \&quot;prices\&quot;: [\n      {\n        \&quot;pricelistId\&quot;: \&quot;${GlobalVariable.pricelistId}\&quot;,\n        \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n        \&quot;sale\&quot;: 55,\n        \&quot;list\&quot;: 99,\n        \&quot;minQuantity\&quot;: 1,\n        \&quot;startDate\&quot;: \&quot;2020-08-10T09:59:39.979Z\&quot;\n      }\n    ]\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n {\n    \&quot;version\&quot;: \&quot;${GlobalVariable.storeModuleVersion}\&quot;,\n    \&quot;title\&quot;: \&quot;Store module\&quot;,\n    \&quot;validationErrors\&quot;: [],\n    \&quot;isRemovable\&quot;: false,\n    \&quot;isInstalled\&quot;: true,\n    \&quot;id\&quot;: \&quot;VirtoCommerce.Store\&quot;\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,14 +29,18 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/products/prices</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/modules/getdependents</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -51,7 +56,8 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

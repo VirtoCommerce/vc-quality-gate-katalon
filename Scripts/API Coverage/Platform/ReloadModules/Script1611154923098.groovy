@@ -14,14 +14,10 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/AAccount'))
+WebUI.comment('TEST CASE: Reload modules')
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ReloadModules'))
 

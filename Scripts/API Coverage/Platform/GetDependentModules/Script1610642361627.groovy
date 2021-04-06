@@ -14,14 +14,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/AAccount'))
+WebUI.comment('TEST CASE: Get dependent modules for store module and check if there authorize.net among them')
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/GetDependentModules'))
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
+WS.verifyElementPropertyValue(response, '[0].title', 'Authorize.Net DPM payment gateway')
+WS.verifyElementPropertyValue(response, '[0].description', 'APIs and UI for Authorize.Net Direct Post Method (DPM) payment gateway')
+WS.verifyElementPropertyValue(response, '[0].projectUrl', 'https://virtocommerce.com/apps/extensions/authorizenet-dpm-payment-gateway')
+WS.verifyElementPropertyValue(response, '[0].requireLicenseAcceptance', false)
+WS.verifyElementPropertyValue(response, '[0].releaseNotes', 'First version.')
+WS.verifyElementPropertyValue(response, '[0].id', 'VirtoCommerce.AuthorizeNet')
+WS.verifyElementPropertyValue(response, '[0].owners', '[Virto Commerce]')
 

@@ -12,6 +12,24 @@
             <profileName>B2B-v3-Argo-QA</profileName>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
+         <runEnabled>false</runEnabled>
+         <testSuiteEntity>Test Suites/Platform_API_KEY</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>B2B-v3-Argo-QA</profileName>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/B2B/CreateProductB2B</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>B2B-v3-Argo-QA</profileName>
+            <runConfigurationId>Chrome</runConfigurationId>
+         </configuration>
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/B2B/OpenCategoryPage</testSuiteEntity>
       </TestSuiteRunConfiguration>
