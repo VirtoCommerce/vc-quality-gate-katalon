@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>RoleCreate</name>
+   <tag></tag>
+   <comment>TEST CASE: Create new role</comment>
+   <testCaseGuid>1ce31eec-c585-4ffc-b79f-fc5a0d62920f</testCaseGuid>
+</TestCaseEntity>
