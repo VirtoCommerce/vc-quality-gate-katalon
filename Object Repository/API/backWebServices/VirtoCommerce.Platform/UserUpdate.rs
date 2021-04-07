@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DeleteUser</name>
+   <name>UserUpdate</name>
    <tag></tag>
-   <elementGuidId>9e0b760e-1be4-4c89-8e72-236eff960f82</elementGuidId>
+   <elementGuidId>78222d87-32c1-4273-99f5-d3d4d3de7ac6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n   \&quot;email\&quot;: \&quot;${userEmail}\&quot;,\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n   \&quot;id\&quot;: \&quot;${userId}\&quot;,\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users?names=${userName}</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,11 +42,39 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>GlobalVariable.UserName</defaultValue>
       <description></description>
-      <id>a3145a1e-3fd7-4cca-8993-f644f80c947a</id>
+      <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
       <masked>false</masked>
       <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.Email</defaultValue>
+      <description></description>
+      <id>73dd08ad-e5c2-4242-84fa-fe21a969cbc1</id>
+      <masked>false</masked>
+      <name>userEmail</name>
+   </variables>
+   <variables>
+      <defaultValue>'Manager'</defaultValue>
+      <description></description>
+      <id>852b8fa8-c9a3-4b89-bad8-c8115364e1d4</id>
+      <masked>false</masked>
+      <name>userType</name>
+   </variables>
+   <variables>
+      <defaultValue>'true'</defaultValue>
+      <description></description>
+      <id>24f7e443-af4a-4483-862a-e8e15c22f77c</id>
+      <masked>false</masked>
+      <name>emailConfirmed</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.userId</defaultValue>
+      <description></description>
+      <id>c69bffe4-66b9-423f-acf2-b036c7f8d1d9</id>
+      <masked>false</masked>
+      <name>userId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

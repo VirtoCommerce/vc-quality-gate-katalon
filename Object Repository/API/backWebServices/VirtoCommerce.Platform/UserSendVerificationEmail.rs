@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DeleteUser</name>
+   <name>UserSendVerificationEmail</name>
    <tag></tag>
-   <elementGuidId>9e0b760e-1be4-4c89-8e72-236eff960f82</elementGuidId>
+   <elementGuidId>8718f330-4141-49ac-921b-34626679441c</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -11,7 +11,7 @@
    <httpBody></httpBody>
    <httpBodyContent>{
   &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users?names=${userName}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userId}/sendVerificationEmail</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,9 +44,9 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>a3145a1e-3fd7-4cca-8993-f644f80c947a</id>
+      <id>abee2b21-1df3-4e6b-aef4-262f679c85d4</id>
       <masked>false</masked>
-      <name>userName</name>
+      <name>userId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

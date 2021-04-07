@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8087'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8085'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -233,5 +233,10 @@
       <description>for Assets. Depends on environment</description>
       <initValue>'http://localhost:9107'</initValue>
       <name>localUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>userId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

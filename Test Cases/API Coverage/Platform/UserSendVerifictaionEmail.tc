@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UserSendVerifictaionEmail</name>
+   <tag></tag>
+   <comment>TEST CASE: Send verification email</comment>
+   <testCaseGuid>ae58eaf1-f2e5-4e14-a39b-5845c01b9050</testCaseGuid>
+</TestCaseEntity>
