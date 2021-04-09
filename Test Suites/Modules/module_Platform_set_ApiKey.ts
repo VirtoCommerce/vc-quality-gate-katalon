@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_Assets</name>
+   <name>module_Platform_set_ApiKey</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,23 +10,17 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>683f9ce9-fe83-49ad-a68e-fef0b7703937</testSuiteGuid>
+   <testSuiteGuid>1a7cd933-dd7b-4ef5-99f1-2947153d6573</testSuiteGuid>
    <testCaseLink>
-      <guid>ead83850-43a1-4f91-893a-f99f0202504c</guid>
+      <guid>1589c985-efb2-4203-a9b7-ea14e6f2693c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>cf3120ec-5706-45cb-aee4-24aef44a281b</guid>
+      <guid>4c84e486-5f0b-4995-b151-4cf15fb90a49</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a4688b31-534d-48c9-b194-d3b48f6dc09e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Assets</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
