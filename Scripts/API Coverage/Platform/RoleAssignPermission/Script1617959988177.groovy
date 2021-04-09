@@ -23,16 +23,17 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 String id,name
 id = WS.getElementPropertyValue(response, 'id')
 WebUI.comment(id)
-WebUI.comment(GlobalVariable.roleID)
 name = WS.getElementPropertyValue(response, 'name')
 WebUI.comment(name)
 
+
 //API to update roles information
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', 
-	[('name') : 'RoleNameAPI', 
-	 ('id') : GlobalVariable.roleID, 
-	 ('permissions') : '[]', 
-	 ('description') : 'description updated']))
+	[('name') : name, 
+	 ('id') : id,
+	 ('permissions') : '[{"id":"platform:security:access","name":"platform:security:access","groupName":"Platform","assignedScopes":[],"availableScopes":[],"$selected":false}]',
+	 ('description') : 'description'
+	 ]))
 
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 
@@ -40,5 +41,9 @@ WS.verifyElementPropertyValue(response, 'succeeded', true)
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : name]))
 
 //verify that received requested user
-WS.verifyElementPropertyValue(response, 'description', 'description updated')
+WS.verifyElementPropertyValue(response, 'permissions', '[{"id":"platform:security:access","name":"platform:security:access","groupName":"Platform","assignedScopes":[],"availableScopes":[],"$selected":false}]')
+/*WebUI.comment(GlobalVariable.roleID)
+String res = response.getResponseText()
+WebUI.comment(res)
+*/
 

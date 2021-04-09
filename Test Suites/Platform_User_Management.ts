@@ -66,6 +66,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/RoleUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>08b134bc-d3c4-4f84-92f3-2161d749b5d1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/RoleAssignPermission</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>1bfcae3e-6d24-4b5a-acec-ab7c67575663</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
