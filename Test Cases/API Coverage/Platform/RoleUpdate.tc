@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>RoleEdit</name>
+   <name>RoleUpdate</name>
    <tag></tag>
-   <comment>TEST CASE: Create new role</comment>
+   <comment>TEST CASE: Update role
+GlobalVariable.roleID
+res</comment>
    <testCaseGuid>fc4d6400-e2fd-4710-afdf-524e390b5c95</testCaseGuid>
 </TestCaseEntity>

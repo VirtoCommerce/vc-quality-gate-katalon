@@ -18,14 +18,28 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Update role')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesAddUpdate', 
-	[('name') : 'RoleNameAPI'+'UPD',
-	 ('permissions') : '[]']))
+//get variable to create API request
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : 'RoleNameAPI']))
+String id,stamp,name
+id = WS.getElementPropertyValue(response, 'id')
+name = WS.getElementPropertyValue(response, 'name')
+
+//API to update roles information
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', 
+	[('name') : name, 
+	 ('id') : id, 
+	 ('concurrencyStamp') : stamp,
+	 ('permissions') : '[]', 
+	 ('description') : 'description updated']))
 
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 
-//make sure tha role created and set roleID to global Variables
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName',
-	[('roleName') : 'RoleNameAPI'+'UPD']))
+//make sure tha role updated, get update role
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : 'RoleNameAPI']))
 
-
+//verify that received requested user
+WS.verifyElementPropertyValue(response, 'description', 'description updated')
+/*WebUI.comment(GlobalVariable.roleID)
+String res = response.getResponseText()
+WebUI.comment(res)
+*/

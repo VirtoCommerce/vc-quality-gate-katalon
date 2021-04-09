@@ -54,10 +54,16 @@
       <testCaseId>Test Cases/API Coverage/Platform/RoleCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>63fae156-b570-46bb-b4b4-ef23eb0761d5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/RoleSearch</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>56a5e102-ccf8-4394-839f-25da1a839b99</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/RoleEdit</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/RoleUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1bfcae3e-6d24-4b5a-acec-ab7c67575663</guid>

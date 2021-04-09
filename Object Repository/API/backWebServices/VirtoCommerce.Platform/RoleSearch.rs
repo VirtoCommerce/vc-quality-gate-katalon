@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>RolesAddUpdate</name>
+   <name>RoleSearch</name>
    <tag></tag>
-   <elementGuidId>a05221d8-9036-4f99-82e5-24a8db36c105</elementGuidId>
+   <elementGuidId>708ce0b3-1069-4794-b1cb-51c2b902a7a2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${roleName}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 5\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/roles</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/roles/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,16 +44,9 @@
    <variables>
       <defaultValue>'RoleNameAPI'</defaultValue>
       <description></description>
-      <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
+      <id>18be38b2-f2a8-4368-8077-5a8267e6db5a</id>
       <masked>false</masked>
-      <name>name</name>
-   </variables>
-   <variables>
-      <defaultValue>'testroleID'</defaultValue>
-      <description></description>
-      <id>36d32216-6fa2-4dd6-94a7-2c588a806cf9</id>
-      <masked>false</masked>
-      <name>id</name>
+      <name>roleName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
