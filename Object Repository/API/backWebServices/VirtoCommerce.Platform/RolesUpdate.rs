@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;,\n   \&quot;description\&quot;: \&quot;${description}\&quot;,\n   \&quot;permissions\&quot;: \&quot;${permissions}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;,\n   \&quot;description\&quot;: \&quot;${description}\&quot;,\n   \&quot;permissions\&quot;: [\n      {\n         \&quot;id\&quot;:\&quot;security:call_api\&quot;,\n         \&quot;name\&quot;:\&quot;security:call_api\&quot;,\n         \&quot;assignedScopes\&quot;:[],\n         \&quot;availableScopes\&quot;:[]\n      }\n   ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -61,13 +61,6 @@
       <id>0a2768bd-b95c-4fec-8deb-1c70f9b44e94</id>
       <masked>false</masked>
       <name>id</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>8f5031d3-b7b6-495a-af66-20f6908fa0ab</id>
-      <masked>false</masked>
-      <name>permissions</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -4,7 +4,8 @@
    <name>RoleUpdate</name>
    <tag></tag>
    <comment>TEST CASE: Update role
+id
 GlobalVariable.roleID
-res</comment>
+name</comment>
    <testCaseGuid>fc4d6400-e2fd-4710-afdf-524e390b5c95</testCaseGuid>
 </TestCaseEntity>

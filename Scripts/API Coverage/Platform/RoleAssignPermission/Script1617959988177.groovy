@@ -31,7 +31,6 @@ WebUI.comment(name)
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', 
 	[('name') : name, 
 	 ('id') : id,
-	 ('permissions') : '[{"id":"platform:security:access","name":"platform:security:access","groupName":"Platform","assignedScopes":[],"availableScopes":[],"$selected":false}]',
 	 ('description') : 'description'
 	 ]))
 
@@ -41,9 +40,9 @@ WS.verifyElementPropertyValue(response, 'succeeded', true)
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : name]))
 
 //verify that received requested user
-WS.verifyElementPropertyValue(response, 'permissions', '[{"id":"platform:security:access","name":"platform:security:access","groupName":"Platform","assignedScopes":[],"availableScopes":[],"$selected":false}]')
+WS.verifyElementPropertyValue(response, 'permissions', '[[assignedScopes:[], availableScopes:[], id:security:call_api, name:security:call_api]]')
 /*WebUI.comment(GlobalVariable.roleID)
 String res = response.getResponseText()
 WebUI.comment(res)
 */
-
+//('permissions') : '[{"id":"security:call_api","name":"security:call_api","assignedScopes":[],"availableScopes":[]}]',

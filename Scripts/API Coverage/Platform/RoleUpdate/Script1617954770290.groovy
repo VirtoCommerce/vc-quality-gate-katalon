@@ -31,7 +31,6 @@ WebUI.comment(name)
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', 
 	[('name') : 'RoleNameAPI', 
 	 ('id') : GlobalVariable.roleID, 
-	 ('permissions') : '[]', 
 	 ('description') : 'description updated']))
 
 WS.verifyElementPropertyValue(response, 'succeeded', true)
