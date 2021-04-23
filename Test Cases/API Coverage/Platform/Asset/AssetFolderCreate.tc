@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AssetFolderCreate</name>
+   <tag></tag>
+   <comment>TEST CASE: Assets. Create new folder
+TEST CASE: Assets. Delete folder</comment>
+   <testCaseGuid>01358f08-1e29-425c-a891-90e33b157094</testCaseGuid>
+</TestCaseEntity>

@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8085'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8087'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8105'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8107'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -195,6 +195,26 @@
       <name>indexDelay</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>userId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets. Depends on environment</description>
+      <initValue>'http://localhost:9107'</initValue>
+      <name>localUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not conatin specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not conatin specsymbols.',, ('qwe--qwe') : 'Folder name must not conatin consecutive dash symbols.']</initValue>
+      <name>folderNameList</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets</description>
+      <initValue>''</initValue>
+      <name>folderUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>========</description>
       <initValue>''</initValue>
       <name>TEMP</name>
@@ -228,20 +248,5 @@
       <description>to use in platform modules section</description>
       <initValue>'3.16.0-alpha.512'</initValue>
       <name>storeModuleVersion</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>for Assets. Depends on environment</description>
-      <initValue>'http://localhost:9107'</initValue>
-      <name>localUrl</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>userId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not conatin specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not conatin specsymbols.', ('qwe--qwe') : 'Folder name must not conatin consecutive dash symbols.', ('qweassetfolder') : 'Succeed. No errors.']</initValue>
-      <name>folderNameList</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

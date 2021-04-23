@@ -19,6 +19,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Create new folder')
 
+<<<<<<< Updated upstream
 HashMap<String, String> responseMap = GlobalVariable.folderNameList
 //println responseMap
 
@@ -45,6 +46,20 @@ println GlobalVariable.folderNameList
 //WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [('itemName') : folderUrl]))
 
 
+=======
+
+HashMap<String, String> responseMap = GlobalVariable.folderNameList
+println responseMap
+
+for (String name : responseMap.keySet()) {
+	println("Try name : " + name + ". Received error : " + responseMap.get(name));
+	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
+		('folderName') : name,
+		('parentUrl') : ''
+		]))
+	WS.verifyElementPropertyValue(response, 'message', responseMap.get(name))
+}
+>>>>>>> Stashed changes
 
 //Map<String, String> map = new HashMap<>();
 //map.put("1", "Jan");

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>AssetFolderGet</name>
+   <tag></tag>
+   <comment>TEST CASE: Assets. Check list on CI environment. Added /assets in url</comment>
+   <testCaseGuid>3a6dfd36-8456-46d5-90e8-129f84cff74e</testCaseGuid>
+</TestCaseEntity>

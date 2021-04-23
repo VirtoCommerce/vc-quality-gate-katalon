@@ -39,7 +39,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'http://localhost:9101/assets'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>cc65020b-d5c4-4b47-b0a9-481ab383941b</id>
       <masked>false</masked>
@@ -64,6 +64,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
