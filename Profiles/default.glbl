@@ -239,4 +239,14 @@
       <initValue>''</initValue>
       <name>userId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ClientId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ClientSecret</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
