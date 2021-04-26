@@ -30,7 +30,7 @@
    </httpHeaderProperties>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api​/platform​/oauthapps?clientIds=${GlobalVariable.ClientId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/oauthapps?clientIds=${GlobalVariable.ClientId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

@@ -16,12 +16,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-
-WebUI.comment("TEST CASE: Create oauth key")
-responseNew = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/GenerateNewOauthKey'))
+responseSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SearchOauthClient'))
 JsonSlurper slurper = new JsonSlurper()
-Map parsedJson = slurper.parseText(responseNew.getResponseBodyContent())
-GlobalVariable.ClientId = parsedJson.clientId
-GlobalVariable.ClientSecret = parsedJson.clientSecret
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/CreateNewClient'))
-
+Map parsedJsonSearch = slurper.parseText(responseSearch.getResponseBodyContent())
+String StringJson = parsedJsonSearch.toString()
+if (StringJson.contains(GlobalVariable.ClientId) == true)
+{
+	WebUI.comment("Client exist")
+}
+else
+{
+	WebUI.comment("Client deleted")
+}
