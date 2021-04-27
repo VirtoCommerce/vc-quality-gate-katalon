@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AssetDelete</name>
+   <name>AssetDeleteBulk</name>
    <tag></tag>
-   <elementGuidId>b524db4b-ccb7-475f-8a23-4547d2fe209c</elementGuidId>
+   <elementGuidId>03105a65-54f1-4cad-81b6-daecb3813b06</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -29,7 +29,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?urls=${itemName}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?urls=${itemName1}&amp;urls=${itemName2}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,7 +43,14 @@
       <description></description>
       <id>28ecdd94-996f-42ef-a026-a98c61f04212</id>
       <masked>false</masked>
-      <name>itemName</name>
+      <name>itemName1</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>49fc1fb1-b401-431f-aa7b-3da026f0ecd4</id>
+      <masked>false</masked>
+      <name>itemName2</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

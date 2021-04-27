@@ -24,21 +24,39 @@
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5ade4401-2888-43b3-a9ae-b0c56a588775</guid>
+      <guid>eea4e54c-bab0-4354-aed1-dc1436351090</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderSearch</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5ade4401-2888-43b3-a9ae-b0c56a588775</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2b38c168-87d9-4e9d-b135-99f721eaea6e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrlImage</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>28f6e567-1df1-47ee-b909-413f99ba4346</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUpload</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrl</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3917ff9a-4e6a-4450-9dd1-39527b6c7af0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>893bca20-dcb0-42d0-af70-d6dbbe64df9e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDeleteBulk</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

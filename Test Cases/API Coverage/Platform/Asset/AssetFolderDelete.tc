@@ -3,6 +3,6 @@
    <description></description>
    <name>AssetFolderDelete</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE: Assets. Delete folder</comment>
    <testCaseGuid>8ea416fb-0e81-4f56-bb1c-1247c04be545</testCaseGuid>
 </TestCaseEntity>

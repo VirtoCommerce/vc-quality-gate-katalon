@@ -16,13 +16,39 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: Assets. Check list on CI environment. Added /assets in url')
+WebUI.comment('TEST CASE: Assets. Bulk delete folders')
 
+// Create new folders
+for (i = 1; i < 3; i++ ) {
+	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
+		('folderName') : GlobalVariable.folderName + i,
+		('parentUrl') : ''
+		]))
+}
+
+
+// Find created folders in the list
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
-	('folderName') : '',
-	('keyword') : ''
+	('keyword') : GlobalVariable.folderName
+	]))
+WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+
+
+// Save folder Url's
+def folderUrl1 = WS.getElementPropertyValue(folderList, 'results[0].url')
+def folderUrl2 = WS.getElementPropertyValue(folderList, 'results[1].url')
+
+
+// Bulk delete of both folders using folderUrls's
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDeleteBulk', [
+	('itemName1') : folderUrl1, 
+	('itemName2') : folderUrl2
 	]))
 
-// check if new folder is in the search results
-WS.containsString(folderList, GlobalVariable.folderName, false)
-//WS.verifyElementPropertyValue(folderList, 'results[1].name', GlobalVariable.folderName)
+
+// Check that folders are deleted
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+	('keyword') : GlobalVariable.folderName
+	]))
+WS.verifyElementPropertyValue(folderList, 'totalCount', '0')
+

@@ -16,13 +16,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: Assets. Check list on CI environment. Added /assets in url')
 
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
-	('folderName') : '',
-	('keyword') : ''
+//String textShipment = new File('Data Files/testUploadFile.jpg')
+//println textShipment
+//
+//
+//def jsonBodyContent = new groovy.json.JsonBuilder(textShipment)
+//// Convert Json into String
+//String bodyContent = jsonBodyContent.toString()
+//RequestObject fileUploadRequest = findTestObject('')
+//// Create and set body content property
+//fileUploadRequest.setBodyContent(new HttpTextBodyContent(bodyContent))
+
+
+WebUI.comment('TEST CASE: Assets. Upload file from local')
+uploadFileLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUploadLocal', [
+	('folderUrl') : GlobalVariable.folderUrl
 	]))
-
-// check if new folder is in the search results
-WS.containsString(folderList, GlobalVariable.folderName, false)
-//WS.verifyElementPropertyValue(folderList, 'results[1].name', GlobalVariable.folderName)

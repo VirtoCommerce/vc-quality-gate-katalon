@@ -16,13 +16,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: Assets. Check list on CI environment. Added /assets in url')
+WebUI.comment('TEST CASE: Assets. Upload ZIP file by URL')
 
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
-	('folderName') : '',
-	('keyword') : ''
+println GlobalVariable.localUrl
+println GlobalVariable.folderUrl
+
+uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+	('folderUrl') : GlobalVariable.folderUrl,
+	('url') : 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
 	]))
-
-// check if new folder is in the search results
-WS.containsString(folderList, GlobalVariable.folderName, false)
-//WS.verifyElementPropertyValue(folderList, 'results[1].name', GlobalVariable.folderName)
+//get file url
+def uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
