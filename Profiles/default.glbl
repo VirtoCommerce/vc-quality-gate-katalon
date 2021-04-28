@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8112'</initValue>
+      <initValue>'https://dev-virtopay.azurewebsites.net'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -238,6 +238,11 @@
       <description></description>
       <initValue>''</initValue>
       <name>userId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>['b10742e2-fafe-4af0-bbc1-6061839fff52', 'b10742e2-fafe-4af0-bbc1-6061839fff52', 'abb0dbf6-5f3e-4a95-89d7-425ee1c7d5db']</initValue>
+      <name>orderId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
