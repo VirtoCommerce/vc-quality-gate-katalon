@@ -39,18 +39,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'http://localhost:9101/assets/123'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>28ecdd94-996f-42ef-a026-a98c61f04212</id>
       <masked>false</masked>
       <name>itemName</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>1b699e54-3d24-4f94-b99c-fe986f153047</id>
-      <masked>false</masked>
-      <name>fileName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

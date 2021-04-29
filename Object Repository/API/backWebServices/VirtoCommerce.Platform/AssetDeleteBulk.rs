@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AssetCreateBlobFolder</name>
+   <name>AssetDeleteBulk</name>
    <tag></tag>
-   <elementGuidId>fef658a7-6ef9-4d33-b0a7-23286b115a37</elementGuidId>
+   <elementGuidId>03105a65-54f1-4cad-81b6-daecb3813b06</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${folderName}\&quot;,\n  \&quot;parentUrl\&quot;: \&quot;${parentUrl}\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -32,8 +28,8 @@
    <katalonVersion>7.9.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets/folder</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?urls=${itemName1}&amp;urls=${itemName2}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,18 +39,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.folderName</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>a000e688-e42b-4a01-92eb-31a30eb41bd8</id>
+      <id>28ecdd94-996f-42ef-a026-a98c61f04212</id>
       <masked>false</masked>
-      <name>folderName</name>
+      <name>itemName1</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>01ac9f7a-ffd7-4e0d-8f1d-4deac9695502</id>
+      <id>49fc1fb1-b401-431f-aa7b-3da026f0ecd4</id>
       <masked>false</masked>
-      <name>parentUrl</name>
+      <name>itemName2</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -74,8 +70,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-//WS.verifyResponseStatusCode(response, 204)
-
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

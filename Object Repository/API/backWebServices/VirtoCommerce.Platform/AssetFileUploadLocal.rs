@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AssetUploadFile</name>
+   <name>AssetFileUploadLocal</name>
    <tag></tag>
    <elementGuidId>5db6c83c-48dc-418f-b174-52cc5119c341</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -14,10 +14,10 @@
   &quot;charset&quot;: &quot;UTF-8&quot;,
   &quot;parameters&quot;: [
     {
-      &quot;name&quot;: &quot;file1&quot;,
-      &quot;value&quot;: &quot;D:\\Downloads\\123.zip&quot;,
+      &quot;name&quot;: &quot;file&quot;,
+      &quot;value&quot;: &quot;Data Files/testuploadfile.jpeg&quot;,
       &quot;type&quot;: &quot;File&quot;,
-      &quot;contentType&quot;: &quot;application/zip&quot;
+      &quot;contentType&quot;: &quot;image/jpeg&quot;
     }
   ]
 }</httpBodyContent>
@@ -40,7 +40,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?folderUrl=${folderUrl}&amp;url=${url}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?folderUrl=${folderUrl}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -50,7 +50,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'http://localhost:9104/assets/qwefolder'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>1c7ff1bb-764e-4657-9382-9e432f7a1237</id>
       <masked>false</masked>
@@ -81,7 +81,6 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
