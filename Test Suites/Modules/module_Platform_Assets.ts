@@ -15,6 +15,6 @@
       <guid>a4688b31-534d-48c9-b194-d3b48f6dc09e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Assets</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetsActions</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
