@@ -35,6 +35,7 @@ println parsedJson.dealershipCode
 
 
 // Update parameter "carType"
+println ('Name is: '+itemName)
 parsedJson["carType"] = itemName
 
 // Update parameter "year"
@@ -43,7 +44,7 @@ for (def dynamicPropertiesField : parsedJson.items[0].dynamicProperties) {
 		
 		def yearValue = dynamicPropertiesField.values.value[0]
 		parsedJson["year"] = yearValue
-		println(parsedJson.year)
+		println ('Year is: '+parsedJson.year)
 		break
 	}
 }
@@ -54,7 +55,7 @@ for (def dynamicPropertiesField : parsedJson.shipments[0].dynamicProperties) {
 		
 		def dealershipCodeValue = dynamicPropertiesField.values.value[0]
 		parsedJson["dealershipCode"] = dealershipCodeValue;	
-		println(parsedJson.dealershipCode)
+		println ('Code is: '+parsedJson.dealershipCode)
 		break
 	}
 }
@@ -70,7 +71,7 @@ RequestObject request = findTestObject('API/backWebServices/VirtoCommerce.Orders
 // Set body content property
 request.setBodyContent(new HttpTextBodyContent(bodyContent))
 // Send Update order request
-//WS.sendRequestAndVerify(request)
+WS.sendRequestAndVerify(request)
 
 }
 
