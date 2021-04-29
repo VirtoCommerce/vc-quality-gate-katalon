@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_Customer</name>
+   <name>module_Customer</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -11,18 +11,6 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>f1950f0e-4465-4a28-b8cf-ca702122ff7f</testSuiteGuid>
-   <testCaseLink>
-      <guid>8889b802-b6b0-4823-b7e4-7f5e969210ee</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>78159426-9d65-4216-b1d3-45f7c9aa74fa</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
-   </testCaseLink>
    <testCaseLink>
       <guid>a3c843ac-fb0b-43b8-90bb-48a8a665e20f</guid>
       <isReuseDriver>false</isReuseDriver>
