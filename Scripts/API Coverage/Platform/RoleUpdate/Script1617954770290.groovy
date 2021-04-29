@@ -40,4 +40,7 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 
 //verify that received requested user
 WS.verifyElementPropertyValue(response, 'description', 'description updated')
-
+WS.verifyElementPropertyValue(response, 'permissions[0].id', "security:call_api")
+WS.verifyElementPropertyValue(response, 'permissions[0].name', "security:call_api")
+WS.verifyElementPropertyValue(response, 'permissions[0].assignedScopes', '[]')
+WS.verifyElementPropertyValue(response, 'permissions[0].availableScopes', '[]')

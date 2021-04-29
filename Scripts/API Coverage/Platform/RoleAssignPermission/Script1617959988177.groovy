@@ -40,9 +40,7 @@ WS.verifyElementPropertyValue(response, 'succeeded', true)
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : name]))
 
 //verify that received requested user
-WS.verifyElementPropertyValue(response, 'permissions', '[[assignedScopes:[], availableScopes:[], id:security:call_api, name:security:call_api]]')
-/*WebUI.comment(GlobalVariable.roleID)
-String res = response.getResponseText()
-WebUI.comment(res)
-*/
-//('permissions') : '[{"id":"security:call_api","name":"security:call_api","assignedScopes":[],"availableScopes":[]}]',
+WS.verifyElementPropertyValue(response, 'permissions[0].id', "security:call_api")
+WS.verifyElementPropertyValue(response, 'permissions[0].name', "security:call_api")
+WS.verifyElementPropertyValue(response, 'permissions[0].assignedScopes', '[]')
+WS.verifyElementPropertyValue(response, 'permissions[0].availableScopes', '[]')
