@@ -17,7 +17,7 @@
       &quot;name&quot;: &quot;file1&quot;,
       &quot;value&quot;: &quot;Data Files/testUploadFile.jpg&quot;,
       &quot;type&quot;: &quot;File&quot;,
-      &quot;contentType&quot;: &quot;application/zip&quot;
+      &quot;contentType&quot;: &quot;image/jpeg&quot;
     }
   ]
 }</httpBodyContent>
@@ -50,7 +50,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'http://localhost:9112/assets/123'</defaultValue>
+      <defaultValue>'http://localhost:9118/assets/qwefolder'</defaultValue>
       <description></description>
       <id>1c7ff1bb-764e-4657-9382-9e432f7a1237</id>
       <masked>false</masked>

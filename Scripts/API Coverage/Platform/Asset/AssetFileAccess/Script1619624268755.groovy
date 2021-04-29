@@ -15,15 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('TEST CASE: Assets. Check access to file')
 
-WebUI.comment('TEST CASE: Assets. Upload file by URL')
+println GlobalVariable.uploadFileUrl
 
-println GlobalVariable.localUrl
-println GlobalVariable.folderUrl
-
-uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
-	('folderUrl') : GlobalVariable.folderUrl,
-	('url') : 'https://virtocommerce.blob.core.windows.net/catalog/slide_1.jpg'
-	]))
-//get file url
-GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
+fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileAccess', [('fileUrl') : GlobalVariable.uploadFileUrl]))
+WS.verifyResponseStatusCode(fileAccessA, 200)

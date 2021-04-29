@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8092'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8098'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8112'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8118'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -248,5 +248,10 @@
       <description>to use in platform modules section</description>
       <initValue>'3.16.0-alpha.512'</initValue>
       <name>storeModuleVersion</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>uploadFileUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

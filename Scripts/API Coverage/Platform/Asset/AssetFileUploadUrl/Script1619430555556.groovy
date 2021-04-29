@@ -26,4 +26,4 @@ uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 	('url') : 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
 	]))
 //get file url
-def uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
+GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
