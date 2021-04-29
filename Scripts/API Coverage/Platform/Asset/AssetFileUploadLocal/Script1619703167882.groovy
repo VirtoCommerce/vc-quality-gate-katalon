@@ -30,6 +30,7 @@ import internal.GlobalVariable as GlobalVariable
 
 
 WebUI.comment('TEST CASE: Assets. Upload file from local')
+println GlobalVariable.folderUrl
 uploadFileLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUploadLocal', [
 	('folderUrl') : GlobalVariable.folderUrl
 	]))
