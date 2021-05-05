@@ -17,4 +17,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/PushNotificationsSearch</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>29c0a75f-d8d3-42a4-928e-bd27b35ddfc2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/PushNotificationsMarkAsRead</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
