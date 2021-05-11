@@ -14,14 +14,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/AAccount'))
+WebUI.comment('TEST CASE: Delete user')
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DeleteUser', [
+	('userName') : GlobalVariable.userName]
+))
+WS.verifyElementPropertyValue(response, 'succeeded', true)
+WS.verifyElementPropertyValue(response, 'errors', '[]')
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
 
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
-
+//verify that user is deleted
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
+	('userName') : GlobalVariable.userName
+	]))
+WS.verifyElementPropertyValue(response, 'totalCount', 0)
+WS.verifyElementPropertyValue(response, 'results', '[]')

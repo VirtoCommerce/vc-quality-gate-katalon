@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AssetUploadFile</name>
+   <name>DeleteClient</name>
    <tag></tag>
-   <elementGuidId>5db6c83c-48dc-418f-b174-52cc5119c341</elementGuidId>
+   <elementGuidId>008bead9-3899-4321-81c2-23fee854d3bb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;contentType&quot;: &quot;multipart/form-data&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;,
-  &quot;parameters&quot;: [
-    {
-      &quot;name&quot;: &quot;file1&quot;,
-      &quot;value&quot;: &quot;D:\\Downloads\\123.zip&quot;,
-      &quot;type&quot;: &quot;File&quot;,
-      &quot;contentType&quot;: &quot;application/zip&quot;
-    }
-  ]
+  &quot;text&quot;: &quot;&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
-   <httpBodyType>form-data</httpBodyType>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>multipart/form-data</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -36,32 +28,55 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <katalonVersion>7.9.1</katalonVersion>
-   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?folderUrl=${folderUrl}&amp;url=${url}</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/oauthapps?clientIds=${GlobalVariable.ClientId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
-   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>-1</socketTimeout>
-   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'http://localhost:9104/assets/qwefolder'</defaultValue>
+      <defaultValue>'Customer'</defaultValue>
       <description></description>
-      <id>1c7ff1bb-764e-4657-9382-9e432f7a1237</id>
+      <id>7f1a7b63-82a7-4032-9bb7-fe9ec79c79be</id>
       <masked>false</masked>
-      <name>folderUrl</name>
+      <name>userType</name>
+   </variables>
+   <variables>
+      <defaultValue>'qwer@qwer.qwe'</defaultValue>
+      <description></description>
+      <id>a3d703c1-361c-43e3-b208-a6256af06bdf</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variables>
+   <variables>
+      <defaultValue>'AutoUser'</defaultValue>
+      <description></description>
+      <id>83cc8a71-dedb-422c-91bf-4fe75d94a932</id>
+      <masked>false</masked>
+      <name>userName</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>283376ab-a096-420c-9ad4-e8c70cc047d5</id>
+      <id>4ae1a995-80e2-4d39-a6f1-38336b971569</id>
       <masked>false</masked>
-      <name>url</name>
+      <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c0974235-1eef-4f16-a598-bc5505a4e1e3</id>
+      <masked>false</masked>
+      <name>contactId</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.userPassword</defaultValue>
+      <description></description>
+      <id>c6ff57aa-b6c8-4e7e-b7b4-60ee2e43dad7</id>
+      <masked>false</masked>
+      <name>userPassword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -70,17 +85,14 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

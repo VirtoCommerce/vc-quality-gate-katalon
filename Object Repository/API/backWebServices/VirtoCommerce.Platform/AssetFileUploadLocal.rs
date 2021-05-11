@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AssetCreateBlobFolder</name>
+   <name>AssetFileUploadLocal</name>
    <tag></tag>
-   <elementGuidId>fef658a7-6ef9-4d33-b0a7-23286b115a37</elementGuidId>
+   <elementGuidId>5db6c83c-48dc-418f-b174-52cc5119c341</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${folderName}\&quot;,\n  \&quot;parentUrl\&quot;: \&quot;${parentUrl}\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
+  &quot;contentType&quot;: &quot;multipart/form-data&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;,
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;file&quot;,
+      &quot;value&quot;: &quot;Data Files/testuploadfile.jpeg&quot;,
+      &quot;type&quot;: &quot;File&quot;,
+      &quot;contentType&quot;: &quot;image/jpeg&quot;
+    }
+  ]
 }</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyType>form-data</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>multipart/form-data</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -33,7 +40,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets/folder</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?folderUrl=${folderUrl}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,18 +50,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.folderName</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>a000e688-e42b-4a01-92eb-31a30eb41bd8</id>
+      <id>1c7ff1bb-764e-4657-9382-9e432f7a1237</id>
       <masked>false</masked>
-      <name>folderName</name>
+      <name>folderUrl</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>01ac9f7a-ffd7-4e0d-8f1d-4deac9695502</id>
+      <id>283376ab-a096-420c-9ad4-e8c70cc047d5</id>
       <masked>false</masked>
-      <name>parentUrl</name>
+      <name>url</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -74,8 +81,6 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-//WS.verifyResponseStatusCode(response, 204)
-
-</verificationScript>
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

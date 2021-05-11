@@ -15,13 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/AAccount'))
+WebUI.comment('TEST CASE: Assets. Check access to file')
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
+println GlobalVariable.uploadFileUrl
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
-
+fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileAccess', [('fileUrl') : GlobalVariable.uploadFileUrl]))
+WS.verifyResponseStatusCode(fileAccessA, 200)

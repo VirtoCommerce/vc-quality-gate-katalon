@@ -15,13 +15,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/AAccount'))
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
+WebUI.comment('TEST CASE: Assets. Check list on CI environment. Added /assets in url')
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+	('folderName') : '',
+	('keyword') : ''
+	]))
 
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
-
+// check if new folder is in the search results
+WS.containsString(folderList, GlobalVariable.folderName, false)
+//WS.verifyElementPropertyValue(folderList, 'results[1].name', GlobalVariable.folderName)

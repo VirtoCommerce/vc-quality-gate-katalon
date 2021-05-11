@@ -15,13 +15,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/AAccount'))
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
+WebUI.comment('TEST CASE: Assets. Upload ZIP file by URL')
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
+println GlobalVariable.localUrl
+println GlobalVariable.folderUrl
 
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
-
+uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+	('folderUrl') : GlobalVariable.folderUrl,
+	('url') : 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
+	]))
+//get file url
+GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')

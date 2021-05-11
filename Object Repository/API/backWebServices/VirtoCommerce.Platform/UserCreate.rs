@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AssetCreateBlobFolder</name>
+   <name>UserCreate</name>
    <tag></tag>
-   <elementGuidId>fef658a7-6ef9-4d33-b0a7-23286b115a37</elementGuidId>
+   <elementGuidId>58604d52-c335-450b-9817-dfe72c7f28cf</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${folderName}\&quot;,\n  \&quot;parentUrl\&quot;: \&quot;${parentUrl}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;roles\&quot;:[  \n   ],\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;status\&quot;:\&quot;${status}\&quot;,\n   \&quot;userName\&quot;:\&quot;${userName}\&quot;,\n   \&quot;email\&quot;:\&quot;${email}\&quot;,\n   \&quot;password\&quot;:\&quot;${password}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,11 +29,10 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <katalonVersion>7.9.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets/folder</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/create</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,18 +42,39 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.folderName</defaultValue>
+      <defaultValue>'Manager\r\n'</defaultValue>
       <description></description>
-      <id>a000e688-e42b-4a01-92eb-31a30eb41bd8</id>
+      <id>436f7018-e172-4ebb-9bd2-98932d543064</id>
       <masked>false</masked>
-      <name>folderName</name>
+      <name>variable</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'New'</defaultValue>
       <description></description>
-      <id>01ac9f7a-ffd7-4e0d-8f1d-4deac9695502</id>
+      <id>e96e348e-6a5c-4e8a-957f-3c824b041b14</id>
       <masked>false</masked>
-      <name>parentUrl</name>
+      <name>status</name>
+   </variables>
+   <variables>
+      <defaultValue>'QweUser'</defaultValue>
+      <description></description>
+      <id>ee54c1e3-f265-41f8-b1a7-578b671df96c</id>
+      <masked>false</masked>
+      <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>'qwe@qwe.com'</defaultValue>
+      <description></description>
+      <id>b8881731-6d07-4bd1-9b93-9d108136fd21</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variables>
+   <variables>
+      <defaultValue>'Password-1\r\n\r\n'</defaultValue>
+      <description></description>
+      <id>a535c961-5d68-4873-b6cf-5c61f8c4581c</id>
+      <masked>false</masked>
+      <name>password</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -63,18 +83,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
-
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+def memberJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(memberJsonOutput)
+WS.verifyResponseStatusCode(response, 200)
 
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
-//WS.verifyResponseStatusCode(response, 204)
 
 </verificationScript>
    <wsdlAddress></wsdlAddress>

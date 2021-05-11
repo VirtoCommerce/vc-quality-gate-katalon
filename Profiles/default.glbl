@@ -195,6 +195,31 @@
       <name>indexDelay</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>userId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets. Depends on environment</description>
+      <initValue>''</initValue>
+      <name>localUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not conatin specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not conatin specsymbols.',, ('qwe--qwe') : 'Folder name must not conatin consecutive dash symbols.']</initValue>
+      <name>folderNameList</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets</description>
+      <initValue>''</initValue>
+      <name>folderUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>uploadFileUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>========</description>
       <initValue>''</initValue>
       <name>TEMP</name>
@@ -230,8 +255,18 @@
       <name>storeModuleVersion</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>for Assets. Depends on environment</description>
-      <initValue>'http://localhost:9107'</initValue>
-      <name>localUrl</name>
+      <description></description>
+      <initValue>''</initValue>
+      <name>userId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ClientId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>ClientSecret</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

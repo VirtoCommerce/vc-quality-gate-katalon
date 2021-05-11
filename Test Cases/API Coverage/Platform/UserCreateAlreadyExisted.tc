@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>UserCreateAlreadyExisted</name>
+   <tag></tag>
+   <comment>TEST CASE: Create already existed user</comment>
+   <testCaseGuid>f4a2022d-d4b6-45d8-a2a6-58cc45d75374</testCaseGuid>
+</TestCaseEntity>

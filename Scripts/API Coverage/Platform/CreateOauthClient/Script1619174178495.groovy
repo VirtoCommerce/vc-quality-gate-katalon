@@ -14,14 +14,14 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/AAccount'))
 
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
+WebUI.comment("TEST CASE: Create oauth key")
+responseNew = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/GenerateNewOauthKey'))
+JsonSlurper slurper = new JsonSlurper()
+Map parsedJson = slurper.parseText(responseNew.getResponseBodyContent())
+GlobalVariable.ClientId = parsedJson.clientId
+GlobalVariable.ClientSecret = parsedJson.clientSecret
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/CreateNewClient'))
 

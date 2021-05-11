@@ -70,4 +70,3 @@ WS.verifyResponseStatusCode(fileAccessB , 404)
 WebUI.comment('TEST CASE: Assets. Delete folder')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [('itemName') : folderUrl]))
 
-

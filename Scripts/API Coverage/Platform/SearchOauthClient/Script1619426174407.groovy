@@ -14,14 +14,17 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper
 
-WebUI.click(findTestObject('UI-B2B/LoginPage/AAccount'))
-
-WebUI.mouseOver(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.click(findTestObject('UI-B2B/LoginPage/ISignOut'))
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/h4LastOrders'), 0)
-
-WebUI.verifyElementNotPresent(findTestObject('UI-B2B/Dashboard/H3MyAccount'), 0)
-
+responseSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SearchOauthClient'))
+JsonSlurper slurper = new JsonSlurper()
+Map parsedJsonSearch = slurper.parseText(responseSearch.getResponseBodyContent())
+String StringJson = parsedJsonSearch.toString()
+if (StringJson.contains(GlobalVariable.ClientId) == true)
+{
+	WebUI.comment("Client exist")
+}
+else
+{
+	WebUI.comment("Client deleted")
+}
