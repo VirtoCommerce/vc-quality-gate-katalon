@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-responseSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SearchOauthClient'))
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthClientSearch'))
 JsonSlurper slurper = new JsonSlurper()
 Map parsedJsonSearch = slurper.parseText(responseSearch.getResponseBodyContent())
 String StringJson = parsedJsonSearch.toString()

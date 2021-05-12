@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CreateNewClient</name>
+   <name>OAuthClientDelete</name>
    <tag></tag>
-   <elementGuidId>4486445c-cfae-44c0-bd84-008ca8b438f9</elementGuidId>
+   <elementGuidId>008bead9-3899-4321-81c2-23fee854d3bb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;clientId\&quot;:\&quot;${clientId}\&quot;,\n  \&quot;clientSecret\&quot;:\&quot;${clientSecret}\&quot;,\n  \&quot;displayName\&quot;:\&quot;TestOauth\&quot;,\n  \&quot;permissions\&quot;:\t\t  [\&quot;ept:authorization\&quot;,\n                           \&quot;ept:token\&quot;,\n                           \&quot;gt:authorization_code\&quot;,\n                           \&quot;gt:client_credentials\&quot;],\n  \&quot;postLogoutRedirectUris\&quot;:[],\n  \&quot;redirectUris\&quot;:[],\n  \&quot;type\&quot;:\&quot;confidential\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,27 +29,59 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/oauthapps</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/oauthapps?clientIds=${GlobalVariable.ClientId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.ClientId</defaultValue>
+      <defaultValue>'Customer'</defaultValue>
       <description></description>
       <id>7f1a7b63-82a7-4032-9bb7-fe9ec79c79be</id>
       <masked>false</masked>
-      <name>clientId</name>
+      <name>userType</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.ClientSecret</defaultValue>
+      <defaultValue>'qwer@qwer.qwe'</defaultValue>
+      <description></description>
+      <id>a3d703c1-361c-43e3-b208-a6256af06bdf</id>
+      <masked>false</masked>
+      <name>email</name>
+   </variables>
+   <variables>
+      <defaultValue>'AutoUser'</defaultValue>
+      <description></description>
+      <id>83cc8a71-dedb-422c-91bf-4fe75d94a932</id>
+      <masked>false</masked>
+      <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4ae1a995-80e2-4d39-a6f1-38336b971569</id>
+      <masked>false</masked>
+      <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c0974235-1eef-4f16-a598-bc5505a4e1e3</id>
+      <masked>false</masked>
+      <name>contactId</name>
+   </variables>
+   <variables>
+      <defaultValue>GlobalVariable.userPassword</defaultValue>
       <description></description>
       <id>c6ff57aa-b6c8-4e7e-b7b4-60ee2e43dad7</id>
       <masked>false</masked>
-      <name>clientSecret</name>
+      <name>userPassword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -63,6 +96,8 @@ import com.kms.katalon.core.util.KeywordUtil
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

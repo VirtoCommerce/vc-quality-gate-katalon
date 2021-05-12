@@ -18,10 +18,10 @@ import groovy.json.JsonSlurper
 
 
 WebUI.comment("TEST CASE: Create oauth key")
-responseNew = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/GenerateNewOauthKey'))
+responseNew = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthKeyGenerate'))
 JsonSlurper slurper = new JsonSlurper()
 Map parsedJson = slurper.parseText(responseNew.getResponseBodyContent())
 GlobalVariable.ClientId = parsedJson.clientId
 GlobalVariable.ClientSecret = parsedJson.clientSecret
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/CreateNewClient'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthClientCreate'))
 
