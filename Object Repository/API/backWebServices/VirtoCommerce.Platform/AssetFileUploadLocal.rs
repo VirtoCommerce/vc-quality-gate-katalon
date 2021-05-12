@@ -56,13 +56,6 @@
       <masked>false</masked>
       <name>folderUrl</name>
    </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>283376ab-a096-420c-9ad4-e8c70cc047d5</id>
-      <masked>false</masked>
-      <name>url</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
