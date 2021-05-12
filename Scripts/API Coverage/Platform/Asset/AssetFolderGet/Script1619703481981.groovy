@@ -25,4 +25,3 @@ folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 
 // check if new folder is in the search results
 WS.containsString(folderList, GlobalVariable.folderName, false)
-//WS.verifyElementPropertyValue(folderList, 'results[1].name', GlobalVariable.folderName)
