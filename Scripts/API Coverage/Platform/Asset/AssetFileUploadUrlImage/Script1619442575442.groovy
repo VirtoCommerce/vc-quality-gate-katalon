@@ -18,12 +18,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Upload file by URL')
 
-WebUI.comment (GlobalVariable.localUrl)
-WebUI.comment (GlobalVariable.folderUrl)
-
-uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+uploadFileUrlImg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,
 	('url') : 'https://virtocommerce.blob.core.windows.net/catalog/slide_1.jpg'
 	]))
 //get file url
-GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
+GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrlImg, '[0].url')

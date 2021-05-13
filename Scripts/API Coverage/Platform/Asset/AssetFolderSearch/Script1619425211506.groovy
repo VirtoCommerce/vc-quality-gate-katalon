@@ -28,5 +28,5 @@ WS.containsString(folderList, GlobalVariable.folderName, false)
 GlobalVariable.localUrl = (WS.getElementPropertyValue(folderList, 'results[0].parentUrl'))
 GlobalVariable.folderUrl = GlobalVariable.localUrl + GlobalVariable.folderName // Special url for test in docker
 
-WebUI.comment (GlobalVariable.localUrl)
-WebUI.comment (GlobalVariable.folderUrl)
+WebUI.comment ('Local URL is: ' + GlobalVariable.localUrl)
+WebUI.comment ('Folder URL is: ' + GlobalVariable.folderUrl)
