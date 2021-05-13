@@ -78,6 +78,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>37793dc0-e5a1-4438-b34f-fe34acbba9ed</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccessAfterDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>893bca20-dcb0-42d0-af70-d6dbbe64df9e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
