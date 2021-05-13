@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Check that new folder in the list of all folders</description>
    <name>AssetFolderGet</name>
    <tag></tag>
    <comment>TEST CASE: Assets. Check list on CI environment. Added /assets in url</comment>

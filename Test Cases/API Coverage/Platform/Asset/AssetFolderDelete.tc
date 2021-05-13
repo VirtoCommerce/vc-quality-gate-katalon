@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Delete created folder with files inside</description>
    <name>AssetFolderDelete</name>
    <tag></tag>
    <comment>TEST CASE: Assets. Delete folder</comment>

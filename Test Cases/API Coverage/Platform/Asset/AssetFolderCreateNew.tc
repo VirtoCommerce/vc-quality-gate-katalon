@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
-   <name>AssetFolderCreate</name>
+   <description>Creation new folder in asset blob</description>
+   <name>AssetFolderCreateNew</name>
    <tag></tag>
    <comment>TEST CASE: Assets. Create new folder</comment>
    <testCaseGuid>01358f08-1e29-425c-a891-90e33b157094</testCaseGuid>

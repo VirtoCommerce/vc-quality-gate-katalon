@@ -21,7 +21,7 @@
       <guid>ef8ae7f9-370f-431a-a48f-9d418ebabb87</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>eea4e54c-bab0-4354-aed1-dc1436351090</guid>

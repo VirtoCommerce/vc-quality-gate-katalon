@@ -15,7 +15,7 @@
   &quot;parameters&quot;: [
     {
       &quot;name&quot;: &quot;file&quot;,
-      &quot;value&quot;: &quot;Data Files/testuploadfile.jpeg&quot;,
+      &quot;value&quot;: &quot;TestFiles/testuploadfile.jpeg&quot;,
       &quot;type&quot;: &quot;File&quot;,
       &quot;contentType&quot;: &quot;image/jpeg&quot;
     }
