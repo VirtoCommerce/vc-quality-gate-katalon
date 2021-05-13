@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Check access to the uploaded file that we could download it</description>
+   <description>Check access to the uploaded file. Possible to download</description>
    <name>AssetFileAccess</name>
    <tag></tag>
    <comment>TEST CASE: Assets. Check access to file

@@ -15,17 +15,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('TEST CASE: Assets. Check access to file')
 
+WebUI.comment (GlobalVariable.uploadFileUrl)
 
-WebUI.comment('TEST CASE: Assets. Check errors during to creation a new folder')
-
-HashMap<String, String> responseMap = GlobalVariable.folderNameList
- 
-for (String name : responseMap.keySet()) {
-	WebUI.comment("Attempt to create folder with name: \"" + name + "\". Received error should be is: " + responseMap.get(name));
-	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
-		('folderName') : name,
-		('parentUrl') : ''
-		]))
-	WS.verifyElementPropertyValue(response, 'message', responseMap.get(name))
-}
+fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileAccess', [('fileUrl') : GlobalVariable.uploadFileUrl]))
+WS.verifyResponseStatusCode(fileAccessA, 404)
