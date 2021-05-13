@@ -3,6 +3,6 @@
    <description></description>
    <name>AssetFileAccess</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE: Assets. Check access to file</comment>
    <testCaseGuid>55738c1b-0c7f-4dca-85c3-66f7916110f2</testCaseGuid>
 </TestCaseEntity>

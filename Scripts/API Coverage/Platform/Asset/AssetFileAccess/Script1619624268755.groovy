@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Check access to file')
 
-println GlobalVariable.uploadFileUrl
+WebUI.comment (GlobalVariable.uploadFileUrl)
 
 fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileAccess', [('fileUrl') : GlobalVariable.uploadFileUrl]))
 WS.verifyResponseStatusCode(fileAccessA, 200)

@@ -27,3 +27,6 @@ folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 WS.containsString(folderList, GlobalVariable.folderName, false)
 GlobalVariable.localUrl = (WS.getElementPropertyValue(folderList, 'results[0].parentUrl'))
 GlobalVariable.folderUrl = GlobalVariable.localUrl + GlobalVariable.folderName // Special url for test in docker
+
+WebUI.comment (GlobalVariable.localUrl)
+WebUI.comment (GlobalVariable.folderUrl)
