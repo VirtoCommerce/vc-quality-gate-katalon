@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Validation all error steps of folder creation</description>
    <name>AssetFolderCreateErrorValidation</name>
    <tag></tag>
    <comment>TEST CASE: Assets. Check errors during to creation a new folder</comment>
