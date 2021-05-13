@@ -15,23 +15,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-
-
-//String textShipment = new File('Data Files/testUploadFile.jpg')
-//println textShipment
-//
-//
-//def jsonBodyContent = new groovy.json.JsonBuilder(textShipment)
-//// Convert Json into String
-//String bodyContent = jsonBodyContent.toString()
-//RequestObject fileUploadRequest = findTestObject('')
-//// Create and set body content property
-//fileUploadRequest.setBodyContent(new HttpTextBodyContent(bodyContent))
-
-
 WebUI.comment('TEST CASE: Assets. Upload file from local')
-println GlobalVariable.folderUrl
-WebUI.comment (GlobalVariable.folderUrl)
-uploadFileLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUploadLocal', [
+
+uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUploadLocal', [
 	('folderUrl') : GlobalVariable.folderUrl
 	]))
+//get file url
+GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')

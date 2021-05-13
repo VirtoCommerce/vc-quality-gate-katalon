@@ -3,6 +3,8 @@
    <description></description>
    <name>AssetFolderSearch</name>
    <tag></tag>
-   <comment>TEST CASE: Assets. Search folder</comment>
+   <comment>TEST CASE: Assets. Search folder
+GlobalVariable.localUrl
+GlobalVariable.folderUrl</comment>
    <testCaseGuid>08c4865e-407e-498e-bd95-18c73e27170a</testCaseGuid>
 </TestCaseEntity>
