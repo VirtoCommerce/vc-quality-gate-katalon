@@ -262,11 +262,11 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>ClientId</name>
+      <name>clientId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>ClientSecret</name>
+      <name>clientSecret</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
