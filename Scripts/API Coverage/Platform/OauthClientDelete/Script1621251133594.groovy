@@ -14,17 +14,10 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper
 
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthClientSearch'))
-JsonSlurper slurper = new JsonSlurper()
-Map parsedJsonSearch = slurper.parseText(responseSearch.getResponseBodyContent())
-String StringJson = parsedJsonSearch.toString()
-if (StringJson.contains(GlobalVariable.ClientId) == true)
-{
-	WebUI.comment("Client exist")
-}
-else
-{
-	WebUI.comment("Client deleted")
-}
+WebUI.comment("TEST CASE: Delete client and check this")
+
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthClientDelete', [('clientId') : GlobalVariable.clientId]))
+
+responseSearchDel = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthClientSearch'))
+WS.verifyElementPropertyValue(responseSearchDel, 'totalCount', '0')

@@ -42,14 +42,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.ClientId</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>7f1a7b63-82a7-4032-9bb7-fe9ec79c79be</id>
       <masked>false</masked>
       <name>clientId</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.ClientSecret</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>c6ff57aa-b6c8-4e7e-b7b4-60ee2e43dad7</id>
       <masked>false</masked>

@@ -14,14 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper
+import groovy.json.JsonSlurper as JsonSlurper
 
+WebUI.comment("TEST CASE: Search created client")
 
-WebUI.comment("TEST CASE: Create oauth key")
-responseNew = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthKeyGenerate'))
-JsonSlurper slurper = new JsonSlurper()
-Map parsedJson = slurper.parseText(responseNew.getResponseBodyContent())
-GlobalVariable.ClientId = parsedJson.clientId
-GlobalVariable.ClientSecret = parsedJson.clientSecret
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthClientCreate'))
-
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/OAuthClientSearch'))
+WS.verifyElementPropertyValue(responseSearch, 'totalCount', '1')
