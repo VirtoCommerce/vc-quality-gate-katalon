@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.LocalStorage</name>
+   <name>Asset.DRAFT.LocalStorage</name>
    <tag></tag>
    <elementGuidId>37026a14-da73-46fe-b9d6-2d8dc52ab6eb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -10,24 +10,17 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;contentType&quot;: &quot;multipart/form-data&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;,
-  &quot;parameters&quot;: [
-    {
-      &quot;name&quot;: &quot;inventory&quot;,
-      &quot;value&quot;: &quot;E:\\Dev\\Virto\\VirtoCommerce.Inventory_3.16.0.zip&quot;,
-      &quot;type&quot;: &quot;File&quot;,
-      &quot;contentType&quot;: &quot;application/zip&quot;
-    }
-  ]
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;key\&quot;: \&quot;string\&quot;,\n    \&quot;size\&quot;: 0,\n    \&quot;contentType\&quot;: \&quot;string\&quot;,\n    \&quot;type\&quot;: \&quot;string\&quot;,\n    \&quot;name\&quot;: \&quot;string\&quot;,\n    \&quot;url\&quot;: \&quot;string\&quot;,\n    \&quot;relativeUrl\&quot;: \&quot;string\&quot;,\n    \&quot;createdDate\&quot;: \&quot;2021-05-17T05:33:49.315Z\&quot;,\n    \&quot;modifiedDate\&quot;: \&quot;2021-05-17T05:33:49.315Z\&quot;,\n    \&quot;createdBy\&quot;: \&quot;string\&quot;,\n    \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n    \&quot;id\&quot;: \&quot;string\&quot;\n  }\n]&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
-   <httpBodyType>form-data</httpBodyType>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>multipart/form-data</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -63,7 +56,7 @@ RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
 
 </verificationScript>
    <wsdlAddress></wsdlAddress>
