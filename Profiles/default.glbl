@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8095'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8099'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8115'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8119'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -206,7 +206,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not conatin specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not conatin specsymbols.',, ('qwe--qwe') : 'Folder name must not conatin consecutive dash symbols.']</initValue>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not contain specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not contain specsymbols.',, ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
       <name>folderNameList</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

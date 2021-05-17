@@ -21,7 +21,7 @@
       <guid>ef8ae7f9-370f-431a-a48f-9d418ebabb87</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>eea4e54c-bab0-4354-aed1-dc1436351090</guid>
@@ -44,7 +44,7 @@
    <testCaseLink>
       <guid>66093d13-a182-4a7e-af45-974d95f00281</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -56,7 +56,7 @@
    <testCaseLink>
       <guid>c4d4f7f4-fe41-418d-999c-0ebc3bb1cff4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -68,7 +68,7 @@
    <testCaseLink>
       <guid>880c1983-631e-4857-a299-a6c5141aded3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -76,6 +76,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>37793dc0-e5a1-4438-b34f-fe34acbba9ed</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccessAfterDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>893bca20-dcb0-42d0-af70-d6dbbe64df9e</guid>

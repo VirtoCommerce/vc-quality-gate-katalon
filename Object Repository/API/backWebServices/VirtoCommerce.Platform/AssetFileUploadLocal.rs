@@ -15,7 +15,7 @@
   &quot;parameters&quot;: [
     {
       &quot;name&quot;: &quot;file&quot;,
-      &quot;value&quot;: &quot;Data Files/testuploadfile.jpeg&quot;,
+      &quot;value&quot;: &quot;TestFiles/testuploadfile.jpeg&quot;,
       &quot;type&quot;: &quot;File&quot;,
       &quot;contentType&quot;: &quot;image/jpeg&quot;
     }
@@ -55,13 +55,6 @@
       <id>1c7ff1bb-764e-4657-9382-9e432f7a1237</id>
       <masked>false</masked>
       <name>folderUrl</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>283376ab-a096-420c-9ad4-e8c70cc047d5</id>
-      <masked>false</masked>
-      <name>url</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
