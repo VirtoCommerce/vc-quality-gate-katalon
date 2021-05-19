@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DeleteClient</name>
+   <name>Asset.DRAFT.LocalStorage</name>
    <tag></tag>
-   <elementGuidId>008bead9-3899-4321-81c2-23fee854d3bb</elementGuidId>
+   <elementGuidId>37026a14-da73-46fe-b9d6-2d8dc52ab6eb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;key\&quot;: \&quot;string\&quot;,\n    \&quot;size\&quot;: 0,\n    \&quot;contentType\&quot;: \&quot;string\&quot;,\n    \&quot;type\&quot;: \&quot;string\&quot;,\n    \&quot;name\&quot;: \&quot;string\&quot;,\n    \&quot;url\&quot;: \&quot;string\&quot;,\n    \&quot;relativeUrl\&quot;: \&quot;string\&quot;,\n    \&quot;createdDate\&quot;: \&quot;2021-05-17T05:33:49.315Z\&quot;,\n    \&quot;modifiedDate\&quot;: \&quot;2021-05-17T05:33:49.315Z\&quot;,\n    \&quot;createdBy\&quot;: \&quot;string\&quot;,\n    \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n    \&quot;id\&quot;: \&quot;string\&quot;\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,56 +29,18 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/oauthapps?clientIds=${GlobalVariable.ClientId}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/modules/localstorage</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <variables>
-      <defaultValue>'Customer'</defaultValue>
-      <description></description>
-      <id>7f1a7b63-82a7-4032-9bb7-fe9ec79c79be</id>
-      <masked>false</masked>
-      <name>userType</name>
-   </variables>
-   <variables>
-      <defaultValue>'qwer@qwer.qwe'</defaultValue>
-      <description></description>
-      <id>a3d703c1-361c-43e3-b208-a6256af06bdf</id>
-      <masked>false</masked>
-      <name>email</name>
-   </variables>
-   <variables>
-      <defaultValue>'AutoUser'</defaultValue>
-      <description></description>
-      <id>83cc8a71-dedb-422c-91bf-4fe75d94a932</id>
-      <masked>false</masked>
-      <name>userName</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>4ae1a995-80e2-4d39-a6f1-38336b971569</id>
-      <masked>false</masked>
-      <name>storeId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>c0974235-1eef-4f16-a598-bc5505a4e1e3</id>
-      <masked>false</masked>
-      <name>contactId</name>
-   </variables>
-   <variables>
-      <defaultValue>GlobalVariable.userPassword</defaultValue>
-      <description></description>
-      <id>c6ff57aa-b6c8-4e7e-b7b4-60ee2e43dad7</id>
-      <masked>false</masked>
-      <name>userPassword</name>
-   </variables>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -85,15 +48,16 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
-
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(prettyJson)
+KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

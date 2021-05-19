@@ -18,12 +18,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Upload ZIP file by URL')
 
-println GlobalVariable.localUrl
-println GlobalVariable.folderUrl
-
-uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,
 	('url') : 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
 	]))
 //get file url
-GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadRequest, '[0].url')
+GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].url')

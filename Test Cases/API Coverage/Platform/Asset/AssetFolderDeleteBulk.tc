@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Check BULK deletion for 2 items</description>
    <name>AssetFolderDeleteBulk</name>
    <tag></tag>
    <comment>TEST CASE: Assets. Bulk delete folders</comment>

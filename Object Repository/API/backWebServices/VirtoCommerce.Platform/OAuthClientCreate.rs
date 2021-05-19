@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CreateNewClient</name>
+   <name>OAuthClientCreate</name>
    <tag></tag>
    <elementGuidId>4486445c-cfae-44c0-bd84-008ca8b438f9</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
@@ -28,6 +29,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/platform/oauthapps</restUrl>
@@ -35,16 +37,19 @@
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.ClientId</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>7f1a7b63-82a7-4032-9bb7-fe9ec79c79be</id>
       <masked>false</masked>
       <name>clientId</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.ClientSecret</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>c6ff57aa-b6c8-4e7e-b7b4-60ee2e43dad7</id>
       <masked>false</masked>
@@ -63,6 +68,8 @@ import com.kms.katalon.core.util.KeywordUtil
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

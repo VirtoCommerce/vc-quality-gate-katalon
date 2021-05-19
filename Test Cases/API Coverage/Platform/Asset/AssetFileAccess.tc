@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Check access to the uploaded file. Possible to download</description>
    <name>AssetFileAccess</name>
    <tag></tag>
-   <comment></comment>
+   <comment>TEST CASE: Assets. Check access to file
+GlobalVariable.uploadFileUrl</comment>
    <testCaseGuid>55738c1b-0c7f-4dca-85c3-66f7916110f2</testCaseGuid>
 </TestCaseEntity>
