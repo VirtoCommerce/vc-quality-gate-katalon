@@ -23,5 +23,9 @@ Random rnd = new Random()
 //GlobalVariable.userName = GlobalVariable.userName+rnd.nextInt(20)
 //println("USER : " + GlobalVariable.userName)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', [('email') : rnd.nextInt(100)+'@email.com', ('userName') : GlobalVariable.userName, ('storeId') : GlobalVariable.storeId, ('contactId') : GlobalVariable.contactId]))
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', [('email') : rnd.next(100)+'@email.com', ('userName') : GlobalVariable.userName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
+	('email') : rnd.nextInt(100)+'@email.com', 
+	('userName') : GlobalVariable.userName, 
+	('storeId') : GlobalVariable.storeId, 
+	('contactId') : GlobalVariable.contactId
+	]))

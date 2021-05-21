@@ -20,35 +20,38 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Update userName/email/userType')
 
 //set new userName in global variables
-GlobalVariable.userName = GlobalVariable.userName + "UPD"
+GlobalVariable.userName = GlobalVariable.userName + "Updated"
+GlobalVariable.email = GlobalVariable.email + "Updated"
+
+WebUI.comment("USER ID IS : " + GlobalVariable.userId)
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
 	('userName') : GlobalVariable.userName,
-	('userEmail') : GlobalVariable.email + "UPD",
+	('userEmail') : GlobalVariable.email,
 	('userId') : GlobalVariable.userId,
-	('userType') : "Manager",
-	('emailConfirmed')	: "false"
+	('userType') : 'Manager',
+	('emailConfirmed')	: 'true'
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 WS.verifyElementPropertyValue(response, 'errors', '[]')
 
 
-//verify that updates appllies
+// Verify that updates appllies
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
-	('userName') : GlobalVariable.userName
+	('searchPhrase') : GlobalVariable.userName
 	]))
 WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].email', GlobalVariable.email + "UPD")
+WS.verifyElementPropertyValue(response, 'users[0].email', GlobalVariable.email)
 WS.verifyElementPropertyValue(response, 'users[0].id', GlobalVariable.userId)
-WS.verifyElementPropertyValue(response, 'users[0].userType', "Manager")
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', "false")
+WS.verifyElementPropertyValue(response, 'users[0].userType', 'Manager')
+WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true')
 
 
 //set user back to initial state
 //response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
 //	('userName') : GlobalVariable.userName,
 //	('userEmail') : GlobalVariable.email,
-//	('userId') : GlobalVariable.userId,
+//	('userId') : GlobalVariable.userId,	
 //	('userType') : "Customer"
 //	('emailConfirmed')	: "true"
 //	]))

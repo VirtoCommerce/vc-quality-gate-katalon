@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ApiKeyGet</name>
+   <name>ApiKeyUpdate</name>
    <tag></tag>
-   <elementGuidId>e8d8ced1-9481-4666-a751-d1c87f2f2889</elementGuidId>
+   <elementGuidId>1ca298cf-5893-46c6-9d74-c71b2ba05326</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\t\n  \&quot;apiKey\&quot;: \&quot;${api_key}\&quot;,  \n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;userId\&quot;: \&quot;${userId}\&quot;,\n  \&quot;isActive\&quot;: true  ,\n  \&quot;id\&quot;: \&quot;${apiKeyId}\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -25,10 +29,17 @@
       <type>Main</type>
       <value>${GlobalVariable.token}</value>
    </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Cookie</name>
+      <type>Main</type>
+      <value>${GlobalVariable.cookie}</value>
+   </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userId}/apikeys</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/apikeys</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,9 +49,23 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'1eb2fa8ac6574541afdb525833dadb46'</defaultValue>
-      <description>Default Admin userId</description>
-      <id>54b08522-6f4c-407d-8a4e-ddcc46e50f18</id>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>bca86bcd-412c-432b-8965-6ac62043f06b</id>
+      <masked>false</masked>
+      <name>api_key</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>b29f0092-07ff-4f66-943a-50a02d9e01d9</id>
+      <masked>false</masked>
+      <name>apiKeyId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>07477db3-e57d-4d64-aa61-e52c79c46722</id>
       <masked>false</masked>
       <name>userId</name>
    </variables>
@@ -50,13 +75,10 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
-
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(prettyJson)
+KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

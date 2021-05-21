@@ -9,22 +9,24 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Create new user')
+WebUI.comment('TEST CASE: Get existing ApiKey')
 
-// create unique email
-GlobalVariable.email = new Random().nextInt(100)+'@email.com'
+//WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [('userId') : '1eb2fa8ac6574541afdb525833dadb46']))
+//def responseJsonX = new JsonSlurper().parseText(responseX.getResponseBodyContent())
+//WebUI.comment('API KEY : ' + responseJsonX)
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
-	('email') : GlobalVariable.email, 
-	('userName') : GlobalVariable.userName
+responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
+	('userId') : GlobalVariable.userId
 	]))
-
-WS.verifyElementPropertyValue(response, 'succeeded', true)
+WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key+"upd")
+updatedApiKey = WS.getElementPropertyValue(responseApiKey, '[0].apiKey')
+WebUI.comment('NEW API KEY : ' + updatedApiKey)

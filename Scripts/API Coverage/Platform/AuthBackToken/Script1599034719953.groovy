@@ -14,17 +14,23 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrlEncodedBodyContent
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Create new user')
+def request = findTestObject('API/backWebServices/VirtoCommerce.Platform/TokenAuthBack')
 
-// create unique email
-GlobalVariable.email = new Random().nextInt(100)+'@email.com'
+List<UrlEncodedBodyParameter> body = new ArrayList()
+body.add(new UrlEncodedBodyParameter('grant_type', 'password'))
+body.add(new UrlEncodedBodyParameter('scope', 'offline_access'))
+body.add(new UrlEncodedBodyParameter('username', 'admin'))
+body.add(new UrlEncodedBodyParameter('password', 'store'))
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
-	('email') : GlobalVariable.email, 
-	('userName') : GlobalVariable.userName
-	]))
+request.setBodyContent(new HttpUrlEncodedBodyContent(body))
+response = WS.sendRequestAndVerify(request)
 
-WS.verifyElementPropertyValue(response, 'succeeded', true)
+
+// STEP | Parse request and save token to the GlobalVariable
+def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+GlobalVariable.token = ((responseJson.token_type + ' ') + responseJson.access_token)
+WebUI.comment(GlobalVariable.token)

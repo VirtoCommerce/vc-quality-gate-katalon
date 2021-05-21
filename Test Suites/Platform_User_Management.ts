@@ -20,7 +20,7 @@
    <testCaseLink>
       <guid>3341693e-1b30-4222-a246-8ff02ac9e72b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserCreateAlreadyExisted</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -38,13 +38,13 @@
    <testCaseLink>
       <guid>713c4f5f-6f85-4151-9839-b216d41f2055</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserSendVerifictaionEmail</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>eee0eeed-2e9b-44fc-b615-dd8335b879e3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

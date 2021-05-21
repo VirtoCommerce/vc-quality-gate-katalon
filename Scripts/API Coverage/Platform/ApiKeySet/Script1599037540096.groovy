@@ -15,16 +15,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Create new user')
 
-// create unique email
-GlobalVariable.email = new Random().nextInt(100)+'@email.com'
-
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
-	('email') : GlobalVariable.email, 
-	('userName') : GlobalVariable.userName
+//STEP | set new API key to Admin user
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
+	('api_key') : GlobalVariable.api_key,
+	('userId') : GlobalVariable.userId
 	]))
 
-WS.verifyElementPropertyValue(response, 'succeeded', true)
+responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
+	('userId') : GlobalVariable.userId
+	]))
+WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key)
+GlobalVariable.apiKeyId = (WS.getElementPropertyValue(responseApiKey, '[0].id'))
+WebUI.comment('API KEY ID : ' + GlobalVariable.apiKeyId)
