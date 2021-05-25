@@ -23,4 +23,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/SettingBooleanUpdate</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>9eb3a364-7906-44c1-801d-679a07655af7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/GetSettingByModuleID</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
