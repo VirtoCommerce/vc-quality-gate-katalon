@@ -29,4 +29,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/GetSettingByModuleID</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>9b0a6f01-9369-4030-a44a-d1797d9772ac</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/GetSettingByName</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
