@@ -49,7 +49,7 @@
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>false</defaultValue>
+      <defaultValue>'true'</defaultValue>
       <description>example of bool value</description>
       <id>bf794ba6-0fac-413e-8057-0bfcf8c4c25a</id>
       <masked>false</masked>
