@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SettingBooleanUpdate</name>
+   <tag></tag>
+   <comment>TEST CASE: Update userName/email/userType</comment>
+   <testCaseGuid>c38ee228-7cba-4687-89db-eda8a748ec0e</testCaseGuid>
+</TestCaseEntity>
