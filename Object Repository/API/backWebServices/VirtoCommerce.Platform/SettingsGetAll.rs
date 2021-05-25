@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AllSettings</name>
+   <name>SettingsGetAll</name>
    <tag></tag>
    <elementGuidId>e8d89834-aee8-4a26-bd48-4f20978129c8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

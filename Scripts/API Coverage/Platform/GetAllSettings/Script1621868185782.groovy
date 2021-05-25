@@ -19,7 +19,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Get background job status')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AllSettings'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetAll'))
 
 WS.verifyElementPropertyValue(response, '[0].name', "VirtoCommerce.Platform.Security.AccountTypes")
 WS.verifyElementPropertyValue(response, '[0].defaultValue', "Manager")
