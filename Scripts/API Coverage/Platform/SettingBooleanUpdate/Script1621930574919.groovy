@@ -23,28 +23,8 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
             , ('value') : false, ('groupName') : 'Security', ('moduleId') : 'Platform']))
 
 //verify that updates appllies
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByModuleID', [('moduleID') : 'Platform']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob']))
 
-WS.verifyElementPropertyValue(response, '[0].moduleId', "Platform")
-
-responseText = response.getResponseText();
-def json = new JsonSlurper().parseText(responseText)
-WebUI.comment( json.results.size().toString());
-
-//loop is to find and verify updated setting 
-for (def i : (0..json.results.size()) ) {
-	//WebUI.comment(json.title[i].toString())
-	if((json.name[i] == "VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob"))  {
-		WebUI.comment(json.name[i])
-		WebUI.comment(json.value[i].toString())
-		def realvalue =  json.value[i]
-		WS.verifyElementPropertyValue(response, [i].value.value, false)
-
-		//exit the loop if setting  is found
-		break;
-	}
-
-	
-	
-}
-//WS.verifyElementPropertyValue(response, '[0].value', true)
+WS.verifyElementPropertyValue(response, 'moduleId', 'Platform')
+WS.verifyElementPropertyValue(response, 'name', "VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob")
+WS.verifyElementPropertyValue(response, 'value', "false")
