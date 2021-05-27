@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Create security User</description>
    <name>UserCreate</name>
    <tag></tag>
    <comment>TEST CASE: Create new user</comment>

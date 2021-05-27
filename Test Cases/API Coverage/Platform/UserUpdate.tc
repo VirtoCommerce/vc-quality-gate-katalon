@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Update parameters for new User</description>
    <name>UserUpdate</name>
    <tag></tag>
    <comment>TEST CASE: Update userName/email/userType</comment>

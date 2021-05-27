@@ -41,4 +41,58 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeyDelete</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>394ef36e-2d25-40f9-95a4-4a6f69621831</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9efc98ca-d3ea-4423-9499-ef23fe93f3c5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserGetAllRequestsCheck</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>dfe1d46a-c71d-451b-adab-0a48d49b6740</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserCreate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>745c49e9-460c-4d4a-8654-328bcd0b38c1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserCreateAlreadyExisted</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>527c49df-8690-4a4d-9f14-268c95c18c9f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserSearchSetUserID</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a0483a25-1448-42bd-b8cd-f66afacc6a79</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserSendVerifictaionEmail</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3a6dc7b5-d640-4610-a77e-a785f6a98c5e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserUpdate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>31ca830a-deb4-413f-892c-2df4d978c5b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserGetById</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>28dfb26d-22a1-4453-bf1e-a3b0b104fb5c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserDelete</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
