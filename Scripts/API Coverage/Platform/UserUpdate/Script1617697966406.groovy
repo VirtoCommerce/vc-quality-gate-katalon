@@ -21,39 +21,17 @@ WebUI.comment('TEST CASE: Update userName/email/userType')
 
 //set new userName in global variables
 GlobalVariable.userName = GlobalVariable.userName + "Updated"
-GlobalVariable.email = GlobalVariable.email + "Updated"
+GlobalVariable.email = "Updated" + GlobalVariable.email 
 
-WebUI.comment("USER ID IS : " + GlobalVariable.userId)
+//WebUI.comment("USER ID: " + GlobalVariable.userId)
+//WebUI.comment("USER NAME: " + GlobalVariable.userName)
+//WebUI.comment("USER EMAIL: " + GlobalVariable.email)
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
 	('userName') : GlobalVariable.userName,
-	('userEmail') : GlobalVariable.email,
+	('email') : GlobalVariable.email,
 	('userId') : GlobalVariable.userId,
 	('userType') : 'Manager',
-	('emailConfirmed')	: 'true'
+	('emailConfirmed')	: 'false'
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
-WS.verifyElementPropertyValue(response, 'errors', '[]')
-
-
-// Verify that updates appllies
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
-	('searchPhrase') : GlobalVariable.userName
-	]))
-WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].email', GlobalVariable.email)
-WS.verifyElementPropertyValue(response, 'users[0].id', GlobalVariable.userId)
-WS.verifyElementPropertyValue(response, 'users[0].userType', 'Manager')
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true')
-
-
-//set user back to initial state
-//response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
-//	('userName') : GlobalVariable.userName,
-//	('userEmail') : GlobalVariable.email,
-//	('userId') : GlobalVariable.userId,	
-//	('userType') : "Customer"
-//	('emailConfirmed')	: "true"
-//	]))
-//WS.verifyElementPropertyValue(response, 'succeeded', true)
-//WS.verifyElementPropertyValue(response, 'errors', '[]')

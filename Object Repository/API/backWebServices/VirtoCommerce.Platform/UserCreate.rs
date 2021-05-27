@@ -91,7 +91,7 @@
       <name>email</name>
    </variables>
    <variables>
-      <defaultValue>'false'</defaultValue>
+      <defaultValue>'true'</defaultValue>
       <description></description>
       <id>faad9627-b0ef-47de-954f-64a623baf305</id>
       <masked>false</masked>

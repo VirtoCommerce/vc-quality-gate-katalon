@@ -20,13 +20,10 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 WebUI.comment('TEST CASE: Get existing ApiKey')
 
-//WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [('userId') : '1eb2fa8ac6574541afdb525833dadb46']))
-//def responseJsonX = new JsonSlurper().parseText(responseX.getResponseBodyContent())
-//WebUI.comment('API KEY : ' + responseJsonX)
-
 responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
 	('userId') : GlobalVariable.userId
 	]))
 WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key+"upd")
-updatedApiKey = WS.getElementPropertyValue(responseApiKey, '[0].apiKey')
-WebUI.comment('NEW API KEY : ' + updatedApiKey)
+
+//updatedApiKey = WS.getElementPropertyValue(responseApiKey, '[0].apiKey')
+//WebUI.comment('NEW API KEY : ' + updatedApiKey)

@@ -23,6 +23,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 	('apiKeyId') : GlobalVariable.apiKeyId
 	]))
 
+// Verify that apikey is deleted
 responseGetApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
 	('userId') : GlobalVariable.userId
 	]))

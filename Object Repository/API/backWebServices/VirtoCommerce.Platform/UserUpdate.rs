@@ -70,7 +70,7 @@
       <name>userId</name>
    </variables>
    <variables>
-      <defaultValue>'true'</defaultValue>
+      <defaultValue>'false'</defaultValue>
       <description></description>
       <id>24f7e443-af4a-4483-862a-e8e15c22f77c</id>
       <masked>false</masked>

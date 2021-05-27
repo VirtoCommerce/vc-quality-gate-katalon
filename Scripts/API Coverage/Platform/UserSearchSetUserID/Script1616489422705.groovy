@@ -25,7 +25,8 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 
 //verify that received requested user 
 WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'false')
+WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
 
 //set user ID in global variables
 GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')
+WebUI.comment(GlobalVariable.userId)
