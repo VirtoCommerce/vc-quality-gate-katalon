@@ -15,19 +15,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
-
-WebUI.comment('TEST CASE: Delete user')
-
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserDelete', [
-	('userName') : GlobalVariable.userName]
-))
-WS.verifyElementPropertyValue(response, 'succeeded', true)
 
 
-// Verify that user is deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
-	('userName') : GlobalVariable.userName
+//STEP | set new API key to Admin user
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
+	('api_key') : GlobalVariable.api_key,
+	('userId') : GlobalVariable.userId
 	]))
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
-WS.verifyElementPropertyValue(response, 'results', '[]')
+
+responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
+	('userId') : GlobalVariable.userId
+	]))
+WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key)
+GlobalVariable.apiKeyId = (WS.getElementPropertyValue(responseApiKey, '[0].id'))
+WebUI.comment('API KEY ID : ' + GlobalVariable.apiKeyId)

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;roles\&quot;:[  \n   ],\n   \&quot;userType\&quot;:\&quot;${userType}\&quot;,\n   \&quot;status\&quot;:\&quot;${status}\&quot;,\n   \&quot;userName\&quot;:\&quot;${userName}\&quot;,\n   \&quot;email\&quot;:\&quot;${email}\&quot;,\n   \&quot;password\&quot;:\&quot;${password}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;password\&quot;: \&quot;${password}\&quot;,\n  \&quot;memberId\&quot;: \&quot;${contactId}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;status\&quot;: \&quot;${status}\&quot;,\n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;roles\&quot;: [],\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,39 +42,60 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'Manager\r\n'</defaultValue>
+      <defaultValue>'Customer'</defaultValue>
       <description></description>
-      <id>436f7018-e172-4ebb-9bd2-98932d543064</id>
+      <id>7f1a7b63-82a7-4032-9bb7-fe9ec79c79be</id>
       <masked>false</masked>
-      <name>variable</name>
+      <name>userType</name>
    </variables>
    <variables>
-      <defaultValue>'New'</defaultValue>
+      <defaultValue>'AutoUser'</defaultValue>
       <description></description>
-      <id>e96e348e-6a5c-4e8a-957f-3c824b041b14</id>
-      <masked>false</masked>
-      <name>status</name>
-   </variables>
-   <variables>
-      <defaultValue>'QweUser'</defaultValue>
-      <description></description>
-      <id>ee54c1e3-f265-41f8-b1a7-578b671df96c</id>
+      <id>83cc8a71-dedb-422c-91bf-4fe75d94a932</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
    <variables>
-      <defaultValue>'qwe@qwe.com'</defaultValue>
+      <defaultValue>'Password1!'</defaultValue>
       <description></description>
-      <id>b8881731-6d07-4bd1-9b93-9d108136fd21</id>
+      <id>c6ff57aa-b6c8-4e7e-b7b4-60ee2e43dad7</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c0974235-1eef-4f16-a598-bc5505a4e1e3</id>
+      <masked>false</masked>
+      <name>contactId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>4ae1a995-80e2-4d39-a6f1-38336b971569</id>
+      <masked>false</masked>
+      <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>'New'</defaultValue>
+      <description></description>
+      <id>c71f8657-f07c-45d7-b7d9-929efc31fb35</id>
+      <masked>false</masked>
+      <name>status</name>
+   </variables>
+   <variables>
+      <defaultValue>'qwer@qwer.qwe'</defaultValue>
+      <description></description>
+      <id>a3d703c1-361c-43e3-b208-a6256af06bdf</id>
       <masked>false</masked>
       <name>email</name>
    </variables>
    <variables>
-      <defaultValue>'Password-1\r\n\r\n'</defaultValue>
+      <defaultValue>'true'</defaultValue>
       <description></description>
-      <id>a535c961-5d68-4873-b6cf-5c61f8c4581c</id>
+      <id>faad9627-b0ef-47de-954f-64a623baf305</id>
       <masked>false</masked>
-      <name>password</name>
+      <name>emailConfirmed</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
