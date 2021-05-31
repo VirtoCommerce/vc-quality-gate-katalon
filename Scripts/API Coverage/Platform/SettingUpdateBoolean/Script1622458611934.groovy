@@ -19,8 +19,11 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Update setting')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsUpdateBoolean', [('name') : 'VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob'
-            , ('value') : false, ('groupName') : 'Security', ('moduleId') : 'Platform']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsUpdateBoolean', 
+	[('name') : 'VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob', 
+	 ('value') : false, 
+	 ('groupName') : 'Security', 
+	 ('moduleId') : 'Platform']))
 
 //verify that updates appllies
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob']))
