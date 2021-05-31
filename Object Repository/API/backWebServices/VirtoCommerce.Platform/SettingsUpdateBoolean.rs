@@ -82,9 +82,7 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
-
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
 WS.verifyResponseStatusCode(response, 204)</verificationScript>

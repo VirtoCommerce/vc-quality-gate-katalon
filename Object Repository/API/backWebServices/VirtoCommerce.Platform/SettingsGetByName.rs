@@ -57,7 +57,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 202)
+WS.verifyResponseStatusCode(response, 200)
 
 
 
