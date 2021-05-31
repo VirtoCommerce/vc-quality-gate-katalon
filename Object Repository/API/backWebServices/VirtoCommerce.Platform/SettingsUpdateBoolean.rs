@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>UpdateSettingsBoolean</name>
+   <name>SettingsUpdateBoolean</name>
    <tag></tag>
    <elementGuidId>17d09a46-266a-4689-be22-0af0ae19f466</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

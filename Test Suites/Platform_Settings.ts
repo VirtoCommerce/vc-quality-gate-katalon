@@ -15,24 +15,24 @@
       <guid>171f631f-81c7-4602-b0f4-0cc93364f4d5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetAllSettings</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/SettingsGetAll</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f3b3055f-e0cc-40d2-b1c2-cd378c5034be</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/SettingBooleanUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/SettingUpdateBoolean</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9eb3a364-7906-44c1-801d-679a07655af7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetSettingByModuleID</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/SettingGetByModuleID</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9b0a6f01-9369-4030-a44a-d1797d9772ac</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetSettingByName</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/SettingGetByName</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
