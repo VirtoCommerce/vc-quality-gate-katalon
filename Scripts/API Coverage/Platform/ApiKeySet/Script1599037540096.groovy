@@ -15,17 +15,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Search user and get userId of :' + GlobalVariable.userName)
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
-	('searchPhrase') : GlobalVariable.userName
+//STEP | set new API key to Admin user
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
+	('api_key') : GlobalVariable.api_key,
+	('userId') : GlobalVariable.userId
 	]))
 
-//verify that received requested user 
-WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
-
-//set user ID in global variables
-GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')
+responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
+	('userId') : GlobalVariable.userId
+	]))
+WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key)
+GlobalVariable.apiKeyId = (WS.getElementPropertyValue(responseApiKey, '[0].id'))
+WebUI.comment('API KEY ID : ' + GlobalVariable.apiKeyId)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Request - click to send email verification </description>
    <name>UserSendVerifictaionEmail</name>
    <tag></tag>
    <comment>TEST CASE: Send verification email</comment>

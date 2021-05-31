@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platfrom_modules</name>
+   <name>API_key_suite</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
-   <pageLoadTimeout>5</pageLoadTimeout>
+   <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>ee00357b-b4d3-4604-b85a-7e07d8962879</testSuiteGuid>
+   <testSuiteGuid>cc6fc824-9ef9-4137-a674-80a9d4b602cd</testSuiteGuid>
    <testCaseLink>
-      <guid>81a5c27a-1ba2-4f25-93b9-a8e5acb151a1</guid>
+      <guid>1589c985-efb2-4203-a9b7-ea14e6f2693c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>32467063-cf21-47e1-aa90-31cdb0ec8cf8</guid>
+      <guid>4c84e486-5f0b-4995-b151-4cf15fb90a49</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>603b7fc2-4bcb-4794-93a8-6d8bc9544e91</guid>
+      <guid>5374f4ea-316b-4d98-add0-0be5f278c6eb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetInstalledModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeyUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9f29c886-6c76-459f-a4cf-05a576db7dc3</guid>
+      <guid>ded675c7-c689-4012-a088-063997d3c812</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetDependentModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeyGet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>80d3228c-4f42-4335-9473-c6beaf8747c4</guid>
+      <guid>ae6256f7-69cc-429c-9478-258693a6add6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ReloadModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeyDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>394ef36e-2d25-40f9-95a4-4a6f69621831</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

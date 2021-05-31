@@ -14,18 +14,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Search user and get userId of :' + GlobalVariable.userName)
+//Create a new User using GlobalVariable.memberId with random email
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
-	('searchPhrase') : GlobalVariable.userName
+Random rnd = new Random()
+
+// DEBUG CODE | Create random usernames
+//GlobalVariable.userName = GlobalVariable.userName+rnd.nextInt(20)
+//println("USER : " + GlobalVariable.userName)
+
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
+	('email') : rnd.nextInt(100)+'@email.com', 
+	('userName') : GlobalVariable.userName, 
+	('storeId') : GlobalVariable.storeId, 
+	('contactId') : GlobalVariable.contactId
 	]))
-
-//verify that received requested user 
-WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
-
-//set user ID in global variables
-GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')
