@@ -15,13 +15,13 @@
       <guid>a72cd08d-6535-4934-927b-9db43877b6af</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>50740825-ef4a-446c-908d-024e7deb0c60</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5cb32558-a190-45ed-a7e4-8fa4142d6a10</guid>

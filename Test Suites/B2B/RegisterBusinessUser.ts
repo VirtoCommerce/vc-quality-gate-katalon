@@ -9,6 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>991662f1-d1a7-4b6a-82fc-5bd6e98d19bd</testSuiteGuid>
    <testCaseLink>
       <guid>93a48900-cf5a-41c9-b4c0-ded3a0c5d64f</guid>
@@ -80,13 +81,13 @@
       <guid>7bb85365-9808-4607-9563-bb3d4a092ad2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>696da2e8-8cf1-4f4b-9529-7ac50c14c416</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e4f332df-803b-4ef9-b0a8-3bb488e8a081</guid>

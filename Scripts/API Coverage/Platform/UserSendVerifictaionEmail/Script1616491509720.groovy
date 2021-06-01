@@ -22,4 +22,4 @@ WebUI.comment('TEST CASE: Send verification email')
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSendVerificationEmail', [
 	('userId') : GlobalVariable.userId
 	]))
-// No verification for this response because body is empty
+// No verification for this response because body is empty. Need to find out how to check via Email in future

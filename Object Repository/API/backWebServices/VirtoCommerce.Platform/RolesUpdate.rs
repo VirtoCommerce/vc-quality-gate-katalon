@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;,\n   \&quot;description\&quot;: \&quot;${description}\&quot;,\n   \&quot;permissions\&quot;: [\n      {\n         \&quot;id\&quot;:\&quot;security:call_api\&quot;,\n         \&quot;name\&quot;:\&quot;security:call_api\&quot;,\n         \&quot;assignedScopes\&quot;:[],\n         \&quot;availableScopes\&quot;:[]\n      }\n   ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;,\n   \&quot;description\&quot;: \&quot;${description}\&quot;,\n   \&quot;permissions\&quot;: [ ${permissions} ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -49,18 +49,25 @@
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>'description'</defaultValue>
+      <defaultValue>'test description'</defaultValue>
       <description></description>
       <id>fc8124a8-3e7e-4475-bc34-4913f9dbdd39</id>
       <masked>false</masked>
       <name>description</name>
    </variables>
    <variables>
-      <defaultValue>'rolesID'</defaultValue>
+      <defaultValue>'rolesId'</defaultValue>
       <description></description>
       <id>0a2768bd-b95c-4fec-8deb-1c70f9b44e94</id>
       <masked>false</masked>
       <name>id</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f2715695-c9f6-4be9-aa59-be73c261631f</id>
+      <masked>false</masked>
+      <name>permissions</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -29,7 +29,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?folderUrl=${folderName}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?folderUrl=${folderName}&amp;keyword=${keyword}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -39,11 +39,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'http://localhost:9101/assets'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>cc65020b-d5c4-4b47-b0a9-481ab383941b</id>
       <masked>false</masked>
       <name>folderName</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2474aa2a-238e-425c-bd92-58cad6a36bb7</id>
+      <masked>false</masked>
+      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -58,7 +65,6 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())

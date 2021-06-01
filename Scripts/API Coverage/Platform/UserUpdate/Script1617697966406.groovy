@@ -17,29 +17,19 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+
 WebUI.comment('TEST CASE: Update userName/email/userType')
 
 //set new userName in global variables
-GlobalVariable.userName = GlobalVariable.userName + "UPD"
+GlobalVariable.userName = GlobalVariable.userName + "Updated"
+GlobalVariable.email = "Updated" + GlobalVariable.email 
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
 	('userName') : GlobalVariable.userName,
-	('userEmail') : GlobalVariable.email + "UPD",
+	('email') : GlobalVariable.email,
 	('userId') : GlobalVariable.userId,
-	('userType') : "Manager",
-	('emailConfirmed')	: "false"
+	('userType') : 'Manager',
+	('emailConfirmed')	: 'false',
+	('roles') : GlobalVariable.roleFull
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
-WS.verifyElementPropertyValue(response, 'errors', '[]')
-
-
-//verify that updates appllies
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
-	('userName') : GlobalVariable.userName
-	]))
-WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].email', GlobalVariable.email + "UPD")
-WS.verifyElementPropertyValue(response, 'users[0].id', GlobalVariable.userId)
-WS.verifyElementPropertyValue(response, 'users[0].userType', "Manager")
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', "false")
-

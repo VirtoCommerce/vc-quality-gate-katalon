@@ -18,14 +18,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Create new role')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesAdd', [('name') : 'RoleNameAPI']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesAdd', [
+	('name') : GlobalVariable.roleName
+	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
-
-//make sure tha role created and set roleID to global Variables
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : 'RoleNameAPI']))
-
-GlobalVariable.roleID = WS.getElementPropertyValue(response, 'id')
-WebUI.comment(GlobalVariable.roleID)
-String res = response.getResponseText()
-WebUI.comment(res)
-

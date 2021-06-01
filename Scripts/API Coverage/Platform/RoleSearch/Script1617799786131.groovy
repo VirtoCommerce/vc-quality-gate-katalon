@@ -19,10 +19,14 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Search role')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleSearch', [('roleName') : 'RoleNameAPI']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesSearch', [
+	('roleName') : GlobalVariable.roleName
+	]))
 
 //verify that received requested user 
-WS.verifyElementPropertyValue(response, 'roles[0].name', 'RoleNameAPI')
+WS.verifyElementPropertyValue(response, 'roles[0].name', GlobalVariable.roleName)
+GlobalVariable.roleId = WS.getElementPropertyValue(response, 'roles[0].id')
+WebUI.comment(GlobalVariable.roleId)
 
-
-
+//String res = response.getResponseText()
+//WebUI.comment(res)

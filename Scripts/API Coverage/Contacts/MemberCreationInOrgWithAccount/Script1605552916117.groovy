@@ -57,7 +57,7 @@ WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', null)
 WebUI.comment("TEST CASE : Create user in account-contact")
 GlobalVariable.userName = 'tempuser'
 Random rnd = new Random()
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', [('email') : rnd.nextInt(100)+'@email.com', ('userName') : GlobalVariable.userName, ('contactId') : GlobalVariable.contactId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [('email') : rnd.nextInt(100)+'@email.com', ('userName') : GlobalVariable.userName, ('contactId') : GlobalVariable.contactId]))
 
 
 WebUI.comment("TEST CASE : Update user password as admin way")
@@ -65,7 +65,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 
 WebUI.comment("TEST CASE : Delete created user")
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DeleteUser', [ ('userName') : GlobalVariable.userName] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserDelete', [ ('userName') : GlobalVariable.userName] ))
 //WS.delay(10)
 
 

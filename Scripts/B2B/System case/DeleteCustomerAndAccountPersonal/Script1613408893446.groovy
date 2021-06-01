@@ -27,7 +27,7 @@ Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
 println('productJson:' + productJson)
 //Block Account
 def userName = productJson.results[0].securityAccounts[0].userName
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/DeleteUser', [('userName') : userName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserDelete', [('userName') : userName]))
 //Block Contact
 def ContactId = productJson.results[0].id
 WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Customer/Members/MemberDelete', [('id') : ContactId]))

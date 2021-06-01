@@ -18,12 +18,16 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Delete role')
-WebUI.comment(GlobalVariable.roleID)
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleDelete', [('roleID') : GlobalVariable.roleID]))
+
+WebUI.comment(GlobalVariable.roleId)
+
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesDelete', [
+	('roleId') : GlobalVariable.roleId
+	]))
 
 //verify that role  is deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleSearch', [('roleName') : 'RoleNameAPI']))
-
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesSearch', [
+	('roleName') : GlobalVariable.roleId
+	]))
 WS.verifyElementPropertyValue(response, 'totalCount', 0)
 WS.verifyElementPropertyValue(response, 'results', '[]')
-

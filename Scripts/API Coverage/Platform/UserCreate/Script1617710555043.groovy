@@ -22,7 +22,7 @@ WebUI.comment('TEST CASE: Create new user')
 // create unique email
 GlobalVariable.email = new Random().nextInt(100)+'@email.com'
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AccountCreateUser', [
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
 	('email') : GlobalVariable.email, 
 	('userName') : GlobalVariable.userName
 	]))

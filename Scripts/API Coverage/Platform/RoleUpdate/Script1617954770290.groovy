@@ -16,31 +16,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Update role')
+WebUI.comment('TEST CASE: Update role and add permissions')
 
-//get variable to create API request
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : 'RoleNameAPI']))
-String id,name
-id = WS.getElementPropertyValue(response, 'id')
-WebUI.comment(id)
-WebUI.comment(GlobalVariable.roleID)
-name = WS.getElementPropertyValue(response, 'name')
-WebUI.comment(name)
+GlobalVariable.roleName = GlobalVariable.roleName + "Updated"
+WebUI.comment(GlobalVariable.roleName)
+
+//{"id":"security:call_api","name":"security:call_api","assignedScopes":[],"availableScopes":[]}
+GlobalVariable.rolePermission = "{\"id\":\"security:call_api\",\"name\":\"security:call_api\",\"assignedScopes\":[],\"availableScopes\":[]}"
+println GlobalVariable.rolePermission
 
 //API to update roles information
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', 
-	[('name') : 'RoleNameAPI', 
-	 ('id') : GlobalVariable.roleID, 
-	 ('description') : 'description updated']))
-
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', [
+	('id') : GlobalVariable.roleId,
+	('name') : GlobalVariable.roleName,
+	('description') : 'Description Updated',
+	('permissions') : GlobalVariable.rolePermission
+	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 
-//make sure tha role updated, get update role
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RoleByName', [('roleName') : name]))
 
-//verify that received requested user
-WS.verifyElementPropertyValue(response, 'description', 'description updated')
-WS.verifyElementPropertyValue(response, 'permissions[0].id', "security:call_api")
-WS.verifyElementPropertyValue(response, 'permissions[0].name', "security:call_api")
-WS.verifyElementPropertyValue(response, 'permissions[0].assignedScopes', '[]')
-WS.verifyElementPropertyValue(response, 'permissions[0].availableScopes', '[]')
+////make sure tha role updated, get update role
+//response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesByName', [('roleName') : name]))
+//
+////verify that received requested user
+//WS.verifyElementPropertyValue(response, 'description', 'description updated')
+//WS.verifyElementPropertyValue(response, 'permissions[0].id', "security:call_api")
+//WS.verifyElementPropertyValue(response, 'permissions[0].name', "security:call_api")
+//WS.verifyElementPropertyValue(response, 'permissions[0].assignedScopes', '[]')
+//WS.verifyElementPropertyValue(response, 'permissions[0].availableScopes', '[]')

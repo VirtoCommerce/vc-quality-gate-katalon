@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>DRAFT-RoleAssignToUSer</name>
-   <tag></tag>
-   <comment>TEST CASE: Update userName/email/userType</comment>
-   <testCaseGuid>446e218f-7b3a-4d8e-97d8-837ae7ffc2f8</testCaseGuid>
-</TestCaseEntity>
