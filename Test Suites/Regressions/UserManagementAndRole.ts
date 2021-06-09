@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>UserROle</name>
+   <name>UserManagementAndRole</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -11,18 +11,6 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>387d1184-f925-463d-abdb-fbcd92b56590</testSuiteGuid>
-   <testCaseLink>
-      <guid>2e542f0d-52e9-47f2-8ba5-a2356fd33db3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>31231f0b-ee17-4674-a591-7233d743fd3e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
-   </testCaseLink>
    <testCaseLink>
       <guid>265a8753-eb7e-4e72-a6f7-6d6aa9a089ef</guid>
       <isReuseDriver>false</isReuseDriver>
