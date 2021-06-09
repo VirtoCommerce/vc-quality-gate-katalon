@@ -23,4 +23,14 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 
 WS.verifyElementPropertyValue(response, 'is64BitProcess', 'true')
 
+responseText = response.getResponseText();
+def json = new JsonSlurper().parseText(responseText)
+WebUI.comment( json.installedModules.size().toString());
+
+//loop is to find check that no error for modules
+for (def i : (0..json.installedModules.size()-1) ) {
+	def validationerror = 'installedModules'+'['+ i + ']'+'.validationErrors'
+	WS.verifyElementPropertyValue(response, validationerror, "[]")	
+
+}
 
