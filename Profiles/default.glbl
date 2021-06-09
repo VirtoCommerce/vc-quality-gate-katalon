@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8095'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8088'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8115'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8108'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -166,7 +166,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkVFRkFFRTQ2NUE5OUZDQjdGOTIyREY4M0FDQjY5RjhDN0IzMkZBQjAiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiMWViMmZhOGFjNjU3NDU0MWFmZGI1MjU4MzNkYWRiNDYiLCJzdWIiOiJhZG1pbiIsInJvbGUiOiJfX2FkbWluaXN0cmF0b3IiLCJtZW1iZXJJZCI6IiIsInRva2VuX3VzYWdlIjoiYWNjZXNzX3Rva2VuIiwianRpIjoiOTEyZWQ1NmUtMGFiNi00ZGQzLTk2NmEtNDRjMmY1OGI1YjJmIiwic2NvcGUiOiJvZmZsaW5lX2FjY2VzcyIsImF1ZCI6InJlc291cmNlX3NlcnZlciIsIm5iZiI6MTYyMTU5Mjg2MywiZXhwIjoxNjIxNTk0NjYzLCJpYXQiOjE2MjE1OTI4NjMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6OTEwMy8ifQ.QDc9Zm2uO7jjyPepfkdr_OKURmgmbWWdHANRunyjGgfPnM7qXh6iz1LyLGlCmS49dI4eq1_bKhy_hijmG4xpujqh3raCAu8Kj4LiloELZF1sJsidNX2R_4pTj-AVPSHEkkPQ1bjBwQxLr6A2Wt7-cq4djOZ32mkFT82jK0GIgBXd-0e8NDxIxRgx-SNqdA665-jklIbE-DbYl72LwTaf2oXj9eLdo-Em9pdIMR68uIaQJB4Itgv_CCX6Z2aKaanZTLRoEBZ21RCWDlD3ZROBeTTj9I6PWuDIl13Fs7RtMleyk7ypbw6b5EMgtMa75lKClpi4dtOPo2zbsuVJ-7b1EvKx_vcxd8Ds15wwdhjyQHVjsA2vW_fq2EUkHIjQq_uKMm68XWhswORDERP8OQXQZnH3Jm7g9rbOAo6fzHvcM6AEM_4tazKeDSrByhVHsS7d6yzODYCforCoRAWyJGK4-gPCHryc5eEcx7Dsj8kAwSrs57owLyfj-5j3HcSRDTpY2RWjNPyVf7182tCrVzmO5q3M3R61nRU3GlhmZ8CeOjkmehaJKmO4MBAPELdmZJFVz_fFNP76MlM670BZkgeuWxGwk8xnrNHmihk5mSdavca49Lg0hc2UyFFWo2Jr0iSk9k3k8Eg7dod0w_AC_8qufLMECb4r2OW36s1XgF18pJU'</initValue>
       <name>token</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -195,8 +195,8 @@
       <name>indexDelay</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <description>Admin user ID</description>
+      <initValue>'1eb2fa8ac6574541afdb525833dadb46'</initValue>
       <name>userId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -257,16 +257,36 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>userId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
       <name>clientId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
       <name>clientSecret</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>apiKeyId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'RoleNameAPI'</initValue>
+      <name>roleName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'{&quot;id&quot;:&quot;security:call_api&quot;,&quot;name&quot;:&quot;security:call_api&quot;,&quot;assignedScopes&quot;:[],&quot;availableScopes&quot;:[]}'</initValue>
+      <name>rolePermission</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleFull</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

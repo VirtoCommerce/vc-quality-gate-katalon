@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Get list of all roles</description>
+   <name>RoleGetAllPermissions</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>eb45e2c1-a284-4a1a-b268-64458517202e</testCaseGuid>
+</TestCaseEntity>
