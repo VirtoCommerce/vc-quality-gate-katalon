@@ -19,7 +19,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.comment('TEST CASE: Get role by Name')
 
-//make sure tha role created and set roleID to global Variables
+// verify that role updated and has an new assigned permissons
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesByName', [
 	('roleName') : GlobalVariable.roleName
 	]))
@@ -29,6 +29,8 @@ WS.verifyElementPropertyValue(response, 'permissions[0].name', "security:call_ap
 WS.verifyElementPropertyValue(response, 'permissions[0].assignedScopes', '[]')
 WS.verifyElementPropertyValue(response, 'permissions[0].availableScopes', '[]')
 
+// set roleId
 GlobalVariable.roleId = WS.getElementPropertyValue(response, 'id')
+// set full role JSON (could be used to assign it to user)
 GlobalVariable.roleFull = response.getResponseText()
 WebUI.comment(GlobalVariable.roleFull)

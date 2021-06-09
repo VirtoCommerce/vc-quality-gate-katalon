@@ -20,7 +20,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Update userName/email/userType')
 
-//set new userName in global variables
+//set new userName and Email in global variables
 GlobalVariable.userName = GlobalVariable.userName + "Updated"
 GlobalVariable.email = "Updated" + GlobalVariable.email 
 
@@ -32,4 +32,5 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('emailConfirmed')	: 'false',
 	('roles') : GlobalVariable.roleFull
 	]))
+
 WS.verifyElementPropertyValue(response, 'succeeded', true)

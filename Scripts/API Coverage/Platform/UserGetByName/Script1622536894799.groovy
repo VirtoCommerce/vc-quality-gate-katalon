@@ -23,4 +23,6 @@ responseByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vir
 	]))
 WS.verifyElementPropertyValue(responseByName, 'userName', GlobalVariable.userName)
 WS.verifyElementPropertyValue(responseByName, 'roles[0].name', GlobalVariable.roleName)
+
+// set role as Empty (could be used to delete assignment from user)
 GlobalVariable.roleFull = ''

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Creation of a new role</description>
    <name>RoleCreate</name>
    <tag></tag>
    <comment>TEST CASE: Create new role

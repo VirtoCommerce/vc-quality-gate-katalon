@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Get list of all roles</description>
    <name>RoleGetAllPermissions</name>
    <tag></tag>
    <comment></comment>

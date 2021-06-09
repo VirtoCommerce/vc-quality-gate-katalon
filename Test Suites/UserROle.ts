@@ -12,6 +12,18 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>387d1184-f925-463d-abdb-fbcd92b56590</testSuiteGuid>
    <testCaseLink>
+      <guid>2e542f0d-52e9-47f2-8ba5-a2356fd33db3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>31231f0b-ee17-4674-a591-7233d743fd3e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>265a8753-eb7e-4e72-a6f7-6d6aa9a089ef</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -27,25 +39,25 @@
       <guid>ef6e850b-7718-464f-b6ca-dbbbf115a8a7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/RoleCreate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Roles/RoleCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0f0481ed-202a-4c05-989c-eb11e6cd0abe</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/RoleSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Roles/RoleSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>22c36033-e6a1-444b-9eba-4700c024706e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/RoleUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Roles/RoleUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e8414b66-c13c-46be-b1b1-9976d7b82f89</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/RoleGetByName</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Roles/RoleGetByName</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>32774617-696e-43a1-b3fa-c138db262ed1</guid>
@@ -57,7 +69,7 @@
       <guid>2e29f035-2c9f-403e-a62f-031245808dd6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/RoleRemovePermission</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Roles/RoleRemovePermission</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f7db23c6-76a5-4548-b6dc-f1a953e8d89a</guid>

@@ -18,14 +18,15 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Search user and get userId of :' + GlobalVariable.userName)
+
 WebUI.comment(GlobalVariable.userName)
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
 	('searchPhrase') : GlobalVariable.userName
 	]))
 
-//verify that received requested user 
+// verify that requested user is received 
 WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
 WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
 
-//set user ID in global variables
+// set user Id in global variables
 GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')

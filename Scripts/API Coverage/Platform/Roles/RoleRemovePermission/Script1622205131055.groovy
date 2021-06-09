@@ -16,9 +16,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Update role')
+WebUI.comment('TEST CASE: Update role and remove permissions')
 
-//API to update roles information
+// remove permission by default parameter 'permissions' in request as Empty
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', [
 	('id') : GlobalVariable.roleId,
 	('name') : GlobalVariable.roleName,

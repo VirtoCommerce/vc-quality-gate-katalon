@@ -14,20 +14,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Delete role')
+WebUI.comment('TEST CASE: Update role and add permissions')
 
-WebUI.comment(GlobalVariable.roleId)
+// set new Role name
+GlobalVariable.roleName = GlobalVariable.roleName + "Updated"
+WebUI.comment(GlobalVariable.roleName)
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesDelete', [
-	('roleId') : GlobalVariable.roleId
+// set permission parameters to assign it to role
+GlobalVariable.rolePermission = "{\"id\":\"security:call_api\",\"name\":\"security:call_api\",\"assignedScopes\":[],\"availableScopes\":[]}"
+println GlobalVariable.rolePermission
+
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', [
+	('id') : GlobalVariable.roleId,
+	('name') : GlobalVariable.roleName,
+	('description') : 'Description Updated',
+	('permissions') : GlobalVariable.rolePermission
 	]))
-
-//verify that role  is deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesSearch', [
-	('roleName') : GlobalVariable.roleId
-	]))
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
-WS.verifyElementPropertyValue(response, 'results', '[]')
+WS.verifyElementPropertyValue(response, 'succeeded', true)
