@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>UserUpdate</name>
+   <name>RolesUpdate</name>
    <tag></tag>
-   <elementGuidId>78222d87-32c1-4273-99f5-d3d4d3de7ac6</elementGuidId>
+   <elementGuidId>a05221d8-9036-4f99-82e5-24a8db36c105</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n  \&quot;roles\&quot;: [ ${roles} ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;,\n   \&quot;description\&quot;: \&quot;${description}\&quot;,\n   \&quot;permissions\&quot;: [ ${permissions} ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/roles</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,56 +42,36 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'RoleNameAPI'</defaultValue>
       <description></description>
       <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
       <masked>false</masked>
-      <name>userName</name>
+      <name>name</name>
    </variables>
    <variables>
-      <defaultValue>'Manager'</defaultValue>
+      <defaultValue>'test description'</defaultValue>
       <description></description>
-      <id>852b8fa8-c9a3-4b89-bad8-c8115364e1d4</id>
+      <id>fc8124a8-3e7e-4475-bc34-4913f9dbdd39</id>
       <masked>false</masked>
-      <name>userType</name>
+      <name>description</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'rolesId'</defaultValue>
       <description></description>
-      <id>73dd08ad-e5c2-4242-84fa-fe21a969cbc1</id>
+      <id>0a2768bd-b95c-4fec-8deb-1c70f9b44e94</id>
       <masked>false</masked>
-      <name>email</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>c69bffe4-66b9-423f-acf2-b036c7f8d1d9</id>
-      <masked>false</masked>
-      <name>userId</name>
-   </variables>
-   <variables>
-      <defaultValue>'false'</defaultValue>
-      <description></description>
-      <id>24f7e443-af4a-4483-862a-e8e15c22f77c</id>
-      <masked>false</masked>
-      <name>emailConfirmed</name>
-   </variables>
-   <variables>
-      <defaultValue>'6c3de7a1-ccbe-4a64-8b6d-258dcd92f0f8'</defaultValue>
-      <description></description>
-      <id>2479e8f0-def0-4b75-bece-f992747d7735</id>
-      <masked>false</masked>
-      <name>roleId</name>
+      <name>id</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>3b6ec929-ea75-4622-99a5-8b20bad848a2</id>
+      <id>f2715695-c9f6-4be9-aa59-be73c261631f</id>
       <masked>false</masked>
-      <name>roles</name>
+      <name>permissions</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
@@ -100,10 +80,12 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
 
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

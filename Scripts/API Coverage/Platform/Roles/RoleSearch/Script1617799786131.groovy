@@ -9,27 +9,22 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Check all GET requests related to User')
+WebUI.comment('TEST CASE: Search role')
 
-currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-WS.verifyElementPropertyValue(currentUser, 'id', GlobalVariable.userId)
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesSearch', [
+	('roleName') : GlobalVariable.roleName
+	]))
 
-userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-WS.verifyElementPropertyValue(userByEmail, 'id', GlobalVariable.userId)
-
-userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', GlobalVariable.userId)
-
-userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
-WS.verifyElementPropertyValue(userInfo, 'sub', GlobalVariable.userId)
-
-responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById'))
-WS.verifyElementPropertyValue(responseById, 'userName', 'admin')
+// verify that received requested user 
+WS.verifyElementPropertyValue(response, 'roles[0].name', GlobalVariable.roleName)
+// save roleId
+GlobalVariable.roleId = WS.getElementPropertyValue(response, 'roles[0].id')
+WebUI.comment(GlobalVariable.roleId)

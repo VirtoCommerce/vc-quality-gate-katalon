@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8099'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8088'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8119'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8108'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -268,5 +268,25 @@
       <description></description>
       <initValue>''</initValue>
       <name>apiKeyId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'RoleNameAPI'</initValue>
+      <name>roleName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'{&quot;id&quot;:&quot;security:call_api&quot;,&quot;name&quot;:&quot;security:call_api&quot;,&quot;assignedScopes&quot;:[],&quot;availableScopes&quot;:[]}'</initValue>
+      <name>rolePermission</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleFull</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -17,9 +17,10 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+
 WebUI.comment('TEST CASE: Update userName/email/userType')
 
-//set new userName in global variables
+//set new userName and Email in global variables
 GlobalVariable.userName = GlobalVariable.userName + "Updated"
 GlobalVariable.email = "Updated" + GlobalVariable.email 
 
@@ -28,6 +29,8 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('email') : GlobalVariable.email,
 	('userId') : GlobalVariable.userId,
 	('userType') : 'Manager',
-	('emailConfirmed')	: 'false'
+	('emailConfirmed')	: 'false',
+	('roles') : GlobalVariable.roleFull
 	]))
+
 WS.verifyElementPropertyValue(response, 'succeeded', true)

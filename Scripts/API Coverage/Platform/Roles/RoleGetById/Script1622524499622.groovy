@@ -17,19 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Check all GET requests related to User')
+WebUI.comment('TEST CASE: Get role by Name')
 
-currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-WS.verifyElementPropertyValue(currentUser, 'id', GlobalVariable.userId)
+//make sure tha role created and set roleID to global Variables
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesByName', [
+	('roleName') : GlobalVariable.roleName
+	]))
+WS.verifyElementPropertyValue(response, 'description', 'Description Updated')
+WS.verifyElementPropertyValue(response, 'permissions[0].id', "security:call_api")
+WS.verifyElementPropertyValue(response, 'permissions[0].name', "security:call_api")
+WS.verifyElementPropertyValue(response, 'permissions[0].assignedScopes', '[]')
+WS.verifyElementPropertyValue(response, 'permissions[0].availableScopes', '[]')
 
-userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-WS.verifyElementPropertyValue(userByEmail, 'id', GlobalVariable.userId)
 
-userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', GlobalVariable.userId)
-
-userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
-WS.verifyElementPropertyValue(userInfo, 'sub', GlobalVariable.userId)
-
-responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById'))
-WS.verifyElementPropertyValue(responseById, 'userName', 'admin')
+GlobalVariable.roleId = WS.getElementPropertyValue(response, 'id')
+String res = response.getResponseText()
+WebUI.comment(res)
