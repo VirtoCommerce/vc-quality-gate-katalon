@@ -20,8 +20,16 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Add new property to VirtoCommerce.StoreModule.Core.Model.Store')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', 
-        [('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store', 
-		 ('name') : 'Test Property Store']))
+        [('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store', ('name') : 'Test Property Store']))
 
-WS.verifyElementPropertyValue(response, 'objectType', "VirtoCommerce.StoreModule.Core.Model.Store")
-WS.verifyElementPropertyValue(response, 'name', "Test Property Store")
+WS.verifyElementPropertyValue(response, 'objectType', 'VirtoCommerce.StoreModule.Core.Model.Store')
+WS.verifyElementPropertyValue(response, 'name', 'Test Property Store')
+
+//Verify that property was added 
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', 
+        [('objectType') : 'VirtoCommerce.StoreModule.Core.Model.Store', 
+		 ('keyword') : 'Test Property Store']))
+
+WS.verifyElementPropertyValue(response, 'results[0].name', "Test Property Store")
+WS.verifyElementPropertyValue(response, 'results[0].objectType', "VirtoCommerce.StoreModule.Core.Model.Store")
+WS.verifyElementPropertyValue(response, 'totalCount', 1)

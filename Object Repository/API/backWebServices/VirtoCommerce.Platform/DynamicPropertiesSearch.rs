@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;valueType\&quot;:\&quot;ShortText\&quot;,\n   \&quot;displayNames\&quot;:[\n      {\n         \&quot;locale\&quot;:\&quot;de-DE\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;en-US\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;fr-FR\&quot;\n      }\n   ],\n   \&quot;name\&quot;:\&quot;${name}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;objectType\&quot;:\&quot;${objectType}\&quot;,\n   \&quot;keyword\&quot;: \&quot;${keyword}\&quot;,\n   \&quot;take\&quot;:100\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/properties/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -46,14 +46,14 @@
       <description></description>
       <id>dca3cb61-d931-4692-863e-86b7458d5eb1</id>
       <masked>false</masked>
-      <name>propertyType</name>
+      <name>objectType</name>
    </variables>
    <variables>
       <defaultValue>'TEST'</defaultValue>
       <description></description>
-      <id>b6bb283b-a8e2-4959-9092-6333dbd4aff2</id>
+      <id>ee6b1714-55a1-4c88-9c7a-5e61ba61c633</id>
       <masked>false</masked>
-      <name>name</name>
+      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -69,6 +69,8 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
+
+
 
 
 
