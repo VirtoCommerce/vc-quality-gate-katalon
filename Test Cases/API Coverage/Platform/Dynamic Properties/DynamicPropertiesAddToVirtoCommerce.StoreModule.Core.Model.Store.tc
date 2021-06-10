@@ -3,6 +3,6 @@
    <description></description>
    <name>DynamicPropertiesAddToVirtoCommerce.StoreModule.Core.Model.Store</name>
    <tag></tag>
-   <comment>TEST CASE: Get dynamic properties types</comment>
+   <comment>TEST CASE: Add new property to VirtoCommerce.StoreModule.Core.Model.Store</comment>
    <testCaseGuid>0aa7fe6b-2c92-459f-aa73-17f5993fcf1f</testCaseGuid>
 </TestCaseEntity>
