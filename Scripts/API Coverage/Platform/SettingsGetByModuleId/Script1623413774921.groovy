@@ -19,7 +19,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Get info about all setting within one module')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByModuleId', [
+response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsGetByModuleId', [
 	('moduleId') : 'VirtoCommerce.CustomerSegments'
 	]))
 
