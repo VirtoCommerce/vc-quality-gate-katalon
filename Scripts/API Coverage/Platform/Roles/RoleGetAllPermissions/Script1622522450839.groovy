@@ -14,22 +14,13 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Check all GET requests related to User')
+import groovy.json.JsonSlurper
+import internal.GlobalVariable as GlobalVariable
 
-currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-WS.verifyElementPropertyValue(currentUser, 'id', GlobalVariable.userId)
 
-userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-WS.verifyElementPropertyValue(userByEmail, 'id', GlobalVariable.userId)
+WebUI.comment('TEST CASE: Get roles list')
 
-userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', GlobalVariable.userId)
-
-userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
-WS.verifyElementPropertyValue(userInfo, 'sub', GlobalVariable.userId)
-
-responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById'))
-WS.verifyElementPropertyValue(responseById, 'userName', 'admin')
+responsePermissions = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesPermissions'))
+WS.containsString(responsePermissions, 'cache:reset', false)

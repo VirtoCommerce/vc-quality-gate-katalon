@@ -269,4 +269,24 @@
       <initValue>''</initValue>
       <name>apiKeyId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'RoleNameAPI'</initValue>
+      <name>roleName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'{&quot;id&quot;:&quot;security:call_api&quot;,&quot;name&quot;:&quot;security:call_api&quot;,&quot;assignedScopes&quot;:[],&quot;availableScopes&quot;:[]}'</initValue>
+      <name>rolePermission</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleFull</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

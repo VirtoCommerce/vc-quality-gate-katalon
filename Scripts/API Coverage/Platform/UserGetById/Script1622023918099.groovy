@@ -17,9 +17,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [('userId') : GlobalVariable.userId]))
+WebUI.comment('TEST CASE: Get user info by Id')
 
+responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [
+	('userId') : GlobalVariable.userId
+	]))
+
+// verify that requested user has no assigned roles 
 WS.verifyElementPropertyValue(responseById, 'userName', GlobalVariable.userName)
 WS.verifyElementPropertyValue(responseById, 'email', GlobalVariable.email)
 WS.verifyElementPropertyValue(responseById, 'userType', 'Manager')
 WS.verifyElementPropertyValue(responseById, 'emailConfirmed', 'false')
+WS.verifyElementPropertyValue(responseById, 'roles', '[]')

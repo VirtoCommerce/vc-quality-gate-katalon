@@ -17,19 +17,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Check all GET requests related to User')
+WebUI.comment(GlobalVariable.userName)
+responseByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName', [
+	('userName') : GlobalVariable.userName
+	]))
+WS.verifyElementPropertyValue(responseByName, 'userName', GlobalVariable.userName)
+WS.verifyElementPropertyValue(responseByName, 'roles[0].name', GlobalVariable.roleName)
 
-currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-WS.verifyElementPropertyValue(currentUser, 'id', GlobalVariable.userId)
-
-userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-WS.verifyElementPropertyValue(userByEmail, 'id', GlobalVariable.userId)
-
-userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', GlobalVariable.userId)
-
-userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
-WS.verifyElementPropertyValue(userInfo, 'sub', GlobalVariable.userId)
-
-responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById'))
-WS.verifyElementPropertyValue(responseById, 'userName', 'admin')
+// set role as Empty (could be used to delete assignment from user)
+GlobalVariable.roleFull = ''
