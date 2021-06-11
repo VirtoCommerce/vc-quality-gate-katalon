@@ -23,6 +23,5 @@ response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWeb
 	('moduleId') : 'VirtoCommerce.CustomerSegments'
 	]))
 
-WS.verifyElementPropertyValue(response, '[0].moduleId', "VirtoCommerce.CustomerSegments")
-WS.verifyElementPropertyValue(response, '[0].groupName', "Customer Segments|General")
-
+WS.verifyElementPropertyValue(response, '[0].moduleId', 'VirtoCommerce.CustomerSegments')
+WS.verifyElementPropertyValue(response, '[0].groupName', 'Customer Segments|General')
