@@ -17,9 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Get information about only one setting')
+WebUI.comment('TEST CASE: Get info about all setting within one module')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'VirtoCommerce.ModulesAutoInstallState']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByModuleId', [
+	('moduleId') : 'VirtoCommerce.CustomerSegments'
+	]))
 
-WS.verifyElementPropertyValue(response, 'moduleId', 'Platform')
-WS.verifyElementPropertyValue(response, 'name', "VirtoCommerce.ModulesAutoInstallState")
+WS.verifyElementPropertyValue(response, '[0].moduleId', "VirtoCommerce.CustomerSegments")
+WS.verifyElementPropertyValue(response, '[0].groupName', "Customer Segments|General")

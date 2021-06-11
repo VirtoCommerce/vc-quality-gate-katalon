@@ -17,8 +17,20 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Get info about all setting within one module')
+WebUI.comment('TEST CASE: Update setting')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByModuleID', [('moduleID') : 'Platform']))
-WS.verifyElementPropertyValue(response, '[0].moduleId', "Platform")
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsUpdateBoolean', [
+	('name') : 'VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob', 
+	('value') : false, 
+	('groupName') : 'Security', 
+	('moduleId') : 'Platform'
+	]))
 
+//verify that updates appllies
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
+	('name') : 'VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob'
+	]))
+
+WS.verifyElementPropertyValue(response, 'moduleId', 'Platform')
+WS.verifyElementPropertyValue(response, 'name', "VirtoCommerce.Platform.Security.EnablePruneExpiredTokensJob")
+WS.verifyElementPropertyValue(response, 'value', "false")

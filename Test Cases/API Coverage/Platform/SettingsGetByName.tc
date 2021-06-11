@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Get information abou tsetting by name</description>
-   <name>SettingGetByName</name>
+   <description>Get information about setting by name</description>
+   <name>SettingsGetByName</name>
    <tag></tag>
    <comment>TEST CASE: Get background job status</comment>
    <testCaseGuid>3b62ae81-e4fc-4a21-a98f-a1f8bc4e82ba</testCaseGuid>

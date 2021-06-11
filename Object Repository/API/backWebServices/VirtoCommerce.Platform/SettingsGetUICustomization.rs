@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>SettingsGetByModuleId</name>
+   <name>SettingsGetUICustomization</name>
    <tag></tag>
-   <elementGuidId>f2974e33-3f3e-4a3e-a7b5-ad02baaa7d41</elementGuidId>
+   <elementGuidId>ce069e72-f300-4f81-98a4-5b640bba9199</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/settings/modules/${moduleId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/settings/ui/customization</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +38,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'VirtoCommerce.CustomerSegments'</defaultValue>
+      <defaultValue>'VirtoCommerce.ModulesAutoInstallState'</defaultValue>
       <description></description>
       <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
       <masked>false</masked>
-      <name>moduleId</name>
+      <name>name</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
