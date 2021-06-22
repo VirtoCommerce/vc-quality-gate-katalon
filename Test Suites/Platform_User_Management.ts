@@ -26,7 +26,7 @@
    <testCaseLink>
       <guid>a3994e2d-e680-4482-925e-cfd2f645293b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserGetAllRequestsCheck</testCaseId>
    </testCaseLink>
    <testCaseLink>
