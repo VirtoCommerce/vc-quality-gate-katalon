@@ -22,8 +22,8 @@ WebUI.comment('TEST CASE: Mark Push Notifications as Read')
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/PushNotificationMarkAsRead'))
 
 WS.verifyElementPropertyValue(response, 'notifyEvents[0].errors', '[]')
-WS.verifyElementPropertyValue(response, 'notifyEvents[0].description', 'Import finished')
-WS.verifyElementPropertyValue(response, 'notifyEvents[0].notifyType', 'SampleDataImportPushNotification')
+WS.verifyElementPropertyValue(response, 'notifyEvents[0].notifyType', "IndexProgressPushNotification")
+WS.verifyElementPropertyValue(response, 'notifyEvents[0].description', "Indexation completed successfully")
 WS.verifyElementPropertyValue(response, 'notifyEvents[0].isNew', 'false')
 WS.verifyElementPropertyValue(response, 'newCount', 1)
 

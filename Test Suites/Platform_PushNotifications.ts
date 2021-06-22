@@ -24,6 +24,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>2af9a385-9b9b-49fb-a278-4459311329e6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>53289cd3-b7a3-4953-ac76-52570c9e89c9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
