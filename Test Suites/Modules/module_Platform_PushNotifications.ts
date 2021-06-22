@@ -12,6 +12,12 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>eefac15c-96a3-4ff6-896e-a54f43249b56</testSuiteGuid>
    <testCaseLink>
+      <guid>9a15fb28-da57-48ab-9ac4-27e18b7f4d02</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>53289cd3-b7a3-4953-ac76-52570c9e89c9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
