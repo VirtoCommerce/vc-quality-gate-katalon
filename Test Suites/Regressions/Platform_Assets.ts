@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>AssetsSuite</name>
+   <name>Platform_Assets</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -82,6 +82,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccessAfterDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f0238588-d4b9-43bb-a106-a9b321c8af4d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Delay</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>893bca20-dcb0-42d0-af70-d6dbbe64df9e</guid>
