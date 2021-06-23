@@ -14,7 +14,7 @@
    <testCaseLink>
       <guid>679644e3-bd92-4f75-a663-452234b684ee</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Roles/RoleGetAllPermissions</testCaseId>
    </testCaseLink>
    <testCaseLink>
