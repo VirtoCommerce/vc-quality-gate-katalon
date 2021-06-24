@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Add new property of short text</description>
    <name>DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.ContactAdd</name>
    <tag></tag>
    <comment>TEST CASE: Add new property to VirtoCommerce.StoreModule.Core.Model.Store
