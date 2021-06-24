@@ -161,4 +161,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.OrdersModule.Core.Model.LineItemDelete</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>aa8afd83-0fc1-4357-8a3f-53216e38053e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.OrdersModule.Core.Model.PaymentInAdd</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>39ad0f40-5a4e-4e88-8a5e-77f75e5b4a79</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.OrdersModule.Core.Model.PaymentInUpdate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a0069876-21bf-494a-aef7-77a5d1110848</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.OrdersModule.Core.Model.PaymentInDelete</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
