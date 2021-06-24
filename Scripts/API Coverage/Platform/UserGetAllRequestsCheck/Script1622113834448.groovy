@@ -17,17 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.comment('TEST CASE: Check all GET requests related to User')
+
+adminUserId = '1eb2fa8ac6574541afdb525833dadb46'
+
 currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-WS.verifyElementPropertyValue(currentUser, 'id', GlobalVariable.userId)
+WS.verifyElementPropertyValue(currentUser, 'id', adminUserId)
 
 userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-WS.verifyElementPropertyValue(userByEmail, 'id', GlobalVariable.userId)
+WS.verifyElementPropertyValue(userByEmail, 'id', adminUserId)
 
 userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', GlobalVariable.userId)
+WS.verifyElementPropertyValue(userByName, 'id', adminUserId)
 
 userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
-WS.verifyElementPropertyValue(userInfo, 'sub', GlobalVariable.userId)
+WS.verifyElementPropertyValue(userInfo, 'sub', adminUserId)
 
 responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById'))
 WS.verifyElementPropertyValue(responseById, 'userName', 'admin')

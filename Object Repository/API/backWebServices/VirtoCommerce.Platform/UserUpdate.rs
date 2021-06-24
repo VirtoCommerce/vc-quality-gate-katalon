@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;  \n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n  \&quot;roles\&quot;: [ ${roles} ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -75,6 +75,20 @@
       <id>24f7e443-af4a-4483-862a-e8e15c22f77c</id>
       <masked>false</masked>
       <name>emailConfirmed</name>
+   </variables>
+   <variables>
+      <defaultValue>'6c3de7a1-ccbe-4a64-8b6d-258dcd92f0f8'</defaultValue>
+      <description></description>
+      <id>2479e8f0-def0-4b75-bece-f992747d7735</id>
+      <masked>false</masked>
+      <name>roleId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>3b6ec929-ea75-4622-99a5-8b20bad848a2</id>
+      <masked>false</masked>
+      <name>roles</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

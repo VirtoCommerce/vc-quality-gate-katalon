@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Get information about all settings</description>
+   <name>SettingsGetAll</name>
+   <tag></tag>
+   <comment>TEST CASE: Get background job status</comment>
+   <testCaseGuid>8ffa656f-5376-41ff-a2b0-d201dca8b41a</testCaseGuid>
+</TestCaseEntity>

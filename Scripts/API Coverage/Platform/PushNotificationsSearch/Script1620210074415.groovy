@@ -22,5 +22,5 @@ WebUI.comment('TEST CASE: Search Push Notifications')
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/PushNotificationSearch'))
 
 WS.verifyElementPropertyValue(response, 'notifyEvents[0].errors', '[]')
-WS.verifyElementPropertyValue(response, 'notifyEvents[0].description', "Import finished")
-WS.verifyElementPropertyValue(response, 'notifyEvents[0].notifyType', "SampleDataImportPushNotification")
+WS.verifyElementPropertyValue(response, 'notifyEvents[0].notifyType', "IndexProgressPushNotification")
+WS.verifyElementPropertyValue(response, 'notifyEvents[0].description', "Indexation completed successfully")
