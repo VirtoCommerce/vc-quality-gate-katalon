@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>DynamicPropertiesUpdateVirtoCommerce.StoreModule.Core.Model.Store</name>
+   <name>DynamicPropertiesVirtoCommerce.StoreModule.Core.Model.StoreUpdate</name>
    <tag></tag>
    <comment>TEST CASE: Update property VirtoCommerce.StoreModule.Core.Model.Store
 json.results[0].id.toString()

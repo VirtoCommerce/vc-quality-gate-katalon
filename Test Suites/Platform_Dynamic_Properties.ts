@@ -21,12 +21,12 @@
       <guid>6c959411-e7ae-493e-b005-c1062d206089</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesAddToVirtoCommerce.StoreModule.Core.Model.Store</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.StoreModule.Core.Model.StoreAdd</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>db8e8334-3233-47d7-9b98-d731082d2799</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesUpdateVirtoCommerce.StoreModule.Core.Model.Store</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.StoreModule.Core.Model.StoreUpdate</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

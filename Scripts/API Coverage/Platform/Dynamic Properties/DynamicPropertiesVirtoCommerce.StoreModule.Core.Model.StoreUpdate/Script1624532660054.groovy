@@ -24,9 +24,6 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	 ('name') : 'Test Property Store', 
 	 ('description') : 'description UPD']))
 
-//WS.verifyElementPropertyValue(response, 'objectType', 'VirtoCommerce.StoreModule.Core.Model.Store')
-//WS.verifyElementPropertyValue(response, 'name', 'Test Property Store UPD')
-
 //Verify that property was added 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', 
         [('objectType') : 'VirtoCommerce.StoreModule.Core.Model.Store', 
@@ -37,11 +34,4 @@ WS.verifyElementPropertyValue(response, 'results[0].description', 'description U
 WS.verifyElementPropertyValue(response, 'results[0].objectType', 'VirtoCommerce.StoreModule.Core.Model.Store')
 WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
-//save ID to global variables for future manipulations
-responseText = response.getResponseText()
-
-def json = new JsonSlurper().parseText(responseText)
-GlobalVariable.dynamicPropertyID = json.results[0].id.toString()
-WebUI.comment(json.results[0].id.toString())
-WebUI.comment(GlobalVariable.dynamicPropertyID)
 
