@@ -17,26 +17,31 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Add new property to VirtoCommerce.StoreModule.Core.Model.Store')
+WebUI.comment('TEST CASE: Update property VirtoCommerce.StoreModule.Core.Model.Store')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', 
-        [('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store', ('name') : 'Test Property Store']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyUpdate', 
+	[('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store', 
+	 ('name') : 'Test Property Store', 
+	 ('description') : 'description UPD']))
 
-WS.verifyElementPropertyValue(response, 'objectType', 'VirtoCommerce.StoreModule.Core.Model.Store')
-WS.verifyElementPropertyValue(response, 'name', 'Test Property Store')
+//WS.verifyElementPropertyValue(response, 'objectType', 'VirtoCommerce.StoreModule.Core.Model.Store')
+//WS.verifyElementPropertyValue(response, 'name', 'Test Property Store UPD')
 
 //Verify that property was added 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', 
         [('objectType') : 'VirtoCommerce.StoreModule.Core.Model.Store', 
 		 ('keyword') : 'Test Property Store']))
 
-WS.verifyElementPropertyValue(response, 'results[0].name', "Test Property Store")
-WS.verifyElementPropertyValue(response, 'results[0].objectType', "VirtoCommerce.StoreModule.Core.Model.Store")
+WS.verifyElementPropertyValue(response, 'results[0].name', 'Test Property Store')
+WS.verifyElementPropertyValue(response, 'results[0].description', 'description UPD')
+WS.verifyElementPropertyValue(response, 'results[0].objectType', 'VirtoCommerce.StoreModule.Core.Model.Store')
 WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
 //save ID to global variables for future manipulations
-responseText = response.getResponseText();
+responseText = response.getResponseText()
+
 def json = new JsonSlurper().parseText(responseText)
 GlobalVariable.dynamicPropertyID = json.results[0].id.toString()
 WebUI.comment(json.results[0].id.toString())
-WebUI.comment(GlobalVariable.dynamicPropertyID) 
+WebUI.comment(GlobalVariable.dynamicPropertyID)
+

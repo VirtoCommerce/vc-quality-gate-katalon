@@ -23,4 +23,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesAddToVirtoCommerce.StoreModule.Core.Model.Store</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>db8e8334-3233-47d7-9b98-d731082d2799</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesUpdateVirtoCommerce.StoreModule.Core.Model.Store</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

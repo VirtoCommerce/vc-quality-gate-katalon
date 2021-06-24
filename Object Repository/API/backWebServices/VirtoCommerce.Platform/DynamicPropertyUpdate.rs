@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;:\&quot;${name}\&quot;,\n   \&quot;objectType\&quot;:\&quot;${propertyType}\&quot;,\n   \&quot;valueType\&quot;:\&quot;ShortText\&quot;,\n   \&quot;displayNames\&quot;:[\n      {\n         \&quot;locale\&quot;:\&quot;de-DE\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;en-US\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;fr-FR\&quot;\n      }\n   ],\n   \&quot;id\&quot;:\&quot;${GlobalVariable.dynamicPropertyID}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;:\&quot;${name}\&quot;,\n   \&quot;objectType\&quot;:\&quot;${propertyType}\&quot;,\n   \&quot;valueType\&quot;:\&quot;ShortText\&quot;,\n   \&quot;displayNames\&quot;:[\n      {\n         \&quot;locale\&quot;:\&quot;de-DE\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;en-US\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;fr-FR\&quot;\n      }\n   ],\n   \&quot;id\&quot;:\&quot;${GlobalVariable.dynamicPropertyID}\&quot;,\n   \&quot;description\&quot;:\&quot;${description}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -49,11 +49,18 @@
       <name>propertyType</name>
    </variables>
    <variables>
-      <defaultValue>'UPD'</defaultValue>
+      <defaultValue>'UPD new'</defaultValue>
       <description></description>
       <id>7d4fc892-d213-4ec8-80fd-ffe13d5adc3f</id>
       <masked>false</masked>
       <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>'description'</defaultValue>
+      <description></description>
+      <id>17d52c5f-55d3-4682-a817-89331c5823d2</id>
+      <masked>false</masked>
+      <name>description</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

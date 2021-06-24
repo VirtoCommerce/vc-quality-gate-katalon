@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DynamicPropertiesUpdateVirtoCommerce.StoreModule.Core.Model.Store</name>
+   <tag></tag>
+   <comment>TEST CASE: Update property VirtoCommerce.StoreModule.Core.Model.Store
+json.results[0].id.toString()
+GlobalVariable.dynamicPropertyID</comment>
+   <testCaseGuid>714c6167-08c8-4a43-b0bf-bbfd21a7ee8e</testCaseGuid>
+</TestCaseEntity>
