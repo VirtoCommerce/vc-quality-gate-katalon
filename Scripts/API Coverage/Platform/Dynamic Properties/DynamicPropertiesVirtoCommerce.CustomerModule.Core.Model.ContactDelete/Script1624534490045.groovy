@@ -17,14 +17,14 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Delete property VirtoCommerce.StoreModule.Core.Model.Store')
+WebUI.comment('TEST CASE: Delete property VirtoCommerce.CustomerModule.Core.Model.Contact')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDelete', 
-	[('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store']))
+	[('propertyType') : 'VirtoCommerce.CustomerModule.Core.Model.Contact']))
 
 //Verify that property was added 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', 
-        [('objectType') : 'VirtoCommerce.StoreModule.Core.Model.Store', ('keyword') : 'Test Property Store']))
+        [('objectType') : 'VirtoCommerce.CustomerModule.Core.Model.Contact', ('keyword') : 'Test Property Store']))
 
 WS.verifyElementPropertyValue(response, 'totalCount', 0)
 

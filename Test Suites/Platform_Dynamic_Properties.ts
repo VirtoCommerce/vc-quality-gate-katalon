@@ -35,4 +35,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.StoreModule.Core.Model.StoreDelete</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>c26b2fa9-e05a-4ea3-b146-a9084cf7b022</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.ContactAdd</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bf4aea82-1348-4f04-8be6-cd1cad8134f2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.ContactUpdate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bcacb946-766f-4c6b-a679-0fd23805cc89</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.ContactDelete</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

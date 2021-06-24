@@ -17,14 +17,26 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Delete property VirtoCommerce.StoreModule.Core.Model.Store')
+WebUI.comment('TEST CASE: Add new property to VirtoCommerce.CustomerModule.Core.Model.Contact')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDelete', 
-	[('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', 
+        [('propertyType') : 'VirtoCommerce.CustomerModule.Core.Model.Contact', ('name') : 'Test Property Store']))
+
+WS.verifyElementPropertyValue(response, 'objectType', 'VirtoCommerce.CustomerModule.Core.Model.Contact')
+WS.verifyElementPropertyValue(response, 'name', 'Test Property Store')
 
 //Verify that property was added 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', 
-        [('objectType') : 'VirtoCommerce.StoreModule.Core.Model.Store', ('keyword') : 'Test Property Store']))
+        [('objectType') : 'VirtoCommerce.CustomerModule.Core.Model.Contact', 
+		 ('keyword') : 'Test Property Store']))
 
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
+WS.verifyElementPropertyValue(response, 'results[0].name', "Test Property Store")
+WS.verifyElementPropertyValue(response, 'results[0].objectType', "VirtoCommerce.CustomerModule.Core.Model.Contact")
+WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
+//save ID to global variables for future manipulations
+responseText = response.getResponseText();
+def json = new JsonSlurper().parseText(responseText)
+GlobalVariable.dynamicPropertyID = json.results[0].id.toString()
+WebUI.comment(json.results[0].id.toString())
+WebUI.comment(GlobalVariable.dynamicPropertyID) 
