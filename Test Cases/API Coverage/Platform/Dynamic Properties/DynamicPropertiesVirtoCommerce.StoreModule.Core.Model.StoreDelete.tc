@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DynamicPropertiesVirtoCommerce.StoreModule.Core.Model.StoreDelete</name>
+   <tag></tag>
+   <comment>TEST CASE: Update property VirtoCommerce.StoreModule.Core.Model.Store</comment>
+   <testCaseGuid>07a4596b-ca4d-44f6-92c4-a9ce9c7c053e</testCaseGuid>
+</TestCaseEntity>

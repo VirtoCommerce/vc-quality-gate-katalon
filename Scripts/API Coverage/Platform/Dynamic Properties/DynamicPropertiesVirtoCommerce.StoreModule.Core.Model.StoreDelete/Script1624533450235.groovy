@@ -19,16 +19,12 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Update property VirtoCommerce.StoreModule.Core.Model.Store')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyUpdate', 
-	        [('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store', 
-			 ('name') : 'Test Property Store', ('description') : 'description UPD']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDelete', 
+	[('propertyType') : 'VirtoCommerce.StoreModule.Core.Model.Store']))
 
-//Verify that property was upadted 
+//Verify that property was added 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', 
         [('objectType') : 'VirtoCommerce.StoreModule.Core.Model.Store', ('keyword') : 'Test Property Store']))
 
-WS.verifyElementPropertyValue(response, 'results[0].name', 'Test Property Store')
-WS.verifyElementPropertyValue(response, 'results[0].description', 'description UPD')
-WS.verifyElementPropertyValue(response, 'results[0].objectType', 'VirtoCommerce.StoreModule.Core.Model.Store')
-WS.verifyElementPropertyValue(response, 'totalCount', 1)
+WS.verifyElementPropertyValue(response, 'totalCount', 0)
 
