@@ -107,4 +107,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.VendorDelete</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>6a70abd4-e813-42ac-a4f9-d1434f6aacaa</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.MarketingModule.Core.Model.DynamicContentItemAdd</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ed4e1dba-d166-4566-b51a-9746bc7b377b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.MarketingModule.Core.Model.DynamicContentItemUpdate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>223f0a20-fcd6-446e-bb91-446ae92867af</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.MarketingModule.Core.Model.DynamicContentItemDelete</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
