@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.EmployeeUpdate</name>
+   <tag></tag>
+   <comment>TEST CASE: Update property VirtoCommerce.CustomerModule.Core.Model.Contact</comment>
+   <testCaseGuid>42b27a48-79f2-4c41-ab5d-6e0642847de9</testCaseGuid>
+</TestCaseEntity>

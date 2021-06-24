@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.EmployeeAdd</name>
+   <tag></tag>
+   <comment>TEST CASE: Add new property to VirtoCommerce.CustomerModule.Core.Model.Contact
+json.results[0].id.toString()
+GlobalVariable.dynamicPropertyID</comment>
+   <testCaseGuid>d5158e49-251f-4b30-9663-ec12fc88ca34</testCaseGuid>
+</TestCaseEntity>

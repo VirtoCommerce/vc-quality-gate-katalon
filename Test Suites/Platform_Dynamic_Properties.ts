@@ -53,4 +53,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.ContactDelete</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>4a73cb2d-7217-41fc-8eb0-6d2cbef9ea0b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.EmployeeAdd</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d0db19e9-03e7-42cf-b98e-9b7328042f1f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.EmployeeUpdate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d0930ff4-7384-4210-beb7-e4b7b582e38e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Dynamic Properties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.EmployeeDelete</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
