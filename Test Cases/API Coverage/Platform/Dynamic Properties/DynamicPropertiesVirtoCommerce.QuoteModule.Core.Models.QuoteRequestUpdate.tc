@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Update existed property of short text</description>
+   <name>DynamicPropertiesVirtoCommerce.QuoteModule.Core.Models.QuoteRequestUpdate</name>
+   <tag></tag>
+   <comment>TEST CASE: Update property VirtoCommerce.StoreModule.Core.Model.Store</comment>
+   <testCaseGuid>417a27b0-8332-42df-952c-60b0d8121f7a</testCaseGuid>
+</TestCaseEntity>
