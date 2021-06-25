@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Delete role</description>
+   <description>Delete role and verification</description>
    <name>RoleDelete</name>
    <tag></tag>
    <comment>TEST CASE: Delete role</comment>

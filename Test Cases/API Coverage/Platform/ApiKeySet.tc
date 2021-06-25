@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Add api key to Admin user</description>
+   <description>Add api key to operator@mail.com user</description>
    <name>ApiKeySet</name>
    <tag></tag>
    <comment></comment>
