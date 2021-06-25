@@ -56,7 +56,7 @@
       <name>userId</name>
    </variables>
    <variables>
-      <defaultValue>'admin'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>ad3f5597-5972-4c0a-b9a2-0bd25d559bc9</id>
       <masked>false</masked>
