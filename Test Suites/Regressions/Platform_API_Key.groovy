@@ -31,8 +31,9 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 /**
  * Setup test suite environment.
  */
-@SetUp(skipped = true) // Please change skipped to be false to activate this method.
+@SetUp(skipped = false) // Please change skipped to be false to activate this method.
 def setUp() {
+	GlobalVariable.api_key = '47458b08-606c-4b75-80b0-ce938824e630'
 	// Put your code here.
 }
 
