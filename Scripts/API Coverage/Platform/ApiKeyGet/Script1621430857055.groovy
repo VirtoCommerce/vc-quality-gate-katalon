@@ -23,7 +23,7 @@ WebUI.comment('TEST CASE: Get existing ApiKey')
 responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
 	('userId') : GlobalVariable.userId
 	]))
-WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key+"upd")
+WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key)
 
 //updatedApiKey = WS.getElementPropertyValue(responseApiKey, '[0].apiKey')
 //WebUI.comment('NEW API KEY : ' + updatedApiKey)

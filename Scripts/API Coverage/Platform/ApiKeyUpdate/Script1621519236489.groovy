@@ -19,8 +19,9 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.comment('TEST CASE: Update existing ApiKey')
 
+GlobalVariable.api_key = GlobalVariable.api_key+"upd"
 WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
-	('api_key') : GlobalVariable.api_key+"upd", 
+	('api_key') : GlobalVariable.api_key, 
 	('userId') : GlobalVariable.userId,
 	('apiKeyId') : GlobalVariable.apiKeyId
 	]))
