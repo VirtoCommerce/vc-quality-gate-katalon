@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>ae6256f7-69cc-429c-9478-258693a6add6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeyDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;apiKey\&quot;: \&quot;${api_key}\&quot;,  \n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;userId\&quot;: \&quot;${userId}\&quot;,\n  \&quot;isActive\&quot;: true  \n}&quot;,
+  &quot;text&quot;: &quot;{\t\n  \&quot;apiKey\&quot;: \&quot;${api_key}\&quot;,  \n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userId\&quot;: \&quot;${userId}\&quot;,\n  \&quot;isActive\&quot;: true  \n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -54,6 +54,13 @@
       <id>7d4f5e5c-c077-4339-9348-5eaf78f6a0d3</id>
       <masked>false</masked>
       <name>userId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ad3f5597-5972-4c0a-b9a2-0bd25d559bc9</id>
+      <masked>false</masked>
+      <name>userName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
