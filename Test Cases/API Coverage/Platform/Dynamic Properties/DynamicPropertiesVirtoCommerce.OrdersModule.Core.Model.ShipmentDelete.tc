@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Delete existed property</description>
+   <name>DynamicPropertiesVirtoCommerce.OrdersModule.Core.Model.ShipmentDelete</name>
+   <tag></tag>
+   <comment>TEST CASE: Delete property VirtoCommerce.OrdersModule.Core.Model.LineItem</comment>
+   <testCaseGuid>14912ef0-6165-48b5-9f52-323bd1458525</testCaseGuid>
+</TestCaseEntity>

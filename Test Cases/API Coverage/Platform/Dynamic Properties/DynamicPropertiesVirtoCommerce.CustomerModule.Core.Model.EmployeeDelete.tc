@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Delete existed property of short text</description>
+   <name>DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.EmployeeDelete</name>
+   <tag></tag>
+   <comment>TEST CASE: Delete property VirtoCommerce.CustomerModule.Core.Model.Contact</comment>
+   <testCaseGuid>68861ee4-2bb3-4da6-8e0d-bd16ff1ff911</testCaseGuid>
+</TestCaseEntity>
