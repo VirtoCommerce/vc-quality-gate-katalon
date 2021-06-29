@@ -84,7 +84,7 @@ WebUI.comment("TEST CASE : Delete created user")
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserDelete', [
 	('userName') : GlobalVariable.userName
 	]))
-//WS.delay(10)
+WS.delay(10)
 
 
 WebUI.comment(" TEST CASE : Delete all created members")
@@ -95,10 +95,13 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 // Re-index important to search items
 WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WS.delay(10)
 
 
 WebUI.comment('TEST CASE : Search members. Count 0 in result - contact was deleted')
 responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', [
 	('searchPhrase') : GlobalVariable.firstName
 	]))
-WS.verifyElementPropertyValue(responseContactsSearch, 'totalCount', 0)
+// Count verification couldn't be stable for use, because it depends on the time of build index
+//WS.verifyElementPropertyValue(responseContactsSearch, 'totalCount', 0)
+WS.verifyElementPropertyValue(responseContactsSearch, 'results', '[]')
