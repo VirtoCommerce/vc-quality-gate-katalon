@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.ContentFileNew</name>
+   <name>ContentFileNew</name>
    <tag></tag>
    <elementGuidId>bc2251d7-5489-4844-b79f-519852154477</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -14,10 +14,10 @@
   &quot;charset&quot;: &quot;UTF-8&quot;,
   &quot;parameters&quot;: [
     {
-      &quot;name&quot;: &quot;filex&quot;,
-      &quot;value&quot;: &quot;D:\\Downloads\\reports.zip&quot;,
+      &quot;name&quot;: &quot;file&quot;,
+      &quot;value&quot;: &quot;TestFiles/theme_test_x.zip&quot;,
       &quot;type&quot;: &quot;File&quot;,
-      &quot;contentType&quot;: &quot;multipart/form-data&quot;
+      &quot;contentType&quot;: &quot;&quot;
     }
   ]
 }</httpBodyContent>
@@ -48,6 +48,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>83638630-7a88-40ac-be99-b0805a5b2b58</id>
+      <masked>false</masked>
+      <name>folderUrl</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
