@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Authorization as Admin and save token</description>
+   <name>ConnectToken</name>
+   <tag></tag>
+   <comment>GlobalVariable.token</comment>
+   <testCaseGuid>2bab2bde-72fb-449b-a639-bd394728da6f</testCaseGuid>
+</TestCaseEntity>
