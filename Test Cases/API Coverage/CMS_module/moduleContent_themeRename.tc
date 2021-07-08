@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create, check status, delete in Theme section</description>
+   <name>moduleContent_themeRename</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a183fe6f-1bb2-43d7-915e-83a8c4b12717</testCaseGuid>
+</TestCaseEntity>

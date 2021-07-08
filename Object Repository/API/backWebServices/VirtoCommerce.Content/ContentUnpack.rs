@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}/unpack?archivepath=${archivePath}&amp;destPath=${folderUrl}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}/unpack?archivePath=${archivePath}&amp;destPath=${folderUrl}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -48,16 +48,51 @@
       <masked>false</masked>
       <name>folderUrl</name>
    </variables>
+   <variables>
+      <defaultValue>'themes'</defaultValue>
+      <description></description>
+      <id>c89951bb-dfe0-42d9-872a-b323e213ed09</id>
+      <masked>false</masked>
+      <name>contentType</name>
+   </variables>
+   <variables>
+      <defaultValue>'Electronics'</defaultValue>
+      <description></description>
+      <id>b49b79d3-1b30-45dd-9169-623bba93382a</id>
+      <masked>false</masked>
+      <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ac579662-62bf-459c-a679-0027c5d4e647</id>
+      <masked>false</masked>
+      <name>archivePath</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f952ddc5-a120-4bbc-9e0f-7fcad82d4322</id>
+      <masked>false</masked>
+      <name>destPath</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
+
+def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(listJsonOutput)
 WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

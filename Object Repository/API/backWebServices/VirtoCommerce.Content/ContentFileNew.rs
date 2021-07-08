@@ -39,7 +39,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?folderUrl=</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}?folderUrl=</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -49,11 +49,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'themes'</defaultValue>
       <description></description>
-      <id>83638630-7a88-40ac-be99-b0805a5b2b58</id>
+      <id>9ad4d7e9-a86c-4af2-b0cd-b48c8f1d6649</id>
       <masked>false</masked>
-      <name>folderUrl</name>
+      <name>contentType</name>
+   </variables>
+   <variables>
+      <defaultValue>'Electronics'</defaultValue>
+      <description></description>
+      <id>78b4750f-2fcf-4099-a80d-be4eb628ee22</id>
+      <masked>false</masked>
+      <name>storeId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -61,10 +68,13 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

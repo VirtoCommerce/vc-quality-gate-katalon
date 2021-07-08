@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?relativeUrl=${relativeUrl}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}?relativeUrl=${relativeUrl}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -47,6 +47,20 @@
       <id>c87a4da2-a306-4cc8-8386-dd6494061e20</id>
       <masked>false</masked>
       <name>relativeUrl</name>
+   </variables>
+   <variables>
+      <defaultValue>'themes'</defaultValue>
+      <description></description>
+      <id>dc32d5cf-109b-4461-ba58-f25799c77889</id>
+      <masked>false</masked>
+      <name>contentType</name>
+   </variables>
+   <variables>
+      <defaultValue>'Electronics'</defaultValue>
+      <description></description>
+      <id>6e4a9af1-fb65-4c56-aa62-583099edeb9b</id>
+      <masked>false</masked>
+      <name>storeId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
