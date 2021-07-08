@@ -17,10 +17,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/GetExternalSignInProviders</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>0b01d90c-fc52-48a4-a2e9-cff7c89fb8c0</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ConnectToken</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>
