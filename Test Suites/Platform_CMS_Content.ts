@@ -21,7 +21,7 @@
       <guid>13e8e52d-841a-46ee-9178-70cbbf2024c2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_pages</testCaseId>
+      <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_pagesFolder</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c39e91d0-e28c-4890-afec-d532c1ce4da4</guid>

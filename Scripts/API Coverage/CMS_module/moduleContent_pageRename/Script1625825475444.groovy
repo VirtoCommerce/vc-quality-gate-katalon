@@ -16,28 +16,29 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-WebUI.comment('TEST CASE: Theme. Rename a theme')
+WebUI.comment('TEST CASE: Pages. Rename a page')
 
-GlobalVariable.contentType = "themes"
+GlobalVariable.contentType = "pages"
 
-//First create a theme folder
-createFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
-	('contentType') : GlobalVariable.contentType ,
+//Upload a page file to the platform
+uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
+	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('folderName') : GlobalVariable.folderName
+	('fileName') : 'qwepage.page'
 	]))
 
-//Get the folder Url and parentUrl to set variables for the ContentMove request
-folderData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+//Get the file data set variables for the ContentMove request
+fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId
 	]))
 
 //Set variables for the ContentMove request
-oldUrl = WS.getElementPropertyValue(folderData, '[1].url')
-newUrl = WS.getElementPropertyValue(folderData, '[1].parentUrl') + "renamed"
+oldUrl = WS.getElementPropertyValue(fileData, '[4].url')
+newUrl = oldUrl.replaceAll(/qwepage/, /rename/)
+println newUrl
 
-//Send ContentMove request to rename the folder
+//Send ContentMove request to rename the file
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -45,11 +46,10 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	('newUrl') : newUrl
 	]))
 
-//Verify the folder name has been changed
-renamedFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
-	('contentType') : GlobalVariable.contentType ,
-	('storeId') : GlobalVariable.storeId
+//Verify if the file is accessible via search 
+search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommerce.Content/ContentSearch', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : 'renamed'
 	]))
 
-//Compare the actual folder url to the one that was set
-verification = WS.verifyElementPropertyValue(renamedFolder, '[1].url', newUrl)

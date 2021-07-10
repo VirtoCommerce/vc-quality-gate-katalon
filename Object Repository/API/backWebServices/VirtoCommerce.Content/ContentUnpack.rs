@@ -69,13 +69,6 @@
       <masked>false</masked>
       <name>archivePath</name>
    </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>f952ddc5-a120-4bbc-9e0f-7fcad82d4322</id>
-      <masked>false</masked>
-      <name>destPath</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

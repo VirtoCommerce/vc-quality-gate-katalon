@@ -15,7 +15,7 @@
   &quot;parameters&quot;: [
     {
       &quot;name&quot;: &quot;file&quot;,
-      &quot;value&quot;: &quot;TestFiles/theme_test_x.zip&quot;,
+      &quot;value&quot;: &quot;TestFiles/${fileName}&quot;,
       &quot;type&quot;: &quot;File&quot;,
       &quot;contentType&quot;: &quot;&quot;
     }
@@ -49,7 +49,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'themes'</defaultValue>
+      <defaultValue>'pages'</defaultValue>
       <description></description>
       <id>9ad4d7e9-a86c-4af2-b0cd-b48c8f1d6649</id>
       <masked>false</masked>
@@ -61,6 +61,13 @@
       <id>78b4750f-2fcf-4099-a80d-be4eb628ee22</id>
       <masked>false</masked>
       <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>'theme_test_x.zip'</defaultValue>
+      <description></description>
+      <id>2bcf9048-62f3-48bc-aac3-7a70eb81b0c2</id>
+      <masked>false</masked>
+      <name>fileName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

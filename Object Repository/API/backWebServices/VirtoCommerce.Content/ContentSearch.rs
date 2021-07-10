@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}/search</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}/search?keyword=${keyword}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'themes'</defaultValue>
+      <defaultValue>'pages'</defaultValue>
       <description></description>
       <id>d9e53731-5351-417c-83c7-a68c3f4833b0</id>
       <masked>false</masked>
@@ -50,6 +50,13 @@
       <id>d33e1fc0-20aa-43f2-8570-dcf5ee84cd0c</id>
       <masked>false</masked>
       <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>6a58c21b-0bcd-4056-ba67-25e9ddcf981b</id>
+      <masked>false</masked>
+      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

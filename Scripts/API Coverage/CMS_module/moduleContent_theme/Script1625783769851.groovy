@@ -15,13 +15,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('TEST CASE: Theme. Create/delete theme folder')
+
 GlobalVariable.contentType = "themes"
 
 //Create a folder 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('folderName') : GlobalVariable.folderName 
+	('folderName') : GlobalVariable.folderName
 	]))
 	
 
@@ -44,7 +46,7 @@ stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerc
 statsVerification =	WS.verifyElementPropertyValue(stats, 'themesCount', 2)
 
 //Delete the created folder
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName 

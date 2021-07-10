@@ -17,10 +17,27 @@ import internal.GlobalVariable as GlobalVariable
 
 GlobalVariable.contentType = "pages"
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch'))
+//Create a folder 
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : GlobalVariable.folderName 
+	]))
+	
 
-WS.delay(10)
+//Check if the created folder exists (compare the actual name to a GlobalVariable)
+request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId
+	]))
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete'))
+//Verify folder exists and has the expected name now
+verification = WS.verifyElementPropertyValue(request, '[0].name', GlobalVariable.folderName)
+//WS.delay(10)
+
+//Delete the created folder
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : GlobalVariable.folderName 
+	]))
