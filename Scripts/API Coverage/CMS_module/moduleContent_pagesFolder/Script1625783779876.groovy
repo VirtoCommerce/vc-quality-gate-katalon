@@ -25,15 +25,12 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Conten
 	]))
 	
 
-//Check if the created folder exists (compare the actual name to a GlobalVariable)
+//Check if the created folder exists (search for the name)
 request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
-	('storeId') : GlobalVariable.storeId
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : GlobalVariable.folderName
 	]))
-
-//Verify folder exists and has the expected name now
-verification = WS.verifyElementPropertyValue(request, '[0].name', GlobalVariable.folderName)
-//WS.delay(10)
 
 //Delete the created folder
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [

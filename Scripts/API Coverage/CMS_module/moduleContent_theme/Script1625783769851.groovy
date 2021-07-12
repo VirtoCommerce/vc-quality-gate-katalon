@@ -27,22 +27,19 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Conten
 	]))
 	
 
-//Check if the created folder exists (compare the actual name to a GlobalVariable)
+//Check if the created folder exists (search for folderName)
 request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
-	('storeId') : GlobalVariable.storeId
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : GlobalVariable.folderName
 	]))
-
-//Verify folder has the expected name now
-verification = WS.verifyElementPropertyValue(request, '[1].name', GlobalVariable.folderName)
-//WS.delay(10)
 
 //Get store stats to verify themes count has been changed
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
 	]))
 
-//Verify themes cound has been changed accordingly to the request send
+//Verify themes count has been changed accordingly to the request send
 statsVerification =	WS.verifyElementPropertyValue(stats, 'themesCount', 2)
 
 //Delete the created folder

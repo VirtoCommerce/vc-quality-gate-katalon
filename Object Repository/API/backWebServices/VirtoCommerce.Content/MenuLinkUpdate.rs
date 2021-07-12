@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;id\&quot;: \&quot;${munuListId}\&quot;,\n    \&quot;name\&quot;: \&quot;${menuName}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n    \&quot;language\&quot;: \&quot;fr-FR\&quot;,\n    \&quot;menuLinks\&quot;: [\n        {\n            \&quot;priority\&quot;: 10,\n            \&quot;title\&quot;: \&quot;QweLinkTitle\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages/about_us\&quot;\n        },\n        {\n            \&quot;priority\&quot;: 0,\n            \&quot;title\&quot;: \&quot;QweLinkTitle 2\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages\&quot;\n        }\n    ]\n    //\&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;id\&quot;: \&quot;${menuListId}\&quot;,\n    \&quot;name\&quot;: \&quot;${menuName}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n    \&quot;language\&quot;: \&quot;fr-FR\&quot;,\n    \&quot;menuLinks\&quot;: [\n        {\n            \&quot;priority\&quot;: 10,\n            \&quot;title\&quot;: \&quot;QweLinkTitle\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages/about_us\&quot;\n        },\n        {\n            \&quot;priority\&quot;: 0,\n            \&quot;title\&quot;: \&quot;QweLinkTitle 2\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages\&quot;\n        }\n    ]\n    //\&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -53,7 +53,7 @@
       <description></description>
       <id>54d5f587-4a29-4bc1-b6a7-219a75d8f144</id>
       <masked>false</masked>
-      <name>munuListId</name>
+      <name>menuListId</name>
    </variables>
    <variables>
       <defaultValue>'QweMenuLink'</defaultValue>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Create a blog post/rename/check status/delete in posts section(inside of the folder)</description>
    <name>moduleContent_blogRename</name>
    <tag></tag>
    <comment></comment>

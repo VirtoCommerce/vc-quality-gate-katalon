@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Verify new name, create a link, rename, check status in menu sections</description>
    <name>moduleContent_menuRename</name>
    <tag></tag>
    <comment></comment>

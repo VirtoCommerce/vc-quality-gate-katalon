@@ -21,13 +21,13 @@ WebUI.comment('TEST CASE: Link list.')
 list = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate',[
 	('storeId') : GlobalVariable.storeId,
 	('menuName') : GlobalVariable.menuName,
-	('munuListId') : GlobalVariable.munuListId
+	('menuListId') : GlobalVariable.menuListId
 	]))
 
-//Verify the created list exists()
+//Verify the created list exists
 listVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet',[
 	('storeId') : GlobalVariable.storeId,
-	('munuListId') : GlobalVariable.munuListId
+	('menuListId') : GlobalVariable.menuListId
 	]))
 
 //Get the list data to verify that the added link exists

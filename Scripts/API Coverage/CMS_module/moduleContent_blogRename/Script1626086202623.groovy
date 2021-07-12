@@ -20,15 +20,15 @@ WebUI.comment('TEST CASE: Blogs. Rename a blog/delete a renamed blog')
 
 GlobalVariable.contentType = "blogs"
 
-//Create a folder 
+//Create a blog folder 
 folder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName
 	]))
 
-//To the folder upload a blog
-blog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
+//To the folder upload a post
+post = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName,
@@ -36,14 +36,14 @@ blog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce
 	]))
 
 //Get the blog Url to set variables for the ContentMove request
-blogData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+postData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'qwepage.en-US.md'
 	]))
 
 //Set variables for the ContentMove request
-oldUrl = WS.getElementPropertyValue(blogData, '[0].url')
+oldUrl = WS.getElementPropertyValue(postData, '[0].url')
 newUrl = oldUrl.replaceAll(/qwepage/, /renamed/)
 
 //Send ContentMove request to rename the blog
@@ -55,17 +55,17 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	]))
 
 //Verify that the blog name has been changed
-renamedBlog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+renamedPost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'renamed'
 	]))
 
 //Compare the actual blog url to the one that was set
-verification = WS.verifyElementPropertyValue(renamedBlog, '[0].url', newUrl)
+verification = WS.verifyElementPropertyValue(renamedPost, '[0].url', newUrl)
 
 //Delete the created blog
-deleteBlog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+deletePost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : newUrl

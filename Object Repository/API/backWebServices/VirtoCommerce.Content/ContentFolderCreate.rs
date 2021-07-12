@@ -56,7 +56,7 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'qwefolder'</defaultValue>
+      <defaultValue>'1'</defaultValue>
       <description></description>
       <id>5bf1d449-4ad6-4164-8739-a5ba4de8516f</id>
       <masked>false</masked>

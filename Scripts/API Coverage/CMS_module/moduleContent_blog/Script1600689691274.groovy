@@ -19,7 +19,7 @@ WebUI.comment('TEST CASE: Blog. Create/delete blog folder')
 
 GlobalVariable.contentType = "blogs"
 
-//Create a folder 
+//Create a blog folder 
 folder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -34,7 +34,7 @@ folderVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	('keyword') : 'qwefolder'
 	]))
 
-//Upload a file inside of folder
+//Upload a file inside the folder
 file = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,

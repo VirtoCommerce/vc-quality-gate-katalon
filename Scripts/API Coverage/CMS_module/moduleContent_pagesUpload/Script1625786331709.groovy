@@ -33,7 +33,7 @@ stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerc
 	('storeId') : GlobalVariable.storeId
 	]))
 
-//Verify themes cound has been changed accordingly to the request send
+//Verify pages cound has been changed accordingly to the request send
 statsVerification =	WS.verifyElementPropertyValue(stats, 'pagesCount', 6)
 
 //Verify that the file was successfully uploaded and exists

@@ -45,11 +45,9 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	('newUrl') : newUrl
 	]))
 
-//Verify the folder name has been changed
+//Verify the folder name has been changed (search for new name)
 renamedFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
-	('storeId') : GlobalVariable.storeId
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : 'renamed'
 	]))
-
-//Compare the actual folder url to the one that was set
-verification = WS.verifyElementPropertyValue(renamedFolder, '[1].url', newUrl)

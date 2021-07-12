@@ -27,7 +27,7 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	('fileName') : 'qwepage.page'
 	]))
 
-//Get the file data set variables for the ContentMove request
+//Get the file data to set variables for the ContentMove request
 fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId

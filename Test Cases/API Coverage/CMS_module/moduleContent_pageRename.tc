@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Upload a file, rename, checkstatus in pages section</description>
    <name>moduleContent_pageRename</name>
    <tag></tag>
    <comment></comment>
