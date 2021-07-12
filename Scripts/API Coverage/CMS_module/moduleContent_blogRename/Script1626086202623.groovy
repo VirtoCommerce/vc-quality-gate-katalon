@@ -16,29 +16,37 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-WebUI.comment('TEST CASE: Pages. Rename a page')
+WebUI.comment('TEST CASE: Blogs. Rename a blog/delete a renamed blog')
 
-GlobalVariable.contentType = "pages"
+GlobalVariable.contentType = "blogs"
 
-//Upload a page file to the platform
-uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
-	('contentType') : GlobalVariable.contentType,
+//Create a folder 
+folder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
+	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('fileName') : 'qwepage.page'
+	('folderName') : GlobalVariable.folderName
 	]))
 
-//Get the file data set variables for the ContentMove request
-fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+//To the folder upload a blog
+blog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : GlobalVariable.folderName,
+	('fileName') : 'qwepage.en-US.md'
+	]))
+
+//Get the blog Url to set variables for the ContentMove request
+blogData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
-	('storeId') : GlobalVariable.storeId
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : 'qwepage.en-US.md'
 	]))
 
 //Set variables for the ContentMove request
-oldUrl = WS.getElementPropertyValue(fileData, '[4].url')
+oldUrl = WS.getElementPropertyValue(blogData, '[0].url')
 newUrl = oldUrl.replaceAll(/qwepage/, /renamed/)
-println newUrl
 
-//Send ContentMove request to rename the file
+//Send ContentMove request to rename the blog
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -46,10 +54,19 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	('newUrl') : newUrl
 	]))
 
-//Verify if the file is accessible via search 
-search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommerce.Content/ContentSearch', [
-	('contentType') : GlobalVariable.contentType,
+//Verify that the blog name has been changed
+renamedBlog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'renamed'
 	]))
 
+//Compare the actual blog url to the one that was set
+verification = WS.verifyElementPropertyValue(renamedBlog, '[0].url', newUrl)
+
+//Delete the created blog
+deleteBlog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : newUrl
+	]))

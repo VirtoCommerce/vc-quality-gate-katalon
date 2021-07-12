@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'pages'</defaultValue>
+      <defaultValue>'blogs'</defaultValue>
       <description></description>
       <id>d9e53731-5351-417c-83c7-a68c3f4833b0</id>
       <masked>false</masked>
