@@ -14,8 +14,9 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper
 
-WebUI.comment('TEST CASE: Blog. Create/delete blog folder')
+WebUI.comment('TEST CASE: Blogs. Rename a blog/delete a renamed blog')
 
 GlobalVariable.contentType = "blogs"
 
@@ -25,41 +26,47 @@ folder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName
 	]))
-	
 
-//Check if the created folder exists (compare the actual name to a GlobalVariable)
-folderVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
-	('contentType') : GlobalVariable.contentType ,
-	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'qwefolder'
-	]))
-
-//Upload a file inside the folder
-file = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
+//To the folder upload a post
+post = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName,
 	('fileName') : 'qwepage.en-US.md'
 	]))
 
-//Verify created file exists
-fileVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+//Get the blog Url to set variables for the ContentMove request
+postData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'qwepage.en-US.md'
 	]))
 
-//Get store stats to verify blogs count has been changed
-stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
-	('storeId') : GlobalVariable.storeId
+//Set variables for the ContentMove request
+oldUrl = WS.getElementPropertyValue(postData, '[0].url')
+newUrl = oldUrl.replaceAll(/qwepage/, /renamed/)
+
+//Send ContentMove request to rename the blog
+rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('oldUrl') : oldUrl,
+	('newUrl') : newUrl
 	]))
 
-//Verify themes cound has been changed accordingly to the request send
-statsVerification =	WS.verifyElementPropertyValue(stats, 'blogsCount', 2)
+//Verify that the blog name has been changed
+renamedPost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : 'renamed'
+	]))
 
-//Delete the created folder
-deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+//Compare the actual blog url to the one that was set
+verification = WS.verifyElementPropertyValue(renamedPost, '[0].url', newUrl)
+
+//Delete the created blog
+deletePost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('folderName') : GlobalVariable.folderName 
+	('folderName') : newUrl
 	]))

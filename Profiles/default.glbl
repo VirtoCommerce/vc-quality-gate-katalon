@@ -242,7 +242,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'eae69428-1ed8-4f3a-ba02-feb8ebe13414'</initValue>
-      <name>munuListId</name>
+      <name>menuListId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

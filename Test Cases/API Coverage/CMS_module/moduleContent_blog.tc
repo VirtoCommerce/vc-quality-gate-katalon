@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create, check status, delete in Blog section</description>
+   <description>Create blog + post, check status, delete in Blog section</description>
    <name>moduleContent_blog</name>
    <tag></tag>
    <comment></comment>
