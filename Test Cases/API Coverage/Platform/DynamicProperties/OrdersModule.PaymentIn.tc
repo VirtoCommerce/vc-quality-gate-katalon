@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add, update, delete new property of short text</description>
+   <name>OrdersModule.PaymentIn</name>
+   <tag></tag>
+   <comment>TEST CASE: Add new property to VirtoCommerce.OrdersModule.Core.Model.PaymentIn
+json.results[0].id.toString()
+GlobalVariable.dynamicPropertyId</comment>
+   <testCaseGuid>8818c13d-a10f-4180-83b9-438c40282f23</testCaseGuid>
+</TestCaseEntity>

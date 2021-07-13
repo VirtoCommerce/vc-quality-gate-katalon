@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>DynamicPropertiesGetTypes</name>
-   <tag></tag>
-   <comment>TEST CASE: Get dynamic properties types
-json.results.size().toString()</comment>
-   <testCaseGuid>d87ff9ec-8d47-4c3a-89b1-bc9367158ad1</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Update existed property of short text</description>
-   <name>DynamicPropertiesVirtoCommerce.OrdersModule.Core.Model.PaymentInUpdate</name>
-   <tag></tag>
-   <comment>TEST CASE: Update property VirtoCommerce.StoreModule.Core.Model.Store</comment>
-   <testCaseGuid>b0037dad-3054-436e-ba6c-51ba52f95aa1</testCaseGuid>
-</TestCaseEntity>
