@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Update existed property</description>
-   <name>DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.VendorUpdate</name>
-   <tag></tag>
-   <comment>TEST CASE: Update property VirtoCommerce.CustomerModule.Core.Model.Organization</comment>
-   <testCaseGuid>c5ffdedc-6318-4389-81d1-c91dc85bb994</testCaseGuid>
-</TestCaseEntity>
