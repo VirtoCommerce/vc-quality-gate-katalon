@@ -105,18 +105,6 @@
       <guid>3ed5e38e-1388-4d33-be1f-970f09692d57</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.QuoteModule.Core.Models.QuoteRequestAdd</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>6514d7ad-8972-4119-807b-c96a619e5355</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.QuoteModule.Core.Models.QuoteRequestUpdate</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>70b50475-d897-4274-a7df-8952f3cd3b96</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.QuoteModule.Core.Models.QuoteRequestDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/QuoteModule.QuoteRequest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
