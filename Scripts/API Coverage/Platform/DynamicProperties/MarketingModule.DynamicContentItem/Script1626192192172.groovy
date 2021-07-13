@@ -20,7 +20,9 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Add new property to VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', 
-        [('propertyType') : 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem', ('name') : 'Test Property Store']))
+        [('propertyType') : 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem', 
+		 ('name') : 'Test Property Store'
+		]))
 
 WS.verifyElementPropertyValue(response, 'objectType', 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem')
 WS.verifyElementPropertyValue(response, 'name', 'Test Property Store')
@@ -28,15 +30,47 @@ WS.verifyElementPropertyValue(response, 'name', 'Test Property Store')
 //Verify that property was added 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', 
         [('objectType') : 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem', 
-		 ('keyword') : 'Test Property Store']))
+		 ('keyword') : 'Test Property Store'
+		]))
 
 WS.verifyElementPropertyValue(response, 'results[0].name', "Test Property Store")
 WS.verifyElementPropertyValue(response, 'results[0].objectType', "VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem")
 WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
 //save ID to global variables for future manipulations
-responseText = response.getResponseText();
-def json = new JsonSlurper().parseText(responseText)
-GlobalVariable.dynamicPropertyId = json.results[0].id.toString()
-WebUI.comment(json.results[0].id.toString())
-WebUI.comment(GlobalVariable.dynamicPropertyId) 
+GlobalVariable.dynamicPropertyId = WS.getElementPropertyValue(response, "results[0].id")
+WebUI.comment(GlobalVariable.dynamicPropertyId)
+
+//------------------------------
+WebUI.comment('TEST CASE: Update property VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem')
+
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyUpdate',
+			[('propertyType') : 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem',
+			 ('name') : 'Test Property Store', 
+			 ('description') : 'description UPD'
+			]))
+
+//Verify that property was upadted
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch',
+		[('objectType') : 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem', 
+		 ('keyword') : 'Test Property Store'
+		]))
+
+WS.verifyElementPropertyValue(response, 'results[0].name', 'Test Property Store')
+WS.verifyElementPropertyValue(response, 'results[0].description', 'description UPD')
+WS.verifyElementPropertyValue(response, 'results[0].objectType', 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem')
+WS.verifyElementPropertyValue(response, 'totalCount', 1)
+
+//------------------------------
+WebUI.comment('TEST CASE: Delete property VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem')
+
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDelete',
+	[('propertyType') : 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem']))
+
+//Verify that property was added
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch',
+		[('objectType') : 'VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem', 
+		 ('keyword') : 'Test Property Store'
+		]))
+
+WS.verifyElementPropertyValue(response, 'totalCount', 0)

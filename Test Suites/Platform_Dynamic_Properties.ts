@@ -75,19 +75,7 @@
       <guid>6a70abd4-e813-42ac-a4f9-d1434f6aacaa</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.MarketingModule.Core.Model.DynamicContentItemAdd</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ed4e1dba-d166-4566-b51a-9746bc7b377b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.MarketingModule.Core.Model.DynamicContentItemUpdate</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>223f0a20-fcd6-446e-bb91-446ae92867af</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.MarketingModule.Core.Model.DynamicContentItemDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/MarketingModule.DynamicContentItem</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3d4c6e71-3b0d-482c-83fc-ff8d8779edb1</guid>
