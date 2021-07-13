@@ -63,19 +63,7 @@
       <guid>6ad1aa4d-f235-4b78-bc47-c4e2310127df</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.OrganizationAdd</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>da415ebf-b147-45e6-88fd-9e98ff6575bb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.OrganizationUpdate</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ef4a0896-0468-4f81-baa2-9582f773957c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesVirtoCommerce.CustomerModule.Core.Model.OrganizationDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/CustomerModule.Organization</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>88a1228c-d6cb-4181-9af8-4fd4840b0c04</guid>
