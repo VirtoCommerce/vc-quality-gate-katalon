@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Add new property of short text</description>
-   <name>DynamicPropertiesVirtoCommerce.StoreModule.Core.Model.StoreAdd</name>
+   <name>StoreModule.Store</name>
    <tag></tag>
    <comment>TEST CASE: Add new property to VirtoCommerce.StoreModule.Core.Model.Store
 json.results[0].id.toString()
-GlobalVariable.dynamicPropertyID</comment>
+GlobalVariable.dynamicPropertyId</comment>
    <testCaseGuid>0aa7fe6b-2c92-459f-aa73-17f5993fcf1f</testCaseGuid>
 </TestCaseEntity>
