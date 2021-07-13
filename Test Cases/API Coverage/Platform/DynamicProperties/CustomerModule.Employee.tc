@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Add new property of short text</description>
+   <description>Add, update, delete new property of short text</description>
    <name>CustomerModule.Employee</name>
    <tag></tag>
    <comment>TEST CASE: Add new property to VirtoCommerce.CustomerModule.Core.Model.Employee
