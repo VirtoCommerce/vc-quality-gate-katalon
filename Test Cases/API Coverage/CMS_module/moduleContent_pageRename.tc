@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Upload a file, rename, checkstatus in pages section</description>
+   <name>moduleContent_pageRename</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>965d39ef-d76e-4eec-b60f-8c772a3fc460</testCaseGuid>
+</TestCaseEntity>
