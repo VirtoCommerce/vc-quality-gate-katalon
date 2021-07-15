@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create, Check status, Delete in store section</description>
+   <name>StoreCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c63aa4a4-c4fa-4f70-af19-91496355136f</testCaseGuid>
+</TestCaseEntity>
