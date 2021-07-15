@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create, Check status, Delete in store section</description>
+   <description>Create, Edit, Check status</description>
    <name>StoreUpdate</name>
    <tag></tag>
    <comment></comment>

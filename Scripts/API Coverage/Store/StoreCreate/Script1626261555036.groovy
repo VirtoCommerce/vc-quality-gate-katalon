@@ -35,13 +35,13 @@ store = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebSer
 getStores = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetAll'))
 WS.verifyElementPropertyValue(getStores, '[3].id', GlobalVariable.storeId)
 
-////Delete the created store
-//delete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreDelete', [
-//	('storeId') : GlobalVariable.storeId
-//	]))
-//
-////Search for the created store to verify it was successfully deleted
-//search = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreSearch',[
-//	('keyword') : GlobalVariable.storeId
-//	]))
-//WS.verifyElementPropertyValue(search, 'totalCount', '0')
+//Delete the created store
+delete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreDelete', [
+	('storeId') : GlobalVariable.storeId
+	]))
+
+//Search for the created store to verify it was successfully deleted
+search = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreSearch',[
+	('keyword') : GlobalVariable.storeId
+	]))
+WS.verifyElementPropertyValue(search, 'totalCount', '0')
