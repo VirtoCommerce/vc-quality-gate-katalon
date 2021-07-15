@@ -6,10 +6,11 @@
    <elementGuidId>89a47f87-0f2c-4481-863a-ee004116aaae</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -28,28 +29,38 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/cms/${GlobalVariable.storeId}/menu</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/cms/${storeId}/menu</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'Electronics'</defaultValue>
+      <description></description>
+      <id>8d203318-f8a2-4fb3-b676-4c1aa847c475</id>
+      <masked>false</masked>
+      <name>storeId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
+
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-assertThat(response.getResponseText()).contains(GlobalVariable.munuListId)
-KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

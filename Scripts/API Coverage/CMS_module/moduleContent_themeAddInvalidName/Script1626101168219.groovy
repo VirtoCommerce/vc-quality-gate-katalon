@@ -15,12 +15,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('TEST CASE: Theme. Create/delete theme folder')
+
 GlobalVariable.contentType = "themes"
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch'))
+//Create a folder with an invalid name
+request = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : '1'
+	]))
+	
+//Verify the request was denied
+WS.verifyResponseStatusCode(request, 400)
 
-WS.delay(10)
-
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete'))
