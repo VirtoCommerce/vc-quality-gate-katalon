@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;:\&quot;${storeId}\&quot;,\n  \&quot;name\&quot;:\&quot;${name}\&quot;,\n  \&quot;catalog\&quot;:\&quot;${catalogId}\&quot;,\n  \&quot;defaultLanguage\&quot;:\&quot;${defaultLanguage}\&quot;,\n  \&quot;defaultCurrency\&quot;:\&quot;${defaultCurrency}\&quot;,\n  \&quot;storeState\&quot;:\&quot;${storeState}\&quot;,\n  \&quot;languages\&quot;:[\&quot;${languages}\&quot;],\n  \&quot;currencies\&quot;:[\&quot;${currencies}\&quot;]}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;:\&quot;${storeId}\&quot;,\n  \&quot;name\&quot;:\&quot;${name}\&quot;,\n  \&quot;catalog\&quot;:\&quot;${catalogId}\&quot;,\n  \&quot;defaultLanguage\&quot;:\&quot;${defaultLanguage}\&quot;,\n  \&quot;defaultCurrency\&quot;:\&quot;${defaultCurrency}\&quot;,\n  \&quot;storeState\&quot;:\&quot;${storeState}\&quot;,\n  \&quot;languages\&quot;:[\&quot;${languages}\&quot;],\n  \&quot;currencies\&quot;:[\&quot;${currencies}\&quot;]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -100,15 +100,21 @@
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+
+def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(listJsonOutput)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

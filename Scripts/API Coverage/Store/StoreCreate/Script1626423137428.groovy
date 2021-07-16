@@ -31,6 +31,10 @@ createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 	('currencies') : GlobalVariable.gql_currencyCode
 	]))
 
+//Check if the new store is in the list of available stores now
+getStores = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetAll'))
+WS.verifyElementPropertyValue(getStores, '[3].id', GlobalVariable.storeId)
+
 //Update the created store
 updateStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreUpdate',[
 	('storeId') : GlobalVariable.storeId,
@@ -49,3 +53,14 @@ getStore = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 WS.verifyElementPropertyValue(getStore, 'name', 'Updated')
 WS.verifyElementPropertyValue(getStore, 'catalog', '7829d35f417e4dd98851f51322f32c23')
 WS.verifyElementPropertyValue(getStore, 'url', GlobalVariable.urlFront)
+
+//Delete the created store
+delete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreDelete', [
+	('storeId') : GlobalVariable.storeId
+	]))
+
+//Search for the created store to verify it was successfully deleted
+search = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreSearch',[
+	('keyword') : GlobalVariable.storeId
+	]))
+WS.verifyElementPropertyValue(search, 'totalCount', '0')
