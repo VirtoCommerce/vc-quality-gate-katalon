@@ -15,12 +15,26 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-GlobalVariable.contentType = "themes"
+GlobalVariable.contentType = "pages"
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch'))
+//Create a folder 
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : GlobalVariable.folderName 
+	]))
+	
 
-WS.delay(10)
+//Check if the created folder exists (search for the name)
+request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : GlobalVariable.folderName
+	]))
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete'))
+//Delete the created folder
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : GlobalVariable.folderName 
+	]))

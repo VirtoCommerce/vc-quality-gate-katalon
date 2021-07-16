@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8114'</initValue>
+      <initValue>'https://qa-demovc3-admin.azurewebsites.net'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -242,7 +242,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'eae69428-1ed8-4f3a-ba02-feb8ebe13414'</initValue>
-      <name>munuListId</name>
+      <name>menuListId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -293,5 +293,10 @@
       <description></description>
       <initValue>''</initValue>
       <name>dynamicPropertyID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>externalsigninProvider</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

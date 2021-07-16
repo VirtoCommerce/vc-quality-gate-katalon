@@ -15,29 +15,17 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('TEST CASE: Link list.')
+WebUI.comment('TEST CASE: Theme. Create/delete theme folder')
 
-//Create a list and a link 
-list = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate',[
+GlobalVariable.contentType = "themes"
+
+//Create a folder with an invalid name
+request = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
+	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('menuName') : GlobalVariable.menuName,
-	('menuListId') : GlobalVariable.menuListId
+	('folderName') : '1'
 	]))
+	
+//Verify the request was denied
+WS.verifyResponseStatusCode(request, 400)
 
-//Verify the created list exists
-listVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet',[
-	('storeId') : GlobalVariable.storeId,
-	('menuListId') : GlobalVariable.menuListId
-	]))
-
-//Get the list data to verify that the added link exists
-getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkGet', [
-	('storeId') : GlobalVariable.storeId
-	]))
-
-//Verify the created  link exists
-linkVerification = WS.containsString(getList, 'QweLinkTitle 2', false)
-//WS.delay(10)
-
-//Delete the created list
-delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkDelete'))

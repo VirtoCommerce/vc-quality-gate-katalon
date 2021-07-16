@@ -15,29 +15,34 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('TEST CASE: Link list.')
+WebUI.comment('TEST CASE: Rename a link.')
 
-//Create a list and a link 
+//Check if the menuName we are going to use is vacant or not
+checkName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkCheckname', [
+	('storeId') : GlobalVariable.storeId,
+	('menuName') : GlobalVariable.menuName 
+	])) 
+
+nameVerification = WS.verifyElementPropertyValue(checkName, 'result' , 'true')
+
+//Create a menu link
 list = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate',[
 	('storeId') : GlobalVariable.storeId,
 	('menuName') : GlobalVariable.menuName,
 	('menuListId') : GlobalVariable.menuListId
 	]))
 
-//Verify the created list exists
-listVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet',[
+//Rename a link
+list = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate',[
 	('storeId') : GlobalVariable.storeId,
+	('menuName') : 'renamed',
 	('menuListId') : GlobalVariable.menuListId
 	]))
 
-//Get the list data to verify that the added link exists
-getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkGet', [
-	('storeId') : GlobalVariable.storeId
+//Check if the new name is not vacant
+checkRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkCheckname', [
+	('storeId') : GlobalVariable.storeId,
+	('menuName') : 'renamed'
 	]))
 
-//Verify the created  link exists
-linkVerification = WS.containsString(getList, 'QweLinkTitle 2', false)
-//WS.delay(10)
-
-//Delete the created list
-delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkDelete'))
+renameVerification = WS.verifyElementPropertyValue(checkRename, 'result' , 'false')
