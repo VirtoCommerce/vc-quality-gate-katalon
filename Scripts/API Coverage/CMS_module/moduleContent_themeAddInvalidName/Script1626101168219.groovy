@@ -25,7 +25,5 @@ request = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Conte
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : '1'
 	]))
-	
-//Verify the request was denied
 WS.verifyResponseStatusCode(request, 400)
 

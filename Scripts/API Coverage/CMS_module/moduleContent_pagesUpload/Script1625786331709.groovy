@@ -28,14 +28,6 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	('fileName') : 'qwepage.en-US.md'
 	]))
 
-//Get store stats to verify pages count has been changed
-stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
-	('storeId') : GlobalVariable.storeId
-	]))
-
-//Verify pages cound has been changed accordingly to the request send
-statsVerification =	WS.verifyElementPropertyValue(stats, 'pagesCount', 6)
-
 //Verify that the file was successfully uploaded and exists
 verification = WS.sendRequestAndVerify(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
@@ -49,3 +41,9 @@ deleteFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : 'qwepage.en-US.md'
 	]))
+
+//Get store stats to verify pages count has been changed
+stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
+	('storeId') : GlobalVariable.storeId
+	]))
+statsVerification =	WS.verifyElementPropertyValue(stats, 'pagesCount', 5)

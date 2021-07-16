@@ -30,13 +30,14 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 //Get the file data to set variables for the ContentMove request
 fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
-	('storeId') : GlobalVariable.storeId
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : 'qwepage.page'
 	]))
+WS.verifyElementPropertyValue(fileData, '[0].name', 'qwepage.page')
 
 //Set variables for the ContentMove request
-oldUrl = WS.getElementPropertyValue(fileData, '[4].url')
+oldUrl = WS.getElementPropertyValue(fileData, '[0].url')
 newUrl = oldUrl.replaceAll(/qwepage/, /renamed/)
-println newUrl
 
 //Send ContentMove request to rename the file
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
@@ -52,4 +53,5 @@ search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommer
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'renamed'
 	]))
+WS.verifyElementPropertyValue(search, '[0].name', 'renamed.page')
 

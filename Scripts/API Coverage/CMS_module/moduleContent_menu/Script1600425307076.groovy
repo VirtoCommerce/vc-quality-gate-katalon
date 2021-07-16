@@ -34,10 +34,16 @@ listVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/V
 getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkGet', [
 	('storeId') : GlobalVariable.storeId
 	]))
-
-//Verify the created  link exists
-linkVerification = WS.containsString(getList, 'QweLinkTitle 2', false)
-//WS.delay(10)
+WS.containsString(getList, 'QweLinkTitle 2', false)
 
 //Delete the created list
-delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkDelete'))
+delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkDelete' , [
+	('menuListId') : GlobalVariable.menuListId
+	]))
+
+//Verify the created list was successfully deleted
+deleteVerification = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet',[
+	('storeId') : GlobalVariable.storeId,
+	('menuListId') : GlobalVariable.menuListId
+	]))
+WS.verifyResponseStatusCode(deleteVerification, 500)

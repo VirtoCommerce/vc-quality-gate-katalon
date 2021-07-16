@@ -18,23 +18,30 @@ import internal.GlobalVariable as GlobalVariable
 GlobalVariable.contentType = "pages"
 
 //Create a folder 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
+folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName 
 	]))
 	
-
 //Check if the created folder exists (search for the name)
 request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : GlobalVariable.folderName
 	]))
+WS.verifyElementPropertyValue(request,'[0].name',GlobalVariable.folderName)
+
 
 //Delete the created folder
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName 
 	]))
+
+//Get store stats to verify the added page folder was deleted
+stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
+	('storeId') : GlobalVariable.storeId
+	]))
+WS.verifyElementPropertyValue(stats, 'pagesCount', 5)

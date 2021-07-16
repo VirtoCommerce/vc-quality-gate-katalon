@@ -33,6 +33,7 @@ folderVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'qwefolder'
 	]))
+WS.verifyElementPropertyValue(folderVerification,'[0].name', 'qwefolder')
 
 //Upload a file inside the folder
 file = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
@@ -48,14 +49,8 @@ fileVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/V
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'qwepage.en-US.md'
 	]))
+WS.verifyElementPropertyValue(fileVerification,'[0].name', 'qwepage.en-US.md')
 
-//Get store stats to verify blogs count has been changed
-stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
-	('storeId') : GlobalVariable.storeId
-	]))
-
-//Verify themes cound has been changed accordingly to the request send
-statsVerification =	WS.verifyElementPropertyValue(stats, 'blogsCount', 2)
 
 //Delete the created folder
 deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
@@ -63,3 +58,9 @@ deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName 
 	]))
+
+//Get store stats to verify blogs count has been changed
+stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
+	('storeId') : GlobalVariable.storeId
+	]))
+statsVerification =	WS.verifyElementPropertyValue(stats, 'blogsCount', 1)

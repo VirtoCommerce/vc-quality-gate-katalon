@@ -49,7 +49,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'blogs'</defaultValue>
+      <defaultValue>'themes'</defaultValue>
       <description></description>
       <id>9ad4d7e9-a86c-4af2-b0cd-b48c8f1d6649</id>
       <masked>false</masked>
@@ -63,7 +63,7 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'qwepage.en-US.md'</defaultValue>
+      <defaultValue>'theme_test_x.zip'</defaultValue>
       <description></description>
       <id>2bcf9048-62f3-48bc-aac3-7a70eb81b0c2</id>
       <masked>false</masked>
@@ -71,7 +71,7 @@
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>keep empty so it wont break scripts</description>
       <id>40a658e5-0471-4d67-98c0-c929f51a2c50</id>
       <masked>false</masked>
       <name>folderName</name>

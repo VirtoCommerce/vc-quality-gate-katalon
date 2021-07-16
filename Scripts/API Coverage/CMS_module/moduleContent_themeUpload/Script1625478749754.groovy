@@ -28,6 +28,14 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	('fileName') : 'theme_test_x.zip'
 	]))
 
+//Verify the file has been uploaded
+searchFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : 'theme_test_x.zip'
+	]))
+WS.verifyElementPropertyValue(searchFile,'[0].name','theme_test_x.zip')
+
 //Get uploaded archive path 
 archivePath = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')
 

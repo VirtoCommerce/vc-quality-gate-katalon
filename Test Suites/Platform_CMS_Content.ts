@@ -30,12 +30,6 @@
       <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_themeUpload</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7ee8191c-38b6-4596-8844-dfdf0c54c5c0</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_themeRename</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>b2e92943-e1fc-4d47-8e63-d3a5c8d837de</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

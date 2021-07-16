@@ -41,10 +41,12 @@ postData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'qwepage.en-US.md'
 	]))
+WS.verifyElementPropertyValue(postData,'[0].name', 'qwepage.en-US.md')
 
-//Set variables for the ContentMove request
+//Set variables for the ContentMove request and Content Get requests
 oldUrl = WS.getElementPropertyValue(postData, '[0].url')
 newUrl = oldUrl.replaceAll(/qwepage/, /renamed/)
+relativeUrl = WS.getElementPropertyValue(postData, '[0].relativeUrl')
 
 //Send ContentMove request to rename the blog
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
@@ -60,9 +62,7 @@ renamedPost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : 'renamed'
 	]))
-
-//Compare the actual blog url to the one that was set
-verification = WS.verifyElementPropertyValue(renamedPost, '[0].url', newUrl)
+WS.verifyElementPropertyValue(renamedPost, '[0].url', newUrl)
 
 //Delete the created blog
 deletePost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
@@ -70,3 +70,11 @@ deletePost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : newUrl
 	]))
+
+//Verify that the blog was successfully deleted
+deletedPost = WS.sendRequest(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('relativeUrl') : relativeUrl
+	]))
+WS.verifyResponseStatusCode(deletedPost, 404)
