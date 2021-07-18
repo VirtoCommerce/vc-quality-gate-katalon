@@ -78,3 +78,16 @@ deletedPost = WS.sendRequest(findTestObject('API/backWebservices/virtoCommerce.C
 	('relativeUrl') : relativeUrl
 	]))
 WS.verifyResponseStatusCode(deletedPost, 404)
+
+//Delete the created folder
+deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : GlobalVariable.folderName
+	]))
+
+//Get store stats to verify blogs count has been changed
+deleteVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
+	('storeId') : GlobalVariable.storeId
+	]))
+WS.verifyElementPropertyValue(deleteVerification, 'blogsCount', 1)

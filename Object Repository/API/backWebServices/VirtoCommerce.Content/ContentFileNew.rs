@@ -63,7 +63,7 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'theme_test_x.zip'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>2bcf9048-62f3-48bc-aac3-7a70eb81b0c2</id>
       <masked>false</masked>
@@ -71,10 +71,17 @@
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description>keep empty so it wont break scripts</description>
+      <description></description>
       <id>40a658e5-0471-4d67-98c0-c929f51a2c50</id>
       <masked>false</masked>
       <name>folderName</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ea1eb5ea-b039-45e4-9862-270101d0b402</id>
+      <masked>false</masked>
+      <name>url</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

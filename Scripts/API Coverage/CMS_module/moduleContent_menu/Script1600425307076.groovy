@@ -17,6 +17,13 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Link list.')
 
+//Check if the menuName we are going to use is vacant or not
+checkName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkCheckname', [
+	('storeId') : GlobalVariable.storeId,
+	('menuName') : GlobalVariable.menuName
+	]))
+WS.verifyElementPropertyValue(checkName, 'result' , 'true')
+
 //Create a list and a link 
 list = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate',[
 	('storeId') : GlobalVariable.storeId,
@@ -34,7 +41,21 @@ listVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/V
 getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkGet', [
 	('storeId') : GlobalVariable.storeId
 	]))
-WS.containsString(getList, 'QweLinkTitle 2', false)
+WS.containsString(getList, 'QweLinkTitle', false)
+
+//Rename a link
+rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate',[
+	('storeId') : GlobalVariable.storeId,
+	('menuName') : 'renamed',
+	('menuListId') : GlobalVariable.menuListId
+	]))
+
+//Check if the new name is occupied
+checkRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkCheckname', [
+	('storeId') : GlobalVariable.storeId,
+	('menuName') : 'renamed'
+	]))
+WS.verifyElementPropertyValue(checkRename, 'result' , 'false')
 
 //Delete the created list
 delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkDelete' , [

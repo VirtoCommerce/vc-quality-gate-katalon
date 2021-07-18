@@ -54,3 +54,15 @@ unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebservices/v
 	('relativeUrl') : '/theme_test_x/theme_test.html'
 	]))
 
+//Delete the created folder
+deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
+	('contentType') : GlobalVariable.contentType,
+	('storeId') : GlobalVariable.storeId,
+	('folderName') : 'theme_test_x'
+	]))
+
+//Get store stats to verify the added theme folder was deleted
+stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
+	('storeId') : GlobalVariable.storeId
+	]))
+WS.verifyElementPropertyValue(stats, 'themesCount', 1)
