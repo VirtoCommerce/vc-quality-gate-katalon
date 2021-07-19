@@ -37,10 +37,11 @@ request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComme
 WS.verifyElementPropertyValue(request,'[0].name',GlobalVariable.folderName)
 
 //Upload file to the created folder
+fileName = 'qwepage.en-US.md'
 uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('fileName') : 'qwepage.en-US.md',
+	('fileName') : fileName,
 	('folderName') : GlobalVariable.folderName
 	]))
 
@@ -48,20 +49,21 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 verification = WS.sendRequestAndVerify(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('relativeUrl') : '/qwefolder/qwepage.en-US.md'
+	('relativeUrl') : '/' + GlobalVariable.folderName + '/' + fileName
 	]))
 
 //Get the file data to set variables for the ContentMove request
 fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'qwepage.en-US.md'
+	('keyword') : fileName
 	]))
-WS.verifyElementPropertyValue(fileData, '[0].name', 'qwepage.en-US.md')
+WS.verifyElementPropertyValue(fileData, '[0].name', fileName)
 
 //Set variables for the ContentMove request
+newFileName = 'renamed' + fileName
 oldUrl = WS.getElementPropertyValue(fileData, '[0].url')
-newUrl = oldUrl.replaceAll(/qwepage/, /renamed/)
+newUrl = oldUrl.replaceAll(fileName, newFileName)
 
 //Send ContentMove request to rename the file
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
@@ -75,22 +77,22 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'renamed'
+	('keyword') : newFileName
 	]))
-WS.verifyElementPropertyValue(search, '[0].name', 'renamed.en-US.md')
+WS.verifyElementPropertyValue(search, '[0].name', newFileName)
 
 //Delete the created file
 deleteFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('folderName') : '/qwefolder/renamed.en-US.md'
+	('folderName') : '/' + GlobalVariable.folderName + '/' + newFileName
 	]))
 
 //Check if the created file has been deleted (search for the name)
 fileDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'renamed.en-US.md'
+	('keyword') : newFileName
 	]))
 WS.verifyElementPropertyValue(fileDeleted,'[0]',null)
 

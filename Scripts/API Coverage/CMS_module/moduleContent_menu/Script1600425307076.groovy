@@ -44,16 +44,17 @@ getList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComme
 WS.containsString(getList, 'QweLinkTitle', false)
 
 //Rename a link
+newMenuName = 'renamed' + GlobalVariable.menuName
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkUpdate',[
 	('storeId') : GlobalVariable.storeId,
-	('menuName') : 'renamed',
+	('menuName') : newMenuName,
 	('menuListId') : GlobalVariable.menuListId
 	]))
 
 //Check if the new name is occupied
 checkRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkCheckname', [
 	('storeId') : GlobalVariable.storeId,
-	('menuName') : 'renamed'
+	('menuName') : newMenuName
 	]))
 WS.verifyElementPropertyValue(checkRename, 'result' , 'false')
 

@@ -28,24 +28,26 @@ folder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	]))
 
 //To the folder upload a post
+fileName = 'qwepage.en-US.md'
 post = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName,
-	('fileName') : 'qwepage.en-US.md'
+	('fileName') : fileName
 	]))
 
 //Get the blog Url to set variables for the ContentMove request
 postData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'qwepage.en-US.md'
+	('keyword') : fileName
 	]))
-WS.verifyElementPropertyValue(postData,'[0].name', 'qwepage.en-US.md')
+WS.verifyElementPropertyValue(postData,'[0].name', fileName)
 
 //Set variables for the ContentMove request and Content Get requests
+newFileName = 'renamed' + fileName
 oldUrl = WS.getElementPropertyValue(postData, '[0].url')
-newUrl = oldUrl.replaceAll(/qwepage/, /renamed/)
+newUrl = oldUrl.replaceAll(fileName, newFileName)
 relativeUrl = WS.getElementPropertyValue(postData, '[0].relativeUrl')
 
 //Send ContentMove request to rename the blog
@@ -60,7 +62,7 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 renamedPost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'renamed'
+	('keyword') : newFileName
 	]))
 WS.verifyElementPropertyValue(renamedPost, '[0].url', newUrl)
 

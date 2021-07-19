@@ -36,8 +36,9 @@ folderData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 WS.verifyElementPropertyValue(folderData,'[0].name',GlobalVariable.folderName)
 
 //Set variables for the ContentMove request
+newFolderName = 'renamed' + GlobalVariable.folderName
 oldUrl = WS.getElementPropertyValue(folderData, '[0].url')
-newUrl = WS.getElementPropertyValue(folderData, '[0].parentUrl') + "renamed"
+newUrl = WS.getElementPropertyValue(folderData, '[0].parentUrl') + newFolderName
 
 //Send ContentMove request to rename the folder
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
@@ -51,16 +52,16 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 renamedFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'renamed'
+	('keyword') : newFolderName
 	]))
-WS.verifyElementPropertyValue(renamedFolder,'[0].name','renamed')
+WS.verifyElementPropertyValue(renamedFolder,'[0].name', newFolderName)
 
 
 //Delete the created folder
 deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('folderName') : 'renamed'
+	('folderName') : newFolderName
 	]))
 
 //Get store stats to verify the added theme folder was deleted

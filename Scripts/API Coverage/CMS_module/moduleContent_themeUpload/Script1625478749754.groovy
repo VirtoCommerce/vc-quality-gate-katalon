@@ -21,44 +21,48 @@ WebUI.comment('TEST CASE: Theme. Upload file from local')
 
 GlobalVariable.contentType = "themes"
 
+
 //Upload .zip file to the platform to unpack it in the further steps
+archiveName = 'theme_test_x.zip'
 uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('fileName') : 'theme_test_x.zip'
+	('fileName') : archiveName
 	]))
 
 //Verify the file has been uploaded
 searchFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
-	('keyword') : 'theme_test_x.zip'
+	('keyword') : archiveName
 	]))
-WS.verifyElementPropertyValue(searchFile,'[0].name','theme_test_x.zip')
+WS.verifyElementPropertyValue(searchFile,'[0].name',archiveName)
 
 //Get uploaded archive path 
 archivePath = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')
 
 //Unpack the archive to its current location directory
+folderName = archiveName.substring(0, archiveName.lastIndexOf("."))
 unpackArchive = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommerce.Content/ContentUnpack', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('folderUrl') : 'theme_test_x',
+	('folderUrl') : folderName,
 	('archivePath') : archivePath
 	]))
 
 //Verify that the archive was successfully unpacked and unpacked file exists
+fileName = 'theme_test.html'
 unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('relativeUrl') : '/theme_test_x/theme_test.html'
+	('relativeUrl') : '/' + folderName + '/' + fileName
 	]))
 
 //Delete the created folder
 deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
-	('folderName') : 'theme_test_x'
+	('folderName') : folderName
 	]))
 
 //Get store stats to verify the added theme folder was deleted
