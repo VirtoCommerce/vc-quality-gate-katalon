@@ -63,8 +63,8 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
+      <defaultValue>'theme_test_x.zip'</defaultValue>
+      <description>File placed in TestFiles folder</description>
       <id>2bcf9048-62f3-48bc-aac3-7a70eb81b0c2</id>
       <masked>false</masked>
       <name>fileName</name>

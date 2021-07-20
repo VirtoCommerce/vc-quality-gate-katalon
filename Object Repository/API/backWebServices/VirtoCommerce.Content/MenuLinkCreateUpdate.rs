@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>MenuLinkUpdate</name>
+   <name>MenuLinkCreateUpdate</name>
    <tag></tag>
    <elementGuidId>5b0d8e7d-dda1-46c3-a5e7-c1f0103f5f1e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;id\&quot;: \&quot;${menuListId}\&quot;,\n    \&quot;name\&quot;: \&quot;${menuName}\&quot;,\n    \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n    \&quot;language\&quot;: \&quot;fr-FR\&quot;,\n    \&quot;menuLinks\&quot;: [\n        {\n            \&quot;priority\&quot;: 10,\n            \&quot;title\&quot;: \&quot;QweLinkTitle\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages/about_us\&quot;\n        },\n        {\n            \&quot;priority\&quot;: 0,\n            \&quot;title\&quot;: \&quot;QweLinkTitle 2\&quot;,\n            \&quot;url\&quot;: \&quot;~/pages\&quot;\n        }\n    ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;: \&quot;${menuListId}\&quot;,\n  \&quot;name\&quot;: \&quot;${menuName}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;language\&quot;: \&quot;fr-FR\&quot;,\n  \&quot;menuLinks\&quot;: [\n    {\n      \&quot;priority\&quot;: 10,\n      \&quot;title\&quot;: \&quot;QweLinkTitle\&quot;,\n      \&quot;url\&quot;: \&quot;~/pages/about_us\&quot;\n    },\n    {\n      \&quot;priority\&quot;: 0,\n      \&quot;title\&quot;: \&quot;QweLinkTitle 2\&quot;,\n      \&quot;url\&quot;: \&quot;~/pages\&quot;\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -49,18 +49,18 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'eae69428-1ed8-4f3a-ba02-feb8ebe13414'</defaultValue>
-      <description></description>
-      <id>54d5f587-4a29-4bc1-b6a7-219a75d8f144</id>
-      <masked>false</masked>
-      <name>menuListId</name>
-   </variables>
-   <variables>
       <defaultValue>'QweMenuLink'</defaultValue>
       <description></description>
       <id>537a720c-0bd3-49be-b306-270c2f19f714</id>
       <masked>false</masked>
       <name>menuName</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0017975f-5f8d-43bc-bd12-949cb7c7b6f5</id>
+      <masked>false</masked>
+      <name>menuListId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

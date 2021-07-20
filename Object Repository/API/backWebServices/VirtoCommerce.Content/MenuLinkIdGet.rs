@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/cms/${storeId}/menu/${munuListId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/cms/${storeId}/menu/${menuListId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -45,11 +45,11 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'eae69428-1ed8-4f3a-ba02-feb8ebe13414'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>f32500cf-6484-4f34-99a0-bd3ed8936055</id>
       <masked>false</masked>
-      <name>munuListId</name>
+      <name>menuListId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -16,9 +16,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-WebUI.comment('TEST CASE: Theme. Rename a theme')
+WebUI.comment('TEST CASE: Theme. Create + Rename + Delete a theme')
 
 GlobalVariable.contentType = "themes"
+
+//Get store stats to get initial state. Set THEME count to compare with final result
+stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
+	('storeId') : GlobalVariable.storeId
+	]))
+count = WS.getElementPropertyValue(stats, 'themesCount')
+
 
 //First create a theme folder
 createFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
@@ -26,6 +33,7 @@ createFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('storeId') : GlobalVariable.storeId,
 	('folderName') : GlobalVariable.folderName
 	]))
+
 
 //Get the folder Url and parentUrl to set variables for the ContentMove request
 folderData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
@@ -35,10 +43,12 @@ folderData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 	]))
 WS.verifyElementPropertyValue(folderData,'[0].name',GlobalVariable.folderName)
 
+
 //Set variables for the ContentMove request
-newFolderName = 'renamed' + GlobalVariable.folderName
+newFolderName = GlobalVariable.folderName + 'Renamed'
 oldUrl = WS.getElementPropertyValue(folderData, '[0].url')
 newUrl = WS.getElementPropertyValue(folderData, '[0].parentUrl') + newFolderName
+
 
 //Send ContentMove request to rename the folder
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
@@ -47,6 +57,7 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	('oldUrl') : oldUrl,
 	('newUrl') : newUrl
 	]))
+
 
 //Verify the folder name has been changed (search for new name)
 renamedFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
@@ -64,8 +75,9 @@ deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('folderName') : newFolderName
 	]))
 
-//Get store stats to verify the added theme folder was deleted
+
+//Get store stats to verify the added theme folder was deleted and verify that Theme count in initial state
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
 	]))
-WS.verifyElementPropertyValue(stats, 'themesCount', 1)
+WS.verifyElementPropertyValue(stats, 'themesCount', count)

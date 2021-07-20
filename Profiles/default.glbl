@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8096'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8100'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8114'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8120'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -235,21 +235,6 @@
       <name>folderName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'http://localhost:10645/cms-content'</initValue>
-      <name>parentUrl</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'eae69428-1ed8-4f3a-ba02-feb8ebe13414'</initValue>
-      <name>menuListId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'QweMenuLink'</initValue>
-      <name>menuName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
       <description>to use in platform modules section</description>
       <initValue>'3.16.0-alpha.512'</initValue>
       <name>storeModuleVersion</name>
@@ -293,5 +278,10 @@
       <description></description>
       <initValue>''</initValue>
       <name>dynamicPropertyID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Variable to use for any ID in cases</description>
+      <initValue>''</initValue>
+      <name>id</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

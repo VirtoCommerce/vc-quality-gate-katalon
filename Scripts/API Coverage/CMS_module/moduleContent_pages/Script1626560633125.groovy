@@ -21,6 +21,13 @@ WebUI.comment('TEST CASE: Pages. Upload file from local')
 
 GlobalVariable.contentType = "pages"
 
+//Get store stats to get initial state. Set PAGE count to compare with final result
+stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
+	('storeId') : GlobalVariable.storeId
+	]))
+count = WS.getElementPropertyValue(stats, 'pagesCount')
+
+
 //Create a folder
 folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
 	('contentType') : GlobalVariable.contentType ,
@@ -28,6 +35,7 @@ folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('folderName') : GlobalVariable.folderName
 	]))
 	
+
 //Check if the created folder exists (search for the name)
 request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
@@ -35,6 +43,7 @@ request = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComme
 	('keyword') : GlobalVariable.folderName
 	]))
 WS.verifyElementPropertyValue(request,'[0].name',GlobalVariable.folderName)
+
 
 //Upload file to the created folder
 fileName = 'qwepage.en-US.md'
@@ -45,12 +54,14 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	('folderName') : GlobalVariable.folderName
 	]))
 
+
 //Verify that the file was successfully uploaded and exists
 verification = WS.sendRequestAndVerify(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('relativeUrl') : '/' + GlobalVariable.folderName + '/' + fileName
 	]))
+
 
 //Get the file data to set variables for the ContentMove request
 fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
@@ -60,10 +71,12 @@ fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	]))
 WS.verifyElementPropertyValue(fileData, '[0].name', fileName)
 
+
 //Set variables for the ContentMove request
 newFileName = 'renamed' + fileName
 oldUrl = WS.getElementPropertyValue(fileData, '[0].url')
 newUrl = oldUrl.replaceAll(fileName, newFileName)
+
 
 //Send ContentMove request to rename the file
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
@@ -73,6 +86,7 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 	('newUrl') : newUrl
 	]))
 
+
 //Verify if the file is accessible via search
 search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType,
@@ -81,6 +95,7 @@ search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommer
 	]))
 WS.verifyElementPropertyValue(search, '[0].name', newFileName)
 
+
 //Delete the created file
 deleteFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
@@ -88,13 +103,15 @@ deleteFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 	('folderName') : '/' + GlobalVariable.folderName + '/' + newFileName
 	]))
 
+
 //Check if the created file has been deleted (search for the name)
 fileDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : newFileName
 	]))
-WS.verifyElementPropertyValue(fileDeleted,'[0]',null)
+WS.verifyElementPropertyValue(fileDeleted, '[0]', null)
+
 
 //Delete the created folder
 deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
@@ -103,8 +120,9 @@ deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('folderName') : GlobalVariable.folderName
 	]))
 
+
 //Get store stats to verify pages count has been changed
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
 	]))
-statsVerification =	WS.verifyElementPropertyValue(stats, 'pagesCount', 5)
+WS.verifyElementPropertyValue(stats, 'pagesCount', count)
