@@ -49,7 +49,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'blogs'</defaultValue>
+      <defaultValue>'themes'</defaultValue>
       <description></description>
       <id>9ad4d7e9-a86c-4af2-b0cd-b48c8f1d6649</id>
       <masked>false</masked>
@@ -63,8 +63,8 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'qwepage.en-US.md'</defaultValue>
-      <description></description>
+      <defaultValue>'theme_test_x.zip'</defaultValue>
+      <description>File placed in TestFiles folder</description>
       <id>2bcf9048-62f3-48bc-aac3-7a70eb81b0c2</id>
       <masked>false</masked>
       <name>fileName</name>
@@ -75,6 +75,13 @@
       <id>40a658e5-0471-4d67-98c0-c929f51a2c50</id>
       <masked>false</masked>
       <name>folderName</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ea1eb5ea-b039-45e4-9862-270101d0b402</id>
+      <masked>false</masked>
+      <name>url</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
