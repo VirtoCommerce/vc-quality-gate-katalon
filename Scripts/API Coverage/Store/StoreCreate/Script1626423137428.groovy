@@ -33,13 +33,15 @@ createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 
 //Check if the new store is in the list of available stores now
 getStores = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetAll'))
-WS.verifyElementPropertyValue(getStores, '[3].id', GlobalVariable.storeId)
+WS.containsString(getStores,GlobalVariable.storeId, false)
 
 //Update the created store
+updatedStoreName = 'Updated' + GlobalVariable.storeId
+updatedCatalogId = '7829d35f417e4dd98851f51322f32c23'
 updateStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreUpdate',[
 	('storeId') : GlobalVariable.storeId,
-	('name') : 'Updated',
-	('catalogId') : '7829d35f417e4dd98851f51322f32c23',
+	('name') : updatedStoreName,
+	('catalogId') : updatedCatalogId,
 	('defaultLanguage') : 'fr-FR',
 	('defaultCurrency') : 'EUR',
 	('storeState') : 'Closed',
@@ -50,8 +52,8 @@ updateStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 getStore = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetById',[
 	('storeId') : GlobalVariable.storeId
 	]))
-WS.verifyElementPropertyValue(getStore, 'name', 'Updated')
-WS.verifyElementPropertyValue(getStore, 'catalog', '7829d35f417e4dd98851f51322f32c23')
+WS.verifyElementPropertyValue(getStore, 'name', updatedStoreName)
+WS.verifyElementPropertyValue(getStore, 'catalog', updatedCatalogId)
 WS.verifyElementPropertyValue(getStore, 'url', GlobalVariable.urlFront)
 
 //Delete the created store
