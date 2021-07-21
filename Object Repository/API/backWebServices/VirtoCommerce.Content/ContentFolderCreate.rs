@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${folderName}\&quot;,\n  \&quot;type\&quot;: \&quot;folder\&quot;,\n  //\&quot;url\&quot;: \&quot;string\&quot;,\n  //\&quot;relativeUrl\&quot;: \&quot;string\&quot;,\n  //\&quot;parentUrl\&quot;: \&quot;${folderName}\&quot;,\n  //\&quot;modifiedDate\&quot;: \&quot;2020-09-15T19:47:10.460Z\&quot;,\n  //\&quot;createdDate\&quot;: \&quot;2020-09-15T19:47:10.460Z\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${folderName}\&quot;,\n  \&quot;type\&quot;: \&quot;folder\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'blogs'</defaultValue>
+      <defaultValue>'themes'</defaultValue>
       <description></description>
       <id>d9e53731-5351-417c-83c7-a68c3f4833b0</id>
       <masked>false</masked>
@@ -56,7 +56,7 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'1'</defaultValue>
+      <defaultValue>'qwefolder'</defaultValue>
       <description></description>
       <id>5bf1d449-4ad6-4164-8739-a5ba4de8516f</id>
       <masked>false</masked>

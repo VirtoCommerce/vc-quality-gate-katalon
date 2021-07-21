@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'blogs'</defaultValue>
+      <defaultValue>'themes'</defaultValue>
       <description></description>
       <id>d9e53731-5351-417c-83c7-a68c3f4833b0</id>
       <masked>false</masked>
@@ -53,7 +53,7 @@
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>keep empty so it wont break scripts</description>
       <id>6a58c21b-0bcd-4056-ba67-25e9ddcf981b</id>
       <masked>false</masked>
       <name>keyword</name>
