@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentSearch</name>
+   <name>ContentMove</name>
    <tag></tag>
-   <elementGuidId>8f8e8fe9-e74f-4858-bc81-35f1ce121cb4</elementGuidId>
+   <elementGuidId>4c2eb935-a167-424c-b06a-118f2d880a85</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}/search?keyword=${keyword}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}/move?newUrl=${newUrl}&amp;oldUrl=${oldUrl}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,25 +38,32 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>acbc18e1-ce8e-4411-a5da-3588b1e3760d</id>
+      <masked>false</masked>
+      <name>newUrl</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>2eb59dbe-0c16-4826-bee8-fd89363639c0</id>
+      <masked>false</masked>
+      <name>oldUrl</name>
+   </variables>
+   <variables>
       <defaultValue>'themes'</defaultValue>
       <description></description>
-      <id>d9e53731-5351-417c-83c7-a68c3f4833b0</id>
+      <id>337190d0-797f-45f1-8439-531219eda15a</id>
       <masked>false</masked>
       <name>contentType</name>
    </variables>
    <variables>
       <defaultValue>'Electronics'</defaultValue>
       <description></description>
-      <id>d33e1fc0-20aa-43f2-8570-dcf5ee84cd0c</id>
+      <id>993f833a-4503-4769-83b9-40a1dc2c48cb</id>
       <masked>false</masked>
       <name>storeId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>keep empty so it wont break scripts</description>
-      <id>6a58c21b-0bcd-4056-ba67-25e9ddcf981b</id>
-      <masked>false</masked>
-      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -75,7 +82,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

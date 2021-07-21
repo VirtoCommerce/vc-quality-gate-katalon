@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>_ContentGet</name>
+   <name>DRAFT.StoreAccessibleList</name>
    <tag></tag>
-   <elementGuidId>20192eb4-d1a7-43ec-a073-572b730e3bb5</elementGuidId>
+   <elementGuidId>3b9b328b-3a5d-4783-87b0-003fa2c659e8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
@@ -28,14 +29,26 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <katalonVersion>8.0.5</katalonVersion>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.contentType}/${GlobalVariable.storeId}?relativeUrl=qweblog/qweblog.md</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/stores/allowed/${userId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'78b0208a-bb52-4a33-9250-583d63aa1f77'</defaultValue>
+      <description></description>
+      <id>be21306d-14a6-4932-87e8-804190dab532</id>
+      <masked>false</masked>
+      <name>userId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject

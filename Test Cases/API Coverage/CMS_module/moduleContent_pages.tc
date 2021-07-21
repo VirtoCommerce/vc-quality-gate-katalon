@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create, check status, delete in Pages section</description>
+   <description>Create(upload) page in a folder, check status, rename,delete file, delete folder</description>
    <name>moduleContent_pages</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>f1988f89-a2de-45e6-beda-d40385534b8d</testCaseGuid>
+   <testCaseGuid>70573ee6-77d6-4c85-b4e5-cf4781af6504</testCaseGuid>
 </TestCaseEntity>

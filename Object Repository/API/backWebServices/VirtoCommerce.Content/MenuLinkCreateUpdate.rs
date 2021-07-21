@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentSearch</name>
+   <name>MenuLinkCreateUpdate</name>
    <tag></tag>
-   <elementGuidId>8f8e8fe9-e74f-4858-bc81-35f1ce121cb4</elementGuidId>
+   <elementGuidId>5b0d8e7d-dda1-46c3-a5e7-c1f0103f5f1e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;: \&quot;${menuListId}\&quot;,\n  \&quot;name\&quot;: \&quot;${menuName}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;language\&quot;: \&quot;fr-FR\&quot;,\n  \&quot;menuLinks\&quot;: [\n    {\n      \&quot;priority\&quot;: 10,\n      \&quot;title\&quot;: \&quot;QweLinkTitle\&quot;,\n      \&quot;url\&quot;: \&quot;~/pages/about_us\&quot;\n    },\n    {\n      \&quot;priority\&quot;: 0,\n      \&quot;title\&quot;: \&quot;QweLinkTitle 2\&quot;,\n      \&quot;url\&quot;: \&quot;~/pages\&quot;\n    }\n  ]\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${contentType}/${storeId}/search?keyword=${keyword}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/cms/${storeId}/menu</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,44 +42,39 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'themes'</defaultValue>
-      <description></description>
-      <id>d9e53731-5351-417c-83c7-a68c3f4833b0</id>
-      <masked>false</masked>
-      <name>contentType</name>
-   </variables>
-   <variables>
       <defaultValue>'Electronics'</defaultValue>
       <description></description>
-      <id>d33e1fc0-20aa-43f2-8570-dcf5ee84cd0c</id>
+      <id>9611c687-7f91-487a-bbcd-de7f8d3216d7</id>
       <masked>false</masked>
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>keep empty so it wont break scripts</description>
-      <id>6a58c21b-0bcd-4056-ba67-25e9ddcf981b</id>
+      <defaultValue>'QweMenuLink'</defaultValue>
+      <description></description>
+      <id>537a720c-0bd3-49be-b306-270c2f19f714</id>
       <masked>false</masked>
-      <name>keyword</name>
+      <name>menuName</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>0017975f-5f8d-43bc-bd12-949cb7c7b6f5</id>
+      <masked>false</masked>
+      <name>menuListId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

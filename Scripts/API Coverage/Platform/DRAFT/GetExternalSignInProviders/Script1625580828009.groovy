@@ -14,13 +14,18 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-GlobalVariable.contentType = "blogs"
+WebUI.comment('TEST CASE: Get external Providers')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/AuthorizationExternalSignInProviders'))
 
-WS.delay(10)
+WS.verifyElementPropertyValue(response, '[0].authenticationType', "AzureAD")
+WS.verifyElementPropertyValue(response, '[0].displayName', "Azure Active Directory")
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet'))
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete'))
+responseText = response.getResponseText()
+def json = new JsonSlurper().parseText(responseText)
+
+GlobalVariable.externalsigninProvider = (json.authenticationType[0]).toString()
+WebUI.comment(GlobalVariable.externalsigninProvider)

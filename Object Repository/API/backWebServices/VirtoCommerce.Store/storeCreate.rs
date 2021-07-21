@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentStatsStoreGet</name>
+   <name>StoreCreate</name>
    <tag></tag>
-   <elementGuidId>a077b638-49b1-4f9a-9e7d-8510b455c4c1</elementGuidId>
+   <elementGuidId>bb66e6be-60d6-4618-87f0-41b91b0baa81</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;:\&quot;${storeId}\&quot;,\n  \&quot;name\&quot;:\&quot;${name}\&quot;,\n  \&quot;catalog\&quot;:\&quot;${catalogId}\&quot;,\n  \&quot;defaultLanguage\&quot;:\&quot;${defaultLanguage}\&quot;,\n  \&quot;defaultCurrency\&quot;:\&quot;${defaultCurrency}\&quot;,\n  \&quot;storeState\&quot;:\&quot;${storeState}\&quot;,\n  \&quot;languages\&quot;:[\&quot;${languages}\&quot;],\n  \&quot;currencies\&quot;:[\&quot;${currencies}\&quot;]\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -25,10 +29,11 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${storeId}/stats</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/stores</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,39 +43,60 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'1'</defaultValue>
+      <defaultValue>'qwestore'</defaultValue>
       <description></description>
-      <id>db587bef-a069-492f-9ac7-ed4234bafd56</id>
-      <masked>false</masked>
-      <name>themesCount</name>
-   </variables>
-   <variables>
-      <defaultValue>'6'</defaultValue>
-      <description></description>
-      <id>aa0691e7-7324-42c9-aaed-7aba38523ef4</id>
-      <masked>false</masked>
-      <name>pagesCount</name>
-   </variables>
-   <variables>
-      <defaultValue>'1'</defaultValue>
-      <description></description>
-      <id>0419d93b-26f0-452c-bd50-67b28e679b1c</id>
-      <masked>false</masked>
-      <name>blogsCount</name>
-   </variables>
-   <variables>
-      <defaultValue>'Electronics'</defaultValue>
-      <description></description>
-      <id>e17b526f-cf70-4790-b4c1-02125946f70a</id>
+      <id>c6a3191c-58e0-4223-a17e-caa47b4f9949</id>
       <masked>false</masked>
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'themes'</defaultValue>
+      <defaultValue>'qwestore'</defaultValue>
       <description></description>
-      <id>e04eba79-5817-4b48-9489-be93c7daf5ea</id>
+      <id>2fdaedf6-0dd1-4378-890a-aac94febb695</id>
       <masked>false</masked>
-      <name>contentType</name>
+      <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
+      <description></description>
+      <id>49d6278e-eca8-4e89-b193-3ed572263759</id>
+      <masked>false</masked>
+      <name>catalogId</name>
+   </variables>
+   <variables>
+      <defaultValue>'en-US'</defaultValue>
+      <description></description>
+      <id>e36ea218-4ffb-4389-8ca8-2d60b4c3b619</id>
+      <masked>false</masked>
+      <name>defaultLanguage</name>
+   </variables>
+   <variables>
+      <defaultValue>'USD'</defaultValue>
+      <description></description>
+      <id>cfc93afa-fbbf-4c11-afd3-6bd7502de817</id>
+      <masked>false</masked>
+      <name>defaultCurrency</name>
+   </variables>
+   <variables>
+      <defaultValue>'Open'</defaultValue>
+      <description></description>
+      <id>6d84ca50-ec89-4587-8e36-0b10939042e7</id>
+      <masked>false</masked>
+      <name>storeState</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d9ec862a-e079-4da4-8dc1-ba2690251e97</id>
+      <masked>false</masked>
+      <name>languages</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fdd6107b-d1ff-48df-8d4b-5945aeaab8ec</id>
+      <masked>false</masked>
+      <name>currencies</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -78,18 +104,17 @@ import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
-import internal.GlobalVariable as GlobalVariable
 
 import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
