@@ -48,11 +48,11 @@ WS.verifyElementPropertyValue(searchFile, '[0].name', archiveName)
 
 //Get uploaded archive path if file uploaded correctly
 archivePath = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')
-
+println archivePath
 
 //Unpack the archive to its current location directory
 folderName = archiveName.substring(0, archiveName.lastIndexOf("."))
-unpackArchive = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommerce.Content/ContentUnpack', [
+unpackArchive = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentUnpack', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('folderUrl') : folderName,
@@ -62,7 +62,7 @@ unpackArchive = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virt
 
 //Verify that the archive was successfully unpacked and unpacked file exists
 fileName = 'theme_test.html' //static file name in prepared ZIP file in TestFiles folder
-unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
+unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebservices/VirtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('relativeUrl') : '/' + folderName + '/' + fileName
