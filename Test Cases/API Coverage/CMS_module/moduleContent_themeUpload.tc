@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Upload and unpack theme archive</description>
+   <description>Upload/unpack theme archive, check status</description>
    <name>moduleContent_themeUpload</name>
    <tag></tag>
    <comment></comment>
