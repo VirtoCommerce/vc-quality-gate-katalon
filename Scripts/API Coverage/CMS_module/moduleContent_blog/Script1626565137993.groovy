@@ -88,7 +88,7 @@ deletePost = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 
 
 //Verify that the blog was successfully deleted
-deletedPost = WS.sendRequest(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
+deletedPost = WS.sendRequest(findTestObject('API/backWebservices/VirtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('relativeUrl') : relativeUrl

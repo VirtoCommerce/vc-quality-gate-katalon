@@ -56,7 +56,7 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 
 
 //Verify that the file was successfully uploaded and exists
-verification = WS.sendRequestAndVerify(findTestObject('API/backWebservices/virtoCommerce.Content/ContentGet', [
+verification = WS.sendRequestAndVerify(findTestObject('API/backWebservices/VirtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('relativeUrl') : '/' + GlobalVariable.folderName + '/' + fileName
@@ -88,7 +88,7 @@ rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 
 
 //Verify if the file is accessible via search
-search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/virtoCommerce.Content/ContentSearch', [
+search = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('keyword') : newFileName
