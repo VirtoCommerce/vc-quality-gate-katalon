@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ExternalSigninProviders</name>
+   <name>AuthorizationExternalSignIn</name>
    <tag></tag>
-   <elementGuidId>dc25d9d9-71cd-4d04-b3f4-e21d351ac1aa</elementGuidId>
+   <elementGuidId>f2d9b87a-49a8-4f54-a430-cb071a6b2737</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/externalsignin/providers</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/externalsignin?authenticationType=${GlobalVariable.externalsigninProvider}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
