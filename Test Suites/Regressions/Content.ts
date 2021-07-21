@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platform_CMS_Content</name>
+   <name>Content</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>cef74671-325c-4b46-80ff-9e47f3c3f443</testSuiteGuid>
+   <testSuiteGuid>5917b497-3494-47f7-859a-d69171b3bf24</testSuiteGuid>
    <testCaseLink>
       <guid>1c7098ae-8a28-401a-b89f-12a4673b1d32</guid>
       <isReuseDriver>false</isReuseDriver>
