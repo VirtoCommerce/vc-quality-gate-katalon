@@ -277,7 +277,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>''</initValue>
-      <name>dynamicPropertyID</name>
+      <name>dynamicPropertyId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Variable to use for any ID in cases</description>
