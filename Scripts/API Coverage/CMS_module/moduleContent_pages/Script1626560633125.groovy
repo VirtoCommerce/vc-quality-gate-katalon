@@ -56,7 +56,7 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 
 
 //Verify that the file was successfully uploaded and exists
-verification = WS.sendRequestAndVerify(findTestObject('API/backWebservices/VirtoCommerce.Content/ContentGet', [
+verification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
 	('relativeUrl') : '/' + GlobalVariable.folderName + '/' + fileName
