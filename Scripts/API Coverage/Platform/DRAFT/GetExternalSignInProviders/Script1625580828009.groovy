@@ -19,7 +19,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Get external Providers')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ExternalSigninProviders'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/AuthorizationExternalSignInProviders'))
 
 WS.verifyElementPropertyValue(response, '[0].authenticationType', "AzureAD")
 WS.verifyElementPropertyValue(response, '[0].displayName', "Azure Active Directory")

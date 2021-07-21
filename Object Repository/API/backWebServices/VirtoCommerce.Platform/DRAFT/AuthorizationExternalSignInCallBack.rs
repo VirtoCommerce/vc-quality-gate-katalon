@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ExternalSignInCallBack</name>
+   <name>AuthorizationExternalSignInCallBack</name>
    <tag></tag>
    <elementGuidId>cd68b590-3a83-4751-b298-a4f5a34841cb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
