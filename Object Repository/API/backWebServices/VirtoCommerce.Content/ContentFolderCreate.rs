@@ -56,11 +56,18 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'qwefolder'</defaultValue>
+      <defaultValue>'12-'</defaultValue>
       <description></description>
       <id>5bf1d449-4ad6-4164-8739-a5ba4de8516f</id>
       <masked>false</masked>
       <name>folderName</name>
+   </variables>
+   <variables>
+      <defaultValue>'204'</defaultValue>
+      <description></description>
+      <id>516bf33a-f68b-429d-96f4-7af241bd96d0</id>
+      <masked>false</masked>
+      <name>statusCodes</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -75,6 +82,7 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 204)</verificationScript>
+//Status verification is turned off as it returns empty response
+//WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

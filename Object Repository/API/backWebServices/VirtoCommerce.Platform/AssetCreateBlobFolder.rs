@@ -74,6 +74,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
+//Status verification is turned off as it returns empty response
 //WS.verifyResponseStatusCode(response, 204)
 
 </verificationScript>

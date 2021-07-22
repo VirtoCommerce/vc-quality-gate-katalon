@@ -235,6 +235,11 @@
       <name>folderName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must contain alphanumeric lower case, &quot;-&quot; and &quot; &quot; characters only.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must contain alphanumeric lower case, &quot;-&quot; and &quot; &quot; characters only.', ('qwe--qwe') : 'Folder name must not conatin consecutive dash symbols.', ('') : 'Folder name must not be empty.']</initValue>
+      <name>folderNameListContent</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description>to use in platform modules section</description>
       <initValue>'3.16.0-alpha.512'</initValue>
       <name>storeModuleVersion</name>
