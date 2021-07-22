@@ -48,7 +48,8 @@ description = 'updated description'
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyUpdate',[
 	('propertyType') : propertyType,
 	('name') : updatedPropertyName, 
-	('description') : description
+	('description') : description,
+	('dynamicPropertyId') : GlobalVariable.dynamicPropertyId
 	]))
 
 //Verify that the property was upadted
@@ -63,7 +64,8 @@ WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
 //Delete the created property
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDelete', [
-	('propertyType') : propertyType
+	('propertyType') : propertyType,
+	('dynamicPropertyId') : GlobalVariable.dynamicPropertyId
     ]))
 
 //Verify that the property was deleted

@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${GlobalVariable.dynamicPropertyId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${dynamicPropertyId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -61,6 +61,13 @@
       <id>17d52c5f-55d3-4682-a817-89331c5823d2</id>
       <masked>false</masked>
       <name>description</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>cd943401-bba9-4529-9004-b51f2a51bdcd</id>
+      <masked>false</masked>
+      <name>dynamicPropertyId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
