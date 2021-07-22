@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;objectType\&quot;:\&quot;${objectType}\&quot;,\n   \&quot;keyword\&quot;: \&quot;${keyword}\&quot;,\n   \&quot;take\&quot;:100\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;objectType\&quot;: \&quot;${objectType}\&quot;,\n   \&quot;keyword\&quot;: \&quot;${keyword}\&quot;,\n   \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
