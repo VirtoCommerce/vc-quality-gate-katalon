@@ -12,6 +12,12 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>5917b497-3494-47f7-859a-d69171b3bf24</testSuiteGuid>
    <testCaseLink>
+      <guid>b1e250da-df1d-4f3f-8664-26a6d551fb90</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/CMS_module/moduleContent_nameValidation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>1c7098ae-8a28-401a-b89f-12a4673b1d32</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

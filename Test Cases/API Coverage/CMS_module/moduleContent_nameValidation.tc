@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Try to create a folder with invalid name</description>
-   <name>DRAFT.moduleContent_themeAddInvalidName</name>
+   <name>moduleContent_nameValidation</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>a7265780-303a-4df7-82da-f6c22b88bff2</testCaseGuid>
