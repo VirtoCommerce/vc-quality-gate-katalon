@@ -6,14 +6,11 @@
    <elementGuidId>a077b638-49b1-4f9a-9e7d-8510b455c4c1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;userId\&quot;: \&quot;1eb2fa8ac6574541afdb525833dadb46\&quot;,\n  \&quot;userName\&quot;: \&quot;admin\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;apiKey\&quot;: \&quot;${GlobalVariable.api_key}\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -28,14 +25,18 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/content/${GlobalVariable.storeId}/stats</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/content/${storeId}/stats</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'1'</defaultValue>
       <description></description>
@@ -57,6 +58,20 @@
       <masked>false</masked>
       <name>blogsCount</name>
    </variables>
+   <variables>
+      <defaultValue>'Electronics'</defaultValue>
+      <description></description>
+      <id>e17b526f-cf70-4790-b4c1-02125946f70a</id>
+      <masked>false</masked>
+      <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>'themes'</defaultValue>
+      <description></description>
+      <id>e04eba79-5817-4b48-9489-be93c7daf5ea</id>
+      <masked>false</masked>
+      <name>contentType</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -65,23 +80,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 import internal.GlobalVariable as GlobalVariable
 
+import groovy.json.JsonSlurper
+import groovy.json.JsonOutput
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-if (GlobalVariable.contentType == &quot;themes&quot;) {
-    WS.verifyElementPropertyValue(response, 'themesCount', 2)
-} else if (GlobalVariable.contentType == &quot;blogs&quot;) {
-    WS.verifyElementPropertyValue(response, 'blogsCount', 2)
-}
-
-
-//RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
-//def variables = request.getVariables()
-//def bCount = variables.get(&quot;blogsCount&quot;)
-//println(&quot;VARS : &quot; + bCount)
-
-KeywordUtil.logInfo(response.responseBodyContent)
+def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(listJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

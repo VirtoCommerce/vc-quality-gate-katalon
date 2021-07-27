@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  //\&quot;responseGroup\&quot;: \&quot;None\&quot;,\n  //\&quot;searchPhrase\&quot;: \&quot;Qwe\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;${searchPhrase}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 20\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${searchPhrase}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n  \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,14 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'8184dc56-0742-4dc2-87d6-61261a2b19e8'</defaultValue>
-      <description></description>
-      <id>72dbce37-d3d2-4134-a142-f5dd7be43f8c</id>
-      <masked>false</masked>
-      <name>memberId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qwe'</defaultValue>
       <description></description>
       <id>32519d71-1549-4c06-9115-3bf3b305ff7c</id>
       <masked>false</masked>
@@ -62,11 +55,17 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonOutput
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)</verificationScript>
+
+def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(listJsonOutput)
+WS.verifyResponseStatusCode(response, 200)
+</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

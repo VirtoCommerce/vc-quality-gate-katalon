@@ -18,7 +18,7 @@ import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrl
 import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
 import groovy.json.JsonSlurper as JsonSlurper
 
-def request = findTestObject('API/backWebServices/VirtoCommerce.Platform/TokenAuthBack')
+def request = findTestObject('API/backWebServices/VirtoCommerce.Platform/AuthorizationToken')
 
 List<UrlEncodedBodyParameter> body = new ArrayList()
 body.add(new UrlEncodedBodyParameter('grant_type', 'password'))
