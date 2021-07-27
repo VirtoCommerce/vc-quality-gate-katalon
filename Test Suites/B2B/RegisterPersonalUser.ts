@@ -111,7 +111,7 @@
       <guid>f65542f1-fe3a-4a58-b316-8f2c7915e33e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/BuildIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/BuildIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1cc3add6-8ecc-4d6a-8ea4-c4a8fbfdd528</guid>
@@ -123,6 +123,6 @@
       <guid>c8386718-1cd7-4ee2-86d6-8748cde823cd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/BuildIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/BuildIndex</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

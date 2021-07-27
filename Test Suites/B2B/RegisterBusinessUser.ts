@@ -93,7 +93,7 @@
       <guid>e4f332df-803b-4ef9-b0a8-3bb488e8a081</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/BuildIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/BuildIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f6131f5d-ddf8-4794-998f-51d5ba30d5d3</guid>
