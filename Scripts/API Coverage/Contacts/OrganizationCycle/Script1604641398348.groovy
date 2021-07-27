@@ -26,7 +26,7 @@ WebUI.comment('Organization ID : ' + GlobalVariable.organizationId)
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 // Update org
@@ -47,7 +47,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 // Search deleted org. Count 0 in result - org was deleted

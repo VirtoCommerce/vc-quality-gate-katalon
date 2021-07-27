@@ -36,7 +36,7 @@ def Zip = DataFromFile.Zip
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
 
-WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
+WebUI.callTestCase(findTestCase('Another Cases/Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
     FailureHandling.OPTIONAL)
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/en-US/headphones/beats-by-dre-powerbeats-2-in-ear-bluetooth-wi')

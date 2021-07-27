@@ -28,7 +28,7 @@ for (int i; i < memberId.size(); i++) {
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 // Search new contact. Count 0 in result - contact was deleted

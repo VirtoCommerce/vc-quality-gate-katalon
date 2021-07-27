@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Get member ID</description>
    <name>MembersGitIdGroup</name>
    <tag></tag>
    <comment>TEST CASE: Member get by ID group</comment>

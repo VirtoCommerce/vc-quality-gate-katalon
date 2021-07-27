@@ -41,4 +41,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeyDelete</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>c24703d6-23ff-415a-b08e-5e2c3e2981b8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserLoginLogout</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

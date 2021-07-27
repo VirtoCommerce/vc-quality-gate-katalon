@@ -22,6 +22,5 @@ WebUI.comment('TEST CASE: Get information about only one setting')
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
 	('name') : 'VirtoCommerce.ModulesAutoInstallState'
 	]))
-
 WS.verifyElementPropertyValue(response, 'moduleId', 'Platform')
 WS.verifyElementPropertyValue(response, 'name', "VirtoCommerce.ModulesAutoInstallState")

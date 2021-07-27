@@ -24,7 +24,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE : Search new organizations and save Ids')
@@ -51,7 +51,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE : Search deleted orgs. Count 0 in result - orgs were deleted')

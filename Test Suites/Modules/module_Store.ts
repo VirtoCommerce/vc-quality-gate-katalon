@@ -15,6 +15,6 @@
       <guid>5551052f-140c-4163-81b7-6e49a105c2fd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Store/StoreCreate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleStore/StoreCreate</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

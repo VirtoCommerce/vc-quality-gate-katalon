@@ -54,7 +54,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE: Check Contact in Org')
@@ -94,7 +94,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 WS.delay(10)
 
 

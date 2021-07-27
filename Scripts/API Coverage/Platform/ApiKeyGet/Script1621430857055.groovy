@@ -1,4 +1,4 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -24,6 +24,3 @@ responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vir
 	('userId') : GlobalVariable.userId
 	]))
 WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.api_key+"upd")
-
-//updatedApiKey = WS.getElementPropertyValue(responseApiKey, '[0].apiKey')
-//WebUI.comment('NEW API KEY : ' + updatedApiKey)
