@@ -61,7 +61,7 @@ unpackArchive = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 
 
 //Verify that the archive was successfully unpacked and unpacked file exists
-fileName = 'theme_test.html' //static file name in prepared ZIP file in TestFiles folder
+fileName = 'qwetheme_test.html' //static file name in prepared ZIP file in TestFiles folder
 unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
