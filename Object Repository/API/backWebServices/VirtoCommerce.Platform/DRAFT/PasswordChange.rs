@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>RequestPasswordResetEmail</name>
+   <name>PasswordChange</name>
    <tag></tag>
-   <elementGuidId>4cd642ae-f325-4889-a9f2-6fafc1e9ca69</elementGuidId>
+   <elementGuidId>0a2bf859-98de-412b-b186-ddc90efd0f39</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;oldPassword\&quot;: \&quot;${oldPassword}\&quot;,\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${loginOrEmail}/requestpasswordreset</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/changepassword</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,11 +42,25 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'autotestvolha'</defaultValue>
+      <defaultValue>'1!Password'</defaultValue>
       <description></description>
-      <id>3bc88c64-ed36-47f6-b0ce-59103054f46e</id>
+      <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
       <masked>false</masked>
-      <name>loginOrEmail</name>
+      <name>newPassword</name>
+   </variables>
+   <variables>
+      <defaultValue>'123456qQ'</defaultValue>
+      <description></description>
+      <id>deafc15d-2f02-4346-bcf6-5380678db2fd</id>
+      <masked>false</masked>
+      <name>oldPassword</name>
+   </variables>
+   <variables>
+      <defaultValue>'test@mail.com'</defaultValue>
+      <description></description>
+      <id>f904d9c9-7e67-4317-b676-436bdd1c2ea6</id>
+      <masked>false</masked>
+      <name>userName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

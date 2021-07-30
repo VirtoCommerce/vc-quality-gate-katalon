@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ValidatePasswordResetToken</name>
+   <name>PasswordResetConfirm</name>
    <tag></tag>
-   <elementGuidId>9ce806fe-11b5-4735-b352-fb31f3074782</elementGuidId>
+   <elementGuidId>67b538e0-1f9d-4dd4-913a-d287a921d34d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;token\&quot;: \&quot;string\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;,\n  \&quot;forcePasswordChangeOnNextSignIn\&quot;:false\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userId}/validatepasswordresettoken</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpasswordconfirm</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,18 +42,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'2ec72fbd-84b1-4ae0-a8e6-98534604221e'</defaultValue>
+      <defaultValue>'test@mail.com'</defaultValue>
       <description></description>
-      <id>770756ba-251e-40fe-a98b-7661095218e3</id>
+      <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
       <masked>false</masked>
-      <name>userId</name>
+      <name>userName</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'1!Password'</defaultValue>
       <description></description>
-      <id>dac690c8-970a-47af-a752-7b46803b1b65</id>
+      <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
       <masked>false</masked>
-      <name>token</name>
+      <name>newPassword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

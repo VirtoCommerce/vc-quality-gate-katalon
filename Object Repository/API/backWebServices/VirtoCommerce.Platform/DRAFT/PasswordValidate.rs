@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ChangePassword</name>
+   <name>PasswordValidate</name>
    <tag></tag>
-   <elementGuidId>0a2bf859-98de-412b-b186-ddc90efd0f39</elementGuidId>
+   <elementGuidId>79bbb741-c6e2-4d8f-b98a-33269c5a4178</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;oldPassword\&quot;: \&quot;${oldPassword}\&quot;,\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  //\&quot;string\&quot; in swagger looks as erros\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/changepassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/validatepassword</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,27 +41,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>'1!Password'</defaultValue>
-      <description></description>
-      <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
-      <masked>false</masked>
-      <name>newPassword</name>
-   </variables>
-   <variables>
-      <defaultValue>'123456qQ'</defaultValue>
-      <description></description>
-      <id>deafc15d-2f02-4346-bcf6-5380678db2fd</id>
-      <masked>false</masked>
-      <name>oldPassword</name>
-   </variables>
-   <variables>
-      <defaultValue>'autotestvolha'</defaultValue>
-      <description></description>
-      <id>f904d9c9-7e67-4317-b676-436bdd1c2ea6</id>
-      <masked>false</masked>
-      <name>userName</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

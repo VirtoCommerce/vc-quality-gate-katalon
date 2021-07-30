@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ResetPasswordConfirm</name>
+   <name>PasswordChangeCurrentUser</name>
    <tag></tag>
-   <elementGuidId>67b538e0-1f9d-4dd4-913a-d287a921d34d</elementGuidId>
+   <elementGuidId>39228bc1-b3a6-40d0-8615-d13f1761aa26</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;,\n  \&quot;forcePasswordChangeOnNextSignIn\&quot;:false\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;oldPassword\&quot;: \&quot;${oldPassword}\&quot;,\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpasswordconfirm</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/currentuser/changepassword</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,18 +42,25 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
-      <masked>false</masked>
-      <name>userName</name>
-   </variables>
-   <variables>
       <defaultValue>'1!Password'</defaultValue>
       <description></description>
       <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
       <masked>false</masked>
       <name>newPassword</name>
+   </variables>
+   <variables>
+      <defaultValue>'123456qQ'</defaultValue>
+      <description></description>
+      <id>deafc15d-2f02-4346-bcf6-5380678db2fd</id>
+      <masked>false</masked>
+      <name>oldPassword</name>
+   </variables>
+   <variables>
+      <defaultValue>'test@mail.com'</defaultValue>
+      <description></description>
+      <id>f904d9c9-7e67-4317-b676-436bdd1c2ea6</id>
+      <masked>false</masked>
+      <name>userName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

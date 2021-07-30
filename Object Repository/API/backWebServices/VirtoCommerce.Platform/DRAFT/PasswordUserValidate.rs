@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ChangePasswordCurrentUser</name>
+   <name>PasswordUserValidate</name>
    <tag></tag>
-   <elementGuidId>39228bc1-b3a6-40d0-8615-d13f1761aa26</elementGuidId>
+   <elementGuidId>61a289c8-3291-4723-9b4c-dab7453fe251</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/currentuser/changepassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/validateuserpassword</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -56,7 +56,7 @@
       <name>oldPassword</name>
    </variables>
    <variables>
-      <defaultValue>'autotestvolha'</defaultValue>
+      <defaultValue>'test@mail.com'</defaultValue>
       <description></description>
       <id>f904d9c9-7e67-4317-b676-436bdd1c2ea6</id>
       <masked>false</masked>

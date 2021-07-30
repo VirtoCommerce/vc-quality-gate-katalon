@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ValidatePassword</name>
+   <name>PasswordRequestResetEmail</name>
    <tag></tag>
-   <elementGuidId>79bbb741-c6e2-4d8f-b98a-33269c5a4178</elementGuidId>
+   <elementGuidId>4cd642ae-f325-4889-a9f2-6fafc1e9ca69</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  //\&quot;string\&quot; in swagger looks as erros\n}&quot;,
+  &quot;text&quot;: &quot;//body is empty in swagger&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/validatepassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${loginOrEmail}/requestpasswordreset</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'test@mail.com'</defaultValue>
+      <description></description>
+      <id>3bc88c64-ed36-47f6-b0ce-59103054f46e</id>
+      <masked>false</masked>
+      <name>loginOrEmail</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
