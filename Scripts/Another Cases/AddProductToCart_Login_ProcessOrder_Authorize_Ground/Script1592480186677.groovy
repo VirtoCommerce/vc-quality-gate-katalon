@@ -35,7 +35,7 @@ def Zip = DataFromFile.Zip
 
 WebUI.callTestCase(findTestCase('Test Cases/SystemCases/WindowtoFullSize'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.callTestCase(findTestCase('Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
+WebUI.callTestCase(findTestCase('Another Cases/Login'), [('login') : GlobalVariable.UserLogPass, ('password') : GlobalVariable.UserLogPass], 
     FailureHandling.OPTIONAL)
 
 WebUI.mouseOver(findTestObject('UI-Electronics/Page_Electronics/Theater'))

@@ -93,6 +93,6 @@
       <guid>a8faca40-9667-46fd-9721-16864955fce4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
