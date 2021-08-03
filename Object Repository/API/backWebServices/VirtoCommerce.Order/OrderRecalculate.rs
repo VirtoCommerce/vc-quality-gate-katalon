@@ -33,7 +33,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/recalculate</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
