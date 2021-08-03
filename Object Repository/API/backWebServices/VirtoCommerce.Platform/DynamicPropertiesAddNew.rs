@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;valueType\&quot;:\&quot;ShortText\&quot;,\n   \&quot;displayNames\&quot;:[\n      {\n         \&quot;locale\&quot;:\&quot;de-DE\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;en-US\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;fr-FR\&quot;\n      }\n   ],\n   \&quot;name\&quot;:\&quot;${name}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -54,6 +54,13 @@
       <id>b6bb283b-a8e2-4959-9092-6333dbd4aff2</id>
       <masked>false</masked>
       <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>'ShortText'</defaultValue>
+      <description></description>
+      <id>67f4a20f-ad0d-4895-9da2-da2439d5c2b1</id>
+      <masked>false</masked>
+      <name>valueType</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
