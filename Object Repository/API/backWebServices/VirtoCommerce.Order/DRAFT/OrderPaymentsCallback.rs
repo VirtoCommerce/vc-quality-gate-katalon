@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Register customer order payment in external payment system</description>
-   <name>DRAFT.OrderPaymentsCallback</name>
+   <name>OrderPaymentsCallback</name>
    <tag></tag>
    <elementGuidId>3c552e64-e5a8-4b14-9718-8fee867058bb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Register customer order payment in external payment system</description>
-   <name>DRAFT.OrderProcessPayment</name>
+   <description>create order by cart id
+(requires id from storefront)</description>
+   <name>OrderCreateByCartId</name>
    <tag></tag>
-   <elementGuidId>aaa0cfa8-b5e9-48e4-954c-edd2876eca72</elementGuidId>
+   <elementGuidId>a96954a1-03f9-4796-9cfc-04cdf647e4b1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -33,7 +34,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/processPayment/${paymentId}</restUrl>
+   <restUrl>https://${GlobalVariable.urlBack}/api/order/customerOrders/${cartId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,18 +44,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'7d17069c-05d9-4de1-9e19-7b3a545bba1a'</defaultValue>
       <description></description>
-      <id>02036b8c-7c19-4e28-b4e0-ba744cc4b168</id>
+      <id>da1dbecf-8507-4e2c-a460-69d4209c56dc</id>
       <masked>false</masked>
-      <name>orderId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>85048ae5-edb0-4fc2-a6e3-7f059bf0586d</id>
-      <masked>false</masked>
-      <name>paymentId</name>
+      <name>cartId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

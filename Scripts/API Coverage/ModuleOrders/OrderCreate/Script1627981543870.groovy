@@ -9,27 +9,44 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
-import java.text.SimpleDateFormat
 
-//Set the date format to use current date on the platform
-def date = new Date()
-def sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'");
-currentDate =  sdf.format(date)
+//Send request with order data to create an order
 
-//Send request to create an order
 orderId = '25333618-21cb-4518-919c-0c0e46d7a921'
+int quantity = 1
 order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
-	('storeId') : GlobalVariable.storeId,
-	('userName') : GlobalVariable.userName,
-	('userId') : GlobalVariable.userId,
 	('orderId') : orderId,
-	('currentDate') : currentDate
+	('quantity') : quantity
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
+
+//Update the created order
+
+int updatedQuantity = (quantity + 1)
+updateOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate', [
+	('orderId') : orderId,
+	('quantity') : updatedQuantity
+	]))
+
+//Get the created order to verify changes
+
+updatedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
+	('orderId') : orderId
+	]))
+WS.verifyElementPropertyValue(updatedOrder,'items[0].quantity', updatedQuantity)
+
+//Delete the created order
+deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [
+	('orderId') : orderId
+	]))
+
+//Search for the deleted order to verify it's gone
+deletedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearch', [
+	('keyword') : orderId
+	]))
+WS.verifyElementPropertyValue(deletedOrder, 'totalCount', '0')

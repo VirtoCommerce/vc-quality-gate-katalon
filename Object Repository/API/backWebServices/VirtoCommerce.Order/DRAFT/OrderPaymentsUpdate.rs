@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Relculate order totals after changes</description>
-   <name>DRAFT.OrderPaymentsUpdate</name>
+   <name>OrderPaymentsUpdate</name>
    <tag></tag>
    <elementGuidId>7effad54-41fd-4896-9b53-64605a29c098</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

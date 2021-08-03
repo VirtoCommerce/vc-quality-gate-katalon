@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Create or update order payment</description>
-   <name>DRAFT.OrderPayments</name>
+   <name>OrderPayments</name>
    <tag></tag>
    <elementGuidId>c6f85eb0-17f6-4a3b-a9e9-2479dad1e62a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

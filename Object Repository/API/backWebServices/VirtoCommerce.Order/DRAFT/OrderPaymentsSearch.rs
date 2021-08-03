@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Search customer order by given criteria</description>
-   <name>DRAFT.OrderPaymentsSearch</name>
+   <name>OrderPaymentsSearch</name>
    <tag></tag>
    <elementGuidId>3e22d436-5fd3-46cd-a10c-f45981cf9195</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
