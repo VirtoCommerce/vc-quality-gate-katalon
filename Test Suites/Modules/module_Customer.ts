@@ -57,7 +57,7 @@
       <guid>2e34aed5-f77a-4e3d-9f6b-14fbfb161843</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c08a80cb-1084-42af-a4d5-809d77dbb379</guid>

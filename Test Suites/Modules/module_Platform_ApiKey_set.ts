@@ -47,4 +47,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>7ccb55c9-86ea-4651-ac31-53e7e367115d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserLoginLogout</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

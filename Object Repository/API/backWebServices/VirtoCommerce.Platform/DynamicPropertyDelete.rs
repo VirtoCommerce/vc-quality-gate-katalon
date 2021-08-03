@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${dynamicPropertyId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${propertyIds}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -51,9 +51,9 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>a40c9965-211f-4b25-8a6b-689c665d638a</id>
+      <id>d275a1ab-1566-423b-b0c8-516ce095148d</id>
       <masked>false</masked>
-      <name>dynamicPropertyId</name>
+      <name>propertyIds</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

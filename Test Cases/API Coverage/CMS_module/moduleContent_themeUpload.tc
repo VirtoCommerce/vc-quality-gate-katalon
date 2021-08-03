@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Upload/unpack theme archive, check status</description>
-   <name>moduleContent_themeUpload</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>a1b31d73-d2bd-40f8-a981-c712b4634e41</testCaseGuid>
-</TestCaseEntity>

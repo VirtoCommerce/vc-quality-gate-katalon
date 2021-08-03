@@ -21,7 +21,7 @@
       <guid>487edca4-8392-4c5e-bfff-06b881361470</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bad36605-8bdd-4915-ad2b-d028dcb4cb28</guid>
@@ -87,7 +87,7 @@
       <guid>fb353073-7702-4d01-97cb-585dcf3d63e6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>15514ee3-136d-4233-8c5d-e708cc810c89</guid>
