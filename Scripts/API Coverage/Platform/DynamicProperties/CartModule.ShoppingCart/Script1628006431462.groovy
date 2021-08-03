@@ -18,10 +18,10 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-WebUI.comment('TEST CASE: Add new property to Store')
+WebUI.comment('TEST CASE: Add new property to Cart')
 
-propertyType = 'VirtoCommerce.StoreModule.Core.Model.Store' 
-propertyName = 'Qwe Property Store'
+propertyType = 'VirtoCommerce.CartModule.Core.Model.ShoppingCart' 
+propertyName = 'Qwe Property ShoppingCart'
 
 
 // Create new property

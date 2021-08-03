@@ -83,4 +83,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/QuoteModule.QuoteRequest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>d89679bd-4249-455e-8076-1f8b6c8ad05b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/CartModule.ShoppingCart</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

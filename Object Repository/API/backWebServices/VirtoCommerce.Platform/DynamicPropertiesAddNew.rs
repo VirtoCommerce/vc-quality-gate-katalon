@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;isArray\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;isDictionary\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;isMultilingual\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;isRequired\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -61,6 +61,13 @@
       <id>67f4a20f-ad0d-4895-9da2-da2439d5c2b1</id>
       <masked>false</masked>
       <name>valueType</name>
+   </variables>
+   <variables>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>06751c99-d736-4cc0-a1aa-363ba88b39c8</id>
+      <masked>false</masked>
+      <name>boolean</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
