@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CatalogsGetById</name>
+   <name>CatalogsGetTemplate</name>
    <tag></tag>
-   <elementGuidId>ef83c4b2-0879-43c0-8d67-c6a4bbfb3eff</elementGuidId>
+   <elementGuidId>7abe4d08-c62f-45bd-a841-87fb1798adf5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/catalogs/${id}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/catalogs/getnew</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,13 +37,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
-      <masked>false</masked>
-      <name>id</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
@@ -53,10 +46,10 @@ import com.kms.katalon.core.webservice.verification.WSResponseManager
 import com.kms.katalon.core.util.KeywordUtil
 import groovy.json.JsonOutput
 
-ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

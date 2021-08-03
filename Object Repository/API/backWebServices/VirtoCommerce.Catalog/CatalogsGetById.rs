@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CatalogsUpdate</name>
+   <name>CatalogsGetById</name>
    <tag></tag>
-   <elementGuidId>e37c44b2-812f-48ae-8f6a-fc16dbf96ea1</elementGuidId>
+   <elementGuidId>ef83c4b2-0879-43c0-8d67-c6a4bbfb3eff</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;:\&quot;${name}\&quot;,\n   \&quot;objectType\&quot;:\&quot;${propertyType}\&quot;,\n   \&quot;valueType\&quot;:\&quot;ShortText\&quot;,\n   \&quot;displayNames\&quot;:[\n      {\n         \&quot;locale\&quot;:\&quot;de-DE\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;en-US\&quot;\n      },\n      {\n         \&quot;locale\&quot;:\&quot;fr-FR\&quot;\n      }\n   ],\n   \&quot;id\&quot;:\&quot;${GlobalVariable.dynamicPropertyID}\&quot;,\n   \&quot;description\&quot;:\&quot;${description}\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>text/plain</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -31,8 +27,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${GlobalVariable.dynamicPropertyId}</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/catalogs/${id}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,25 +38,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'VirtoCommerce.StoreModule.Core.Model.Store'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>76a79459-5404-45e3-8f34-48b9d02845a2</id>
+      <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
       <masked>false</masked>
-      <name>propertyType</name>
-   </variables>
-   <variables>
-      <defaultValue>'UPD new'</defaultValue>
-      <description></description>
-      <id>7d4fc892-d213-4ec8-80fd-ffe13d5adc3f</id>
-      <masked>false</masked>
-      <name>name</name>
-   </variables>
-   <variables>
-      <defaultValue>'description'</defaultValue>
-      <description></description>
-      <id>17d52c5f-55d3-4682-a817-89331c5823d2</id>
-      <masked>false</masked>
-      <name>description</name>
+      <name>id</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -68,14 +50,14 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
+import groovy.json.JsonOutput
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
