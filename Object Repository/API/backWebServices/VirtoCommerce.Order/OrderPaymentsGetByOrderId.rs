@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description></description>
-   <name>DynamicPropertiesSearch</name>
+   <description>Get order by customer order number</description>
+   <name>OrderPaymentsGetByOrderId</name>
    <tag></tag>
-   <elementGuidId>8fe09778-fe4c-45c6-9187-332e3a7637da</elementGuidId>
+   <elementGuidId>2745c3b8-184e-43fb-803f-a30787a7b8d1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;objectType\&quot;: \&quot;${objectType}\&quot;,\n   \&quot;keyword\&quot;: \&quot;${keyword}\&quot;,\n   \&quot;take\&quot;: 20\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -29,10 +25,11 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/properties/search</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/payments/new</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,38 +39,30 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'VirtoCommerce.StoreModule.Core.Model.Store'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>dca3cb61-d931-4692-863e-86b7458d5eb1</id>
+      <id>76144583-a835-4c39-938f-09566e3a5ffc</id>
       <masked>false</masked>
-      <name>objectType</name>
-   </variables>
-   <variables>
-      <defaultValue>'TEST'</defaultValue>
-      <description></description>
-      <id>ee6b1714-55a1-4c88-9c7a-5e61ba61c633</id>
-      <masked>false</masked>
-      <name>keyword</name>
+      <name>orderId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(prettyJson)
+
+def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(listJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
-
-
-
-
-
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
