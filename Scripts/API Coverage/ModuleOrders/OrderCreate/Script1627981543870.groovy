@@ -16,8 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 //Send request with order data to create an order
-
-orderId = '25333618-21cb-4518-919c-0c0e46d7a921'
+orderId = '8383028c-4d80-46bc-887e-282d0707a070'
 int quantity = 1
 order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
 	('orderId') : orderId,
@@ -25,20 +24,50 @@ order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebSer
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
 
-//Update the created order
+//Get the initial changes number
+getList = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderChangesGetById', [
+	('orderId') : orderId
+	]))
+int initialCount = WS.getElementsCount(getList, "")
 
+//Update the created order
 int updatedQuantity = (quantity + 1)
 updateOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate', [
 	('orderId') : orderId,
 	('quantity') : updatedQuantity
 	]))
 
-//Get the created order to verify changes
+//Get the final number of changes to verify it was updated
+getList = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderChangesGetById', [
+	('orderId') : orderId
+	]))
+WS.verifyElementsCount(getList,"", initialCount+1)
 
+//Get the created order to verify changes
 updatedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
 	('orderId') : orderId
 	]))
 WS.verifyElementPropertyValue(updatedOrder,'items[0].quantity', updatedQuantity)
+
+//Check the total calculation
+price = WS.getElementPropertyValue(updatedOrder, 'items[0].price')
+total = WS.getElementPropertyValue(updatedOrder,'total')
+actualQuantity = WS.getElementPropertyValue(updatedOrder,'items[0].quantity')
+WS.verifyEqual(price*actualQuantity, total)
+
+//Change product quantity to recalculate total
+updatedQuantity = actualQuantity+1
+recalculate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderRecalculate',[
+	('orderId') : orderId,
+	('quantity') : updatedQuantity,
+	('userName') : GlobalVariable.userName
+	]))
+
+//Get total calculation
+price = WS.getElementPropertyValue(recalculate, 'items[0].price')
+total = WS.getElementPropertyValue(recalculate,'total')
+actualQuantity = WS.getElementPropertyValue(recalculate,'items[0].quantity')
+WS.verifyEqual(price*actualQuantity, total)
 
 //Delete the created order
 deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [

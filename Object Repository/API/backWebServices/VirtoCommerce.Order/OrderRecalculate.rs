@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>create order by cart id
-(requires id from storefront)</description>
-   <name>OrderCreate</name>
+   <description>Relculate order totals after changes</description>
+   <name>OrderRecalculate</name>
    <tag></tag>
-   <elementGuidId>09827226-6ccd-44f6-9826-6a0fd9871c5f</elementGuidId>
+   <elementGuidId>c05cafb4-0402-4625-bc3d-4dc4da0c6422</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -33,8 +32,8 @@
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/recalculate</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -46,21 +45,21 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>b4011f0c-270d-49ed-bbe4-fe1e21fc6e0c</id>
+      <id>85d5eae8-29e9-4548-b8dd-867f8404ae68</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>706fdfb2-03e9-4fc9-8cbc-845f68c9bb6c</id>
+      <id>3bc016b2-5e81-40e9-ae55-71a9e9d54e03</id>
       <masked>false</masked>
       <name>quantity</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>e25f5dae-1123-463e-8a5e-c9c1c11214f7</id>
+      <id>48120f77-daab-432f-a61f-caf335fd820a</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
