@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Update a existing customer order</description>
-   <name>DRAFT.OrderUpdate</name>
+   <description>Search customer order by given criteria</description>
+   <name>OrderSearchChanges</name>
    <tag></tag>
-   <elementGuidId>56235594-0166-4938-b06e-2c043a3b47d5</elementGuidId>
+   <elementGuidId>f533ef29-1ccf-4891-ba89-49f52d76084e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;contentType&quot;: &quot;application/x-www-form-urlencoded&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;,
-  &quot;parameters&quot;: [
-    {
-      &quot;name&quot;: &quot;name&quot;,
-      &quot;value&quot;: &quot;${order}&quot;
-    }
-  ]
+  &quot;text&quot;: &quot;{\n\&quot;skip\&quot;: 0,\n\&quot;take\&quot;: 1000,\n\&quot;orderId\&quot;: \&quot;${orderId}\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
-   <httpBodyType>x-www-form-urlencoded</httpBodyType>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/x-www-form-urlencoded</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -37,8 +32,8 @@
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/searchChanges</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -48,11 +43,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'8383028c-4d80-46bc-887e-282d0707a070'</defaultValue>
       <description></description>
-      <id>750ed97c-fe29-489f-a93b-845f8aae3aa7</id>
+      <id>b8fc7b96-b4f1-4c15-b1fd-492b5fe1c42d</id>
       <masked>false</masked>
-      <name>order</name>
+      <name>orderId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -71,7 +66,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

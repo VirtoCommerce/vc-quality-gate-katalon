@@ -18,56 +18,44 @@ import internal.GlobalVariable as GlobalVariable
 //Send request with order data to create an order
 orderId = '8383028c-4d80-46bc-887e-282d0707a070'
 int quantity = 1
-order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
+order = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Order/OrderCreate', [
 	('orderId') : orderId,
-	('quantity') : quantity
+	('quantity') : quantity,
+	('userName') : GlobalVariable.userName
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
 
 //Get the initial changes number
-getList = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderChangesGetById', [
+searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearchChanges', [
 	('orderId') : orderId
 	]))
-int initialCount = WS.getElementsCount(getList, "")
+int initialCount = WS.getElementPropertyValue(searchChanges,'totalCount')
 
 //Update the created order
 int updatedQuantity = (quantity + 1)
 updateOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate', [
 	('orderId') : orderId,
-	('quantity') : updatedQuantity
-	]))
-
-//Get the final number of changes to verify it was updated
-getList = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderChangesGetById', [
-	('orderId') : orderId
-	]))
-WS.verifyElementsCount(getList,"", initialCount+1)
-
-//Get the created order to verify changes
-updatedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
-	('orderId') : orderId
-	]))
-WS.verifyElementPropertyValue(updatedOrder,'items[0].quantity', updatedQuantity)
-
-//Check the total calculation
-price = WS.getElementPropertyValue(updatedOrder, 'items[0].price')
-total = WS.getElementPropertyValue(updatedOrder,'total')
-actualQuantity = WS.getElementPropertyValue(updatedOrder,'items[0].quantity')
-WS.verifyEqual(price*actualQuantity, total)
-
-//Change product quantity to recalculate total
-updatedQuantity = actualQuantity+1
-recalculate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderRecalculate',[
-	('orderId') : orderId,
 	('quantity') : updatedQuantity,
 	('userName') : GlobalVariable.userName
 	]))
 
-//Get total calculation
-price = WS.getElementPropertyValue(recalculate, 'items[0].price')
-total = WS.getElementPropertyValue(recalculate,'total')
-actualQuantity = WS.getElementPropertyValue(recalculate,'items[0].quantity')
+//Get the updated order to verify it was changed
+updatedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
+	('orderId') : orderId
+	]))
+WS.verifyElementPropertyValue(updatedOrder,'items[0].quantity',updatedQuantity)
+
+//Check total recalculation
+price = WS.getElementPropertyValue(updatedOrder,'items[0].price')
+total = WS.getElementPropertyValue(updatedOrder,'total')
+actualQuantity = WS.getElementPropertyValue(updatedOrder,'items[0].quantity')
 WS.verifyEqual(price*actualQuantity, total)
+
+//Get the final number of changes to verify it was updated
+searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearchChanges', [
+	('orderId') : orderId
+	]))
+WS.verifyElementPropertyValue(searchChanges,'totalCount', initialCount+1)
 
 //Delete the created order
 deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [
@@ -79,3 +67,4 @@ deletedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/bac
 	('keyword') : orderId
 	]))
 WS.verifyElementPropertyValue(deletedOrder, 'totalCount', '0')
+
