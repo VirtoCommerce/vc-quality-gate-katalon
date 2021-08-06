@@ -18,37 +18,37 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-WebUI.comment('TEST CASE: Add new property to Store')
+WebUI.comment('TEST CASE: Add new property to VirtoCommerce.StoreModule.Core.Model.Store')
 
-propertyType = 'VirtoCommerce.StoreModule.Core.Model.Store' 
+propertyType = 'VirtoCommerce.StoreModule.Core.Model.Store'
 propertyName = 'Qwe Property Store'
 
 
 // Create new property
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
+responseCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
 	('propertyType') : propertyType, 
 	('name') : propertyName
 	]))
-WS.verifyElementPropertyValue(response, 'objectType', propertyType)
-WS.verifyElementPropertyValue(response, 'name', propertyName)
+WS.verifyElementPropertyValue(responseCreate, 'objectType', propertyType)
+WS.verifyElementPropertyValue(responseCreate, 'name', propertyName)
 
 
-//Verify that property was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', [
+// Verify that property was added 
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', [
 	('objectType') : propertyType,
 	('keyword') : propertyName
 	]))
-WS.verifyElementPropertyValue(response, 'results[0].name', propertyName)
-WS.verifyElementPropertyValue(response, 'results[0].objectType', propertyType)
-WS.verifyElementPropertyValue(response, 'totalCount', 1)
+WS.verifyElementPropertyValue(responseSearch, 'results[0].name', propertyName)
+WS.verifyElementPropertyValue(responseSearch, 'results[0].objectType', propertyType)
+WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
 //save property ID to use in Update and Delete cases
-propertyId = WS.getElementPropertyValue(response, "results[0].id")
+propertyId = WS.getElementPropertyValue(responseSearch, "results[0].id")
 
 
-//Update property
+// Update property
 propertyName = propertyName + 'Updated' 
 description = 'Qwe Description Updated'
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyUpdate',[
+responseUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyUpdate',[
 	('propertyId') : propertyId,
 	('name') : propertyName,
 	('propertyType') : propertyType,
@@ -56,27 +56,27 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	]))
 
 
-//Verify that property was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', [
+// Verify that property was upadted
+responseSearch2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', [
 	('objectType') : propertyType,
 	('keyword') : propertyName
 	]))
-WS.verifyElementPropertyValue(response, 'results[0].description', description)
-WS.verifyElementPropertyValue(response, 'results[0].objectType', propertyType)
-WS.verifyElementPropertyValue(response, 'results[0].name', propertyName)
-WS.verifyElementPropertyValue(response, 'totalCount', 1)
+WS.verifyElementPropertyValue(responseSearch2, 'results[0].description', description)
+WS.verifyElementPropertyValue(responseSearch2, 'results[0].objectType', propertyType)
+WS.verifyElementPropertyValue(responseSearch2, 'results[0].name', propertyName)
+WS.verifyElementPropertyValue(responseSearch2, 'totalCount', 1)
 
 
 // Delete property
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDelete',[
+responseDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDelete',[
 	('propertyType') : propertyType,
 	('propertyIds') : propertyId
 	]))
 
 
-//Verify that property was deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', [
+// Verify that property was deleted
+responseSearch3 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', [
 	('objectType') : propertyType,
 	('keyword') : propertyName
 	]))
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
+WS.verifyElementPropertyValue(responseSearch3, 'totalCount', 0)

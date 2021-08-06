@@ -17,10 +17,11 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Add new property to VirtoCommerce.OrdersModule.Core.Model.Shipment')
 
-propertyType = 'VirtoCommerce.OrdersModule.Core.Model.Shipment'
-propertyName = 'Qwe Property Shipment'
+WebUI.comment('TEST CASE: Add new property to VirtoCommerce.ContentModule.Core.Model.FrontMatterHeaders')
+
+propertyType = 'VirtoCommerce.ContentModule.Core.Model.FrontMatterHeaders' 
+propertyName = 'Qwe Property FrontMatterHeaders'
 
 
 // Create new property
