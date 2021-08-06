@@ -18,10 +18,34 @@
       <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/DynamicPropertiesGetTypes</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6c959411-e7ae-493e-b005-c1062d206089</guid>
+      <guid>b83fc860-2ff0-4722-a784-f1e8ef06a9b0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/StoreModule.Store</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/CartModule.LineItem</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7089863d-2c71-4de2-945a-7142eb3cce07</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/CartModule.Payment</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1534f825-3739-443b-93cf-4a75c13b6ec4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/CartModule.Shipment</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d89679bd-4249-455e-8076-1f8b6c8ad05b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/CartModule.ShoppingCart</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>942c02d2-0477-4250-aee4-1a96be92ff99</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/ContentModule.FrontMatterHeaders</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c26b2fa9-e05a-4ea3-b146-a9084cf7b022</guid>
@@ -82,5 +106,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/QuoteModule.QuoteRequest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6c959411-e7ae-493e-b005-c1062d206089</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/DynamicProperties/StoreModule.Store</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
