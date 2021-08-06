@@ -3,6 +3,8 @@
    <description>Add, update, delete new property of short text</description>
    <name>CommonCatalogsManagement</name>
    <tag></tag>
-   <comment>TEST CASE: Add new property to Store</comment>
+   <comment>TEST CASE: Common Catalogs management - add, update, delete
+catalogId
+catalogName</comment>
    <testCaseGuid>c48b117d-2bb7-4427-a316-e75209ae9387</testCaseGuid>
 </TestCaseEntity>
