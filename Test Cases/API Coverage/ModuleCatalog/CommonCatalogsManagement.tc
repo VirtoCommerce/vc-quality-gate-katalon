@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Add, update, delete new property of short text</description>
+   <description>Add, update, delete new catalog</description>
    <name>CommonCatalogsManagement</name>
    <tag></tag>
    <comment>TEST CASE: Common Catalogs management - add, update, delete
