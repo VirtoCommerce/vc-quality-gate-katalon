@@ -19,49 +19,36 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Common Catalogs management - add, update, delete')
 
-propertyType = 'VirtoCommerce.StoreModule.Core.Model.Store'
-
-propertyName = 'Qwe Property Store'
+catalogName = 'AutoTestCatalog'
 
 // Create new catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsCreate'))
-
-WS.verifyElementPropertyValue(response, 'objectType', propertyType)
-
-WS.verifyElementPropertyValue(response, 'name', propertyName)
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsCreate', [('name') : catalogName]))
+WS.verifyElementPropertyValue(response, 'name', 'AutoTestCatalog')
 
 //Verify that catalog was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [('keyword') : catalogName]))
 
-WS.verifyElementPropertyValue(response, 'results[0].name', propertyName)
-
-WS.verifyElementPropertyValue(response, 'results[0].objectType', propertyType)
-
+WS.verifyElementPropertyValue(response, 'results[0].name', catalogName)
 WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
-//save property ID to use in Update and Delete cases
-propertyId = WS.getElementPropertyValue(response, 'results[0].id')
+//save catalog ID to use in Update and Delete cases
+catalogId = WS.getElementPropertyValue(response, 'results[0].id')
+WebUI.comment(catalogId)
+catalogName = (catalogName + 'UPD')
+WebUI.comment(catalogName)
 
 //Update catalog
-propertyName = (propertyName + 'Updated')
-
-description = 'Qwe Description Updated'
-
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsUpdate'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsUpdateNew', [('name') : catalogName
+            , ('id') : catalogId]))
 
 //Verify that catalog was upadted
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch'))
-
-WS.verifyElementPropertyValue(response, 'results[0].description', description)
-
-WS.verifyElementPropertyValue(response, 'results[0].objectType', propertyType)
-
-WS.verifyElementPropertyValue(response, 'results[0].name', propertyName)
-
+WS.verifyElementPropertyValue(response, 'results[0].name', 'AutoTestCatalogUPD')
+WS.verifyElementPropertyValue(response, 'results[0].id', catalogId)
 WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
 // Delete catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsDeleteById', [('id') : '']))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsDeleteById', [('id') : catalogId]))
 
 //Verify that catalog was deleted
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch'))
