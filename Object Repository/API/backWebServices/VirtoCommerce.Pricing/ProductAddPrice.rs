@@ -6,6 +6,7 @@
    <elementGuidId>a3b8b881-42f9-45aa-a8ab-60f1de85a5f3</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
@@ -28,6 +29,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/products/prices</restUrl>
@@ -35,7 +37,10 @@
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -43,15 +48,13 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
