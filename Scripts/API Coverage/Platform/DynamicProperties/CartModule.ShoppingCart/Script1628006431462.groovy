@@ -26,14 +26,14 @@ propertyName = 'Qwe Property ShoppingCart'
 
 // Create new property
 responseCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
-	('propertyType') : propertyType, 
+	('propertyType') : propertyType,
 	('name') : propertyName
 	]))
 WS.verifyElementPropertyValue(responseCreate, 'objectType', propertyType)
 WS.verifyElementPropertyValue(responseCreate, 'name', propertyName)
 
 
-// Verify that property was added 
+// Verify that property was added
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesSearch', [
 	('objectType') : propertyType,
 	('keyword') : propertyName
@@ -46,7 +46,7 @@ propertyId = WS.getElementPropertyValue(responseSearch, "results[0].id")
 
 
 // Update property
-propertyName = propertyName + 'Updated' 
+propertyName = propertyName + 'Updated'
 description = 'Qwe Description Updated'
 responseUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyUpdate',[
 	('propertyId') : propertyId,
