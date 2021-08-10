@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>Checks basic operations with stores api (create/edit/delete)</description>
-   <name>module_Store</name>
+   <name>DRAFT.module_Store</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
