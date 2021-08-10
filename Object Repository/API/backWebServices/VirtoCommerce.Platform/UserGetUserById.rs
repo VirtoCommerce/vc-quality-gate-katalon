@@ -55,7 +55,6 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)

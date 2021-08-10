@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;string\&quot;,\n  \&quot;isVirtual\&quot;: true,\n  \&quot;outerId\&quot;: \&quot;string\&quot;,\n  \&quot;defaultLanguage\&quot;: {\n    \&quot;catalogId\&quot;: \&quot;string\&quot;,\n    \&quot;isDefault\&quot;: true,\n    \&quot;languageCode\&quot;: \&quot;string\&quot;,\n    \&quot;id\&quot;: \&quot;string\&quot;\n  },\n  \&quot;languages\&quot;: [\n    {\n      \&quot;catalogId\&quot;: \&quot;string\&quot;,\n      \&quot;isDefault\&quot;: true,\n      \&quot;languageCode\&quot;: \&quot;string\&quot;,\n      \&quot;id\&quot;: \&quot;string\&quot;\n    }\n  ],\n  \&quot;properties\&quot;: [\n    {\n      \&quot;isReadOnly\&quot;: true,\n      \&quot;isNew\&quot;: true,\n      \&quot;catalogId\&quot;: \&quot;string\&quot;,\n      \&quot;categoryId\&quot;: \&quot;string\&quot;,\n      \&quot;name\&quot;: \&quot;string\&quot;,\n      \&quot;required\&quot;: true,\n      \&quot;dictionary\&quot;: true,\n      \&quot;multivalue\&quot;: true,\n      \&quot;multilanguage\&quot;: true,\n      \&quot;hidden\&quot;: true,\n      \&quot;valueType\&quot;: \&quot;ShortText\&quot;,\n      \&quot;type\&quot;: \&quot;Product\&quot;,\n      \&quot;outerId\&quot;: \&quot;string\&quot;,\n      \&quot;ownerName\&quot;: \&quot;string\&quot;,\n      \&quot;values\&quot;: [\n        {\n          \&quot;propertyName\&quot;: \&quot;string\&quot;,\n          \&quot;propertyId\&quot;: \&quot;string\&quot;,\n          \&quot;languageCode\&quot;: \&quot;string\&quot;,\n          \&quot;alias\&quot;: \&quot;string\&quot;,\n          \&quot;valueType\&quot;: \&quot;ShortText\&quot;,\n          \&quot;valueId\&quot;: \&quot;string\&quot;,\n          \&quot;value\&quot;: {},\n          \&quot;outerId\&quot;: \&quot;string\&quot;,\n          \&quot;isInherited\&quot;: true,\n          \&quot;createdDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n          \&quot;modifiedDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n          \&quot;createdBy\&quot;: \&quot;string\&quot;,\n          \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n          \&quot;id\&quot;: \&quot;string\&quot;\n        }\n      ],\n      \&quot;attributes\&quot;: [\n        {\n          \&quot;propertyId\&quot;: \&quot;string\&quot;,\n          \&quot;value\&quot;: \&quot;string\&quot;,\n          \&quot;name\&quot;: \&quot;string\&quot;,\n          \&quot;createdDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n          \&quot;modifiedDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n          \&quot;createdBy\&quot;: \&quot;string\&quot;,\n          \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n          \&quot;id\&quot;: \&quot;string\&quot;\n        }\n      ],\n      \&quot;displayNames\&quot;: [\n        {\n          \&quot;name\&quot;: \&quot;string\&quot;,\n          \&quot;languageCode\&quot;: \&quot;string\&quot;\n        }\n      ],\n      \&quot;validationRules\&quot;: [\n        {\n          \&quot;isUnique\&quot;: true,\n          \&quot;charCountMin\&quot;: 0,\n          \&quot;charCountMax\&quot;: 0,\n          \&quot;regExp\&quot;: \&quot;string\&quot;,\n          \&quot;propertyId\&quot;: \&quot;string\&quot;,\n          \&quot;id\&quot;: \&quot;string\&quot;\n        }\n      ],\n      \&quot;validationRule\&quot;: {\n        \&quot;isUnique\&quot;: true,\n        \&quot;charCountMin\&quot;: 0,\n        \&quot;charCountMax\&quot;: 0,\n        \&quot;regExp\&quot;: \&quot;string\&quot;,\n        \&quot;propertyId\&quot;: \&quot;string\&quot;,\n        \&quot;id\&quot;: \&quot;string\&quot;\n      },\n      \&quot;isInherited\&quot;: true,\n      \&quot;createdDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n      \&quot;modifiedDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n      \&quot;createdBy\&quot;: \&quot;string\&quot;,\n      \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n      \&quot;id\&quot;: \&quot;string\&quot;\n    }\n  ],\n  \&quot;createdDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n  \&quot;modifiedDate\&quot;: \&quot;2021-08-03T14:27:54.541Z\&quot;,\n  \&quot;createdBy\&quot;: \&quot;string\&quot;,\n  \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n  \&quot;id\&quot;: \&quot;string\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;:\&quot;${name}\&quot;,\n   \&quot;isVirtual\&quot;:false,\n   \&quot;defaultLanguage\&quot;:{\n      \&quot;isDefault\&quot;:true,\n      \&quot;languageCode\&quot;:\&quot;en-US\&quot;\n   },\n   \&quot;languages\&quot;:[\n      {\n         \&quot;isDefault\&quot;:true,\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;\n      }\n   ],\n   \&quot;properties\&quot;:[\n      \n   ],\n   \&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n   \&quot;id\&quot;:\&quot;${id}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,20 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'AutoTestCatalog'</defaultValue>
+      <description></description>
+      <id>d5b05db3-09c6-4fa3-854c-6eea538b766d</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>'afca857d-d0d6-46e1-8dc4-054dd33632c7'</defaultValue>
+      <description></description>
+      <id>b3e1c19c-5d13-405d-8146-abcc8f593058</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
