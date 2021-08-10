@@ -37,7 +37,7 @@ catalogName = (catalogName + 'UPD')
 WebUI.comment(catalogName)
 
 //Update catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsUpdateNew', 
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsUpdate', 
 	[('name') : catalogName, 
 	 ('id') : catalogId]))
 
