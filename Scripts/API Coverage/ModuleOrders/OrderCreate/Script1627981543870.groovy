@@ -21,18 +21,28 @@ import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 
-//Send request with order data to create an order
-orderId = '8383028c-4d80-46bc-887e-282d0707a070'
+//Verify order number has 64 symbol name limitation
+orderId = UUID.randomUUID().toString()
 int quantity = 1
+
+HashMap<String, String> responseMap = GlobalVariable.orderNameListContent
+for (String orderNumber : responseMap.keySet()){
+	order = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
+		('orderId') : orderId,
+		('quantity') : quantity,
+		('userName') : GlobalVariable.userName,
+		('orderNumber') : orderNumber
+		]))
+	WS.verifyResponseStatusCode(order,500)}
+
+//Send request with order data to create an order
+orderId = UUID.randomUUID().toString()
 order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
 	('orderId') : orderId,
 	('quantity') : quantity,
 	('userName') : GlobalVariable.userName
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
-actualQuantity = WS.getElementPropertyValue(order,'items[0].quantity')
-int updatedQuantity = actualQuantity + 1
-println updatedQuantity
 
 //Get the initial changes number to compare it to the final changes number later
 searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearchChanges', [
@@ -45,6 +55,8 @@ order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebSer
 	('orderId') : orderId
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
+actualQuantity = WS.getElementPropertyValue(order,'items[0].quantity')
+int updatedQuantity = actualQuantity + 1
 
 //Update the created order (change items quantity) and convert it to the acceptable format
 orderMap = order.getResponseBodyContent()

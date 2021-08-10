@@ -11,7 +11,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;customerId\&quot;: \&quot;8f20288b-da0a-45d7-8ade-bce2adbadcfe\&quot;,\n  \&quot;customerName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;items\&quot;: [\n    {\n      \&quot;currency\&quot;: \&quot;USD\&quot;,\n      \&quot;price\&quot;: 995.99,\n      \&quot;quantity\&quot;: \&quot;${quantity}\&quot;,\n      \&quot;productId\&quot;: \&quot;9cbd8f316e254a679ba34a900fccb076\&quot;,\n      \&quot;sku\&quot;: \&quot;3DRSOLO\&quot;,\n      \&quot;catalogId\&quot;: \&quot;4974648a41df4e6ea67ef2ad76d7bbd4\&quot;,\n      \&quot;categoryId\&quot;: \&quot;e51b5f9eea094a44939c11d4d4fa3bb1\&quot;,\n      \&quot;name\&quot;: \&quot;3DR Solo Quadcopter (No Gimbal)\&quot;,\n      \&quot;isGift\&quot;: false\n    }\n  ],\n  \&quot;Status\&quot;: \&quot;Paid\&quot;,\n  \&quot;number\&quot;: \&quot;CO123456-12345\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;,\n  \&quot;id\&quot;: \&quot;${orderId}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;customerId\&quot;: \&quot;bc0682a3-1050-4637-95e3-d2499f5b3d08\&quot;,\n  \&quot;customerName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;shoppingCartId\&quot;: \&quot;fb30406f-7c43-4445-af16-fe26cdba2c5d\&quot;,\n  \&quot;isPrototype\&quot;: false,\n  \&quot;objectType\&quot;: \&quot;VirtoCommerce.OrdersModule.Core.Model.CustomerOrder\&quot;,\n  \&quot;addresses\&quot;: [],\n  \&quot;inPayments\&quot;: [],\n  \&quot;items\&quot;: [\n    {\n      \&quot;currency\&quot;: \&quot;USD\&quot;,\n      \&quot;price\&quot;: 995.99,\n      \&quot;quantity\&quot;: \&quot;${quantity}\&quot;,\n      \&quot;productId\&quot;: \&quot;9cbd8f316e254a679ba34a900fccb076\&quot;,\n      \&quot;sku\&quot;: \&quot;3DRSOLO\&quot;,\n      \&quot;productType\&quot;: \&quot;Physical\&quot;,\n      \&quot;catalogId\&quot;: \&quot;4974648a41df4e6ea67ef2ad76d7bbd4\&quot;,\n      \&quot;name\&quot;: \&quot;3DR Solo Quadcopter (No Gimbal)\&quot;,\n      \&quot;isGift\&quot;: false,\n      \&quot;isCancelled\&quot;: false,\n      \&quot;objectType\&quot;: \&quot;VirtoCommerce.OrdersModule.Core.Model.LineItem\&quot;,\n      \&quot;createdBy\&quot;: \&quot;admin\&quot;,\n      \&quot;modifiedBy\&quot;: \&quot;admin\&quot;,\n      \&quot;id\&quot;: \&quot;c5d5394b-b2e5-49f5-80c8-179e94c9b37e\&quot;\n    }\n  ],\n  \&quot;shipments\&quot;: [],\n  \&quot;discounts\&quot;: [],\n  \&quot;number\&quot;: \&quot;${orderNumber}\&quot;,\n  \&quot;status\&quot;: \&quot;Paid\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;,\n  \&quot;childrenOperations\&quot;: [],\n  \&quot;isCancelled\&quot;: false,\n  \&quot;dynamicProperties\&quot;: [],\n  \&quot;createdBy\&quot;: \&quot;${userName}\&quot;,\n  \&quot;modifiedBy\&quot;: null,\n  \&quot;id\&quot;: \&quot;${orderId}\&quot;\n}\n&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -70,6 +70,13 @@
       <id>bab93e5c-8236-4186-b6a2-120b4773c5c3</id>
       <masked>false</masked>
       <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>'CO123456-00000'</defaultValue>
+      <description></description>
+      <id>a190af35-2e33-4ce1-9359-403925e6a725</id>
+      <masked>false</masked>
+      <name>orderNumber</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -289,4 +289,9 @@
       <initValue>''</initValue>
       <name>id</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweaa') : 'Maximum length is 64. You entered 65']</initValue>
+      <name>orderNameListContent</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
