@@ -21,10 +21,85 @@ import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 
-//Verify order number has 64 symbol name limitation
-orderId = UUID.randomUUID().toString()
-int quantity = 1
 
+//SEND REQUEST WITH ORDER DATA TO CREATE AN ORDER
+int quantity = 1
+orderId = UUID.randomUUID().toString()
+order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
+	('orderId') : orderId,
+	('quantity') : quantity,
+	('userName') : GlobalVariable.userName
+	]))
+WS.verifyElementPropertyValue(order,'id', orderId)
+
+
+//GET THE INITIAL CHANGES NUMBER TO COMPARE IT TO THE FINAL CHANGES NUMBER LATER
+searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearchChanges', [
+	('orderId') : orderId
+	]))
+int initialCount = WS.getElementPropertyValue(searchChanges,'totalCount')
+
+
+//GET THE CREATED ORDER DATA
+order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
+	('orderId') : orderId
+	]))
+WS.verifyElementPropertyValue(order,'id', orderId)
+actualQuantity = WS.getElementPropertyValue(order,'items[0].quantity')
+int updatedQuantity = actualQuantity + 1
+
+
+//UPDATE THE CREATED ORDER (change items quantity) and convert it to the acceptable format
+orderMap = order.getResponseBodyContent()
+orderParsed = new JsonSlurper().parseText(orderMap)
+orderParsed.items[0].quantity = updatedQuantity
+def orderJson = new groovy.json.JsonBuilder(orderParsed)
+def orderString = orderJson.toString()
+
+
+//SEND THE UPDATED ORDER
+RequestObject request = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate')
+// Create and set body content property
+request.setBodyContent(new HttpTextBodyContent(orderString))
+WS.sendRequestAndVerify(request)
+
+
+//GET THE UPDATED ORDER TO VERIFY IT WAS CHANGED
+updatedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
+	('orderId') : orderId
+	]))
+WS.verifyElementPropertyValue(updatedOrder,'items[0].quantity',updatedQuantity)
+
+
+//CHECK TOTAL RECALCULATION
+price = WS.getElementPropertyValue(updatedOrder,'items[0].price')
+total = WS.getElementPropertyValue(updatedOrder,'total')
+actualQuantity = WS.getElementPropertyValue(updatedOrder,'items[0].quantity')
+WS.verifyEqual(price*actualQuantity, total)
+
+
+//GET THE FINAL CHANGES NUMBER TO COMPARE IT TO THE INITIAL NUMBER AND VERIFY IT WAS UPDATED
+searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearchChanges', [
+	('orderId') : orderId
+	]))
+WS.verifyElementPropertyValue(searchChanges,'totalCount', initialCount+1)
+
+
+//DELETE THE CREATED ORDER
+deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [
+	('orderId') : orderId
+	]))
+
+
+//SEARCH THE DELETED ORDER TO VERIFY IT'S GONE
+deletedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearch', [
+	('keyword') : orderId
+	]))
+WS.verifyElementPropertyValue(deletedOrder, 'totalCount', '0')
+
+
+//VERIFY ORDER NUMBER HAS 64 SYMBOL NAME LIMITATION
+orderId = UUID.randomUUID().toString()
 HashMap<String, String> responseMap = GlobalVariable.orderNameListContent
 for (String orderNumber : responseMap.keySet()){
 	order = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
@@ -34,69 +109,3 @@ for (String orderNumber : responseMap.keySet()){
 		('orderNumber') : orderNumber
 		]))
 	WS.verifyResponseStatusCode(order,500)}
-
-//Send request with order data to create an order
-orderId = UUID.randomUUID().toString()
-order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
-	('orderId') : orderId,
-	('quantity') : quantity,
-	('userName') : GlobalVariable.userName
-	]))
-WS.verifyElementPropertyValue(order,'id', orderId)
-
-//Get the initial changes number to compare it to the final changes number later
-searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearchChanges', [
-	('orderId') : orderId
-	]))
-int initialCount = WS.getElementPropertyValue(searchChanges,'totalCount')
-
-//Get the created order data
-order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
-	('orderId') : orderId
-	]))
-WS.verifyElementPropertyValue(order,'id', orderId)
-actualQuantity = WS.getElementPropertyValue(order,'items[0].quantity')
-int updatedQuantity = actualQuantity + 1
-
-//Update the created order (change items quantity) and convert it to the acceptable format
-orderMap = order.getResponseBodyContent()
-orderParsed = new JsonSlurper().parseText(orderMap)
-orderParsed.items[0].quantity = updatedQuantity
-def orderJson = new groovy.json.JsonBuilder(orderParsed)
-def orderString = orderJson.toString()
-
-//Send the updated order
-RequestObject request = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate')
-// Create and set body content property
-request.setBodyContent(new HttpTextBodyContent(orderString))
-WS.sendRequestAndVerify(request)
-
-//Get the updated order to verify it was changed
-updatedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
-	('orderId') : orderId
-	]))
-WS.verifyElementPropertyValue(updatedOrder,'items[0].quantity',updatedQuantity)
-
-//Check total recalculation
-price = WS.getElementPropertyValue(updatedOrder,'items[0].price')
-total = WS.getElementPropertyValue(updatedOrder,'total')
-actualQuantity = WS.getElementPropertyValue(updatedOrder,'items[0].quantity')
-WS.verifyEqual(price*actualQuantity, total)
-
-//Get the final number of changes to compare it to the initial number and verify it was updated
-searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearchChanges', [
-	('orderId') : orderId
-	]))
-WS.verifyElementPropertyValue(searchChanges,'totalCount', initialCount+1)
-
-//Delete the created order
-deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [
-	('orderId') : orderId
-	]))
-
-//Search for the deleted order to verify it's gone
-deletedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearch', [
-	('keyword') : orderId
-	]))
-WS.verifyElementPropertyValue(deletedOrder, 'totalCount', '0')
-
