@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CategoriesGetByIdsAndGroup</name>
+   <name>DRAFT.CategoriesGetByIdsAndGroup</name>
    <tag></tag>
    <elementGuidId>76873e2c-5eb4-426d-bda0-f21dc2cbfc7b</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
