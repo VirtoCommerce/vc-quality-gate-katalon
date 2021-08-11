@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CategoriesCreateUpdate</name>
+   <name>CategoriesCreate</name>
    <tag></tag>
    <elementGuidId>6e39dbc7-cbbb-41d7-a458-46c2c85c654e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
