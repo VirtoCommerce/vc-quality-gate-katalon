@@ -31,7 +31,7 @@ orderNumber = WS.getElementPropertyValue(order,'number')
 
 //GET ORDER BY NUMBER
 orderNumber = WS.getElementPropertyValue(order,'number')
-getOrder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Order/OrderGetByNumber', [
+getOrder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Order/OrderGetByOrderNumber', [
 	('orderNumber') : orderNumber
 	]))
 WS.verifyElementPropertyValue(getOrder,'number', orderNumber)

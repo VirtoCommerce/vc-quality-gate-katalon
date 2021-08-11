@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>covers endpoints not covered in testrail flow</description>
+   <description></description>
    <name>OrderEndpointsCheck</name>
    <tag></tag>
    <comment></comment>

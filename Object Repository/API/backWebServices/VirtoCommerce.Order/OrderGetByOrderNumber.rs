@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Get order by customer order number</description>
-   <name>OrderGetByNumber</name>
+   <name>OrderGetByOrderNumber</name>
    <tag></tag>
    <elementGuidId>b5cb8277-a81f-4745-ae88-455ef391bdd0</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
