@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Bulk create links to categories and items</description>
-   <name>ListentryLinksCreateBulk</name>
+   <name>DRAFT.ListentryLinksCreateBulk</name>
    <tag></tag>
    <elementGuidId>07819558-d534-49b4-874c-42078a3ddfce</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
