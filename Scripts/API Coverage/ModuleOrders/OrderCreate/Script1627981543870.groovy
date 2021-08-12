@@ -59,7 +59,6 @@ def orderString = orderJson.toString()
 
 //SEND THE UPDATED ORDER
 RequestObject request = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate')
-// Create and set body content property
 request.setBodyContent(new HttpTextBodyContent(orderString))
 WS.sendRequestAndVerify(request)
 

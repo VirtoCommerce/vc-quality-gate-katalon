@@ -44,28 +44,28 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'8383028c-4d80-46bc-887e-282d0707a070'</defaultValue>
-      <description></description>
+      <description>id of the required order</description>
       <id>85d5eae8-29e9-4548-b8dd-867f8404ae68</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
    <variables>
       <defaultValue>'1'</defaultValue>
-      <description></description>
+      <description>updated quantity</description>
       <id>c93fb180-e17a-4e4e-b56d-164e113f818d</id>
       <masked>false</masked>
       <name>quantity</name>
    </variables>
    <variables>
       <defaultValue>'QweUser'</defaultValue>
-      <description></description>
+      <description>required username</description>
       <id>d4546e46-a720-4d6e-b9eb-482653f40789</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
    <variables>
       <defaultValue>'Electronics'</defaultValue>
-      <description></description>
+      <description>required store id</description>
       <id>193a8887-a75d-4338-8ce3-35955769e661</id>
       <masked>false</masked>
       <name>storeId</name>
@@ -77,16 +77,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

@@ -45,35 +45,35 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'8383028c-4d80-46bc-887e-282d0707a070'</defaultValue>
-      <description></description>
+      <description>id of the created order</description>
       <id>b4011f0c-270d-49ed-bbe4-fe1e21fc6e0c</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
    <variables>
       <defaultValue>'1'</defaultValue>
-      <description></description>
+      <description>sku quantity</description>
       <id>706fdfb2-03e9-4fc9-8cbc-845f68c9bb6c</id>
       <masked>false</masked>
       <name>quantity</name>
    </variables>
    <variables>
       <defaultValue>'QweUser'</defaultValue>
-      <description></description>
+      <description>required username</description>
       <id>e25f5dae-1123-463e-8a5e-c9c1c11214f7</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
    <variables>
       <defaultValue>'Electronics'</defaultValue>
-      <description></description>
+      <description>id of the store</description>
       <id>bab93e5c-8236-4186-b6a2-120b4773c5c3</id>
       <masked>false</masked>
       <name>storeId</name>
    </variables>
    <variables>
       <defaultValue>'CO123456-00000'</defaultValue>
-      <description></description>
+      <description>id of the created order</description>
       <id>a190af35-2e33-4ce1-9359-403925e6a725</id>
       <masked>false</masked>
       <name>orderNumber</name>
@@ -85,16 +85,13 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
