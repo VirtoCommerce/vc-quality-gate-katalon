@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>create order by cart id
-(requires id from storefront)</description>
-   <name>DRAFT.OrderCreateByCartId</name>
+   <description>Search customer order by given criteria</description>
+   <name>OrderSearchChanges</name>
    <tag></tag>
-   <elementGuidId>a96954a1-03f9-4796-9cfc-04cdf647e4b1</elementGuidId>
+   <elementGuidId>f533ef29-1ccf-4891-ba89-49f52d76084e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;{\n\&quot;skip\&quot;: 0,\n\&quot;take\&quot;: 20,\n\&quot;orderId\&quot;: \&quot;${orderId}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -34,7 +33,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://${GlobalVariable.urlBack}/api/order/customerOrders/${cartId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/searchChanges</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,11 +43,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'7d17069c-05d9-4de1-9e19-7b3a545bba1a'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>da1dbecf-8507-4e2c-a460-69d4209c56dc</id>
+      <id>b8fc7b96-b4f1-4c15-b1fd-492b5fe1c42d</id>
       <masked>false</masked>
-      <name>cartId</name>
+      <name>orderId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create,update,delete order</description>
+   <name>OrderCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a747e75c-2599-45cb-b8e4-9ff9f184fada</testCaseGuid>
+</TestCaseEntity>

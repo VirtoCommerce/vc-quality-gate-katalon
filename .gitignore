@@ -49,3 +49,6 @@ settings/internal/com.kms.katalon.composer.testcase.properties
 /Profiles/localProfile.glbl
 
 .cache/
+
+Scripts/_debugger/
+Test Cases/_debugger.tc
