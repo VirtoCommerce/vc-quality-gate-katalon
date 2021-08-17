@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/${catalogId}/categories/newcategory?parentCategoryId=ParentId</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/${catalogId}/categories/newcategory</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
       <description></description>
       <id>1fd03659-b28b-401b-9fcc-6b75a81d4004</id>
       <masked>false</masked>
@@ -58,6 +58,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
+
 
 </verificationScript>
    <wsdlAddress></wsdlAddress>

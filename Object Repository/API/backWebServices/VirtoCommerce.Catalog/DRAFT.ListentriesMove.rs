@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ListentriesMove</name>
+   <name>DRAFT.ListentriesMove</name>
    <tag></tag>
    <elementGuidId>95f6f25f-fa7f-45db-830a-be2112a33bf4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
