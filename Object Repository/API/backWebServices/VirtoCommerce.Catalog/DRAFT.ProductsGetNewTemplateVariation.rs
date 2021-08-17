@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductsGetNewTemplateOutsideCategory</name>
+   <name>DRAFT.ProductsGetNewTemplateVariation</name>
    <tag></tag>
-   <elementGuidId>1c434bec-d33e-43ba-82fb-e79f672c8867</elementGuidId>
+   <elementGuidId>cab53f1d-06a3-4d39-a02c-7b779c4e365d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/${catalogId}/products/getnew</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/${productId}/getnewvariation</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,7 +42,7 @@
       <description></description>
       <id>1fd03659-b28b-401b-9fcc-6b75a81d4004</id>
       <masked>false</masked>
-      <name>catalogId</name>
+      <name>productId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

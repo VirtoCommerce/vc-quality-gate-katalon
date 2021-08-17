@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductsGetByIdsAndGroup</name>
+   <name>DRAFT.ProductsGetByIdsAndGroup</name>
    <tag></tag>
    <elementGuidId>32f7f5ca-99ed-4223-8d12-5e9fdcc7df91</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
