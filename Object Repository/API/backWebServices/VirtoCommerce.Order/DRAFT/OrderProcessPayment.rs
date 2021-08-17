@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Search customer order by given criteria</description>
-   <name>OrderSearch</name>
+   <description>Register customer order payment in external payment system</description>
+   <name>OrderProcessPayment</name>
    <tag></tag>
-   <elementGuidId>8acb3243-bbdf-4c36-a8d0-9766edd62ace</elementGuidId>
+   <elementGuidId>aaa0cfa8-b5e9-48e4-954c-edd2876eca72</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\&quot;skip\&quot;: 0,\n\&quot;take\&quot;: 20,\n\&quot;responseGroup\&quot;: \&quot;WithPrices\&quot;,\n\&quot;keyword\&quot;: \u0027${keyword}\u0027\n}&quot;,
+  &quot;text&quot;: &quot;&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -33,7 +33,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/search</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/processPayment/${paymentId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,11 +43,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'25333618-21cb-4518-919c-0c0e46d7a921'</defaultValue>
-      <description>id of the searched order</description>
-      <id>b8fc7b96-b4f1-4c15-b1fd-492b5fe1c42d</id>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>02036b8c-7c19-4e28-b4e0-ba744cc4b168</id>
       <masked>false</masked>
-      <name>keyword</name>
+      <name>orderId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>85048ae5-edb0-4fc2-a6e3-7f059bf0586d</id>
+      <masked>false</masked>
+      <name>paymentId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -56,15 +63,16 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
+import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
+import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
-
- 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(prettyJson)
+
+def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(listJsonOutput)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

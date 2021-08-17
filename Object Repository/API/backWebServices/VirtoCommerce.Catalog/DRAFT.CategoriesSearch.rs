@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>create order by cart id
-(requires id from storefront)</description>
-   <name>DRAFT.OrderCreateByCartId</name>
+   <description></description>
+   <name>DRAFT.CategoriesSearch</name>
    <tag></tag>
-   <elementGuidId>a96954a1-03f9-4796-9cfc-04cdf647e4b1</elementGuidId>
+   <elementGuidId>a53117f2-d0f3-4a59-9da5-7599ac34ca21</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;objectType\&quot;: \&quot;string\&quot;,\n  \&quot;storeId\&quot;: \&quot;string\&quot;,\n  \&quot;catalogId\&quot;: \&quot;string\&quot;,\n  \&quot;outline\&quot;: \&quot;string\&quot;,\n  \&quot;outlines\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;terms\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;userGroups\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;isFuzzySearch\&quot;: true,\n  \&quot;rawQuery\&quot;: \&quot;string\&quot;,\n  \&quot;includeFields\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;searchPhrase\&quot;: \&quot;string\&quot;,\n  \&quot;keyword\&quot;: \&quot;string\&quot;,\n  \&quot;responseGroup\&quot;: \&quot;string\&quot;,\n  \&quot;objectTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;objectIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;languageCode\&quot;: \&quot;string\&quot;,\n  \&quot;sort\&quot;: \&quot;string\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 0\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -30,11 +29,10 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>https://${GlobalVariable.urlBack}/api/order/customerOrders/${cartId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/search/categories</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,31 +41,19 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>'7d17069c-05d9-4de1-9e19-7b3a545bba1a'</defaultValue>
-      <description></description>
-      <id>da1dbecf-8507-4e2c-a460-69d4209c56dc</id>
-      <masked>false</masked>
-      <name>cartId</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -125,7 +125,7 @@
       <name>employeeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>Id of catalog Electronics</description>
       <initValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
@@ -288,5 +288,10 @@
       <description>Variable to use for any ID in cases</description>
       <initValue>''</initValue>
       <name>id</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweaa') : 'Maximum length is 64. You entered 65']</initValue>
+      <name>orderNameListContent</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

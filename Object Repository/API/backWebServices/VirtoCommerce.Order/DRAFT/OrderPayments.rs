@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Register customer order payment in external payment system</description>
-   <name>DRAFT.OrderProcessPayment</name>
+   <description>Create or update order payment</description>
+   <name>OrderPayments</name>
    <tag></tag>
-   <elementGuidId>aaa0cfa8-b5e9-48e4-954c-edd2876eca72</elementGuidId>
+   <elementGuidId>c6f85eb0-17f6-4a3b-a9e9-2479dad1e62a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -33,7 +33,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/processPayment/${paymentId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/order/payments</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
