@@ -76,6 +76,7 @@ import com.kms.katalon.core.util.KeywordUtil
 //Because somtimes returned content is in HTML format and this will cause an error.
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 200)</verificationScript>
+WS.verifyResponseStatusCode(response, 200)
+  </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
