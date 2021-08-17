@@ -22,36 +22,48 @@ WebUI.comment('TEST CASE: Common Catalogs management - add, update, delete')
 catalogName = 'AutoTestCatalog'
 
 // Create new catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsCreate', [('name') : catalogName]))
-WS.verifyElementPropertyValue(response, 'name', 'AutoTestCatalog')
+catalogCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsCreate', [
+	('name') : catalogName
+	]))
+WS.verifyElementPropertyValue(catalogCreate, 'name', catalogName)
+
 
 //Verify that catalog was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [('keyword') : catalogName]))
-WS.verifyElementPropertyValue(response, 'results[0].name', catalogName)
-WS.verifyElementPropertyValue(response, 'totalCount', 1)
+catalogSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [
+	('keyword') : catalogName
+	]))
+WS.verifyElementPropertyValue(catalogSearch, 'results[0].name', catalogName)
+WS.verifyElementPropertyValue(catalogSearch, 'totalCount', 1)
+
 
 //save catalog ID to use in Update and Delete cases
-catalogId = WS.getElementPropertyValue(response, 'results[0].id')
+catalogId = WS.getElementPropertyValue(catalogSearch, 'results[0].id')
 WebUI.comment(catalogId)
 catalogName = (catalogName + 'UPD')
-WebUI.comment(catalogName)
+
 
 //Update catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsUpdate', 
-	[('name') : catalogName, 
-	 ('id') : catalogId]))
+catalogUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsUpdate', [
+	('name') : catalogName, 
+	('id') : catalogId
+	]))
+
 
 //Verify that catalog was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [('keyword') : catalogName]))
+catalogSearch2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [
+	('keyword') : catalogName
+	]))
+WS.verifyElementPropertyValue(catalogSearch2, 'results[0].name', catalogName)
+WS.verifyElementPropertyValue(catalogSearch2, 'results[0].id', catalogId)
+WS.verifyElementPropertyValue(catalogSearch2, 'totalCount', 1)
 
-WS.verifyElementPropertyValue(response, 'results[0].name', catalogName)
-WS.verifyElementPropertyValue(response, 'results[0].id', catalogId)
-WS.verifyElementPropertyValue(response, 'totalCount', 1)
 
 // Delete catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsDeleteById', [('id') : catalogId]))
+catalogDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsDeleteById', [
+	('id') : catalogId
+	]))
+
 
 //Verify that catalog was deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [('keyword') : catalogName]))
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
-
+catalogSearch3 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [('keyword') : catalogName]))
+WS.verifyElementPropertyValue(catalogSearch3, 'totalCount', 0)
