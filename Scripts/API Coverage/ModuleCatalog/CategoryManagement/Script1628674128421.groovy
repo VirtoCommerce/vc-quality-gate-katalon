@@ -18,58 +18,72 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: categories management - add, update, delete')
+
 categoryName = 'QWECategory'
 
 // Get code for new category
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetNewTemplate', 
-        [('catalogId') : GlobalVariable.catalogId]))
-WS.verifyElementPropertyValue(response, 'seoObjectType', 'Category')
+categoryGetNew = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetNewTemplate', [
+	('catalogId') : GlobalVariable.catalogId
+	]))
+WS.verifyElementPropertyValue(categoryGetNew, 'seoObjectType', 'Category')
+
 
 //save category code for creation
-categoryCode = WS.getElementPropertyValue(response, 'code')
+categoryCode = WS.getElementPropertyValue(categoryGetNew, 'code')
+
 
 // Create new category
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesCreate', 
-	[('catalogId') : GlobalVariable.catalogId, 
-	 ('code') : categoryCode, 
-	 ('name') : categoryName]))
+categoryCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesCreate', [
+	('catalogId') : GlobalVariable.catalogId,
+	('code') : categoryCode,
+	('name') : categoryName
+	]))
+WS.verifyElementPropertyValue(categoryCreate, 'catalogId', GlobalVariable.catalogId)
+WS.verifyElementPropertyValue(categoryCreate, 'name', categoryName)
+WS.verifyElementPropertyValue(categoryCreate, 'code', categoryCode)
 
-WS.verifyElementPropertyValue(response, 'catalogId', GlobalVariable.catalogId)
-WS.verifyElementPropertyValue(response, 'name', categoryName)
-WS.verifyElementPropertyValue(response, 'code', categoryCode)
 
 //save category ID for upadting and deleting
-categoryId = WS.getElementPropertyValue(response, 'id')
+categoryId = WS.getElementPropertyValue(categoryCreate, 'id')
 WebUI.comment(categoryId)
 
-//Verify that category was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetById', [('id') : categoryId]))
 
-WS.verifyElementPropertyValue(response, 'catalogId', GlobalVariable.catalogId)
-WS.verifyElementPropertyValue(response, 'name', categoryName)
-WS.verifyElementPropertyValue(response, 'code', categoryCode)
+//Verify that category was added 
+categoryGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetById', [
+	('id') : categoryId
+	]))
+WS.verifyElementPropertyValue(categoryGet, 'catalogId', GlobalVariable.catalogId)
+WS.verifyElementPropertyValue(categoryGet, 'name', categoryName)
+WS.verifyElementPropertyValue(categoryGet, 'code', categoryCode)
+
 
 //Update category
 categoryName = (categoryName + 'UPD')
 WebUI.comment(categoryName)
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesUpdate', 
-	[('catalogId') : GlobalVariable.catalogId, 
-	 ('code') : categoryCode, 
-	 ('name') : categoryName, 
-	 ('categoryId') : categoryId]))
+categoryUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesUpdate', [
+	('catalogId') : GlobalVariable.catalogId,
+	('code') : categoryCode,
+	('name') : categoryName,
+	('categoryId') : categoryId
+	]))
+
 
 //Verify that category was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetById', [('id') : categoryId]))
-WS.verifyElementPropertyValue(response, 'catalogId', GlobalVariable.catalogId)
-WS.verifyElementPropertyValue(response, 'name', categoryName)
-WS.verifyElementPropertyValue(response, 'code', categoryCode)
+categoryGet2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetById', [('id') : categoryId]))
+WS.verifyElementPropertyValue(categoryGet2, 'catalogId', GlobalVariable.catalogId)
+WS.verifyElementPropertyValue(categoryGet2, 'name', categoryName)
+WS.verifyElementPropertyValue(categoryGet2, 'code', categoryCode)
+
 
 // Delete category
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesDelete', [('objectIds') : categoryId]))
+categoryDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesDelete', [
+	('objectIds') : categoryId
+	]))
+
 
 //Verify that catalog was deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', 
-	[('catalogId') : GlobalVariable.catalogId, 
-	 ('keyword') : categoryName]))
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
-
+categorySearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
+	('catalogId') : GlobalVariable.catalogId,
+	('keyword') : categoryName
+	]))
+WS.verifyElementPropertyValue(categorySearch, 'totalCount', 0)

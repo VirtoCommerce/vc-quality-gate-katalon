@@ -125,7 +125,7 @@
       <name>employeeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>Id of catalog Electronics</description>
       <initValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
