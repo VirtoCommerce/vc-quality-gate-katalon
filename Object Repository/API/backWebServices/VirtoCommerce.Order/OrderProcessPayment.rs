@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Search customer order by given criteria</description>
-   <name>OrderSearchChanges</name>
+   <description>Register customer order payment in external payment system</description>
+   <name>OrderProcessPayment</name>
    <tag></tag>
-   <elementGuidId>f533ef29-1ccf-4891-ba89-49f52d76084e</elementGuidId>
+   <elementGuidId>aaa0cfa8-b5e9-48e4-954c-edd2876eca72</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\&quot;skip\&quot;: 0,\n\&quot;take\&quot;: 20,\n\&quot;orderId\&quot;: \&quot;${orderId}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;bankCardNumber\&quot;: \&quot;4111111111111111\&quot;,\n  \&quot;bankCardType\&quot;: \&quot;VISA\&quot;,\n  \&quot;bankCardMonth\&quot;: 12,\n  \&quot;bankCardYear\&quot;: 2021,\n  \&quot;bankCardCVV2\&quot;: \&quot;123\&quot;,\n  \&quot;cardholderName\&quot;: \&quot;QWEUSER\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -33,7 +33,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/searchChanges</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/processPayment/${paymentId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -45,9 +45,16 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>b8fc7b96-b4f1-4c15-b1fd-492b5fe1c42d</id>
+      <id>02036b8c-7c19-4e28-b4e0-ba744cc4b168</id>
       <masked>false</masked>
       <name>orderId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>85048ae5-edb0-4fc2-a6e3-7f059bf0586d</id>
+      <masked>false</masked>
+      <name>paymentId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

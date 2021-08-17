@@ -48,6 +48,9 @@ WS.verifyElementPropertyValue(initialChanges, '[0]', null)
 indexedSearchState = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Order/OrderIndexedSearchEnabled',))
 
 
+
+
+
 //DELETE ORDER
 deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [
 	('orderId') : orderId
