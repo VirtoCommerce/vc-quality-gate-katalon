@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add, update, delete new catalog</description>
+   <name>ProductsManagement</name>
+   <tag></tag>
+   <comment>TEST CASE: Common Catalogs management - add, update, delete
+catalogId
+catalogName</comment>
+   <testCaseGuid>6da3936c-05b3-4202-aea5-bca8d65f70b7</testCaseGuid>
+</TestCaseEntity>

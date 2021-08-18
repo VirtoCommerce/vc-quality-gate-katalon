@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${GlobalVariable.sku}\&quot;,\n  \&quot;name\&quot;: \&quot;QweDrink\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${GlobalVariable.catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${GlobalVariable.categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${GlobalVariable.sku}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${GlobalVariable.catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${GlobalVariable.categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'QweDrink'</defaultValue>
+      <description></description>
+      <id>4d31d96e-46bb-4000-badd-7d23496ac608</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
