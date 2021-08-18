@@ -24,15 +24,15 @@ productName = 'QweDrink'
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
 WS.verifyElementPropertyValue(response, 'name', productName)
 
-//Verify that product was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : '${GlobalVariable.productId}']))
-WS.verifyElementPropertyValue(response, '[0].name', productName)
-
 //save catalog ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, '[0].id')
+productId = WS.getElementPropertyValue(response, 'id')
 WebUI.comment(productId)
 
+//Verify that product was added 
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [('id') : productId]))
+WS.verifyElementPropertyValue(response, '[0].name', productName)
+
+//Update name, to use for after update verification
 productName = (productName + 'UPD')
 WebUI.comment(productName)
 
@@ -49,5 +49,5 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 
 //Verify that product was deleted
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [('keyword') : productName]))
-WS.verifyElementPropertyValue(response, 'totalCount', 1)
+WS.verifyElementPropertyValue(response, 'totalCount', 0)
 

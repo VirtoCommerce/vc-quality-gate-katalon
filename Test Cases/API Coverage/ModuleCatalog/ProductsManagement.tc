@@ -4,7 +4,7 @@
    <name>ProductsManagement</name>
    <tag></tag>
    <comment>TEST CASE: Products management - add, update, delete
-catalogId
-catalogName</comment>
+productId
+productName</comment>
    <testCaseGuid>6da3936c-05b3-4202-aea5-bca8d65f70b7</testCaseGuid>
 </TestCaseEntity>

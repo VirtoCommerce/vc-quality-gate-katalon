@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${GlobalVariable.sku}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${GlobalVariable.catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${GlobalVariable.categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${code}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -43,10 +43,38 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'QweDrink'</defaultValue>
-      <description></description>
+      <description>Name of product</description>
       <id>4d31d96e-46bb-4000-badd-7d23496ac608</id>
       <masked>false</masked>
       <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>'${GlobalVariable.sku}'</defaultValue>
+      <description>Sku</description>
+      <id>d3485287-a967-453e-b745-1910700a4d10</id>
+      <masked>false</masked>
+      <name>code</name>
+   </variables>
+   <variables>
+      <defaultValue>'${GlobalVariable.catalogId}'</defaultValue>
+      <description></description>
+      <id>c82e8ed8-08f4-4fcb-9cf2-9a5eaee5fd74</id>
+      <masked>false</masked>
+      <name>catalogId</name>
+   </variables>
+   <variables>
+      <defaultValue>'${GlobalVariable.categoryId}'</defaultValue>
+      <description></description>
+      <id>32e1c1a4-dd55-48ce-910b-d4b8593b2204</id>
+      <masked>false</masked>
+      <name>categoryId</name>
+   </variables>
+   <variables>
+      <defaultValue>'${GlobalVariable.productId}'</defaultValue>
+      <description>product ID</description>
+      <id>5be61088-737c-495a-8a9d-02c5d4dcb767</id>
+      <masked>false</masked>
+      <name>id</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
