@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('TEST CASE: Store. Create/Delete store')
+WebUI.comment('TEST CASE: Store. Create/Update/Delete store')
 
 GlobalVariable.storeId = 'qwestore'
 
@@ -31,13 +31,15 @@ createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 	('currencies') : GlobalVariable.gql_currencyCode
 	]))
 
+
 //Check if the new store is in the list of available stores now
 getStores = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetAll'))
 WS.containsString(getStores, GlobalVariable.storeId, false)
 
+
 //Update the created store
 updatedStoreName = 'updated' + GlobalVariable.storeId
-updatedCatalogId = '7829d35f417e4dd98851f51322f32c23'
+updatedCatalogId = '7829d35f417e4dd98851f51322f32c23' //Bolts catalog Id
 updateStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreUpdate',[
 	('storeId') : GlobalVariable.storeId,
 	('name') : updatedStoreName,
@@ -48,6 +50,7 @@ updateStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 	('storeUrl') : GlobalVariable.urlFront
 	]))
 
+
 //Get the updated store by its id and verify changes
 getStore = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetById',[
 	('storeId') : GlobalVariable.storeId
@@ -56,10 +59,12 @@ WS.verifyElementPropertyValue(getStore, 'name', updatedStoreName)
 WS.verifyElementPropertyValue(getStore, 'catalog', updatedCatalogId)
 WS.verifyElementPropertyValue(getStore, 'url', GlobalVariable.urlFront)
 
+
 //Delete the created store
 delete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreDelete', [
 	('storeId') : GlobalVariable.storeId
 	]))
+
 
 //Search for the created store to verify it was successfully deleted
 search = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreSearch',[

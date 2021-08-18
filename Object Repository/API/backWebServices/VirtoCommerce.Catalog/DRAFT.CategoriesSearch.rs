@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ListentriesDelete</name>
+   <name>DRAFT.CategoriesSearch</name>
    <tag></tag>
-   <elementGuidId>f484f433-b73a-49df-abe6-41bd37a3b002</elementGuidId>
+   <elementGuidId>a53117f2-d0f3-4a59-9da5-7599ac34ca21</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;objectIds\&quot;:[\n      \&quot;${objectIds}\&quot;\n   ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;objectType\&quot;: \&quot;string\&quot;,\n  \&quot;storeId\&quot;: \&quot;string\&quot;,\n  \&quot;catalogId\&quot;: \&quot;string\&quot;,\n  \&quot;outline\&quot;: \&quot;string\&quot;,\n  \&quot;outlines\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;terms\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;userGroups\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;isFuzzySearch\&quot;: true,\n  \&quot;rawQuery\&quot;: \&quot;string\&quot;,\n  \&quot;includeFields\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;searchPhrase\&quot;: \&quot;string\&quot;,\n  \&quot;keyword\&quot;: \&quot;string\&quot;,\n  \&quot;responseGroup\&quot;: \&quot;string\&quot;,\n  \&quot;objectTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;objectIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;languageCode\&quot;: \&quot;string\&quot;,\n  \&quot;sort\&quot;: \&quot;string\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 0\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/listentries/delete</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/search/categories</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,13 +41,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>'4a70e894-9594-40a4-bb4b-b64da77c309e'</defaultValue>
-      <description></description>
-      <id>e51980ee-d454-4dc5-a288-26d6d3c6f556</id>
-      <masked>false</masked>
-      <name>objectIds</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
@@ -61,8 +54,6 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 204)
-
-</verificationScript>
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
