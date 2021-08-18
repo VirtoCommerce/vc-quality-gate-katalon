@@ -26,13 +26,13 @@
    <testCaseLink>
       <guid>33163827-25e8-4805-bd2c-35e4842d133f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/RestartPlatform</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3b3b4fc0-cfeb-478a-870b-6030ed4920cf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/BackgroundJobGetStatus</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

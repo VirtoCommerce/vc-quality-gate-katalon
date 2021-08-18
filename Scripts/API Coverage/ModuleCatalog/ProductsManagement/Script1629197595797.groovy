@@ -18,47 +18,36 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Products management - add, update, delete')
+productName = 'QweDrink'
 
-productName = 'QweProduct'
+// Create new product
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
+WS.verifyElementPropertyValue(response, 'name', productName)
 
-// Create new catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreate', [('name') : productName]))
-
-WS.verifyElementPropertyValue(response, 'name', 'QweProduct')
-
-//Verify that catalog was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup'))
-
-WS.verifyElementPropertyValue(response, 'results[0].name', productName)
-
-WS.verifyElementPropertyValue(response, 'totalCount', 1)
+//Verify that product was added 
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+            ('id') : '${GlobalVariable.productId}']))
+WS.verifyElementPropertyValue(response, '[0].name', productName)
 
 //save catalog ID to use in Update and Delete cases
-catalogId = WS.getElementPropertyValue(response, 'results[0].id')
+productId = WS.getElementPropertyValue(response, '[0].id')
+WebUI.comment(productId)
 
-WebUI.comment(catalogId)
+productName = (productName + 'UPD')
+WebUI.comment(productName)
 
-catalogName = (productName + 'UPD')
+//Update product
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
 
-WebUI.comment(catalogName)
+//Verify that product was upadted
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [('id') : productId]))
 
-//Update catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsUpdate'))
+WS.verifyElementPropertyValue(response, '[0].name', productName)
 
-//Verify that catalog was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup'))
+// Delete product
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesDelete', [('objectIds') : productId]))
 
-WS.verifyElementPropertyValue(response, 'results[0].name', productName)
-
-WS.verifyElementPropertyValue(response, 'results[0].id', catalogId)
-
+//Verify that product was deleted
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [('keyword') : productName]))
 WS.verifyElementPropertyValue(response, 'totalCount', 1)
-
-// Delete catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesDelete'))
-
-//Verify that catalog was deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [('keyword') : productName]))
-
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
 

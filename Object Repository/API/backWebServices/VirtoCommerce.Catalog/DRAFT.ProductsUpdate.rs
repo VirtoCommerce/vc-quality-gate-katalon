@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductsUpdate</name>
+   <name>DRAFT.ProductsUpdate</name>
    <tag></tag>
    <elementGuidId>a7df6b2b-de47-41b0-ad62-3a46d0d38ff5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
