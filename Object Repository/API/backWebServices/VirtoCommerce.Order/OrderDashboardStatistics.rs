@@ -39,14 +39,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'2020-08-02T15:06:06.9148175Z'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>76144583-a835-4c39-938f-09566e3a5ffc</id>
       <masked>false</masked>
       <name>startDate</name>
    </variables>
    <variables>
-      <defaultValue>'2021-08-04T14:52:25.529Z'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>63064277-0593-4435-8901-eab7f41c3767</id>
       <masked>false</masked>

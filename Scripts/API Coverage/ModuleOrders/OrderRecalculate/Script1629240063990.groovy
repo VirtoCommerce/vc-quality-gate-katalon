@@ -20,6 +20,7 @@ import groovy.json.JsonSlurper
 import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
+import com.kms.katalon.core.util.KeywordUtil
 
 
 //SEND REQUEST WITH ORDER DATA TO CREATE AN ORDER
@@ -38,59 +39,40 @@ order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebSer
 	('orderId') : orderId
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
-customerId = WS.getElementPropertyValue(order,'customerId')
-
-////UPLOAD THE PAYMENTS DATA AND SET ITS' VALUES UP
-paymentId = UUID.randomUUID().toString()
-slurper = new JsonSlurper()
-String paymentsData = new File('Data Files/paymentsData.json').text
-parsedPayments = slurper.parseText(paymentsData)
-parsedPayments.orderId = orderId
-parsedPayments.id = paymentId
-println parsedPayments.orderId
-println parsedPayments.id
-def Object paymentsArray = new Object [1]
-paymentsArray[0] = parsedPayments
+actualQuantity = WS.getElementPropertyValue(order,'items[0].quantity')
+updatedQuantity = actualQuantity + 1
 
 
-//UPDATE THE CREATED ORDER (add payments) and convert it to the acceptable format
+//UPDATE THE CREATED ORDER (change items quantity) and convert it to the acceptable format
 orderMap = order.getResponseBodyContent()
 orderParsed = new JsonSlurper().parseText(orderMap)
-orderParsed.inPayments = paymentsArray
+orderParsed.items[0].quantity = updatedQuantity
 def orderJson = new groovy.json.JsonBuilder(orderParsed)
 def orderString = orderJson.toString()
 println orderString
 
 
-//UPDATE PAYMENTS
-RequestObject request = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate')
+//SEND THE UPDATED ORDER
+RequestObject request = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderRecalculate')
 request.setBodyContent(new HttpTextBodyContent(orderString))
-updateOrder = WS.sendRequestAndVerify(request)
+recalculate = WS.sendRequestAndVerify(request)
+recalculateBody = recalculate.getResponseBodyContent()
+slurper = new JsonSlurper()
+parsedBody = slurper.parseText(recalculateBody)
 
 
-//GET THE UPDATED ORDER TO VERIFY IT WAS UPDATED WITH THE REQUIRED PAYMENT
-order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
-	('orderId') : orderId
-	]))
-WS.verifyElementPropertyValue(order,'inPayments[0].id', paymentId)
-
-
-//PROCESS THE ADDED PAYMENT
-processPayment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderProcessPayment', [
-	('orderId') : orderId,
-	('paymentId') : paymentId
-	]))
-WS.verifyElementPropertyValue(processPayment,'isSuccess', true)
-
-//GET THE NEW PAYMENT BY ITS ORDERID (JUST AN ENDPOINT CHECK)
-getPayment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderPaymentsGetByOrderId',[
-	('orderId') : orderId
-	]))
-WS.verifyElementPropertyValue(getPayment,'customerId', customerId)
+//VERIFY THE TOTAL WAS RECALCULATED PROPERLY
+price = parsedBody.items[0].price
+total = parsedBody.total
+actualQuantity = parsedBody.items[0].quantity
+if (price*actualQuantity == total) {
+	println 'THE TOTAL IS PROPERLY RECALCULATED'
+} else {
+	KeywordUtil.markFailed('THE TOTAL IS NOT RECALCULATED PROPERLY'); //FailureHandling.CONTINUE_ON_FAILURE
+}	
 
 
 //DELETE THE CREATED ORDER
 deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [
 	('orderId') : orderId
 	]))
-

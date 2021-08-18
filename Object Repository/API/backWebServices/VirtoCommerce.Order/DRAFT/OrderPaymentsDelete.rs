@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Delete an order by id</description>
-   <name>OrderDeletePayment</name>
+   <name>OrderPaymentsDelete</name>
    <tag></tag>
    <elementGuidId>e8caba6d-5926-4602-8adb-22b3f813d3db</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
