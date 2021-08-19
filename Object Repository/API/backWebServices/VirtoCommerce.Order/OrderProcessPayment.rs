@@ -44,14 +44,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>related order id</description>
       <id>02036b8c-7c19-4e28-b4e0-ba744cc4b168</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>used payment id</description>
       <id>85048ae5-edb0-4fc2-a6e3-7f059bf0586d</id>
       <masked>false</masked>
       <name>paymentId</name>
@@ -63,17 +63,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

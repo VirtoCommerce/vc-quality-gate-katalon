@@ -22,10 +22,13 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 
 
-//GET THE DASHNOARD STATISTICS
+//GET INDEXED SEARCH ENABLE(simple endpoint check)
+indexedSearchState = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Order/OrderIndexedSearchEnabled'))
+
+
+//GET THE DASHBOARD STATISTICS AND EXTRACT THE INITIAL REVENUE FOR FURTHER TESTING
 initialStatistics = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDashboardStatistics'))
 initialRevenue = WS.getElementPropertyValue(initialStatistics,'revenue[0].amount')
-println initialRevenue
 
 
 //SEND REQUEST WITH ORDER DATA TO CREATE AN ORDER
@@ -37,40 +40,48 @@ order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebSer
 	('userName') : GlobalVariable.userName
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
-orderTotal = WS.getElementPropertyValue(order,'total')
-println orderTotal
 
 
-//GET THE CREATED ORDER DATA
+//GET CHANGES BY ID ENDPOINT CHECK (simple endpoint check)
+initialChanges = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderChangesGetById', [
+	('orderId') : orderId
+	]))
+WS.verifyElementPropertyValue(initialChanges, '[0]', null)
+
+
+//GET THE CREATED ORDER DATA 
 order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderGetById', [
 	('orderId') : orderId
 	]))
 WS.verifyElementPropertyValue(order,'id', orderId)
-customerId = WS.getElementPropertyValue(order,'customerId')
 
-////UPLOAD THE PAYMENTS DATA AND SET ITS' VALUES UP
+
+//EXTRACT ORDER NUMBER TO USE IN FURTHER REQUESTS
+//EXTRACT ORDER TOTAL TO CHECK THE FINAL REVENUE CALCULATION
+orderNumber = WS.getElementPropertyValue(order,'number')
+orderTotal = WS.getElementPropertyValue(order,'total')
+
+
+////UPLOAD THE PAYMENTS DATA AND CHANGE ITS VALUES TO FIT THE CREATED ORDER
 paymentId = UUID.randomUUID().toString()
 slurper = new JsonSlurper()
 String paymentsData = new File('Data Files/paymentsData.json').text
 parsedPayments = slurper.parseText(paymentsData)
 parsedPayments.orderId = orderId
 parsedPayments.id = paymentId
-println parsedPayments.orderId
-println parsedPayments.id
 def Object paymentsArray = new Object [1]
 paymentsArray[0] = parsedPayments
 
 
-//UPDATE THE CREATED ORDER (add payments) and convert it to the acceptable format
+//ADD PAYMENTS TO THE CREATED ORDER BODY (and convert it to the acceptable format then)
 orderMap = order.getResponseBodyContent()
 orderParsed = new JsonSlurper().parseText(orderMap)
 orderParsed.inPayments = paymentsArray
 def orderJson = new groovy.json.JsonBuilder(orderParsed)
 def orderString = orderJson.toString()
-println orderString
 
 
-//UPDATE PAYMENTS
+//SEND THE REQUEST WITH THE ORDER BODY TO UPDATE PAYMENTS
 RequestObject request = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderUpdate')
 request.setBodyContent(new HttpTextBodyContent(orderString))
 updateOrder = WS.sendRequestAndVerify(request)
@@ -83,7 +94,7 @@ order = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebSer
 WS.verifyElementPropertyValue(order,'inPayments[0].id', paymentId)
 
 
-//PROCESS THE ADDED PAYMENT
+//PROCESS THE ADDED PAYMENT (WILL CHANGE THE FINAL REVENUE AMOUNT)
 processPayment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderProcessPayment', [
 	('orderId') : orderId,
 	('paymentId') : paymentId
@@ -99,13 +110,6 @@ finalRevenue = WS.getElementPropertyValue(finalStatistics,'revenue[0].amount')
 //VERIFY THE REVENUE HAS BEEN CHANGED PROPERLY
 String actualRevenue = initialRevenue + orderTotal  
 check = WS.verifyEqual(finalRevenue, actualRevenue)
-
-
-//GET THE NEW PAYMENT BY ITS ORDERID (JUST AN ENDPOINT CHECK)
-getPayment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderPaymentsGetByOrderId',[
-	('orderId') : orderId
-	]))
-WS.verifyElementPropertyValue(getPayment,'customerId', customerId)
 
 
 //DELETE THE CREATED ORDER

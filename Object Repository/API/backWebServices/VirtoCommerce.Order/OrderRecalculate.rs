@@ -44,28 +44,28 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'fc898c4e-d2ee-42a1-bac6-9df64dd1fcce'</defaultValue>
-      <description></description>
+      <description>generated order id</description>
       <id>85d5eae8-29e9-4548-b8dd-867f8404ae68</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
    <variables>
       <defaultValue>'2'</defaultValue>
-      <description></description>
+      <description>used sku quantity</description>
       <id>3bc016b2-5e81-40e9-ae55-71a9e9d54e03</id>
       <masked>false</masked>
       <name>quantity</name>
    </variables>
    <variables>
       <defaultValue>'QweUser'</defaultValue>
-      <description></description>
+      <description>username used when creating order</description>
       <id>48120f77-daab-432f-a61f-caf335fd820a</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
    <variables>
       <defaultValue>'Electronics'</defaultValue>
-      <description></description>
+      <description>id of the store used when creating order</description>
       <id>ca9218f2-3f5d-40ab-84c2-45d15b3a8fe0</id>
       <masked>false</masked>
       <name>storeId</name>
@@ -77,16 +77,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

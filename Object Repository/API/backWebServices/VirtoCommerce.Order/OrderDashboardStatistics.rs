@@ -40,14 +40,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>searched period start</description>
       <id>76144583-a835-4c39-938f-09566e3a5ffc</id>
       <masked>false</masked>
       <name>startDate</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>searched period end</description>
       <id>63064277-0593-4435-8901-eab7f41c3767</id>
       <masked>false</masked>
       <name>endDate</name>
@@ -59,17 +59,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
