@@ -22,7 +22,7 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 
 
-//GET INDEXED SEARCH ENABLE(simple endpoint check)
+//CHECK IF(GET) INDEXED SEARCH ENABLE(simple endpoint check)
 indexedSearchState = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Order/OrderIndexedSearchEnabled'))
 
 
@@ -110,6 +110,7 @@ finalRevenue = WS.getElementPropertyValue(finalStatistics,'revenue[0].amount')
 //VERIFY THE REVENUE HAS BEEN CHANGED PROPERLY
 String actualRevenue = initialRevenue + orderTotal  
 check = WS.verifyEqual(finalRevenue, actualRevenue)
+
 
 
 //DELETE THE CREATED ORDER

@@ -149,7 +149,34 @@ searchChanges = WS.sendRequest(findTestObject('Object Repository/API/backWebServ
 WS.verifyElementPropertyValue(searchChanges,'totalCount', initialCount+3)
 
 
+//SEARCH FOR THE CREATED ORDER (endpoint check)
+searchOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearch', [
+	('keyword') : GlobalVariable.userName
+	]))
+WS.verifyElementPropertyValue(searchOrder, 'totalCount', '1')
+
+
 //DELETE THE CREATED ORDER
 deleteOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderDelete', [
 	('orderId') : orderId
 	]))
+
+
+//SEARCH THE DELETED ORDER TO VERIFY IT'S GONE
+deletedOrder = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderSearch', [
+	('keyword') : GlobalVariable.userName
+	]))
+WS.verifyElementPropertyValue(deletedOrder, 'totalCount', '0')
+
+
+//VERIFY ORDER NUMBER HAS 64 SYMBOL NAME LIMITATION (simple vaidation check)
+orderId = UUID.randomUUID().toString()
+HashMap<String, String> responseMap = GlobalVariable.orderNameListContent
+for (String orderNumber : responseMap.keySet()){
+	order = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Order/OrderCreate', [
+		('orderId') : orderId,
+		('quantity') : quantity,
+		('userName') : GlobalVariable.userName,
+		('orderNumber') : orderNumber
+		]))
+	WS.verifyResponseStatusCode(order,500)}

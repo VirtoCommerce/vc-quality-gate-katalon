@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Add, update, process payment, check dashboard statistics (revenue calculation)
-+ misc endpoints checks</description>
+   <description>Add, update, process payment, check dashboard statistics</description>
    <name>OrderProcessPayment</name>
    <tag></tag>
    <comment></comment>
