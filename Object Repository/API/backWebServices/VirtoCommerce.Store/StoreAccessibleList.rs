@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.StoreAccessibleList</name>
+   <name>StoreAccessibleList</name>
    <tag></tag>
    <elementGuidId>3b9b328b-3a5d-4783-87b0-003fa2c659e8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -9,12 +9,8 @@
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -44,7 +40,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'78b0208a-bb52-4a33-9250-583d63aa1f77'</defaultValue>
-      <description></description>
+      <description>Id of b2badmin user</description>
       <id>be21306d-14a6-4932-87e8-804190dab532</id>
       <masked>false</masked>
       <name>userId</name>

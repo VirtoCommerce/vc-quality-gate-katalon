@@ -9,22 +9,17 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Create store')
+WebUI.comment('TEST CASE: Delete store by ID')
 
-GlobalVariable.storeId = 'qwestore'
-
-//Create a store
-createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreCreate',[
-	('storeId') : GlobalVariable.storeId,
-	('name') : GlobalVariable.storeName,
-	('catalogId') : GlobalVariable.catalogId,
-	('defaultLanguage') : GlobalVariable.languageCode,
-	('defaultCurrency') : GlobalVariable.currencyCode,
-	('storeState') : 'Open'
+//Delete the created store
+delete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreDelete', [
+	('storeId') : GlobalVariable.storeId
 	]))

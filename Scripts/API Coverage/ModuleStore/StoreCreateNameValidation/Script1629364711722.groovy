@@ -9,18 +9,21 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Create store')
 
-GlobalVariable.storeId = 'qwestore'
+WebUI.comment('TEST CASE: Store name validation error')
 
-//Create a store
-createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreCreate',[
+
+//Create a store using name with specsymbols. Accepts only Latin alphabet and digits 
+GlobalVariable.storeId = 'qwestore123!'
+createStore = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreCreate',[
 	('storeId') : GlobalVariable.storeId,
 	('name') : GlobalVariable.storeName,
 	('catalogId') : GlobalVariable.catalogId,
@@ -28,3 +31,4 @@ createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 	('defaultCurrency') : GlobalVariable.currencyCode,
 	('storeState') : 'Open'
 	]))
+WS.verifyResponseStatusCode(createStore, 500)
