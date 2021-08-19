@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${code}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${code}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;,\n  \&quot;reviews\&quot;:[\n      {\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;,\n         \&quot;reviewType\&quot;:\&quot;QuickReview\&quot;,\n         \&quot;content\&quot;:\&quot;${content}\&quot;\n      }\n   ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -75,6 +75,13 @@
       <id>5be61088-737c-495a-8a9d-02c5d4dcb767</id>
       <masked>false</masked>
       <name>id</name>
+   </variables>
+   <variables>
+      <defaultValue>'description'</defaultValue>
+      <description>Quick Review content</description>
+      <id>71331444-febe-498f-a2d9-dd1d2bc8cec7</id>
+      <masked>false</masked>
+      <name>content</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

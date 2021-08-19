@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.ProductsGetCloneByProductId</name>
+   <name>ProductsGetCloneByProductId</name>
    <tag></tag>
    <elementGuidId>ec02ba35-2c90-45a6-a9f9-a55a7d71eebf</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -38,8 +38,8 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
+      <defaultValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</defaultValue>
+      <description>product id that is using for clone from</description>
       <id>2509de05-d35a-4811-8e3d-77cf94db2f88</id>
       <masked>false</masked>
       <name>productId</name>
@@ -58,6 +58,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
