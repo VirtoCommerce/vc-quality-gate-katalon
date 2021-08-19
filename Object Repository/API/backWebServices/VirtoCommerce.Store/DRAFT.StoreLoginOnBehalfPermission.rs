@@ -9,12 +9,8 @@
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -50,7 +46,7 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'QweUser'</defaultValue>
+      <defaultValue>'b2badmin'</defaultValue>
       <description></description>
       <id>be21306d-14a6-4932-87e8-804190dab532</id>
       <masked>false</masked>

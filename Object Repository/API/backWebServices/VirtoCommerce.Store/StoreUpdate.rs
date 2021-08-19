@@ -58,7 +58,7 @@
    </variables>
    <variables>
       <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
-      <description></description>
+      <description>Id of catalog Electronics</description>
       <id>49d6278e-eca8-4e89-b193-3ed572263759</id>
       <masked>false</masked>
       <name>catalogId</name>
