@@ -24,7 +24,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Add new property for all tests')
 
-// splitting a property name into entities
+// splitting a property name by entities
 String propertyType = 'VirtoCommerce.CartModule.Core.Model.ShoppingCart';
 String[] splitedType = propertyType.split("\\.");
 String module = splitedType[1];
@@ -32,39 +32,48 @@ String model = splitedType[4];
 
 // forming property name
 String propName = (module + '_' + model + '_LineItem_');
-println propName;
 
-
+// prepare Value type data
 ArrayList <String> valueType = GlobalVariable.valueType;
-// create all types without parameters
-for (int i; i < valueType.size(); i++) {
-	WebUI.comment('Field proprty type ' + valueType.get(i));
-	
-	propertyName = propName + valueType.get(i) + "_0_0_0";
-	println propertyName
-	responseCreate = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
-		('propertyType') : propertyType,
-		('valueType') : valueType.get(i),
-		('name') : propertyName,
-		]))
-	WS.verifyElementPropertyValue(responseCreate, 'name', propertyName)
-}
 
-//
-create all types with Multivalue
-for (int i; i < 4; i++) {
-	WebUI.comment('Field proprty type ' + valueType.get(i));
-	
-	propertyName = propName + valueType.get(i) + "_1_0_0";
-	println propertyName
-	responseCreate = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
-		('propertyType') : propertyType,
-		('valueType') : valueType.get(i),
-		('name') : propertyName,
-		('isArray') : true,
-		]))
-	WS.verifyElementPropertyValue(responseCreate, 'name', propertyName)
-}
+
+// create all types without parameters
+		for (int i; i < valueType.size(); i++) {
+			propertyName = propName + valueType.get(i) + "_0_0_0";
+			println propertyName
+			responseCreate = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
+				('propertyType') : propertyType,
+				('valueType') : valueType.get(i),
+				('name') : propertyName
+				]))
+			WS.verifyElementPropertyValue(responseCreate, 'name', propertyName)
+		}
+
+// create Integer and Decimal types with Multivalue
+		for (int i; i < 2; i++) {
+			propertyName = propName + valueType.get(i) + "_1_0_0";
+			println propertyName
+			responseCreate = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
+				('propertyType') : propertyType,
+				('valueType') : valueType.get(i),
+				('name') : propertyName,
+				('isArray') : true
+				]))
+			WS.verifyElementPropertyValue(responseCreate, 'name', propertyName)
+		}
+
+// create Long text and HTML types with Multilingual
+		for (int i=2; i < 4; i++) {
+			propertyName = propName + valueType.get(i) + "_0_1_0";
+			println propertyName
+			responseCreate = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertiesAddNew', [
+				('propertyType') : propertyType,
+				('valueType') : valueType.get(i),
+				('name') : propertyName,
+				('isMultilingual') : true
+				]))
+			WS.verifyElementPropertyValue(responseCreate, 'name', propertyName)
+		}
 
 
 // create remaining properties combinations for ShortText 

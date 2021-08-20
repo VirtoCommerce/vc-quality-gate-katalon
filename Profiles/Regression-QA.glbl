@@ -19,4 +19,9 @@
       <initValue>'https://regression-platform.qa.govirto.com'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>['Integer', 'Decimal', 'LongText', 'Html', 'ShortText', 'DateTime', 'Boolean', 'Image']</initValue>
+      <name>valueType</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
