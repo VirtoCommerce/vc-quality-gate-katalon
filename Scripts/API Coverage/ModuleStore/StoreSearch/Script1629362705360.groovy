@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 WebUI.comment('TEST CASE: Store search by name')
 
 //Search for the created store to verify it was successfully deleted
-search = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreSearch',[
+search = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreSearch',[
 	('keyword') : GlobalVariable.storeId
 	]))
 WS.verifyElementPropertyValue(search, 'totalCount', '0')

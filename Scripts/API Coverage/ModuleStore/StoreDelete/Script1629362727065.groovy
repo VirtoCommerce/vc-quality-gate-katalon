@@ -20,6 +20,6 @@ import org.openqa.selenium.Keys as Keys
 WebUI.comment('TEST CASE: Delete store by ID')
 
 //Delete the created store
-delete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreDelete', [
+delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreDelete', [
 	('storeId') : GlobalVariable.storeId
 	]))

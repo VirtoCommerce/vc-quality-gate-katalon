@@ -23,7 +23,7 @@ WebUI.comment('TEST CASE: Store name validation error')
 
 //Create a store using name with specsymbols. Accepts only Latin alphabet and digits 
 GlobalVariable.storeId = 'qwestore123!'
-createStore = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreCreate',[
+createStore = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreCreate',[
 	('storeId') : GlobalVariable.storeId,
 	('name') : GlobalVariable.storeName,
 	('catalogId') : GlobalVariable.catalogId,
