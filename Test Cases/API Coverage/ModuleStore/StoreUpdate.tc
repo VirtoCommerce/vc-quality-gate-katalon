@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Update the existing store</description>
+   <name>StoreUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>19991c1c-575f-4f71-a8f4-a1c1344743cd</testCaseGuid>
+</TestCaseEntity>

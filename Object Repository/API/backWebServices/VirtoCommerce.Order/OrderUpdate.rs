@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;customerId\&quot;: \&quot;88c0ce58-49c9-4ff5-af0d-10f19d0e38bc\&quot;,\n\t\&quot;customerName\&quot;: \&quot;alex@mail.com\&quot;,\n\t\&quot;storeId\&quot;: \&quot;Electronics\&quot;,\n\t\&quot;isPrototype\&quot;: false,\n\t\&quot;subscriptionNumber\&quot;: \&quot;SU170116-00100\&quot;,\n\t\&quot;subscriptionId\&quot;: \&quot;d52055595dbe43c181f00c192bcfcb5e\&quot;,\n\t\&quot;objectType\&quot;: \&quot;VirtoCommerce.OrdersModule.Core.Model.CustomerOrder\&quot;,\n\t\&quot;items\&quot;: [\n\t\t{\n\t\t\t\n\t\t\t\&quot;quantity\&quot;: 1,\n\t\t\t\&quot;productId\&quot;: \&quot;cbd8eab4f76b4e34b779d9c59dbc13fe\&quot;,\n\t\t\t\&quot;sku\&quot;: \&quot;ONHTS3700\&quot;,\n\t\t\t\&quot;productType\&quot;: \&quot;Physical\&quot;,\n\t\t\t\&quot;catalogId\&quot;: \&quot;4974648a41df4e6ea67ef2ad76d7bbd4\&quot;,\n\t\t\t\&quot;id\&quot;: \&quot;2c5bf494-3d6e-4e6e-a71e-fbd85e563359\&quot;\n\t\t}\n\t],\n\t\&quot;discounts\&quot;: [],\n\t\&quot;discountAmount\&quot;: 0,\n\t\&quot;taxDetails\&quot;: [],\n\t\&quot;total\&quot;: 484.8,\n\t\&quot;subTotal\&quot;: 399,\n\t\&quot;subTotalWithTax\&quot;: 478.8,\n\t\&quot;subTotalDiscount\&quot;: 0,\n\t\&quot;subTotalDiscountWithTax\&quot;: 0,\n\t\&quot;subTotalTaxTotal\&quot;: 79.8,\n\t\&quot;shippingTotal\&quot;: 5,\n\t\&quot;shippingTotalWithTax\&quot;: 5,\n\t\&quot;shippingSubTotal\&quot;: 5,\n\t\&quot;shippingSubTotalWithTax\&quot;: 6,\n\t\&quot;shippingDiscountTotal\&quot;: 0,\n\t\&quot;shippingDiscountTotalWithTax\&quot;: 0,\n\t\&quot;shippingTaxTotal\&quot;: 0,\n\t\&quot;paymentTotal\&quot;: 0,\n\t\&quot;paymentTotalWithTax\&quot;: 0,\n\t\&quot;paymentSubTotal\&quot;: 0,\n\t\&quot;paymentSubTotalWithTax\&quot;: 0,\n\t\&quot;paymentDiscountTotal\&quot;: 0,\n\t\&quot;paymentDiscountTotalWithTax\&quot;: 0,\n\t\&quot;paymentTaxTotal\&quot;: 0,\n\t\&quot;discountTotal\&quot;: 0,\n\t\&quot;discountTotalWithTax\&quot;: 0,\n\t\&quot;fee\&quot;: 0,\n\t\&quot;feeWithTax\&quot;: 0,\n\t\&quot;feeTotal\&quot;: 0,\n\t\&quot;feeTotalWithTax\&quot;: 0,\n\t\&quot;taxTotal\&quot;: 80.8,\n\t\&quot;taxPercentRate\&quot;: 0,\n\t\&quot;languageCode\&quot;: \&quot;en-US\&quot;,\n\t\&quot;operationType\&quot;: \&quot;CustomerOrder\&quot;,\n\t\&quot;number\&quot;: \&quot;CO210722-00002\&quot;,\n\t\&quot;isApproved\&quot;: false,\n\t\&quot;status\&quot;: \&quot;New\&quot;,\n\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\&quot;sum\&quot;: 484.8,\n\t\&quot;childrenOperations\&quot;: [],\n\t\&quot;isCancelled\&quot;: false,\n\t\&quot;dynamicProperties\&quot;: [],\n\t\&quot;createdDate\&quot;: \&quot;2021-07-22T09:00:10.8166664Z\&quot;,\n\t\&quot;modifiedDate\&quot;: \&quot;2021-07-22T09:00:10.8166664Z\&quot;,\n\t\&quot;createdBy\&quot;: \&quot;unknown\&quot;,\n\t\&quot;modifiedBy\&quot;: \&quot;unknown\&quot;,\n\t\&quot;id\&quot;: \&quot;20205d0c-1cfa-47a7-9669-87d120227eb4\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;customerId\&quot;: \&quot;8f20288b-da0a-45d7-8ade-bce2adbadcfe\&quot;,\n  \&quot;customerName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;items\&quot;: [\n    {\n      \&quot;currency\&quot;: \&quot;USD\&quot;,\n      \&quot;price\&quot;: 995.99,\n      \&quot;extendedPrice\&quot;: 995.99,\n      \&quot;extendedPriceWithTax\&quot;: 995.99,\n      \&quot;quantity\&quot;: \&quot;${quantity}\&quot;,\n      \&quot;productId\&quot;: \&quot;9cbd8f316e254a679ba34a900fccb076\&quot;,\n      \&quot;sku\&quot;: \&quot;3DRSOLO\&quot;,\n      \&quot;productType\&quot;: \&quot;Physical\&quot;,\n      \&quot;catalogId\&quot;: \&quot;4974648a41df4e6ea67ef2ad76d7bbd4\&quot;,\n      \&quot;categoryId\&quot;: \&quot;e51b5f9eea094a44939c11d4d4fa3bb1\&quot;,\n      \&quot;name\&quot;: \&quot;3DR Solo Quadcopter (No Gimbal)\&quot;,\n      \&quot;isGift\&quot;: false\n    }\n  ],\n  \&quot;Status\&quot;: \&quot;Paid\&quot;,\n  \&quot;number\&quot;: \&quot;CO123456-12345\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;,\n  \&quot;id\&quot;: \&quot;${orderId}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -43,18 +43,32 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'20205d0c-1cfa-47a7-9669-87d120227eb4'</defaultValue>
-      <description></description>
+      <defaultValue>'8383028c-4d80-46bc-887e-282d0707a070'</defaultValue>
+      <description>id of the required order</description>
       <id>85d5eae8-29e9-4548-b8dd-867f8404ae68</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
    <variables>
-      <defaultValue>'2'</defaultValue>
-      <description></description>
-      <id>3bc016b2-5e81-40e9-ae55-71a9e9d54e03</id>
+      <defaultValue>'1'</defaultValue>
+      <description>updated quantity</description>
+      <id>c93fb180-e17a-4e4e-b56d-164e113f818d</id>
       <masked>false</masked>
       <name>quantity</name>
+   </variables>
+   <variables>
+      <defaultValue>'QweUser'</defaultValue>
+      <description>required username</description>
+      <id>d4546e46-a720-4d6e-b9eb-482653f40789</id>
+      <masked>false</masked>
+      <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>'Electronics'</defaultValue>
+      <description>required store id</description>
+      <id>193a8887-a75d-4338-8ce3-35955769e661</id>
+      <masked>false</masked>
+      <name>storeId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -63,16 +77,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
