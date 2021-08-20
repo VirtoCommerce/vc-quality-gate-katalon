@@ -22,7 +22,7 @@ WebUI.comment('TEST CASE: Update store')
 //Update the created store
 GlobalVariable.storeName = 'updated' + GlobalVariable.storeName
 GlobalVariable.catalogId = '7829d35f417e4dd98851f51322f32c23' //Bolts catalog Id
-updateStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreUpdate',[
+updateStore = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreUpdate',[
 	('storeId') : GlobalVariable.storeId,
 	('name') : GlobalVariable.storeName,
 	('catalogId') : GlobalVariable.catalogId,

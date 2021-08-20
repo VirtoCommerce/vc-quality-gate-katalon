@@ -23,7 +23,7 @@ import org.openqa.selenium.Keys as Keys
 userId = "78b0208a-bb52-4a33-9250-583d63aa1f77"
 storeName = "B2B-store"
 
-accessList = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreAccessibleList', [
+accessList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreAccessibleList', [
 	('userId') : userId
 	]))
 WS.verifyElementPropertyValue(accessList, '[0].name', storeName)
