@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>search for the store (to verify it exists/was deleted)</description>
    <name>StoreSearch</name>
    <tag></tag>
    <comment></comment>

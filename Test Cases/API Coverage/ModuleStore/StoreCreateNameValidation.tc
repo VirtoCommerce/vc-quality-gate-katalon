@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Check the storename validation rules</description>
    <name>StoreCreateNameValidation</name>
    <tag></tag>
    <comment></comment>
