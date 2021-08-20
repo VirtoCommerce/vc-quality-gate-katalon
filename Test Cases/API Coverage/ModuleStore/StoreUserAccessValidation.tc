@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Check the list of stores accessible for the userId</description>
    <name>StoreUserAccessValidation</name>
    <tag></tag>
    <comment></comment>
