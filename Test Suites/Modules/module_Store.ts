@@ -71,4 +71,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreSearch</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>1f119d70-3068-4ca1-b223-1bab5ed55ad7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleStore/StoreFull</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
