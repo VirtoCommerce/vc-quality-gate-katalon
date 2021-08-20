@@ -15,54 +15,16 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('TEST CASE: Store. Create/Delete store')
+WebUI.comment('TEST CASE: Create store')
 
 GlobalVariable.storeId = 'qwestore'
 
 //Create a store
-createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreCreate',[
+createStore = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreCreate',[
 	('storeId') : GlobalVariable.storeId,
-	('name') : GlobalVariable.storeId,
+	('name') : GlobalVariable.storeName,
 	('catalogId') : GlobalVariable.catalogId,
-	('defaultLanguage') : GlobalVariable.gql_cultureName,
-	('defaultCurrency') : GlobalVariable.gql_currencyCode,
-	('storeState') : 'Open',
-	('languages') : GlobalVariable.gql_cultureName,
-	('currencies') : GlobalVariable.gql_currencyCode
+	('defaultLanguage') : GlobalVariable.languageCode,
+	('defaultCurrency') : GlobalVariable.currencyCode,
+	('storeState') : 'Open'
 	]))
-
-//Check if the new store is in the list of available stores now
-getStores = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetAll'))
-WS.containsString(getStores, GlobalVariable.storeId, false)
-
-//Update the created store
-updatedStoreName = 'updated' + GlobalVariable.storeId
-updatedCatalogId = '7829d35f417e4dd98851f51322f32c23'
-updateStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreUpdate',[
-	('storeId') : GlobalVariable.storeId,
-	('name') : updatedStoreName,
-	('catalogId') : updatedCatalogId,
-	('defaultLanguage') : 'fr-FR',
-	('defaultCurrency') : 'EUR',
-	('storeState') : 'Closed',
-	('storeUrl') : GlobalVariable.urlFront
-	]))
-
-//Get the updated store by its id and verify changes
-getStore = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreGetById',[
-	('storeId') : GlobalVariable.storeId
-	]))
-WS.verifyElementPropertyValue(getStore, 'name', updatedStoreName)
-WS.verifyElementPropertyValue(getStore, 'catalog', updatedCatalogId)
-WS.verifyElementPropertyValue(getStore, 'url', GlobalVariable.urlFront)
-
-//Delete the created store
-delete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreDelete', [
-	('storeId') : GlobalVariable.storeId
-	]))
-
-//Search for the created store to verify it was successfully deleted
-search = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreSearch',[
-	('keyword') : GlobalVariable.storeId
-	]))
-WS.verifyElementPropertyValue(search, 'totalCount', '0')
