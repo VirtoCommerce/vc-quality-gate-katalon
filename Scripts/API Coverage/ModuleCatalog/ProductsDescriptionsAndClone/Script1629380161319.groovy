@@ -18,7 +18,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Products management - add, update, delete')
-productName = 'QweDrink'
+productName = 'QweDrinkProduct'
 
 // Create new product
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
@@ -29,7 +29,8 @@ productId = WS.getElementPropertyValue(response, 'id')
 WebUI.comment(productId)
 
 //Verify that product was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [('id') : productId]))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+            ('id') : productId]))
 WS.verifyElementPropertyValue(response, '[0].name', productName)
 
 ///Update name, to use for after update verification
@@ -38,7 +39,7 @@ WebUI.comment(content)
 
 //Update product
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', 
-	[('name') : productName, 
+	[('name') : productName,
 	 ('content') : content
 	 ]))
 
@@ -52,3 +53,19 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 //Verify that product clone is return
 WS.verifyElementPropertyValue(response, 'reviews[0].content', content)
 WS.verifyElementPropertyValue(response, 'name', productName)
+
+//Save body of clone
+clonnedProductBody = response.getResponseBodyContent()
+
+// Create cloned product
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdateWithBody', 
+        [('body') : clonnedProductBody]))
+
+//save catalog ID to use in Update and Delete cases
+productId = WS.getElementPropertyValue(response, 'id')
+WebUI.comment(productId)
+
+//Verify that product was upadted
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+			('id') : productId]))
+WS.verifyElementPropertyValue(response, '[0].reviews[0].content', content)
