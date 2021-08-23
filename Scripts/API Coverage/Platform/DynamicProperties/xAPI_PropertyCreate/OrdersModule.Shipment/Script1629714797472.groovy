@@ -22,10 +22,10 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-WebUI.comment('TEST CASE: Create a new propertys for CartModule - ShoppingCart');
+WebUI.comment('TEST CASE: Create a new propertys for OrdersModule - Shipment');
 
 // splitting a property name by entities
-String propertyType = 'VirtoCommerce.CartModule.Core.Model.ShoppingCart';
+String propertyType = 'VirtoCommerce.OrdersModule.Core.Model.Shipment';
 String[] splitedType = propertyType.split("\\.");
 String module = splitedType[1];
 String model = splitedType[4];
