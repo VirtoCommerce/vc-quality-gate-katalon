@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductCreateUpdate</name>
+   <name>ListentriesMove</name>
    <tag></tag>
-   <elementGuidId>929eca15-9be8-4fb2-b095-d016a79f9a26</elementGuidId>
+   <elementGuidId>95f6f25f-fa7f-45db-830a-be2112a33bf4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${code}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;,\n  \&quot;weightUnit\&quot;:\&quot;${weightUnit}\&quot;,\n  \&quot;weight\&quot;:\&quot;${weight}\&quot;,\n  \&quot;height\&quot;:\&quot;${height}\&quot;,\n  \&quot;width\&quot;:\&quot;${width}\&quot;,\n  \&quot;length\&quot;:\&quot;${length}\&quot;,\n  \&quot;reviews\&quot;:[\n      {\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;,\n         \&quot;reviewType\&quot;:\&quot;QuickReview\&quot;,\n         \&quot;content\&quot;:\&quot;${content}\&quot;\n      }\n   ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;catalog\&quot;:\&quot;${catalogId}\&quot;,\n   \&quot;listEntries\&quot;:[\n      {\n         \&quot;type\&quot;:\&quot;product\&quot;,\n         \&quot;isActive\&quot;:true,\n         \&quot;code\&quot;:\&quot;${code}\&quot;,\n         \&quot;name\&quot;:\&quot;${name}\&quot;,\n         \&quot;links\&quot;:[\n            \n         ],\n         \&quot;outline\&quot;:[\n            \&quot;${catalogId}\&quot;,\n            \&quot;${categoryIdFrom}\&quot;,\n            \&quot;${productId}\&quot;\n         ],\n         \&quot;path\&quot;:[\n            \&quot;${catalogName}\&quot;,\n            \&quot;${categoryNameFrom}\&quot;,\n            \&quot;${name}\&quot;\n         ],\n         \&quot;catalogId\&quot;:\&quot;${catalogId}\&quot;,\n         \&quot;seoObjectType\&quot;:\&quot;CatalogProduct\&quot;,\n         \&quot;seoInfos\&quot;:[\n            \n         ],\n         \&quot;createdDate\&quot;:\&quot;2021-08-23T15:26:22.4347115Z\&quot;,\n         \&quot;modifiedDate\&quot;:\&quot;2021-08-24T07:08:38.3515897Z\&quot;,\n         \&quot;createdBy\&quot;:\&quot;operator@mail.com\&quot;,\n         \&quot;modifiedBy\&quot;:\&quot;operator@mail.com\&quot;,\n         \&quot;id\&quot;:\&quot;${productId}\&quot;,\n         \&quot;$path\&quot;:\&quot;${catalogName} \\\\ ${categoryNamefrom} \\\\ ${name}\&quot;\n      }\n   ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/listentries/move</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,83 +44,54 @@
    <variables>
       <defaultValue>'QweDrink'</defaultValue>
       <description>Name of product</description>
-      <id>4d31d96e-46bb-4000-badd-7d23496ac608</id>
+      <id>634e3cbd-bf59-489b-9196-794d1bad3851</id>
       <masked>false</masked>
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>'${GlobalVariable.sku}'</defaultValue>
+      <defaultValue>GlobalVariable.sku</defaultValue>
       <description>Sku</description>
-      <id>d3485287-a967-453e-b745-1910700a4d10</id>
+      <id>672f198e-7765-46ad-a646-cccaa2f57fa4</id>
       <masked>false</masked>
       <name>code</name>
    </variables>
    <variables>
-      <defaultValue>'${GlobalVariable.catalogId}'</defaultValue>
+      <defaultValue>GlobalVariable.catalogId</defaultValue>
       <description></description>
-      <id>c82e8ed8-08f4-4fcb-9cf2-9a5eaee5fd74</id>
+      <id>628db77e-1fc4-4cef-84b0-f2bcfa2d020b</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
-      <defaultValue>'${GlobalVariable.categoryId}'</defaultValue>
+      <defaultValue>GlobalVariable.categoryId</defaultValue>
       <description></description>
-      <id>32e1c1a4-dd55-48ce-910b-d4b8593b2204</id>
+      <id>12df0c44-f775-4ebd-a539-c9fded801c49</id>
       <masked>false</masked>
-      <name>categoryId</name>
+      <name>categoryIdFrom</name>
    </variables>
    <variables>
-      <defaultValue>'${GlobalVariable.productId}'</defaultValue>
+      <defaultValue>GlobalVariable.productId</defaultValue>
       <description>product ID</description>
-      <id>5be61088-737c-495a-8a9d-02c5d4dcb767</id>
+      <id>ec461e2c-1f79-4356-85ee-88794d7146bf</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>productId</name>
    </variables>
    <variables>
-      <defaultValue>'description'</defaultValue>
-      <description>Quick Review content</description>
-      <id>71331444-febe-498f-a2d9-dd1d2bc8cec7</id>
-      <masked>false</masked>
-      <name>content</name>
-   </variables>
-   <variables>
-      <defaultValue>'gram'</defaultValue>
+      <defaultValue>'Electronics'</defaultValue>
       <description></description>
-      <id>4904b186-6abb-436c-8fb0-f2adb254509c</id>
+      <id>005c83f7-0e10-41c4-a4ec-04d05c1ffece</id>
       <masked>false</masked>
-      <name>weightUnit</name>
+      <name>catalogName</name>
    </variables>
    <variables>
-      <defaultValue>'100'</defaultValue>
+      <defaultValue>'Cell phones'</defaultValue>
       <description></description>
-      <id>8a901198-de36-4be8-9f95-e109051e10b6</id>
+      <id>25cbd2e5-b24f-4905-a5a2-d953821a270f</id>
       <masked>false</masked>
-      <name>weight</name>
-   </variables>
-   <variables>
-      <defaultValue>'100'</defaultValue>
-      <description></description>
-      <id>b99cdbdb-ca26-4210-a883-bd550d801be7</id>
-      <masked>false</masked>
-      <name>height</name>
-   </variables>
-   <variables>
-      <defaultValue>'100'</defaultValue>
-      <description></description>
-      <id>5a4cff44-0bdc-47b2-88cd-7f45217a15dc</id>
-      <masked>false</masked>
-      <name>width</name>
-   </variables>
-   <variables>
-      <defaultValue>'100'</defaultValue>
-      <description></description>
-      <id>ca52b234-76fa-4bdd-bef4-44ed3cc1d552</id>
-      <masked>false</masked>
-      <name>length</name>
+      <name>categoryNameFrom</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
@@ -132,9 +103,7 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
-
-
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
