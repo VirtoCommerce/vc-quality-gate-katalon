@@ -43,7 +43,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'Qwestore'</defaultValue>
+      <defaultValue>'B2B-store'</defaultValue>
       <description></description>
       <id>e0498992-0bd9-4634-b2c1-bda94ead4cdb</id>
       <masked>false</masked>

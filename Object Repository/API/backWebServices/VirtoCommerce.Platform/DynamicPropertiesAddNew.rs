@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;isArray\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;isDictionary\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;isMultilingual\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;isRequired\&quot;: \&quot;${boolean}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;isRequired\&quot;: false,\n  \&quot;isArray\&quot;: \&quot;${isArray}\&quot;,\n  \&quot;isMultilingual\&quot;: \&quot;${isMultilingual}\&quot;,\n  \&quot;isDictionary\&quot;: \&quot;${isDictionary}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -65,9 +65,23 @@
    <variables>
       <defaultValue>false</defaultValue>
       <description></description>
-      <id>06751c99-d736-4cc0-a1aa-363ba88b39c8</id>
+      <id>d592ede4-8c90-41c2-b641-8d4132c363c3</id>
       <masked>false</masked>
-      <name>boolean</name>
+      <name>isArray</name>
+   </variables>
+   <variables>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>a8791166-8992-4868-ac8b-ea0862579f7c</id>
+      <masked>false</masked>
+      <name>isMultilingual</name>
+   </variables>
+   <variables>
+      <defaultValue>false</defaultValue>
+      <description></description>
+      <id>03fae3ca-6a24-4a5f-b099-3a05ec26ec34</id>
+      <masked>false</masked>
+      <name>isDictionary</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

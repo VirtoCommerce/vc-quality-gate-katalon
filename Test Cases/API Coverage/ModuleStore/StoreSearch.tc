@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>search for the store (to verify it exists/was deleted)</description>
+   <name>StoreSearch</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ce11b8cf-2293-48db-989f-0ce269ca7eb9</testCaseGuid>
+</TestCaseEntity>
