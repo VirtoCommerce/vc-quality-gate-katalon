@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductsGetCloneByProductId</name>
+   <name>ProductsGetByIdAndGroup</name>
    <tag></tag>
-   <elementGuidId>ec02ba35-2c90-45a6-a9f9-a55a7d71eebf</elementGuidId>
+   <elementGuidId>c1a70609-929d-4f78-b844-7439d19a4794</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/${productId}/clone</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products?ids=${id}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +38,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'${GlobalVariable.productId}'</defaultValue>
       <description></description>
-      <id>2509de05-d35a-4811-8e3d-77cf94db2f88</id>
+      <id>8b64082b-4e68-4358-b546-2618a39079d3</id>
       <masked>false</masked>
-      <name>productId</name>
+      <name>id</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

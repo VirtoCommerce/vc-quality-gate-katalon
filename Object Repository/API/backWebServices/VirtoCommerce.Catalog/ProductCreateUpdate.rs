@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>StoreCreate</name>
+   <name>ProductCreateUpdate</name>
    <tag></tag>
-   <elementGuidId>4784b922-7d6d-47a8-9397-47335df72ac7</elementGuidId>
+   <elementGuidId>929eca15-9be8-4fb2-b095-d016a79f9a26</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;:\&quot;${storeId}\&quot;,\n  \&quot;name\&quot;:\&quot;${name}\&quot;,\n  \&quot;catalog\&quot;:\&quot;${catalogId}\&quot;,\n  \&quot;defaultLanguage\&quot;:\&quot;${defaultLanguage}\&quot;,\n  \&quot;defaultCurrency\&quot;:\&quot;${defaultCurrency}\&quot;,\n  \&quot;storeState\&quot;:\&quot;${storeState}\&quot;,\n  \&quot;languages\&quot;:[${languages}],\n  \&quot;currencies\&quot;:[${currencies}]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${code}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${categoryId}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;,\n  \&quot;weightUnit\&quot;:\&quot;${weightUnit}\&quot;,\n  \&quot;weight\&quot;:\&quot;${weight}\&quot;,\n  \&quot;height\&quot;:\&quot;${height}\&quot;,\n  \&quot;width\&quot;:\&quot;${width}\&quot;,\n  \&quot;length\&quot;:\&quot;${length}\&quot;,\n  \&quot;productType\&quot;:\&quot;Physical\&quot;,\n  \&quot;reviews\&quot;:[\n      {\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;,\n         \&quot;reviewType\&quot;:\&quot;QuickReview\&quot;,\n         \&quot;content\&quot;:\&quot;${content}\&quot;\n      }\n   ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,11 +29,10 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/stores</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,60 +42,81 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'qwestore'</defaultValue>
-      <description></description>
-      <id>c6a3191c-58e0-4223-a17e-caa47b4f9949</id>
-      <masked>false</masked>
-      <name>storeId</name>
-   </variables>
-   <variables>
-      <defaultValue>'QweStore'</defaultValue>
-      <description></description>
-      <id>2fdaedf6-0dd1-4378-890a-aac94febb695</id>
+      <defaultValue>'QweDrink'</defaultValue>
+      <description>Name of product</description>
+      <id>4d31d96e-46bb-4000-badd-7d23496ac608</id>
       <masked>false</masked>
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
-      <description>Id of catalog Electronica</description>
-      <id>49d6278e-eca8-4e89-b193-3ed572263759</id>
+      <defaultValue>'${GlobalVariable.sku}'</defaultValue>
+      <description>Sku</description>
+      <id>d3485287-a967-453e-b745-1910700a4d10</id>
+      <masked>false</masked>
+      <name>code</name>
+   </variables>
+   <variables>
+      <defaultValue>'${GlobalVariable.catalogId}'</defaultValue>
+      <description></description>
+      <id>c82e8ed8-08f4-4fcb-9cf2-9a5eaee5fd74</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
-      <defaultValue>'en-US'</defaultValue>
+      <defaultValue>'${GlobalVariable.categoryId}'</defaultValue>
       <description></description>
-      <id>e36ea218-4ffb-4389-8ca8-2d60b4c3b619</id>
+      <id>32e1c1a4-dd55-48ce-910b-d4b8593b2204</id>
       <masked>false</masked>
-      <name>defaultLanguage</name>
+      <name>categoryId</name>
    </variables>
    <variables>
-      <defaultValue>'USD'</defaultValue>
-      <description></description>
-      <id>cfc93afa-fbbf-4c11-afd3-6bd7502de817</id>
+      <defaultValue>'${GlobalVariable.productId}'</defaultValue>
+      <description>product ID</description>
+      <id>5be61088-737c-495a-8a9d-02c5d4dcb767</id>
       <masked>false</masked>
-      <name>defaultCurrency</name>
+      <name>id</name>
    </variables>
    <variables>
-      <defaultValue>'Open'</defaultValue>
-      <description></description>
-      <id>6d84ca50-ec89-4587-8e36-0b10939042e7</id>
+      <defaultValue>'description'</defaultValue>
+      <description>Quick Review content</description>
+      <id>71331444-febe-498f-a2d9-dd1d2bc8cec7</id>
       <masked>false</masked>
-      <name>storeState</name>
+      <name>content</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'gram'</defaultValue>
       <description></description>
-      <id>d9ec862a-e079-4da4-8dc1-ba2690251e97</id>
+      <id>4904b186-6abb-436c-8fb0-f2adb254509c</id>
       <masked>false</masked>
-      <name>languages</name>
+      <name>weightUnit</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'100'</defaultValue>
       <description></description>
-      <id>fdd6107b-d1ff-48df-8d4b-5945aeaab8ec</id>
+      <id>8a901198-de36-4be8-9f95-e109051e10b6</id>
       <masked>false</masked>
-      <name>currencies</name>
+      <name>weight</name>
+   </variables>
+   <variables>
+      <defaultValue>'100'</defaultValue>
+      <description></description>
+      <id>b99cdbdb-ca26-4210-a883-bd550d801be7</id>
+      <masked>false</masked>
+      <name>height</name>
+   </variables>
+   <variables>
+      <defaultValue>'100'</defaultValue>
+      <description></description>
+      <id>5a4cff44-0bdc-47b2-88cd-7f45217a15dc</id>
+      <masked>false</masked>
+      <name>width</name>
+   </variables>
+   <variables>
+      <defaultValue>'100'</defaultValue>
+      <description></description>
+      <id>ca52b234-76fa-4bdd-bef4-44ed3cc1d552</id>
+      <masked>false</masked>
+      <name>length</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -113,6 +133,8 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
+
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

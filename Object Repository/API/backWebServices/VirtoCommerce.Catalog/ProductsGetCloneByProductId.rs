@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductsGetByIdsAndGroup</name>
+   <name>ProductsGetCloneByProductId</name>
    <tag></tag>
-   <elementGuidId>32f7f5ca-99ed-4223-8d12-5e9fdcc7df91</elementGuidId>
+   <elementGuidId>ec02ba35-2c90-45a6-a9f9-a55a7d71eebf</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/${id}?respGroup=respGroupd</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/${productId}/clone</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +38,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>fa74fb75-3634-4719-a4cb-366996b51340</id>
+      <defaultValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</defaultValue>
+      <description>product id that is using for clone from</description>
+      <id>2509de05-d35a-4811-8e3d-77cf94db2f88</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>productId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -58,6 +58,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

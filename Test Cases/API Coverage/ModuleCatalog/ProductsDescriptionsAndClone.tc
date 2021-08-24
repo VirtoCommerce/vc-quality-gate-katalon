@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add, update, delete new catalog</description>
+   <name>ProductsDescriptionsAndClone</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e1bd0a24-cd8e-462d-bc52-cef5cd3a0b69</testCaseGuid>
+</TestCaseEntity>

@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
+      <defaultValue>'${GlobalVariable.catalogId}'</defaultValue>
       <description></description>
       <id>082ee9f9-5710-4f3b-81a1-c4a170573beb</id>
       <masked>false</masked>
