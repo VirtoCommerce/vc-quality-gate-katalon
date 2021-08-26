@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Get order by customer order number</description>
-   <name>OrderShipmentsGetById</name>
+   <description>Delete an order by id</description>
+   <name>OrderPaymentsDelete</name>
    <tag></tag>
-   <elementGuidId>435cbe10-8d3f-450e-a6ec-4677f603a201</elementGuidId>
+   <elementGuidId>e8caba6d-5926-4602-8adb-22b3f813d3db</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,8 +28,8 @@
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/shipments/new</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders?ids=${paymentId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,9 +41,9 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>76144583-a835-4c39-938f-09566e3a5ffc</id>
+      <id>4637c7ac-8c25-4c0f-af24-0bba4a4393ee</id>
       <masked>false</masked>
-      <name>orderId</name>
+      <name>paymentId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -62,7 +62,7 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
 def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

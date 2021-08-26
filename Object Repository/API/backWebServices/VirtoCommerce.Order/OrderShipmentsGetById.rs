@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Search customer order by given criteria</description>
-   <name>OrderSearchChanges</name>
+   <description>Get order by customer order number</description>
+   <name>OrderShipmentsGetById</name>
    <tag></tag>
-   <elementGuidId>f533ef29-1ccf-4891-ba89-49f52d76084e</elementGuidId>
+   <elementGuidId>435cbe10-8d3f-450e-a6ec-4677f603a201</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\&quot;skip\&quot;: 0,\n\&quot;take\&quot;: 20,\n\&quot;orderId\&quot;: \&quot;${orderId}\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -32,8 +28,8 @@
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/searchChanges</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/shipments/new</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,9 +39,9 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>b8fc7b96-b4f1-4c15-b1fd-492b5fe1c42d</id>
+      <defaultValue>'82d3fe02-6d7f-4a41-bae4-475c64f24bf2'</defaultValue>
+      <description>id of the order related to this payment</description>
+      <id>76144583-a835-4c39-938f-09566e3a5ffc</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
@@ -56,16 +52,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

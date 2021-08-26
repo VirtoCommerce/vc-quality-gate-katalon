@@ -44,14 +44,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>updated order id</description>
       <id>02036b8c-7c19-4e28-b4e0-ba744cc4b168</id>
       <masked>false</masked>
       <name>orderId</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>updated payment Id</description>
       <id>85048ae5-edb0-4fc2-a6e3-7f059bf0586d</id>
       <masked>false</masked>
       <name>paymentId</name>

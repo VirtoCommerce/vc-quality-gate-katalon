@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Delete an order by id</description>
-   <name>OrderDeletePayment</name>
+   <description>Get order by customer order number</description>
+   <name>OrderDashboardStatistics</name>
    <tag></tag>
-   <elementGuidId>e8caba6d-5926-4602-8adb-22b3f813d3db</elementGuidId>
+   <elementGuidId>2bc85e10-e990-4640-a4d0-40f3f713d5eb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,8 +28,8 @@
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders?ids=${paymentId}</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/order/dashboardStatistics?start=${startDate}?end=${endDate}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -40,10 +40,17 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
-      <id>4637c7ac-8c25-4c0f-af24-0bba4a4393ee</id>
+      <description>searched period start</description>
+      <id>76144583-a835-4c39-938f-09566e3a5ffc</id>
       <masked>false</masked>
-      <name>paymentId</name>
+      <name>startDate</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>searched period end</description>
+      <id>63064277-0593-4435-8901-eab7f41c3767</id>
+      <masked>false</masked>
+      <name>endDate</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -52,17 +59,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 204)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
