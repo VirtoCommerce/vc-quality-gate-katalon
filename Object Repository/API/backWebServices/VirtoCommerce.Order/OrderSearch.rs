@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\&quot;skip\&quot;: 0,\n\&quot;take\&quot;: 20,\n\&quot;responseGroup\&quot;: \&quot;WithPrices\&quot;,\n\&quot;keyword\&quot;: \u0027${keyword}\u0027\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20,\n  \&quot;responseGroup\&quot;: \&quot;WithPrices\&quot;,\n  \&quot;keyword\&quot;: \u0027${keyword}\u0027\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
