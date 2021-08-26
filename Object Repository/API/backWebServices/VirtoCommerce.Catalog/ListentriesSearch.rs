@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;string\&quot;,\n  \&quot;vendorId\&quot;: \&quot;string\&quot;,\n  \&quot;vendorIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;productType\&quot;: \&quot;string\&quot;,\n  \&quot;productTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;excludeProductType\&quot;: \&quot;string\&quot;,\n  \&quot;excludeProductTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;withHidden\&quot;: true,\n  \&quot;hideDirectLinkedCategories\&quot;: true,\n  \&quot;mainProductId\&quot;: \&quot;string\&quot;,\n  \&quot;searchInChildren\&quot;: true,\n  \&quot;searchInVariations\&quot;: true,\n  \&quot;onlyBuyable\&quot;: true,\n  \&quot;onlyWithTrackingInventory\&quot;: true,\n  \&quot;catalogId\&quot;: \&quot;string\&quot;,\n  \&quot;catalogIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;categoryId\&quot;: \&quot;string\&quot;,\n  \&quot;categoryIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;responseGroup\&quot;: \&quot;string\&quot;,\n  \&quot;objectType\&quot;: \&quot;string\&quot;,\n  \&quot;objectTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;objectIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;keyword\&quot;: \&quot;string\&quot;,\n  \&quot;searchPhrase\&quot;: \&quot;string\&quot;,\n  \&quot;languageCode\&quot;: \&quot;string\&quot;,\n  \&quot;sort\&quot;: \&quot;string\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 0\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;catalogId\&quot;:\&quot;${catalogId}\&quot;,\n   \&quot;keyword\&quot;:\&quot;${keyword}\&quot;,\n   \&quot;searchInVariations\&quot;:false,\n   \&quot;responseGroup\&quot;:\&quot;withCategories, withProducts\&quot;,\n   \&quot;sort\&quot;:\&quot;\&quot;,\n   \&quot;skip\&quot;:0,\n   \&quot;take\&quot;:50\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,20 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'${GlobalVariable.catalogId}'</defaultValue>
+      <description></description>
+      <id>082ee9f9-5710-4f3b-81a1-c4a170573beb</id>
+      <masked>false</masked>
+      <name>catalogId</name>
+   </variables>
+   <variables>
+      <defaultValue>'qwe'</defaultValue>
+      <description></description>
+      <id>74e7b6fa-cad5-4cd8-9679-afac78cb407e</id>
+      <masked>false</masked>
+      <name>keyword</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject

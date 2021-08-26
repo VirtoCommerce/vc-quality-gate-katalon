@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a new propertys for CustomerModule - Contact</description>
+   <name>CustomerModule.Contact</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bd3871de-8765-4be1-8c80-8c6c93b6c004</testCaseGuid>
+</TestCaseEntity>

@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8112'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8116'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -125,7 +125,7 @@
       <name>employeeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>Id of catalog Electronics</description>
       <initValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
@@ -163,6 +163,21 @@
       <description></description>
       <initValue>'Electronics'</initValue>
       <name>storeId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QweStore'</initValue>
+      <name>storeName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'en-US'</initValue>
+      <name>languageCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'USD'</initValue>
+      <name>currencyCode</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

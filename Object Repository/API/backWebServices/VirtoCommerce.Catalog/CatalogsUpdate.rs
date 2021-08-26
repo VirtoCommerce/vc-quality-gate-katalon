@@ -3,14 +3,14 @@
    <description></description>
    <name>CatalogsUpdate</name>
    <tag></tag>
-   <elementGuidId>e37c44b2-812f-48ae-8f6a-fc16dbf96ea1</elementGuidId>
+   <elementGuidId>8316b926-5246-48ee-b98b-09407479edd3</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;:\&quot;${name}\&quot;,\n   \&quot;isVirtual\&quot;:false,\n   \&quot;defaultLanguage\&quot;:{\n      \&quot;isDefault\&quot;:true,\n      \&quot;languageCode\&quot;:\&quot;en-US\&quot;\n   },\n   \&quot;languages\&quot;:[\n      {\n         \&quot;isDefault\&quot;:true,\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;\n      }\n   ],\n   \&quot;properties\&quot;:[\n      \n   ],\n   \&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n   \&quot;id\&quot;:\&quot;${id}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;:\&quot;${name}\&quot;,\n   \&quot;isVirtual\&quot;:false,\n   \&quot;defaultLanguage\&quot;:{\n      \&quot;isDefault\&quot;:true,\n      \&quot;languageCode\&quot;:\&quot;en-US\&quot;\n   },\n   \&quot;languages\&quot;:[\n      {\n         \&quot;isDefault\&quot;:true,\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;\n      }\n   ],\n   \&quot;properties\&quot;:[\n     \n   ],\n   \&quot;createdDate\&quot;:\&quot;0001-01-01T00:00:00Z\&quot;,\n   \&quot;id\&quot;:\&quot;${id}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}​/api​/catalog​/catalogs</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/catalogs</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,19 +44,20 @@
    <variables>
       <defaultValue>'AutoTestCatalog'</defaultValue>
       <description></description>
-      <id>d5b05db3-09c6-4fa3-854c-6eea538b766d</id>
+      <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
       <masked>false</masked>
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>'afca857d-d0d6-46e1-8dc4-054dd33632c7'</defaultValue>
+      <defaultValue>'6431751a-91fa-4f70-8720-69e2edf5f2db'</defaultValue>
       <description></description>
-      <id>b3e1c19c-5d13-405d-8146-abcc8f593058</id>
+      <id>0a2768bd-b95c-4fec-8deb-1c70f9b44e94</id>
       <masked>false</masked>
       <name>id</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
@@ -65,10 +66,12 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
 
+RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
+
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
