@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add, update, delete new catalog</description>
+   <name>ProductsImageDescriptionTypes</name>
+   <tag></tag>
+   <comment>TEST CASE: Products management - upload image, description type management
+productId
+descriptionType</comment>
+   <testCaseGuid>301fa743-65ed-4d7d-bb03-58adf142554b</testCaseGuid>
+</TestCaseEntity>
