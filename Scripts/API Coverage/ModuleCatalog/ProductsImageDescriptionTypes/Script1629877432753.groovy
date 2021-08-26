@@ -19,16 +19,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Products management - upload image, description type management')
 
-productName = 'QweDrinkProductImaheAndDescriptions'
-
-// Create new product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
-WS.verifyElementPropertyValue(response, 'name', productName)
-
-//save catalog ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, 'id')
-WebUI.comment(productId)
-
+//Function for updating description types
 def UpdateTypes (ArrayList typesToUpdate) {
 	//Get json for setting of descriptions
 	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'Catalog.EditorialReviewTypes']))
@@ -52,9 +43,8 @@ def UpdateTypes (ArrayList typesToUpdate) {
 	//Verify that types are updated
 	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'Catalog.EditorialReviewTypes']))
 	WS.verifyElementPropertyValue(response, 'name', 'Catalog.EditorialReviewTypes')
-
 }
-
+/*
 //Create new  description type
 ArrayList allowedValues = new ArrayList()
 allowedValues.add('FullReview')
@@ -74,3 +64,54 @@ allowedValues = new ArrayList()
 allowedValues.add('FullReview')
 allowedValues.add('QuickReview')
 UpdateTypes(allowedValues)
+*/
+//Image verification
+productName = 'QweDrinkProductImaheAndDescriptions'
+
+// Create new product
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
+WS.verifyElementPropertyValue(response, 'name', productName)
+
+//save product ID to use in Update and Delete cases
+productId = WS.getElementPropertyValue(response, 'id')
+WebUI.comment(productId)
+
+//Create new folder
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
+	('folderName') : GlobalVariable.folderName,
+	('parentUrl') : ''
+	]))
+
+// Find URL of assets
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+	('folderName') : '',
+	('keyword') : GlobalVariable.folderName
+	]))
+
+// check if new folder is in the search results
+WS.containsString(folderList, GlobalVariable.folderName, false)
+localUrl = (WS.getElementPropertyValue(folderList, 'results[0].parentUrl'))
+folderUrl = localUrl + GlobalVariable.folderName // Special url for test in docker
+
+WebUI.comment ('Local URL is: ' + localUrl)
+WebUI.comment ('Folder URL is: ' + folderUrl)
+
+//Upload image for product
+uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+	('folderUrl') : folderUrl,
+	('url') : GlobalVariable.urlBack + '/images/userpic.svg'
+	]))
+
+//get file url
+uploadFileUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].url')
+WebUI.comment ('Upload URL is: ' + uploadFileUrl)
+
+//Get product
+
+
+// Update images
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName, ('images'): images]))
+WS.verifyElementPropertyValue(response, 'name', productName)
+
+
+
