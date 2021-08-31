@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description>Get order by customer order number</description>
-   <name>OrderPaymentsGetByOrderId</name>
+   <description>Register customer order payment in external payment system</description>
+   <name>OrderProcessPayment</name>
    <tag></tag>
-   <elementGuidId>2745c3b8-184e-43fb-803f-a30787a7b8d1</elementGuidId>
+   <elementGuidId>aaa0cfa8-b5e9-48e4-954c-edd2876eca72</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n  \&quot;bankCardNumber\&quot;: \&quot;4111111111111111\&quot;,\n  \&quot;bankCardType\&quot;: \&quot;VISA\&quot;,\n  \&quot;bankCardMonth\&quot;: 12,\n  \&quot;bankCardYear\&quot;: 2029,\n  \&quot;bankCardCVV2\&quot;: \&quot;123\&quot;,\n  \&quot;cardholderName\&quot;: \&quot;QWEUSER\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -28,8 +32,8 @@
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/payments/new</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/order/customerOrders/${orderId}/processPayment/${paymentId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -40,10 +44,17 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
-      <id>76144583-a835-4c39-938f-09566e3a5ffc</id>
+      <description>related order id</description>
+      <id>02036b8c-7c19-4e28-b4e0-ba744cc4b168</id>
       <masked>false</masked>
       <name>orderId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>used payment id</description>
+      <id>85048ae5-edb0-4fc2-a6e3-7f059bf0586d</id>
+      <masked>false</masked>
+      <name>paymentId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -52,17 +63,15 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
-import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
+
+ 
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-
-def listJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(listJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
