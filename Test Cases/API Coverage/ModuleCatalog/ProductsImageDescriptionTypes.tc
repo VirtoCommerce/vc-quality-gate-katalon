@@ -5,6 +5,14 @@
    <tag></tag>
    <comment>TEST CASE: Products management - upload image, description type management
 productId
-descriptionType</comment>
+Local URL is: &quot; + localUrl
+Folder URL is: &quot; + folderUrl
+Upload URL is: &quot; + uploadFileUrl
+responseText
+parsedJson.images.toString()
+(parsedJson.images.url[0][0]).toString()
+(parsedJson.images.url[0][0]).toString()
+uploadFileUrl
+updatedImages</comment>
    <testCaseGuid>301fa743-65ed-4d7d-bb03-58adf142554b</testCaseGuid>
 </TestCaseEntity>

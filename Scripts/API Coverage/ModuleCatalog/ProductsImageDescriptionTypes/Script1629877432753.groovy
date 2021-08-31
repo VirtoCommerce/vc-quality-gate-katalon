@@ -24,7 +24,7 @@ def UpdateTypes (ArrayList typesToUpdate) {
 	//Get json for setting of descriptions
 	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'Catalog.EditorialReviewTypes']))
 	responseText = response.getResponseText()
-	WebUI.comment(response.getResponseText())
+	WebUI.comment(responseText)
 	JsonSlurper slurper = new JsonSlurper()
 	Map parsedJson = slurper.parseText(responseText)
 	WebUI.comment(parsedJson.allowedValues.toString())
@@ -44,7 +44,7 @@ def UpdateTypes (ArrayList typesToUpdate) {
 	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'Catalog.EditorialReviewTypes']))
 	WS.verifyElementPropertyValue(response, 'name', 'Catalog.EditorialReviewTypes')
 }
-/*
+
 //Create new  description type
 ArrayList allowedValues = new ArrayList()
 allowedValues.add('FullReview')
@@ -64,17 +64,7 @@ allowedValues = new ArrayList()
 allowedValues.add('FullReview')
 allowedValues.add('QuickReview')
 UpdateTypes(allowedValues)
-*/
-//Image verification
-productName = 'QweDrinkProductImaheAndDescriptions'
 
-// Create new product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
-WS.verifyElementPropertyValue(response, 'name', productName)
-
-//save product ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, 'id')
-WebUI.comment(productId)
 
 //Create new folder
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
@@ -103,15 +93,29 @@ uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 	]))
 
 //get file url
-uploadFileUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].url')
-WebUI.comment ('Upload URL is: ' + uploadFileUrl)
+uploadedFileUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].url')
+uploadedFileName = WS.getElementPropertyValue(uploadFileUrl, '[0].name')
+WebUI.comment ('Upload URL is: ' + uploadedFileUrl)
 
-//Get product
+//Image verification
+productName = 'QweDrinkProductImaheAndDescriptions'
+
+// Create new product
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
+WS.verifyElementPropertyValue(response, 'name', productName)
+
+//save product ID to use in Update and Delete cases
+productId = WS.getElementPropertyValue(response, 'id')
+WebUI.comment(productId)
+
+//Create updated images  body
+updatedImagestext = '{"size":6129,"contentType":"image/svg+xml", "type":"blob","name":"'+ uploadedFileName +'","url":"'+ uploadedFileUrl +'","relativeUrl":"' + uploadedFileUrl + '","createdDate":"0001-01-01T00:00:00Z","modifiedDate":"2021-08-26T09:57:56.6970941Z","isImage":true,"sortOrder":1,"group":"images"}'
+WebUI.comment(updatedImagestext)
 
 
 // Update images
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName, ('images'): images]))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName, ('images'): updatedImagestext]))
 WS.verifyElementPropertyValue(response, 'name', productName)
-
+WS.verifyElementPropertyValue(response, 'images.url[0]', uploadedFileUrl)
 
 
