@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'Cell phones'</defaultValue>
+      <defaultValue>'Headphones'</defaultValue>
       <description></description>
       <id>6defd2a1-d48f-4f78-9a3c-1c62220f2bd6</id>
       <masked>false</masked>

@@ -14,31 +14,31 @@
    <testCaseLink>
       <guid>5e2bf77f-8170-4a49-8023-04fa270b9be6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9e7e4328-6efa-4aaf-a5a4-bc5ed466f2e6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9461cf1e-85f8-474c-8915-be62251cd3ed</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/OrganizationCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>429b6e80-1f47-4569-91b9-782f92b7ff52</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/ContactCreation</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9c7acb74-e364-4e00-bf72-df4dcd80baae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/backend/UserCreationHybrid</testCaseId>
    </testCaseLink>
    <testCaseLink>
