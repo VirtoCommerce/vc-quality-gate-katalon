@@ -17,8 +17,9 @@ import com.kms.katalon.core.testobject.ResponseObject
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-def categoryRequest = findTestObject('API/backWebServices/VirtoCommerce.Catalog/searchCategory')
+def categoryRequest = findTestObject('API/backWebServices/VirtoCommerce.Catalog/searchCategory', [('categoryName') : GlobalVariable.categoryName])
 ResponseObject categoryResponse = WS.sendRequestAndVerify(categoryRequest, FailureHandling.STOP_ON_FAILURE)
+
 
 def categoryJson = new JsonSlurper().parseText(categoryResponse.getResponseBodyContent());
 def categoryJson2 = (categoryJson.'items')
