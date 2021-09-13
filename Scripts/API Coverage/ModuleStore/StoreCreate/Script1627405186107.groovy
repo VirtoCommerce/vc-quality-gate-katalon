@@ -20,7 +20,7 @@ WebUI.comment('TEST CASE: Create store')
 GlobalVariable.storeId = 'qwestore'
 
 //Create a store
-createStore = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Store/StoreCreate',[
+createStore = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Store/StoreCreate',[
 	('storeId') : GlobalVariable.storeId,
 	('name') : GlobalVariable.storeName,
 	('catalogId') : GlobalVariable.catalogId,
