@@ -50,5 +50,5 @@ settings/internal/com.kms.katalon.composer.testcase.properties
 
 .cache/
 
-Scripts/_debugger/
-Test Cases/_debugger.tc
+Scripts/_Debug/
+Test Cases/_Debug/
