@@ -21,6 +21,12 @@ WebUI.comment('TEST CASE: Pages. Upload file from local')
 
 GlobalVariable.contentType = "pages"
 
+
+//UPDATE THE BLACKLIST CONFIGURATION
+WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+FailureHandling.STOP_ON_FAILURE)
+
+
 //Get store stats to get initial state. Set PAGE count to compare with final result
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
@@ -74,8 +80,22 @@ WS.verifyElementPropertyValue(fileData, '[0].name', fileName)
 
 //Set variables for the ContentMove request
 newFileName = 'renamed' + fileName
+forbiddenFileName = fileName.replaceAll('.md', '.exe')
 oldUrl = WS.getElementPropertyValue(fileData, '[0].url')
+forbiddenUrl = oldUrl.replaceAll(fileName, forbiddenFileName)
 newUrl = oldUrl.replaceAll(fileName, newFileName)
+
+
+//Send ContentMove request to rename the page with the FORBIDDEN EXTENSION file
+errorMessage = 'This extension is not allowed. Please contact administrator.'
+forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('oldUrl') : oldUrl,
+	('newUrl') : forbiddenUrl
+	]))
+WS.verifyResponseStatusCode(forbiddenRename, 500)
+WS.containsString(forbiddenRename, errorMessage, false)
 
 
 //Send ContentMove request to rename the file

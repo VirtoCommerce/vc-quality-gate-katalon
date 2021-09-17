@@ -20,6 +20,12 @@ WebUI.comment('TEST CASE: Blogs. Rename a blog/delete a renamed blog')
 
 GlobalVariable.contentType = "blogs"
 
+
+//UPDATE THE BLACKLIST CONFIGURATION
+WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+FailureHandling.STOP_ON_FAILURE)
+
+
 //Get store stats to get initial state. Set PAGE count to compare with final result
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
@@ -27,7 +33,7 @@ stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerc
 count = WS.getElementPropertyValue(stats, 'blogsCount')
 
 
-//Create a blog folder 
+//Create a blog folder
 folder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFolderCreate', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -56,12 +62,25 @@ WS.verifyElementPropertyValue(postData,'[0].name', fileName)
 
 //Set variables for the ContentMove request and Content Get requests
 newFileName = 'renamed' + fileName
+forbiddenFileName = fileName.replaceAll('.md', '.exe')
 oldUrl = WS.getElementPropertyValue(postData, '[0].url')
 newUrl = oldUrl.replaceAll(fileName, newFileName)
+forbiddenUrl = oldUrl.replaceAll(fileName, forbiddenFileName)
 relativeUrl = WS.getElementPropertyValue(postData, '[0].relativeUrl')
 
 
-//Send ContentMove request to rename the blog
+//Send ContentMove request to rename the blog with the FORBIDDEN EXTENSION file
+errorMessage = 'This extension is not allowed. Please contact administrator.'
+forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('oldUrl') : oldUrl,
+	('newUrl') : forbiddenUrl
+	]))
+WS.verifyResponseStatusCode(forbiddenRename, 500)
+WS.containsString(forbiddenRename, errorMessage, false)
+
+//Send ContentMove request to rename the blog with the allowed extension file
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
