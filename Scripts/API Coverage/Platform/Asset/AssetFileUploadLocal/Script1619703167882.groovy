@@ -17,6 +17,24 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Upload file from local')
 
+
+//UPDATE THE BLACKLIST CONFIGURATION TO CHECK IF THE FORBIDDEN EXTENSION FILE CANT BE UPLOADED
+WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+FailureHandling.STOP_ON_FAILURE)
+
+
+//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION
+errorMessage = 'This extension is not allowed. Please contact administrator.'
+fileName = 'forbidden.exe'
+uploadForbiddenFileLocal = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+	('folderUrl') : GlobalVariable.folderUrl,
+	('url') : fileName
+	]))
+WS.verifyResponseStatusCode(uploadForbiddenFileLocal, 405)
+WS.containsString(uploadForbiddenFileLocal, errorMessage, false)
+
+
+//UPLOAD A FILE WITH THE CORRECT EXTENSION
 uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUploadLocal', [
 	('folderUrl') : GlobalVariable.folderUrl
 	]))
