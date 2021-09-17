@@ -62,44 +62,21 @@ updatedData = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 WS.containsString(updatedData, newExtension, false)
 
 
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION TO BLOGS
-GlobalVariable.contentType = "blogs"
-fileName = 'forbidden.exe'
-errorMessage = 'This extension is not allowed. Please contact administrator.'
-uploadToBlogs = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
-	('contentType') : GlobalVariable.contentType,
-	('storeId') : GlobalVariable.storeId,
-	('folderName') : GlobalVariable.folderName,
-	('fileName') : fileName
-	]))//;FailureHandling.OPTIONAL
-WS.verifyResponseStatusCode(uploadToBlogs, 500)
-WS.containsString(uploadToBlogs, errorMessage, false)
+//THIS PART REVERTS CHANGES BACK TO THE INITIAL STATE
 
-
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION TO PAGES
-uploadToPages = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
-	('contentType') : GlobalVariable.contentType,
-	('storeId') : GlobalVariable.storeId,
-	('fileName') : fileName,
-	('folderName') : GlobalVariable.folderName
-	]))
-WS.verifyResponseStatusCode(uploadToPages, 500)
-WS.containsString(uploadToPages, errorMessage, false)
-
-
-//USE THE INITIAL GET RESPONSE THAT DOESNT CONTAIN ANY CHANGES (INITIAL SETTING STATE)
- initialSettingsData = '[' + responseData + ']'
-
- 
- //SEND THE REQUEST WITH THE INITIAL SETTING DATA TO UNDO ALL THE CHANGES
- RequestObject revertChanges = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsCreateUpdateDescriptionType')
- revertChanges.setBodyContent(new HttpTextBodyContent(initialSettingsData))
- undoChanges = WS.sendRequestAndVerify(revertChanges)
- 
- 
- //VERIFY IF THE CHANGES ARE DISCARD
- updatedData = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
-	 ('name') : settingName
-	 ]))
-boolean verification = WS.containsString(updatedData, newExtension, false, FailureHandling.OPTIONAL)
-assert verification == false
+////USE THE INITIAL GET RESPONSE THAT DOESNT CONTAIN ANY CHANGES (INITIAL SETTING STATE)
+// initialSettingsData = '[' + responseData + ']'
+//
+// 
+// //SEND THE REQUEST WITH THE INITIAL SETTING DATA TO UNDO ALL THE CHANGES
+// RequestObject revertChanges = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsCreateUpdateDescriptionType')
+// revertChanges.setBodyContent(new HttpTextBodyContent(initialSettingsData))
+// undoChanges = WS.sendRequestAndVerify(revertChanges)
+// 
+// 
+// //VERIFY IF THE CHANGES ARE DISCARD
+// updatedData = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
+//	 ('name') : settingName
+//	 ]))
+//boolean verification = WS.containsString(updatedData, newExtension, false, FailureHandling.OPTIONAL)
+//assert verification == false

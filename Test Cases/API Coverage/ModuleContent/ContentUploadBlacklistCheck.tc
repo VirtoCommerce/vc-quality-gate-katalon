@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>1. Call test case that updates blacklist settings
+2. Consequently upload the forbidden extension file to BLOGS/PAGES/THEMES and verify the result
+</description>
+   <name>ContentUploadBlacklistCheck</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2ca99c89-de0c-4eba-a76a-2019db7edace</testCaseGuid>
+</TestCaseEntity>
