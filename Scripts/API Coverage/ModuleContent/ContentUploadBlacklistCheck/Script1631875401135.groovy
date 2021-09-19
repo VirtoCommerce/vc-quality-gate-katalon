@@ -22,8 +22,10 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
+WebUI.comment('TEST CASE: Content. Check errors during to uploading a new file')
+
 //UPDATE THE BLACKLIST CONFIGURATION
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null, 
+WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
 FailureHandling.STOP_ON_FAILURE)
 
 
@@ -32,39 +34,15 @@ fileName = 'forbidden.exe'
 errorMessage = 'This extension is not allowed. Please contact administrator.'
 
 
-//THIS PART NEEDS TO BE LOOPED
-//UPLOAD PART
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION TO BLOGS
-GlobalVariable.contentType = "blogs"
-uploadToBlogs = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
-	('contentType') : GlobalVariable.contentType,
-	('storeId') : GlobalVariable.storeId,
-	('folderName') : GlobalVariable.folderName,
-	('fileName') : fileName
-	]))//;FailureHandling.OPTIONAL
-WS.verifyResponseStatusCode(uploadToBlogs, 500)
-WS.containsString(uploadToBlogs, errorMessage, false)
-
-
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION TO PAGES
-GlobalVariable.contentType = "pages"
-uploadToPages = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
-	('contentType') : GlobalVariable.contentType,
-	('storeId') : GlobalVariable.storeId,
-	('fileName') : fileName,
-	('folderName') : GlobalVariable.folderName
-	]))
-WS.verifyResponseStatusCode(uploadToPages, 500)
-WS.containsString(uploadToPages, errorMessage, false)
-
-
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION TO THEMES
-GlobalVariable.contentType = "themes"
-uploadToThemes = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
-	('contentType') : GlobalVariable.contentType,
-	('storeId') : GlobalVariable.storeId,
-	('fileName') : fileName,
-	('folderName') : GlobalVariable.folderName
-	]))
-WS.verifyResponseStatusCode(uploadToThemes, 500)
-WS.containsString(uploadToPages, errorMessage, false)
+//CREATE A MAP OF ENDPOINTS TO CHECK AND SEND EACH VALUE TO THE ENDPOINT
+HashMap<String, String> contentTypes = GlobalVariable.contentTypesMap
+for (String contentType : contentTypes.keySet()) {
+	upload = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
+		('contentType') : contentType,
+		('storeId') : GlobalVariable.storeId,
+		('folderName') : GlobalVariable.folderName,
+		('fileName') : fileName
+		]))//;FailureHandling.OPTIONAL
+	WS.verifyResponseStatusCode(upload, 500)
+	WS.containsString(upload, errorMessage, false)
+	}
