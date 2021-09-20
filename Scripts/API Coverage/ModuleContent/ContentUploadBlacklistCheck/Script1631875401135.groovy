@@ -15,31 +15,34 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.util.KeywordUtil
 
-WebUI.comment('TEST CASE: Assets. Upload ZIP file by URL')
+WebUI.comment('TEST CASE: Content. Check errors during to uploading a new file')
 
-
-//UPDATE THE BLACKLIST CONFIGURATION TO CHECK IF THE FORBIDDEN EXTENSION FILE CANT BE UPLOADED
+//UPDATE THE BLACKLIST CONFIGURATION
 WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
 FailureHandling.STOP_ON_FAILURE)
 
 
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION
+//SET THE FILE NAME AND THE ERROR MESSAGE
+fileName = 'forbidden.exe'
 errorMessage = 'This extension is not allowed. Please contact administrator.'
-forbiddenFileUrl = 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.exe'
-uploadForbiddenFileUrl = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
-	('folderUrl') : GlobalVariable.folderUrl,
-	('url') : forbiddenFileUrl
-	]))
-WS.verifyResponseStatusCode(uploadForbiddenFileUrl, 405)
-WS.containsString(uploadForbiddenFileUrl, errorMessage, false)
 
 
-//UPLOAD AN ARCHIVE WITH THE CORRECT EXTENSION
-correctFileUrl = 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
-uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
-	('folderUrl') : GlobalVariable.folderUrl,
-	('url') : correctFileUrl
-	]))
-//get file url
-GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].url')
+//CREATE A MAP OF ENDPOINTS TO CHECK AND SEND EACH VALUE TO THE ENDPOINT
+HashMap<String, String> contentTypes = GlobalVariable.contentTypesMap
+for (String contentType : contentTypes.keySet()) {
+	upload = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
+		('contentType') : contentType,
+		('storeId') : GlobalVariable.storeId,
+		('folderName') : GlobalVariable.folderName,
+		('fileName') : fileName
+		]))//;FailureHandling.OPTIONAL
+	WS.verifyResponseStatusCode(upload, 500)
+	WS.containsString(upload, errorMessage, false)
+	}

@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create(upload) page in a folder, check status, rename,delete file, delete folder</description>
+   <description>1.Update the extension blacklist configuration
+2.Get statistics
+3.Upload a post (create folder > upload a post)
+4.Rename the page to the forbidden extension
+5. Rename the page to the proper extension
+6. Get statistics(compare with p.2 to verify the result)
+7. Delete the added content, verify deletion</description>
    <name>ContentPages</name>
    <tag></tag>
    <comment></comment>

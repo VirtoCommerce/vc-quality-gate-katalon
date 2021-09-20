@@ -21,6 +21,12 @@ WebUI.comment('TEST CASE: Theme. Upload file from local')
 
 GlobalVariable.contentType = "themes"
 
+
+//UPDATE THE BLACKLIST CONFIGURATION
+WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+FailureHandling.STOP_ON_FAILURE)
+
+
 //Get store stats to get initial state. Set THEME count to compare with final result
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
@@ -67,6 +73,33 @@ unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/V
 	('storeId') : GlobalVariable.storeId,
 	('relativeUrl') : '/' + folderName + '/' + fileName
 	]))
+
+
+//Get the unpacked file data to set variables for the ContentMove request
+fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('keyword') : fileName
+	]))
+WS.verifyElementPropertyValue(fileData, '[0].name', fileName)
+
+
+//Set variables for the rename (ContentMove) request
+forbiddenFileName = fileName.replaceAll('.html', '.exe')
+oldUrl = WS.getElementPropertyValue(fileData, '[0].url')
+forbiddenUrl = oldUrl.replaceAll(fileName, forbiddenFileName)
+
+
+//Send ContentMove request to rename the page with the FORBIDDEN EXTENSION file
+errorMessage = 'This extension is not allowed. Please contact administrator.'
+forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
+	('contentType') : GlobalVariable.contentType ,
+	('storeId') : GlobalVariable.storeId,
+	('oldUrl') : oldUrl,
+	('newUrl') : forbiddenUrl
+	]))
+WS.verifyResponseStatusCode(forbiddenRename, 500)
+WS.containsString(forbiddenRename, errorMessage, false)
 
 
 //Delete the created folder
