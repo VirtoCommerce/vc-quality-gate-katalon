@@ -314,4 +314,9 @@
       <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweaa') : 'Maximum length is 64. You entered 65']</initValue>
       <name>orderNameListContent</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('blogs') : 'blogs', ('pages') : 'pages', ('themes') : 'themes']</initValue>
+      <name>contentTypesMap</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
