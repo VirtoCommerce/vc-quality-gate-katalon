@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.navigateToUrl(GlobalVariable.urlFront + '/request-demo')
+WebUI.navigateToUrl(GlobalVariable.urlFront + '/contact-us')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -32,9 +32,11 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone'), '0123456789')
 
-WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
+WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')
 
-WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_RequestDemo'))
+WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+
+WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_ContactUsPage_Get_in_touch'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 

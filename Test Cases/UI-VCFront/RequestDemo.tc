@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Test Request Demo page form</description>
+   <description>Test form on Request Demo page</description>
    <name>RequestDemo</name>
    <tag></tag>
    <comment></comment>

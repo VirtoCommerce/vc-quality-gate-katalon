@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.navigateToUrl(GlobalVariable.urlFront + '/request-demo')
+WebUI.navigateToUrl(GlobalVariable.urlFront + '/partner-form-become-technology-partner')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -26,16 +26,18 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_na
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Email'), 'test@virtoway.com')
 
-WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
-
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone'), '0123456789')
 
+WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
+
 WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
-WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_RequestDemo'))
+WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 
-WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
+WebUI.click(findTestObject('Object Repository/UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
 
-assert WebUI.getUrl() == (GlobalVariable.urlFront + '/thank-you')
+WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you_partner_program'), "Thank you for your interest in the Virto Commerce partner program")
+
+assert WebUI.getUrl() == (GlobalVariable.urlFront + '/partner-thank-you')
