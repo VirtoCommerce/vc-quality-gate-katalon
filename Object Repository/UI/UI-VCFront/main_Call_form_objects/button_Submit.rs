@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>input_RequestButton</name>
+   <name>button_Submit</name>
    <tag></tag>
-   <elementGuidId>94e65fac-35ac-4a32-b361-24a54eb6ab36</elementGuidId>
+   <elementGuidId>328510a0-47e5-4f13-aeea-dc3ad143f948</elementGuidId>
    <imagePath></imagePath>
    <selectorCollection>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
-      </entry>
       <entry>
          <key>XPATH</key>
          <value>//input[@value='Request a demo']</value>
       </entry>
       <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>id(&quot;request_demo_form&quot;)/input[@class=&quot;btn btn--block btn--round&quot;][count(. | //*[@type = 'submit' and @value = 'Request a demo']) = count(//*[@type = 'submit' and @value = 'Request a demo'])]</value>
+         <value>//form[@data-target-url=&quot;/thank-you&quot;']/div[@class=&quot;form-group&quot;]/input</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -33,7 +33,7 @@
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
@@ -47,7 +47,7 @@
       <value>btn btn--block btn--round</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
@@ -58,27 +58,27 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;request_demo_form&quot;)/input[@class=&quot;btn btn--block btn--round&quot;]</value>
+      <value>//form[@data-target-url=&quot;/thank-you&quot;']//div//input</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@value='Request a demo']</value>
+      <value>//input[@type='submit']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//form[@id='request_demo_form']/input</value>
+      <value>//form[@data-target-url=&quot;/thank-you&quot;']//input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//form/input</value>
+      <value>//form//input</value>
    </webElementXpaths>
 </WebElementEntity>

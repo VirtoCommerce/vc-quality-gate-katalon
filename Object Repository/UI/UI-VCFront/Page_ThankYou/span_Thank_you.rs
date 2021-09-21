@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_Thank you</name>
+   <name>span_Thank_you</name>
    <tag></tag>
    <elementGuidId>bb8c8349-201d-4400-9379-f76fb5018b9c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value></value>
       </entry>
       <entry>
          <key>BASIC</key>

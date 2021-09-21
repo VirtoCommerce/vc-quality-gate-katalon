@@ -1,80 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>title_Thank_you_page</name>
+   <name>checkbox_Terms</name>
    <tag></tag>
-   <elementGuidId>eda49ca3-c150-44d7-bed2-4023bd567178</elementGuidId>
+   <elementGuidId>3d8e7bfa-898d-48cf-af4b-a50a30ea6d34</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//div[@id='block-1']/div/div/div/div</value>
+         <value>//form[@id='contact_us_form']/div[8]/label</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//label[@class = 'form-checkbox__label']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>div.block__descr</value>
+         <value>label.form-checkbox__label</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>block__descr</value>
+      <value>label</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>form-checkbox__label</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>for</name>
+      <type>Main</type>
+      <value>agree</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Thank you!
-
-Your demo link is on its way.
-
-
-</value>
+      <value>By submitting my contact information, I confirm that I have read and agree to the Virto Commerce Terms and  Privacy Policy, which explains how Virto Commerce collects, processes and shares my personal data.</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;block-1&quot;)/div[@class=&quot;block__inner container&quot;]/div[@class=&quot;row  justify-content-center&quot;]/div[@class=&quot;block__text col-lg&quot;]/div[@class=&quot;block__descr&quot;]</value>
+      <value>id(&quot;contact_us_form&quot;)/div[@class=&quot;form-group&quot;]/label[@class=&quot;form-checkbox__label&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//div[@id='block-1']/div/div/div/div</value>
+      <value>//form[@id='contact_us_form']/div[8]/label</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Request Demo'])[1]/following::div[8]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='click here'])[1]/following::label[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Work at Virto Commerce'])[2]/following::div[9]</value>
+      <value>//*/text()[normalize-space(.)='By submitting my contact information, I confirm that I have read and agree to the Virto Commerce']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//article/div/div/div/div/div/div/div</value>
+      <value>//label</value>
    </webElementXpaths>
 </WebElementEntity>
