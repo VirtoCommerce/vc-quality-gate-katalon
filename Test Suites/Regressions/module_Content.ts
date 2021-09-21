@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Content</name>
+   <name>module_Content</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,12 +10,30 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>5917b497-3494-47f7-859a-d69171b3bf24</testSuiteGuid>
+   <testSuiteGuid>489945af-b639-41ce-961f-63855fc9dda4</testSuiteGuid>
    <testCaseLink>
-      <guid>b1e250da-df1d-4f3f-8664-26a6d551fb90</guid>
+      <guid>c6fe1f35-19cb-48ac-b027-d3e36808a38f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2d2939c9-9f4f-402f-844a-79994adf1594</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>10de7457-df74-4677-9681-3f0a39d7aab7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleContent/ContentNameValidation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>22f28028-ecd6-4a1f-ad9c-d8661841c64f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleContent/ContentUploadBlacklistCheck</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1c7098ae-8a28-401a-b89f-12a4673b1d32</guid>
