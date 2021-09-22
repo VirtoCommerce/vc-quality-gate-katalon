@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.ProductsGetByIdsAndGroup</name>
+   <name>ProductsGetNewTemplateVariation</name>
    <tag></tag>
-   <elementGuidId>32f7f5ca-99ed-4223-8d12-5e9fdcc7df91</elementGuidId>
+   <elementGuidId>cab53f1d-06a3-4d39-a02c-7b779c4e365d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/${id}?respGroup=respGroupd</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/${productId}/getnewvariation</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -40,9 +40,9 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>fa74fb75-3634-4719-a4cb-366996b51340</id>
+      <id>1fd03659-b28b-401b-9fcc-6b75a81d4004</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>productId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.CategoriesDeleteById</name>
+   <name>ProductsDeleteById</name>
    <tag></tag>
-   <elementGuidId>619232aa-0437-46fd-aaab-ceac8580a4f6</elementGuidId>
+   <elementGuidId>628600cf-adb2-4623-9c1a-27c855db4ce5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack/api/catalog/categories?ids=ids</restUrl>
+   <restUrl>${GlobalVariable.urlBack/api/catalog/products?ids=id</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description>Creates links for categories or items to parent categories and catalogs.</description>
-   <name>DRAFT.ListentryLinksCreate</name>
+   <name>ListentryLinksCreate</name>
    <tag></tag>
    <elementGuidId>fff29298-c500-4fa8-98a9-7107b3e48203</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

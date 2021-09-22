@@ -19,66 +19,78 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Products management - upload image, description type management')
 
-//Function for updating description types
+
+'FUNCTION FOR UPDATING DESCRIPTION TYPE'
 def UpdateTypes (ArrayList typesToUpdate) {
-	//Get json for setting of descriptions
-	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'Catalog.EditorialReviewTypes']))
-	responseText = response.getResponseText()
-	WebUI.comment(responseText)
+	
+	'GET JSON FOR SETTING OF DESCRIPTIONS'
+	settingsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
+		('name') : 'Catalog.EditorialReviewTypes'
+		]))
+	settingsText = settingsGet.getResponseText()
+	WebUI.comment(settingsText)
 	JsonSlurper slurper = new JsonSlurper()
-	Map parsedJson = slurper.parseText(responseText)
+	Map parsedJson = slurper.parseText(settingsText)
 	WebUI.comment(parsedJson.allowedValues.toString())
 	
-	//Set new valies to json
+	'SET NEW VALUES TO JSON'
 	parsedJson.allowedValues = typesToUpdate
 	WebUI.comment(parsedJson.allowedValues.toString())
 	
-	//Create correct body
+	'CRETE CORRECT BODY'
 	parsedToJson = new groovy.json.JsonBuilder(parsedJson)
 	updatedBody = "[" + parsedToJson.toString() + "]"
 	WebUI.comment(updatedBody)
 	
-	//Add new type of descriptions
-	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsCreateUpdateDescriptionType',[('body') : updatedBody]))
+	'ADD NEW TYPE OF DESCRIPTIONS'
+	addDescription = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsCreateUpdateDescriptionType',[
+		('body') : updatedBody
+		]))
 	//Verify that types are updated
-	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [('name') : 'Catalog.EditorialReviewTypes']))
-	WS.verifyElementPropertyValue(response, 'name', 'Catalog.EditorialReviewTypes')
+	addDescription = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
+		('name') : 'Catalog.EditorialReviewTypes'
+		]))
+	WS.verifyElementPropertyValue(addDescription, 'name', 'Catalog.EditorialReviewTypes')
+	
 }
 
-//Create new  description type
+
+'CREATE NEW DESCRIPTION TYPE'
 ArrayList allowedValues = new ArrayList()
 allowedValues.add('FullReview')
 allowedValues.add('QuickReview')
 allowedValues.add('TEST')
 UpdateTypes(allowedValues)
 
-//Update name of description type
+'UPDATE NaME OF DESCRIPTION TYPE'
 allowedValues = new ArrayList()
 allowedValues.add('FullReview')
 allowedValues.add('QuickReview')
 allowedValues.add('TESTUPD')
 UpdateTypes(allowedValues)
 
-//Remove created description type
+'REMOVE CREATED DESCRIPTION TYPE'
 allowedValues = new ArrayList()
 allowedValues.add('FullReview')
 allowedValues.add('QuickReview')
 UpdateTypes(allowedValues)
 
 
-//Create new folder
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
+'CREATE NEW FOLDER'
+folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
 	('folderName') : GlobalVariable.folderName,
 	('parentUrl') : ''
 	]))
 
-// Find URL of assets
+
+'FIND URL OF ASSETS'
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
 	('folderName') : '',
 	('keyword') : GlobalVariable.folderName
 	]))
 
-// check if new folder is in the search results
+
+'CHECK IF NEW FOLDER IS IN THE SEARCH RESULTS'
 WS.containsString(folderList, GlobalVariable.folderName, false)
 localUrl = (WS.getElementPropertyValue(folderList, 'results[0].parentUrl'))
 folderUrl = localUrl + GlobalVariable.folderName // Special url for test in docker
@@ -86,36 +98,45 @@ folderUrl = localUrl + GlobalVariable.folderName // Special url for test in dock
 WebUI.comment ('Local URL is: ' + localUrl)
 WebUI.comment ('Folder URL is: ' + folderUrl)
 
-//Upload image for product
+
+'UPLOAD IMAGE FOR PRODUCT'
 uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
 	('folderUrl') : folderUrl,
 	('url') : GlobalVariable.urlBack + '/images/userpic.svg'
 	]))
 
-//get file url
+
+'GET FILE URL'
 uploadedFileUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].url')
 uploadedFileName = WS.getElementPropertyValue(uploadFileUrl, '[0].name')
 WebUI.comment ('Upload URL is: ' + uploadedFileUrl)
 
-//Image verification
+'IMAGE VERIFICATION'
 productName = 'QweDrinkProductImaheAndDescriptions'
 
-// Create new product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
-WS.verifyElementPropertyValue(response, 'name', productName)
 
-//save product ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, 'id')
+'CREATE NEW PRODUCT'
+productCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName
+	]))
+WS.verifyElementPropertyValue(productCreate, 'name', productName)
+
+
+'SAVE PRODUCT ID TO USE IN UPDATE AND DELETE CASES'
+productId = WS.getElementPropertyValue(productCreate, 'id')
 WebUI.comment(productId)
 
-//Create updated images  body
+
+'CREATE UPDATED IMAGES BODY'
 updatedImagestext = '{"size":6129,"contentType":"image/svg+xml", "type":"blob","name":"'+ uploadedFileName +'","url":"'+ uploadedFileUrl +'","relativeUrl":"' + uploadedFileUrl + '","createdDate":"0001-01-01T00:00:00Z","modifiedDate":"2021-08-26T09:57:56.6970941Z","isImage":true,"sortOrder":1,"group":"images"}'
 WebUI.comment(updatedImagestext)
 
 
-// Update images
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName, ('images'): updatedImagestext]))
-WS.verifyElementPropertyValue(response, 'name', productName)
-WS.verifyElementPropertyValue(response, 'images.url[0]', uploadedFileUrl)
+'UPDATE IMAGES'
+imagesUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName, ('images'): updatedImagestext
+	]))
+WS.verifyElementPropertyValue(imagesUpdate, 'name', productName)
+WS.verifyElementPropertyValue(imagesUpdate, 'images.url[0]', uploadedFileUrl)
 
 
