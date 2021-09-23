@@ -19,23 +19,24 @@ import org.openqa.selenium.Keys as Keys
 
 
 List<String> urls = [
-	'royal-brass-and-hose', 
-	'bosch', 
-	'lavazza-nederland',
-	'flokk', 
-	'eminent', 
-	'hengdeli',
-	'estatespain',
-	'proffsmagasinet',
-	'deklok',
-	'kupinatao',
-	'standaard-boekhandel',
-	'making-waves'
+	'download-headless-commerce-whitepaper',
+	'download-b2b-enterprise-marketplaces-2021',
+
+	'download-whitepaper-6-principles-of-replatforming-strategy-in-2021',
+	'download-customer-experience-whitepaper',
+	'download-value-proposition-industries-whitepaper',
+	'download-b2b-whitepaper',
+	'download-extending-ecommerce-b2b-whitepaper',
+	'download-cloud-whitepaper',
+	'download-replatforming-whitepaper',
+	'download-composable-commerce-whitepaper',
+	'migration-whitepaper',
+	'download-arch-guidelines'
 	]
 
 for (int i; i < urls.size(); i++) {
 	
-    WebUI.navigateToUrl(GlobalVariable.urlFront + '/case-studies/' + urls.get(i))
+    WebUI.navigateToUrl(GlobalVariable.urlFront + '/' + urls.get(i))
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -49,7 +50,10 @@ for (int i; i < urls.size(); i++) {
 
     WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
-    WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+    if (urls.get(i) != urls[0] && urls.get(i) != urls[1]) {
+		println urls.get(i)
+		WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+	}
 		
     WebUI.click(findTestObject('Object Repository/UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
 

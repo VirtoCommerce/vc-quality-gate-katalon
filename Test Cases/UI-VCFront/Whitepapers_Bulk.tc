@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Test form on B2B eCommerce platform page</description>
-   <name>Solution_partner-form-become-solution-partner</name>
+   <name>Whitepapers_Bulk</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>b8812be1-423f-4628-88c3-b266e22137a2</testCaseGuid>
+   <testCaseGuid>f0d49267-f732-4a20-985d-07ccff59133b</testCaseGuid>
 </TestCaseEntity>

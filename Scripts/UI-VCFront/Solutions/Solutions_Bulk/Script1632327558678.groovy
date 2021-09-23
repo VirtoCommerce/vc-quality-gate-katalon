@@ -19,23 +19,27 @@ import org.openqa.selenium.Keys as Keys
 
 
 List<String> urls = [
-	'royal-brass-and-hose', 
-	'bosch', 
-	'lavazza-nederland',
-	'flokk', 
-	'eminent', 
-	'hengdeli',
-	'estatespain',
-	'proffsmagasinet',
-	'deklok',
-	'kupinatao',
-	'standaard-boekhandel',
-	'making-waves'
+	'b2b2c-marketplace-for-distributors',
+	'b2b2c-webshop-for-distributors',
+	'b2b-portal-for-manufacturers',
+	'b2b-portal-for-distributors',
+	'b2b-portal',
+	'b2c-webshop-for-retail',
+	'd2c-loyalty-portal',
+	'b2c-webshop',
+	'digital-catalog-for-manufacturers',
+	'digital-catalog',
+	'vendor-portal',
+	'vendor-portal-for-retail',
+	'chatbot',
+	'page-builder',
+	'loyalty-portal',
+	'saas-on-top-of-virto-commerce-platform'
 	]
 
 for (int i; i < urls.size(); i++) {
 	
-    WebUI.navigateToUrl(GlobalVariable.urlFront + '/case-studies/' + urls.get(i))
+    WebUI.navigateToUrl(GlobalVariable.urlFront + '/solutions/' + urls.get(i))
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -49,11 +53,11 @@ for (int i; i < urls.size(); i++) {
 
     WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
-    WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+	WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 		
     WebUI.click(findTestObject('Object Repository/UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
 
-    WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/div_Whats_next'), 'What\'s next')
-
-    assert WebUI.getUrl() == (GlobalVariable.urlFront + '/asset-download-thank-you')
+	WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
+	
+	assert WebUI.getUrl() == (GlobalVariable.urlFront + '/thank-you')
 }

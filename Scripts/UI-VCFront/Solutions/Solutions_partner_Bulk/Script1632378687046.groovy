@@ -19,23 +19,14 @@ import org.openqa.selenium.Keys as Keys
 
 
 List<String> urls = [
-	'royal-brass-and-hose', 
-	'bosch', 
-	'lavazza-nederland',
-	'flokk', 
-	'eminent', 
-	'hengdeli',
-	'estatespain',
-	'proffsmagasinet',
-	'deklok',
-	'kupinatao',
-	'standaard-boekhandel',
-	'making-waves'
+	'partner-form-become-technology-partner',
+	'partner-form-community-experts',
+	'partner-form-become-solution-partner'
 	]
 
 for (int i; i < urls.size(); i++) {
 	
-    WebUI.navigateToUrl(GlobalVariable.urlFront + '/case-studies/' + urls.get(i))
+    WebUI.navigateToUrl(GlobalVariable.urlFront + '/' + urls.get(i))
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -44,16 +35,30 @@ for (int i; i < urls.size(); i++) {
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Email'), 'test@virtoway.com')
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
+	
+	WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone'), '0123456789')
 
     WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
-
+	
+	if (urls.get(i) == urls[1]) {
+		println urls.get(i)
+		WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/Page_Become_solution_partner_form/select_Learn_more_about'), 'our upcoming training schedule', true)
+	}
+	
+	if (urls.get(i) == urls[2]) {
+		println urls.get(i)
+		WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/Page_Become_solution_partner_form/select_Learn_more_about'), 'Associate solution partner program', true)
+		WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')
+	}
+	
+	
     WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
-    WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+	WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 		
     WebUI.click(findTestObject('Object Repository/UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
 
-    WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/div_Whats_next'), 'What\'s next')
+	WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you_partner_program'), "Thank you for your interest in the Virto Commerce partner program")
 
-    assert WebUI.getUrl() == (GlobalVariable.urlFront + '/asset-download-thank-you')
+	assert WebUI.getUrl() == (GlobalVariable.urlFront + '/partner-thank-you')
 }

@@ -15,23 +15,7 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[@id = 'select' and @name = 'select' and (text() = '
-    
-        Learn more about:
-    
-        Associate solution partner program
-    
-        Certified solution partner program 
-    
-' or . = '
-    
-        Learn more about:
-    
-        Associate solution partner program
-    
-        Certified solution partner program 
-    
-')]</value>
+         <value>//*[@class = 'form-control' and @id = 'select' and @name = 'select']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -44,7 +28,7 @@
       <value>select</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
@@ -65,7 +49,7 @@
       <value>select</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
