@@ -15,6 +15,6 @@
       <guid>7860fada-6f06-4905-bb50-11663f9c7d29</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/UI-VCFront/RequestDemo</testCaseId>
+      <testCaseId>Test Cases/UI-VCFront/Page_Request_Demo</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

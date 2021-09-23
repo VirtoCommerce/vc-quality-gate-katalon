@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test forms on the Solution pages</description>
+   <name>Solutions_Bulk</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ed46126f-cb82-421b-91dc-b9948283816c</testCaseGuid>
+</TestCaseEntity>
