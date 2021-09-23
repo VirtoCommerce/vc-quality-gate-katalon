@@ -35,8 +35,8 @@ productId = WS.getElementPropertyValue(createProduct, 'id')
 
 //VERIFY THAT THE PRODUCT WAS ADDED 
 verifyCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId
-			]))
+	('id') : productId
+	]))
 WS.verifyElementPropertyValue(verifyCreate, '[0].name', productName)
 
 
@@ -75,8 +75,9 @@ clonnedProductBody = generateClone.getResponseBodyContent()
 
 
 //CREATE CLONE PRODUCT
-createClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdateWithBody', 
-        [('body') : clonnedProductBody]))
+createClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdateWithBody', [
+	('body') : clonnedProductBody
+	]))
 
 
 //SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES
@@ -86,7 +87,6 @@ WebUI.comment(productId)
 
 //VERIFY THAT PRODUCT WAS UPADTED
 verifyClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-			('id') : productId
-			]))
+	('id') : productId
+	]))
 WS.verifyElementPropertyValue(verifyClone, '[0].reviews[0].content', content)
-

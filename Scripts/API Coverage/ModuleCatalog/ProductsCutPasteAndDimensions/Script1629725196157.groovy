@@ -40,8 +40,8 @@ WebUI.comment(categoryName)
 
 'VERIFY THAT PRODUCT WAS ADDED' 
 verifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId
-			]))
+	('id') : productId
+	]))
 WS.verifyElementPropertyValue(verifyCreated, '[0].name', productName)
 
 
@@ -51,8 +51,8 @@ WebUI.comment(catalogName)
 
 
 'MOVE PRODUCT TO ROOT CATALOG'
-move = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesMove', 
-	[('name') : productName, 
+move = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesMove', [
+	('name') : productName, 
 	('code') : GlobalVariable.sku, 
 	('catalogId') : GlobalVariable.catalogId, 
 	('categoryIdFrom') : GlobalVariable.categoryId, 
@@ -64,26 +64,26 @@ move = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce
 
 'VERIFY THE PRODUCT WAS MOVED TO CATALOG' 
 verifyMove = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId
-			]))
+	('id') : productId
+	]))
 WS.verifyElementPropertyValue(verifyMove, '[0].path', null)
 
 
 'UPDATE DIMENSIONS FOR PRODUCT'
-dimensionsUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', 
-	[('name') : productName, 
-	 ('weightUnit') : 'pound', 
-	 ('weight') : 200, 
-	 ('height') : 200, 
-	 ('width') : 200, 
-	 ('length') : 200
+dimensionsUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName, 
+	('weightUnit') : 'pound', 
+	('weight') : 200, 
+	('height') : 200, 
+	('width') : 200, 
+	('length') : 200
 	]))
 
 
 'VERIFY THE PRODUCT WAS UPDATED'
 verifyDimensions = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId
-			]))
+	('id') : productId
+	]))
 WS.verifyElementPropertyValue(verifyDimensions, '[0].weightUnit', 'pound')
 WS.verifyElementPropertyValue(verifyDimensions, '[0].weight', 200.00)
 WS.verifyElementPropertyValue(verifyDimensions, '[0].height', 200.00)

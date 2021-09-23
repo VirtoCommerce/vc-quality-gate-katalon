@@ -134,9 +134,9 @@ WebUI.comment(updatedImagestext)
 
 'UPDATE IMAGES'
 imagesUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
-	('name') : productName, ('images'): updatedImagestext
+	('name') : productName, 
+	('images'): updatedImagestext
 	]))
 WS.verifyElementPropertyValue(imagesUpdate, 'name', productName)
 WS.verifyElementPropertyValue(imagesUpdate, 'images.url[0]', uploadedFileUrl)
-
 
