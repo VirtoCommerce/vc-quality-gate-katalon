@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test form on B2B eCommerce platform page</description>
-   <name>Solution_partner-form-become-technology-partner</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>fd0a41c2-d881-4c42-b5de-9182a766ffa2</testCaseGuid>
-</TestCaseEntity>

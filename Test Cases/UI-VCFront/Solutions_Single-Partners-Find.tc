@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test forms on the Solution\Partners\Find pages</description>
+   <name>Solutions_Single-Partners-Find</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a785c0f1-1189-498f-8ef8-95274d5dcba4</testCaseGuid>
+</TestCaseEntity>

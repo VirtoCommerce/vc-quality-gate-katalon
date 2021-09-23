@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test form on Contact Us page</description>
+   <name>Page_ContactUs</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3d2d010e-21b8-4d20-8120-7aa66ef7a2fb</testCaseGuid>
+</TestCaseEntity>
