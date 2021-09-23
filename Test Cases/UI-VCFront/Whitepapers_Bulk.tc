@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Test form on B2B eCommerce platform page</description>
-   <name>Whitepapers_Bulk</name>
+   <description>Test forms on the White Paper download pages</description>
+   <name>WhitePapers_Bulk</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>f0d49267-f732-4a20-985d-07ccff59133b</testCaseGuid>

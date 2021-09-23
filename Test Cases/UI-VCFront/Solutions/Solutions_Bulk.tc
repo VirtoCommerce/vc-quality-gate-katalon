@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test form on B2B eCommerce platform page</description>
-   <name>Solutions_Bulk</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>ed46126f-cb82-421b-91dc-b9948283816c</testCaseGuid>
-</TestCaseEntity>

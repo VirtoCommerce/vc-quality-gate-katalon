@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test form on Request Demo page</description>
-   <name>RequestDemo</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>2267838f-315a-44a0-b81f-e8d256083038</testCaseGuid>
-</TestCaseEntity>

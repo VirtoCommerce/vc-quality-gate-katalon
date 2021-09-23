@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test form onWhite label eCommerce platform page</description>
-   <name>WhiteLabel_eCommerce</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>b697e888-df16-4111-9b21-adb81867f962</testCaseGuid>
-</TestCaseEntity>
