@@ -12,10 +12,28 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>5917b497-3494-47f7-859a-d69171b3bf24</testSuiteGuid>
    <testCaseLink>
+      <guid>469a430e-3ced-4446-8390-b6e7472c5414</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>42852861-9951-4602-9642-08baaf128851</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>b1e250da-df1d-4f3f-8664-26a6d551fb90</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleContent/ContentNameValidation</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>80b2b341-27cd-409c-9994-21db46801fad</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleContent/ContentUploadBlacklistCheck</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1c7098ae-8a28-401a-b89f-12a4673b1d32</guid>
