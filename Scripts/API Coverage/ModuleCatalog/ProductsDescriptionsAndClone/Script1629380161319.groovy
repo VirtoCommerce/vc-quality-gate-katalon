@@ -20,52 +20,73 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Products management - add, update, delete')
 productName = 'QweDrinkProduct'
 
-// Create new product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
-WS.verifyElementPropertyValue(response, 'name', productName)
 
-//save catalog ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, 'id')
-WebUI.comment(productId)
+//CREATE A NEW PRODUCT
+createProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName
+	]))
+WS.verifyElementPropertyValue(createProduct, 'name', productName)
 
-//Verify that product was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId]))
-WS.verifyElementPropertyValue(response, '[0].name', productName)
 
-///Update name, to use for after update verification
+//SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES
+productId = WS.getElementPropertyValue(createProduct, 'id')
+//WebUI.comment(productId)
+
+
+//VERIFY THAT THE PRODUCT WAS ADDED 
+verifyCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyCreate, '[0].name', productName)
+
+
+//CREATE THE UPDATED NAME
 content = 'Updated quick description'
 WebUI.comment(content)
 
-//Update product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', 
-	[('name') : productName,
-	 ('content') : content
-	 ]))
 
-//Verify that product was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [('id') : productId]))
-WS.verifyElementPropertyValue(response, '[0].reviews[0].content', content)
+//UPDATE THE PRODUCT
+updateProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName,
+	('content') : content
+	]))
 
-// Clone product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetCloneByProductId', [('productId') : productId]))
 
-//Verify that product clone is return
-WS.verifyElementPropertyValue(response, 'reviews[0].content', content)
-WS.verifyElementPropertyValue(response, 'name', productName)
+//VERIFY THAT THE PRODUCT WAS UPDATED
+verifyUpdated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyUpdated, '[0].reviews[0].content', content)
 
-//Save body of clone
-clonnedProductBody = response.getResponseBodyContent()
 
-// Create cloned product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdateWithBody', 
-        [('body') : clonnedProductBody]))
+//CLONE PRODUCT
+generateClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetCloneByProductId', [
+	('productId') : productId
+	]))
 
-//save catalog ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, 'id')
+
+//VERIFY THE PRODUCT CLONE IS RETURNED
+WS.verifyElementPropertyValue(generateClone, 'reviews[0].content', content)
+WS.verifyElementPropertyValue(generateClone, 'name', productName)
+
+
+//SAVE BODY OF CLONE
+clonnedProductBody = generateClone.getResponseBodyContent()
+
+
+//CREATE CLONE PRODUCT
+createClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdateWithBody', [
+	('body') : clonnedProductBody
+	]))
+
+
+//SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES
+productId = WS.getElementPropertyValue(createClone, 'id')
 WebUI.comment(productId)
 
-//Verify that product was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-			('id') : productId]))
-WS.verifyElementPropertyValue(response, '[0].reviews[0].content', content)
+
+//VERIFY THAT PRODUCT WAS UPADTED
+verifyClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyClone, '[0].reviews[0].content', content)

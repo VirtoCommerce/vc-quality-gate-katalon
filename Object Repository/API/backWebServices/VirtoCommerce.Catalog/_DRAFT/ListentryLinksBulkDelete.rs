@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.ListentryLinksBulkDelete</name>
+   <name>ListentryLinksBulkDelete</name>
    <tag></tag>
    <elementGuidId>caf219c6-1a2b-4ea8-8d37-1baeaaedf1ff</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

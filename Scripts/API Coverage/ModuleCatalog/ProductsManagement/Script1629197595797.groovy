@@ -20,34 +20,53 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Products management - add, update, delete')
 productName = 'QweDrink'
 
-// Create new product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
-WS.verifyElementPropertyValue(response, 'name', productName)
 
-//save catalog ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, 'id')
-WebUI.comment(productId)
+// CREATE A NEW PRODUCT
+createProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName
+	]))
+WS.verifyElementPropertyValue(createProduct, 'name', productName)
 
-//Verify that product was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [('id') : productId]))
-WS.verifyElementPropertyValue(response, '[0].name', productName)
 
-//Update name, to use for after update verification
-productName = (productName + 'UPD')
-WebUI.comment(productName)
+//GET CATALOG ID TO USE IN UPDATE AND DELETE CASES
+productId = WS.getElementPropertyValue(createProduct, 'id')
+//WebUI.comment(productId)
 
-//Update product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
 
-//Verify that product was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [('id') : productId]))
+//VERIFY THE PRODUCT WAS ADDDED 
+verifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyCreated, '[0].name', productName)
 
-WS.verifyElementPropertyValue(response, '[0].name', productName)
 
-// Delete product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesDelete', [('objectIds') : productId]))
+//CREATE THE UPDATED NAME
+newProductName = (productName + 'UPD')
+//WebUI.comment(newProductName)
 
-//Verify that product was deleted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [('keyword') : productName]))
-WS.verifyElementPropertyValue(response, 'totalCount', 0)
+
+//UPDATE THE PRODUCT
+updateProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : newProductName
+	]))
+
+
+//VERIFY THE PRODUCT WAS UPDATED
+verifyUpdated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyUpdated, '[0].name', newProductName)
+
+
+//DELETE PRODUCT
+deleteProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesDelete', [
+	('objectIds') : productId
+	]))
+
+
+//VERIFY THE PRODUCT WAS DELETED
+verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
+	('keyword') : productName
+	]))
+WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
 

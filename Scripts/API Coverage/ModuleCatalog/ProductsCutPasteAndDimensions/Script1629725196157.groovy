@@ -20,30 +20,39 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Products management - cut/paste, dimensions')
 productName = 'QweDrinkProductCutPaste'
 
-// Create new product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [('name') : productName]))
-WS.verifyElementPropertyValue(response, 'name', productName)
 
-//save catalog ID to use in Update and Delete cases
-productId = WS.getElementPropertyValue(response, 'id')
+'CREATE NEW PRODUCT'
+createProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName
+	]))
+WS.verifyElementPropertyValue(createProduct, 'name', productName)
+
+
+'SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES'
+productId = WS.getElementPropertyValue(createProduct, 'id')
 WebUI.comment(productId)
 
-//save categoryName
-categoryName = WS.getElementPropertyValue(response, 'path')
+
+'SAVE CATEGORY NAME'
+categoryName = WS.getElementPropertyValue(createProduct, 'path')
 WebUI.comment(categoryName)
 
-//Verify that product was added 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId]))
-WS.verifyElementPropertyValue(response, '[0].name', productName)
 
-//Save catalog name
-catalogName = WS.getElementPropertyValue(response, '[0].outlines[0].items[0].name')
+'VERIFY THAT PRODUCT WAS ADDED' 
+verifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyCreated, '[0].name', productName)
+
+
+'SAVE CATALOG NAME'
+catalogName = WS.getElementPropertyValue(verifyCreated, '[0].outlines[0].items[0].name')
 WebUI.comment(catalogName)
 
-//Move product to root catalog
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesMove', 
-	[('name') : productName, 
+
+'MOVE PRODUCT TO ROOT CATALOG'
+move = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesMove', [
+	('name') : productName, 
 	('code') : GlobalVariable.sku, 
 	('catalogId') : GlobalVariable.catalogId, 
 	('categoryIdFrom') : GlobalVariable.categoryId, 
@@ -52,28 +61,33 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('categoryNameFrom') : categoryName
 	]))
 
-//Verify that product was moved to root catalog 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId]))
-WS.verifyElementPropertyValue(response, '[0].path', null)
 
-// update dimensions for product
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', 
-	[('name') : productName, 
-	 ('weightUnit') : 'pound', 
-	 ('weight') : 200, 
-	 ('height') : 200, 
-	 ('width') : 200, 
-	 ('length') : 200
+'VERIFY THE PRODUCT WAS MOVED TO CATALOG' 
+verifyMove = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyMove, '[0].path', null)
+
+
+'UPDATE DIMENSIONS FOR PRODUCT'
+dimensionsUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : productName, 
+	('weightUnit') : 'pound', 
+	('weight') : 200, 
+	('height') : 200, 
+	('width') : 200, 
+	('length') : 200
 	]))
 
-//Verify that product was upadted
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-            ('id') : productId]))
-WS.verifyElementPropertyValue(response, '[0].weightUnit', 'pound')
-WS.verifyElementPropertyValue(response, '[0].weight', 200.00)
-WS.verifyElementPropertyValue(response, '[0].height', 200.00)
-WS.verifyElementPropertyValue(response, '[0].width', 200.00)
-WS.verifyElementPropertyValue(response, '[0].length', 200.00)
-WS.verifyElementPropertyValue(response, '[0].name', productName)
+
+'VERIFY THE PRODUCT WAS UPDATED'
+verifyDimensions = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : productId
+	]))
+WS.verifyElementPropertyValue(verifyDimensions, '[0].weightUnit', 'pound')
+WS.verifyElementPropertyValue(verifyDimensions, '[0].weight', 200.00)
+WS.verifyElementPropertyValue(verifyDimensions, '[0].height', 200.00)
+WS.verifyElementPropertyValue(verifyDimensions, '[0].width', 200.00)
+WS.verifyElementPropertyValue(verifyDimensions, '[0].length', 200.00)
+WS.verifyElementPropertyValue(verifyDimensions, '[0].name', productName)
 

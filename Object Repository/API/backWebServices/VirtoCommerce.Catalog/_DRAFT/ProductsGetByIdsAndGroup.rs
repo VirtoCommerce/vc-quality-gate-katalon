@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.CategoriesGetByIdsAndGroup</name>
+   <name>ProductsGetByIdsAndGroup</name>
    <tag></tag>
-   <elementGuidId>76873e2c-5eb4-426d-bda0-f21dc2cbfc7b</elementGuidId>
+   <elementGuidId>32f7f5ca-99ed-4223-8d12-5e9fdcc7df91</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/categories?ids=id&amp;respGroup=group</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/${id}?respGroup=respGroupd</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,6 +37,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fa74fb75-3634-4719-a4cb-366996b51340</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
