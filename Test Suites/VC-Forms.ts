@@ -60,6 +60,24 @@
       <testCaseId>Test Cases/UI-VCFront/Product_Bulk-PlatformOverview</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>61c8af11-16a0-4f7d-a0d3-c72a85bcfefa</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/UI-VCFront/Resources-ForDevelopers-Contributor</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>adb44dbe-0725-4263-a3e5-a38dc4db3606</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/UI-VCFront/Resources_Bulk-Assets</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8d47a0d1-a708-4676-9996-ba6c59eba78e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/UI-VCFront/Resources_Bulk-Assets-Agile</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>e577ee8e-a93f-46ae-98f4-c242348584be</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

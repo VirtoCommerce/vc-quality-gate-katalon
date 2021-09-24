@@ -19,23 +19,24 @@ import org.openqa.selenium.Keys as Keys
 
 
 List<String> urls = [
-	'royal-brass-and-hose', 
-	'bosch', 
-	'lavazza-nederland',
-	'flokk', 
-	'eminent', 
-	'hengdeli',
-	'estatespain',
-	'proffsmagasinet',
-	'deklok',
-	'kupinatao',
-	'standaard-boekhandel',
-	'making-waves'
+	'infographic-composable-ecommerce',
+	'infographic-b2b-marketing-trends-2022',
+	'customer-experience-checklist',
+	'ebook-trends-2021',
+	'customer-experience-infographic',
+	'2020-dc360-composable-ecommerce',
+	'ebook-customer-experience',
+	'2020-d360-report',
+	'ebook-composable-ecommerce',
+	'headless-checklist',
+	'2020-d360-report-customer-experience',
+	'ebook-key-factors',
+	'ebook-roi'
 	]
 
 for (int i; i < urls.size(); i++) {
 	
-    WebUI.navigateToUrl(GlobalVariable.urlFront + '/case-studies/' + urls.get(i))
+    WebUI.navigateToUrl(GlobalVariable.urlFront + '/resources/' + urls.get(i))
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -46,8 +47,6 @@ for (int i; i < urls.size(); i++) {
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
 
     WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
-
-    WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
     WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 		

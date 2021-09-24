@@ -38,7 +38,7 @@ WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input
 
 WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 
-WebUI.click(findTestObject('Object Repository/UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
+WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you_partner_program'), "Thank you for your interest in the Virto Commerce partner program")
 

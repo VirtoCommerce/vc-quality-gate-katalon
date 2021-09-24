@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.navigateToUrl(GlobalVariable.urlFront + '/resources/ebook-trends-2021')
+WebUI.navigateToUrl(GlobalVariable.urlFront + '/contribute-agreement')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -26,16 +26,22 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_na
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Email'), 'test@virtoway.com')
 
-WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
+WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Github'), 'https://github.com/VirtoCommerce/vc-platform')
 
-WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
+WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Address'), 'Lenina 1')
+
+WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Country'), 'Russia')
 
 WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
+WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone'), '01234567890')
+
+WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
+
 WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 
-WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
+WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
-WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/div_Whats_next'), 'What\'s next')
+WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 
-assert WebUI.getUrl() == (GlobalVariable.urlFront + '/asset-download-thank-you')
+assert WebUI.getUrl() == (GlobalVariable.urlFront + '/thank-you')

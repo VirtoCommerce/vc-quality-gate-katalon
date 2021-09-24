@@ -34,7 +34,7 @@ WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/s
 
 WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
-WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
+WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you_trial'), 'Thank you for starting your trial!')
 

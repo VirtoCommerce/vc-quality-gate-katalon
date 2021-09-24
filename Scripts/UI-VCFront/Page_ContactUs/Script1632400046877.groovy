@@ -36,7 +36,7 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comm
 
 WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 
-WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_ContactUsPage_Get_in_touch'))
+WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 

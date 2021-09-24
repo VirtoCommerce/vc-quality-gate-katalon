@@ -42,7 +42,7 @@ for (int i; i < urls.size(); i++) {
 		
 		WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 		
-		WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Homepage_ContactUs'))
+		WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 	} else {
 		println urls.get(i)
 		WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
@@ -51,7 +51,7 @@ for (int i; i < urls.size(); i++) {
 		
 		WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 		
-		WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Book_a_demo'))		
+		WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))		
 	}
 
 	WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')

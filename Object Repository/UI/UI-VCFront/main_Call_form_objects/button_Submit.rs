@@ -3,37 +3,32 @@
    <description></description>
    <name>button_Submit</name>
    <tag></tag>
-   <elementGuidId>328510a0-47e5-4f13-aeea-dc3ad143f948</elementGuidId>
-   <imagePath></imagePath>
+   <elementGuidId>003abc42-c459-4246-a553-25736de3a0ac</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//input[@value='Request a demo']</value>
-      </entry>
-      <entry>
-         <key>IMAGE</key>
-         <value></value>
+         <value>//input[@value='Download case study']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//form[@data-target-url=&quot;/thank-you&quot;']/div[@class=&quot;form-group&quot;]/input</value>
+         <value>//input[@type = 'submit']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>input.btn.btn--block.btn--round</value>
+         <value>input.btn.btn--orange.btn--block</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
@@ -44,41 +39,41 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn btn--block btn--round</value>
+      <value>btn btn--orange btn--block</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>value</name>
       <type>Main</type>
-      <value>Request a demo</value>
+      <value>Download case study</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//form[@data-target-url=&quot;/thank-you&quot;']//div//input</value>
+      <value>id(&quot;asset_download_form&quot;)/input[@class=&quot;btn btn--orange btn--block&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//input[@type='submit']</value>
+      <value>//input[@class=&quot;btn btn--orange btn--block&quot;]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//form[@data-target-url=&quot;/thank-you&quot;']//input</value>
+      <value>//form[@id='asset_download_form']/input</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//form//input</value>
+      <value>//form/input</value>
    </webElementXpaths>
 </WebElementEntity>
