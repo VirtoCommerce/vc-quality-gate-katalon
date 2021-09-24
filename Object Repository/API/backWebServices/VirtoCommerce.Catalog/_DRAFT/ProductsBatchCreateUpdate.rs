@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.ProductsBatchCreateUpdate</name>
+   <name>ProductsBatchCreateUpdate</name>
    <tag></tag>
    <elementGuidId>1b2fffca-607a-4ad2-a3a1-6bb5de8d3a75</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

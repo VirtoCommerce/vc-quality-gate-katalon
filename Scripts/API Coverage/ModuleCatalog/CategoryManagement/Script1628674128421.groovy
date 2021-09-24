@@ -69,7 +69,9 @@ categoryUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vir
 
 
 //Verify that category was upadted
-categoryGet2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetById', [('id') : categoryId]))
+categoryGet2 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesGetById', [
+	('id') : categoryId
+	]))
 WS.verifyElementPropertyValue(categoryGet2, 'catalogId', GlobalVariable.catalogId)
 WS.verifyElementPropertyValue(categoryGet2, 'name', categoryName)
 WS.verifyElementPropertyValue(categoryGet2, 'code', categoryCode)

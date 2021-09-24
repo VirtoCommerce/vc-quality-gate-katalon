@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Add, update, delete new catalog</description>
+   <description>1.Create new catalog
+2.Get p.1 catalog ID > Update p.1 catalog
+3. Delete the catalog</description>
    <name>CommonCatalogsManagement</name>
    <tag></tag>
    <comment>TEST CASE: Common Catalogs management - add, update, delete
