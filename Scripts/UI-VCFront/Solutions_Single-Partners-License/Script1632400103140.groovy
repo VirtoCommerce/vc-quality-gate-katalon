@@ -45,7 +45,7 @@ WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/s
 
 WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 
-WebUI.click(findTestObject('Object Repository/UI/UI-VCFront/main_Call_form_objects/button_Download_case_study'))
+WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 
