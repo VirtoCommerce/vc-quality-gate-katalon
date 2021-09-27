@@ -34,7 +34,7 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone')
 
 WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
-WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_RequestDemo'))
+WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 

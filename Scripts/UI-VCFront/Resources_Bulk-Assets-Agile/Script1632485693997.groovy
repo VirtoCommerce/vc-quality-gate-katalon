@@ -19,23 +19,13 @@ import org.openqa.selenium.Keys as Keys
 
 
 List<String> urls = [
-	'royal-brass-and-hose', 
-	'bosch', 
-	'lavazza-nederland',
-	'flokk', 
-	'eminent', 
-	'hengdeli',
-	'estatespain',
-	'proffsmagasinet',
-	'deklok',
-	'kupinatao',
-	'standaard-boekhandel',
-	'making-waves'
+	'agile-download-checklist',
+	'agile-contact-us'
 	]
 
 for (int i; i < urls.size(); i++) {
 	
-    WebUI.navigateToUrl(GlobalVariable.urlFront + '/case-studies/' + urls.get(i))
+    WebUI.navigateToUrl(GlobalVariable.urlFront + '/' + urls.get(i))
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -46,14 +36,23 @@ for (int i; i < urls.size(); i++) {
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
 
     WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
-
-    WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
+	
+	WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')
 
     WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 		
     WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
-    WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/div_Whats_next'), 'What\'s next')
-
-    assert WebUI.getUrl() == (GlobalVariable.urlFront + '/asset-download-thank-you')
+	if (urls.get(i) == urls[0]) {
+		println urls.get(i)
+		
+		WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
+		
+		assert WebUI.getUrl() == (GlobalVariable.urlFront + '/agile-download-thank-you')
+	} else {
+		WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you_for_your_interest'), 'Thank you for your interest')
+		
+		assert WebUI.getUrl() == (GlobalVariable.urlFront + '/agile-inq-thank-you')		
+	}
+	    
 }
