@@ -68,5 +68,5 @@ deleteProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
 	('keyword') : productName
 	]))
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0) 
 
