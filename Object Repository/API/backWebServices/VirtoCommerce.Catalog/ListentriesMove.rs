@@ -49,28 +49,28 @@
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.sku</defaultValue>
+      <defaultValue>'sku'</defaultValue>
       <description>Sku</description>
       <id>672f198e-7765-46ad-a646-cccaa2f57fa4</id>
       <masked>false</masked>
       <name>code</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.catalogId</defaultValue>
+      <defaultValue>'catalogId'</defaultValue>
       <description></description>
       <id>628db77e-1fc4-4cef-84b0-f2bcfa2d020b</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.categoryId</defaultValue>
+      <defaultValue>'categoryId'</defaultValue>
       <description></description>
       <id>12df0c44-f775-4ebd-a539-c9fded801c49</id>
       <masked>false</masked>
       <name>categoryIdFrom</name>
    </variables>
    <variables>
-      <defaultValue>GlobalVariable.productId</defaultValue>
+      <defaultValue>'productId'</defaultValue>
       <description>product ID</description>
       <id>ec461e2c-1f79-4356-85ee-88794d7146bf</id>
       <masked>false</masked>

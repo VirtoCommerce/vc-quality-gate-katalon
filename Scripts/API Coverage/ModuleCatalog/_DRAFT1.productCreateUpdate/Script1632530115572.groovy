@@ -21,16 +21,39 @@ import org.openqa.selenium.Keys as Keys
 WebUI.comment('TEST CASE: Products management - add, update, delete')
 
 'CREATE A NEW PRODUCT'
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', 
+createUpdateProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', 
 	[
 	('name') : GlobalVariable.productName,
 	('code') : GlobalVariable.sku,
 	('catalogId') : GlobalVariable.catalogId,
 	('categoryId') : GlobalVariable.categoryId,
-	('id') : GlobalVariable.productId
+	('id') : GlobalVariable.productId,
+	('content') : GlobalVariable.content,
+	('weightUnit') : GlobalVariable.weightUnit,
+	('weight') : GlobalVariable.weight,
+	('height') : GlobalVariable.height,
+	('width') : GlobalVariable.width,
+	('length') : GlobalVariable.length
 	]))
-WS.verifyElementPropertyValue(response, 'name', GlobalVariable.productName)
+WS.verifyElementPropertyValue(createUpdateProduct, 'name', GlobalVariable.productName)
+WS.verifyElementPropertyValue(createUpdateProduct, 'reviews[0].content', GlobalVariable.content)
+WS.verifyElementPropertyValue(createUpdateProduct, 'weightUnit', GlobalVariable.weightUnit)
+WS.verifyElementPropertyValue(createUpdateProduct, 'weight', GlobalVariable.weight)
+WS.verifyElementPropertyValue(createUpdateProduct, 'height', GlobalVariable.height)
+WS.verifyElementPropertyValue(createUpdateProduct, 'width', GlobalVariable.width)
+WS.verifyElementPropertyValue(createUpdateProduct, 'length', GlobalVariable.length)
+
 
 'SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES'
-GlobalVariable.productId = WS.getElementPropertyValue(response, 'id')
+GlobalVariable.productId = WS.getElementPropertyValue(createUpdateProduct, 'id')
 WebUI.comment(GlobalVariable.productId)
+
+
+'SAVE CATEGORY NAME'
+GlobalVariable.categoryName = WS.getElementPropertyValue(createUpdateProduct, 'path')
+WebUI.comment(GlobalVariable.categoryName)
+
+
+'RETURN DATA'
+return createUpdateProduct
+

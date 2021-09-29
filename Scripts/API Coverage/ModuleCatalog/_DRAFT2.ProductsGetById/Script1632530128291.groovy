@@ -29,14 +29,28 @@ WebUI.comment('TEST CASE: GET PRODUCT BY ID')
 //FailureHandling.STOP_ON_FAILURE)
 
 
-'VERIFY THE PRODUCT WAS ADDDED'
+'GET PRODUCT BY ID AND GROUP'
 //productName = GlobalVariable.productName
-productId = GlobalVariable.productId
 verifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
-	('id') : productId
+	('id') : GlobalVariable.productId
 	]))
-WS.verifyElementPropertyValue(verifyCreated, '[0].id', productId)
+WS.verifyElementPropertyValue(verifyCreated, '[0].id', GlobalVariable.productId)
+WS.verifyElementPropertyValue(verifyCreated, '[0].name', GlobalVariable.productName)
+WS.verifyElementPropertyValue(verifyCreated, '[0].reviews[0].content', GlobalVariable.content)
+WS.verifyElementPropertyValue(verifyCreated, '[0].weightUnit', GlobalVariable.weightUnit)
+WS.verifyElementPropertyValue(verifyCreated, '[0].weight', GlobalVariable.weight)
+WS.verifyElementPropertyValue(verifyCreated, '[0].height', GlobalVariable.height)
+WS.verifyElementPropertyValue(verifyCreated, '[0].width', GlobalVariable.width)
+WS.verifyElementPropertyValue(verifyCreated, '[0].length', GlobalVariable.length)
 
+
+'GET CATALOG NAME'
+GlobalVariable.catalogName = WS.getElementPropertyValue(verifyCreated, '[0].outlines[0].items[0].name')
+WebUI.comment(GlobalVariable.catalogName)
+
+
+'RETURN DATA'
+return verifyCreated
 
 
 

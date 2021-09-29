@@ -12,20 +12,22 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+WebUI.comment('TEST CASE: Products management - assets get list')
 
-WebUI.comment('TEST CASE: Products management - Listentries Search')
+
+'FIND URL OF ASSETS'
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+	('folderName') : '',
+	('keyword') : GlobalVariable.folderName
+	]))
+WS.containsString(folderList, GlobalVariable.folderName, false)
 
 
-'SEARCH FOR THE PRODUCT'
-//Have deleted the "catalogId" request header from the request below as it was returning totalCount = 1,
-//so crashing the case
-verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
-	('keyword') : GlobalVariable.keyword
-	]))	
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+'GET FOLDER URLs'
+GlobalVariable.localUrl = (WS.getElementPropertyValue(folderList, 'results[0].parentUrl'))
+GlobalVariable.folderUrl = (GlobalVariable.localUrl + GlobalVariable.folderName) // Special url for test in docker

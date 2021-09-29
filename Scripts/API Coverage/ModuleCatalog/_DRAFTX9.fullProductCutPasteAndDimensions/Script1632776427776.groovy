@@ -12,50 +12,48 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: categories management - add, update, delete')
+
+WebUI.comment('TEST CASE: Products management - Cut/Paste/Add dimensions')
 
 
-'GET CATEGORY TEMPLATE AND EXTRACT CATEGORY CODE'
-
-getCategoryCode = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX1.categoryGetTemplate'),
-	null,
+'CREATE A NEW PRODUCT'
+GlobalVariable.productName = 'QweDrinkProductCutPaste'
+createProduct = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT1.productCreateUpdate'),null,
 FailureHandling.STOP_ON_FAILURE)
 
 
-'CREATE NEW CATEGORY'
-GlobalVariable.categoryName = 'QWECategory'
-categoryCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX2.categoryCreate'),
-	null,
-FailureHandling.STOP_ON_FAILURE)
-WebUI.comment(GlobalVariable.categoryId)
-
-
-'UPDATE CATEGORY'
-GlobalVariable.categoryName = (GlobalVariable.categoryName + 'UPD')
-updateCategory = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX3.categoryUpdate'),
-	null,
+'VERIFY THE PRODUCT WAS ADDDED'
+getProductById = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT2.ProductsGetById'),null,
 FailureHandling.STOP_ON_FAILURE)
 
 
-'GET THE CREATED CATEGORY'
-categoryGet = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX4.categoryGetById'),
-	null,
+'MOVE PRODUCT TO ROOT CATALOG'
+moveProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTXX0.moveProductsToTheCatalog'),null,
 FailureHandling.STOP_ON_FAILURE)
 
 
-'DELETE CATEGORY'
-categoryDelete = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFTX5.categoryDelete'),
-	null,
+'VERIFY PRODUCT WAS MOVED TO THE ROOT CATALOG'
+getProductById = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT2.ProductsGetById'),null,
+FailureHandling.STOP_ON_FAILURE)
+WS.verifyElementPropertyValue(getProductById, '[0].path', null)
+
+'UPDATE PRODUCT DIMENSIONS'
+GlobalVariable.weightUnit = 'pound'
+GlobalVariable.weight = '200.00'
+GlobalVariable.height = '200.00'
+GlobalVariable.width = '200.00'
+GlobalVariable.length = '200.00'
+updateDimensions = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT1.productCreateUpdate'),null,
 FailureHandling.STOP_ON_FAILURE)
 
 
-'VERIFY DELETED'
-GlobalVariable.keyword = GlobalVariable.categoryName
-verifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT4.ProductsListentriesSearch'),
-	null,
+'VERIFY THE PRODUCT WAS UPDATED'
+getProductById = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT2.ProductsGetById'),null,
 FailureHandling.STOP_ON_FAILURE)
+

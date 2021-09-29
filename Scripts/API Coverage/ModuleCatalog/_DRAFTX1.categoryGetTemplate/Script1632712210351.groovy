@@ -19,7 +19,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-WebUI.comment('TEST CASE: categories management - get ncategory template')
+WebUI.comment('TEST CASE: categories management - get category template')
 
 
 'GET CATEGORY TEMPLATE'

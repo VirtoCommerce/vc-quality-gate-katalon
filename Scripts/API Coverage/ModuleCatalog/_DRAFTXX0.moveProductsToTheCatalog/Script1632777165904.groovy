@@ -19,13 +19,15 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-WebUI.comment('TEST CASE: Products management - Listentries Search')
+WebUI.comment('TEST CASE: Products management - Cut/Paste/Add dimensions')
 
-
-'SEARCH FOR THE PRODUCT'
-//Have deleted the "catalogId" request header from the request below as it was returning totalCount = 1,
-//so crashing the case
-verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
-	('keyword') : GlobalVariable.keyword
-	]))	
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+'MOVE PRODUCT TO ROOT CATALOG'
+move = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesMove', [
+	('name') : GlobalVariable.productName,
+	('code') : GlobalVariable.sku,
+	('catalogId') : GlobalVariable.catalogId,
+	('categoryIdFrom') : GlobalVariable.categoryId,
+	('productId') : GlobalVariable.productId,
+	('catalogName') : GlobalVariable.catalogName,
+	('categoryNameFrom') : GlobalVariable.categoryName
+	]))

@@ -19,13 +19,25 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-WebUI.comment('TEST CASE: Products management - Listentries Search')
+WebUI.comment('TEST CASE: Products management - generate product clone')
 
 
-'SEARCH FOR THE PRODUCT'
-//Have deleted the "catalogId" request header from the request below as it was returning totalCount = 1,
-//so crashing the case
-verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
-	('keyword') : GlobalVariable.keyword
-	]))	
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+'CLONE PRODUCT'
+generateClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetCloneByProductId', [
+	('productId') : GlobalVariable.productId
+	]))
+
+
+'VERIFY THE CLONE PRODUCT HAS BEEN RETURNED'
+WS.verifyElementPropertyValue(generateClone, 'reviews[0].content', GlobalVariable.content)
+WS.verifyElementPropertyValue(generateClone, 'name', GlobalVariable.productName)
+
+
+'SAVE BODY OF CLONE'
+clonedProductBody = generateClone.getResponseBodyContent()
+GlobalVariable.clonedProductBody = clonedProductBody
+
+'RETURN CLONE BODY'
+return clonedProductBody
+
+

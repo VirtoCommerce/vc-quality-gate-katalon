@@ -49,28 +49,28 @@
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>'sku'</defaultValue>
+      <defaultValue>'QWESKU03'</defaultValue>
       <description>Sku</description>
       <id>d3485287-a967-453e-b745-1910700a4d10</id>
       <masked>false</masked>
       <name>code</name>
    </variables>
    <variables>
-      <defaultValue>'catalogId'</defaultValue>
+      <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
       <description></description>
       <id>c82e8ed8-08f4-4fcb-9cf2-9a5eaee5fd74</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
-      <defaultValue>'categoryId'</defaultValue>
+      <defaultValue>'0d4ad9bab9184d69a6e586effdf9c2ea'</defaultValue>
       <description></description>
       <id>32e1c1a4-dd55-48ce-910b-d4b8593b2204</id>
       <masked>false</masked>
       <name>categoryId</name>
    </variables>
    <variables>
-      <defaultValue>'productId'</defaultValue>
+      <defaultValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</defaultValue>
       <description>product ID</description>
       <id>5be61088-737c-495a-8a9d-02c5d4dcb767</id>
       <masked>false</masked>
@@ -78,7 +78,7 @@
    </variables>
    <variables>
       <defaultValue>'description'</defaultValue>
-      <description>Quick Review content</description>
+      <description>product Description content</description>
       <id>71331444-febe-498f-a2d9-dd1d2bc8cec7</id>
       <masked>false</masked>
       <name>content</name>

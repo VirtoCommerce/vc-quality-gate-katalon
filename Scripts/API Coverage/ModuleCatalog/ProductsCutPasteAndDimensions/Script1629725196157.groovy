@@ -73,7 +73,7 @@ WS.verifyElementPropertyValue(verifyMove, '[0].path', null)
 dimensionsUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
 	('name') : productName, 
 	('weightUnit') : 'pound', 
-	('weight') : 200, 
+	('weight') : 200, 	
 	('height') : 200, 
 	('width') : 200, 
 	('length') : 200

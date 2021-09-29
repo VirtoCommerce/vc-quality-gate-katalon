@@ -19,11 +19,11 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-WebUI.comment('TEST CASE: Products management - add, update, delete')
+WebUI.comment('TEST CASE: Products management - Create, add descriptions and clone')
 
 
 'CREATE A NEW PRODUCT'
-GlobalVariable.productName = 'QweDrink'
+GlobalVariable.productName = 'QweDrinkProduct'
 createProduct = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT1.productCreateUpdate'),null,
 FailureHandling.STOP_ON_FAILURE)
 
@@ -33,13 +33,36 @@ getProductById = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT
 FailureHandling.STOP_ON_FAILURE)
 
 
-'DELETE THE CREATED PRODUCT'
-deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT3.ProductsDelete'),null,
+'UPDATE PRODUCT'
+GlobalVariable.productName = (GlobalVariable.productName +'UPD')
+GlobalVariable.content = (GlobalVariable.content + 'UPD')
+updateProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT1.productCreateUpdate'),null,
 FailureHandling.STOP_ON_FAILURE)
 
 
-'VERIFY THE PRODUCT WAS DELETED'
-GlobalVariable.keyword = GlobalVariable.productName
-verifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT4.ProductsListentriesSearch'),null,
-FailureHandling.STOP_ON_FAILURE)	
+'VERIFY THE ITEM WAS UPDATED'
+getProductById = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT2.ProductsGetById'),null,
+FailureHandling.STOP_ON_FAILURE)
 
+
+'CLONE PRODUCT'
+clonedProductBody = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX7.productsGetCloneBody'),null,
+FailureHandling.STOP_ON_FAILURE)
+println GlobalVariable.clonedProductBody
+
+
+'CREATE CLONE PRODUCT'
+createClone = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX8.productCreateUpdateWithBody'),null,
+FailureHandling.STOP_ON_FAILURE)
+
+
+'VERIFY THAT PRODUCT WAS UPDATED'
+verifyClone = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup', [
+	('id') : GlobalVariable.productId
+	]))
+WS.verifyElementPropertyValue(verifyClone, '[0].reviews[0].content', GlobalVariable.content)
+
+
+'DELETE PRODUCT'
+deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT3.ProductsDelete'),null,
+FailureHandling.STOP_ON_FAILURE)

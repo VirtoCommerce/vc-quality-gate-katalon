@@ -12,20 +12,26 @@ import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.webui.keyword.internal.WebUIAbstractKeyword
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+WebUI.comment('TEST CASE: AssetCreateBlobFolder')
 
-WebUI.comment('TEST CASE: Products management - Listentries Search')
+
+'CREATE NEW FOLDER'
+folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
+	('folderName') : GlobalVariable.folderName,
+	('parentUrl') : ''
+	]))
 
 
-'SEARCH FOR THE PRODUCT'
-//Have deleted the "catalogId" request header from the request below as it was returning totalCount = 1,
-//so crashing the case
-verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
-	('keyword') : GlobalVariable.keyword
-	]))	
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+'VERIFY THE FOLDER HAS BEEN CREATED' //Should I remove this for the sake of having 
+//this test case atomic??
+verifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+	('folderName') : '',
+	('keyword') : GlobalVariable.folderName
+	]))
+WS.containsString(verifyCreated, GlobalVariable.folderName, false)
+
