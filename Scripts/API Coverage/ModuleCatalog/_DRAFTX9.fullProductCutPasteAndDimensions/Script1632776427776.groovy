@@ -23,7 +23,7 @@ WebUI.comment('TEST CASE: Products management - Cut/Paste/Add dimensions')
 
 
 'CREATE A NEW PRODUCT'
-GlobalVariable.productName = 'QweDrinkProductCutPaste'
+//GlobalVariable.productName = 'QweDrinkProductCutPaste'
 createProduct = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT1.productCreateUpdate'),null,
 FailureHandling.STOP_ON_FAILURE)
 

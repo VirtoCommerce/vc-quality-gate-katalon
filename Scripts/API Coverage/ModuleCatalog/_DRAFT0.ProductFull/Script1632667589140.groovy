@@ -23,7 +23,7 @@ WebUI.comment('TEST CASE: Products management - add, update, delete')
 
 
 'CREATE A NEW PRODUCT'
-GlobalVariable.productName = 'QweDrink'
+//GlobalVariable.productName = 'QweDrink'
 createProduct = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT1.productCreateUpdate'),null,
 FailureHandling.STOP_ON_FAILURE)
 

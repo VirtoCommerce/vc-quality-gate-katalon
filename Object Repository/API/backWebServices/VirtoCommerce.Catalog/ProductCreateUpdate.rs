@@ -70,8 +70,8 @@
       <name>categoryId</name>
    </variables>
    <variables>
-      <defaultValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</defaultValue>
-      <description>product ID</description>
+      <defaultValue>''</defaultValue>
+      <description>LEAVE EMPTY! product ID pass as a global variable</description>
       <id>5be61088-737c-495a-8a9d-02c5d4dcb767</id>
       <masked>false</masked>
       <name>id</name>
