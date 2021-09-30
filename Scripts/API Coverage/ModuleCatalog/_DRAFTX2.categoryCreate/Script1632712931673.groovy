@@ -23,7 +23,7 @@ WebUI.comment('TEST CASE: categories management - create a new category')
 
 
 'CREATE NEW CATEGORY'
-//GlobalVariable.categoryName = 'qweCategory'
+GlobalVariable.categoryName = 'QWECategory'
 categoryCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesCreate', [
 	('catalogId') : GlobalVariable.catalogId,
 	('code') : GlobalVariable.categoryCode,

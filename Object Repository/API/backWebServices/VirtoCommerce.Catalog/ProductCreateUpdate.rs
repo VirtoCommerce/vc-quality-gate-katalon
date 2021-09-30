@@ -71,7 +71,7 @@
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description>LEAVE EMPTY! product ID pass as a global variable</description>
+      <description>product ID (use to update only)</description>
       <id>5be61088-737c-495a-8a9d-02c5d4dcb767</id>
       <masked>false</masked>
       <name>id</name>

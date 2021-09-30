@@ -59,7 +59,7 @@ WebUI.comment('TEST CASE: Products management - upload image')
 
 
 'CHECK DESCRIPTION TYPE MANAGEMENT' //I duplicate it here just to have this all as a copy of Volha's test
-checkDescription = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTXX2.fullSettingsDescriptionTypeAddRemove'),
+checkDescription = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/fullTests/fullSettingsDescriptionTypeAddRemove'),
 	null,
 	FailureHandling.STOP_ON_FAILURE
 	)

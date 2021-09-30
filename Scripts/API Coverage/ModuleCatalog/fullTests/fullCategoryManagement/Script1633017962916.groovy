@@ -28,7 +28,6 @@ FailureHandling.STOP_ON_FAILURE)
 
 
 'CREATE NEW CATEGORY'
-GlobalVariable.categoryName = 'QWECategory'
 categoryCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX2.categoryCreate'),
 	null,
 FailureHandling.STOP_ON_FAILURE)
@@ -36,7 +35,6 @@ WebUI.comment(GlobalVariable.categoryId)
 
 
 'UPDATE CATEGORY'
-GlobalVariable.categoryName = (GlobalVariable.categoryName + 'UPD')
 updateCategory = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX3.categoryUpdate'),
 	null,
 FailureHandling.STOP_ON_FAILURE)

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>_DRAFT0.ProductFull</name>
+   <name>fullProductCutPasteAndDimensions</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>49f0f3e2-c75b-4bda-bc19-7446a9861605</testCaseGuid>
+   <testCaseGuid>ca93fd2b-c131-4c64-a811-c7fc3f162477</testCaseGuid>
 </TestCaseEntity>

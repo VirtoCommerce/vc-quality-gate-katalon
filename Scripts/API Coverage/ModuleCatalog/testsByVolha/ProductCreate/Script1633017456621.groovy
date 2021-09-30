@@ -9,37 +9,25 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import org.openqa.selenium.Keys as Keys
 
 
-WebUI.comment('TEST CASE: Common Catalogs management - add, update, delete')
+WebUI.comment('TEST CASE: Products management - add, update, delete')
 
+// CREATE A NEW PRODUCT
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', [
+	('name') : GlobalVariable.productName,
+	('categoryId') : GlobalVariable.categoryId,
+	('catalogId') : GlobalVariable.catalogId
+	]))
+WS.verifyElementPropertyValue(response, 'name', GlobalVariable.productName)
 
-'CREATE NEW CATALOG'
-GlobalVariable.catalogName = 'AutoTestCatalog'
-catalogCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT6.catalogCreate'),null,
-FailureHandling.STOP_ON_FAILURE)
-
-
-'SEARCH FOR CATALOG'
-searchCatalog = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT7.catalogSearch'),null,
-FailureHandling.STOP_ON_FAILURE)
-
-
-'UDATE THE CATALOG'
-updateCatalog = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT8.catalogUpdate'),null,
-FailureHandling.STOP_ON_FAILURE)
-
-
-'DELETE THE CATALOG'
-catalogDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT9.catalogDelete'),null,
-FailureHandling.STOP_ON_FAILURE)
-
-
-
+//SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES
+GlobalVariable.productId = WS.getElementPropertyValue(response, 'id')
+WebUI.comment(GlobalVariable.productId)

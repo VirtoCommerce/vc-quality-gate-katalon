@@ -23,6 +23,7 @@ WebUI.comment('TEST CASE: categories management - update a category')
 
 
 'UPDATE CATEGORY'
+GlobalVariable.categoryName = (GlobalVariable.categoryName + 'UPD')
 categoryUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesUpdate', [
 	('catalogId') : GlobalVariable.catalogId,
 	('code') : GlobalVariable.categoryCode,

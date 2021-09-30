@@ -21,6 +21,7 @@ WebUI.comment('TEST CASE: Common Catalogs management - create catalog')
 
 
 'CREATE NEW CATALOG'
+GlobalVariable.catalogName = 'AutoTestCatalog'
 catalogCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsCreate', [
 	('name') : GlobalVariable.catalogName
 	]))
