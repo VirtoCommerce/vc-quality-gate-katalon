@@ -25,3 +25,8 @@ catalogCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 	('name') : GlobalVariable.catalogName
 	]))
 WS.verifyElementPropertyValue(catalogCreate, 'name', GlobalVariable.catalogName)
+
+
+'GET CATALOG ID'
+GlobalVariable.catalogId = WS.getElementPropertyValue(catalogCreate, 'id')
+WebUI.comment(GlobalVariable.catalogId)

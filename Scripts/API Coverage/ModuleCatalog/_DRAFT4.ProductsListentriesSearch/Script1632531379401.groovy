@@ -26,6 +26,6 @@ WebUI.comment('TEST CASE: Products management - Listentries Search')
 //Have deleted the "catalogId" request header from the request below as it was returning totalCount = 1,
 //so crashing the case
 verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
-	('keyword') : GlobalVariable.keyword
+	('keyword') : GlobalVariable.productName
 	]))	
 WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)

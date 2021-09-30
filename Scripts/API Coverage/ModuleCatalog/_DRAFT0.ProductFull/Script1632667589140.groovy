@@ -39,7 +39,6 @@ FailureHandling.STOP_ON_FAILURE)
 
 
 'VERIFY THE PRODUCT WAS DELETED'
-GlobalVariable.keyword = GlobalVariable.productName
 verifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT4.ProductsListentriesSearch'),null,
 FailureHandling.STOP_ON_FAILURE)	
 

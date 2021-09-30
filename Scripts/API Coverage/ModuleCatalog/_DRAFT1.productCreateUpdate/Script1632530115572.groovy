@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.comment('TEST CASE: Products management - add, update, delete')
+WebUI.comment('TEST CASE: Products management - add product')
 
 'CREATE A NEW PRODUCT'
 createUpdateProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductCreateUpdate', 

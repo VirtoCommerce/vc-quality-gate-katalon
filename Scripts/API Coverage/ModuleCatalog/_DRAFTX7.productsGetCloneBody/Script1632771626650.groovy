@@ -37,6 +37,7 @@ WS.verifyElementPropertyValue(generateClone, 'name', GlobalVariable.productName)
 clonedProductBody = generateClone.getResponseBodyContent()
 GlobalVariable.clonedProductBody = clonedProductBody
 
+
 'RETURN CLONE BODY'
 return clonedProductBody
 

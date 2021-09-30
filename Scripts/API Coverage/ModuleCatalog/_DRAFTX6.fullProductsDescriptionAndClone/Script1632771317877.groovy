@@ -20,7 +20,8 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
 WebUI.comment('TEST CASE: Products management - Create, add descriptions and clone')
-
+//GlobalVariable.catalogId = '482d2019-c85a-4fab-b4e0-98d8a268e757' //delete this before push
+//GlobalVariable.categoryId = 'f0199595-0e56-4e9d-a3ae-b7d54d473a69'
 
 'CREATE A NEW PRODUCT'
 GlobalVariable.productName = 'QweDrinkProduct'
@@ -45,10 +46,16 @@ getProductById = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT
 FailureHandling.STOP_ON_FAILURE)
 
 
-'CLONE PRODUCT'
+'GET CLONE PRODUCT BODY'
 clonedProductBody = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX7.productsGetCloneBody'),null,
 FailureHandling.STOP_ON_FAILURE)
 println GlobalVariable.clonedProductBody
+
+
+'DELETE THE UPDATED PRODUCT'
+deletedUpdated = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT3.ProductsDelete'),
+	null,
+	FailureHandling.STOP_ON_FAILURE)
 
 
 'CREATE CLONE PRODUCT'

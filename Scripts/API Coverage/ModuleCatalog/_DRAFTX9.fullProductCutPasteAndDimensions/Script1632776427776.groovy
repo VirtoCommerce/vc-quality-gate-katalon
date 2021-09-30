@@ -57,3 +57,9 @@ FailureHandling.STOP_ON_FAILURE)
 getProductById = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFT2.ProductsGetById'),null,
 FailureHandling.STOP_ON_FAILURE)
 
+
+'DELETE PRODUCT'
+productDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT3.ProductsDelete'),
+	null,
+	FailureHandling.STOP_ON_FAILURE)
+

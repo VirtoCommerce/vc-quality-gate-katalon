@@ -37,9 +37,9 @@ updateCatalog = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 FailureHandling.STOP_ON_FAILURE)
 
 
-//'DELETE THE CATALOG'
-//catalogDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT9.catalogDelete'),null,
-//FailureHandling.STOP_ON_FAILURE)
+'DELETE THE CATALOG'
+catalogDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFT9.catalogDelete'),null,
+FailureHandling.STOP_ON_FAILURE)
 
 
 
