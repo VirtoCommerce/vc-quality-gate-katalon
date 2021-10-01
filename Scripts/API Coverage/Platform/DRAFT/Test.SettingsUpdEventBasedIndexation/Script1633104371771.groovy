@@ -17,10 +17,25 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Get information about only one setting')
+WebUI.comment('TEST CASE: Update setting')
+
+settingName = 'Catalog.Search.EventBasedIndexation.Enable'
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
-	('name') : 'Catalog.Search.EventBasedIndexation.Enable'
+	('name') : settingName
 	]))
-//WS.verifyElementPropertyValue(response, 'name', "Catalog.Search.EventBasedIndexation.Enable")
-//WS.verifyElementPropertyValue(response, 'value', 'True')
+
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsUpdateBoolean', [
+	('name') : settingName, 
+	('value') : true, 
+	('groupName') : 'Catalog|General', 
+	('moduleId') : 'VirtoCommerce.Catalog'
+	]))
+
+
+//verify that updates appllies
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
+	('name') : settingName
+	]))
+WS.verifyElementPropertyValue(response, 'moduleId', 'VirtoCommerce.Catalog')
+WS.verifyElementPropertyValue(response, 'name', settingName)

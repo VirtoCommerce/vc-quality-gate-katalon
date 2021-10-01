@@ -24,9 +24,9 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3afa6b9d-2e93-4296-a6b8-19add6afb170</guid>
+      <guid>b6134554-fd1b-4eaf-a04d-4af24184740e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DRAFT/Test.SettingsGetByName</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/DRAFT/Test.SettingsUpdEventBasedIndexation</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
