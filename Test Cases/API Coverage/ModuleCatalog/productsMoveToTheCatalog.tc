@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>move product from category to catalog</description>
+   <name>productsMoveToTheCatalog</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a9fe3c01-d948-4753-ad1d-5d3d31c70264</testCaseGuid>
+</TestCaseEntity>

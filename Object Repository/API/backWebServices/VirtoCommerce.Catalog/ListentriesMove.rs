@@ -57,14 +57,14 @@
    </variables>
    <variables>
       <defaultValue>'catalogId'</defaultValue>
-      <description></description>
+      <description>move TO this catId</description>
       <id>628db77e-1fc4-4cef-84b0-f2bcfa2d020b</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
       <defaultValue>'categoryId'</defaultValue>
-      <description></description>
+      <description>move FROM this category</description>
       <id>12df0c44-f775-4ebd-a539-c9fded801c49</id>
       <masked>false</masked>
       <name>categoryIdFrom</name>
@@ -78,14 +78,14 @@
    </variables>
    <variables>
       <defaultValue>'Electronics'</defaultValue>
-      <description></description>
+      <description>move TO this catName</description>
       <id>005c83f7-0e10-41c4-a4ec-04d05c1ffece</id>
       <masked>false</masked>
       <name>catalogName</name>
    </variables>
    <variables>
       <defaultValue>'Cell phones'</defaultValue>
-      <description></description>
+      <description>move FROM this category</description>
       <id>25cbd2e5-b24f-4905-a5a2-d953821a270f</id>
       <masked>false</masked>
       <name>categoryNameFrom</name>

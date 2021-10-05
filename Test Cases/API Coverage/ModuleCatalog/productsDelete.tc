@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete product by product id</description>
+   <name>productsDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f0744137-8ddd-4584-8643-11b823cacabb</testCaseGuid>
+</TestCaseEntity>

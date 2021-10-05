@@ -48,7 +48,14 @@ def tearDown() {
  * Run before each test case starts.
  */
 @SetupTestCase(skipped = true) // Please change skipped to be false to activate this method.
+
 def setupTestCase() {
+//CHECK DECLARATION AT STEP #10 OF THE CURRENT TEST SUITE
+//	if( GlobalVariable.TEMP == true){ 
+//		GlobalVariable.productName = (GlobalVariable.productName +'UPD')
+//		GlobalVariable.content = (GlobalVariable.content + 'UPD')
+//		}
+		
 	// Put your code here.
 }
 
@@ -57,6 +64,9 @@ def setupTestCase() {
  */
 @TearDownTestCase(skipped = true) // Please change skipped to be false to activate this method.
 def tearDownTestCase() {
+	
+//	GlobalVariable.keyword = GlobalVariable.productName
+	
 	// Put your code here.
 }
 
