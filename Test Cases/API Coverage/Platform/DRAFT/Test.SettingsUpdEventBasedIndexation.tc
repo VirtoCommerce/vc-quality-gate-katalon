@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Update setting information of boolean type</description>
+   <name>Test.SettingsUpdEventBasedIndexation</name>
+   <tag></tag>
+   <comment>TEST CASE: Update setting</comment>
+   <testCaseGuid>a633b958-a76d-4c25-9b75-9e89296c7291</testCaseGuid>
+</TestCaseEntity>
