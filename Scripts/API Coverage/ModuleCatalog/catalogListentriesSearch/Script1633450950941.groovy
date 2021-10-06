@@ -42,11 +42,10 @@ println GlobalVariable.keyword
 	]))	
 //name = WS.getElementPropertyValue(verifyDeleted,'listEntries[0].name')
 //println name
-
-boolean verification = WS.containsString(verifyDeleted, GlobalVariable.keyword, false, FailureHandling.OPTIONAL)
-println verification
-assert verification == false
-//WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+//boolean verification = WS.containsString(verifyDeleted, GlobalVariable.keyword, false, FailureHandling.OPTIONAL)
+//println verification
+//assert verification == false
+WS.verifyElementPropertyValue(verifyDeleted, 'listEntries', '[]')
 
 
 'VERIFY VARS'
