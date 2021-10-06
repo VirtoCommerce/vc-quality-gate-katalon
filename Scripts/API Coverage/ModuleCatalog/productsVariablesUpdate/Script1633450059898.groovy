@@ -24,7 +24,10 @@ GlobalVariable.content = (GlobalVariable.content + 'UPD')
 
 
 'SET THE KEYWORD'
+
+println GlobalVariable.keyword
 GlobalVariable.keyword = GlobalVariable.productName
+println GlobalVariable.keyword
 
 
 'UPDATE PRODUCT DIMENSIONS VARIABLES'
