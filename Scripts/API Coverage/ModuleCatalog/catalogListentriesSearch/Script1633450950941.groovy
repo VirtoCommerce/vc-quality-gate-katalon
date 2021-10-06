@@ -22,6 +22,13 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Products management - Listentries Search')
 
 
+
+
+'VERIFY VARS'
+println GlobalVariable.keyword
+println GlobalVariable.productName
+println GlobalVariable.productId
+
 'SEARCH FOR THE PRODUCT'
 //Have deleted the "catalogId" request header from the request below as it was returning totalCount = 1,
 //so crashing the case
@@ -35,7 +42,15 @@ println GlobalVariable.keyword
 	]))	
 //name = WS.getElementPropertyValue(verifyDeleted,'listEntries[0].name')
 //println name
-//boolean verification = WS.containsString(verifyDeleted, GlobalVariable.keyword, false, FailureHandling.OPTIONAL)
-//println verification
-//assert verification == false
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+
+boolean verification = WS.containsString(verifyDeleted, GlobalVariable.keyword, false, FailureHandling.OPTIONAL)
+println verification
+assert verification == false
+//WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
+
+
+'VERIFY VARS'
+println GlobalVariable.keyword
+println GlobalVariable.productName
+println GlobalVariable.productId
+

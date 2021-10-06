@@ -22,11 +22,13 @@ import org.openqa.selenium.Keys as Keys
 GlobalVariable.productName = (GlobalVariable.productName +'UPD')
 GlobalVariable.content = (GlobalVariable.content + 'UPD')
 
+
 'SET THE KEYWORD'
 
 println GlobalVariable.keyword
 GlobalVariable.keyword = GlobalVariable.productName
 println GlobalVariable.keyword
+
 
 'UPDATE PRODUCT DIMENSIONS VARIABLES'
 GlobalVariable.weightUnit = 'pound'
@@ -34,3 +36,10 @@ GlobalVariable.weight = '200.00'
 GlobalVariable.height = '200.00'
 GlobalVariable.width = '200.00'
 GlobalVariable.length = '200.00'
+
+
+'VERIFY VARIABLES'
+
+println GlobalVariable.keyword
+println GlobalVariable.productName
+println GlobalVariable.productId

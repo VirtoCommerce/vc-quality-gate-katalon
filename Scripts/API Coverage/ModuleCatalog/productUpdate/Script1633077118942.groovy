@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.comment('TEST CASE: Products management - add product')
 
-'CREATE A NEW PRODUCT'
+'UPDATE A PRODUCT'
 createUpdateProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductUpdate', 
 	[
 	('name') : GlobalVariable.productName,
@@ -54,6 +54,10 @@ WebUI.comment(GlobalVariable.productId)
 GlobalVariable.categoryName = WS.getElementPropertyValue(createUpdateProduct, 'path')
 WebUI.comment(GlobalVariable.categoryName)
 
+'VERIFY VARIABLES'
+println GlobalVariable.keyword
+println GlobalVariable.productName
+println GlobalVariable.productId
 
 //'RETURN DATA'
 //return createUpdateProduct

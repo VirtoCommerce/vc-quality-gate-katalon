@@ -49,6 +49,11 @@ GlobalVariable.catalogName = WS.getElementPropertyValue(verifyCreated, '[0].outl
 //WebUI.comment("KATALOG NAME IS " + GlobalVariable.catalogName)
 
 
+'VERIFY VARS'
+println GlobalVariable.keyword
+println GlobalVariable.productName
+println GlobalVariable.productId
+
 //'START TESTCASE TEARDOWN IN SUITE'
 //"TEMP" variable launches teardown in
 //"module_Catalog_Product" test suit's scrip

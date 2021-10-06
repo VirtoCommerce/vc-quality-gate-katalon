@@ -38,7 +38,12 @@ clonedProductBody = generateClone.getResponseBodyContent()
 GlobalVariable.clonedProductBody = clonedProductBody
 
 
-'RETURN CLONE BODY'
-return clonedProductBody
+'VERIFY VARS'
+println GlobalVariable.keyword
+println GlobalVariable.productName
+println GlobalVariable.productId
+
+//'RETURN CLONE BODY'
+//return clonedProductBody
 
 
