@@ -18,6 +18,14 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
+'SET THE KEYWORD'
+GlobalVariable.keyword = GlobalVariable.productName
+
+'UPDATE PRODUCT NAME & CONTENT'
+GlobalVariable.productName = (GlobalVariable.productName +'UPD')
+GlobalVariable.content = (GlobalVariable.content + 'UPD')
+
+
 'UPDATE PRODUCT DIMENSIONS VARIABLES'
 GlobalVariable.weightUnit = 'pound'
 GlobalVariable.weight = '200.00'

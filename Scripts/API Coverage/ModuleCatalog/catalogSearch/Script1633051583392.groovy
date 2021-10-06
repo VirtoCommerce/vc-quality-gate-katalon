@@ -31,5 +31,5 @@ WS.verifyElementPropertyValue(searchCreated, 'totalCount', 1)
 'GET THE CATALOG ID TO USE IN UPDATE AND DELETE CASES'
 GlobalVariable.catalogId = WS.getElementPropertyValue(searchCreated, 'results[0].id')
 WebUI.comment(GlobalVariable.catalogId)
-newCatalogName = (GlobalVariable.catalogName + 'UPD')
+
 

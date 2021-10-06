@@ -39,6 +39,6 @@ FailureHandling.STOP_ON_FAILURE)
 
 
 'VERIFY THE PRODUCT WAS DELETED'
-verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/productsListentriesSearch'),null,
+verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/catalogListentriesSearch'),null,
 FailureHandling.STOP_ON_FAILURE)	
 

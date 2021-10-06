@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
-   <name>_DRAFTX5.categoryDelete</name>
+   <description>Delete the category</description>
+   <name>categoryDelete</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>86a9e326-9f1d-4ab4-ad7c-9a8e442ee3d1</testCaseGuid>

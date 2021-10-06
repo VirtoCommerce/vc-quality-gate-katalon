@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update catalog related variables</description>
+   <name>catalogKeywordUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0d6e9509-7945-47ce-b57b-da1976272a7a</testCaseGuid>
+</TestCaseEntity>

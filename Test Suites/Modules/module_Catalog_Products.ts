@@ -14,13 +14,13 @@
    <testCaseLink>
       <guid>378c5ab4-3675-433d-b2f9-c39ed4015e3a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ce5f30db-17cf-4bd3-b2e4-061f85f62e14</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -33,7 +33,7 @@
       <guid>54c7b419-1a01-413b-8acd-5ccee33a4f39</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleCatalog/variablesProductUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsVariablesUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ca32152d-5dbb-4d43-bc39-ccdedb6d2054</guid>
@@ -63,7 +63,7 @@
       <guid>8510c59a-d09b-4b73-9112-4f994b689240</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsListentriesSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/catalogListentriesSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>93a8d8fb-60b6-4a04-9c7f-6320b5b71d76</guid>
@@ -87,7 +87,7 @@
       <guid>317239d1-f237-4bb7-afd9-6b7730a57ce4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsListentriesSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/catalogListentriesSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4c2250c6-b600-4313-8125-6466a4bc85d3</guid>
@@ -141,6 +141,6 @@
       <guid>91941017-14cf-4a72-952c-003e1fc1b63f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsListentriesSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/catalogListentriesSearch</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

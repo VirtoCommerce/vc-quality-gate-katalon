@@ -31,9 +31,9 @@ import com.kms.katalon.core.annotation.TearDownTestCase
 /**
  * Setup test suite environment.
  */
-@SetUp(skipped = true) // Please change skipped to be false to activate this method.
+@SetUp(skipped = false) // Please change skipped to be false to activate this method.
 def setUp() {
-	// Put your code here.
+		// Put your code here.
 }
 
 /**
@@ -48,7 +48,11 @@ def tearDown() {
  * Run before each test case starts.
  */
 @SetupTestCase(skipped = true) // Please change skipped to be false to activate this method.
+
 def setupTestCase() {
+//CHECK DECLARATION AT STEP #10 OF THE CURRENT TEST SUITE
+
+		
 	// Put your code here.
 }
 
@@ -57,6 +61,9 @@ def setupTestCase() {
  */
 @TearDownTestCase(skipped = true) // Please change skipped to be false to activate this method.
 def tearDownTestCase() {
+	
+//	GlobalVariable.keyword = GlobalVariable.productName
+	
 	// Put your code here.
 }
 

@@ -22,8 +22,8 @@ WebUI.comment('TEST CASE: Common Catalogs management - update the catalog')
 
 
 'UDATE THE CATALOG'
-newCatalogName = GlobalVariable.catalogName + 'UPD'
+GlobalVariable.catalogName = GlobalVariable.catalogName + 'UPD'
 catalogUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsUpdate', [
-	('name') : newCatalogName,
+	('name') : GlobalVariable.catalogName,
 	('id') : GlobalVariable.catalogId
 	]))

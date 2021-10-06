@@ -17,18 +17,5 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-
-'SET THE KEUWORD'
-GlobalVariable.keyword = GlobalVariable.productName
-
-'UPDATE PRODUCT NAME & CONTENT'
-GlobalVariable.productName = (GlobalVariable.productName +'UPD')
-GlobalVariable.content = (GlobalVariable.content + 'UPD')
-
-
-'UPDATE PRODUCT DIMENSIONS VARIABLES'
-GlobalVariable.weightUnit = 'pound'
-GlobalVariable.weight = '200.00'
-GlobalVariable.height = '200.00'
-GlobalVariable.width = '200.00'
-GlobalVariable.length = '200.00'
+'UPDATE KEYWORD TO KATALOG'
+GlobalVariable.keyword = GlobalVariable.catalogName

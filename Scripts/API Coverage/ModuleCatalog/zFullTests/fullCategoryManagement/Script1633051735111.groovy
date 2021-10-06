@@ -28,32 +28,32 @@ FailureHandling.STOP_ON_FAILURE)
 
 
 'CREATE NEW CATEGORY'
-categoryCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX2.categoryCreate'),
+categoryCreate = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/categoryCreate'),
 	null,
 FailureHandling.STOP_ON_FAILURE)
 WebUI.comment(GlobalVariable.categoryId)
 
 
 'UPDATE CATEGORY'
-updateCategory = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX3.categoryUpdate'),
+updateCategory = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/categoryUpdate'),
 	null,
 FailureHandling.STOP_ON_FAILURE)
 
 
 'GET THE CREATED CATEGORY'
-categoryGet = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/_DRAFTX4.categoryGetById'),
+categoryGet = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/categoryGetById'),
 	null,
 FailureHandling.STOP_ON_FAILURE)
 
 
 'DELETE CATEGORY'
-categoryDelete = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/_DRAFTX5.categoryDelete'),
+categoryDelete = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/categoryDelete'),
 	null,
 FailureHandling.STOP_ON_FAILURE)
 
 
 'VERIFY DELETED'
 GlobalVariable.keyword = GlobalVariable.categoryName
-verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/productsListentriesSearch'),
+verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModuleCatalog/catalogListentriesSearch'),
 	null,
 FailureHandling.STOP_ON_FAILURE)
