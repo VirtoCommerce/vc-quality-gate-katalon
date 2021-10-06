@@ -319,4 +319,59 @@
       <initValue>[('blogs') : 'blogs', ('pages') : 'pages', ('themes') : 'themes']</initValue>
       <name>contentTypesMap</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'41b75'</initValue>
+      <name>categoryCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>keyword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Created product description content</description>
+      <initValue>'Some text about how good this product is'</initValue>
+      <name>content</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>body of the cloned product</description>
+      <initValue>''</initValue>
+      <name>clonedProductBody</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'gram'</initValue>
+      <name>weightUnit</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>weight</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>height</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>width</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>length</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>uploadedFileUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>uploadedFileName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

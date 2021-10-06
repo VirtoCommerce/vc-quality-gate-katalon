@@ -43,15 +43,15 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>GlobalVariable.folderName</defaultValue>
-      <description></description>
+      <defaultValue>'Qwefolder'</defaultValue>
+      <description>folder name</description>
       <id>a000e688-e42b-4a01-92eb-31a30eb41bd8</id>
       <masked>false</masked>
       <name>folderName</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>folder parent location</description>
       <id>01ac9f7a-ffd7-4e0d-8f1d-4deac9695502</id>
       <masked>false</masked>
       <name>parentUrl</name>

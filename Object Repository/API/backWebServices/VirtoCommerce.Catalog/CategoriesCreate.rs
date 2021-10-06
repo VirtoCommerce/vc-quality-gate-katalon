@@ -43,21 +43,21 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
-      <description></description>
+      <description>Electronics catalog Id</description>
       <id>901cc077-5d05-41dc-98e8-afede1d1e9ac</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
       <defaultValue>'796b8'</defaultValue>
-      <description></description>
+      <description>created category code</description>
       <id>79f8e3de-1f98-426a-a462-06eb2ba5724e</id>
       <masked>false</masked>
       <name>code</name>
    </variables>
    <variables>
       <defaultValue>'qweCategory'</defaultValue>
-      <description></description>
+      <description>created category name</description>
       <id>87dfc3c0-46d1-4fa7-ae85-97a9ea469b99</id>
       <masked>false</masked>
       <name>name</name>

@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'TestCatalog'</defaultValue>
-      <description></description>
+      <description>Name of the created catalog</description>
       <id>43a1ae75-290c-4d7e-88df-04a0c03bffda</id>
       <masked>false</masked>
       <name>name</name>

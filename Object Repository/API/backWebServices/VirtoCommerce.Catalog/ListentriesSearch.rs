@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;catalogId\&quot;:\&quot;${catalogId}\&quot;,\n   \&quot;keyword\&quot;:\&quot;${keyword}\&quot;,\n   \&quot;searchInVariations\&quot;:false,\n   \&quot;responseGroup\&quot;:\&quot;withCategories, withProducts\&quot;,\n   \&quot;sort\&quot;:\&quot;\&quot;,\n   \&quot;skip\&quot;:0,\n   \&quot;take\&quot;:50\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;keyword\&quot;:\&quot;${keyword}\&quot;,\n   \&quot;searchInVariations\&quot;:false,\n   \&quot;responseGroup\&quot;:\&quot;withCategories, withProducts\&quot;,\n   \&quot;sort\&quot;:\&quot;\&quot;,\n   \&quot;skip\&quot;:0,\n   \&quot;take\&quot;:50\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,15 +42,8 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'${GlobalVariable.catalogId}'</defaultValue>
-      <description></description>
-      <id>082ee9f9-5710-4f3b-81a1-c4a170573beb</id>
-      <masked>false</masked>
-      <name>catalogId</name>
-   </variables>
-   <variables>
-      <defaultValue>'qwe'</defaultValue>
-      <description></description>
+      <defaultValue>'QweProductUPD'</defaultValue>
+      <description>search keyword</description>
       <id>74e7b6fa-cad5-4cd8-9679-afac78cb407e</id>
       <masked>false</masked>
       <name>keyword</name>
