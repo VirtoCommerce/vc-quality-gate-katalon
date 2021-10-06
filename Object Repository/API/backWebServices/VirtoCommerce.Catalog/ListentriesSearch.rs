@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'QweProductUPD'</defaultValue>
-      <description></description>
+      <description>search keyword</description>
       <id>74e7b6fa-cad5-4cd8-9679-afac78cb407e</id>
       <masked>false</masked>
       <name>keyword</name>

@@ -51,7 +51,7 @@
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>folder parent location</description>
       <id>01ac9f7a-ffd7-4e0d-8f1d-4deac9695502</id>
       <masked>false</masked>
       <name>parentUrl</name>

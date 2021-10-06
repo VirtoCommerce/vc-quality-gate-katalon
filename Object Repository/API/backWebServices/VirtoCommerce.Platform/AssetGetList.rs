@@ -40,14 +40,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>folder name</description>
       <id>cc65020b-d5c4-4b47-b0a9-481ab383941b</id>
       <masked>false</masked>
       <name>folderName</name>
    </variables>
    <variables>
       <defaultValue>'qwefolder'</defaultValue>
-      <description></description>
+      <description>search request</description>
       <id>2474aa2a-238e-425c-bd92-58cad6a36bb7</id>
       <masked>false</masked>
       <name>keyword</name>

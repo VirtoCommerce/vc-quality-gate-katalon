@@ -57,14 +57,14 @@
    </variables>
    <variables>
       <defaultValue>'482d2019-c85a-4fab-b4e0-98d8a268e757'</defaultValue>
-      <description></description>
+      <description>id of the catalog to create product</description>
       <id>c82e8ed8-08f4-4fcb-9cf2-9a5eaee5fd74</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
       <defaultValue>'f0199595-0e56-4e9d-a3ae-b7d54d473a69'</defaultValue>
-      <description></description>
+      <description>id of the category to create product</description>
       <id>32e1c1a4-dd55-48ce-910b-d4b8593b2204</id>
       <masked>false</masked>
       <name>categoryId</name>
@@ -78,42 +78,42 @@
    </variables>
    <variables>
       <defaultValue>'gram'</defaultValue>
-      <description></description>
+      <description>product dimension</description>
       <id>4904b186-6abb-436c-8fb0-f2adb254509c</id>
       <masked>false</masked>
       <name>weightUnit</name>
    </variables>
    <variables>
       <defaultValue>'100'</defaultValue>
-      <description></description>
+      <description>product dimension</description>
       <id>8a901198-de36-4be8-9f95-e109051e10b6</id>
       <masked>false</masked>
       <name>weight</name>
    </variables>
    <variables>
       <defaultValue>'100'</defaultValue>
-      <description></description>
+      <description>product dimension</description>
       <id>b99cdbdb-ca26-4210-a883-bd550d801be7</id>
       <masked>false</masked>
       <name>height</name>
    </variables>
    <variables>
       <defaultValue>'100'</defaultValue>
-      <description></description>
+      <description>product dimension</description>
       <id>5a4cff44-0bdc-47b2-88cd-7f45217a15dc</id>
       <masked>false</masked>
       <name>width</name>
    </variables>
    <variables>
       <defaultValue>'100'</defaultValue>
-      <description></description>
+      <description>product dimension</description>
       <id>ca52b234-76fa-4bdd-bef4-44ed3cc1d552</id>
       <masked>false</masked>
       <name>length</name>
    </variables>
    <variables>
       <defaultValue>'{\r\n         &quot;size&quot;:6129,\r\n         &quot;contentType&quot;:&quot;image/svg+xml&quot;,\r\n         &quot;type&quot;:&quot;blob&quot;,\r\n         &quot;name&quot;:&quot;logo.svg&quot;,\r\n         &quot;url&quot;:&quot;http://localhost:9118/assets/qwefolder/logo.svg&quot;,\r\n         &quot;relativeUrl&quot;:&quot;/qwefolder/logo.svg&quot;,\r\n         &quot;createdDate&quot;:&quot;0001-01-01T00:00:00Z&quot;,\r\n         &quot;modifiedDate&quot;:&quot;2021-08-26T09:57:56.6970941Z&quot;,\r\n         &quot;isImage&quot;:true,\r\n         &quot;sortOrder&quot;:1,\r\n         &quot;group&quot;:&quot;images&quot;\r\n      }'</defaultValue>
-      <description></description>
+      <description>image to add to the product</description>
       <id>8b7581eb-3ad1-46a4-b11a-b221f764df5a</id>
       <masked>false</masked>
       <name>images</name>

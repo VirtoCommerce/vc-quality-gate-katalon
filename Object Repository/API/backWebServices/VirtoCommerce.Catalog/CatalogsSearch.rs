@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'AutoTestCatalog'</defaultValue>
-      <description></description>
+      <description>keyword to search with</description>
       <id>4bb74c52-c3b4-433c-bab9-b4459004a280</id>
       <masked>false</masked>
       <name>keyword</name>

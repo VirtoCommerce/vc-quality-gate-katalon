@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'VirtoCommerce.ModulesAutoInstallState'</defaultValue>
-      <description></description>
+      <description>setting name</description>
       <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
       <masked>false</masked>
       <name>name</name>

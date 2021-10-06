@@ -40,7 +40,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'f13f8c70-9a1c-4c81-a040-16e47ffa4653'</defaultValue>
-      <description></description>
+      <description>deleted catalog id</description>
       <id>4637c7ac-8c25-4c0f-af24-0bba4a4393ee</id>
       <masked>false</masked>
       <name>id</name>

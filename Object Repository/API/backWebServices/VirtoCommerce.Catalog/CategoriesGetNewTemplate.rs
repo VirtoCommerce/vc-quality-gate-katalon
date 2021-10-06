@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
-      <description></description>
+      <description>'Electronics' catalog Id</description>
       <id>1fd03659-b28b-401b-9fcc-6b75a81d4004</id>
       <masked>false</masked>
       <name>catalogId</name>

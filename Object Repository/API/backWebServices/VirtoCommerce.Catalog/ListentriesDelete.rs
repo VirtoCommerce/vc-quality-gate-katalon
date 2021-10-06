@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'4a70e894-9594-40a4-bb4b-b64da77c309e'</defaultValue>
-      <description></description>
+      <description>id of the deleted entitite</description>
       <id>e51980ee-d454-4dc5-a288-26d6d3c6f556</id>
       <masked>false</masked>
       <name>objectIds</name>

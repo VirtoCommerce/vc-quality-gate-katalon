@@ -43,14 +43,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'AutoTestCatalog'</defaultValue>
-      <description></description>
+      <description>updated catalog name</description>
       <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
       <masked>false</masked>
       <name>name</name>
    </variables>
    <variables>
       <defaultValue>'6431751a-91fa-4f70-8720-69e2edf5f2db'</defaultValue>
-      <description></description>
+      <description>updated catalog id</description>
       <id>0a2768bd-b95c-4fec-8deb-1c70f9b44e94</id>
       <masked>false</masked>
       <name>id</name>
