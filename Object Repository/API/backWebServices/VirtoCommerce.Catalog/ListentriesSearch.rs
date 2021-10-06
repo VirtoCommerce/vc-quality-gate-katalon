@@ -48,6 +48,13 @@
       <masked>false</masked>
       <name>keyword</name>
    </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>faea887e-2ff3-4670-ad81-50a55ceed563</id>
+      <masked>false</masked>
+      <name>catalogId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
