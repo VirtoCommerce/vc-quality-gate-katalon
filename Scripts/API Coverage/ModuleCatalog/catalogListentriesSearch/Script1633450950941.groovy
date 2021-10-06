@@ -42,6 +42,7 @@ println GlobalVariable.keyword
 	]))	
 //name = WS.getElementPropertyValue(verifyDeleted,'listEntries[0].name')
 //println name
+
 boolean verification = WS.containsString(verifyDeleted, GlobalVariable.keyword, false, FailureHandling.OPTIONAL)
 println verification
 assert verification == false
@@ -52,3 +53,4 @@ assert verification == false
 println GlobalVariable.keyword
 println GlobalVariable.productName
 println GlobalVariable.productId
+
