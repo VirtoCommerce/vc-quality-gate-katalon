@@ -29,12 +29,13 @@ WebUI.comment('TEST CASE: Products management - Listentries Search')
 
 //GlobalVariable.productName = 'QweProductUPD'
 //GlobalVariable.keyword = GlobalVariable.productName
-//println GlobalVariable.keyword
+println GlobalVariable.keyword
  verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
 	('keyword') : GlobalVariable.keyword
 	]))	
 //name = WS.getElementPropertyValue(verifyDeleted,'listEntries[0].name')
 //println name
 boolean verification = WS.containsString(verifyDeleted, GlobalVariable.keyword, false, FailureHandling.OPTIONAL)
+println verification
 assert verification == false
 //WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', 0)
