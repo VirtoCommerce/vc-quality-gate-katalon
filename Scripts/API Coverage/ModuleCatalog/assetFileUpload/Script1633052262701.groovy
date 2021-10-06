@@ -22,7 +22,7 @@ WebUI.comment('TEST CASE: Products management - upload asset')
 
 
 'UPLOAD IMAGE FOR PRODUCT'
-uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+uploadFileUrl = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,
 	('url') : GlobalVariable.urlBack + '/images/userpic.svg'
 	]))
