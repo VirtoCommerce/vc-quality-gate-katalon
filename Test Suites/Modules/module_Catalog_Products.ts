@@ -56,7 +56,7 @@
    <testCaseLink>
       <guid>22a30b86-6512-4769-88ca-fbabc081b6aa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsGetCloneBody</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -74,79 +74,79 @@
    <testCaseLink>
       <guid>93a8d8fb-60b6-4a04-9c7f-6320b5b71d76</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productCreateUpdateWithBody</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>24a2ca48-a1b7-424c-a4bf-aad23cefc6c6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsMoveToTheCatalog</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dce86215-6edd-4698-8dae-00e278902402</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>317239d1-f237-4bb7-afd9-6b7730a57ce4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/catalogListentriesSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4c2250c6-b600-4313-8125-6466a4bc85d3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsDescriptionTypes</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d59663f1-9836-4aa7-9e46-5bd57227026c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a2f95b6f-2b29-4ee0-a32d-3b662d678f30</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/assetsCreateBlobFolder</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>94a0883a-663b-408e-80ea-3e01f076b306</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/assetGetList</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4f1800e2-c1eb-4921-b816-294fa6c0b516</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/assetFileUpload</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>625fa5be-290d-4466-a167-4e72fe49b0f6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productUpdateImage</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b9f11b61-7844-4f66-9e45-ffbaefcca85f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsGetById</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>feae6a8a-bc93-4031-88eb-53e85b5165c7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>91941017-14cf-4a72-952c-003e1fc1b63f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/catalogListentriesSearch</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

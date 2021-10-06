@@ -28,3 +28,7 @@ deleteProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 	('objectIds') : productId
 	]))
 
+'VERIFY VARS'
+println GlobalVariable.keyword
+println GlobalVariable.productName
+println GlobalVariable.productId
