@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>update catalog related variables</description>
+   <description>update keyword</description>
    <name>catalogKeywordUpdate</name>
    <tag></tag>
    <comment></comment>
