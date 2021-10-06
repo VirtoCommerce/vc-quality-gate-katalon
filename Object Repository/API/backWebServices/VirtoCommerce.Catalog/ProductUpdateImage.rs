@@ -57,14 +57,14 @@
    </variables>
    <variables>
       <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
-      <description></description>
+      <description>Id catalog Electronics</description>
       <id>c82e8ed8-08f4-4fcb-9cf2-9a5eaee5fd74</id>
       <masked>false</masked>
       <name>catalogId</name>
    </variables>
    <variables>
       <defaultValue>'0d4ad9bab9184d69a6e586effdf9c2ea'</defaultValue>
-      <description></description>
+      <description>Id category Cell Phones</description>
       <id>32e1c1a4-dd55-48ce-910b-d4b8593b2204</id>
       <masked>false</masked>
       <name>categoryId</name>
