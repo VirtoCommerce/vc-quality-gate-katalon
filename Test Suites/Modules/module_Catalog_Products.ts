@@ -30,6 +30,12 @@
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>2d8a42c0-aab1-4a5a-aa96-ff73ab061644</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsGetById</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>54c7b419-1a01-413b-8acd-5ccee33a4f39</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
