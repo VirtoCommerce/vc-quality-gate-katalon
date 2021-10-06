@@ -26,6 +26,7 @@ GlobalVariable.content = (GlobalVariable.content + 'UPD')
 println GlobalVariable.keyword
 GlobalVariable.keyword = GlobalVariable.productName
 println GlobalVariable.keyword
+
 'UPDATE PRODUCT DIMENSIONS VARIABLES'
 GlobalVariable.weightUnit = 'pound'
 GlobalVariable.weight = '200.00'
