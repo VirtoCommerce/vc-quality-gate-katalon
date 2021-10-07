@@ -15,17 +15,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+password = GlobalVariable.UserNameBusiness + "!"
+
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputUserName'))
 
 WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputUserName'), GlobalVariable.UserNameBusiness)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPassword'), GlobalVariable.UserNameBusiness)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputPassword'), password)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'), GlobalVariable.UserNameBusiness)
+WebUI.setText(findTestObject('UI-B2B/RegistrationPage/InputConfirmPassword'), password)
 
 WebUI.click(findTestObject('UI-B2B/RegistrationPage/InputSubmitSubmit'))
 
