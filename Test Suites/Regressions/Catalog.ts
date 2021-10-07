@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>module_Catalog</name>
+   <name>Catalog</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>e2fde244-45eb-4559-9476-ed9752e67564</testSuiteGuid>
+   <testSuiteGuid>adca067b-8a34-40cd-82f4-74551a498ed9</testSuiteGuid>
    <testCaseLink>
       <guid>a39ce799-4600-419a-9889-49eca1fff125</guid>
       <isReuseDriver>false</isReuseDriver>
