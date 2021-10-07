@@ -36,6 +36,12 @@ println GlobalVariable.productId
 
 //GlobalVariable.productName = 'QweProductUPD'
 //GlobalVariable.keyword = GlobalVariable.productName
+
+
+'DROP INDEX'
+//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/indexWithoutDeleting'))
+WS.delay(30)
 println GlobalVariable.keyword
  verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
 	('keyword') : GlobalVariable.keyword
