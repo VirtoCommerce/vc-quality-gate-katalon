@@ -40,13 +40,19 @@ WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
 // Update contact
 WebUI.comment('TEST CASE : Update contact')
 fullName = 'Qwe ContactUpdated'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdate', [('contactId') : GlobalVariable.contactId, ('fullName') : fullName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdate', [
+	('contactId') : GlobalVariable.contactId, 
+	('fullName') : fullName
+	]))
 
 
 // Add address to contact
 WebUI.comment('TEST CASE : Update address')
 name = 'QwestUpdated'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/AddressesUpdate', [('contactId') : GlobalVariable.contactId, ('name') : name]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/AddressesUpdate', [
+	('contactId') : GlobalVariable.contactId,
+	('name') : name
+	 ]))
 
 
 // Check Contact GET request by Id and verify updates
@@ -58,7 +64,9 @@ WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 
 // Delete contact
 WebUI.comment('TEST CASE: Delete contact')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsDelete', [('contactId') : GlobalVariable.contactId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsDelete', [
+	('contactId') : GlobalVariable.contactId
+	]))
 
 
 // Re-index important to search items
@@ -67,5 +75,7 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 
 // Search new contact. Count 0 in result - contact was deleted
 WebUI.comment('TEST CASE: Contact search')
-responseSearch1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch', [('searchPhrase') : GlobalVariable.firstName] ))
+responseSearch1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch', [
+	('searchPhrase') : GlobalVariable.firstName
+	]))
 WS.verifyElementPropertyValue(responseSearch1, 'totalCount', 0)

@@ -34,18 +34,26 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 // Update contacts
 WebUI.comment('TEST CASE : Update BULK contacts')
 fullName = 'Qwe ContactUpdated'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdateBulk', [('contactId') : GlobalVariable.contactId[0], ('fullName') : fullName]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdateBulk', [
+	('contactId') : GlobalVariable.contactId[0],
+	('fullName') : fullName
+	]))
 
 
 // Check Contacts GET request by Id and verify update of first contact
 WebUI.comment('TEST CASE: Get contact by Id')
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetIdBulk', [('contactId1') : GlobalVariable.contactId[0]])) 
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetIdBulk', [
+	('contactId1') : GlobalVariable.contactId[0]
+	])) 
 WS.verifyElementPropertyValue(responseGet, 'fullName[0]', fullName)
 
 
 // Delete contact
 WebUI.comment('TEST CASE: Delete contacts')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsDelete', [('contactId') : GlobalVariable.contactId[0], ('contactId2') : GlobalVariable.contactId[1]]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsDelete', [
+	('contactId') : GlobalVariable.contactId[0],
+	('contactId2') : GlobalVariable.contactId[1]
+	]))
 
 
 // Re-index important to search items

@@ -32,18 +32,25 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 // Update org
 WebUI.comment('TEST CASE : Update organization')
 name = 'Qwe OrgUpdated'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsUpdate', [('orgId') : GlobalVariable.organizationId, ('name') : name]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsUpdate', [
+	('orgId') : GlobalVariable.organizationId,
+	('name') : name
+	]))
 
 
 // Check get request by Id
 WebUI.comment('TEST CASE : Get organization')
-responseName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetId', [('orgId') : GlobalVariable.organizationId]))
+responseName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetId', [
+	('orgId') : GlobalVariable.organizationId
+	]))
 WS.verifyElementPropertyValue(responseName, 'name', name)
 
 
 // Delete org
 WebUI.comment('TEST CASE: Organization delete')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsDelete', [('orgId1') : GlobalVariable.organizationId]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsDelete', [
+	('orgId1') : GlobalVariable.organizationId
+	]))
 
 
 // Re-index important to search items
@@ -52,5 +59,7 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 
 // Search deleted org. Count 0 in result - org was deleted
 WebUI.comment('TEST CASE: Organization search')
-responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
+responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsSearch', [
+	('searchPhrase') : GlobalVariable.firstName
+	]))
 WS.verifyElementPropertyValue(responseOrg, 'totalCount', 0)
