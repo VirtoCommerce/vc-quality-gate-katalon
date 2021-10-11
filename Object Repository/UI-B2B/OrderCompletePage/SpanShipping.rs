@@ -6,8 +6,12 @@
    <elementGuidId>291c2a0d-8162-4019-a3b2-498a0dfde300</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>//span[@class = 'pull-right ng-binding ng-scope' and @ng-bind = '$ctrl.field.formattedAmount']</value>
+         <value>//span[@class = 'float-right ng-binding ng-scope' and @ng-bind = '$ctrl.field.formattedAmount']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,7 +28,7 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>pull-right ng-binding ng-scope</value>
+      <value>float-right ng-binding ng-scope</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
