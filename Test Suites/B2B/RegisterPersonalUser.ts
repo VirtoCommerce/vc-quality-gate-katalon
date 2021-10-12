@@ -110,7 +110,7 @@
    <testCaseLink>
       <guid>f65542f1-fe3a-4a58-b316-8f2c7915e33e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleSearch/BuildIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>

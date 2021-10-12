@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//span[@ng-bind = '$ctrl.order[$ctrl.fieldNames.discount].formattedAmount']</value>
+         <value>//span[@class = 'float-right font-weight-bold text-danger ng-binding ng-scope']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -20,10 +20,17 @@
       <value>span</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ng-bind</name>
       <type>Main</type>
       <value>$ctrl.order[$ctrl.fieldNames.discount].formattedAmount</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>float-right font-weight-bold text-danger ng-binding ng-scope</value>
    </webElementProperties>
 </WebElementEntity>

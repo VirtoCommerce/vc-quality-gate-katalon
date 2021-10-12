@@ -21,7 +21,7 @@ WebUI.setText(findTestObject('UI-B2B/LoginPage/InputLogin'), GlobalVariable.Firs
 
 WebUI.click(findTestObject('UI-B2B/LoginPage/InputPassword'))
 
-WebUI.setText(findTestObject('UI-B2B/LoginPage/InputPassword'), GlobalVariable.FirstName)
+WebUI.setText(findTestObject('UI-B2B/LoginPage/InputPassword'), GlobalVariable.userPassword)
 
 WebUI.click(findTestObject('UI-B2B/LoginPage/InputSubmitLogin'))
 

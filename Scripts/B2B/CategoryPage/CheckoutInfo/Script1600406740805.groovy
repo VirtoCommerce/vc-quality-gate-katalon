@@ -58,7 +58,7 @@ spanShipping = spanShipping.replace('$', '')
 
 spanTax = spanTax.replace('$', '')
 
-spanDiscount = spanDiscount.replace('$', '')
+spanDiscount = spanDiscount.replace(' $', '')
 
 spanTotal = spanTotal.replace('$', '')
 
@@ -72,7 +72,7 @@ float FloatSpanDiscount = Float.parseFloat(spanDiscount)
 
 float FloatSpanTotal = Float.parseFloat(spanTotal)
 
-float FloatResult = ((FloatSpanShipping + FloatSpanSubtotal) + FloatSpanTax) - FloatSpanDiscount
+float FloatResult = ((FloatSpanShipping + FloatSpanSubtotal) + FloatSpanTax) + FloatSpanDiscount
 
 String FloatSpanTotalString = String.format('%.2f', FloatSpanTotal)
 
