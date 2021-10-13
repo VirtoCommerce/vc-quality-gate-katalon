@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>created organization id</description>
       <id>9651d8b6-6ed0-4314-9c0c-b6ca3af69c36</id>
       <masked>false</masked>
       <name>orgId1</name>

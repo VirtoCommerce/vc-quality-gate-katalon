@@ -19,7 +19,9 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 // Create new organization and save Id
 WebUI.comment('TEST CASE : Create organization')
-responseId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsCreate'))
+responseId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsCreate',[
+	('organizationName') : GlobalVariable.organizationName
+	]))
 def responseIdJson = new JsonSlurper().parseText(responseId.getResponseBodyContent())
 GlobalVariable.organizationId = responseIdJson.id
 WebUI.comment('Organization ID : ' + GlobalVariable.organizationId)
@@ -31,7 +33,7 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 
 // Update org
 WebUI.comment('TEST CASE : Update organization')
-name = 'Qwe OrgUpdated'
+name = GlobalVariable.organizationName + 'Updated'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsUpdate', [
 	('orgId') : GlobalVariable.organizationId,
 	('name') : name
@@ -44,6 +46,7 @@ responseName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('orgId') : GlobalVariable.organizationId
 	]))
 WS.verifyElementPropertyValue(responseName, 'name', name)
+
 
 
 // Delete org

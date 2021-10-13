@@ -20,7 +20,10 @@ import groovyjarjarantlr.collections.List
 
 
 WebUI.comment('TEST CASE : Create 2 new organizations BULK')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsCreateBulk'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsCreateBulk',[
+	('name1') : GlobalVariable.organizationName + 'Bulk1',
+	('name2') : GlobalVariable.organizationName + 'Bulk2'
+	]))
 
 
 // Re-index important to search items
@@ -38,11 +41,11 @@ WS.verifyElementPropertyValue(responseOrg, 'totalCount', 2)
 
 
 WebUI.comment('TEST CASE : Update organization BULK')
-name1 = 'Qwe OrgBulkUpd1'
+name1 = GlobalVariable.organizationName + 'Updated'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsUpdateBulk', [
 	('orgId1') : orgId[0],
 	('orgId2') : orgId[1],
-	('name1') : name1
+	('name1') : name1,
 	]))
 
 

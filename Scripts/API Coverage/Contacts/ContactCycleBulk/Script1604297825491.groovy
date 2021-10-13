@@ -33,10 +33,10 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 
 // Update contacts
 WebUI.comment('TEST CASE : Update BULK contacts')
-fullName = 'Qwe ContactUpdated'
+updatedFullName = GlobalVariable.contactName + "Updated"
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdateBulk', [
 	('contactId') : GlobalVariable.contactId[0],
-	('fullName') : fullName
+	('fullName') : updatedFullName
 	]))
 
 
@@ -45,7 +45,7 @@ WebUI.comment('TEST CASE: Get contact by Id')
 responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetIdBulk', [
 	('contactId1') : GlobalVariable.contactId[0]
 	])) 
-WS.verifyElementPropertyValue(responseGet, 'fullName[0]', fullName)
+WS.verifyElementPropertyValue(responseGet, 'fullName[0]', updatedFullName)
 
 
 // Delete contact
@@ -63,3 +63,4 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 // Search new contact. Count 0 in result - contact was deleted
 responseSearch1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch'))
 WS.verifyElementPropertyValue(responseSearch1, 'totalCount', 0)
+

@@ -16,21 +16,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
+import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 
 
-// Create new Contact and save Id
+'Create new Contact and save Id'
 WebUI.comment('TEST CASE : Create contact')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsCreate'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsCreate',[
+	('fullName') : GlobalVariable.contactName,
+	('firstName') : GlobalVariable.firstName,
+	('lastName') : GlobalVariable.lastName
+	]))
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 GlobalVariable.contactId = responseJson.id
 WebUI.comment('ContactId is: ' + GlobalVariable.contactId)
 
 
-// Re-index important to search items
+
+'Re-index important to search items'
 WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
-// Search new contact
+'Search new contact'
 WebUI.comment('TEST CASE: Contact search')
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch'))
 WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
@@ -39,16 +45,16 @@ WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
 
 // Update contact
 WebUI.comment('TEST CASE : Update contact')
-fullName = 'Qwe ContactUpdated'
+updatedFullName = GlobalVariable.contactName + 'Updated'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdate', [
 	('contactId') : GlobalVariable.contactId, 
-	('fullName') : fullName
+	('fullName') : updatedFullName
 	]))
 
 
 // Add address to contact
 WebUI.comment('TEST CASE : Update address')
-name = 'QwestUpdated'
+name = GlobalVariable.contactName + "AddressUPD"
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/AddressesUpdate', [
 	('contactId') : GlobalVariable.contactId,
 	('name') : name
@@ -57,8 +63,10 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 // Check Contact GET request by Id and verify updates
 WebUI.comment('TEST CASE: Get contact by Id')
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetId'))
-WS.verifyElementPropertyValue(responseGet, 'fullName', fullName)
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetId',[
+	('contactId') : GlobalVariable.contactId
+	]))
+WS.verifyElementPropertyValue(responseGet, 'fullName', updatedFullName)
 WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 
 
