@@ -21,6 +21,7 @@ WebUI.comment('TEST CASE : GET employee')
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Employees/EmployeesGet', [
 	('id') : GlobalVariable.employeeId
 	]))
+return response
 
 //def name = GlobalVariable.contactName
 //WebUI.comment(name)

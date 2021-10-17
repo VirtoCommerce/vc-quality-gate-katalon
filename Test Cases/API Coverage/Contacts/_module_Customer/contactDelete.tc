@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete one or several contacts by contact id</description>
+   <name>contactDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>61581ae4-ec80-468d-a678-044cb2f6b894</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update created organizations name by  orgid</description>
+   <name>orgBulkUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ac78f791-38a5-4d61-9e0a-ba82e7f856de</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update several contacts simoultaneously</description>
+   <name>contactBulkUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f0d6852a-4a8b-46d9-b694-f9f1aabfbe9e</testCaseGuid>
+</TestCaseEntity>

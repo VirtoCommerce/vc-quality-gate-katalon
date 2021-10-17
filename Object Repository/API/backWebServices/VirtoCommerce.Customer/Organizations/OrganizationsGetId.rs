@@ -6,7 +6,7 @@
    <elementGuidId>b7f9b1f9-3aae-4c86-90c2-c88924702027</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <connectionTimeout>-1</connectionTimeout>
+   <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent></httpBodyContent>
@@ -25,7 +25,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <maxResponseSize>-1</maxResponseSize>
+   <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/organizations/${orgId}</restUrl>
@@ -35,14 +35,14 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>-1</socketTimeout>
+   <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'6682b774-f435-48b1-83bd-151bf53f1233'</defaultValue>
       <description>created organization id</description>
       <id>ac3046d1-8d54-4ebc-86da-90ab8074c724</id>
       <masked>false</masked>
-      <name>orgaId</name>
+      <name>orgId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

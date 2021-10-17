@@ -41,20 +41,24 @@ WS.verifyElementPropertyValue(responseOrg, 'totalCount', 2)
 
 
 WebUI.comment('TEST CASE : Update organization BULK')
-name1 = GlobalVariable.organizationName + 'Updated'
+name1 = GlobalVariable.organizationName + 'Updated1'
+name2 = GlobalVariable.organizationName + 'Updated2'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsUpdateBulk', [
 	('orgId1') : orgId[0],
 	('orgId2') : orgId[1],
 	('name1') : name1,
+	('name2') : name2
 	]))
 
 
 WebUI.comment('TEST CASE : Check Organization GET request by Id')
 //responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
 responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetIdBulk', [
-	('orgId1') : orgId[0]
+	('orgId1') : orgId[0],
+	('orgId2') : orgId[1]
 	]))
 WS.verifyElementPropertyValue(responseGet, 'name[0]', name1)
+WS.verifyElementPropertyValue(responseGet, 'name[1]', name2)
 
 
 WebUI.comment('TEST CASE : Delete created organization BULK')

@@ -38,7 +38,9 @@ WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], F
 
 'Search new contact'
 WebUI.comment('TEST CASE: Contact search')
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch'))
+responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch',[
+	('searchPhrase') : GlobalVariable.firstName
+	]))
 WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
 WS.verifyElementPropertyValue(responseSearch, 'totalCount', 1)
 

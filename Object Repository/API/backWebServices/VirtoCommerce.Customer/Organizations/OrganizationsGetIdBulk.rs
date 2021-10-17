@@ -6,7 +6,7 @@
    <elementGuidId>7ef9dffe-dd0a-4aa9-9bb4-3144a4489320</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <connectionTimeout>-1</connectionTimeout>
+   <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent></httpBodyContent>
@@ -25,27 +25,27 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <maxResponseSize>-1</maxResponseSize>
+   <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/organizations?ids=${orgId1}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/organizations?ids=${orgId1}&amp;ids=${orgId2}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>-1</socketTimeout>
+   <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'0010a65b-07d8-4497-89fe-61611b985d59'</defaultValue>
       <description>created organization id</description>
       <id>9651d8b6-6ed0-4314-9c0c-b6ca3af69c36</id>
       <masked>false</masked>
       <name>orgId1</name>
    </variables>
    <variables>
-      <defaultValue>'0'</defaultValue>
+      <defaultValue>'24e71173-88be-4bad-80bb-1f6f0cda8bd7'</defaultValue>
       <description></description>
       <id>25777390-15c9-462a-b19f-15efaf756627</id>
       <masked>false</masked>

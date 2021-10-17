@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>search for orgs and save ids</description>
+   <name>orgBulkSearch</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fc505b5f-fea1-464e-8daa-14ff3f76b150</testCaseGuid>
+</TestCaseEntity>
