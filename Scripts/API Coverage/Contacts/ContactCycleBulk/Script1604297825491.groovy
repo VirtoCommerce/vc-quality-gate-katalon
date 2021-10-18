@@ -54,8 +54,12 @@ responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 	('contactId1') : GlobalVariable.contactId[0],
 	('contactId2') : GlobalVariable.contactId[1],
 	])) 
-WS.verifyElementPropertyValue(responseGet, '[0].fullName', fullName1)
-WS.verifyElementPropertyValue(responseGet, '[1].fullName', fullName2)
+if (WS.verifyElementPropertyValue(responseGet, '[0].fullName', fullName1, FailureHandling.OPTIONAL)) {}
+	else (WS.verifyElementPropertyValue(responseGet, '[1].fullName', fullName1))
+
+if (WS.verifyElementPropertyValue(responseGet, '[0].fullName', fullName2, FailureHandling.OPTIONAL)) {}
+	else (WS.verifyElementPropertyValue(responseGet, '[1].fullName', fullName2))
+
 
 
 // Delete contact

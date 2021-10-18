@@ -57,8 +57,11 @@ responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 	('orgId1') : orgId[0],
 	('orgId2') : orgId[1]
 	]))
-WS.verifyElementPropertyValue(responseGet, 'name[0]', name1)
-WS.verifyElementPropertyValue(responseGet, 'name[1]', name2)
+if (WS.verifyElementPropertyValue(responseGet, 'name[0]', name1, FailureHandling.OPTIONAL)) {}
+	else (WS.verifyElementPropertyValue(responseGet, 'name[1]', name1))
+
+if (WS.verifyElementPropertyValue(responseGet, 'name[0]', name2, FailureHandling.OPTIONAL)) {}
+	else (WS.verifyElementPropertyValue(responseGet, 'name[1]', name2))
 
 
 WebUI.comment('TEST CASE : Delete created organization BULK')
