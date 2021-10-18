@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>id of employees to update</description>
       <id>ac6127bc-d83e-4eb2-b550-e18756cd943b</id>
       <masked>false</masked>
       <name>id</name>

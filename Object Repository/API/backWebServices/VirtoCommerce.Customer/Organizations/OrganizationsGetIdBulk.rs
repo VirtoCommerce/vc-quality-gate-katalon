@@ -46,7 +46,7 @@
    </variables>
    <variables>
       <defaultValue>'24e71173-88be-4bad-80bb-1f6f0cda8bd7'</defaultValue>
-      <description></description>
+      <description>created organization id</description>
       <id>25777390-15c9-462a-b19f-15efaf756627</id>
       <masked>false</masked>
       <name>orgId2</name>

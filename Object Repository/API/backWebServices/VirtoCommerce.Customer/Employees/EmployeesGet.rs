@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'0'</defaultValue>
-      <description></description>
+      <description>id of the searched employee</description>
       <id>0b87a83f-37e1-42fd-b44d-4fe9201dd986</id>
       <masked>false</masked>
       <name>id</name>

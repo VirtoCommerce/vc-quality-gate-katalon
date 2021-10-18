@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'93569517-f851-426f-b2dc-d49a6910fecd'</defaultValue>
-      <description></description>
+      <description>id of the searched contact</description>
       <id>a7d1e55d-e9ea-4f1f-935b-abea9f6bfdf0</id>
       <masked>false</masked>
       <name>contactId</name>

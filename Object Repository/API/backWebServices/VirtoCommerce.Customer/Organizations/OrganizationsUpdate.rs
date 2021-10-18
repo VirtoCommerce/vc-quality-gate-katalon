@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'154dbeaf-ba9b-40c9-a2bd-df9b4b07e1de'</defaultValue>
-      <description></description>
+      <description>id of org to update</description>
       <id>7d45ebee-9a77-4e8b-ac65-7afb41098da7</id>
       <masked>false</masked>
       <name>orgId</name>
