@@ -23,9 +23,9 @@ WebUI.comment('TEST CASE: Member BULK update')
 WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariable.memberType[1])
 
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberUpdateBulk', [('id1') : GlobalVariable.memberId[0], ('memberType1') : GlobalVariable.memberType[1]]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdateBulk', [('id1') : GlobalVariable.memberId[0], ('memberType1') : GlobalVariable.memberType[1]]))
 
 // Check updated member
-//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
+//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
 //WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')
 

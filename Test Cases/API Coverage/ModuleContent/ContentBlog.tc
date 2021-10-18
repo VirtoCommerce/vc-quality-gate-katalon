@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>1.Update the extension blacklist configuration
+2.Get statistics
+3.Upload a post (create folder > upload a post)
+4.Rename the post to the forbidden extension
+5. Rename the post to the proper extension
+6. Get statistics(compare with p.2 to verify the result)
+7. Delete the added content, verify deletion</description>
+   <name>ContentBlog</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>869ed2b6-c2a6-4b73-805e-d32d4683a8d0</testCaseGuid>
+</TestCaseEntity>

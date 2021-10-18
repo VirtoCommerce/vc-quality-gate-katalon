@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>get new category template</description>
+   <name>categoryGetTemplate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>66ff857a-504a-4c2b-977e-deaec9b2a964</testCaseGuid>
+</TestCaseEntity>

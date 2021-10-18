@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test forms on the Case Studies pages</description>
+   <name>Case_studies_Bulk</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ceac65f7-5b4b-40d4-b56e-52a662313adf</testCaseGuid>
+</TestCaseEntity>

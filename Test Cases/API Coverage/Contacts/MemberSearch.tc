@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Search member in the list</description>
    <name>MemberSearch</name>
    <tag></tag>
    <comment>TEST CASE: Member search</comment>

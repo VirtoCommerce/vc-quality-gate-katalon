@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search created security User</description>
+   <name>UserSearchSetUserID</name>
+   <tag></tag>
+   <comment>TEST CASE: Search user and set userID</comment>
+   <testCaseGuid>fc6db953-dead-47f6-8f2c-adc02d64e638</testCaseGuid>
+</TestCaseEntity>

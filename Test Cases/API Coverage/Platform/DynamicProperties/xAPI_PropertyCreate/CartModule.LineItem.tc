@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create a new propertys for CartModule - LineItem</description>
+   <name>CartModule.LineItem</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d0f39d42-e7d2-446d-92c9-8ba35da9838e</testCaseGuid>
+</TestCaseEntity>

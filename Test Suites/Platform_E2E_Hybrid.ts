@@ -14,14 +14,14 @@
    <testCaseLink>
       <guid>5e2bf77f-8170-4a49-8023-04fa270b9be6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/AuthBackToken</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9e7e4328-6efa-4aaf-a5a4-bc5ed466f2e6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/Authorization/ApiKeySet</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9461cf1e-85f8-474c-8915-be62251cd3ed</guid>
@@ -39,7 +39,7 @@
       <guid>9c7acb74-e364-4e00-bf72-df4dcd80baae</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/UserCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/backend/UserCreationHybrid</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>86eabe26-6d6a-4c98-968c-21f7c8514400</guid>
@@ -93,7 +93,7 @@
       <guid>a8faca40-9667-46fd-9721-16864955fce4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/backend/DropIndex</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>396300f1-7ede-49ee-b1e9-f0c7e47fc8b7</guid>

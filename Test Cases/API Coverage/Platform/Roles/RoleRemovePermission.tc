@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Update role to remove permissions</description>
+   <name>RoleRemovePermission</name>
+   <tag></tag>
+   <comment>TEST CASE: Update role
+id
+name</comment>
+   <testCaseGuid>4fa129d1-db8a-4714-ac20-e2bd58ee827e</testCaseGuid>
+</TestCaseEntity>

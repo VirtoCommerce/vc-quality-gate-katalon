@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//button[@title = 'Add to cart' and contains(@ng-click, concat('product[' , &quot;'&quot; , 'ec235043d51848249e90ef170c371a1c' , &quot;'&quot; , '].quantity'))]</value>
+         <value>//button[@title = 'Add to cart' and @ng-click = concat('addProductToCartById(' , &quot;'&quot; , 'e1d43be2-8ab8-4378-bb95-43cc9269fd06' , &quot;'&quot; , ', product[' , &quot;'&quot; , 'e1d43be2-8ab8-4378-bb95-43cc9269fd06' , &quot;'&quot; , '].quantity, $event)')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -28,9 +28,9 @@
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
-      <matchCondition>contains</matchCondition>
+      <matchCondition>equals</matchCondition>
       <name>ng-click</name>
       <type>Main</type>
-      <value>product['ec235043d51848249e90ef170c371a1c'].quantity</value>
+      <value>addProductToCartById('e1d43be2-8ab8-4378-bb95-43cc9269fd06', product['e1d43be2-8ab8-4378-bb95-43cc9269fd06'].quantity, $event)</value>
    </webElementProperties>
 </WebElementEntity>

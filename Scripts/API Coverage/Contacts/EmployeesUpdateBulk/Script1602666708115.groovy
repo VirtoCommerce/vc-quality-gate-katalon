@@ -21,7 +21,7 @@ import groovy.json.JsonOutput as JsonOutput
 WebUI.comment('TEST CASE : Update BULK employee')
 
 WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Employees/EmployeesUpdateBulk', [('id') : GlobalVariable.employeeId]))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Employees/EmployeesUpdateBulk', [('id') : GlobalVariable.employeeId]))
 
 //// STEP | Print json result
 //def pretty = JsonOutput.prettyPrint(response.getResponseBodyContent())

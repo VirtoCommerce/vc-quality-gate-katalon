@@ -6,7 +6,7 @@
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8082'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8087'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8102'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8107'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -125,7 +125,7 @@
       <name>employeeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>Id of catalog Electronics</description>
       <initValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
@@ -151,6 +151,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'QweProduct'</initValue>
+      <name>productName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>''</initValue>
       <name>pricelistId</name>
    </GlobalVariableEntity>
@@ -166,6 +171,21 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'QweStore'</initValue>
+      <name>storeName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'en-US'</initValue>
+      <name>languageCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'USD'</initValue>
+      <name>currencyCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>''</initValue>
       <name>token</name>
    </GlobalVariableEntity>
@@ -178,5 +198,180 @@
       <description></description>
       <initValue>''</initValue>
       <name>ffcId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Default culture name for GraphQL requests</description>
+      <initValue>'en-Us'</initValue>
+      <name>gql_cultureName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Default currency code for GraphQL requests</description>
+      <initValue>'USD'</initValue>
+      <name>gql_currencyCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Minimum delay for preventing 404 error from search module</description>
+      <initValue>15</initValue>
+      <name>indexDelay</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>operator@mail.com user ID</description>
+      <initValue>'0a773137-7ac5-4ebc-8d24-94419ed988b6'</initValue>
+      <name>userId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets. Depends on environment</description>
+      <initValue>''</initValue>
+      <name>localUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not contain specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not contain specsymbols.',, ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
+      <name>folderNameList</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>for Assets</description>
+      <initValue>''</initValue>
+      <name>folderUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>uploadFileUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>========</description>
+      <initValue>''</initValue>
+      <name>TEMP</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'themes'</initValue>
+      <name>contentType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qwefolder'</initValue>
+      <name>folderName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must contain alphanumeric lower case, &quot;-&quot; and &quot; &quot; characters only.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must contain alphanumeric lower case, &quot;-&quot; and &quot; &quot; characters only.', ('qwe--qwe') : 'Folder name must not conatin consecutive dash symbols.', ('') : 'Folder name must not be empty.']</initValue>
+      <name>folderNameListContent</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>to use in platform modules section</description>
+      <initValue>'3.16.0-alpha.512'</initValue>
+      <name>storeModuleVersion</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>clientId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>clientSecret</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>apiKeyId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'RoleNameAPI'</initValue>
+      <name>roleName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'{&quot;id&quot;:&quot;security:call_api&quot;,&quot;name&quot;:&quot;security:call_api&quot;,&quot;assignedScopes&quot;:[],&quot;availableScopes&quot;:[]}'</initValue>
+      <name>rolePermission</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>roleFull</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>dynamicPropertyId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Variable to use for any ID in cases</description>
+      <initValue>''</initValue>
+      <name>id</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweaa') : 'Maximum length is 64. You entered 65']</initValue>
+      <name>orderNameListContent</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>[('blogs') : 'blogs', ('pages') : 'pages', ('themes') : 'themes']</initValue>
+      <name>contentTypesMap</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'41b75'</initValue>
+      <name>categoryCode</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>keyword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Created product description content</description>
+      <initValue>'Some text about how good this product is'</initValue>
+      <name>content</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>body of the cloned product</description>
+      <initValue>''</initValue>
+      <name>clonedProductBody</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'gram'</initValue>
+      <name>weightUnit</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>weight</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>height</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>width</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product dimension</description>
+      <initValue>'100.00'</initValue>
+      <name>length</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>uploadedFileUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>uploadedFileName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

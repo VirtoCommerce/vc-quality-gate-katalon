@@ -17,46 +17,66 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AShippingAddress'))
 
-WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ASelectAddress'))
-
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonSave'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AShippingMethod'))
 
-WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ASelectShippingMethod'))
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AChooseShippingMethod'))
+
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonOK'))
 
 WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/APaymentMethod'))
 
-WebUI.waitForElementClickable(findTestObject('UI-B2B/CartAndCheckoutPage/SpanSwitch'), 20)
+WebUI.waitForElementClickable(findTestObject('UI-B2B/CartAndCheckoutPage/AChoosePayment'), 20)
 
-WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/SpanSwitch'))
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/AChoosePayment'))
 
-WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonUpdate'))
+WebUI.mouseOver(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonSavePayment'))
 
-WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonCreateOrder'))
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/ButtonSavePayment'))
 
-WebUI.verifyTextPresent(' ORDER HAS SUCCESSFULLY BEEN SUBMITTED. YOU WILL BE SENT AN EMAIL NOTIFICATION AS SOON AS YOUR ORDER IS READY.', 
+WebUI.waitForElementClickable(findTestObject('UI-B2B/CartAndCheckoutPage/SpanCreateOrder'), 20)
+
+WebUI.click(findTestObject('UI-B2B/CartAndCheckoutPage/SpanCreateOrder'))
+
+WebUI.verifyTextPresent('has been successfully submitted. You will be notified via email when your order is ready for shipping', 
     false)
 
-
 def spanSubTotal = WebUI.getText(findTestObject('UI-B2B/OrderCompletePage/SpanSubtotal'))
-def spanShipping = WebUI.getText(findTestObject('UI-B2B/OrderCompletePage/SpanShipping')) 
-def spanTax = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanTaxTotal')) 
-def spanDiscount = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanDiscount')) 
-def spanTotal = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanTotal')) 
-spanSubTotal = (spanSubTotal.replace('$',''))
-spanShipping = (spanShipping.replace('$',''))
-spanTax = (spanTax.replace('$',''))
-spanDiscount = (spanDiscount.replace('$',''))
-spanTotal = (spanTotal.replace('$',''))
-float FloatSpanShipping = Float.parseFloat(spanShipping);
-float FloatSpanSubtotal = Float.parseFloat(spanSubTotal);
-float FloatSpanTax = Float.parseFloat(spanTax);
-float FloatSpanDiscount = Float.parseFloat(spanDiscount);
-float FloatSpanTotal = Float.parseFloat(spanTotal);
-float FloatResult = FloatSpanShipping + FloatSpanSubtotal + FloatSpanTax - FloatSpanDiscount
-String FloatSpanTotalString = String.format("%.2f", FloatSpanTotal);
-String FloatResultString = String.format("%.2f", FloatResult);
-System.out.println (FloatResult)
+
+def spanShipping = WebUI.getText(findTestObject('UI-B2B/OrderCompletePage/SpanShipping'))
+
+def spanTax = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanTaxTotal'))
+
+def spanDiscount = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanDiscount'))
+
+def spanTotal = WebUI.getText(findTestObject('Object Repository/UI-B2B/OrderCompletePage/SpanTotal'))
+
+spanSubTotal = spanSubTotal.replace('$', '')
+
+spanShipping = spanShipping.replace('$', '')
+
+spanTax = spanTax.replace('$', '')
+
+spanDiscount = spanDiscount.replace(' $', '')
+
+spanTotal = spanTotal.replace('$', '')
+
+float FloatSpanShipping = Float.parseFloat(spanShipping)
+
+float FloatSpanSubtotal = Float.parseFloat(spanSubTotal)
+
+float FloatSpanTax = Float.parseFloat(spanTax)
+
+float FloatSpanDiscount = Float.parseFloat(spanDiscount)
+
+float FloatSpanTotal = Float.parseFloat(spanTotal)
+
+float FloatResult = ((FloatSpanShipping + FloatSpanSubtotal) + FloatSpanTax) + FloatSpanDiscount
+
+String FloatSpanTotalString = String.format('%.2f', FloatSpanTotal)
+
+String FloatResultString = String.format('%.2f', FloatResult)
+
 WebUI.verifyEqual(FloatResultString, FloatSpanTotalString)
 

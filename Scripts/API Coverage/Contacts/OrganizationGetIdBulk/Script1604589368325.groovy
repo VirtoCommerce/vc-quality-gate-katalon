@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 WebUI.comment('TEST CASE: Get organizations by Id')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsGetIdBulk', [('orgId1') : GlobalVariable.organizationId]))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetIdBulk', [('orgId1') : GlobalVariable.organizationId]))
 
 // STEP | Parse request and save to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())

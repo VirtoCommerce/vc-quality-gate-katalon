@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Find new role</description>
+   <name>RoleSearch</name>
+   <tag></tag>
+   <comment>TEST CASE: Search user and set userId</comment>
+   <testCaseGuid>2f5795ec-66a3-4cc6-8811-a06dfe3cdb5d</testCaseGuid>
+</TestCaseEntity>

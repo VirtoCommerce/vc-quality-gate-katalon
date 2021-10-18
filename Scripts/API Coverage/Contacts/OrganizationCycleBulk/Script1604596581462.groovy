@@ -20,15 +20,15 @@ import groovyjarjarantlr.collections.List
 
 
 WebUI.comment('TEST CASE : Create 2 new organizations BULK')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsCreateBulk'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsCreateBulk'))
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE : Search new organizations and save Ids')
-responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
+responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
 def responseOrgJson = new JsonSlurper().parseText(responseOrg.getResponseBodyContent())
 orgId = responseOrgJson.results.id
 WebUI.comment('Organization ID : ' + orgId)
@@ -37,23 +37,23 @@ WS.verifyElementPropertyValue(responseOrg, 'totalCount', 2)
 
 WebUI.comment('TEST CASE : Update organization BULK')
 name1 = 'Qwe OrgBulkUpd1'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsUpdateBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1], ('name1') : name1]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsUpdateBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1], ('name1') : name1]))
 
 
 WebUI.comment('TEST CASE : Check Organization GET request by Id')
-//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsGetIdBulk', [('orgId1') : orgId[0]]))
+//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetIdBulk', [('orgId1') : orgId[0]]))
 WS.verifyElementPropertyValue(responseGet, 'name[0]', name1)
 
 
 WebUI.comment('TEST CASE : Delete created organization BULK')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsDelete', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsDelete', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/backend/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE : Search deleted orgs. Count 0 in result - orgs were deleted')
-responseOrg1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Organizations/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
+responseOrg1 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsSearch', [ ('searchPhrase') : GlobalVariable.firstName ] ))
 WS.verifyElementPropertyValue(responseOrg1, 'totalCount', 0)

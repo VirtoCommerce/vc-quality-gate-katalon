@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
 //def productRequest = 
-productResponse = WS.sendRequestAndVerify(findTestObject('API/backWebServices/ProductCreate'))
+productResponse = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ZHybrid/ProductCreate'))
 
 def productJson = new JsonSlurper().parseText(productResponse.getResponseBodyContent());
 GlobalVariable.productId = productJson.id

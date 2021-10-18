@@ -18,7 +18,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 // Create new Contact and save Id
 WebUI.comment('TEST CASE : Create employee')
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Customer management module/Employees/EmployeesCreate'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Employees/EmployeesCreate'))
 
 
 // STEP | Parse request and save token to the GlobalVariable

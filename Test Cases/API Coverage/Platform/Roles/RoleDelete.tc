@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Delete role and verification</description>
+   <name>RoleDelete</name>
+   <tag></tag>
+   <comment>TEST CASE: Delete role</comment>
+   <testCaseGuid>0531a8c1-17b4-490b-ab1a-e423bc86789b</testCaseGuid>
+</TestCaseEntity>
