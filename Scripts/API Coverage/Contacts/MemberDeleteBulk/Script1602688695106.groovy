@@ -20,4 +20,6 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 // Delete all created members 
 WebUI.comment("TEST CASE: Members BULK delete")
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDeleteBulk', [('keyword') : GlobalVariable.firstName] ))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDeleteBulk', [
+	('keyword') : GlobalVariable.firstName
+	]))

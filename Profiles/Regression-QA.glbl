@@ -5,6 +5,11 @@
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
+      <description>DONT BE SURPRISED WITH FAILED TEST</description>
+      <initValue>'REGRESSION ENV HAS ISSUES WITH DELETING DATA '</initValue>
+      <name>ATTENTION</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description></description>
       <initValue>'https://regression-storefront.qa.govirto.com'</initValue>
       <name>urlFront</name>

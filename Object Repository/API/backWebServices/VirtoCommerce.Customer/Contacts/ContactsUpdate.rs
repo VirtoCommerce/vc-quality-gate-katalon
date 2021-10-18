@@ -43,14 +43,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>GlobalVariable.contactId</description>
       <id>23ab5a83-6249-4640-ad2c-563d8e063e6e</id>
       <masked>false</masked>
       <name>contactId</name>
    </variables>
    <variables>
       <defaultValue>'Qwe ContactUpdated'</defaultValue>
-      <description></description>
+      <description>GlobalVariable.contactName + Updated</description>
       <id>8ae29fe1-e2c2-43da-aeac-26580e6fee9b</id>
       <masked>false</masked>
       <name>fullName</name>

@@ -19,9 +19,14 @@ import groovy.json.JsonSlurper as JsonSlurper
 import groovy.json.JsonOutput as JsonOutput
 
 WebUI.comment('TEST CASE : Update BULK employee')
-
+GlobalVariable.employeeId = GlobalVariable.id
 WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Employees/EmployeesUpdateBulk', [('id') : GlobalVariable.employeeId]))
+response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Customer/Employees/EmployeesUpdateBulk', [
+	('id') : GlobalVariable.employeeId,
+	("fullName") : GlobalVariable.contactName + "Upd",
+	("firstName") : GlobalVariable.firstName,
+	("lastName") : GlobalVariable.lastName,
+	]))
 
 //// STEP | Print json result
 //def pretty = JsonOutput.prettyPrint(response.getResponseBodyContent())

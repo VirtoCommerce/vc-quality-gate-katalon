@@ -43,14 +43,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>id of the contact to update</description>
       <id>4b2f0af2-4558-4924-bb67-8c202239b39d</id>
       <masked>false</masked>
       <name>contactId</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>address new name</description>
       <id>9d8a88ff-406d-4f69-b32f-621e291d852f</id>
       <masked>false</masked>
       <name>name</name>

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    //\&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    //\&quot;memberId\&quot;: null,\n    \&quot;searchPhrase\&quot;: \&quot;Qwe\&quot;,\n    //\&quot;searchPhrase\&quot;: \&quot;${searchPhrase}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;take\&quot;: 20\n}&quot;,
+  &quot;text&quot;: &quot;{\n    //\&quot;responseGroup\&quot;: \&quot;None\&quot;,\n    //\&quot;memberId\&quot;: null,\n    //\&quot;searchPhrase\&quot;: \&quot;Qwe\&quot;,\n    \&quot;searchPhrase\&quot;: \&quot;${searchPhrase}\&quot;,\n    \&quot;deepSearch\&quot;: true,\n    \&quot;sort\&quot;: \&quot;memberType:asc;name:asc\&quot;,\n    \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

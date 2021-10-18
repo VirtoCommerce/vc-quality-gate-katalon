@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;Qwe OrgUpdated\&quot;,\n  \&quot;description\&quot;: \&quot;Updated Org\&quot;,\n  \&quot;id\&quot;: \&quot;${orgId}\&quot;,\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;0123456789\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;description\&quot;: \&quot;Updated Org\&quot;,\n  \&quot;id\&quot;: \&quot;${orgId}\&quot;,\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;0123456789\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -43,14 +43,14 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'154dbeaf-ba9b-40c9-a2bd-df9b4b07e1de'</defaultValue>
-      <description></description>
+      <description>id of org to update</description>
       <id>7d45ebee-9a77-4e8b-ac65-7afb41098da7</id>
       <masked>false</masked>
       <name>orgId</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>name of the updayted organiztion</description>
       <id>e44b3c08-eeb3-46a2-8bd9-0e1951842dc8</id>
       <masked>false</masked>
       <name>name</name>

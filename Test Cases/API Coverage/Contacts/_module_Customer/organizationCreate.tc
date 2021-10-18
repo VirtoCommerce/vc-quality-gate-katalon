@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>send request to create organiztion</description>
+   <name>organizationCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f76d54aa-b58b-4d25-bf5a-f67785d84bef</testCaseGuid>
+</TestCaseEntity>

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;name\&quot;: \&quot;${name1}\&quot;,\n    \&quot;description\&quot;: \&quot;Updated Org1\&quot;,\n    \&quot;id\&quot;: \&quot;${orgId1}\&quot;,\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG1\&quot;,\n      \&quot;TEST UG2\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;0123456789\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test@test.com\&quot;\n    ]\n  },\n  {\n    \&quot;name\&quot;: \&quot;Qwe OrgBulkUpd2\&quot;,\n    \&quot;description\&quot;: \&quot;Updated Org2\&quot;,\n    \&quot;id\&quot;: \&quot;${orgId2}\&quot;,\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG1\&quot;,\n      \&quot;TEST UG2\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;0123456789\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test@test.com\&quot;\n    ]\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;name\&quot;: \&quot;${name1}\&quot;,\n    \&quot;description\&quot;: \&quot;Updated Org1\&quot;,\n    \&quot;id\&quot;: \&quot;${orgId1}\&quot;,\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG1\&quot;,\n      \&quot;TEST UG2\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;0123456789\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test@test.com\&quot;\n    ]\n  },\n  {\n    \&quot;name\&quot;: \&quot;${name2}\&quot;,\n    \&quot;description\&quot;: \&quot;Updated Org2\&quot;,\n    \&quot;id\&quot;: \&quot;${orgId2}\&quot;,\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG1\&quot;,\n      \&quot;TEST UG2\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;0123456789\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test@test.com\&quot;\n    ]\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -43,24 +43,31 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>id of the org to update</description>
       <id>0a0aaca9-10df-4759-b815-cf9f13e8ed4c</id>
       <masked>false</masked>
       <name>orgId1</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
-      <id>09044439-1181-4b19-bf86-27bfb40d4e7e</id>
-      <masked>false</masked>
-      <name>orgId2</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
+      <description>organization name</description>
       <id>c153ac3b-33c7-4fa5-a299-858410602b4a</id>
       <masked>false</masked>
       <name>name1</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>organization name</description>
+      <id>24f018da-0be4-473d-8ad5-d620fcbfff62</id>
+      <masked>false</masked>
+      <name>name2</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>id of the org to update</description>
+      <id>09044439-1181-4b19-bf86-27bfb40d4e7e</id>
+      <masked>false</masked>
+      <name>orgId2</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

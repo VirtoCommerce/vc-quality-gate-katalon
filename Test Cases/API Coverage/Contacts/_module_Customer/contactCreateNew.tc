@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>'Create new Contact and save Id'</description>
+   <name>contactCreateNew</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9c442b8e-5b0b-4dd3-afa6-daa374c40022</testCaseGuid>
+</TestCaseEntity>

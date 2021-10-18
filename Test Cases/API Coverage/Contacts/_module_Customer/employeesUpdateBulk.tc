@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>employeesUpdateBulk</name>
+   <tag></tag>
+   <comment>TEST CASE : Update BULK employee
+Verify if full name after sending request is correct or not</comment>
+   <testCaseGuid>b285c7ad-1726-4627-b944-ee5f0926c329</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>get contacts data by contactIds</description>
+   <name>contactBulkGetByIds</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b9299258-2766-47ea-8f68-281dfe484d61</testCaseGuid>
+</TestCaseEntity>
