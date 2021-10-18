@@ -36,7 +36,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'autotestuse1r@test.ru'</initValue>
+      <initValue>'autotestuser@test.ru'</initValue>
       <name>Email</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -71,7 +71,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'testbus3@test.ru'</initValue>
+      <initValue>'testbus4@test.ru'</initValue>
       <name>EmailBusiness</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
