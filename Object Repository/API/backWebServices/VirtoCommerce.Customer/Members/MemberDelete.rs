@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'123'</defaultValue>
-      <description></description>
+      <description>id of a member to delete</description>
       <id>19928168-0635-454e-838c-89bccc442608</id>
       <masked>false</masked>
       <name>id</name>

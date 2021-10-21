@@ -93,7 +93,7 @@
       <guid>15514ee3-136d-4233-8c5d-e708cc810c89</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/MemberUpdateBulk</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberUpdateBulk</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>17cb6e06-56f5-44c1-8a78-b6013313bf67</guid>

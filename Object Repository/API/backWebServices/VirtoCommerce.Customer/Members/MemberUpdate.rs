@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;Qwe Updated\&quot;,\n  \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n  \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n  \&quot;fullName\&quot;: \&quot;Qwe Updated\&quot;,\n  \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;,\n  \&quot;addresses\&quot;: [\n    {\n    \t\&quot;addressType\&quot;: \&quot;Billing\&quot;,\n\t    \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n\t\t\&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,    \n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Updated region\&quot;,\n        \&quot;city\&quot;: \&quot;Updated city\&quot;,\n        \&quot;line1\&quot;: \&quot;Updated adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Updated adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;123000\&quot;,\n        \&quot;name\&quot;: \&quot;Qwest\&quot;\n    }\n  ],\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;00000000\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ],\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n  \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n  \&quot;fullName\&quot;: \&quot;${name}\&quot;,\n  \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;,\n  \&quot;addresses\&quot;: [\n    {\n    \t\&quot;addressType\&quot;: \&quot;Billing\&quot;,\n\t    \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n\t\t\&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,    \n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Updated region\&quot;,\n        \&quot;city\&quot;: \&quot;Updated city\&quot;,\n        \&quot;line1\&quot;: \&quot;Updated adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Updated adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;123000\&quot;,\n        \&quot;name\&quot;: \&quot;Qwest\&quot;\n    }\n  ],\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;00000000\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ],\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -43,17 +43,31 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'Contact'</defaultValue>
-      <description></description>
+      <description>update member type</description>
       <id>c7f6f6ba-b6ca-448d-adc5-f2ef6e501f98</id>
       <masked>false</masked>
       <name>memberType</name>
    </variables>
    <variables>
       <defaultValue>'448605d3-40a4-4aa8-87de-3caf97feee85'</defaultValue>
-      <description></description>
+      <description>updated member id</description>
       <id>145bccc0-f440-4468-bd8b-93166c761028</id>
       <masked>false</masked>
       <name>id</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>updated member name</description>
+      <id>1e42542c-3ca9-41a1-9924-58dde9c9ebf9</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>'contactFullName'</defaultValue>
+      <description>not used. updated member full name</description>
+      <id>8e29c1a6-b247-4972-a730-3880cc82281d</id>
+      <masked>false</masked>
+      <name>fullName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -67,7 +81,6 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil
 
 RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
-
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 204)

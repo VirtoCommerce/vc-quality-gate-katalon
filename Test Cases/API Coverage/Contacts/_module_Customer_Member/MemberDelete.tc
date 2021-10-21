@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Delete member + verification</description>
+   <name>MemberDelete</name>
+   <tag></tag>
+   <comment>TEST CASE: Member delete
+TEST CASE: Member search</comment>
+   <testCaseGuid>da8a1a24-cf3b-44f4-af09-cc67c796e5da</testCaseGuid>
+</TestCaseEntity>

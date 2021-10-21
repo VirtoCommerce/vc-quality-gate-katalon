@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>vendor id</description>
       <id>1b2f4aab-a0cf-470c-b686-1f7669e3ad1d</id>
       <masked>false</masked>
       <name>id</name>

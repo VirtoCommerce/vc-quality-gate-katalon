@@ -38,8 +38,8 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'448605d3-40a4-4aa8-87de-3caf97feee85'</defaultValue>
-      <description></description>
+      <defaultValue>'1ed0907a-e3b1-423f-a053-f642522143b0'</defaultValue>
+      <description>searched member id</description>
       <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
       <masked>false</masked>
       <name>id</name>

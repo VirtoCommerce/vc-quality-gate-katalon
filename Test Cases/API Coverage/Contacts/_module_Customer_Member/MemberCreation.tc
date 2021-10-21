@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Creation of all member types</description>
+   <name>MemberCreation</name>
+   <tag></tag>
+   <comment>TEST CASE: Member creation
+TYPES IS : &quot; + memberType</comment>
+   <testCaseGuid>5b9eb1cd-decb-4f44-ae73-7c316ea1dd0c</testCaseGuid>
+</TestCaseEntity>

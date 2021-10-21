@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Check Vendor Get and Serch requests</description>
+   <name>VendorGetSearch</name>
+   <tag></tag>
+   <comment>Vendor ID : &quot; + GlobalVariable.memberId[2]
+TEST CASE : Vendor Get by Id 1 check
+TEST CASE : Vendor Get by Id 2 check
+TEST CASE : Vendor seach</comment>
+   <testCaseGuid>bc3f429c-acbd-4bb7-9a69-57d8b6083a69</testCaseGuid>
+</TestCaseEntity>

@@ -25,8 +25,7 @@ import groovy.json.JsonOutput
 
 
 WebUI.comment("TEST CASE : Create new organization")
-def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [
-	('memberType') : GlobalVariable.memberType[0]] ))
+def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [('memberType') : GlobalVariable.memberType[0]] ))
 def memberJson = new JsonSlurper().parseText(responseMemberCreate.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id
 

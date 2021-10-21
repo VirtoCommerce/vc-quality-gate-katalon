@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>MemberCreationInOrgWithAccount</name>
+   <tag></tag>
+   <comment>TEST CASE: Org creation
+TEST CASE: Contact creation
+TEST CASE: Account user creation
+TEST CASE: Reset to new password
+TEST CASE: Delete user
+TEST CASE: Members BULK delete</comment>
+   <testCaseGuid>d299e710-05b1-42e7-84dd-847295e9e112</testCaseGuid>
+</TestCaseEntity>

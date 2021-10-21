@@ -14,18 +14,19 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper as JsonSlurper
 
 
-// Updated member buy BULK request
-WebUI.comment('TEST CASE: Member BULK update')
-WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariable.memberType[1])
+WebUI.comment('TEST CASE: Organization search')
 
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdateBulk', [('id1') : GlobalVariable.memberId[0], ('memberType1') : GlobalVariable.memberType[1]]))
+'DROP INDEX FIRST'
+WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
-// Check updated member
-//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
-//WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')
+
+'SEARCH FOR ORGANIZATION'
+responseOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsSearch', [
+	('searchPhrase') : GlobalVariable.firstName
+	]))
+return responseOrg
 
