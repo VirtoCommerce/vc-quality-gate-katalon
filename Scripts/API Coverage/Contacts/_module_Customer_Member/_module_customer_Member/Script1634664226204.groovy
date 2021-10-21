@@ -92,3 +92,7 @@ memberDeleteBulk = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contact
 	null) 	
 
 
+'17'
+createOrgWithAccount = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberCreationInOrgWithAccount'),
+	null)
+

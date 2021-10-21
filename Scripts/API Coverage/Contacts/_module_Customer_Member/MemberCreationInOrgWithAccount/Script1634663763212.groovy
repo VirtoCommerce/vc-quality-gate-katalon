@@ -23,16 +23,21 @@ import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 
 
-
 WebUI.comment("TEST CASE : Create new organization")
-def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [('memberType') : GlobalVariable.memberType[0]] ))
+def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [
+		('memberType') : GlobalVariable.memberType[0],
+		('name') : GlobalVariable.firstName,
+		('firstName') : GlobalVariable.firstName,
+		('lastName') : GlobalVariable.lastName,
+		('fullName') : GlobalVariable.contactName,
+		]))
 def memberJson = new JsonSlurper().parseText(responseMemberCreate.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id
 
 
 WebUI.comment("TEST CASE : Create contact in the organization")
 def responseMemberCreateInOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreateInOrg', [
-	('memberType') : GlobalVariable.memberType[1], 
+	('memberType') : GlobalVariable.memberType[1],
 	('orgId') : GlobalVariable.memberId
 	]))
 def memberJson2 = new JsonSlurper().parseText(responseMemberCreateInOrg.getResponseBodyContent())
@@ -48,8 +53,8 @@ WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', GlobalVar
 
 WebUI.comment('TEST CASE : Remove Org and Contact relation')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdate', [
-	('contactId') : GlobalVariable.contactId, 
-	('fullName') : GlobalVariable.contactName
+	('contactId') : GlobalVariable.contactId,
+	('fullName') : GlobalVariable.firstName
 	]))
 
 
@@ -68,8 +73,8 @@ WebUI.comment("TEST CASE : Create user in account-contact")
 GlobalVariable.userName = 'tempuser'
 Random rnd = new Random()
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
-	('email') : rnd.nextInt(100)+'@email.com', 
-	('userName') : GlobalVariable.userName, 
+	('email') : rnd.nextInt(100)+'@email.com',
+	('userName') : GlobalVariable.userName,
 	('contactId') : GlobalVariable.contactId
 	]))
 

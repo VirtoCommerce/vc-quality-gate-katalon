@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;id\&quot;: \&quot;${id1}\&quot;,\n    //\&quot;id\&quot;: \&quot;${GlobalVariable.memberId[0]}\&quot;,\n    \&quot;name\&quot;: \&quot;${name1}\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n    \&quot;fullName\&quot;: \&quot;Qwe BulkContact\&quot;,\n    //\&quot;memberType\&quot;: \&quot;\&quot;,\n    \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n    //\&quot;memberType\&quot;: \&quot;${GlobalVariable.memberType[0]}\&quot;,\n    \&quot;addresses\&quot;: [\n      {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n        \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n        \&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Upd region\&quot;,\n        \&quot;city\&quot;: \&quot;Upd city\&quot;,\n        \&quot;line1\&quot;: \&quot;Upd adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Upd adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;001122\&quot;,\n        \&quot;name\&quot;: \&quot;Qwesttttt\&quot;\n      }\n    ],\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG0\&quot;,\n      \&quot;TEST UG10\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;000000001\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test1@test.com\&quot;\n    ]\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;id\&quot;: \&quot;${id1}\&quot;,\n    \n    \&quot;name\&quot;: \&quot;${name1}\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n    \&quot;fullName\&quot;: \&quot;Qwe BulkContact\&quot;,\n    \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n    \&quot;addresses\&quot;: [\n      {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n        \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n        \&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Upd region\&quot;,\n        \&quot;city\&quot;: \&quot;Upd city\&quot;,\n        \&quot;line1\&quot;: \&quot;Upd adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Upd adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;001122\&quot;,\n        \&quot;name\&quot;: \&quot;Qwesttttt\&quot;\n      }\n    ],\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG0\&quot;,\n      \&quot;TEST UG10\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;000000001\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test1@test.com\&quot;\n    ]\n  },\n   {\n    \&quot;id\&quot;: \&quot;${id2}\&quot;,\n    \n    \&quot;name\&quot;: \&quot;${name2}\&quot;,\n    \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n    \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n    \&quot;fullName\&quot;: \&quot;Qwe BulkContact\&quot;,\n    \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n    \&quot;addresses\&quot;: [\n      {\n        \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n        \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n        \&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Upd region\&quot;,\n        \&quot;city\&quot;: \&quot;Upd city\&quot;,\n        \&quot;line1\&quot;: \&quot;Upd adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Upd adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;001122\&quot;,\n        \&quot;name\&quot;: \&quot;Qwesttttt\&quot;\n      }\n    ],\n    \&quot;groups\&quot;: [\n      \&quot;TEST UG0\&quot;,\n      \&quot;TEST UG10\&quot;\n    ],\n    \&quot;phones\&quot;: [\n      \&quot;000000001\&quot;\n    ],\n    \&quot;emails\&quot;: [\n      \&quot;test1@test.com\&quot;\n    ]\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -61,6 +61,20 @@
       <id>9f18ed43-b566-44a1-9b24-bf59e2e0c5ab</id>
       <masked>false</masked>
       <name>memberType</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c2662680-ca72-487d-ba7f-adf2f0f1a6ad</id>
+      <masked>false</masked>
+      <name>id2</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>9673eecd-6a9e-47a2-94c2-47e2f1cb7650</id>
+      <masked>false</masked>
+      <name>name2</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

@@ -28,12 +28,13 @@ List <String> memberTypeId = GlobalVariable.memberId
 
 
 'GET MEMBER BY ID, VERIFY IF NAMES ARE UPDATED'
+'GlobalVariable.TEMP  = GlobalVariable.firstName + UPD'
 for (int i; i < memberTypeId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
-
     memberGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
-		('id') : memberTypeId.get(i)]))
-	WS.verifyElementPropertyValue(memberGet, 'name', GlobalVariable.firstName)
+		('id') : memberTypeId.get(i)
+		]))
+	WS.verifyElementPropertyValue(memberGet, 'name', GlobalVariable.TEMP)
 	//WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 	}
 	

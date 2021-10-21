@@ -25,8 +25,10 @@ WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariab
 GlobalVariable.firstName = GlobalVariable.firstName + 'BulkUPD'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdateBulk', [
 	('id1') : GlobalVariable.memberId[0],
+	('name1') : GlobalVariable.firstName,
+	('id2') : GlobalVariable.memberId[1],
+	('name2') : GlobalVariable.firstName,
 	('memberType') : GlobalVariable.memberType[0],
-	('name1') : GlobalVariable.firstName
 	]))
 
 
