@@ -21,78 +21,52 @@ import org.openqa.selenium.Keys as Keys
 createMembers = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberCreation'),
 	null)
 
-'2 - Index step has been moved to "3""'
 
-
-'3'
-'???SPLIT THIS STEP???'
+'2'
 getSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/VendorGetSearch'),
 null)
 
 
-'4'
-getAllInOrganizations = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberGetAllInOrganizations'),
+'3'
+getAllInOrganizations = WS.callTestCase(findTestCase('API Coverage/Contacts/_module_Customer_Member/MemberGetAllInOrganizations'),
 null)
 
 
-'5'
+'4'
 getOrgs = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberGetOrganizations'),
 null)
 
 
-'6'
-memberSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberSearch'),
-	null)
-
-
-'7'
-WS.delay(10)
-
-
-'8'
+'5'
 memberUpdate = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberUpdate'),
 	null)
 
-'9'
-WS.delay(10)
-
-
-'10'
+'6'
 memberGitId = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberGitId'),
 	null)
 
 
-'11'
-'???SPLIT THIS STEP???'
+'7'
 memberDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberDelete'),
 	null)
 
 
-'12'
+'8!!!!!!!'
 memberCreationBulk = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberCreationBulk'),
 	null) 	
 
 
-'13' 
-'dropindex is in 12 test'
-
-
-'14' 
-'I just left it the way it originally was, as it got me frustrated'
+'9' 
 memberUpdateBulk = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberUpdateBulk'),
-	null) 	
-
-'15'
-memberGitIdGroup = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MembersGitIdGroup'),
-	null) 	
+	null) 		
 
 
-'16' 
+'10' 
 memberDeleteBulk = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberDeleteBulk'),
 	null) 	
 
 
-'17'
+'11'
 createOrgWithAccount = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberCreationInOrgWithAccount'),
 	null)
 

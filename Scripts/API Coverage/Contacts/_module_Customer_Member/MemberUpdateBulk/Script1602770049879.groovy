@@ -22,19 +22,30 @@ import groovy.json.JsonSlurper as JsonSlurper
 WebUI.comment('TEST CASE: Member BULK update')
 WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariable.memberType[0])
 
-GlobalVariable.firstName = GlobalVariable.firstName + 'BulkUPD'
+'UPDATE CREATED MEMBERS'
+updatedName1 = GlobalVariable.firstName + ' 1_BulkUPD'
+updatedName2 = GlobalVariable.firstName + ' 2_BulkUPD'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdateBulk', [
 	('id1') : GlobalVariable.memberId[0],
-	('name1') : GlobalVariable.firstName,
+	('name1') : updatedName1,
 	('id2') : GlobalVariable.memberId[1],
-	('name2') : GlobalVariable.firstName,
+	('name2') : updatedName2,
 	('memberType') : GlobalVariable.memberType[0],
 	]))
 
 
-'DROP  INDEX'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
-WS.delay(10)
+'CHECK UPDATED MEMBER'
+checkUpdated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MembersGitIdGroup'), 
+	null)
+WS.verifyElementPropertyValue(checkUpdated, 'name', updatedName1)
+
+
+'VERIFY UPDATED NAMES'
+verifyUpdated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberSearch'),
+	null)
+WS.verifyElementPropertyValue(verifyUpdated, 'totalCount', 2)
+WS.verifyElementPropertyValue(verifyUpdated, 'results[0].name', updatedName1)
+WS.verifyElementPropertyValue(verifyUpdated, 'results[1].name', updatedName2)
 
 
 // Check updated member

@@ -6,7 +6,7 @@
    <elementGuidId>be33d852-64fc-4327-9208-b3b4577f57f8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <connectionTimeout>-1</connectionTimeout>
+   <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent></httpBodyContent>
@@ -25,7 +25,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <maxResponseSize>-1</maxResponseSize>
+   <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/members/${id}</restUrl>
@@ -35,10 +35,10 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>-1</socketTimeout>
+   <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'1ed0907a-e3b1-423f-a053-f642522143b0'</defaultValue>
+      <defaultValue>'556620ca-b8de-40ea-a16e-e3c57765d539'</defaultValue>
       <description>searched member id</description>
       <id>5d70b2a6-1a28-4601-95c6-b95a1937a9cb</id>
       <masked>false</masked>

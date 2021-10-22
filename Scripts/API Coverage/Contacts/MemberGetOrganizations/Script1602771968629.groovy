@@ -24,7 +24,4 @@ WebUI.comment("TEST CASE: Member search ORGANIZATIONS")
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberOrganizationsGet'))
 getOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberOrganizationsGet'))
 WS.containsString(getOrg, GlobalVariable.firstName, false)
-
-
-
 //assertThat(response.getResponseText()).contains(GlobalVariable.firstName)

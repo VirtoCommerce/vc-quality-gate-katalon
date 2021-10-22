@@ -14,13 +14,13 @@
    <testCaseLink>
       <guid>d1d8b83c-1f71-48c3-9523-c3eb07339bc7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e5314e3c-5d6c-4989-ad68-3e29368e8596</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>9064ab47-7903-4d66-a627-130c09bebe25</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberGetAllInOrganizations</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -46,12 +46,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberGetOrganizations</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>4e38a9bf-31ab-4d13-bccc-77b1b77b968b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1fa03287-1d60-4945-ab8a-5df0ede5bed6</guid>
@@ -82,12 +76,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberUpdateBulk</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>58315324-e1d0-44a2-ac1f-fd33c07fab2b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MembersGitIdGroup</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5a74f2f4-17a9-4366-8015-18976799aa23</guid>

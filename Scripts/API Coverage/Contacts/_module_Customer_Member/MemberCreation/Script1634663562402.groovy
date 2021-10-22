@@ -17,10 +17,10 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
 
-'CREATE ENTITY FOR EACH MEMBERTYPE, SAVE CREATED MEMBERs IDs'
-
-
 WebUI.comment("TEST CASE: Member creation")
+
+
+'CREATE ENTITY FOR EACH MEMBERTYPE, SAVE CREATED MEMBERs IDs'
 List <String> memberType = GlobalVariable.memberType
 
 WebUI.comment("TYPES IS : " + memberType)
@@ -38,6 +38,16 @@ for (int i; i < memberType.size(); i++) {
     (GlobalVariable.memberId[i]) = memberJson.id 
     WebUI.comment(memberType.get(i) + " ID is : " + GlobalVariable.memberId[i])
 }
+
+
+'VERIFY MEMBERS ARE CREATED'
+verifyCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberSearch'),
+	null)
+WS.verifyElementPropertyValue(verifyCreated, 'totalCount', 4)
+WS.verifyElementPropertyValue(verifyCreated, 'results[0].name', GlobalVariable.firstName)
+WS.verifyElementPropertyValue(verifyCreated, 'results[1].name', GlobalVariable.firstName)
+WS.verifyElementPropertyValue(verifyCreated, 'results[2].name', GlobalVariable.firstName)
+WS.verifyElementPropertyValue(verifyCreated, 'results[3].name', GlobalVariable.firstName)
 //GlobalVariable.organizationId = GlobalVariable.memberId[0]
 //GlobalVariable.contactId = GlobalVariable.memberId[1]
 //GlobalVariable.vendorId = GlobalVariable.memberId[2]

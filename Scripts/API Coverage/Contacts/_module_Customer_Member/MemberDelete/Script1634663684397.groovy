@@ -30,13 +30,8 @@ for (int i; i < memberId.size(); i++) {
 }
 
 
-'Re-index important to search items'
-WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
-
-
-'Search new contact. Count 0 in result - contact was deleted'
-WebUI.comment("TEST CASE: Member search")
-responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', [
-	('searchPhrase') : GlobalVariable.firstName] ))
-WS.verifyElementPropertyValue(responseSearch, 'totalCount', 0)
+'VERIFY DELETED'
+VerifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/MemberSearch'), 
+	null)
+WS.verifyElementPropertyValue(VerifyDeleted, 'totalCount', 0)
 

@@ -21,5 +21,6 @@ import groovy.json.JsonSlurper
 
 WebUI.comment("TEST CASE: Member search ORGANIZATIONS")
 getOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberOrganizationsGet'))
-WS.containsString(getOrg, GlobalVariable.firstName, false)
+return getOrg
+//WS.containsString(getOrg, GlobalVariable.firstName, false)
 //assertThat(response.getResponseText()).contains(GlobalVariable.firstName)

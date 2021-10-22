@@ -18,7 +18,8 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 
 'GET VENDOR DATA FROM DIFFERENT ENDPOINTS'
-
+//SPLITTING THIS TEST WILL CAUSE SEPARATE INDEXATION FOR EACH STEP
+//SPLITTING DECLINED AS THIS WILL SIGNIFICANTLY INCREASE GENERAL INDEXATION TIMEOUT. 
 
 'DROP INDEX FIRST'
 dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'), null)
@@ -30,15 +31,20 @@ WebUI.comment('TEST CASE : Vendor Get by Id 1 check')
 getVendorId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetId', [
 	('id') : GlobalVariable.memberId[2]
 	]))
+return getVendorId
+println getVendorId
+WS.verifyElementPropertyValue(getVendorId, 'name', GlobalVariable.firstName)
+WS.verifyElementPropertyValue(getVendorId, 'memberType', GlobalVariable.memberType[2])
 
 
 'GET BULK VENDOR DATA BY IDs'
 WebUI.comment('TEST CASE : Vendor Get by Id BULK 2 check')
 getVendorIdBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetIdsBulk', [
 	('id') : GlobalVariable.memberId[2],
-	('storeId') : GlobalVariable.storeId,
-	('parentId') : GlobalVariable.memberId[0]
 	]))
+return getVendorIdBulk
+WS.verifyElementPropertyValue(getVendorId, 'name', GlobalVariable.firstName)
+WS.verifyElementPropertyValue(getVendorId, 'memberType', GlobalVariable.memberType[2])
 
 
 'SEARCH VENDOR'
@@ -46,5 +52,7 @@ WebUI.comment('TEST CASE : Vendor seach')
 searchVendor = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsSearch', [
 	('searchPhrase') : GlobalVariable.firstName
 	]))
+WS.verifyElementPropertyValue(searchVendor, 'totalCount', '1')
+WS.verifyElementPropertyValue(searchVendor, 'results[0].id', GlobalVariable.memberId[2])
 
 

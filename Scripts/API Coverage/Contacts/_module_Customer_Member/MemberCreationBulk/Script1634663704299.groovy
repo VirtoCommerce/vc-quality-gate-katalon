@@ -22,8 +22,8 @@ WebUI.comment("TEST CASE: Members BULK Create")
 
 //WebUI.comment("MEMBER ORG ID IS : " + GlobalVariable.memberType[0])
 'CREATE BULK MEMBERS'
-name1 = GlobalVariable.firstName + '1'
-name2 = GlobalVariable.firstName + '2'
+name1 = GlobalVariable.firstName + ' 1'
+name2 = GlobalVariable.firstName + ' 2'
 responseBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreateBulk',[
 	('name1') : name1,
 	('name2') : name2,
@@ -31,13 +31,16 @@ responseBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	]))
 
 
+'VERIFY MEMBERS ARE CREATED'
+verifyCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberSearch'),
+	null)
+WS.verifyElementPropertyValue(verifyCreated, 'totalCount', 2)
+WS.verifyElementPropertyValue(verifyCreated, 'results[0].name', name1)
+WS.verifyElementPropertyValue(verifyCreated, 'results[1].name', name2)
+
+
 'GET THE LIST OF MEMBER IDs'
 def memberJson = new JsonSlurper().parseText(responseBulk.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id
 WebUI.comment("MEMBER ID IS : " + GlobalVariable.memberId)
-
-
-'DROP  INDEX'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
-WS.delay(10)
 

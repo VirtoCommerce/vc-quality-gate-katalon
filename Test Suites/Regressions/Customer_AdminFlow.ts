@@ -12,6 +12,18 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8704074e-b819-445e-bd2c-2a0cfcc21ba4</testSuiteGuid>
    <testCaseLink>
+      <guid>bf406fb2-109f-440c-84ba-934423ee33ad</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>212a18be-2615-4397-a289-3a0f40a7ccd4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>93729668-c893-4b08-949b-854cec218c85</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -32,7 +44,7 @@
    <testCaseLink>
       <guid>190ee105-9863-418a-8a01-4a52e02560bb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberGetAllInOrganizations</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -90,10 +102,10 @@
       <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>15514ee3-136d-4233-8c5d-e708cc810c89</guid>
+      <guid>3c422820-23a8-4e8f-b615-e2b43ba78686</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberUpdateBulk</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberUpdateBulk</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>17cb6e06-56f5-44c1-8a78-b6013313bf67</guid>
@@ -112,5 +124,17 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberCreationInOrgWithAccount</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3a3b4de9-3813-4b1a-977c-e40450723406</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9bb70b32-29eb-43f0-a576-c0d521e26764</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -16,12 +16,18 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-
-// Search new members. Created count = 4 and check firstName in results
 WebUI.comment("TEST CASE: Member search")
+
+
+'DROP INDEX FIRST'
+dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'), null)
+
+
+'SEARCH FOR NEW MEMBERS'
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', [
 	('searchPhrase') : GlobalVariable.firstName
 	]))
-WS.verifyElementPropertyValue(responseSearch, 'totalCount', 4)
-WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
+return responseSearch
+//WS.verifyElementPropertyValue(responseSearch, 'totalCount', 4)
+//WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
 
