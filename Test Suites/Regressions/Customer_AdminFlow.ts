@@ -14,13 +14,13 @@
    <testCaseLink>
       <guid>bf406fb2-109f-440c-84ba-934423ee33ad</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>212a18be-2615-4397-a289-3a0f40a7ccd4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -44,7 +44,7 @@
    <testCaseLink>
       <guid>190ee105-9863-418a-8a01-4a52e02560bb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberGetAllInOrganizations</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -124,17 +124,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberCreationInOrgWithAccount</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3a3b4de9-3813-4b1a-977c-e40450723406</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>9bb70b32-29eb-43f0-a576-c0d521e26764</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

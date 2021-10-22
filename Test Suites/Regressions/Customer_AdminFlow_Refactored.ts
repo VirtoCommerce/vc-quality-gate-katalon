@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>9064ab47-7903-4d66-a627-130c09bebe25</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberGetAllInOrganizations</testCaseId>
    </testCaseLink>
    <testCaseLink>
