@@ -38,14 +38,14 @@ for (int i; i < memberType.size(); i++) {
     (GlobalVariable.memberId[i]) = memberJson.id 
     WebUI.comment(memberType.get(i) + " ID is : " + GlobalVariable.memberId[i])
 }
-GlobalVariable.organizationId = GlobalVariable.memberId[0]
-GlobalVariable.contactId = GlobalVariable.memberId[1]
-GlobalVariable.vendorId = GlobalVariable.memberId[2]
-GlobalVariable.employeeId = GlobalVariable.memberId[3]
-
-println GlobalVariable.organizationId
-println GlobalVariable.contactId
-println GlobalVariable.vendorId
-println GlobalVariable.employeeId
+//GlobalVariable.organizationId = GlobalVariable.memberId[0]
+//GlobalVariable.contactId = GlobalVariable.memberId[1]
+//GlobalVariable.vendorId = GlobalVariable.memberId[2]
+//GlobalVariable.employeeId = GlobalVariable.memberId[3]
+//
+//println GlobalVariable.organizationId
+//println GlobalVariable.contactId
+//println GlobalVariable.vendorId
+//println GlobalVariable.employeeId
 
 

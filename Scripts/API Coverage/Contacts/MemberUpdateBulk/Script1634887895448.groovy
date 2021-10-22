@@ -13,14 +13,26 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
+import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+import groovy.json.JsonSlurper as JsonSlurper
 
+//GlobalVariable.memberId[0] = '3f971545-ad3f-4f74-b838-d909e752120b'
+// Updated member buy BULK request
+WebUI.comment('TEST CASE: Member BULK update')
+WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariable.memberType[0])
 
-// Get all member organizations || Need explanation for request
-WebUI.comment("TEST CASE: Get member in organization")
-b2bOrganizationId = 'd690f3df-8782-4dcc-99be-a1f644220e50'
-b2bMemberId = 'cb0a5340-f9fb-4f49-bd62-9d03518868ff'
-getAllMembers = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetAllInOrganizations',[
-	('orgId') : b2bOrganizationId,
-	('memberId') : b2bMemberId
+GlobalVariable.firstName = GlobalVariable.firstName + 'BulkUPD'
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdateBulk', [
+	('id1') : GlobalVariable.memberId[0],
+	('name1') : GlobalVariable.firstName,
+	('id2') : GlobalVariable.memberId[1],
+	('name2') : GlobalVariable.firstName,
+	('memberType') : GlobalVariable.memberType[0],
 	]))
-WS.containsString(getAllMembers, b2bOrganizationId, false)
+
+
+// Check updated member
+//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
+//WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')
+

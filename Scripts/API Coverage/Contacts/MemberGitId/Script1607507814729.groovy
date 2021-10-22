@@ -27,7 +27,8 @@ List <String> memberTypeId = GlobalVariable.memberId
 for (int i; i < memberTypeId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
 
-    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : memberTypeId.get(i)]))
-	WS.verifyElementPropertyValue(responseGet, 'name', 'Qwe Updated')
+    responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
+		('id') : memberTypeId.get(i)]))
+	WS.verifyElementPropertyValue(responseGet, 'name', GlobalVariable.TEMP)
 	//WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 	}

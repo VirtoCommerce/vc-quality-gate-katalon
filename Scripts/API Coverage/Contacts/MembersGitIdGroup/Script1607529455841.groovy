@@ -20,5 +20,6 @@ import groovy.json.JsonSlurper
 WebUI.comment("TEST CASE: Member get by ID group")
 
 println(GlobalVariable.memberId[0])
-responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
-WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkContact')
+responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
+	('id') : GlobalVariable.memberId[0]]))
+WS.verifyElementPropertyValue(responseGet, 'name', GlobalVariable.firstName)

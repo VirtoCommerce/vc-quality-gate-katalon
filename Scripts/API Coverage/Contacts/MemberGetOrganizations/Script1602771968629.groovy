@@ -17,6 +17,14 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
 
-// Get list member-organization | Verify created org by assertThat "firstName"
 WebUI.comment("TEST CASE: Member search ORGANIZATIONS")
+
+
+'GET LIST MEMBER ORGANIZATION| Verify created org by assertThat "firstName"'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberOrganizationsGet'))
+getOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberOrganizationsGet'))
+WS.containsString(getOrg, GlobalVariable.firstName, false)
+
+
+
+//assertThat(response.getResponseText()).contains(GlobalVariable.firstName)

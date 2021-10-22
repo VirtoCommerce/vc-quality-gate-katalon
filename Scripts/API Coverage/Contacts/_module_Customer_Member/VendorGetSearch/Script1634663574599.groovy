@@ -28,21 +28,23 @@ dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/D
 WebUI.comment('Vendor ID : ' + GlobalVariable.memberId[2])
 WebUI.comment('TEST CASE : Vendor Get by Id 1 check')
 getVendorId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetId', [
-	('id') : GlobalVariable.memberId[2]] ))
+	('id') : GlobalVariable.memberId[2]
+	]))
 
 
 'GET BULK VENDOR DATA BY IDs'
 WebUI.comment('TEST CASE : Vendor Get by Id BULK 2 check')
 getVendorIdBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetIdsBulk', [
 	('id') : GlobalVariable.memberId[2],
-	  ('storeId') : GlobalVariable.storeId,
-	  ('parentId') : GlobalVariable.memberId[0]
-	  ] ))
+	('storeId') : GlobalVariable.storeId,
+	('parentId') : GlobalVariable.memberId[0]
+	]))
 
 
 'SEARCH VENDOR'
 WebUI.comment('TEST CASE : Vendor seach')
 searchVendor = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsSearch', [
-	('searchPhrase') : GlobalVariable.firstName] ))
+	('searchPhrase') : GlobalVariable.firstName
+	]))
 
 
