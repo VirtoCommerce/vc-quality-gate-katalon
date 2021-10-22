@@ -12,6 +12,18 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8704074e-b819-445e-bd2c-2a0cfcc21ba4</testSuiteGuid>
    <testCaseLink>
+      <guid>bf406fb2-109f-440c-84ba-934423ee33ad</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>212a18be-2615-4397-a289-3a0f40a7ccd4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>93729668-c893-4b08-949b-854cec218c85</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -90,7 +102,7 @@
       <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>15514ee3-136d-4233-8c5d-e708cc810c89</guid>
+      <guid>3c422820-23a8-4e8f-b615-e2b43ba78686</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/MemberUpdateBulk</testCaseId>

@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qwe'</defaultValue>
       <description></description>
       <id>2c0d14ea-93c4-479c-bdea-44ec4eaa620b</id>
       <masked>false</masked>

@@ -6,15 +6,11 @@
    <elementGuidId>0772c728-e189-4a78-9303-28860be88fb4</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <connectionTimeout>-1</connectionTimeout>
+   <connectionTimeout>0</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;isActive\&quot;: true,\n  \&quot;outerId\&quot;: \&quot;12345\&quot;,\n  \&quot;storeId\&quot;: \&quot;${GlobalVariable.distributorId}\&quot;,\n  \&quot;name\&quot;: \&quot;ZXC Outlet\&quot;,\n  \&quot;id\&quot;:\&quot;402ebe1a-d50a-464b-91a5-c9b2ec90eeb2\&quot;,\n  \&quot;memberType\&quot;: \&quot;HotOutlet\&quot;,\n  \&quot;parentId\&quot;: \&quot;${GlobalVariable.organizationId}\&quot;,\n  \&quot;address\&quot;: {\n    \t\&quot;addressType\&quot;: \&quot;Billing\&quot;,\n\t    \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n\t\t\&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;name\&quot;: \&quot;Qwest\&quot;,\n        \&quot;line1\&quot;: \&quot;Test adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Test adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;X34656703\&quot;,\n        \&quot;city\&quot;: \&quot;Test city\&quot;,\n        \&quot;region\&quot;: \&quot;test region\&quot;,\n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;\n    },\n    \&quot;groups\&quot;: [\n        \&quot;TEST UG1\&quot;,\n        \&quot;TEST UG2\&quot;\n    ],\n    \&quot;salesRepresentative\&quot;: {\n        \&quot;firstName\&quot;: \&quot;Far\&quot;,\n        \&quot;lastName\&quot;: \&quot;Dar\&quot;,\n        \&quot;phone\&quot;: \&quot;12313246789\&quot;,\n        \&quot;email\&quot;: \&quot;testemail345@test.com\&quot;\n    }\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -29,7 +25,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
-   <maxResponseSize>-1</maxResponseSize>
+   <maxResponseSize>0</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/vendors?ids=${id}</restUrl>
@@ -39,11 +35,11 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>-1</socketTimeout>
+   <socketTimeout>0</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
+      <defaultValue>'fbb48f28-7f30-44cb-afd4-49c233ce4974'</defaultValue>
+      <description>vendor id</description>
       <id>54664d24-32c9-492b-8893-692a14dab7bb</id>
       <masked>false</masked>
       <name>id</name>

@@ -38,8 +38,8 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
+      <defaultValue>'cf4b063e-44f9-470e-ac71-c7bfc329f491'</defaultValue>
+      <description>vendor id</description>
       <id>1b2f4aab-a0cf-470c-b686-1f7669e3ad1d</id>
       <masked>false</masked>
       <name>id</name>
