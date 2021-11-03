@@ -49,28 +49,28 @@
       <name>memberType</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qwe'</defaultValue>
       <description>name of the created member</description>
       <id>2908b59e-40e2-4b86-b07f-89df987e6b93</id>
       <masked>false</masked>
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qwe'</defaultValue>
       <description>name of the created member</description>
       <id>d18ec4aa-c922-4353-8e4e-006d5af28cb2</id>
       <masked>false</masked>
       <name>firstName</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qwe'</defaultValue>
       <description>name of the created member</description>
       <id>0a68e940-74ca-479d-b77c-79e5bfacf6d9</id>
       <masked>false</masked>
       <name>lastName</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qwe'</defaultValue>
       <description>full name of the created member</description>
       <id>44e48c96-9ef5-4ea6-960f-6ff93e5f2a84</id>
       <masked>false</masked>
@@ -83,15 +83,13 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
 import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
+
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def memberJsonOutput = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(memberJsonOutput)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

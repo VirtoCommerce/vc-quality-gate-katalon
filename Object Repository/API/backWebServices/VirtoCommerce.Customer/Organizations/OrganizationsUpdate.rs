@@ -42,14 +42,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'154dbeaf-ba9b-40c9-a2bd-df9b4b07e1de'</defaultValue>
+      <defaultValue>'e66e6787-c1fe-475b-adff-e56ba3a6efa0'</defaultValue>
       <description>id of org to update</description>
       <id>7d45ebee-9a77-4e8b-ac65-7afb41098da7</id>
       <masked>false</masked>
       <name>orgId</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'orgUpd'</defaultValue>
       <description>name of the updayted organiztion</description>
       <id>e44b3c08-eeb3-46a2-8bd9-0e1951842dc8</id>
       <masked>false</masked>
@@ -62,15 +62,13 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-KeywordUtil.logInfo(response.responseBodyContent)
-WS.verifyResponseStatusCode(response, 204)
-</verificationScript>
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
