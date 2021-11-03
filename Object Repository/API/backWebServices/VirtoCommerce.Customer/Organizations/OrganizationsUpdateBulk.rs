@@ -42,28 +42,28 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'f466f3cf-6d58-4653-8ed8-7d778efa8dd0'</defaultValue>
       <description>id of the org to update</description>
       <id>0a0aaca9-10df-4759-b815-cf9f13e8ed4c</id>
       <masked>false</masked>
       <name>orgId1</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qewOrgUpdated1'</defaultValue>
       <description>organization name</description>
       <id>c153ac3b-33c7-4fa5-a299-858410602b4a</id>
       <masked>false</masked>
       <name>name1</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qweOrgupdated2'</defaultValue>
       <description>organization name</description>
       <id>24f018da-0be4-473d-8ad5-d620fcbfff62</id>
       <masked>false</masked>
       <name>name2</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'0b7495f2-91c8-4d16-b534-acf999adfece'</defaultValue>
       <description>id of the org to update</description>
       <id>09044439-1181-4b19-bf86-27bfb40d4e7e</id>
       <masked>false</masked>

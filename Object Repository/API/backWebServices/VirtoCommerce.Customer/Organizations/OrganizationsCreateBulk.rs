@@ -42,14 +42,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qweBulk1'</defaultValue>
       <description>created organization name</description>
       <id>9498493e-20b4-42e2-9993-c9e8e5e03509</id>
       <masked>false</masked>
       <name>name1</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qweBulk2'</defaultValue>
       <description>created organization name</description>
       <id>03c1d17f-0014-4f74-9cb1-d281cd516c6e</id>
       <masked>false</masked>
