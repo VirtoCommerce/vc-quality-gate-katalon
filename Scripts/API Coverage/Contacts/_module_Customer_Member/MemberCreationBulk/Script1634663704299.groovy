@@ -40,7 +40,6 @@ WS.verifyElementPropertyValue(verifyCreated, 'results[1].name', name2)
 
 
 'GET THE LIST OF MEMBER IDs'
-def memberJson = new JsonSlurper().parseText(responseBulk.getResponseBodyContent())
-GlobalVariable.memberId = memberJson.id
+GlobalVariable.memberId = WS.getElementPropertyValue(responseBulk,'id')
 WebUI.comment("MEMBER ID IS : " + GlobalVariable.memberId)
 

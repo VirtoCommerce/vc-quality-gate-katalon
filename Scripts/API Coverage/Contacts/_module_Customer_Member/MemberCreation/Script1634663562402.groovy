@@ -34,8 +34,7 @@ for (int i; i < memberType.size(); i++) {
 		('fullName') : GlobalVariable.contactName,
 	    ('memberType') : memberType.get(i)]))
  
-    def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-    (GlobalVariable.memberId[i]) = memberJson.id 
+    GlobalVariable.memberId[i] = WS.getElementPropertyValue(response, 'id') 
     WebUI.comment(memberType.get(i) + " ID is : " + GlobalVariable.memberId[i])
 }
 
