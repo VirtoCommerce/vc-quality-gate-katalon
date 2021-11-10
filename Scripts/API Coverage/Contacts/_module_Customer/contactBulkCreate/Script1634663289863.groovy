@@ -29,8 +29,7 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('fullName1') : fullName1,
 	('fullName2') : fullName2
 	]))
-def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-GlobalVariable.contactId = responseJson.id
+GlobalVariable.contactId = WS.getElementPropertyValue(response,'id')
 WebUI.comment('ContactId1 is: ' + GlobalVariable.contactId[0])
 WebUI.comment('ContactId2 is: ' + GlobalVariable.contactId[1])
 

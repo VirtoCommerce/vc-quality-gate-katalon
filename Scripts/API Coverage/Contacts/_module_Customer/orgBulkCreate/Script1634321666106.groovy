@@ -33,7 +33,6 @@ orgCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCom
 responseOrg = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer/orgBulkSearch'),
 	null,
 	FailureHandling.STOP_ON_FAILURE)
-def responseOrgJson = new JsonSlurper().parseText(responseOrg.getResponseBodyContent())
-GlobalVariable.organizationId = responseOrgJson.results.id
+GlobalVariable.organizationId = WS.getElementPropertyValue(responseOrg, 'results.id')
 WebUI.comment('Organization ID : ' + GlobalVariable.organizationId)
 WS.verifyElementPropertyValue(responseOrg, 'totalCount', 2)

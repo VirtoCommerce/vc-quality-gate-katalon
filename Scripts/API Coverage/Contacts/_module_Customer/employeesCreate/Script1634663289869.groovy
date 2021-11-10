@@ -26,11 +26,7 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	("firstName") : GlobalVariable.firstName,
 	("lastName") : GlobalVariable.lastName,
 	]))
-
-
-'Parse request and save token to the GlobalVariable'
-def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
-GlobalVariable.employeeId = responseJson.id
+GlobalVariable.employeeId = WS.getElementPropertyValue(response, 'id')
 WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)
 
 
@@ -39,5 +35,5 @@ verifyCreated = WS.callTestCase(findTestCase('API Coverage/Contacts/_module_Cust
 	null,
 	FailureHandling.STOP_ON_FAILURE)
 WS.verifyElementPropertyValue(verifyCreated, '[0].fullName', GlobalVariable.contactName)
-println GlobalVariable.contactName
+WebUI.comment("CONTACT NAME IS : " + GlobalVariable.contactName)
 

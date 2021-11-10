@@ -25,8 +25,7 @@ name = GlobalVariable.organizationName
 responseId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsCreate',[
 	('organizationName') : name
 	]))
-def responseIdJson = new JsonSlurper().parseText(responseId.getResponseBodyContent())
-GlobalVariable.organizationId = responseIdJson.id
+GlobalVariable.organizationId = WS.getElementPropertyValue(responseId, 'id')
 WebUI.comment('Organization ID : ' + GlobalVariable.organizationId)
 
 
