@@ -28,6 +28,7 @@ orgCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCom
 	('name2') : GlobalVariable.organizationName + '2'
 	]))
 
+
 'VERIFY ORGs ARE CREATED AND GET IDs'
 responseOrg = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer/orgBulkSearch'),
 	null,

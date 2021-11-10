@@ -16,15 +16,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
+WebUI.comment("TEST CASE: Get member in organization")
+
+
 'GET ALL MEMBERS ORGANIZATIONS'
-//NEED EXPLANATION FOR REQUEST (from dev as it doubles the funcrionality of memberGetOrgs)
+//NEED EXPLANATION FOR REQUEST (from dev as it doubles the functionality of memberGetOrgs)
 //JUST CHECKS THE ENDPOINT
 //BY VERIFIYING THE DEFAULT DOCKER DATA
-
-
 b2bOrganizationId = 'd690f3df-8782-4dcc-99be-a1f644220e50'
 b2bMemberId = 'cb0a5340-f9fb-4f49-bd62-9d03518868ff'
-WebUI.comment("TEST CASE: Get member in organization")
 getAllMembers = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetAllInOrganizations',[
 	('orgId') : b2bOrganizationId,
 	('memberId') : b2bMemberId 

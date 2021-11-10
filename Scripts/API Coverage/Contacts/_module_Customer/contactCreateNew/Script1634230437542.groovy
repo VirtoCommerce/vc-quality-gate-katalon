@@ -19,8 +19,10 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 
 
-'Create new Contact and save Id'
 WebUI.comment('TEST CASE : Create contact')
+
+
+'CREATE NEW CONTACT AND SAVE ID'
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsCreate',[
 	('fullName') : GlobalVariable.contactName,
 	('firstName') : GlobalVariable.firstName,

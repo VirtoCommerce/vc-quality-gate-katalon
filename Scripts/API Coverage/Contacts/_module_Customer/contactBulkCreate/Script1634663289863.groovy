@@ -18,14 +18,13 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
 
+WebUI.comment('TEST CASE : Create BULK contact')
+
 
 'CREATE NEW CONTACTS AND SAVE IDs'
 GlobalVariable.contactName = GlobalVariable.contactName + 'Bulk' 
 fullName1 = GlobalVariable.contactName + '1'
 fullName2 = GlobalVariable.contactName + '2'
-
-
-WebUI.comment('TEST CASE : Create BULK contact')
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsCreateBulk',[
 	('fullName1') : fullName1,
 	('fullName2') : fullName2

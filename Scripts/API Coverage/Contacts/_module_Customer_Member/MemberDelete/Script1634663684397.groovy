@@ -16,9 +16,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+
 WebUI.comment("TEST CASE: Member delete")
 
-'Delete member by Id from list'
+
+'DELETE MEMBER BY ID FROM LIST'
 List <String> memberId = GlobalVariable.memberId
 
 

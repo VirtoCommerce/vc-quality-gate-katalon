@@ -17,8 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-'UPDATE CONTACTS'
+
 WebUI.comment('TEST CASE : Update BULK contacts')
+
+
+'UPDATE CONTACTS'
 fullName1 = GlobalVariable.contactName + "Updated1"
 fullName2 = GlobalVariable.contactName + "Updated2"
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdateBulk', [

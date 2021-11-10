@@ -22,6 +22,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 WebUI.comment('TEST CASE: Member BULK update')
 WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariable.memberType[0])
 
+
 'UPDATE CREATED MEMBERS'
 updatedName1 = GlobalVariable.firstName + ' 1_BulkUPD'
 updatedName2 = GlobalVariable.firstName + ' 2_BulkUPD'

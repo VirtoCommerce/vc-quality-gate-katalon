@@ -20,6 +20,7 @@ import groovy.json.JsonSlurper
 
 WebUI.comment("TEST CASE: Member update")
 
+
 'MEMBER DATA STORED IN THE LISTS'
 List <String> memberType = GlobalVariable.memberType
 List <String> memberId = GlobalVariable.memberId

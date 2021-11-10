@@ -19,8 +19,8 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 
 
+WebUI.comment('TEST CASE : contact add address')
 
-WebUI.comment('TEST CASE : Update address')
 
 'UPDATE ADDRESS'
 //TEMP = updated adress.name parameter

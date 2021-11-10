@@ -19,7 +19,8 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 
 
-'Search new contact'
+WebUI.comment('TEST CASE: Contact search')
+
 
 'DROP SEARCH INDEX FIRST'
 dropIndex = WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'),
@@ -28,7 +29,6 @@ dropIndex = WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex
 
 
 'SEARCH FOR THE NEW CONTACT'
-WebUI.comment('TEST CASE: Contact search')
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsSearch',[
 	('searchPhrase') : GlobalVariable.firstName
 	]))

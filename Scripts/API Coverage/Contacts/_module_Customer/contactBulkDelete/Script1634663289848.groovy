@@ -21,7 +21,7 @@ import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 WebUI.comment('TEST CASE: Bulk Delete Contact')
 
 
-WebUI.comment('TEST CASE: Delete contacts')
+'DELETE CONTACT'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsDelete', [
 	('contactId') : GlobalVariable.contactId[0],
 	('contactId2') : GlobalVariable.contactId[1]
