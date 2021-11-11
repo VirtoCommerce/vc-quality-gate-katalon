@@ -17,8 +17,10 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 
-'DELETE ORGANIZATION'
 WebUI.comment('TEST CASE: Organization delete')
+
+
+'DELETE ORGANIZATION'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsDelete', [
 	('orgId1') : GlobalVariable.organizationId
 	]))

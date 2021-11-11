@@ -17,6 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import groovyjarjarantlr.collections.List
 
+
 WebUI.comment('TEST CASE : Delete created organization BULK')
 
 
@@ -25,6 +26,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 	('orgId1') : GlobalVariable.organizationId [0],
 	('orgId2') : GlobalVariable.organizationId [1]
 	]))
+
 
 'VERIFY THE ORGANIZATIONS WERE DELETED'
 verifyDeleted = WS.callTestCase(findTestCase('API Coverage/Contacts/_module_Customer/organizationSearch'),

@@ -17,9 +17,12 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 
+WebUI.comment('TEST CASE : Vendor Get Search')
+
+
 'GET VENDOR DATA FROM DIFFERENT ENDPOINTS'
-//SPLITTING THIS TEST WILL CAUSE SEPARATE INDEXATION FOR EACH STEP
-//SPLITTING DECLINED AS THIS WILL SIGNIFICANTLY INCREASE GENERAL INDEXATION TIMEOUT. 
+/*SPLITTING THIS TEST WILL CAUSE SEPARATE INDEXATION FOR EACH STEP
+SPLITTING DECLINED AS THIS WILL SIGNIFICANTLY INCREASE GENERAL INDEXATION TIMEOUT.*/ 
 
 'DROP INDEX FIRST'
 dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'), null)
@@ -27,18 +30,15 @@ dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/D
 
 'GET VENDOR DATA BY ID'
 WebUI.comment('Vendor ID : ' + GlobalVariable.memberId[2])
-WebUI.comment('TEST CASE : Vendor Get by Id 1 check')
 getVendorId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetId', [
 	('id') : GlobalVariable.memberId[2]
 	]))
 return getVendorId
-println getVendorId
 WS.verifyElementPropertyValue(getVendorId, 'name', GlobalVariable.firstName)
 WS.verifyElementPropertyValue(getVendorId, 'memberType', GlobalVariable.memberType[2])
 
 
-'GET BULK VENDOR DATA BY IDs'
-WebUI.comment('TEST CASE : Vendor Get by Id BULK 2 check')
+'GET BULK VENDORS DATA BY IDs'
 getVendorIdBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetIdsBulk', [
 	('id') : GlobalVariable.memberId[2],
 	]))
@@ -48,11 +48,9 @@ WS.verifyElementPropertyValue(getVendorId, 'memberType', GlobalVariable.memberTy
 
 
 'SEARCH VENDOR'
-WebUI.comment('TEST CASE : Vendor seach')
 searchVendor = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsSearch', [
 	('searchPhrase') : GlobalVariable.firstName
 	]))
 WS.verifyElementPropertyValue(searchVendor, 'totalCount', '1')
 WS.verifyElementPropertyValue(searchVendor, 'results[0].id', GlobalVariable.memberId[2])
-
 

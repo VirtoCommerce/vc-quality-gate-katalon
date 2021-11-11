@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.comment('TEST CASE : Search new organizations and save Ids')
+WebUI.comment('TEST CASE : Search new organizations')
 
 
 'RUN INDEXATION'

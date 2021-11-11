@@ -31,8 +31,8 @@ def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebSe
 		('lastName') : GlobalVariable.lastName,
 		('fullName') : GlobalVariable.contactName,
 		]))
-def memberJson = new JsonSlurper().parseText(responseMemberCreate.getResponseBodyContent())
-GlobalVariable.memberId = memberJson.id
+
+GlobalVariable.memberId = WS.getElementPropertyValue(responseMemberCreate, 'id')
 
 
 WebUI.comment("TEST CASE : Create contact in the organization")
@@ -40,8 +40,7 @@ def responseMemberCreateInOrg = WS.sendRequestAndVerify(findTestObject('API/back
 	('memberType') : GlobalVariable.memberType[1],
 	('orgId') : GlobalVariable.memberId
 	]))
-def memberJson2 = new JsonSlurper().parseText(responseMemberCreateInOrg.getResponseBodyContent())
-GlobalVariable.contactId = memberJson2.id
+GlobalVariable.contactId = WS.getElementPropertyValue(responseMemberCreateInOrg, 'id')
 
 
 WebUI.comment('TEST CASE : Check Contact in Org')
@@ -109,5 +108,4 @@ responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServ
 	('searchPhrase') : GlobalVariable.firstName
 	]))
 // Count verification couldn't be stable for use, because it depends on the time of build index
-//WS.verifyElementPropertyValue(responseContactsSearch, 'totalCount', 0)
 WS.verifyElementPropertyValue(responseContactsSearch, 'results', '[]')

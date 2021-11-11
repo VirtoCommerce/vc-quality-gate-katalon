@@ -20,6 +20,9 @@ import com.kms.katalon.core.exception.StepErrorException as StepErrorException
 
 
 WebUI.comment('TEST CASE: Get contact by Id')
+
+
+'GET CONTACT BY ID'
 responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetId',[
 	('contactId') : GlobalVariable.contactId
 	]))

@@ -18,9 +18,10 @@ import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 
 
+WebUI.comment('TEST CASE: Get BULK contact by Id')
+
 
 'GET CONTACTS DATA BY contactIds'
-WebUI.comment('TEST CASE: Get contact by Id')
 contactsGetBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsGetIdBulk', [
 	('contactId1') : GlobalVariable.contactId[0],
 	('contactId2') : GlobalVariable.contactId[1]

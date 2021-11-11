@@ -18,7 +18,9 @@ import groovy.json.JsonSlurper
 
 
 WebUI.comment("TEST CASE: Member get by ID group")
-//GlobalVariable.memberId[0] = '1ed0907a-e3b1-423f-a053-f642522143b0'
+
+
+'MEMBER GET BY ID GROUP'
 responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
 	('id') : GlobalVariable.memberId[0]
 	]))

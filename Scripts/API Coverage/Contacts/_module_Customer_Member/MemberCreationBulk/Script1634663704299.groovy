@@ -20,7 +20,6 @@ import groovy.json.JsonSlurper
 WebUI.comment("TEST CASE: Members BULK Create")
 
 
-//WebUI.comment("MEMBER ORG ID IS : " + GlobalVariable.memberType[0])
 'CREATE BULK MEMBERS'
 name1 = GlobalVariable.firstName + ' 1'
 name2 = GlobalVariable.firstName + ' 2'
@@ -40,7 +39,6 @@ WS.verifyElementPropertyValue(verifyCreated, 'results[1].name', name2)
 
 
 'GET THE LIST OF MEMBER IDs'
-def memberJson = new JsonSlurper().parseText(responseBulk.getResponseBodyContent())
-GlobalVariable.memberId = memberJson.id
+GlobalVariable.memberId = WS.getElementPropertyValue(responseBulk,'id')
 WebUI.comment("MEMBER ID IS : " + GlobalVariable.memberId)
 
