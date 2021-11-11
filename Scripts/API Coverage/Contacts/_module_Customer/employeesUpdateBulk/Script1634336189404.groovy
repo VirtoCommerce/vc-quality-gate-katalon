@@ -31,10 +31,4 @@ response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWeb
 	("lastName") : GlobalVariable.lastName,
 	]))
 WS.verifyElementPropertyValue(response, '[0].fullName', GlobalVariable.contactName)
-//// STEP | Print json result
-//def pretty = JsonOutput.prettyPrint(response.getResponseBodyContent())
-//WebUI.comment(pretty)
 
-//STEP 2 Verify name
-//WebUI.comment('Verify if full name after sending request is correct or not')
-//WS.verifyElementPropertyValue(response, '[0].id', GlobalVariable.employeeId)

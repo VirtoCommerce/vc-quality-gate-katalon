@@ -17,7 +17,6 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
-// Delete all created members 
 WebUI.comment("TEST CASE: Members BULK delete")
 
 

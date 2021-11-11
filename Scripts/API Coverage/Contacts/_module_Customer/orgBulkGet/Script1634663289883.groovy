@@ -22,7 +22,6 @@ WebUI.comment('TEST CASE : Check Organization GET request by Id')
 
 
 'GET ORGANIZATIONS BY ID'
-//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetIdBulk', [('orgId1') : orgId[0], ('orgId2') : orgId[1]]))
 responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Organizations/OrganizationsGetIdBulk', [
 	('orgId1') : GlobalVariable.organizationId [0],
 	('orgId2') : GlobalVariable.organizationId [1],

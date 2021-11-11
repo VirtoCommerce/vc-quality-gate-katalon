@@ -27,29 +27,16 @@ List <String> memberId = GlobalVariable.memberId
 
 
 'SEND REQUEST TO UPDATE MEMBERS FROM LISTS'
-//Here TEMP is used to prevent firstName of being overwritten, as
-//it's used in delete case in its initial state
+/*Here TEMP is used to prevent firstName of being overwritten, as
+it's used in delete case in its initial state*/
 GlobalVariable.TEMP  = GlobalVariable.firstName + ' UPD'
-//GlobalVariable.contactName  = GlobalVariable.contactName + 'UPD'
 for (int i; i < memberId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberId.get(i))
     WebUI.comment("MEMBER TYPE IS : " + memberType.get(i))	
     updateContact = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdate', [
 		('name') : GlobalVariable.TEMP,
-		//('fullName') : GlobalVariable.firstName,
 		('id') : memberId.get(i), 
 		('memberType') : memberType.get(i)
 		]))
 }
-
-//
-//'VERIFY MEMBERS ARE UPDATED'
-//verifyCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberSearch'),
-//	null)
-//WS.verifyElementPropertyValue(verifyCreated, 'totalCount', 4)
-//WS.verifyElementPropertyValue(verifyCreated, 'results[0].name', GlobalVariable.TEMP)
-//WS.verifyElementPropertyValue(verifyCreated, 'results[1].name', GlobalVariable.TEMP)
-//WS.verifyElementPropertyValue(verifyCreated, 'results[2].name', GlobalVariable.TEMP)
-//WS.verifyElementPropertyValue(verifyCreated, 'results[3].name', GlobalVariable.TEMP)
-
 

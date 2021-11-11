@@ -20,9 +20,9 @@ WebUI.comment("TEST CASE: Get member in organization")
 
 
 'GET ALL MEMBERS ORGANIZATIONS'
-//NEED EXPLANATION FOR REQUEST (from dev as it doubles the functionality of memberGetOrgs)
-//JUST CHECKS THE ENDPOINT
-//BY VERIFIYING THE DEFAULT DOCKER DATA
+/*NEED EXPLANATION FOR REQUEST (from dev as it doubles the functionality of memberGetOrgs)
+JUST CHECKS THE ENDPOINT
+BY VERIFIYING THE DEFAULT DOCKER DATA*/
 b2bOrganizationId = 'd690f3df-8782-4dcc-99be-a1f644220e50'
 b2bMemberId = 'cb0a5340-f9fb-4f49-bd62-9d03518868ff'
 getAllMembers = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetAllInOrganizations',[

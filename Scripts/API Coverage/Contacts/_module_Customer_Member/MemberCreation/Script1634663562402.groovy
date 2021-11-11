@@ -27,14 +27,14 @@ WebUI.comment("TYPES IS : " + memberType)
 for (int i; i < memberType.size(); i++) {
     WebUI.comment('Create user type ' + memberType.get(i))
 
-    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [
+    def memberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [
 		('name') : GlobalVariable.firstName,
 		('firstName') : GlobalVariable.firstName,
 		('lastName') : GlobalVariable.lastName,
 		('fullName') : GlobalVariable.contactName,
 	    ('memberType') : memberType.get(i)]))
  
-    GlobalVariable.memberId[i] = WS.getElementPropertyValue(response, 'id') 
+    GlobalVariable.memberId[i] = WS.getElementPropertyValue(memberCreate, 'id') 
     WebUI.comment(memberType.get(i) + " ID is : " + GlobalVariable.memberId[i])
 }
 
@@ -47,14 +47,4 @@ WS.verifyElementPropertyValue(verifyCreated, 'results[0].name', GlobalVariable.f
 WS.verifyElementPropertyValue(verifyCreated, 'results[1].name', GlobalVariable.firstName)
 WS.verifyElementPropertyValue(verifyCreated, 'results[2].name', GlobalVariable.firstName)
 WS.verifyElementPropertyValue(verifyCreated, 'results[3].name', GlobalVariable.firstName)
-//GlobalVariable.organizationId = GlobalVariable.memberId[0]
-//GlobalVariable.contactId = GlobalVariable.memberId[1]
-//GlobalVariable.vendorId = GlobalVariable.memberId[2]
-//GlobalVariable.employeeId = GlobalVariable.memberId[3]
-//
-//println GlobalVariable.organizationId
-//println GlobalVariable.contactId
-//println GlobalVariable.vendorId
-//println GlobalVariable.employeeId
-
 

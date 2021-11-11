@@ -17,8 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 import groovy.json.JsonSlurper as JsonSlurper
 
-//GlobalVariable.memberId[0] = '3f971545-ad3f-4f74-b838-d909e752120b'
-// Updated member buy BULK request
+
 WebUI.comment('TEST CASE: Member BULK update')
 WebUI.comment("0 ID IS : " + GlobalVariable.memberId[0] + ' AND ' + GlobalVariable.memberType[0])
 
@@ -47,9 +46,4 @@ verifyUpdated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_
 WS.verifyElementPropertyValue(verifyUpdated, 'totalCount', 2)
 WS.verifyElementPropertyValue(verifyUpdated, 'results[0].name', updatedName1)
 WS.verifyElementPropertyValue(verifyUpdated, 'results[1].name', updatedName2)
-
-
-// Check updated member
-//responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [('id') : GlobalVariable.memberId[0]]))
-//WS.verifyElementPropertyValue(responseGet, 'fullName', 'Qwe BulkUpd')
 

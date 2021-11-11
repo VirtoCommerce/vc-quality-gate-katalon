@@ -21,8 +21,8 @@ WebUI.comment('TEST CASE : Vendor Get Search')
 
 
 'GET VENDOR DATA FROM DIFFERENT ENDPOINTS'
-//SPLITTING THIS TEST WILL CAUSE SEPARATE INDEXATION FOR EACH STEP
-//SPLITTING DECLINED AS THIS WILL SIGNIFICANTLY INCREASE GENERAL INDEXATION TIMEOUT. 
+/*SPLITTING THIS TEST WILL CAUSE SEPARATE INDEXATION FOR EACH STEP
+SPLITTING DECLINED AS THIS WILL SIGNIFICANTLY INCREASE GENERAL INDEXATION TIMEOUT.*/ 
 
 'DROP INDEX FIRST'
 dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'), null)
@@ -34,7 +34,6 @@ getVendorId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 	('id') : GlobalVariable.memberId[2]
 	]))
 return getVendorId
-println getVendorId
 WS.verifyElementPropertyValue(getVendorId, 'name', GlobalVariable.firstName)
 WS.verifyElementPropertyValue(getVendorId, 'memberType', GlobalVariable.memberType[2])
 

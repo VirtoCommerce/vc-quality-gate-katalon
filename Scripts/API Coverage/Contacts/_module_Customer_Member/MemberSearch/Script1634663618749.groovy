@@ -29,6 +29,4 @@ responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vir
 	('searchPhrase') : GlobalVariable.firstName
 	]))
 return responseSearch
-//WS.verifyElementPropertyValue(responseSearch, 'totalCount', 4)
-//WS.verifyElementPropertyValue(responseSearch, 'results[0].firstName', GlobalVariable.firstName)
 

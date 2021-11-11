@@ -36,9 +36,9 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 verifyUpdated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer/contactBulkGetByIds'),
 	null,
 	FailureHandling.STOP_ON_FAILURE)
-//GET receives randomly generated ids and rannges the returned result upon its values
-//So absolute paths to result can not be used as the position of the item in the list becomes random
-//Using 'if' operator is suggested to process the response
+/*GET receives randomly generated ids and rannges the returned result upon its values
+ * So absolute paths to result can not be used as the position of the item in the list becomes random
+ * Using 'if' operator is suggested to process the response*/
 
 if (WS.verifyElementPropertyValue(verifyUpdated, '[0].fullName', fullName1, FailureHandling.OPTIONAL)) {}
 	else (WS.verifyElementPropertyValue(verifyUpdated, '[1].fullName', fullName1))

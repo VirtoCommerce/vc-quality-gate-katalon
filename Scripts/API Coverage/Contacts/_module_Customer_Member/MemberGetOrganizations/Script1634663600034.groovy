@@ -23,5 +23,4 @@ WebUI.comment("TEST CASE: Member search ORGANIZATIONS")
 'GET LIST MEMBER ORGANIZATION / Verify created org by assertThat "firstName"'
 getOrg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberOrganizationsGet'))
 return getOrg
-//WS.containsString(getOrg, GlobalVariable.firstName, false)
-//assertThat(response.getResponseText()).contains(GlobalVariable.firstName)
+

@@ -108,5 +108,4 @@ responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServ
 	('searchPhrase') : GlobalVariable.firstName
 	]))
 // Count verification couldn't be stable for use, because it depends on the time of build index
-//WS.verifyElementPropertyValue(responseContactsSearch, 'totalCount', 0)
 WS.verifyElementPropertyValue(responseContactsSearch, 'results', '[]')

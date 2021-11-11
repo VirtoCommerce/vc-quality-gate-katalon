@@ -20,7 +20,6 @@ import groovy.json.JsonSlurper
 WebUI.comment("TEST CASE: Members BULK Create")
 
 
-//WebUI.comment("MEMBER ORG ID IS : " + GlobalVariable.memberType[0])
 'CREATE BULK MEMBERS'
 name1 = GlobalVariable.firstName + ' 1'
 name2 = GlobalVariable.firstName + ' 2'

@@ -20,9 +20,6 @@ import groovy.json.JsonSlurper
 WebUI.comment("TEST CASE: Member get by ID")
 
 
-//def mtid = GlobalVariable.memberId
-//def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
-//('id') : mtid[0]]))
 'USE IDs OF MEMBERS FROM THE LIST TO VERIFY THE RESULTS'
 List <String> memberTypeId = GlobalVariable.memberId
 
@@ -35,7 +32,6 @@ for (int i; i < memberTypeId.size(); i++) {
 		('id') : memberTypeId.get(i)
 		]))
 	WS.verifyElementPropertyValue(memberGet, 'name', GlobalVariable.TEMP)
-	//WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 	}
 	
 	

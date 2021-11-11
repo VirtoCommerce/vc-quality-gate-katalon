@@ -33,8 +33,8 @@ responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vir
 	('searchPhrase') : GlobalVariable.firstName
 	]))
 return responseSearch
-//To keep this test case really atomic its better to implement all the neccessary 
-//verifications inside of the test case that needs to be verified via callTestCase, e.g. 
-//verify 'total count' == '0' inside of 'delete' test case by collingthis search
-//and then applying verification code 
+/*To keep this test case really atomic its better to implement all the neccessary 
+verifications inside of the test case that needs to be verified via callTestCase, e.g. 
+verify 'total count' == '0' inside of 'delete' test case by collingthis search
+and then applying verification code */
 

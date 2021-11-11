@@ -31,9 +31,4 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('id') : GlobalVariable.employeeId
 	]))
 return response
-//def name = GlobalVariable.contactName
-//WebUI.comment(name)
-//
-////Verify name
-//WebUI.comment('Verify if full name after sending request is correct or not')
-//WS.verifyElementPropertyValue(response, 'fullName', name)
+
