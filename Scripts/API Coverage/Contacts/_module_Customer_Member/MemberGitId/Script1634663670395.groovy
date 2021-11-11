@@ -25,7 +25,9 @@ List <String> memberTypeId = GlobalVariable.memberId
 
 
 'GET MEMBER BY ID, VERIFY IF NAMES ARE UPDATED'
-//NOTE:GlobalVariable.TEMP  = GlobalVariable.firstName + UPD
+/*NOTE:GlobalVariable.TEMP  = GlobalVariable.firstName + UPD
+TEMP is used in "memberUpdate" TC to prevent 'firstName' of being overwritten, as
+ it's used in delete cases in its initial state*/
 for (int i; i < memberTypeId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberTypeId.get(i))
     memberGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
