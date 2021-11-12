@@ -31,7 +31,7 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
+   <restRequestMethod>PUT</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
@@ -55,6 +55,6 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)</verificationScript>
+WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

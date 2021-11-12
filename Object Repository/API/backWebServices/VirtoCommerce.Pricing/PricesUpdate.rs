@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricesUpdateBulk</name>
+   <name>PricesUpdate</name>
    <tag></tag>
    <elementGuidId>db97a09c-045d-4e03-9004-b2bd565e56c1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
