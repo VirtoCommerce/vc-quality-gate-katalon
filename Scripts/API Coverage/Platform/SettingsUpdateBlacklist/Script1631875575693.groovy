@@ -22,40 +22,39 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
-//GET THE BLACKLIST CONFIGURATION
+'GET THE BLACKLIST CONFIGURATION'
 def settingName = 'VirtoCommerce.Platform.Security.FileExtensionsBlackList'
 getData = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
 	('name') : settingName
 	]))
-blacklistItems = WS.getElementPropertyValue(getData,'allowedValues')
 
 
-//GET THE RESPONSE BODY CONTENT, PARSE IT AND EXTRACT THE BLACKLIST DATA
+'GET THE RESPONSE BODY CONTENT, PARSE IT AND EXTRACT THE BLACKLIST DATA'
 responseData = getData.getResponseBodyContent()
 settingBody = new JsonSlurper().parseText(responseData)
 blacklist =  settingBody.allowedValues
 
 
-//ADD A NEW EXTENSION TO THE BLACKLIST DATA 
+'ADD A NEW EXTENSION TO THE BLACKLIST DATA'
 newExtension = '.exe'
 blacklist.push(newExtension)
 println blacklist
 
 
-//ADD THE UPDATED BLACKLIST TO THE BODY
+'ADD THE UPDATED BLACKLIST TO THE BODY'
 settingBody.allowedValues = blacklist
 def newBodyJson = new groovy.json.JsonBuilder(settingBody)
 def bodyString = newBodyJson.toString()
 updatedBody = '[' + bodyString + ']'
 
 
-//SEND THE REQUEST WITH THE ORDER BODY TO UPDATE PAYMENTS
+'SEND THE REQUEST TO UPDATE BLACKLIST'
 RequestObject blacklistUpdate = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsCreateUpdateDescriptionType')
 blacklistUpdate.setBodyContent(new HttpTextBodyContent(updatedBody))
 updateBlacklist = WS.sendRequestAndVerify(blacklistUpdate)
 
 
-//VERIFY THE LIST HAS BEEN UPDATED
+'VERIFY THE LIST HAS BEEN UPDATED'
 updatedData = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsGetByName', [
 	('name') : settingName
 	]))

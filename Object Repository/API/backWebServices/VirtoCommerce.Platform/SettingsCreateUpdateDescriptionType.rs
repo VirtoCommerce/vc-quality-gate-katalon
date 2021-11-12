@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'[{&quot;itHasValues&quot;:true,&quot;restartRequired&quot;:false,&quot;moduleId&quot;:&quot;VirtoCommerce.Catalog&quot;,&quot;groupName&quot;:&quot;Catalog|General&quot;,&quot;name&quot;:&quot;Catalog.EditorialReviewTypes&quot;,&quot;isHidden&quot;:false,&quot;valueType&quot;:&quot;ShortText&quot;,&quot;allowedValues&quot;:[&quot;FullReview&quot;,&quot;TEST&quot;],&quot;defaultValue&quot;:&quot;QuickReview&quot;,&quot;isDictionary&quot;:true}]'</defaultValue>
-      <description>description json</description>
+      <description>settings with updated blacklist (the whole json is being parsed&amp;processed in th test case)</description>
       <id>61c8f0db-72b4-48f6-860d-7e8b75af2480</id>
       <masked>false</masked>
       <name>body</name>
