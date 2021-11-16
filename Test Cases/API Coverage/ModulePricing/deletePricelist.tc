@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete the created pricelist</description>
+   <name>deletePricelist</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1e80235d-481c-417b-8067-ad6dadc9fee2</testCaseGuid>
+</TestCaseEntity>

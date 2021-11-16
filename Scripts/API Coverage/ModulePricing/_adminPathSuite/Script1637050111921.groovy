@@ -16,4 +16,35 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/ProductAddPrice'))
+
+'Create & verify pricelist'
+createPricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistCreate'),
+	null
+	)
+	
+	
+ 'Update & verify pricelist'
+updatePricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistUpdate'),
+	null
+	)
+	
+
+'Create a product'
+productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
+	null
+	)
+	
+
+'Add product to the pricelist and verify'
+addProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAddProduct'),
+	null
+	)
+	
+	
+/*	
+'Delete the created pricelist and verify'
+deletePricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/deletePricelist'),
+	null
+	)
+	
+*/

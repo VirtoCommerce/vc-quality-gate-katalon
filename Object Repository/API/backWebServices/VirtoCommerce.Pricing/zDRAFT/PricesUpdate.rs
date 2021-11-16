@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistDelete</name>
+   <name>PricesUpdate</name>
    <tag></tag>
-   <elementGuidId>eb756365-5235-4552-ac14-9504b317e94e</elementGuidId>
+   <elementGuidId>db97a09c-045d-4e03-9004-b2bd565e56c1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;prices\&quot;: [\n\t\t\t{\n\t\t\t\t\&quot;productId\&quot;: \&quot;${productId}\&quot;,\n\t\t\t\t\&quot;list\&quot;: \u0027${listPrice}\u0027,\n\t\t\t\t\&quot;minQuantity\&quot;: 1,\n\t\t\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\t\t\&quot;priceListId\&quot;: \&quot;${pricelistId}\&quot;\n\t\t\t}\n\t\t]\n\t}\n]&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists?ids=${id}</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/products/prices</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -39,10 +43,24 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description>id of the pricelist to delete</description>
-      <id>b02c0a5a-9b6a-496b-9c8a-f83c036b1867</id>
+      <description>id of the product to add </description>
+      <id>fc5e02ab-5a83-4534-9115-2958ad527843</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>productId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>recepient pricelist id</description>
+      <id>2b51af88-c906-49f4-8fff-aafe0d18e3a5</id>
+      <masked>false</masked>
+      <name>pricelistId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>price of the added product</description>
+      <id>fb644466-50c2-4e98-abf8-df888a483ac4</id>
+      <masked>false</masked>
+      <name>listPrice</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
