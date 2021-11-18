@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete pricelist assignment</description>
+   <name>pricelistAssignmentDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d2ef8684-f5bd-4a60-a9c8-be72ab3dcd5c</testCaseGuid>
+</TestCaseEntity>

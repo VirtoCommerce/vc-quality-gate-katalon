@@ -38,11 +38,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'6aeb1560-06d7-4367-a95f-0b18c4d3c937'</defaultValue>
-      <description>id of the deleted assignment</description>
+      <defaultValue>'b55e5d9a-4cfa-40bc-b126-18084516c2d2'</defaultValue>
+      <description>id of the pricelist to delete</description>
       <id>e140065c-817e-4dd0-a146-9fddcda78668</id>
       <masked>false</masked>
-      <name>assignmentId</name>
+      <name>pricelistId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

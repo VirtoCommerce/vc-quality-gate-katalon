@@ -14,7 +14,6 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 
 
 'Create & verify pricelist'
@@ -36,15 +35,39 @@ productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 	
 
 'Add product to the pricelist and verify'
-addProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAddProduct'),
+addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistPricesAdd'),
 	null
 	)
 	
+
+'For the pricelist create an assignment'
+createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'),
+	null
+	)
 	
-/*	
+'Edit the created assignment'
+editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelsitAssignmentEdit'),
+	null
+	)
+	
+
+	/*
+	
+	
+'Delete the created pricelist assignment'
+deleteAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentDelete'),
+	null
+	)
+	
 'Delete the created pricelist and verify'
-deletePricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/deletePricelist'),
+deletePricelist = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistDelete'),
 	null
 	)
 	
-*/
+	
+'Delete the create product'
+deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
+	null
+	)
+	
+	*/

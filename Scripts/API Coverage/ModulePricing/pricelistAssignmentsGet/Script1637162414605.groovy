@@ -15,26 +15,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('TEST CASE: ADD PRODUCT WITH PRICE TO THE CREATED PRICELIST')
+
+WebUI.comment('TEST CASE: Get pricelists assignments')
 
 
-'ADD PRODUCT TO A PRICELIST'
-listPrice = '111' 
-addProductToPricelist = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricesAddToPricelist',[
-	('pricelistId') : GlobalVariable.pricelistId,
-	('productId') : GlobalVariable.productId,
-	('listPrice') : listPrice
+'GET PRICELIST ASSIGNMENTS'
+
+getAssignments = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistGetAssignments',[
+	('pricelistId') : GlobalVariable.pricelistId
 	]))
-
-
-'VERIFY THE PRODUCT & THE PRICE ARE ADDED'
-verifyPrice = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearch'), 
-	null
-	)
-WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].pricelistId',GlobalVariable.pricelistId)
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].productId',GlobalVariable.productId)
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].list', listPrice + '.0000')
-
-
-
+return getAssignments
