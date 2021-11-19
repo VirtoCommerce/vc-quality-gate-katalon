@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistCreate</name>
+   <name>PricelistsAssignmentGetById</name>
    <tag></tag>
-   <elementGuidId>beb6ba6e-95a9-4d84-b37b-cc694babd4fc</elementGuidId>
+   <elementGuidId>17fd50a8-2b87-4037-ab84-52c35309ac81</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;\n//  \&quot;outerId\&quot;: \&quot;Electronics\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;storeId\&quot;: \&quot;string\&quot;,\n  \&quot;catalogId\&quot;: \&quot;string\&quot;,\n  \&quot;productIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;pricelistIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;returnAllMatchedPrices\&quot;: true,\n  \&quot;quantity\&quot;: 0,\n  \&quot;customerId\&quot;: \&quot;string\&quot;,\n  \&quot;organizationId\&quot;: \&quot;string\&quot;,\n  \&quot;certainDate\&quot;: \&quot;2021-11-11T16:21:30.065Z\&quot;,\n  \&quot;currency\&quot;: \&quot;string\&quot;,\n  \&quot;contextObject\&quot;: {},\n  \&quot;geoCity\&quot;: \&quot;string\&quot;,\n  \&quot;geoState\&quot;: \&quot;string\&quot;,\n  \&quot;geoCountry\&quot;: \&quot;string\&quot;,\n  \&quot;geoContinent\&quot;: \&quot;string\&quot;,\n  \&quot;geoZipCode\&quot;: \&quot;string\&quot;,\n  \&quot;geoConnectionType\&quot;: \&quot;string\&quot;,\n  \&quot;geoTimeZone\&quot;: \&quot;string\&quot;,\n  \&quot;geoIpRoutingType\&quot;: \&quot;string\&quot;,\n  \&quot;geoIspSecondLevel\&quot;: \&quot;string\&quot;,\n  \&quot;geoIspTopLevel\&quot;: \&quot;string\&quot;,\n  \&quot;shopperAge\&quot;: 0,\n  \&quot;shopperGender\&quot;: \&quot;string\&quot;,\n  \&quot;language\&quot;: \&quot;string\&quot;,\n  \&quot;userGroups\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;shopperSearchedPhraseInStore\&quot;: \&quot;string\&quot;,\n  \&quot;shopperSearchedPhraseOnInternet\&quot;: \&quot;string\&quot;,\n  \&quot;currentUrl\&quot;: \&quot;string\&quot;,\n  \&quot;referredUrl\&quot;: \&quot;string\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments/{id}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,13 +41,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>created pricelist name</description>
-      <id>365b4434-f262-4313-8679-fc3ea68d0bac</id>
-      <masked>false</masked>
-      <name>name</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

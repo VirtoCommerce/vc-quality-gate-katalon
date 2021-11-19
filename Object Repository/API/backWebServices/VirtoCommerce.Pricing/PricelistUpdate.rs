@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;storeId\&quot;: \&quot;string\&quot;,\n  \&quot;catalogId\&quot;: \&quot;string\&quot;,\n  \&quot;productIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;pricelistIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;returnAllMatchedPrices\&quot;: true,\n  \&quot;quantity\&quot;: 0,\n  \&quot;customerId\&quot;: \&quot;string\&quot;,\n  \&quot;organizationId\&quot;: \&quot;string\&quot;,\n  \&quot;certainDate\&quot;: \&quot;2021-11-11T16:21:30.065Z\&quot;,\n  \&quot;currency\&quot;: \&quot;string\&quot;,\n  \&quot;contextObject\&quot;: {},\n  \&quot;geoCity\&quot;: \&quot;string\&quot;,\n  \&quot;geoState\&quot;: \&quot;string\&quot;,\n  \&quot;geoCountry\&quot;: \&quot;string\&quot;,\n  \&quot;geoContinent\&quot;: \&quot;string\&quot;,\n  \&quot;geoZipCode\&quot;: \&quot;string\&quot;,\n  \&quot;geoConnectionType\&quot;: \&quot;string\&quot;,\n  \&quot;geoTimeZone\&quot;: \&quot;string\&quot;,\n  \&quot;geoIpRoutingType\&quot;: \&quot;string\&quot;,\n  \&quot;geoIspSecondLevel\&quot;: \&quot;string\&quot;,\n  \&quot;geoIspTopLevel\&quot;: \&quot;string\&quot;,\n  \&quot;shopperAge\&quot;: 0,\n  \&quot;shopperGender\&quot;: \&quot;string\&quot;,\n  \&quot;language\&quot;: \&quot;string\&quot;,\n  \&quot;userGroups\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;shopperSearchedPhraseInStore\&quot;: \&quot;string\&quot;,\n  \&quot;shopperSearchedPhraseOnInternet\&quot;: \&quot;string\&quot;,\n  \&quot;currentUrl\&quot;: \&quot;string\&quot;,\n  \&quot;referredUrl\&quot;: \&quot;string\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${name}\&quot;,\n\t\&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\&quot;assignments\&quot;: [],\n\t\&quot;createdDate\&quot;: \&quot;2021-11-16T10:13:54.4857618Z\&quot;,\n\t\&quot;modifiedDate\&quot;: \&quot;2021-11-16T10:13:54.4857618Z\&quot;,\n\t\&quot;createdBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;modifiedBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;id\&quot;: \&quot;${id}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,20 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>1ffdcbfd-4ae7-4fb3-b472-bda2486169a4</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f1fb0f16-9d66-4520-a6a7-b7617977e5fc</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

@@ -374,4 +374,9 @@
       <initValue>''</initValue>
       <name>uploadedFileName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QwePricelist'</initValue>
+      <name>pricelistName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

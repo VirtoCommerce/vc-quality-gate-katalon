@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistDelete</name>
+   <name>PricelistAssignmentsDelete</name>
    <tag></tag>
-   <elementGuidId>eb756365-5235-4552-ac14-9504b317e94e</elementGuidId>
+   <elementGuidId>3dad4c61-d282-4764-b7ba-d9a049e97db1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists?ids=${id}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments?ids=${assignmentId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +38,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>id of the pricelist to delete</description>
-      <id>b02c0a5a-9b6a-496b-9c8a-f83c036b1867</id>
+      <defaultValue>'6aeb1560-06d7-4367-a95f-0b18c4d3c937'</defaultValue>
+      <description>id of the deleted assignment</description>
+      <id>e140065c-817e-4dd0-a146-9fddcda78668</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>assignmentId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

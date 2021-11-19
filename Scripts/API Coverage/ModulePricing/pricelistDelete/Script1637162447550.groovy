@@ -14,6 +14,19 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/ProductAddPrice'))
+
+WebUI.comment('TEST CASE: DELETE THE CREATED PRICELIST')
+
+
+'DELETE THE PRICELIST'
+deletePricelist = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistDelete',[
+	('id') : GlobalVariable.pricelistId
+	])) 
+
+
+'VERIFY THE DELETION'
+verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),
+	null
+	)
+WS.verifyElementPropertyValue(verifyDeleted,'totalCount','0')
