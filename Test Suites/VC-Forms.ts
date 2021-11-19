@@ -108,7 +108,7 @@
       <testCaseId>Test Cases/UI-VCFront/Solutions_Single-Partners-Find</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9d77d479-6263-418a-82aa-68794e5416fb</guid>
+      <guid>68cf8013-654b-41e6-bb74-105f4af9a52c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/UI-VCFront/WhitePapers_Bulk</testCaseId>
