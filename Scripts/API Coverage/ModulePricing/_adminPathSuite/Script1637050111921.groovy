@@ -50,9 +50,6 @@ editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricel
 	null
 	)
 	
-
-	/*
-	
 	
 'Delete the created pricelist assignment'
 deleteAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentDelete'),
@@ -70,4 +67,3 @@ deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 	null
 	)
 	
-	*/

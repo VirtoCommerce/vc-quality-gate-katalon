@@ -19,14 +19,14 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 WebUI.comment('TEST CASE: PRICELIST SEARCH')
 
-
+/*
 'DROP SEARCH INDEX'
 dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'), null)
-
+*/
 
 'SEARCH FOR THE PRICELIST (by name)'
-pricelistSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistsGet',[
+pricelistGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistsGet',[
 	('keyword') : GlobalVariable.pricelistName
 	]))
-return pricelistSearch
+return pricelistGet
 

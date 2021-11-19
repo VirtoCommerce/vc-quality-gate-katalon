@@ -26,7 +26,7 @@ deletePricelist = WS.sendRequestAndVerify(findTestObject('Object Repository/API/
 
 
 'VERIFY THE DELETION'
-verifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistGetSearch'),
+verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),
 	null
 	)
 WS.verifyElementPropertyValue(verifyDeleted,'totalCount','0')

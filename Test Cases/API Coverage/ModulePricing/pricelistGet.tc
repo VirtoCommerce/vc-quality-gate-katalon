@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>search for pricelist by different parameters</description>
-   <name>pricelistGetSearch</name>
+   <name>pricelistGet</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>7eae0616-b51d-4949-b1d5-c94e143cff70</testCaseGuid>

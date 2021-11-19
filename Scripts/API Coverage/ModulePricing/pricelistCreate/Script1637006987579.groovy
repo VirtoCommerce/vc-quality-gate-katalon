@@ -28,7 +28,7 @@ WebUI.comment('CREATED PRICELIST ID IS: ' + GlobalVariable.pricelistId)
 
 
 'VERIFY THE PRICELIST HAS BEEN CREATED'
-verifyCreated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGetSearch'),null)
+verifyCreated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),null)
 WS.verifyElementPropertyValue(verifyCreated, 'totalCount', '1')
 WS.verifyElementPropertyValue(verifyCreated, 'results[0].name', GlobalVariable.pricelistName)
 

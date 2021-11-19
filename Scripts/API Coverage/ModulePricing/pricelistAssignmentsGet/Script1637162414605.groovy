@@ -20,7 +20,6 @@ WebUI.comment('TEST CASE: Get pricelists assignments')
 
 
 'GET PRICELIST ASSIGNMENTS'
-
 getAssignments = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistGetAssignments',[
 	('pricelistId') : GlobalVariable.pricelistId
 	]))
