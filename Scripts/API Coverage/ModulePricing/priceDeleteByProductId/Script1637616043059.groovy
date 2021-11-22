@@ -15,32 +15,20 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-WebUI.comment('TEST CASE: ADD PRODUCT WITH PRICE TO THE CREATED PRICELIST')
+
+WebUI.comment('TEST CASE : DELETE PRICE FROM THE PRICELIST ASSIGNMENT')
 
 
-'ADD PRODUCT TO A PRICELIST'
-listPrice = '222'
-salePrice = '111' 
-addProductToPricelist = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistAddPrices',[
+'DELETE PRICE FROM THE ASSIGNMENT BY THE PRICE ID'
+deletePrice = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PriceDeleteByPricelistAndProductId', [
 	('pricelistId') : GlobalVariable.pricelistId,
-	('productId') : GlobalVariable.productId,
-	('listPrice') : listPrice,
-	('salePrice') : salePrice
+	('productId') : GlobalVariable.productId
 	]))
 
 
-'VERIFY THE PRODUCT & THE PRICE ARE ADDED'
-verifyPrice = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearch'), 
+'VERIFY THE PRICE HAS BEEN SUCCESSFULLY DELETED'
+verifyPrice = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearch'),
 	null
 	)
-WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].pricelistId',GlobalVariable.pricelistId)
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].productId',GlobalVariable.productId)
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].list', listPrice + '.0000')
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].sale', salePrice + '.0000')
-
-
-'EXTRACT CREATED PRICE ID'
-GlobalVariable.id = WS.getElementPropertyValue(verifyPrice, 'results[0].prices[0].id')
-WebUI.comment('PRICE ID IS: ' + GlobalVariable.id)
+WS.verifyElementPropertyValue(verifyPrice,'totalCount','0')
 

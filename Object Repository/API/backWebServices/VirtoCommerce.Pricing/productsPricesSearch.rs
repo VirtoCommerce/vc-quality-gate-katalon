@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'ee5ec795-5f75-46df-95eb-94e378ada532'</defaultValue>
       <description>id of the pricelist that contains the price</description>
       <id>c16330ee-9249-47df-9fca-829b7ca340e8</id>
       <masked>false</masked>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricesUpdateByProductId</name>
+   <name>PriceDeleteByPricelistAndProductId</name>
    <tag></tag>
-   <elementGuidId>8f7b9dca-db8f-4a05-9d2a-477c5f2b916c</elementGuidId>
+   <elementGuidId>b19c53c1-0203-4fc9-8c89-934c5408645d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -27,8 +27,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/products/{productId}/prices</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists/${pricelistId}/products/prices?productIds=${productId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,6 +37,20 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>id of the related pricelist</description>
+      <id>e99e7521-0437-4cfd-8067-4053edb4ea95</id>
+      <masked>false</masked>
+      <name>pricelistId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>id of the related product</description>
+      <id>d997d727-e58c-4848-a7e0-ff9a86b5ce44</id>
+      <masked>false</masked>
+      <name>productId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
