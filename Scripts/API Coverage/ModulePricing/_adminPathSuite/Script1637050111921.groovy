@@ -46,7 +46,7 @@ createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pric
 	)
 	
 'Edit the created assignment'
-editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelsitAssignmentEdit'),
+editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentEdit'),
 	null
 	)
 	
