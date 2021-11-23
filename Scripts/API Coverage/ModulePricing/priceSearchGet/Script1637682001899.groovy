@@ -16,18 +16,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: DELETE PRICELIST ASSIGNMENT')
+WebUI.comment('TEST CASE: SEARCH FOR PRICE IN THE PRICELIST')
 
 
-'DELETE PRICELIST ASSIGNMENT'
-deleteAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsDelete',[
-	('assignmentId') : GlobalVariable.id
+'SEARCH FOR A PRICE'
+priceSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/ProductsPricesGetSearch',[
+	('pricelistId') : GlobalVariable.pricelistId
 	]))
+return priceSearch
 
-
-'VERIFY THE ASSIGNMENT HSA BEEN DELETED'
-verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
-	null
-	)
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', '0')
 

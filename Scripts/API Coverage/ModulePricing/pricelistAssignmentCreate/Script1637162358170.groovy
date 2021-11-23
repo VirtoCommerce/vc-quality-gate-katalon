@@ -29,7 +29,7 @@ createAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API
 
 
 'VERIFY THE ASSIGNMENT HAS BEEN CREATED'
-verifyAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsGet'),
+verifyAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
 	null
 	)
 WS.verifyElementPropertyValue(verifyAssignment,'totalCount', '1')	

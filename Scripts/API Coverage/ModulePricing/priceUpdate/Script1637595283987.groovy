@@ -32,7 +32,7 @@ priceUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 
 
 'VERIFY THE PRODUCT & THE PRICE ARE ADDED'
-verifyPrice = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearch'),
+verifyPrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceSearchGet'),
 	null
 	)
 WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')

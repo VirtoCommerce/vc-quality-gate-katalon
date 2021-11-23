@@ -27,7 +27,7 @@ deletePrice = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 
 
 'VERIFY THE PRICE HAS BEEN SUCCESSFULLY DELETED'
-verifyPrice = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearch'),
+verifyPrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceSearchGet'),
 	null
 	)
 WS.verifyElementPropertyValue(verifyPrice,'totalCount','0')

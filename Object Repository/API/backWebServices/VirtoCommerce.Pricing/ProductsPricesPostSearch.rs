@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>productsPricesSearch</name>
+   <name>ProductsPricesPostSearch</name>
    <tag></tag>
-   <elementGuidId>23aa8e99-c869-4ea3-aecf-4e3549889442</elementGuidId>
+   <elementGuidId>d289e25b-2099-4858-a7f0-6b40f65dcca8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n  \n  \&quot;productId\&quot;: \&quot;${productId}\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/prices/search?pricelistId=${pricelistId}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/prices/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'ee5ec795-5f75-46df-95eb-94e378ada532'</defaultValue>
-      <description>id of the pricelist that contains the price</description>
-      <id>c16330ee-9249-47df-9fca-829b7ca340e8</id>
+      <defaultValue>''</defaultValue>
+      <description>related product id</description>
+      <id>a9bab7e8-14fb-43ce-87d0-7e43e62544ca</id>
       <masked>false</masked>
-      <name>pricelistId</name>
+      <name>productId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

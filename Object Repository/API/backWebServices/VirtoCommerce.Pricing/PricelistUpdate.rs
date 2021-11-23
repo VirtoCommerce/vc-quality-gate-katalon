@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${name}\&quot;,\n\t\&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\&quot;assignments\&quot;: [],\n\t\&quot;createdDate\&quot;: \&quot;2021-11-16T10:13:54.4857618Z\&quot;,\n\t\&quot;modifiedDate\&quot;: \&quot;2021-11-16T10:13:54.4857618Z\&quot;,\n\t\&quot;createdBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;modifiedBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;id\&quot;: \&quot;${id}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${name}\&quot;,\n\t\&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\&quot;assignments\&quot;: [],\n\t\&quot;createdBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;modifiedBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;id\&quot;: \&quot;${id}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistsGetAllForProduct</name>
+   <name>PricelistsAssignmentGetByAssignmentId</name>
    <tag></tag>
-   <elementGuidId>bef39550-1c9f-44fc-97ce-645d60c941db</elementGuidId>
+   <elementGuidId>17fd50a8-2b87-4037-ab84-52c35309ac81</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/{productId}/pricelists</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments/${pricelistId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,6 +37,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'55966fc9-6f5a-4cb0-8339-4c7ef331b9fc'</defaultValue>
+      <description>id of the related pricelist</description>
+      <id>3ff4fa70-d1bf-49ad-b022-1afe726abb4e</id>
+      <masked>false</masked>
+      <name>pricelistId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

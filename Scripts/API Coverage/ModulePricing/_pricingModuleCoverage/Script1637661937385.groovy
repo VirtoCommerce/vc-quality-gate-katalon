@@ -51,13 +51,43 @@ createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pric
 	null
 	)
 
-		
+
+	
+			
 'Edit the created assignment'
 editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentEdit'),
 	null
 	)
 	
-/*	
+	
+//Unique for the module suite
+'Get pricelist assignment'		
+getAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsGet'),
+	null
+	)
+	
+	
+//Unique for the module suite
+'Search for the product prices'
+pricesSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchPost'), 
+	null
+	)		
+	
+	
+//Unique for the module suite	
+'Get all pricelists for the product'
+pricelistsGetAll = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistsGetAll'),
+	null
+	)
+	
+	
+//Unique for the module suite	
+'Get pricelist (by pricelist id)'
+pricelistGetByPricelistId = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistGetByPricelistId'),
+	null
+	)		
+	
+	
 'Delete the updated price from the pricelist'
 deletePrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceDeleteByProductId'),
 	null
@@ -81,4 +111,3 @@ deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 	null
 	)	
 	
-*/

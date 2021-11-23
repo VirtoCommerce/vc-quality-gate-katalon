@@ -37,13 +37,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>'b55e5d9a-4cfa-40bc-b126-18084516c2d2'</defaultValue>
-      <description>id of the pricelist to delete</description>
-      <id>e140065c-817e-4dd0-a146-9fddcda78668</id>
-      <masked>false</masked>
-      <name>pricelistId</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

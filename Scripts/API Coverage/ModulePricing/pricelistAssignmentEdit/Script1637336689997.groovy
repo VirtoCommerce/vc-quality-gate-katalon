@@ -35,7 +35,7 @@ editAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/b
 
 
 'VERIFY THE ASSIGNMENT HAS BEEN UPDATED'
-verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsGet'),
+verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
 	null
 	)
 WS.verifyElementPropertyValue(verifyUpdated,'totalCount', '1')

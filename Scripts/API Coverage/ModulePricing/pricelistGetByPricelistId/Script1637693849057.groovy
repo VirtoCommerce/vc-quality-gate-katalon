@@ -16,11 +16,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: Get pricelists assignments')
+WebUI.comment('TEST CASE: PRICELIST GET BY PRICELIST ID')
 
 
-'GET PRICELIST ASSIGNMENTS'
-getAssignments = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistGetAssignments',[
+'SEND REQUEST TO GET PRICELIST ID'
+pricelistGetById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistsGetByPricelistId', [
 	('pricelistId') : GlobalVariable.pricelistId
 	]))
-return getAssignments
+WS.verifyElementPropertyValue(pricelistGetById, 'id', GlobalVariable.pricelistId)
+//WS.verifyElementPropertyValue(pricelistGetById, 'name', GlobalVariable.pricelistName)
+return pricelistGetById

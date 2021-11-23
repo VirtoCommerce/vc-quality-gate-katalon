@@ -9,25 +9,22 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
 
-WebUI.comment('TEST CASE: DELETE PRICELIST ASSIGNMENT')
+WebUI.comment('TEST CASE : PRICELIST ASSIGNMENT GET BY ID')
 
 
-'DELETE PRICELIST ASSIGNMENT'
-deleteAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsDelete',[
-	('assignmentId') : GlobalVariable.id
+'SEND REQUEST TO GET THE PRICELIST ASSIGNMENT'
+GlobalVariable.id = '55966fc9-6f5a-4cb0-8339-4c7ef331b9fc'
+getAssignment = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistsAssignmentGetByAssignmentId',[
+	('pricelistId') : GlobalVariable.id
 	]))
-
-
-'VERIFY THE ASSIGNMENT HSA BEEN DELETED'
-verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
-	null
-	)
-WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', '0')
-
+verification = WS.verifyElementPropertyValue(getAssignment,'id',GlobalVariable.id)
+return getAssignment
