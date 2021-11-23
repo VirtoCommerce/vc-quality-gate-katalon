@@ -16,4 +16,17 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/ProductAddPrice'))
+
+WebUI.comment('TEST CASE: PRICELIST SEARCH')
+
+/*
+'DROP SEARCH INDEX'
+dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'), null)
+*/
+
+'SEARCH FOR THE PRICELIST (by name)'
+pricelistGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistsGet',[
+	('keyword') : GlobalVariable.pricelistName
+	]))
+return pricelistGet
+

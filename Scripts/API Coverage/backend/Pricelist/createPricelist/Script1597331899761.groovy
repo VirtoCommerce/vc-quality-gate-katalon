@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
-def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistCreate'))
+def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/PricelistCreate'))
 def productJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 GlobalVariable.pricelistId = productJson.id
 println('HERE PRICE ID : ' + GlobalVariable.pricelistId)

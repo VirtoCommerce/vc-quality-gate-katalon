@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistsGetById</name>
+   <name>ProductAddPrice</name>
    <tag></tag>
-   <elementGuidId>ae182208-d3a5-44eb-b3bc-dea917ce0b9d</elementGuidId>
+   <elementGuidId>c5c1f8c9-e673-4450-a250-d76f3be7afbc</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;storeId\&quot;: \&quot;string\&quot;,\n  \&quot;catalogId\&quot;: \&quot;string\&quot;,\n  \&quot;productIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;pricelistIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;returnAllMatchedPrices\&quot;: true,\n  \&quot;quantity\&quot;: 0,\n  \&quot;customerId\&quot;: \&quot;string\&quot;,\n  \&quot;organizationId\&quot;: \&quot;string\&quot;,\n  \&quot;certainDate\&quot;: \&quot;2021-11-11T16:21:30.065Z\&quot;,\n  \&quot;currency\&quot;: \&quot;string\&quot;,\n  \&quot;contextObject\&quot;: {},\n  \&quot;geoCity\&quot;: \&quot;string\&quot;,\n  \&quot;geoState\&quot;: \&quot;string\&quot;,\n  \&quot;geoCountry\&quot;: \&quot;string\&quot;,\n  \&quot;geoContinent\&quot;: \&quot;string\&quot;,\n  \&quot;geoZipCode\&quot;: \&quot;string\&quot;,\n  \&quot;geoConnectionType\&quot;: \&quot;string\&quot;,\n  \&quot;geoTimeZone\&quot;: \&quot;string\&quot;,\n  \&quot;geoIpRoutingType\&quot;: \&quot;string\&quot;,\n  \&quot;geoIspSecondLevel\&quot;: \&quot;string\&quot;,\n  \&quot;geoIspTopLevel\&quot;: \&quot;string\&quot;,\n  \&quot;shopperAge\&quot;: 0,\n  \&quot;shopperGender\&quot;: \&quot;string\&quot;,\n  \&quot;language\&quot;: \&quot;string\&quot;,\n  \&quot;userGroups\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;shopperSearchedPhraseInStore\&quot;: \&quot;string\&quot;,\n  \&quot;shopperSearchedPhraseOnInternet\&quot;: \&quot;string\&quot;,\n  \&quot;currentUrl\&quot;: \&quot;string\&quot;,\n  \&quot;referredUrl\&quot;: \&quot;string\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n    \&quot;prices\&quot;: [\n      {\n        \&quot;pricelistId\&quot;: \&quot;${GlobalVariable.pricelistId}\&quot;,\n        \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n        \&quot;sale\&quot;: 55,\n        \&quot;list\&quot;: 99,\n        \&quot;minQuantity\&quot;: 1,\n        \&quot;startDate\&quot;: \&quot;2020-08-10T09:59:39.979Z\&quot;\n      }\n    ]\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists/{id}</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/products/prices</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -55,6 +55,6 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)</verificationScript>
+WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

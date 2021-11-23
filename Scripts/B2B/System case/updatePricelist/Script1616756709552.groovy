@@ -17,4 +17,4 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 //for tests
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/ProductAddPrice'))
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/ProductAddPrice'))

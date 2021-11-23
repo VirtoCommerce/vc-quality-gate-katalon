@@ -14,6 +14,20 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/ProductAddPrice'))
+
+WebUI.comment('TEST CASE: DELETE PRICELIST ASSIGNMENT')
+
+
+'DELETE PRICELIST ASSIGNMENT'
+deleteAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsDelete',[
+	('assignmentId') : GlobalVariable.id
+	]))
+
+
+'VERIFY THE ASSIGNMENT HSA BEEN DELETED'
+verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsGet'),
+	null
+	)
+WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', '0')
+

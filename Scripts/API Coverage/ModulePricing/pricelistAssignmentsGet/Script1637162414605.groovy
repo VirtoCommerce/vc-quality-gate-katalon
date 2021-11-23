@@ -14,6 +14,13 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/ProductAddPrice'))
+
+WebUI.comment('TEST CASE: Get pricelists assignments')
+
+
+'GET PRICELIST ASSIGNMENTS'
+getAssignments = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistGetAssignments',[
+	('pricelistId') : GlobalVariable.pricelistId
+	]))
+return getAssignments

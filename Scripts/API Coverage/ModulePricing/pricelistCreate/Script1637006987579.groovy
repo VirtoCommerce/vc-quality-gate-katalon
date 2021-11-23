@@ -14,6 +14,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/zUsedInE2EHybridTests/ProductAddPrice'))
+
+WebUI.comment('TEST CASE: PRICELIST CREATE')
+
+
+'CREATE PRICELIST AND EXTRACT ITS ID TO GLOBAL VARIABLE'
+pricelistCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistCreate', [
+	('name') : GlobalVariable.pricelistName
+	]))
+GlobalVariable.pricelistId = WS.getElementPropertyValue(pricelistCreate, 'id')
+WebUI.comment('CREATED PRICELIST ID IS: ' + GlobalVariable.pricelistId)
+
+
+'VERIFY THE PRICELIST HAS BEEN CREATED'
+verifyCreated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),null)
+WS.verifyElementPropertyValue(verifyCreated, 'totalCount', '1')
+WS.verifyElementPropertyValue(verifyCreated, 'results[0].name', GlobalVariable.pricelistName)
+
