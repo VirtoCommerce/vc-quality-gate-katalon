@@ -26,7 +26,7 @@ FailureHandling.STOP_ON_FAILURE)
 //UPLOAD A FILE WITH THE FORBIDDEN EXTENSION
 errorMessage = 'This extension is not allowed. Please contact administrator.'
 fileName = 'forbidden.exe'
-uploadForbiddenFileLocal = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+uploadForbiddenFileLocal = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,
 	('url') : fileName
 	]))
@@ -35,7 +35,7 @@ WS.containsString(uploadForbiddenFileLocal, errorMessage, false)
 
 
 //UPLOAD A FILE WITH THE CORRECT EXTENSION
-uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUploadLocal', [
+uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUploadLocal', [
 	('folderUrl') : GlobalVariable.folderUrl
 	]))
 //get file url

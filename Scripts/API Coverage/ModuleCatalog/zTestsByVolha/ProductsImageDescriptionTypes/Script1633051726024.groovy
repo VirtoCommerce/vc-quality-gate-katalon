@@ -76,14 +76,14 @@ UpdateTypes(allowedValues)
 
 
 'CREATE NEW FOLDER'
-folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
+folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetCreateBlobFolder', [
 	('folderName') : GlobalVariable.folderName,
 	('parentUrl') : ''
 	]))
 
 
 'FIND URL OF ASSETS'
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetGetList', [
 	('folderName') : '',
 	('keyword') : GlobalVariable.folderName
 	]))
@@ -99,7 +99,7 @@ WebUI.comment ('Folder URL is: ' + folderUrl)
 
 
 'UPLOAD IMAGE FOR PRODUCT'
-uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
 	('folderUrl') : folderUrl,
 	('url') : GlobalVariable.urlBack + '/images/userpic.svg'
 	]))

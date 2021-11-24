@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: AssetCreateBlobFolder')
 
 
 'CREATE NEW FOLDER'
-folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetCreateBlobFolder', [
+folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetCreateBlobFolder', [
 	('folderName') : GlobalVariable.folderName,
 	('parentUrl') : ''
 	]))
@@ -29,7 +29,7 @@ folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 
 'VERIFY THE FOLDER HAS BEEN CREATED' //Should I remove this for the sake of having 
 //this test case atomic??
-verifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+verifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetGetList', [
 	('folderName') : '',
 	('keyword') : GlobalVariable.folderName
 	]))

@@ -18,6 +18,6 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Delete folder')
  
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetDelete', [
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetDelete', [
 	('itemName') : GlobalVariable.folderUrl
 	]))
