@@ -29,7 +29,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?folderUrl=${folderName}&amp;keyword=${keyword}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/assets?folderUrl=${folderName}&amp;keyword=${keyword}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
