@@ -29,7 +29,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/assets?urls=${itemName1}&amp;urls=${itemName2}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/assets?urls=${itemName1}&amp;urls=${itemName2}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
