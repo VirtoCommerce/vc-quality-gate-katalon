@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/filteredAssignments?pricelistIds=${pricelistId}&amp;skip=0&amp;take=20</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/filteredAssignments?SearchPhrase=${searchPhrase}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

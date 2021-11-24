@@ -20,7 +20,6 @@ WebUI.comment('TEST CASE: GET ALL THE PRICELISTS FOR THE PRODUCT')
 
 
 'SEND REQUEST TO GET OLL OF THE RELATED PRICELISTS'
-GlobalVariable.productId = 'b4feae5f-4a1d-4717-8139-ce91317dee1d'
 getPricelists = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/ProductsPricelistsGetAll', [
 	('productId') : GlobalVariable.productId
 	]))

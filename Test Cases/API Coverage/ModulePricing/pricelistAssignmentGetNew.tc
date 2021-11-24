@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>get a new pricelist assignment</description>
+   <name>pricelistAssignmentGetNew</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6714c927-b4a1-4535-ac3f-8b67822bd838</testCaseGuid>
+</TestCaseEntity>

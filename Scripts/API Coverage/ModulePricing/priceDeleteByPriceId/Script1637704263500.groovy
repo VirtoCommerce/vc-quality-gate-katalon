@@ -20,7 +20,7 @@ WebUI.comment('TEST CASE: PRICE DELETE BY PRICEID')
 
 
 'DELETE PRICE BY PRICEID'
-priceDelete = WS.sendRequestAndVerify(findTestObject('Test Cases/API Coverage/ModulePricing/priceDeleteByPriceId',[
+priceDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PriceDeleteByPriceId',[
 	('priceId') : GlobalVariable.id
 	]))
 

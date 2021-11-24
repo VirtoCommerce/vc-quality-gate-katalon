@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistGetNewAssignment</name>
+   <name>PricelistAssignmentGetNew</name>
    <tag></tag>
    <elementGuidId>a53fdb89-f855-4187-b6c6-c7e7f50c6db2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments/{id}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/assignments/new</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

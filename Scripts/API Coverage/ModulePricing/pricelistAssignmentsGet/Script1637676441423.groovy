@@ -22,7 +22,6 @@ WebUI.comment('TEST CASE : PRICELIST ASSIGNMENT GET BY ID')
 
 
 'SEND REQUEST TO GET THE PRICELIST ASSIGNMENT'
-GlobalVariable.id = '55966fc9-6f5a-4cb0-8339-4c7ef331b9fc'
 getAssignment = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistsAssignmentGetByAssignmentId',[
 	('pricelistId') : GlobalVariable.id
 	]))

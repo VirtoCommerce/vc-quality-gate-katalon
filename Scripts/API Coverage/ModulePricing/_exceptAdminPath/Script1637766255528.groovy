@@ -16,98 +16,90 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
+'TEST CASES BEYOND ADMIN PATH (module coverage)'
+
+    //This step is duplicated adminPath suite
 'Create & verify pricelist'
 createPricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistCreate'),
 	null
 	)
-	
-	
- 'Update & verify pricelist'
-updatePricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistUpdate'),
-	null
-	)
-	
 
+	//This step is duplicated adminPath suite
 'Create a product'
 productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
 	null
 	)
 	
-
-'Add product to the pricelist and verify'
+	//This step is duplicated adminPath suite
+'Add product and price to the pricelist and verify'
 addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistPricesAdd'),
 	null
 	)
 	
-
-'Update price of the created product'
-updatePrice = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceUpdate'),
-	null
-	)
-
-
-'For the pricelist create an assignment'
-createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'),
-	null
-	)
-
-
-	
 			
-'Edit the created assignment'
-editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentEdit'),
-	null
-	)
-	
-	
-//Unique for the module suite
-'Get pricelist assignment'		
-getAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsGet'),
-	null
-	)
-	
-	
-//Unique for the module suite
+
 'Search for the product prices'
-pricesSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchPost'), 
-	null
-	)		
-	
-	
-//Unique for the module suite	
+pricesSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchPost'),
+		null
+		)
+		
+		
+
 'Get all pricelists for the product'
 pricelistsGetAll = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistsGetAll'),
 	null
 	)
-	
-	
-//Unique for the module suite	
+		
+		
+
 'Get pricelist (by pricelist id)'
 pricelistGetByPricelistId = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistGetByPricelistId'),
-	null
-	)		
+		null
+		)
+		
 	
-	
-'Delete the updated price from the pricelist'
-deletePrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceDeleteByProductId'),
-	null
-	)	
-	
-	
-'Delete the created pricelist assignment'
-deleteAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentDelete'),
+
+'Price delete by priceId'
+	pricedeleteById = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceDeleteByPriceId'),
+		null
+		)
+
+		
+'Get new assignment'
+	assignmentGetNew = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentGetNew'),
+		null
+		)		
+		
+		
+		//This step is duplicated adminPath suite
+'For the pricelist create an assignment'
+createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'),
+		null
+		)
+
+			
+'Get pricelist assignment'
+getAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsGet'),
+		null
+		)
+		
+						
+'Pricelist assignments delete via filter and verify'
+pricelistDeleteViaFilter = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsDeleteFiltered'),
 	null
 	)
 	
 	
+	//This step is duplicated adminPath suite
+'Delete the created product'
+deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
+		null
+		)
+		
+		
+		//This step is duplicated adminPath suite
 'Delete the created pricelist and verify'
 deletePricelist = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistDelete'),
-	null
-	)
-	
-	
-'Delete the create product'
-deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
-	null
-	)	
-	
+		null
+		)
+		

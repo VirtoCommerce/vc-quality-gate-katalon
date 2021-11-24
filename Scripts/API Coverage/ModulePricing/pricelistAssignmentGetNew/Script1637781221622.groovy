@@ -16,18 +16,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE : PRICELIST ASSIGNMENT DELETE VIA FILTER')
+WebUI.comment('TEST CASE : ASSIGNMENT GET NEW')
 
 
-'DELETE ASSIGNMENT VIA FILTER'
-deleteAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsDeleteFiltered',[
-	('searchPhrase') : GlobalVariable.firstName
-	]))
-
-
-'VERIFY THE PRICELIST HAS BEEN DELETED'
-verifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsSearch'),
-	null
-	)
-WS.verifyElementPropertyValue(verifyDeleted,'totalCount', '0')
-
+'GET NEW ASSIGNMENT'
+dynamicExpressionId = 'PriceConditionTree'
+assignmentGetNew = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentGetNew'))
+WS.verifyElementPropertyValue(assignmentGetNew,'dynamicExpression.id', dynamicExpressionId)
+return assignmentGetNew

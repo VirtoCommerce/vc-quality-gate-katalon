@@ -57,7 +57,7 @@ editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricel
 	null
 	)
 	
-/*	
+
 'Delete the updated price from the pricelist'
 deletePrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceDeleteByProductId'),
 	null
@@ -76,9 +76,8 @@ deletePricelist = WS.callTestCase(findTestCase('API Coverage/ModulePricing/price
 	)
 	
 	
-'Delete the create product'
+'Delete the created product'
 deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
 	null
 	)	
 	
-*/
