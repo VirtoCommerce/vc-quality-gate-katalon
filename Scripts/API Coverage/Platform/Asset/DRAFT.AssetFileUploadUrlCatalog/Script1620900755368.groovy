@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: Assets. Catalog upload ZIP file by URL')
 println GlobalVariable.localUrl
 folderUrlCatalog = ('catalog/3DRSOLO')
 
-uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetFileUpload', [
+uploadRequest = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
 	('folderUrl') : folderUrlCatalog,
 	('url') : 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
 	]))
