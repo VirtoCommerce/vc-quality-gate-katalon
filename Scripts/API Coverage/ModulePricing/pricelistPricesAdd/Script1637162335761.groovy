@@ -41,6 +41,6 @@ WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].sale', salePrice
 
 
 'EXTRACT CREATED PRICE ID'
-GlobalVariable.id = WS.getElementPropertyValue(verifyPrice, 'results[0].prices[0].id')
-WebUI.comment('PRICE ID IS: ' + GlobalVariable.id)
+GlobalVariable.priceId = WS.getElementPropertyValue(verifyPrice, 'results[0].prices[0].id')
+WebUI.comment('PRICE ID IS: ' + GlobalVariable.priceId)
 

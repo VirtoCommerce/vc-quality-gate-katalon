@@ -18,31 +18,32 @@ import internal.GlobalVariable as GlobalVariable
 
 'TEST CASES BEYOND ADMIN PATH (module coverage)'
 
+
     //This step is duplicated adminPath suite
 'Create & verify pricelist'
 createPricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistCreate'),
 	null
 	)
 
+	
 	//This step is duplicated adminPath suite
 'Create a product'
 productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
 	null
 	)
 	
+	
 	//This step is duplicated adminPath suite
 'Add product and price to the pricelist and verify'
 addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistPricesAdd'),
 	null
 	)
-	
 			
 
 'Search for the product prices'
 pricesSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchPost'),
 		null
 		)
-		
 		
 
 'Get all pricelists for the product'
@@ -51,14 +52,12 @@ pricelistsGetAll = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleP
 	)
 		
 		
-
 'Get pricelist (by pricelist id)'
 pricelistGetByPricelistId = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistGetByPricelistId'),
 		null
 		)
 		
 	
-
 'Price delete by priceId'
 	pricedeleteById = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceDeleteByPriceId'),
 		null
@@ -102,4 +101,5 @@ deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 deletePricelist = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistDelete'),
 		null
 		)
+		
 		

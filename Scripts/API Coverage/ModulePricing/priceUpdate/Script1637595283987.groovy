@@ -26,7 +26,7 @@ priceUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 	('productName') : GlobalVariable.productName,
 	('catalogId') : GlobalVariable.catalogId,
 	('pricelistId') : GlobalVariable.pricelistId,
-	('priceId') : GlobalVariable.id,
+	('priceId') : GlobalVariable.priceId,
 	('listPrice') : updatedPrice + '.0000'
 	]))
 

@@ -15,21 +15,72 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
 
 WebUI.comment('TEST CASE: EDIT THE PRICELIST ASSIGNMENT')
 
 
-'EDIT THE EXISTING  PRICELIST ASSIGNMENT'
+'GET THE CREATED ASSIGNMENT BODY'
 assignmentNameUpdated = 'QweAssignmentUPD'
-condition = 'QweProduct'/*assignment's 'Eligible shoppers' condition 
+//condition = 'QweProduct'
+/*assignment's 'Eligible shoppers' condition
 (used in 'if any of this conditions are true' section),
 in this particular case it is 'shopper searched in store for phrase:' ${condition%}*/
+//GlobalVariable.pricelistId = '70b5f436-131a-4376-9437-86f63e466878'
+//GlobalVariable.assignmentId = UUID.randomUUID().toString()
+assignmentSearch = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
+	null
+	)
+	
+	
+'GET THE ASSIGNMENT BODY CONTENT AND EDIT IT'
+assignmentSearchBody = assignmentSearch.getResponseBodyContent()
+assignmentSearchBodyParsed = new JsonSlurper().parseText(assignmentSearchBody)
+assignmentSearchResults =  assignmentSearchBodyParsed.results[0]
+assignmentSearchResults.catalogId = GlobalVariable.catalogId
+assignmentSearchResults.pricelistId = GlobalVariable.pricelistId
+assignmentSearchResults.pricelist.name = GlobalVariable.pricelistName
+assignmentSearchResults.name = assignmentNameUpdated
+assignmentSearchResults.id = GlobalVariable.assignmentId
+//assignmentSearchResults.dynamicExpression.children[0].children[0].value = condition
+assignmentSearchResultsJson = new groovy.json.JsonBuilder(assignmentSearchResults).toString()
+
+
+'SEND THE REQUEST TO UPDATE THE ASSIGNMENT'
+RequestObject assignmentUpdateObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsUpdate')
+assignmentUpdateObject.setBodyContent(new HttpTextBodyContent(assignmentSearchResultsJson))
+assignmentUpdate = WS.sendRequestAndVerify(assignmentUpdateObject)
+
+
+'VERIFY THE ASSIGNMENT HAS BEEN UPDATED'
+verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
+	null
+	)
+WS.verifyElementPropertyValue(verifyUpdated,'totalCount', '1')
+WS.verifyElementPropertyValue(verifyUpdated,'results[0].name', assignmentNameUpdated)
+WS.verifyElementPropertyValue(verifyUpdated,'results[0].id', GlobalVariable.assignmentId)
+//WS.verifyElementPropertyValue(verifyUpdated,'results[0].dynamicExpression.children[0].children[0].value', condition)
+
+
+
+'HERE IS THE OLD VERSION OF THIS TEST CASE (USES HARDCODED JSON THAT IS STORED IN THE REQUEST BODY'
+/*
+'EDIT THE EXISTING  PRICELIST ASSIGNMENT'
+assignmentNameUpdated = 'QweAssignmentUPD'
+condition = 'QweProduct'
+//assignment's 'Eligible shoppers' condition 
+//(used in 'if any of this conditions are true' section),
+//in this particular case it is 'shopper searched in store for phrase:' ${condition%}
 editAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsUpdate', [
 	('catalogId') : GlobalVariable.catalogId,
 	('pricelistId') : GlobalVariable.pricelistId,
 	('pricelistname') : GlobalVariable.pricelistName,
 	('assignmentName') : assignmentNameUpdated,
-	('assignmentId') : GlobalVariable.id,
+	('assignmentId') : GlobalVariable.assignmentId,
 	('condition') : condition 
 	]))
 
@@ -40,6 +91,6 @@ verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceli
 	)
 WS.verifyElementPropertyValue(verifyUpdated,'totalCount', '1')
 WS.verifyElementPropertyValue(verifyUpdated,'results[0].name', assignmentNameUpdated)
-WS.verifyElementPropertyValue(verifyUpdated,'results[0].id', GlobalVariable.id)
+WS.verifyElementPropertyValue(verifyUpdated,'results[0].id', GlobalVariable.assignmentId)
 WS.verifyElementPropertyValue(verifyUpdated,'results[0].dynamicExpression.children[0].children[0].value', condition)
-
+*/

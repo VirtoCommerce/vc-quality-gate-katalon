@@ -16,29 +16,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: CREATE AN ASSIGNMENT FOR THE PRICELIST')
+WebUI.comment('TEST CASE : PRICES WIDGET GET')
 
 
-'CREATE AN ASSIGNMENT FOR THE PRICELIST'
-assignmentName = 'QweAssignment'
-createAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistCreateAssignment',[
+'GET PRICES WIDGET'
+getWidget = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricesGetWidget',[
 	('catalogId') : GlobalVariable.catalogId,
-	('pricelistId') : GlobalVariable.pricelistId,
-	('name') : assignmentName
+	('productId') : GlobalVariable.productId
 	]))
-
-
-'VERIFY THE ASSIGNMENT HAS BEEN CREATED'
-verifyAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
-	null
-	)
-WS.verifyElementPropertyValue(verifyAssignment,'totalCount', '1')	
-WS.verifyElementPropertyValue(verifyAssignment,'results[0].catalogId', GlobalVariable.catalogId)
-WS.verifyElementPropertyValue(verifyAssignment,'results[0].pricelistId', GlobalVariable.pricelistId)
-WS.verifyElementPropertyValue(verifyAssignment,'results[0].name', assignmentName)
-
-
-'EXTRACT THE CREATED ASSIGNMENT ID'
-GlobalVariable.assignmentId = WS.getElementPropertyValue(verifyAssignment,'results[0].id')
-WebUI.comment('ASSIGNMENT ID IS: ' + GlobalVariable.assignmentId)
-
+WS.verifyElementPropertyValue(getWidget, '[0].productId', GlobalVariable.productId)
+return getWidget
