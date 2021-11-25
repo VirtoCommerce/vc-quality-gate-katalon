@@ -32,7 +32,7 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Job_rol
 
 WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
-WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+//WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 
 WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 

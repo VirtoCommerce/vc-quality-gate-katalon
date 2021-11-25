@@ -32,12 +32,12 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone'), '0123456789')
 
-WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')
+//WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')
 
-WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+//WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 
 WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 
-assert WebUI.getUrl() == (GlobalVariable.urlFront + '/thank-you')
+assert WebUI.getUrl() == (GlobalVariable.urlFront + '/contact-us-thank-you')
