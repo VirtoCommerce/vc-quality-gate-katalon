@@ -22,84 +22,71 @@ import internal.GlobalVariable as GlobalVariable
     //This step is duplicated adminPath suite
 'Create & verify pricelist'
 createPricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistCreate'),
-	null
-	)
+	null)
 
 	
 	//This step is duplicated adminPath suite
 'Create a product'
 productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
-	null
-	)
+	null)
 	
 	
 	//This step is duplicated adminPath suite
 'Add product and price to the pricelist and verify'
-addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistPricesAdd'),
-	null
-	)
+addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistProductsAdd'),
+	null)
 			
 
 'Search for the product prices'
 pricesSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchPost'),
-		null
-		)
+		null)
 		
 
 'Get all pricelists for the product'
 pricelistsGetAll = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistsGetAll'),
-	null
-	)
+	null)
 		
 		
-'Get pricelist (by pricelist id)'
-pricelistGetByPricelistId = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistGetByPricelistId'),
-		null
-		)
-		
+	
+'PricelistSearch'
+pricelistSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsSearch'),
+	null)
+
 	
 'Price delete by priceId'
 	pricedeleteById = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceDeleteByPriceId'),
-		null
-		)
+		null)
 
 		
 'Get new assignment'
-	assignmentGetNew = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentGetNew'),
-		null
-		)		
+assignmentGetNew = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentGetNew'),
+		null)		
 		
 		
 		//This step is duplicated adminPath suite
 'For the pricelist create an assignment'
 createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'),
-		null
-		)
+		null)
 
 			
 'Get pricelist assignment'
 getAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsGet'),
-		null
-		)
+		null)
 		
 						
 'Pricelist assignments delete via filter and verify'
 pricelistDeleteViaFilter = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentsDeleteFiltered'),
-	null
-	)
+	null)
 	
 	
 	//This step is duplicated adminPath suite
 'Delete the created product'
 deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
-		null
-		)
+		null)
 		
 		
 		//This step is duplicated adminPath suite
 'Delete the created pricelist and verify'
 deletePricelist = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistDelete'),
-		null
-		)
-		
-		
+		null)
+				

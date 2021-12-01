@@ -379,4 +379,14 @@
       <initValue>'QwePricelist'</initValue>
       <name>pricelistName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created price</description>
+      <initValue>''</initValue>
+      <name>priceId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Id of the created assignment</description>
+      <initValue>''</initValue>
+      <name>assignmentId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

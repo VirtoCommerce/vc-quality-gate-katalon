@@ -45,7 +45,7 @@
       <guid>7d7c153c-fcec-4cd6-9ae9-3208058a1dd1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistPricesAdd</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistProductsAdd</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9e3e933f-199d-4fa3-84c2-87e4c675a3a5</guid>
@@ -69,7 +69,7 @@
       <guid>54ec80c2-4c8f-44a7-a389-ee9cb00cc138</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePricing/priceDeleteByProductId</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricesDeleteByProductId</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b3a55394-3e18-455a-9d39-0e6190016448</guid>

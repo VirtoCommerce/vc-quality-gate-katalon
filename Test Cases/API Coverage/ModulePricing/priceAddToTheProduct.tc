@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>add second price to the product that already has a price</description>
+   <name>priceAddToTheProduct</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d8a75d38-84a1-476e-a1fb-60f60d592829</testCaseGuid>
+</TestCaseEntity>

@@ -18,71 +18,64 @@ import internal.GlobalVariable as GlobalVariable
 
 'Create & verify pricelist'
 createPricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistCreate'),
-	null
-	)
+	null)
 	
 	
  'Update & verify pricelist'
 updatePricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistUpdate'),
-	null
-	)
+	null)
 	
 
-  'For the pricelist create an assignment'
+'For the pricelist create an assignment'
 createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'),
-		null
-		)
+	null)
 	
 				
 'Create a product'
 productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
-	null
-	)
+	null)
 	
 
 'Add product to the pricelist and verify'
-addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistPricesAdd'),
-	null
-	)
+addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistProductsAdd'),
+	null)
 	
 'Check the pricelist widget data'
 getWidget = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricesWidgetGet'),
-	null
-	)	
+	null)	
 	
 	
 'Update price of the created product'
 updatePrice = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceUpdate'),
-	null
-	)
+	null)
 
 
  'Edit the created assignment'
 editAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentEdit'),
-		null
-		)
-	
-/*
-'Delete the updated price from the pricelist'
-deletePrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceDeleteByProductId'),
-	null
-	)	
+	null)
+
+
+'Add one more price to the product'
+addMultiplePrices = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceAddToTheProduct'), 
+	null)
+
+
+'Delete the prices from the pricelist'
+deletePrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricesDeleteByProductId'),
+	null)	
 	
 	
 'Delete the created pricelist assignment'
 deleteAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistAssignmentDelete'),
-	null
-	)
+	null)
 	
-	
+
 'Delete the created pricelist and verify'
 deletePricelist = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistDelete'),
-	null
-	)
+	null)
 	
 	
 'Delete the created product'
 deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
-	null
-	)	
-*/	
+	null)
+

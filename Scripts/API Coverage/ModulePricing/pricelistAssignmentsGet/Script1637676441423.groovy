@@ -21,9 +21,10 @@ import org.openqa.selenium.Keys as Keys
 WebUI.comment('TEST CASE : PRICELIST ASSIGNMENT GET BY ID')
 
 
-'SEND REQUEST TO GET THE PRICELIST ASSIGNMENT'
+'SEND REQUEST TO GET  THE PRICELIST ASSIGNMENT'
+//GlobalVariable.assignmentId = '19a81816-ffb3-405a-b4ee-90788a94adcc'
 getAssignment = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistsAssignmentGetByAssignmentId',[
-	('pricelistId') : GlobalVariable.id
+	('assignmentId') : GlobalVariable.assignmentId
 	]))
-verification = WS.verifyElementPropertyValue(getAssignment,'id',GlobalVariable.id)
+verification = WS.verifyElementPropertyValue(getAssignment,'id',GlobalVariable.assignmentId)
 return getAssignment

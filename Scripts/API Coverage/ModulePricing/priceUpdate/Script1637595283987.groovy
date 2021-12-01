@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: price udate')
 
 'UPDATE PRODUCT PRICE'
 updatedPrice = '555'
-priceUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricesUpdateByProductId', [
+priceUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricesAddUpdateByProductId', [
 	('productId') : GlobalVariable.productId,
 	('productName') : GlobalVariable.productName,
 	('catalogId') : GlobalVariable.catalogId,

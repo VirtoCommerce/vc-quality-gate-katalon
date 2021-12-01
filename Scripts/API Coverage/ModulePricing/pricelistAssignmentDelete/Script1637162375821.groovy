@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: DELETE PRICELIST ASSIGNMENT')
 
 'DELETE PRICELIST ASSIGNMENT'
 deleteAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsDelete',[
-	('assignmentId') : GlobalVariable.id
+	('assignmentId') : GlobalVariable.assignmentId
 	]))
 
 

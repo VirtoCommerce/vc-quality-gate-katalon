@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
-   <description></description>
+   <description>There's a bug with this endpoint:
+https://virtocommerce.atlassian.net/browse/PT-5837</description>
    <name>PricelistAssignmentsDeleteFiltered</name>
    <tag></tag>
    <elementGuidId>1c232479-4aa1-469c-a075-756de3ec740d</elementGuidId>

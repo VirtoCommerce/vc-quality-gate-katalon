@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;prices\&quot;: [\n\t\t\t{\n\t\t\t\t\&quot;productId\&quot;: \&quot;${productId}\&quot;,\n\t\t\t\t\&quot;list\&quot;: \u0027${listPrice}\u0027,\n                \&quot;sale\&quot;: \u0027${salePrice}\u0027,             \n \t\t\t\t\&quot;minQuantity\&quot;: 1,\n\t\t\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\t\t\&quot;priceListId\&quot;: \&quot;${pricelistId}\&quot;\n\t\t\t}\n\t\t]\n\t}\n]&quot;,
+  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;prices\&quot;: [\n\t\t\t{\n\t\t\t\t\&quot;productId\&quot;: \&quot;${productId}\&quot;,\n\t\t\t\t\&quot;list\&quot;: \u0027${listPrice}\u0027,\n                \&quot;sale\&quot;: \u0027${salePrice}\u0027,             \n \t\t\t\t\&quot;minQuantity\&quot;: \u00271\u0027,\n\t\t\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\t\t\&quot;priceListId\&quot;: \&quot;${pricelistId}\&quot;\n\t\t\t}\n\t\t]\n\t}\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

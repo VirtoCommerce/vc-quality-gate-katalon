@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE : DELETE PRICE FROM THE PRICELIST ASSIGNMENT')
+WebUI.comment('TEST CASE : DELETE PRICES FROM THE PRICELIST ')
 
 
 'DELETE PRICE FROM THE ASSIGNMENT BY THE PRICE ID'

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>delete price by pricelist and product id</description>
-   <name>priceDeleteByProductId</name>
+   <name>pricesDeleteByProductId</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>14dc0e5e-b573-4e38-9e80-a2b89eb97891</testCaseGuid>
