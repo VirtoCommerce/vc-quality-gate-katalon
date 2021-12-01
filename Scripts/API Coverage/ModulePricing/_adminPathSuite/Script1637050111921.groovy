@@ -29,9 +29,14 @@ updatePricelist = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePr
 'For the pricelist create an assignment'
 createAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'),
 	null)
-	
-				
-'Create a product'
+
+
+'Create several products and add to the pricelist and delete'
+createAddProducts = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/pricesAddDeleteBulk'),
+	null)
+
+
+'Create  product'
 productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
 	null)
 	
@@ -39,6 +44,7 @@ productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 'Add product to the pricelist and verify'
 addProduct = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistProductsAdd'),
 	null)
+
 	
 'Check the pricelist widget data'
 getWidget = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricesWidgetGet'),
@@ -74,7 +80,7 @@ deleteAssignment = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleP
 deletePricelist = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistDelete'),
 	null)
 	
-	
+
 'Delete the created product'
 deleteProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
 	null)

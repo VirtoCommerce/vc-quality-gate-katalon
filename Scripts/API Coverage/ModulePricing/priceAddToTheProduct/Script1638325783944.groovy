@@ -22,31 +22,30 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-WebUI.comment('TEST CASE: ADD PRICE TO THE PRODUCT')
+WebUI.comment('TEST CASE: ADD ANOTHER PRICE TO THE PRODUCT')
 
 
-'Get the initial prices count'
+'GET THE INITIAL PRICES COUNT'
 getInitialPricesCount = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchGet'),
 	null)
 initialPricesCount = WS.getElementPropertyValue(getInitialPricesCount, 'totalCount') 
 
 
-'First parse and prepare the json template'
+'PARSE AND PREPARE JSON TEMPLATE'
 productListPrice = 888
 Object priceTemplate = new File('Data Files/productPriceTemplate.json').text
 priceTemplateParsed = new JsonSlurper().parseText(priceTemplate)
 priceTemplateParsed.productId = GlobalVariable.productId
 priceTemplateParsed.list = productListPrice
 priceTemplateParsed.priceListId = GlobalVariable.pricelistId  
-//newPriceTemplate = new groovy.json.JsonBuilder(priceTemplateParsed).toString()
 
 
-'Get product body to modify it'
+'GET PRODUCT BODY TO MODIFY IT and use in a PUT request)'
 productSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchGet'),
 	null)
 
 
-'Parse the productBody to modify it(add the additional price)'
+'PARSE THE PRODUCT BODY AND MODIFY IT (add the additional price)'
 searchResults = productSearch.getResponseBodyContent()
 searchResultsParsed = new JsonSlurper().parseText(searchResults)
 productBody = searchResultsParsed.results[0]
@@ -54,17 +53,16 @@ productBody.prices[1] = priceTemplateParsed
 productBodyJson = new groovy.json.JsonBuilder(productBody).toString()
 
 
-'Send the request to add the updated product price to the product'
+'SEND THE REQUEST TO ADD THE PDATED PRODUCT PRICE TO THE PRODUCT'
 RequestObject addPriceRequest = findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricesAddUpdateByProductId')
 addPriceRequest.setBodyContent(new HttpTextBodyContent(productBodyJson))
 addPrice = WS.sendRequestAndVerify(addPriceRequest)
 
 
-'Verify the changes have been made'
+'VERIFY THE CHANGES HAVE BEEN MADE'
 pricesSearch = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/priceSearchGet'),
 	null)
 WS.verifyElementPropertyValue(pricesSearch,'totalCount', (initialPricesCount + 1))
 WS.verifyElementPropertyValue(pricesSearch,'results[0].productId',GlobalVariable.productId)
 WS.verifyElementPropertyValue(pricesSearch,'results[0].prices[1].list',productListPrice + '.0000')
-
 

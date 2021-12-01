@@ -18,6 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.comment('TEST CASE: ADD PRODUCT WITH PRICE TO THE CREATED PRICELIST')
 
 
+
 'ADD PRODUCT TO A PRICELIST'
 listPrice = '222'
 salePrice = '111' 
@@ -33,14 +34,14 @@ addProductToPricelist = WS.sendRequestAndVerify(findTestObject('API/backWebServi
 verifyPrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceSearchGet'), 
 	null
 	)
-WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].pricelistId',GlobalVariable.pricelistId)
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].productId',GlobalVariable.productId)
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].list', listPrice + '.0000')
-WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].sale', salePrice + '.0000')
+//WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
+WS.containsString(verifyPrice, GlobalVariable.pricelistId, false)
+WS.containsString(verifyPrice,GlobalVariable.productId, false)
+WS.containsString(verifyPrice, listPrice + '.0000', false)
+WS.containsString(verifyPrice, salePrice + '.0000', false)
 
 
 'EXTRACT CREATED PRICE ID'
-GlobalVariable.priceId = WS.getElementPropertyValue(verifyPrice, 'results[0].prices[0].id')
+GlobalVariable.priceId = WS.getElementPropertyValue(verifyPrice, 'results.prices.id')
 WebUI.comment('PRICE ID IS: ' + GlobalVariable.priceId)
 

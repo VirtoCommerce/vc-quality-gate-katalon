@@ -29,17 +29,12 @@ WebUI.comment('TEST CASE: EDIT THE PRICELIST ASSIGNMENT')
 
 'EDIT THE EXISTING  PRICELIST ASSIGNMENT'
 assignmentNameUpdated = 'QweAssignmentUPD'
-//condition = 'QweProduct'
-//assignment's 'Eligible shoppers' condition 
-//(used in 'if any of this conditions are true' section),
-//in this particular case it is 'shopper searched in store for phrase:' ${condition%}
 editAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsUpdate', [
 	('catalogId') : GlobalVariable.catalogId,
 	('pricelistId') : GlobalVariable.pricelistId,
 	('pricelistname') : GlobalVariable.pricelistName,
 	('assignmentName') : assignmentNameUpdated,
 	('assignmentId') : GlobalVariable.assignmentId,
-	//('condition') : condition 
 	]))
 
 
@@ -47,8 +42,8 @@ editAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/b
 verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
 	null
 	)
-WS.verifyElementPropertyValue(verifyUpdated,'totalCount', '1')
+//WS.verifyElementPropertyValue(verifyUpdated,'totalCount', '1')
 WS.verifyElementPropertyValue(verifyUpdated,'results[0].name', assignmentNameUpdated)
 WS.verifyElementPropertyValue(verifyUpdated,'results[0].id', GlobalVariable.assignmentId)
-//WS.verifyElementPropertyValue(verifyUpdated,'results[0].dynamicExpression.children[0].children[0].value', condition)
+
 

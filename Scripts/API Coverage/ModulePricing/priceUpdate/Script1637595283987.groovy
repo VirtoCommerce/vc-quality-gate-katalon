@@ -27,7 +27,7 @@ priceUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 	('catalogId') : GlobalVariable.catalogId,
 	('pricelistId') : GlobalVariable.pricelistId,
 	('priceId') : GlobalVariable.priceId,
-	('listPrice') : updatedPrice + '.0000'
+	('listPrice') : updatedPrice
 	]))
 
 
@@ -35,7 +35,7 @@ priceUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 verifyPrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceSearchGet'),
 	null
 	)
-WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
+//WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
 WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].pricelistId',GlobalVariable.pricelistId)
 WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].productId',GlobalVariable.productId)
 WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].list', updatedPrice + '.0000')

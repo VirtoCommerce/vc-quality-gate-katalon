@@ -29,6 +29,6 @@ pricelistUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/
 
 'VERIFY THE PRICELIST HAS BEEN UPDATED'
 verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),null)
-WS.verifyElementPropertyValue(verifyUpdated, 'totalCount', '1')
+//WS.verifyElementPropertyValue(verifyUpdated, 'totalCount', '1')
 WS.verifyElementPropertyValue(verifyUpdated, 'results[0].name', updatedName)
 

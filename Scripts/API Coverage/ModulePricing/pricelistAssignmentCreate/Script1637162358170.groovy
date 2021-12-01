@@ -32,7 +32,7 @@ createAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API
 verifyAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
 	null
 	)
-WS.verifyElementPropertyValue(verifyAssignment,'totalCount', '1')	
+//WS.verifyElementPropertyValue(verifyAssignment,'totalCount', '1')	
 WS.verifyElementPropertyValue(verifyAssignment,'results[0].catalogId', GlobalVariable.catalogId)
 WS.verifyElementPropertyValue(verifyAssignment,'results[0].pricelistId', GlobalVariable.pricelistId)
 WS.verifyElementPropertyValue(verifyAssignment,'results[0].name', assignmentName)
