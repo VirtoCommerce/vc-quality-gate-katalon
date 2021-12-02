@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistAddPrices</name>
+   <name>PricesAddUpdateByProductId</name>
    <tag></tag>
-   <elementGuidId>db97a09c-045d-4e03-9004-b2bd565e56c1</elementGuidId>
+   <elementGuidId>8f7b9dca-db8f-4a05-9d2a-477c5f2b916c</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;prices\&quot;: [\n\t\t\t{\n\t\t\t\t\&quot;productId\&quot;: \&quot;${productId}\&quot;,\n\t\t\t\t\&quot;list\&quot;: \u0027${listPrice}\u0027,\n                \&quot;sale\&quot;: \u0027${salePrice}\u0027,             \n \t\t\t\t\&quot;minQuantity\&quot;: \u00271\u0027,\n\t\t\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\t\t\&quot;priceListId\&quot;: \&quot;${pricelistId}\&quot;\n\t\t\t}\n\t\t]\n\t}\n]&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;productId\&quot;: \&quot;${productId}\&quot;,\n\t\&quot;product\&quot;: {\n\t\t\&quot;code\&quot;: \&quot;QWESKU03\&quot;,\n\t\t\&quot;name\&quot;: \&quot;${productName}\&quot;,\n\t\t\&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n\t\t\&quot;path\&quot;: \&quot;Cell phones\&quot;,\n\t\t\&quot;isBuyable\&quot;: true,\n\t\t\&quot;isActive\&quot;: true,\n\t\t\&quot;id\&quot;: \&quot;${productId}\&quot;\n\t},\n\t\&quot;prices\&quot;: [\n\t\t{\n\t\t\t\&quot;pricelistId\&quot;: \&quot;${pricelistId}\&quot;,\n\t\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\t\&quot;productId\&quot;: \&quot;${productId}\&quot;,\n\t\t\t\&quot;sale\&quot;: 111,\n\t\t\t\&quot;list\&quot;: \&quot;${listPrice}\&quot;,\n\t\t\t\&quot;minQuantity\&quot;: 1,\n\t\t\t\&quot;id\&quot;: \&quot;${priceId}\&quot;\n\t\t}\n\t]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/products/prices</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/products/${productId}/prices</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,32 +42,46 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>id of the product to add </description>
-      <id>fc5e02ab-5a83-4534-9115-2958ad527843</id>
+      <defaultValue>'edb3a60d-f1c6-4f41-a88b-a4dc6ccc3bf3'</defaultValue>
+      <description>id of the product to update price</description>
+      <id>c87e843b-cc32-41fb-989a-9646bf8c29ce</id>
       <masked>false</masked>
       <name>productId</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>recepient pricelist id</description>
-      <id>2b51af88-c906-49f4-8fff-aafe0d18e3a5</id>
+      <defaultValue>'QweProduct'</defaultValue>
+      <description>name of the updated product</description>
+      <id>a8fc0ab5-2113-4df0-9e7b-8d4293010240</id>
+      <masked>false</masked>
+      <name>productName</name>
+   </variables>
+   <variables>
+      <defaultValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</defaultValue>
+      <description>id of the related catalog</description>
+      <id>e9204163-1652-45ed-9f73-f6bd940e9a68</id>
+      <masked>false</masked>
+      <name>catalogId</name>
+   </variables>
+   <variables>
+      <defaultValue>'ee5ec795-5f75-46df-95eb-94e378ada532'</defaultValue>
+      <description>id of the related pricelist</description>
+      <id>4e8271ec-1ba0-4d90-9704-ad48d1e4f3ec</id>
       <masked>false</masked>
       <name>pricelistId</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>product list price</description>
-      <id>89b7771b-dc91-4f1f-b1a2-52a93748b50a</id>
+      <defaultValue>'4a0f48bc-4662-4668-95b5-e599275f6fcf'</defaultValue>
+      <description>id of the price to update</description>
+      <id>a37d9657-2064-4094-bec7-447b755c6d42</id>
       <masked>false</masked>
-      <name>listPrice</name>
+      <name>priceId</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>product sale price</description>
-      <id>8e6e2f4f-6560-44bd-9296-37a0023a7378</id>
+      <defaultValue>'777'</defaultValue>
+      <description>updated list price</description>
+      <id>7aae55dc-63fe-40c1-b14c-dbd6a18defad</id>
       <masked>false</masked>
-      <name>salePrice</name>
+      <name>listPrice</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

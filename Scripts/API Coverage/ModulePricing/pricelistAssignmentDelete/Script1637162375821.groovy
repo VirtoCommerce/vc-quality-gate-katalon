@@ -21,12 +21,12 @@ WebUI.comment('TEST CASE: DELETE PRICELIST ASSIGNMENT')
 
 'DELETE PRICELIST ASSIGNMENT'
 deleteAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsDelete',[
-	('assignmentId') : GlobalVariable.id
+	('assignmentId') : GlobalVariable.assignmentId
 	]))
 
 
 'VERIFY THE ASSIGNMENT HSA BEEN DELETED'
-verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsGet'),
+verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
 	null
 	)
 WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', '0')

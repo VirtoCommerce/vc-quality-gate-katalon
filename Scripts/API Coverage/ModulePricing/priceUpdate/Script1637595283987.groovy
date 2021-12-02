@@ -16,19 +16,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: UPDATE PRICELIST')
+WebUI.comment('TEST CASE: price udate')
 
 
-'UPDATE A PRICELIST (by id)'
-updatedName = GlobalVariable.pricelistName + 'UPD'
-pricelistUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistUpdate', [
-	('name') : updatedName,
-	('id') : GlobalVariable.pricelistId
+'UPDATE PRODUCT PRICE'
+updatedPrice = '555'
+priceUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricesAddUpdateByProductId', [
+	('productId') : GlobalVariable.productId,
+	('productName') : GlobalVariable.productName,
+	('catalogId') : GlobalVariable.catalogId,
+	('pricelistId') : GlobalVariable.pricelistId,
+	('priceId') : GlobalVariable.priceId,
+	('listPrice') : updatedPrice
 	]))
 
 
-'VERIFY THE PRICELIST HAS BEEN UPDATED'
-verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),null)
-//WS.verifyElementPropertyValue(verifyUpdated, 'totalCount', '1')
-WS.verifyElementPropertyValue(verifyUpdated, 'results[0].name', updatedName)
+'VERIFY THE PRODUCT & THE PRICE ARE ADDED'
+verifyPrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceSearchGet'),
+	null
+	)
+//WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
+WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].pricelistId',GlobalVariable.pricelistId)
+WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].productId',GlobalVariable.productId)
+WS.verifyElementPropertyValue(verifyPrice,'results[0].prices[0].list', updatedPrice + '.0000')
 

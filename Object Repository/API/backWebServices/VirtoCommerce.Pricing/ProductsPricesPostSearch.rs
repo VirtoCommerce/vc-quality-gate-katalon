@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PricelistAddPrices</name>
+   <name>ProductsPricesPostSearch</name>
    <tag></tag>
-   <elementGuidId>db97a09c-045d-4e03-9004-b2bd565e56c1</elementGuidId>
+   <elementGuidId>d289e25b-2099-4858-a7f0-6b40f65dcca8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;prices\&quot;: [\n\t\t\t{\n\t\t\t\t\&quot;productId\&quot;: \&quot;${productId}\&quot;,\n\t\t\t\t\&quot;list\&quot;: \u0027${listPrice}\u0027,\n                \&quot;sale\&quot;: \u0027${salePrice}\u0027,             \n \t\t\t\t\&quot;minQuantity\&quot;: \u00271\u0027,\n\t\t\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\t\t\&quot;priceListId\&quot;: \&quot;${pricelistId}\&quot;\n\t\t\t}\n\t\t]\n\t}\n]&quot;,
+  &quot;text&quot;: &quot;{\n  \n  \&quot;productId\&quot;: \&quot;${productId}\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/products/prices</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/catalog/products/prices/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,32 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>id of the product to add </description>
-      <id>fc5e02ab-5a83-4534-9115-2958ad527843</id>
+      <defaultValue>'c0c8019e-a318-46bd-9c3e-7e3ea85c8be1'</defaultValue>
+      <description>related product id</description>
+      <id>a9bab7e8-14fb-43ce-87d0-7e43e62544ca</id>
       <masked>false</masked>
       <name>productId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>recepient pricelist id</description>
-      <id>2b51af88-c906-49f4-8fff-aafe0d18e3a5</id>
-      <masked>false</masked>
-      <name>pricelistId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>product list price</description>
-      <id>89b7771b-dc91-4f1f-b1a2-52a93748b50a</id>
-      <masked>false</masked>
-      <name>listPrice</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>product sale price</description>
-      <id>8e6e2f4f-6560-44bd-9296-37a0023a7378</id>
-      <masked>false</masked>
-      <name>salePrice</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -83,6 +62,6 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 204)</verificationScript>
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

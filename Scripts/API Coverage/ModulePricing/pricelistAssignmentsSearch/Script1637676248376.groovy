@@ -16,19 +16,12 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: UPDATE PRICELIST')
+WebUI.comment('TEST CASE: SEARCH PRICELISTS ASSIGNMENTS')
 
 
-'UPDATE A PRICELIST (by id)'
-updatedName = GlobalVariable.pricelistName + 'UPD'
-pricelistUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistUpdate', [
-	('name') : updatedName,
-	('id') : GlobalVariable.pricelistId
+'SEARCH PRICELIST ASSIGNMENTS'
+//GlobalVariable.pricelistId = '95e76478-106b-42b8-b223-12f1ee0c50f2'
+getAssignments = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsSearch',[
+	('pricelistId') : GlobalVariable.pricelistId
 	]))
-
-
-'VERIFY THE PRICELIST HAS BEEN UPDATED'
-verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),null)
-//WS.verifyElementPropertyValue(verifyUpdated, 'totalCount', '1')
-WS.verifyElementPropertyValue(verifyUpdated, 'results[0].name', updatedName)
-
+return getAssignments

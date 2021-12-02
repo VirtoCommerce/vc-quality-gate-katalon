@@ -325,8 +325,8 @@
       <name>categoryCode</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <description>search query. used in moduleCatalog suite.</description>
+      <initValue>'qwe'</initValue>
       <name>keyword</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -378,5 +378,15 @@
       <description></description>
       <initValue>'QwePricelist'</initValue>
       <name>pricelistName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created price</description>
+      <initValue>''</initValue>
+      <name>priceId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Id of the created assignment</description>
+      <initValue>''</initValue>
+      <name>assignmentId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

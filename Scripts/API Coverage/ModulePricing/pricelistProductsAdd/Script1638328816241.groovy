@@ -15,30 +15,35 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.comment('TEST CASE: ADD PRODUCT WITH PRICE TO THE CREATED PRICELIST')
 
-WebUI.comment('TEST CASE: CREATE AN ASSIGNMENT FOR THE PRICELIST')
 
-
-'CREATE AN ASSIGNMENT FOR THE PRICELIST'
-assignmentName = 'QweAssignment'
-createAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistCreateAssignment',[
-	('catalogId') : GlobalVariable.catalogId,
+//GlobalVariable.pricelistId = 'cf085a1b-261f-4bda-87c3-0187e4e69694'
+//GlobalVariable.productId = '2926eb38-9ccb-4e9a-aaa1-765f7515920f'
+'ADD PRODUCT TO A PRICELIST'
+listPrice = '222'
+salePrice = '111' 
+addProductToPricelist = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Pricing/PricelistAddPrices',[
 	('pricelistId') : GlobalVariable.pricelistId,
-	('name') : assignmentName
+	('productId') : GlobalVariable.productId,
+	('listPrice') : listPrice,
+	('salePrice') : salePrice
 	]))
 
 
-'VERIFY THE ASSIGNMENT HAS BEEN CREATED'
-verifyAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
+'VERIFY THE PRODUCT & THE PRICE ARE ADDED'
+verifyPrice = WS.callTestCase(findTestCase('API Coverage/ModulePricing/priceSearchGet'), 
 	null
 	)
-//WS.verifyElementPropertyValue(verifyAssignment,'totalCount', '1')	
-WS.verifyElementPropertyValue(verifyAssignment,'results[0].catalogId', GlobalVariable.catalogId)
-WS.verifyElementPropertyValue(verifyAssignment,'results[0].pricelistId', GlobalVariable.pricelistId)
-WS.verifyElementPropertyValue(verifyAssignment,'results[0].name', assignmentName)
+//WS.verifyElementPropertyValue(verifyPrice,'totalCount','1')
+WS.containsString(verifyPrice, GlobalVariable.pricelistId, false)
+WS.containsString(verifyPrice,GlobalVariable.productId, false)
+WS.containsString(verifyPrice, listPrice + '.0000', false)
+WS.containsString(verifyPrice, salePrice + '.0000', false)
 
 
-'EXTRACT THE CREATED ASSIGNMENT ID'
-GlobalVariable.assignmentId = WS.getElementPropertyValue(verifyAssignment,'results[0].id')
-WebUI.comment('ASSIGNMENT ID IS: ' + GlobalVariable.assignmentId)
+'EXTRACT CREATED PRICE ID'
+GlobalVariable.priceId = WS.getElementPropertyValue(verifyPrice, 'results[0].prices[0].id')
+println GlobalVariable.priceId 
+
 

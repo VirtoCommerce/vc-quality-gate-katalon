@@ -16,19 +16,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: UPDATE PRICELIST')
+WebUI.comment('TEST CASE : ASSIGNMENT GET NEW')
 
 
-'UPDATE A PRICELIST (by id)'
-updatedName = GlobalVariable.pricelistName + 'UPD'
-pricelistUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistUpdate', [
-	('name') : updatedName,
-	('id') : GlobalVariable.pricelistId
-	]))
-
-
-'VERIFY THE PRICELIST HAS BEEN UPDATED'
-verifyUpdated = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistGet'),null)
-//WS.verifyElementPropertyValue(verifyUpdated, 'totalCount', '1')
-WS.verifyElementPropertyValue(verifyUpdated, 'results[0].name', updatedName)
-
+'GET NEW ASSIGNMENT'
+dynamicExpressionId = 'PriceConditionTree'
+assignmentGetNew = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentGetNew'))
+WS.verifyElementPropertyValue(assignmentGetNew,'dynamicExpression.id', dynamicExpressionId)
+return assignmentGetNew

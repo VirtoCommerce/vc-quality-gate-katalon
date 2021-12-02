@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>search price via post request</description>
+   <name>priceSearchPost</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d308b41e-fd93-4270-b952-744423326cde</testCaseGuid>
+</TestCaseEntity>
