@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>_exceptAdminPath</name>
+   <name>_pricingModuleSuite</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>434778ff-1559-446d-9342-85f39fb91357</testCaseGuid>
+   <testCaseGuid>7720bc06-e28f-4f24-b732-cef64022eb2f</testCaseGuid>
 </TestCaseEntity>

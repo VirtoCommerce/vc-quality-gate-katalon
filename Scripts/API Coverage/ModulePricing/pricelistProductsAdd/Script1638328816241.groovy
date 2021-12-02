@@ -18,7 +18,8 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.comment('TEST CASE: ADD PRODUCT WITH PRICE TO THE CREATED PRICELIST')
 
 
-
+//GlobalVariable.pricelistId = 'cf085a1b-261f-4bda-87c3-0187e4e69694'
+//GlobalVariable.productId = '2926eb38-9ccb-4e9a-aaa1-765f7515920f'
 'ADD PRODUCT TO A PRICELIST'
 listPrice = '222'
 salePrice = '111' 
@@ -42,6 +43,7 @@ WS.containsString(verifyPrice, salePrice + '.0000', false)
 
 
 'EXTRACT CREATED PRICE ID'
-GlobalVariable.priceId = WS.getElementPropertyValue(verifyPrice, 'results.prices.id')
-WebUI.comment('PRICE ID IS: ' + GlobalVariable.priceId)
+GlobalVariable.priceId = WS.getElementPropertyValue(verifyPrice, 'results[0].prices[0].id')
+println GlobalVariable.priceId 
+
 

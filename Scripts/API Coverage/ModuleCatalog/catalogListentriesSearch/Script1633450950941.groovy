@@ -52,7 +52,7 @@ println GlobalVariable.keyword
 //println verification
 //assert verification == false
 WS.verifyElementPropertyValue(verifyDeleted, 'listEntries', '[]')
-
+return verifyDeleted
 
 'VERIFY VARS'
 println GlobalVariable.keyword

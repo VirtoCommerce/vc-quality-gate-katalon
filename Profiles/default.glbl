@@ -325,8 +325,8 @@
       <name>categoryCode</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <description>search query. used in moduleCatalog suite.</description>
+      <initValue>'qwe'</initValue>
       <name>keyword</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

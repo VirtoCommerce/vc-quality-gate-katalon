@@ -17,11 +17,12 @@ import internal.GlobalVariable as GlobalVariable
 
 
 WebUI.comment('TEST CASE: PRICE DELETE BY PRICEID')
+println GlobalVariable.priceId
 
 
 'DELETE PRICE BY PRICEID'
 priceDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PriceDeleteByPriceId',[
-	('priceId') : GlobalVariable.id
+	('priceId') : GlobalVariable.priceId
 	]))
 
 

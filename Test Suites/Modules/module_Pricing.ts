@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>covers admin path from testrail</description>
-   <name>Pricing_AdminFlow</name>
+   <name>module_Pricing</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>b0001b60-8ed0-4a13-a743-c78d04729100</testSuiteGuid>
+   <testSuiteGuid>17b2a6b7-c590-4ddc-a54f-456b10a140e7</testSuiteGuid>
    <testCaseLink>
       <guid>fffb6890-9add-40b6-9668-f099ba7284c4</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -103,6 +103,72 @@
    </testCaseLink>
    <testCaseLink>
       <guid>a3fb510d-7e7f-42fa-b5ae-ce047b4df0ef</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ae267b2a-31cc-4a76-aeff-d9134b4448fc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistCreate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>eabdaa33-6cac-443d-8e30-43f9c3a2eb88</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productCreate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>611dd963-09de-415a-9773-b3d65dea6aea</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistProductsAdd</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3ab77148-8c4a-4dea-9355-1dfb4df11942</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistsGetAll</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e23b43d0-fc98-47f8-bb25-73d11a1c9b70</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistAssignmentsSearch</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8ede3a3e-d088-433b-868f-077279fa0620</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistAssignmentGetNew</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e5fe7119-54d3-41f2-96d6-de1da1927f26</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistAssignmentCreate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>029d3bbf-fe7e-4901-a758-e4e0d13f2eb8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistAssignmentsGet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a42a61a9-a8fc-432e-b759-fa57241ab68b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/priceDeleteByPriceId</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f1f5de35-d2c0-4543-8710-353629d8d1e3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePricing/pricelistAssignmentsDeleteFiltered</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e2b2403c-3be9-4398-9487-39efce7037d3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsDelete</testCaseId>

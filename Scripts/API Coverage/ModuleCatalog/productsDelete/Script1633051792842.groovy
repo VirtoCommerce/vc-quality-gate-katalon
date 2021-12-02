@@ -28,3 +28,9 @@ deleteProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 	('objectIds') : productId
 	]))
 
+/*
+'VERIFY THE PRODUCT HAS BEEN CREATED'
+verifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/catalogListentriesSearch'),
+	null)
+WS.verifyElementPropertyValue(verifyDeleted, 'listEntries', '[]')
+*/
