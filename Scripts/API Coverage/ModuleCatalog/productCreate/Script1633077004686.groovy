@@ -52,12 +52,12 @@ WebUI.comment(GlobalVariable.productId)
 GlobalVariable.categoryName = WS.getElementPropertyValue(createUpdateProduct, 'path')
 WebUI.comment(GlobalVariable.categoryName)
 
+
 'VARIABLES CHECK'
 println GlobalVariable.keyword
 println GlobalVariable.productName
 println GlobalVariable.productId
 
 
-//'RETURN DATA'
-//return createUpdateProduct
+return createUpdateProduct
 
