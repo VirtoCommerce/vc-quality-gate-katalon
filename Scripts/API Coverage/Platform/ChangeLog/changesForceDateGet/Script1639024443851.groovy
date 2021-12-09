@@ -9,22 +9,35 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-qwe = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangesForceCache'), FailureHandling.STOP_ON_FAILURE)
-//startedDateTime
-qwe = getElapsedTime()
 
-date = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangesGetLastModifiedDate'), FailureHandling.STOP_ON_FAILURE)
-//WS.verifyElementPropertyValue(date, 'lastModifiedDate', "2021-06-28T14:59:54.9104337Z")
+WebUI.comment('TEST CASE: force changes and get the last modified date')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangelogSearch'), FailureHandling.STOP_ON_FAILURE)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangelogGetChanges', [('type') : 'Subscription']), FailureHandling.STOP_ON_FAILURE)
+'GET INITIAL "THE LAST MODIFIED DATE VALUE'
+getInitialModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesGetLastModifiedDate'))
+initialDate = WS.getElementPropertyValue(getInitialModifiedDate,'lastModifiedDate')
+println initialDate
+
+
+'FORCE CHANGES'
+forceChanges = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesForceCache'))
+
+
+'GET UPDATED "THE LAST MODIFIED DATE VALUE'
+getUpdatedModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesGetLastModifiedDate'))
+updatedDate = WS.getElementPropertyValue(getUpdatedModifiedDate,'lastModifiedDate')
+println updatedDate
+
+
+'VERIFY THE DATE HAS BEEN UPDATED (is more then initial)'
+assert initialDate < updatedDate
+
+
+
 
