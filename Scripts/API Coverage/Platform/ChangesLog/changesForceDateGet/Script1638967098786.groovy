@@ -20,17 +20,17 @@ WebUI.comment('TEST CASE: force changes and get the last modified date')
 
 
 'GET INITIAL "THE LAST MODIFIED DATE VALUE'
-getInitialModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangesGetLastModifiedDate'))
+getInitialModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesGetLastModifiedDate'))
 initialDate = WS.getElementPropertyValue(getInitialModifiedDate,'lastModifiedDate')
 println initialDate
 
 
 'FORCE CHANGES'
-forceChanges = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangesForceCache'))
+forceChanges = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesForceCache'))
 
 
 'GET UPDATED "THE LAST MODIFIED DATE VALUE'
-getUpdatedModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangesGetLastModifiedDate'))
+getUpdatedModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesGetLastModifiedDate'))
 updatedDate = WS.getElementPropertyValue(getUpdatedModifiedDate,'lastModifiedDate')
 println updatedDate
 

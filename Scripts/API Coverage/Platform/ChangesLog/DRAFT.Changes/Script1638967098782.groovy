@@ -17,14 +17,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-qwe = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangesForceCache'), FailureHandling.STOP_ON_FAILURE)
+qwe = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesForceCache'), FailureHandling.STOP_ON_FAILURE)
 //startedDateTime
 qwe = getElapsedTime()
 
-date = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangesGetLastModifiedDate'), FailureHandling.STOP_ON_FAILURE)
+date = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesGetLastModifiedDate'), FailureHandling.STOP_ON_FAILURE)
 //WS.verifyElementPropertyValue(date, 'lastModifiedDate', "2021-06-28T14:59:54.9104337Z")
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangelogSearch'), FailureHandling.STOP_ON_FAILURE)
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangelogSearch'), FailureHandling.STOP_ON_FAILURE)
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/ChangelogGetChanges', [('type') : 'Subscription']), FailureHandling.STOP_ON_FAILURE)
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangelogGetChanges', [('type') : 'Subscription']), FailureHandling.STOP_ON_FAILURE)
 
