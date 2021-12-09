@@ -27,12 +27,12 @@
       <guid>aa62fd29-0939-4aef-9c33-f36fc9417922</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ChangesLog/changesForceDateGet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ChangeLog/changesForceDateGet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ecb57e3c-ad2b-4e85-89d1-814cd46d4000</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ChangesLog/changesVerifyLog</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ChangeLog/changesVerifyLog</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
