@@ -24,12 +24,12 @@ productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 	null)
 
 
-'EXTRACT "OBJECT TYPe OF THE CREATED PRODUCT'
+'EXTRACT "OBJECT TYPE OF THE CREATED PRODUCT'
 objectType = WS.getElementPropertyValue(productCreate, 'seoObjectType')
 println objectType
 
 
-'EXTRACT CReaTED PRODUCT CREATED/MODIFIED DATES AND VERIFY THEY MATCH'
+'EXTRACT CREATED PRODUCT CREATED/MODIFIED DATES AND VERIFY THEY MATCH'
 productCreatedDate = WS.getElementPropertyValue(productCreate, 'createdDate')
 productModifiedDate = WS.getElementPropertyValue(productCreate, 'modifiedDate')
 assert productCreatedDate == productModifiedDate
