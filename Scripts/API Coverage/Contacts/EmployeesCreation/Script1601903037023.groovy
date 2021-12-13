@@ -25,7 +25,7 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	]))
 
 
-// STEP | Parse request and save token to the GlobalVariable
+// STEP | Parse request and save employee id to the GlobalVariable
 def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
 GlobalVariable.employeeId = responseJson.id
 WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)

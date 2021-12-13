@@ -389,4 +389,19 @@
       <initValue>''</initValue>
       <name>assignmentId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>contentMenuId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>memberName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>updatedName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
