@@ -12,16 +12,16 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>661020a1-443f-4e2e-b535-6dc4344831ec</testSuiteGuid>
    <testCaseLink>
+      <guid>b1e9aacb-18bb-40bd-a741-0aa7e3e4c618</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserPasswordValidate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>a3994e2d-e680-4482-925e-cfd2f645293b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserGetAllRequestsCheck</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3341693e-1b30-4222-a246-8ff02ac9e72b</guid>
@@ -58,5 +58,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3a34acf6-497d-40f8-b350-69d0d543cd38</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserCreate</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
