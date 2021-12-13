@@ -395,13 +395,8 @@
       <name>contentMenuId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description>updaed name of the &quot;member&quot; entity</description>
       <initValue>''</initValue>
-      <name>memberName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
-      <name>updatedName</name>
+      <name>updatedMemberName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

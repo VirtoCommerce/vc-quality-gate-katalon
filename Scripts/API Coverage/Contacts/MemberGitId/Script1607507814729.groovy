@@ -29,6 +29,6 @@ for (int i; i < memberTypeId.size(); i++) {
 
     responseGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
 		('id') : memberTypeId.get(i)]))
-	WS.verifyElementPropertyValue(responseGet, 'name', GlobalVariable.memberName)
+	WS.verifyElementPropertyValue(responseGet, 'name', GlobalVariable.updatedMemberName)
 	//WS.verifyElementPropertyValue(responseGet, 'addresses[0].name', name)
 	}

@@ -25,10 +25,10 @@ List <String> memberId = GlobalVariable.memberId
 for (int i; i < memberId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberId.get(i))
     WebUI.comment("MEMBER TYPE IS : " + memberType.get(i))
-    GlobalVariable.memberName  = GlobalVariable.firstName + 'UPD'
+    GlobalVariable.updatedMemberName  = GlobalVariable.firstName + 'UPD'
 updateContact =  WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdate', [
 		('id') : memberId.get(i), 
 		('memberType') : memberType.get(i),
-		('name') : GlobalVariable.memberName
+		('name') : GlobalVariable.updatedMemberName
 		]))
 }

@@ -30,7 +30,7 @@ for (int i; i < memberTypeId.size(); i++) {
     memberGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberGetId', [
 		('id') : memberTypeId.get(i)
 		]))
-	WS.verifyElementPropertyValue(memberGet, 'name', GlobalVariable.updatedName)
+	WS.verifyElementPropertyValue(memberGet, 'name', GlobalVariable.updatedMemberName)
 	}
 	
 	
