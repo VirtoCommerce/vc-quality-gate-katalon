@@ -389,4 +389,14 @@
       <initValue>''</initValue>
       <name>assignmentId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>contentMenuId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>updaed name of the &quot;member&quot; entity</description>
+      <initValue>''</initValue>
+      <name>updatedMemberName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

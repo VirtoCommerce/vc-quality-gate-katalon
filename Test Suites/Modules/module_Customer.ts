@@ -14,23 +14,19 @@
    <testCaseLink>
       <guid>3cd960c5-9d4b-460b-b63e-887bb3dcb915</guid>
       <isReuseDriver>false</isReuseDriver>
-
       <isRun>true</isRun>
-
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e7f42e28-c417-41dc-a3f6-8923d480b421</guid>
       <isReuseDriver>false</isReuseDriver>
-
-      <isRun>false</isRun>
-
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a3c843ac-fb0b-43b8-90bb-48a8a665e20f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Contacts/ContactCycle</testCaseId>
    </testCaseLink>
    <testCaseLink>

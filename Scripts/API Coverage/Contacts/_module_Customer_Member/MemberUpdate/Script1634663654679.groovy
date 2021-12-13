@@ -29,12 +29,12 @@ List <String> memberId = GlobalVariable.memberId
 'SEND REQUEST TO UPDATE MEMBERS FROM LISTS'
 /*Here TEMP is used to prevent firstName of being overwritten, as
 it's used in delete case in its initial state*/
-GlobalVariable.TEMP  = GlobalVariable.firstName + ' UPD'
+GlobalVariable.updatedMemberName  = GlobalVariable.firstName + ' UPD'
 for (int i; i < memberId.size(); i++) {
     WebUI.comment("MEMBER ID IS : " + memberId.get(i))
     WebUI.comment("MEMBER TYPE IS : " + memberType.get(i))	
     updateContact = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberUpdate', [
-		('name') : GlobalVariable.TEMP,
+		('name') : GlobalVariable.updatedMemberName,
 		('id') : memberId.get(i), 
 		('memberType') : memberType.get(i)
 		]))

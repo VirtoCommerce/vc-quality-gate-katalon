@@ -16,7 +16,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.comment('TEST CASE: Content. Check errors during to creation a new folder')
+WebUI.comment('TEST CASE: Content. Check errors during the creation a new folder')
 
 //Uses endpoint that validates errors for creating folder for each content type
 HashMap<String, String> responseMap = GlobalVariable.folderNameListContent
