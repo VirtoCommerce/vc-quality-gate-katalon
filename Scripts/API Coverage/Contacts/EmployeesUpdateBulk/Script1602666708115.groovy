@@ -19,7 +19,6 @@ import groovy.json.JsonSlurper as JsonSlurper
 import groovy.json.JsonOutput as JsonOutput
 
 WebUI.comment('TEST CASE : Update BULK employee')
-GlobalVariable.employeeId = GlobalVariable.id
 WebUI.comment("Employee ID IS : " + GlobalVariable.employeeId)
 response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Customer/Employees/EmployeesUpdateBulk', [
 	('id') : GlobalVariable.employeeId,

@@ -57,7 +57,7 @@ println GlobalVariable.productId
 //'START TESTCASE TEARDOWN IN SUITE'
 //"TEMP" variable launches teardown in
 //"module_Catalog_Product" test suit's scrip
-//GlobalVariable.TEMP = true
+//GlobalVariable.TEM = true
 
 
 //'RETURN DATA'
