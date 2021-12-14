@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  //\&quot;string\&quot; in swagger looks as erros\n}&quot;,
+  &quot;text&quot;: &quot;\&quot;${password}\&quot;\n&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -25,9 +25,9 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>api_key</name>
+      <name>Accept</name>
       <type>Main</type>
-      <value>${GlobalVariable.api_key}</value>
+      <value>text/plain</value>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -41,9 +41,15 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>538696fd-ed68-4e76-adde-1540b721b0c4</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
@@ -55,7 +61,6 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
-WS.verifyElementPropertyValue(response, 'succeeded', true)</verificationScript>
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

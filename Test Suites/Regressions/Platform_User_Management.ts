@@ -12,6 +12,12 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>661020a1-443f-4e2e-b535-6dc4344831ec</testSuiteGuid>
    <testCaseLink>
+      <guid>b1e9aacb-18bb-40bd-a741-0aa7e3e4c618</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserPasswordValidate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>a3994e2d-e680-4482-925e-cfd2f645293b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
