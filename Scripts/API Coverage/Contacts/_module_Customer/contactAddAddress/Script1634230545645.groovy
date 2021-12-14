@@ -24,10 +24,10 @@ WebUI.comment('TEST CASE : contact add address')
 
 'UPDATE ADDRESS'
 //TEMP = updated adress.name parameter
-GlobalVariable.TEMP = "QweAddressUPD"
+updatedAddressName = "QweAddressUPD"
 updateAddress = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/AddressesUpdate', [
 	('contactId') : GlobalVariable.contactId,
-	('name') : GlobalVariable.TEMP
+	('name') : updatedAddressName
 	 ]))
 
 
@@ -35,4 +35,5 @@ updateAddress = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 verification = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer/contactGet'),
 	null,
 	FailureHandling.STOP_ON_FAILURE)
-WS.verifyElementPropertyValue(verification, 'addresses[0].name', GlobalVariable.TEMP)
+WS.verifyElementPropertyValue(verification, 'addresses[0].name', updatedAddressName)
+

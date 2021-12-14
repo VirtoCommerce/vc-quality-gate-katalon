@@ -14,7 +14,7 @@ WebUI.comment('TEST CASE: Link list.')
 
 
 String menuName = 'QweMenuLink'
-GlobalVariable.id = 'eae69428-1ed8-4f3a-ba02-feb8ebe13414'
+GlobalVariable.contentMenuId = UUID.randomUUID()
 
 //Get the list count to get initial state. Set MENU count to compare with final result
 getList = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkGet', [
@@ -36,7 +36,7 @@ WS.verifyElementPropertyValue(checkName, 'result' , 'true')
 list = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkCreateUpdate',[
 	('storeId') : GlobalVariable.storeId,
 	('menuName') : menuName,
-	('menuListId') : GlobalVariable.id
+	('menuListId') : GlobalVariable.contentMenuId
 	]))
 
 
@@ -50,7 +50,7 @@ WS.containsString(getList, menuName, false)
 //Verify the created list exists
 listVerification = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet',[
 	('storeId') : GlobalVariable.storeId,
-	('menuListId') : GlobalVariable.id
+	('menuListId') : GlobalVariable.contentMenuId
 	]))
 
 
@@ -59,7 +59,7 @@ newMenuName = menuName + 'Renamed'
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkCreateUpdate',[
 	('storeId') : GlobalVariable.storeId,
 	('menuName') : newMenuName,
-	('menuListId') : GlobalVariable.id
+	('menuListId') : GlobalVariable.contentMenuId
 	]))
 
 
@@ -73,14 +73,14 @@ WS.verifyElementPropertyValue(checkRename, 'result' , 'false')
 
 //Delete the created list
 delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkDelete' , [
-	('menuListId') : GlobalVariable.id
+	('menuListId') : GlobalVariable.contentMenuId
 	]))
 
 
 //Verify the created list was successfully deleted
 deleteVerification = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet',[
 	('storeId') : GlobalVariable.storeId,
-	('menuListId') : GlobalVariable.id
+	('menuListId') : GlobalVariable.contentMenuId
 	]))
 WS.verifyResponseStatusCode(deleteVerification, 500)
 
