@@ -39,20 +39,21 @@ println productModifiedDate
 'SEARCH FOR THE CHANGES LOG AND VERIFY CREATED CHANGES ARE LOGGED AND RELATE'
 operationType = 'Added'
 searchChangeLog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangelogSearch'))
-WS.verifyElementPropertyValue(searchChangeLog,'[0].objectType',objectType)
-WS.verifyElementPropertyValue(searchChangeLog,'[0].objectId',GlobalVariable.productId)
-WS.verifyElementPropertyValue(searchChangeLog,'[0].operationType',operationType)
+WS.verifyElementPropertyValue(searchChangeLog, '[0].objectType', objectType)
+WS.verifyElementPropertyValue(searchChangeLog, '[0].objectId', GlobalVariable.productId)
+WS.verifyElementPropertyValue(searchChangeLog, '[0].operationType', operationType)
 
 
 'GET THE CHANGES LOG AND VERIFY CREATED CHANGES ARE LOGGED AND RELATE'
 getChangeLog = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangelogGetChanges', [
 	('type') : objectType
 	]))
-WS.verifyElementPropertyValue(searchChangeLog,'[0].objectType',objectType)
-WS.verifyElementPropertyValue(searchChangeLog,'[0].objectId',GlobalVariable.productId)
-WS.verifyElementPropertyValue(searchChangeLog,'[0].operationType',operationType)
+WS.verifyElementPropertyValue(searchChangeLog, '[0].objectType', objectType)
+WS.verifyElementPropertyValue(searchChangeLog, '[0].objectId', GlobalVariable.productId)
+WS.verifyElementPropertyValue(searchChangeLog, '[0].operationType', operationType)
 
 
 'DELETE THE CREATED PRODUCT'
 productDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'), 
 	null)
+

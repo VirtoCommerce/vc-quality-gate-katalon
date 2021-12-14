@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>update and verify changelog</description>
-   <name>Platform_API_ChangeLog</name>
+   <name>module_Platform_ChangeLog</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>

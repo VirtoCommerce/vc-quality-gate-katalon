@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: force changes and get the last modified date')
 
 'GET INITIAL "THE LAST MODIFIED DATE VALUE'
 getInitialModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesGetLastModifiedDate'))
-initialDate = WS.getElementPropertyValue(getInitialModifiedDate,'lastModifiedDate')
+initialDate = WS.getElementPropertyValue(getInitialModifiedDate, 'lastModifiedDate')
 println initialDate
 
 
@@ -31,13 +31,10 @@ forceChanges = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 
 'GET UPDATED "THE LAST MODIFIED DATE VALUE'
 getUpdatedModifiedDate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ChangesGetLastModifiedDate'))
-updatedDate = WS.getElementPropertyValue(getUpdatedModifiedDate,'lastModifiedDate')
+updatedDate = WS.getElementPropertyValue(getUpdatedModifiedDate, 'lastModifiedDate')
 println updatedDate
 
 
 'VERIFY THE DATE HAS BEEN UPDATED (is more then initial)'
 assert initialDate < updatedDate
-
-
-
 
