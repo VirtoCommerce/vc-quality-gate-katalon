@@ -15,7 +15,7 @@
       <guid>b1e9aacb-18bb-40bd-a741-0aa7e3e4c618</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserPasswordValidate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/PasswordValidate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a3994e2d-e680-4482-925e-cfd2f645293b</guid>
