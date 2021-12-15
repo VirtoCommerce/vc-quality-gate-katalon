@@ -390,9 +390,6 @@
       <name>assignmentId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>list of pasword walues and responses</description>
-      <initValue>[('&quot;&quot;') : 'PasswordRequiresUniqueChars', ('&quot;a&quot;') : 'PasswordTooShort', ('&quot;aaaaaaaa&quot;') : 'Passwords must have at least one uppercase (\'A\'-\'Z\').', ('&quot;AAAAAAAA&quot;') : 'Passwords must have at least one lowercase (\'a\'-\'z\').', ('Password1') : 'true']</initValue>
-      <name>passwordsListContent</name>
       <description></description>
       <initValue>''</initValue>
       <name>contentMenuId</name>
@@ -401,5 +398,10 @@
       <description>updaed name of the &quot;member&quot; entity</description>
       <initValue>''</initValue>
       <name>updatedMemberName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>list of passwords to validate</description>
+      <initValue>[('') : 'PasswordRequiresUniqueChars', ('a') : 'PasswordTooShort', ('aaaaaaaa') : 'Passwords must have at least one uppercase (\'A\'-\'Z\').', ('AAAAAAAA') : 'Passwords must have at least one lowercase (\'a\'-\'z\').', ('Password1') : 'true']</initValue>
+      <name>passwordsListContent</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
