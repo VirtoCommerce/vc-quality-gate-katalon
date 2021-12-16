@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Drop index for Products, Category, Member</description>
+   <name>indexationRunAndVerify</name>
+   <tag></tag>
+   <comment>Waiting for drop index 3 sec</comment>
+   <testCaseGuid>d5dc2ba3-8b30-4af1-a4e9-769d1f045eda</testCaseGuid>
+</TestCaseEntity>
