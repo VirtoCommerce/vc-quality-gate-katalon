@@ -19,6 +19,12 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.comment('TEST CASE: RUN AND VERIFY PLATFORM INDEXATION')
 
 
+'DROP INDEX'
+//required to the the newly created product
+dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'),
+	null)
+
+
 'GET THE INITIAL LAST INDEXATION DATE'
 initialIndexation = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/GetIndex'),
 	null)
