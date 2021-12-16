@@ -404,4 +404,9 @@
       <initValue>[('') : 'PasswordRequiresUniqueChars', ('a') : 'PasswordTooShort', ('aaaaaaaa') : 'Passwords must have at least one uppercase (\'A\'-\'Z\').', ('AAAAAAAA') : 'Passwords must have at least one lowercase (\'a\'-\'z\').', ('Password1') : 'true']</initValue>
       <name>passwordsListContent</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>taskId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

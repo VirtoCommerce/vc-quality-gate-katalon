@@ -18,11 +18,17 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.comment('TEST CASE: GET INDEX')
+'Create a product'
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'), null)
 
 
-'SEND REQUEST TO GET THE LIST OF DOCUMENT TYPES AVAILABLE FOR INDEXATION'
-indexGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Search/indexGet'))
+'Check indexation'
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/indexationRunAndVerify'), null)
 
 
-return indexGet
+'Cancel indexation'
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/IndexCancel'), null)
+
+
+'Delete a product'
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'), null)

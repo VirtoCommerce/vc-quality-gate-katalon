@@ -19,12 +19,14 @@ import org.openqa.selenium.Keys as Keys
 
 
 WebUI.comment('TEST CASE: CANCEL INDEX')
-
+//As indextion is too fast for the cancel operation to take the effect
+//it is enough to get the 200_Ok status from this particular endpoint
+//to validate its responsiveness
 
 'SEND REQUEST TO CANCEL INDEXATION'
-taskId = '6f22abd1-3a1b-43ff-81cf-11097c4dd568' //task status does not affect how it runs
+//task actual status does not affect how it runs. Any id is enough for 200_Ok response
 indexCancel = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Search/indexCancel',[
-	('taskId') : taskId,
+	('taskId') : GlobalVariable.taskId
 	]))
 
 return indexCancel

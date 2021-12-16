@@ -23,11 +23,12 @@ WebUI.comment('TEST CASE: GET INDEX FOR PRODUCT')
 
 'SEND REQUEST TO GET THE INDEATION DATA FOR THE PRODUCT'
 documentType = 'Product'
-documentId = '7c835a9b1c8e4445aa118dae659231c3' //productId
+documentId = GlobalVariable.productId
 productGetIndex = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Search/indexGetForDocumentId',[
 	('documentType') : documentType,
 	('documentId') : documentId
 	]))
+
 
 return productGetIndex 
 
