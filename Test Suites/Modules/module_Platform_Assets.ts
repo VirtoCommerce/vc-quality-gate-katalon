@@ -14,13 +14,13 @@
    <testCaseLink>
       <guid>a41e52dc-8be5-4b8a-a967-297ef91a5fd5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2243ebe1-29f1-4d06-be5f-f5a6a31c7cc2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -82,6 +82,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>73edf970-34ee-4f1c-9884-12d7041397f2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocalStorage</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3917ff9a-4e6a-4450-9dd1-39527b6c7af0</guid>

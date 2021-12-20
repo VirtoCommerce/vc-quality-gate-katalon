@@ -72,6 +72,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>d115ba00-4e5d-4617-b450-15e6ea4d33bd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocalStorage</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>3917ff9a-4e6a-4450-9dd1-39527b6c7af0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
