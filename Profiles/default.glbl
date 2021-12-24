@@ -409,4 +409,9 @@
       <initValue>''</initValue>
       <name>taskId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>array or object that contains assets data structure</description>
+      <initValue>''</initValue>
+      <name>assetsData</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

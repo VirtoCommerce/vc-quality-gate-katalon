@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${code}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${categoryId}\&quot;,\n  \&quot;id\&quot;:\&quot;${id}\&quot;,\n  \&quot;weightUnit\&quot;:\&quot;${weightUnit}\&quot;,\n  \&quot;weight\&quot;:\&quot;${weight}\&quot;,\n  \&quot;height\&quot;:\&quot;${height}\&quot;,\n  \&quot;width\&quot;:\&quot;${width}\&quot;,\n  \&quot;length\&quot;:\&quot;${length}\&quot;,\n  \&quot;productType\&quot;:\&quot;Physical\&quot;,\n  \&quot;images\&quot;: [ ${images} ],\n  \&quot;reviews\&quot;:[\n      {\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;,\n         \&quot;reviewType\&quot;:\&quot;QuickReview\&quot;,\n         \&quot;content\&quot;:\&quot;${content}\&quot;\n      }\n   ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${code}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n  \&quot;categoryId\&quot;: \&quot;${categoryId}\&quot;,\n  \&quot;id\&quot;:\&quot;${id}\&quot;,\n  \&quot;weightUnit\&quot;:\&quot;${weightUnit}\&quot;,\n  \&quot;weight\&quot;:\&quot;${weight}\&quot;,\n  \&quot;height\&quot;:\&quot;${height}\&quot;,\n  \&quot;width\&quot;:\&quot;${width}\&quot;,\n  \&quot;length\&quot;:\&quot;${length}\&quot;,\n  \&quot;productType\&quot;:\&quot;Physical\&quot;,\n  \&quot;images\&quot;: [ ${images} ],\n  \&quot;reviews\&quot;:[\n      {\n         \&quot;languageCode\&quot;:\&quot;en-US\&quot;,\n         \&quot;reviewType\&quot;:\&quot;QuickReview\&quot;,\n         \&quot;content\&quot;:\&quot;${content}\&quot;\n      }\n   ],\n  \&quot;assets\&quot;: [ ${assets} ]  \n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -70,7 +70,7 @@
       <name>categoryId</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'5ee0ecdc-ce59-4a30-bb0f-b37bc6b425e8'</defaultValue>
       <description>product id</description>
       <id>57ba9e00-97b5-4da9-b964-ff2174245c3e</id>
       <masked>false</masked>
@@ -124,6 +124,13 @@
       <id>8b7581eb-3ad1-46a4-b11a-b221f764df5a</id>
       <masked>false</masked>
       <name>images</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>product assets data</description>
+      <id>e16a56a7-e5a8-4553-8487-54ca0c2372c6</id>
+      <masked>false</masked>
+      <name>assets</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
