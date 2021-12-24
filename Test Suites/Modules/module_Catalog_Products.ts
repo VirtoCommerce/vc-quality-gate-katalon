@@ -14,13 +14,13 @@
    <testCaseLink>
       <guid>378c5ab4-3675-433d-b2f9-c39ed4015e3a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ce5f30db-17cf-4bd3-b2e4-061f85f62e14</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -136,6 +136,18 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/productsGetById</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c149e64f-42d6-4f5e-8103-c128943fcf3c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/assetAddToProduct</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a256e68f-aad7-42e9-b541-4b7018895f4b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/assetRemoveFromProduct</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>feae6a8a-bc93-4031-88eb-53e85b5165c7</guid>

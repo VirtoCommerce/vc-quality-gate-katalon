@@ -1,0 +1,6 @@
+{
+		"mimeType": "${assetType}",
+		"name": "${assetName}",
+		"url": "${assetUrl}",
+		"relativeUrl": "${assetRelativeUrl}"
+	}
