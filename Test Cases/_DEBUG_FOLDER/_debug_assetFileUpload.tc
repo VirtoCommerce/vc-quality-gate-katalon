@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>upload assets</description>
+   <name>_debug_assetFileUpload</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>43efcec4-b8a1-40a3-9b47-788f509b69e3</testCaseGuid>
+</TestCaseEntity>
