@@ -22,16 +22,20 @@ WebUI.comment('TEST CASE: Products management - upload asset')
 
 
 'UPLOAD IMAGE FOR PRODUCT'
-uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
-	('folderUrl') : GlobalVariable.folderUrl,
-	('url') : GlobalVariable.urlBack + '/images/userpic.svg'
-	]))
+WebUI.comment('TEST CASE: Assets. Upload file by URL')
 
+uploadFileUrlImg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
+	('folderUrl') : GlobalVariable.folderUrl,
+	('url') : 'https://virtocommerce.blob.core.windows.net/catalog/slide_1.jpg'
+	]))
+//get file url
+GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrlImg, '[0].url')
 
 'GET FILE DATA ( NAME & URL )'
-GlobalVariable.uploadedFileUrl = WS.getElementPropertyValue(uploadFileUrl, '[0].url')
-GlobalVariable.uploadedFileName = WS.getElementPropertyValue(uploadFileUrl, '[0].name')
+GlobalVariable.uploadedFileUrl = WS.getElementPropertyValue(uploadFileUrlImg, '[0].url')
+GlobalVariable.uploadedFileName = WS.getElementPropertyValue(uploadFileUrlImg, '[0].name')
 WebUI.comment ('Upload URL is: ' + GlobalVariable.uploadedFileUrl)
 
 
+return uploadFileUrlImg
 

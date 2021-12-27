@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: Products management - assets update')
 
 
 'CREATE UPDATED IMAGE BODY & UPDATE IMAGES'
-updatedImagestext = '{"size":6129,"contentType":"image/svg+xml", "type":"blob","name":"'+ GlobalVariable.uploadedFileName +'","url":"'+ GlobalVariable.uploadedFileUrl +'","relativeUrl":"' + GlobalVariable.uploadedFileUrl + '","createdDate":"0001-01-01T00:00:00Z","modifiedDate":"2021-08-26T09:57:56.6970941Z","isImage":true,"sortOrder":1,"group":"images"}'
+updatedImagestext = '{"size":6129,"contentType":"image/svg+xml", "type":"blob","name":"'+ GlobalVariable.uploadedFileName +'","url":"'+ GlobalVariable.uploadedFileUrl +'","relativeUrl":"' + GlobalVariable.uploadedFileUrl + '","createdDate":"0001-01-01T00:00:00Z","isImage":true,"sortOrder":1,"group":"images"}'
 WebUI.comment(updatedImagestext)
 
 
