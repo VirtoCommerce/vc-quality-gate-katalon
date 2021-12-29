@@ -105,6 +105,6 @@
       <guid>893bca20-dcb0-42d0-af70-d6dbbe64df9e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDeleteBulk</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

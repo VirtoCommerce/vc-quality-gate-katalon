@@ -17,7 +17,16 @@ import internal.GlobalVariable as GlobalVariable
 
 
 WebUI.comment('TEST CASE: Assets. Delete folder')
- 
+
+
+'SEND REQUEST TO DELETE A FOLDER' 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetDelete', [
 	('itemName') : GlobalVariable.folderUrl
 	]))
+
+
+'VERIFY THE FOLDER HAS BEEN DELETED'
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetGetList', [
+	('keyword') : GlobalVariable.folderName
+	]))
+WS.verifyElementPropertyValue(folderList, 'totalCount', '0')

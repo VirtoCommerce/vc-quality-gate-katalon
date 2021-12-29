@@ -19,5 +19,7 @@ WebUI.comment('TEST CASE: Assets. Check access to file')
 
 WebUI.comment (GlobalVariable.uploadFileUrl)
 
-fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileAccess', [('fileUrl') : GlobalVariable.uploadFileUrl]))
+fileAccessA = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileAccess', [
+	('fileUrl') : GlobalVariable.uploadFileUrl
+	]))
 WS.verifyResponseStatusCode(fileAccessA, 200)

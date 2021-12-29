@@ -42,6 +42,12 @@
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>dc2aaa55-344b-47b0-bb58-5623bbe21999</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleStore/StoreAssets</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>3df55a28-37dd-498c-9dd6-583ed7b524ce</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
