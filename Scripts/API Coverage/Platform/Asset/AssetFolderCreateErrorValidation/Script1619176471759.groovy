@@ -25,7 +25,7 @@ for (String name : responseMap.keySet()) {
 	WebUI.comment("Attempt to create folder with name: \"" + name + "\". Received error should be is: " + responseMap.get(name));
 	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetCreateBlobFolder', [
 		('folderName') : name,
-		('parentUrl') : ''
+		('parentUrl') : GlobalVariable.folderParentUrl
 		]))
 	WS.verifyElementPropertyValue(response, 'message', responseMap.get(name))
 }

@@ -414,4 +414,9 @@
       <initValue>''</initValue>
       <name>assetsData</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>folderParentUrl</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

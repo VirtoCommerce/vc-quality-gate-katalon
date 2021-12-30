@@ -22,7 +22,7 @@ WebUI.comment('TEST CASE: Assets. Bulk delete folders')
 for (i = 1; i < 3; i++ ) {
 	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetCreateBlobFolder', [
 		('folderName') : GlobalVariable.folderName + i,
-		('parentUrl') : ''
+		('parentUrl') : GlobalVariable.folderParentUrl
 		]))
 }
 
