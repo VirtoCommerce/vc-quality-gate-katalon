@@ -36,7 +36,7 @@ validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platf
 
 
 'CREATE AND DELETE SEVERAL FOLDERS SIMULTANEOUSLY'
-assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk'),
+assetsFolderDeleteBulk = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk'),
 	null)
 
 
