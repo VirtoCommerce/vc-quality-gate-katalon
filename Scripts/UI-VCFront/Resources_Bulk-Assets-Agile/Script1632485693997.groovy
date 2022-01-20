@@ -26,6 +26,8 @@ List<String> urls = [
 for (int i; i < urls.size(); i++) {
 	
     WebUI.navigateToUrl(GlobalVariable.urlFront + '/' + urls.get(i))
+	
+	println('Current URL is: ' + WebUI.getUrl())
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
@@ -44,7 +46,7 @@ for (int i; i < urls.size(); i++) {
     WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 	if (urls.get(i) == urls[0]) {
-		println urls.get(i)
+//		println urls.get(i)
 		
 		WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 		

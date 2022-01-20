@@ -37,6 +37,8 @@ List<String> urls = [
 for (int i; i < urls.size(); i++) {
 	
     WebUI.navigateToUrl(GlobalVariable.urlFront + '/resources/' + urls.get(i))
+	
+	println('Current URL is: ' + WebUI.getUrl())
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 

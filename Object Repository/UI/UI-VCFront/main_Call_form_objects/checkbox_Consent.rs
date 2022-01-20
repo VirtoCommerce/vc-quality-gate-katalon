@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>checkbox_Terms</name>
+   <name>checkbox_Consent</name>
    <tag></tag>
-   <elementGuidId>3d8e7bfa-898d-48cf-af4b-a50a30ea6d34</elementGuidId>
+   <elementGuidId>77b05807-2c42-4adb-b5b2-9068fb2a76ab</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//label[@class = 'form-checkbox__label' and @for = 'agree']</value>
+         <value>//label[@class = 'form-checkbox__label' and @for = 'consent']</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -39,7 +39,7 @@
       <matchCondition>equals</matchCondition>
       <name>for</name>
       <type>Main</type>
-      <value>agree</value>
+      <value>consent</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
