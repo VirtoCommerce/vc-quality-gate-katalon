@@ -19,17 +19,18 @@ import org.openqa.selenium.Keys as Keys
 
 
 List<String> urls = [
-	//B2X ECOMMERCE SOLUTIONS
-	'b2c-webshop',
+//B2X ECOMMERCE SOLUTIONS
+//	'b2c-webshop',
 	'digital-catalog',
 	'saas-on-top-of-virto-commerce-platform',
 	'page-builder',
 	'chatbot',
-	//B2B PORTALS
-	'b2b-portal',
-	'vendor-portal',
+//B2B PORTALS
+//	'b2b-portal',
+//	'vendor-portal',
 	'loyalty-portal',
-	//BY INDUSTRY
+
+//BY INDUSTRY
 	//B2B ecommerce solutions for distributors
 	'b2b-portal-for-distributors',
 	'b2b2c-webshop-for-distributors',
@@ -43,10 +44,11 @@ List<String> urls = [
 	'b2c-webshop-for-retail'
 	]
 
-for (int i; i < urls.size(); i++) {
-	
+for (int i; i < urls.size(); i++) {	
     WebUI.navigateToUrl(GlobalVariable.urlFront + '/solutions/' + urls.get(i))
 
+	println('Current URL is: ' + WebUI.getUrl())
+	
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 'Doe QA')
