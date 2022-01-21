@@ -50,7 +50,7 @@
    <testCaseLink>
       <guid>0df51458-ba61-437c-9b14-ba21a57de1c4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/UI-VCFront/Product_Bulk-Integrations</testCaseId>
    </testCaseLink>
    <testCaseLink>

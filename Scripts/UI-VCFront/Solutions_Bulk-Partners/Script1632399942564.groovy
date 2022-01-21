@@ -29,6 +29,8 @@ for (int i; i < urls.size(); i++) {
 	
     WebUI.navigateToUrl(GlobalVariable.urlFront + '/' + urls.get(i))
 
+	println('Current URL is: ' + WebUI.getUrl())
+	
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
     WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 'Doe QA')
@@ -42,12 +44,12 @@ for (int i; i < urls.size(); i++) {
     WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
 	
 	if (urls.get(i) == urls[1]) {
-		println urls.get(i)
+//		println urls.get(i)
 		WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Learn_more_about'), 'our upcoming training schedule', true)
 	}
 	
 	if (urls.get(i) == urls[2]) {
-		println urls.get(i)
+//		println urls.get(i)
 		WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Learn_more_about'), 'Associate solution partner program', true)
 		
 		WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')

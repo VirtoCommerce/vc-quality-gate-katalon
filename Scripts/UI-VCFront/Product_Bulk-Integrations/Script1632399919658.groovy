@@ -18,13 +18,16 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 List<String> urls = [
-	'key-ecommerce-integrations',
-	'ecommerce-erp-integrations',
-	'ai-in-b2b-ecommerce'
+//	'key-ecommerce-integrations',
+//	'ecommerce-erp-integrations',
+//	'ai-in-b2b-ecommerce'
+//	No forms anymore
 	]
 
 for (int i; i < urls.size(); i++) {
-	WebUI.navigateToUrl(GlobalVariable.urlFront + '/integrations/' + urls.get(i))
+		WebUI.navigateToUrl(GlobalVariable.urlFront + '/integrations/' + urls.get(i))
+	
+		println('Current URL is: ' + WebUI.getUrl())
 	
 		WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 	
