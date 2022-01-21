@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n  \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n  \&quot;fullName\&quot;: \&quot;${name}\&quot;,\n  \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;,\n  \&quot;addresses\&quot;: [\n    {\n    \t\&quot;addressType\&quot;: \&quot;Billing\&quot;,\n\t    \&quot;firstName\&quot;: \&quot;JohnFirst\&quot;,\n\t\t\&quot;lastName\&quot;: \&quot;DoeLast\&quot;,\n        \&quot;countryCode\&quot;: \&quot;USA\&quot;,    \n        \&quot;countryName\&quot;: \&quot;United States\&quot;,\n        \&quot;regionName\&quot;: \&quot;Updated region\&quot;,\n        \&quot;city\&quot;: \&quot;Updated city\&quot;,\n        \&quot;line1\&quot;: \&quot;Updated adress line 1\&quot;,\n        \&quot;line2\&quot;: \&quot;Updated adress line 2\&quot;,\n        \&quot;postalCode\&quot;: \&quot;123000\&quot;,\n        \&quot;name\&quot;: \&quot;Qwest\&quot;\n    }\n  ],\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;00000000\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ],\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;firstName\&quot;: \&quot;JohnFirst X\&quot;,\n  \&quot;lastName\&quot;: \&quot;DoeLast Y\&quot;,\n  \&quot;fullName\&quot;: \&quot;${name}\&quot;,\n  \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n  \&quot;id\&quot;: \&quot;${id}\&quot;,\n  \&quot;addresses\&quot;: [${addresses}],\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;00000000\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ],\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -49,7 +49,7 @@
       <name>memberType</name>
    </variables>
    <variables>
-      <defaultValue>'448605d3-40a4-4aa8-87de-3caf97feee85'</defaultValue>
+      <defaultValue>'e029c319-cac6-4ab1-bbe4-2388c14690a8'</defaultValue>
       <description>updated member id</description>
       <id>145bccc0-f440-4468-bd8b-93166c761028</id>
       <masked>false</masked>
@@ -68,6 +68,13 @@
       <id>8e29c1a6-b247-4972-a730-3880cc82281d</id>
       <masked>false</masked>
       <name>fullName</name>
+   </variables>
+   <variables>
+      <defaultValue>' '</defaultValue>
+      <description></description>
+      <id>3db1fc1d-93a2-4d35-85c5-0400f4514197</id>
+      <masked>false</masked>
+      <name>addresses</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
