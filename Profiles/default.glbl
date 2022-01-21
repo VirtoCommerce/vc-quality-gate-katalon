@@ -419,4 +419,9 @@
       <initValue>''</initValue>
       <name>folderParentUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>['Billing', 'Shipping', 'BillingAndShipping']</initValue>
+      <name>addressTypes</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
