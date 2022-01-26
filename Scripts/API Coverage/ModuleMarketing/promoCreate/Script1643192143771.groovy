@@ -29,6 +29,13 @@ promoCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 	]))
 
 
+'SEARCH FOR THE PROMO VERIFY THE PROMOTION HAS BEEN CREATED SUCCESSFULLY'
+searchPromo = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoSearch',[
+	('keyword') : GlobalVariable.firstName
+	]))
+WS.verifyElementPropertyValue(searchPromo,'results[0].name', GlobalVariable.promoName)
+
+
 'GET THE ID OF THE CREATED PROMOTION'
 GlobalVariable.promoId = WS.getElementPropertyValue(promoCreate,'id')
 

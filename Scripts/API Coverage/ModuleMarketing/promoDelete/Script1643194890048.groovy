@@ -26,3 +26,10 @@ WebUI.comment('test case: DELETE PROMOTION')
 deletePromo = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoDelete', [	
 	('promoId') : GlobalVariable.promoId
 	]))
+
+
+'VERIFY THE PROMO HAS BEEN DELETED'
+verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoSearch',[
+	('keyword') : GlobalVariable.firstName
+	]))
+WS.verifyElementPropertyValue(verifyDeleted,'totalCount', '0')

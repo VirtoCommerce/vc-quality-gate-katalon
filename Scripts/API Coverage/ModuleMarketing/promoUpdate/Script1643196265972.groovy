@@ -26,7 +26,20 @@ promoUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 	('promoName') : GlobalVariable.promoName,
 	('id') : GlobalVariable.promoId 
 	]))
-//WS.verifyElementPropertyValue(promoUpdate,'name',GlobalVariable.promoName)
+
+
+//'VERIFY THE PROMO HAS BEEN  UPDATED'
+//promoGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DRAFT_Promotions/PromoGetNew', [
+//	('promoId') : GlobalVariable.promoId
+//	]))
+
+
+'SEARCH FOR THE PROMO VERIFY THE PROMOTION HAS BEEN UPDATED SUCCESSFULLY'
+searchPromo = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoSearch',[
+	('keyword') : GlobalVariable.firstName
+	]))
+WS.verifyElementPropertyValue(searchPromo,'results[0].name', GlobalVariable.promoName)
+
 
 
 return promoUpdate

@@ -3,7 +3,7 @@
    <description></description>
    <name>PromoGetById</name>
    <tag></tag>
-   <elementGuidId>c6ed2ba9-ab1a-48b7-a53f-197923d5938f</elementGuidId>
+   <elementGuidId>69dc0dd9-8dc5-404c-9efa-af5a1bfece60</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions/new</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions/${promoId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,6 +37,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'AutoTestId'</defaultValue>
+      <description>id of the existing promo</description>
+      <id>e01223e6-8437-4a3d-8e6f-d8198d9ef6d8</id>
+      <masked>false</masked>
+      <name>promoId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
