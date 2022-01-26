@@ -424,4 +424,14 @@
       <initValue>['Billing', 'Shipping', 'BillingAndShipping']</initValue>
       <name>addressTypes</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>promoId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>promoName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

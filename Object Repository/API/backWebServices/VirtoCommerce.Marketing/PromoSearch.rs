@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>_DRAFT_PromoUpdate</name>
+   <name>PromoSearch</name>
    <tag></tag>
-   <elementGuidId>320f5f11-dc87-4211-834f-dbd0db56944c</elementGuidId>
+   <elementGuidId>f351600d-04c5-41bd-9d23-3ab578eb0548</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{$body}&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;text&quot;: &quot;{\n  //\&quot;objectIds\&quot;: [ \&quot;string\&quot; ],\n \&quot;keyword\&quot;: \&quot;${keyword}\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -20,7 +20,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,11 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>build in script view, pas as a variable</description>
-      <id>e01223e6-8437-4a3d-8e6f-d8198d9ef6d8</id>
+      <defaultValue>'qwe'</defaultValue>
+      <description></description>
+      <id>bf01c516-21bd-4cfb-bae7-d3a07358be7a</id>
       <masked>false</masked>
-      <name>body</name>
+      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
