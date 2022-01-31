@@ -25,7 +25,7 @@ createPromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarket
 //verifyCreated =
 
 
-updatePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoUpdate'),
+updatePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoUpdate_AlternativeWay'),
 	null)
 
 //verifyUdated

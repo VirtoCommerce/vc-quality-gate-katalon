@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;isAllowCombiningWithSelf\&quot;: false,\n\t\&quot;storeIds\&quot;: [],\n\t\&quot;name\&quot;: \&quot;${promoName}\&quot;,\n\t\&quot;type\&quot;: \&quot;DynamicPromotion\&quot;,\n\t\&quot;isActive\&quot;: true,\n\t\&quot;priority\&quot;: 1,\n\t\&quot;isExclusive\&quot;: false,\n\t\&quot;hasCoupons\&quot;: false,\n\t\&quot;maxUsageCount\&quot;: 0,\n\t\&quot;maxUsageOnOrder\&quot;: 0,\n\t\&quot;maxPersonalUsageCount\&quot;: 0,\n\t\&quot;startDate\&quot;: \&quot;2020-01-03T09:31:26.961Z\&quot;,\n\t\&quot;endDate\&quot;: \&quot;2045-07-03T09:31:26.961Z\&quot;,\n\t\&quot;createdBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;modifiedBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;id\&quot;: \&quot;${promoId}\&quot;,\n\t\&quot;coupons\&quot;: []\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;isAllowCombiningWithSelf\&quot;: false,\n\t\&quot;storeIds\&quot;: [],\n\t\&quot;name\&quot;: \&quot;${promoName}\&quot;,\n\t\&quot;type\&quot;: \&quot;DynamicPromotion\&quot;,\n\t\&quot;isActive\&quot;: true,\n\t\&quot;priority\&quot;: 1,\n\t\&quot;isExclusive\&quot;: false,\n\t\&quot;hasCoupons\&quot;: false,\n\t\&quot;maxUsageCount\&quot;: 0,\n\t\&quot;maxUsageOnOrder\&quot;: 0,\n\t\&quot;maxPersonalUsageCount\&quot;: 0,\n\t\&quot;id\&quot;: \&quot;${promoId}\&quot;,\n\t\&quot;coupons\&quot;: []\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
