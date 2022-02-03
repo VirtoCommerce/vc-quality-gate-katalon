@@ -26,7 +26,7 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-'DATA CREAATION SNIPPET'
+'NOTE: Just to save time I will use get/put to oerform operations. May consider POST after a conversation'
 
 
 'FIRST PREPARE CATALOG CONDITION DATA'
@@ -37,41 +37,42 @@ List catalogConditionDataParsed = new JsonSlurper().parseText(catalogConditionDa
 'USER GROUP   (prepare data)' //static through tests, so only need to be processed once
 dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
 userGroupDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
-userGroupPromoCondition = 'ConditionIsEveryone'
-userGroupDataParsed.id = userGroupPromoCondition
+List userGroupPromoCondition = ['ConditionIsEveryone','ConditionIsRegisteredUser']
+for (int b; b < userGroupPromoCondition.size();b++) {	
+	GlobalVariable.promoName = 'qwePromo' + b + '_'
+	userGroupDataParsed.id = userGroupPromoCondition[b]
  
-
-'REWARD   (prepare data)'//same as 'userGroup'
-rewardDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
-rewardCondition = 'RewardCartGetOfAbsSubtotal'
-rewardDataParsed.id = rewardCondition
-rewardDataParsed << ['amount' : '1']
-
-
-'PREPARE THE REQUEST BODY'
-postRequestTemplate = new File('Data Files/promoPostTemplate.json').text
-promoPostTemplateParsed = new JsonSlurper().parseText(postRequestTemplate)
-promoPostTemplateParsed.dynamicExpression.children[0].children[0] = userGroupDataParsed //'userGroup'
-promoPostTemplateParsed.dynamicExpression.children[3].children[0] = rewardDataParsed //'reward'
-
-
-'CREATE A PROMOTION FOR EACH CATALOG CONDITION'
-GlobalVariable.promoName = 'qwePromo'
-for (int a; a < catalogConditionDataParsed.size(); a++) {
-	println "a = " + a
+	
+	'REWARD   (prepare data)'//same as 'userGroup'
+	rewardDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
+	rewardCondition = 'RewardCartGetOfAbsSubtotal'
+	rewardDataParsed.id = rewardCondition
+	rewardDataParsed << ['amount' : '1']
 	
 	
-	'PREPARE THE REQUEST BODY'
-	promoPostTemplateParsed.name =  GlobalVariable.promoName + a
-	promoPostTemplateParsed.dynamicExpression.children[1].children[0] = catalogConditionDataParsed[a]
-	promoJson = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
+	'PREPARE THE REQUEST TEMPLATE'
+	postRequestTemplate = new File('Data Files/promoPostTemplate.json').text
+	promoPostTemplateParsed = new JsonSlurper().parseText(postRequestTemplate)
+	promoPostTemplateParsed.dynamicExpression.children[0].children[0] = userGroupDataParsed //'userGroup'
+	promoPostTemplateParsed.dynamicExpression.children[3].children[0] = rewardDataParsed //'reward'
 	
 	
-	'SEND THE REQUEST'
-	RequestObject promoCreate = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/_DARFT_PromoCreate')
-	promoCreate.setBodyContent(new HttpTextBodyContent(promoJson))
-	WS.sendRequestAndVerify(promoCreate)
-	//promoPostTemplateParsed.dynamicExpression.children[1].children[0]
-	//promoPostTemplateParsed.dynamicExpression.children[3].children[0]
+	'CREATE A PROMOTION FOR EACH CATALOG CONDITION'
+	for (int a; a < catalogConditionDataParsed.size(); a++) {
+		println "a = " + a
+		
+		
+		'PREPARE THE REQUEST BODY'
+		promoPostTemplateParsed.name =  GlobalVariable.promoName + a
+		promoPostTemplateParsed.dynamicExpression.children[1].children[0] = catalogConditionDataParsed[a]
+		promoJson = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
+		
+		
+		'SEND THE REQUEST'
+		RequestObject promoCreate = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/_DARFT_PromoCreate')
+		promoCreate.setBodyContent(new HttpTextBodyContent(promoJson))
+		WS.sendRequestAndVerify(promoCreate)
+		//promoPostTemplateParsed.dynamicExpression.children[1].children[0]
+		//promoPostTemplateParsed.dynamicExpression.children[3].children[0]
 	}
-
+}
