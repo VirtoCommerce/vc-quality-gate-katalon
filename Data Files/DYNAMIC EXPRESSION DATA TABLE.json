@@ -1,0 +1,30 @@
+DYNAMIC EXPRESSION DATA TABLE
+
+
+[ {
+	"id": "ConditionCategoryIs",
+	"children": [],
+	"excludingCategoryIds": [],
+	"excludingProductIds": []
+},
+{
+	"id": "ConditionIsEveryone",
+	"children": [],
+	"excludingCategoryIds": [
+		"4b50b398ff584af9b6d69c082c94844b"
+	],
+	"excludingProductIds": []
+},
+{
+	"id": "ConditionIsEveryone",
+	"children": [],
+	"excludingCategoryIds": [],
+	"excludingProductIds": [
+		"cbd8eab4f76b4e34b779d9c59dbc13fe"
+	]
+}
+
+
+
+
+]

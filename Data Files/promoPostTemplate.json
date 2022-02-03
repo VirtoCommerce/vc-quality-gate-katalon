@@ -1,0 +1,274 @@
+{
+  "isAllowCombiningWithSelf": false,
+  "dynamicExpression": {
+    "all": true,
+    "not": false,
+    "id": "PromotionConditionAndRewardTree",
+    "availableChildren": [
+      {
+        "all": false,
+        "not": false,
+        "id": "BlockCustomerCondition",
+        "availableChildren": [
+          {
+            "id": "ConditionIsRegisteredUser",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "id": "ConditionIsEveryone",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "id": "ConditionIsFirstTimeBuyer",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "id": "UserGroupsContainsCondition",
+            "availableChildren": [],
+            "children": []
+          }
+        ],
+        "children": []
+      },
+      {
+        "all": false,
+        "not": false,
+        "id": "BlockCatalogCondition",
+        "availableChildren": [
+          {
+            "excludingCategoryIds": [],
+            "excludingProductIds": [],
+            "id": "ConditionCategoryIs",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "id": "ConditionCodeContains",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "id": "ConditionCurrencyIs",
+            "availableChildren": [],
+            "children": []
+          },
+          { "id": "ConditionEntryIs", "availableChildren": [], "children": [] },
+          {
+            "quantity": 0,
+            "quantitySecond": 0,
+            "compareCondition": "AtLeast",
+            "id": "ConditionInStockQuantity",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "id": "ConditionHasNoSalePrice",
+            "availableChildren": [],
+            "children": []
+          }
+        ],
+        "children": []
+      },
+      {
+        "all": false,
+        "not": false,
+        "id": "BlockCartCondition",
+        "availableChildren": [
+          {
+            "excludingCategoryIds": [],
+            "excludingProductIds": [],
+            "numItem": 0,
+            "numItemSecond": 0,
+            "compareCondition": "AtLeast",
+            "id": "ConditionAtNumItemsInCart",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "numItem": 0,
+            "numItemSecond": 0,
+            "excludingCategoryIds": [],
+            "excludingProductIds": [],
+            "compareCondition": "AtLeast",
+            "id": "ConditionAtNumItemsInCategoryAreInCart",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "numItem": 0,
+            "numItemSecond": 0,
+            "compareCondition": "AtLeast",
+            "id": "ConditionAtNumItemsOfEntryAreInCart",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "subTotal": 0,
+            "subTotalSecond": 0,
+            "excludingCategoryIds": [],
+            "excludingProductIds": [],
+            "compareCondition": "AtLeast",
+            "id": "ConditionCartSubtotalLeast",
+            "availableChildren": [],
+            "children": []
+          }
+        ],
+        "children": []
+      },
+      {
+        "id": "BlockReward",
+        "availableChildren": [
+          {
+            "amount": 0,
+            "id": "RewardCartGetOfAbsSubtotal",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "maxLimit": 0,
+            "id": "RewardCartGetOfRelSubtotal",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "numItem": 0,
+            "id": "RewardItemGetFreeNumItemOfProduct",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "id": "RewardItemGetOfAbs",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "numItem": 0,
+            "id": "RewardItemGetOfAbsForNum",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "maxLimit": 0,
+            "id": "RewardItemGetOfRel",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "numItem": 0,
+            "maxLimit": 0,
+            "id": "RewardItemGetOfRelForNum",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "quantity": 0,
+            "id": "RewardItemGiftNumItem",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "id": "RewardShippingGetOfAbsShippingMethod",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "maxLimit": 0,
+            "id": "RewardShippingGetOfRelShippingMethod",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "id": "RewardPaymentGetOfAbs",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "maxLimit": 0,
+            "id": "RewardPaymentGetOfRel",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "amount": 0,
+            "product": {},
+            "forNthQuantity": 0,
+            "inEveryNthQuantity": 0,
+            "itemLimit": 0,
+            "maxLimit": 0,
+            "id": "RewardItemForEveryNumInGetOfRel",
+            "availableChildren": [],
+            "children": []
+          },
+          {
+            "conditionalProduct": {},
+            "amount": 0,
+            "product": {},
+            "forNthQuantity": 0,
+            "inEveryNthQuantity": 0,
+            "itemLimit": 0,
+            "maxLimit": 0,
+            "id": "RewardItemForEveryNumOtherItemInGetOfRel",
+            "availableChildren": [],
+            "children": []
+          }
+        ],
+        "children": []
+      }
+    ],
+    "children": [
+      {
+        "all": false,
+        "not": false,
+        "id": "BlockCustomerCondition",
+        "children": [],
+        "excludingCategoryIds": [],
+        "excludingProductIds": []
+      },
+      {
+        "all": false,
+        "not": false,
+        "id": "BlockCatalogCondition",
+        "children": [],
+        "excludingCategoryIds": [],
+        "excludingProductIds": []
+      },
+      {
+        "all": false,
+        "not": false,
+        "id": "BlockCartCondition",
+        "children": [],
+        "excludingCategoryIds": [],
+        "excludingProductIds": []
+      },
+      {
+        "id": "BlockReward",
+        "children": [],
+        "excludingCategoryIds": [],
+        "excludingProductIds": []
+      }
+    ]
+  },
+  "type": "DynamicPromotion",
+  "isActive": true,
+  "priority": 0,
+  "isExclusive": false,
+  "hasCoupons": false,
+  "maxUsageCount": 0,
+  "maxUsageOnOrder": 0,
+  "maxPersonalUsageCount": 0,
+  "createdDate": "0001-01-01T00:00:00Z",
+  "coupons": [],
+  "name": "inputNameHere"
+}

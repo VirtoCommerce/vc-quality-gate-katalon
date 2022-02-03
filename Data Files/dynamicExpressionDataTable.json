@@ -1,0 +1,30 @@
+[  
+    {
+      "excludingCategoryIds": [],
+      "excludingProductIds": [],
+      "categoryId": "0d4ad9bab9184d69a6e586effdf9c2ea",
+      "categoryName": "Cell phones",
+      "id": "ConditionCategoryIs",
+      "availableChildren": [],
+      "children": []
+    },
+    {
+      "excludingCategoryIds": ["7c51d90394f145d0859810e38a48a41e"],
+      "excludingProductIds": [],
+      "categoryId": "0d4ad9bab9184d69a6e586effdf9c2ea",
+      "categoryName": "Cell phones",
+      "id": "ConditionCategoryIs",
+      "availableChildren": [],
+      "children": []
+    },
+    {
+      "excludingCategoryIds": [],
+      "excludingProductIds": ["bb7d783aafd4458abac1d9ee3eccb7a0"],
+      "categoryId": "0d4ad9bab9184d69a6e586effdf9c2ea",
+      "categoryName": "Cell phones",
+      "id": "ConditionCategoryIs",
+      "availableChildren": [],
+      "children": []
+    }
+
+]

@@ -30,8 +30,8 @@ updatePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarket
 
 //verifyUdated
 
-deletePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoDelete'),
-	null)
+//deletePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoDelete'),
+//	null)
 
 
-//vetifyDeleted =
+//vetifyDeleted = 

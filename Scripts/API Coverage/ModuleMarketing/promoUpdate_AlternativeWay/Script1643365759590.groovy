@@ -26,6 +26,10 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('test case: UPDATE PROMOTION')
 
 
+//GlobalVariable.promoId = 'AutoTestId'
+//GlobalVariable.promoName = 'QwePromo'
+
+
 'USER GROUP'
 dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
 userGroupDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
@@ -37,7 +41,17 @@ userGroupDataParsed.id = userGroupPromoCondition
 dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
 catalogConditionDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
 catalogPromoCondition = 'ConditionCategoryIs'
+//HERE IM ADDING AN ID OF THE CATEGORY TO EXCLUDE (exclude condition)
+categoryToExclude = '4b50b398ff584af9b6d69c082c94844b' //"HEADPHONES" ID
+catalogConditionDataParsed.excludingCategoryIds[0] = categoryToExclude
+
+//HERE IM ADDING THE MAIN CONDITION ID
 catalogConditionDataParsed.id = catalogPromoCondition
+
+//HERE IM ADDING AN TTEM TO EXCLUDE
+itemToExclude = 'cbd8eab4f76b4e34b779d9c59dbc13fe' //THE FIRST HOME THEATRE ON THE LIST 
+catalogConditionDataParsed.excludingProductIds[0] = itemToExclude
+
 catalogConditionDataParsed << ['categoryId' : GlobalVariable.categoryId, 'categoryName' : GlobalVariable.categoryName]
 conditionDataJson = new groovy.json.JsonBuilder(catalogConditionDataParsed).toString()
 println conditionDataJson
@@ -54,8 +68,6 @@ println rewardDataParsed
 
 
 'GET THE CREATED PROMO DATA'
-GlobalVariable.promoName = 'Qwepromo'
-GlobalVariable.promoId = 'AutoTestId'
 promoDataGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoGetById',[
 	('promoId') : GlobalVariable.promoId 
 	]))
