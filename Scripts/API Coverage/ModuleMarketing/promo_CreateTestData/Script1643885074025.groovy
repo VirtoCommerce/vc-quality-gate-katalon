@@ -69,7 +69,13 @@ for (int b; b < userGroupPromoCondition.size();b++) {
 		
 		'PREPARE THE REQUEST BODY'
 		promoPostTemplateParsed.name =  GlobalVariable.promoName + a
-		promoPostTemplateParsed.dynamicExpression.children[1].children[0] = catalogConditionDataParsed[a]
+		
+		if (a > 10) {
+			promoPostTemplateParsed.dynamicExpression.children[2].children[0] = catalogConditionDataParsed[a]
+		} else {
+				promoPostTemplateParsed.dynamicExpression.children[1].children[0] = catalogConditionDataParsed[a]
+		  }
+		  
 		promoJson = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		
 		
@@ -79,5 +85,6 @@ for (int b; b < userGroupPromoCondition.size();b++) {
 		WS.sendRequestAndVerify(promoCreate)
 		//promoPostTemplateParsed.dynamicExpression.children[1].children[0]
 		//promoPostTemplateParsed.dynamicExpression.children[3].children[0]
-	}
+		println 'THIS IS THE END OF THE >>>' + a + '<<< CYCLE'
+	}	
 }
