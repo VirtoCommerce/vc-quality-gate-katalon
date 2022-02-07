@@ -431,7 +431,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
+      <initValue>'QwePromo'</initValue>
       <name>promoName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

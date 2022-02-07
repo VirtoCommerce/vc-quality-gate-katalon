@@ -27,27 +27,32 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 
 'NOTE: Just to save time I will use get/put to oerform operations. May consider POST after a conversation'
-
+'QUESTION: Do we really need verification for this '
 
 'FIRST PREPARE CATALOG CONDITION DATA'
 catalogConditionData = new File('Data Files/dynamicExpressionDataTable.json').text
 List catalogConditionDataParsed = new JsonSlurper().parseText(catalogConditionData)
 
 
-'USER GROUP   (prepare data)' //static through tests, so only need to be processed once
+'REWARD   (prepare data)'//Static throughout all the catalog conditions
 dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
+rewardDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
+rewardCondition = 'RewardCartGetOfAbsSubtotal'
+rewardDataParsed.id = rewardCondition
+rewardDataParsed << ['amount' : '1']
+
+
+'USER GROUP   (prepare data)' 
 userGroupDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
-List userGroupPromoCondition = ['ConditionIsEveryone','ConditionIsRegisteredUser']
+List userGroupPromoCondition = ['ConditionIsEveryone','ConditionIsRegisteredUser','ConditionIsFirstTimeBuyer', 'UserGroupsContainsCondition' ]
 for (int b; b < userGroupPromoCondition.size();b++) {	
 	GlobalVariable.promoName = 'qwePromo' + b + '_'
 	userGroupDataParsed.id = userGroupPromoCondition[b]
- 
-	
-	'REWARD   (prepare data)'//same as 'userGroup'
-	rewardDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
-	rewardCondition = 'RewardCartGetOfAbsSubtotal'
-	rewardDataParsed.id = rewardCondition
-	rewardDataParsed << ['amount' : '1']
+	if (userGroupPromoCondition[b] == 'UserGroupsContainsCondition') {
+		userGroupDataParsed << ['group' : 'qwe' , 'groupName' : 'Shopper profile']
+		//adding this statement as 'UserGroupsContainsCondition' has 
+		//differences in body structure
+	}
 	
 	
 	'PREPARE THE REQUEST TEMPLATE'
