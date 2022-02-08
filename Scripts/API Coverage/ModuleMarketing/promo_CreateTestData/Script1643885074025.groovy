@@ -26,7 +26,6 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-'NOTE: Just to save time I will use get/put to oerform operations. May consider POST after a conversation'
 'QUESTION: Do we really need verification for this '
 
 'FIRST PREPARE CATALOG CONDITION DATA'
