@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PromoDelete</name>
+   <name>PromoSearch</name>
    <tag></tag>
-   <elementGuidId>28499177-ceef-440b-a454-668bc81890d1</elementGuidId>
+   <elementGuidId>f351600d-04c5-41bd-9d23-3ab578eb0548</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n  //\&quot;objectIds\&quot;: [ \&quot;string\&quot; ],\n \&quot;keyword\&quot;: \&quot;${keyword}\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions?ids=${id}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'AutoTestId'</defaultValue>
-      <description>id of the promo to delete</description>
-      <id>a4a41569-1341-46a8-a7f2-17dd904f81bd</id>
+      <defaultValue>'qwe'</defaultValue>
+      <description></description>
+      <id>bf01c516-21bd-4cfb-bae7-d3a07358be7a</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -58,7 +62,7 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 204)
+WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

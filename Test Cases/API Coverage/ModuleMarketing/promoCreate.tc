@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create a promotion</description>
+   <name>promoCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>eb0659be-01f5-46e2-892a-5f24898b8e1e</testCaseGuid>
+</TestCaseEntity>

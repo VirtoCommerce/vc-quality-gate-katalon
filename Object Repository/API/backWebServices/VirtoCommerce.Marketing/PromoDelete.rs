@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>PromoGetById</name>
+   <name>PromoDelete</name>
    <tag></tag>
-   <elementGuidId>c6ed2ba9-ab1a-48b7-a53f-197923d5938f</elementGuidId>
+   <elementGuidId>28499177-ceef-440b-a454-668bc81890d1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -16,7 +16,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>text/plain</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -27,8 +27,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions/new</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions?ids=${promoId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,6 +37,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'AutoTestId'</defaultValue>
+      <description>id of the promo to delete</description>
+      <id>a4a41569-1341-46a8-a7f2-17dd904f81bd</id>
+      <masked>false</masked>
+      <name>id</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -51,7 +58,7 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
