@@ -291,8 +291,8 @@ import com.kms.katalon.core.util.KeywordUtil
 
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(prettyJson)
+//def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+//KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

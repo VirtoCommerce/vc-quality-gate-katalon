@@ -102,4 +102,3 @@ WS.verifyElementPropertyValue(searchPromo,'results[0].dynamicExpression.children
 
 return promoUpdate
 
-
