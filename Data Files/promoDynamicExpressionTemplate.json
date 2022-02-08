@@ -1,6 +1,6 @@
 {
-            "id": "ConditionIsEveryone",
-            "children": [],
-            "excludingCategoryIds": [],
-            "excludingProductIds": []
-          }
+  "id": "ConditionIsEveryone",
+  "children": [],
+  "excludingCategoryIds": [],
+  "excludingProductIds": []
+}
