@@ -26,7 +26,7 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-'QUESTION: Do we really need verification for this '
+'QUESTION: Do we really need verification for this?'
 
 'FIRST PREPARE CATALOG CONDITION DATA'
 catalogConditionData = new File('Data Files/dynamicExpressionDataTable.json').text
@@ -68,13 +68,15 @@ for (int b; b < userGroupPromoCondition.size();b++) {
 		
 		'PREPARE THE REQUEST BODY'
 		promoPostTemplateParsed.name =  GlobalVariable.promoName + a
-		
-		if (a > 10) {
-			promoPostTemplateParsed.dynamicExpression.children[2].children[0] = catalogConditionDataParsed[a]
+		if (a > 21){
+			promoPostTemplateParsed.dynamicExpression.children[3].children[0] = catalogConditionDataParsed[a]
 		} else {
+			if (a > 10) {
+				promoPostTemplateParsed.dynamicExpression.children[2].children[0] = catalogConditionDataParsed[a]
+			} else {
 				promoPostTemplateParsed.dynamicExpression.children[1].children[0] = catalogConditionDataParsed[a]
-		  }
-		  
+			  }
+		  }  
 		promoJson = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		
 		
