@@ -24,3 +24,51 @@ import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
+
+
+'Create a promotion first'
+promoCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoCreate'),
+	null)
+
+println GlobalVariable.promoName
+println GlobalVariable.promoId
+
+
+'Add coupon to the promotion'
+couponName = GlobalVariable.promoName + 'Coupon'
+couponAdd = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/couponAdd',[
+	('promoId') : GlobalVariable.promoId,
+	('couponName') : couponName
+	]))
+
+
+'Search for the created coupon and get the coupon id'
+couponSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/couponSearch'))
+WS.containsString(couponSearch, couponName, false)
+GlobalVariable.couponId = WS.getElementPropertyValue(couponSearch,'results[0].id')
+println GlobalVariable.couponId
+
+
+'Get the created coupon data (by id)'
+couponGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/couponGet',[
+	('couponId') : GlobalVariable.couponId
+	]))
+WS.verifyElementPropertyValue(couponGet,'code', couponName)
+
+
+'Delete the created coupon'
+couponDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/couponDelete',[
+	('couponId') : GlobalVariable.couponId
+	]))
+
+
+'Verify the coupon has been deleted'
+verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/couponSearch'))
+WS.verifyElementPropertyValue(verifyDeleted,'results','[]') 
+//GlobalVariable.couponId = WS.getElementPropertyValue(couponSearch,'results[0].id')
+
+
+//'Get the created coupon Id'
+//couponGetId = WS.sendRequestAndVerify(findTestObject(''))
+
+
