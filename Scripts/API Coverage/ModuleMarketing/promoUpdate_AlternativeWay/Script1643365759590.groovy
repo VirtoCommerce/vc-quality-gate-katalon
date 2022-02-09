@@ -26,10 +26,6 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('test case: UPDATE PROMOTION')
 
 
-//GlobalVariable.promoId = 'AutoTestId'
-//GlobalVariable.promoName = 'QwePromo'
-
-
 'USER GROUP'
 dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
 userGroupDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
@@ -54,7 +50,6 @@ catalogConditionDataParsed.excludingProductIds[0] = itemToExclude
 
 catalogConditionDataParsed << ['categoryId' : GlobalVariable.categoryId, 'categoryName' : GlobalVariable.categoryName]
 conditionDataJson = new groovy.json.JsonBuilder(catalogConditionDataParsed).toString()
-println conditionDataJson
 
 
 'REWARD'
@@ -64,7 +59,6 @@ rewardCondition = 'RewardCartGetOfAbsSubtotal'
 rewardDataParsed.id = rewardCondition
 rewardDataParsed << ['amount' : '1']
 rewardDataJson = new groovy.json.JsonBuilder(rewardDataParsed).toString()
-println rewardDataParsed
 
 
 'GET THE CREATED PROMO DATA'
