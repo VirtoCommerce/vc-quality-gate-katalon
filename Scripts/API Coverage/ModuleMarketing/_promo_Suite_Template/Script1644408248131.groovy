@@ -22,16 +22,16 @@ import groovy.json.JsonSlurper
 createPromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoCreate'),
 	 null)
 
-//verifyCreated =
-
 
 updatePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoUpdate_AlternativeWay'),
 	null)
 
-//verifyUdated
 
-//deletePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoDelete'),
-//	null)
+deletePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoDelete'),
+    null)
+
+couponTests = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/promoCoupon_createUpdateDelete'), 
+	null)
 
 
-//vetifyDeleted = 
+ 
