@@ -18,20 +18,83 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper
 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
 
-createPromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoCreate'),
-	 null)
 
-
-updatePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoUpdate_AlternativeWay'),
+'Create a promotion first'
+promoCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoCreate'),
 	null)
 
 
-deletePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoDelete'),
-    null)
+'Add coupon to the promotion'
+int maxUsesNumber = 15
+int maxUsesPerUses = 10
+couponName = GlobalVariable.promoName + 'Coupon'
+couponAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponAdd',[
+	('promoId') : GlobalVariable.promoId,
+	('couponName') : couponName,
+	('maxUsesNumber') : maxUsesNumber,
+	('maxUsesPerUser') : maxUsesPerUses
+	]))
 
-couponTests = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/promoCoupon_createUpdateDelete'), 
-	null)
+
+'Search for the created coupon to verify creation and and get the id'
+couponSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponSearch'))
+WS.containsString(couponSearch, couponName, false)
+WS.verifyElementPropertyValue(couponSearch,'results[0].maxUsesNumber',maxUsesNumber)
+WS.verifyElementPropertyValue(couponSearch,'results[0].maxUsesPerUser',maxUsesPerUses)
+WS.verifyElementPropertyValue(couponSearch,'results[0].code',couponName)
+GlobalVariable.couponId = WS.getElementPropertyValue(couponSearch,'results[0].id')
+println GlobalVariable.couponId
 
 
- 
+'Update the created coupon'
+couponNameUpdated = couponName + 'UPD'
+maxUsesNumberUpdated  = maxUsesNumber + 2
+maxUsesPerUserUpdated  = maxUsesPerUses + 2
+couponUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponUpdate',[
+	('promoId') : GlobalVariable.promoId,
+	('couponId') : GlobalVariable.couponId,
+	('couponName') : couponNameUpdated ,
+	('maxUsesNumber') : maxUsesNumberUpdated ,
+	('maxUsesPerUser') : maxUsesPerUserUpdated 
+	]))
+
+
+'Get the created coupon data (by id)'
+couponGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponGet',[
+	('couponId') : GlobalVariable.couponId
+	]))
+WS.verifyElementPropertyValue(couponGet,'code', couponNameUpdated)
+WS.verifyElementPropertyValue(couponGet,'maxUsesNumber', maxUsesNumberUpdated)
+WS.verifyElementPropertyValue(couponGet,'maxUsesPerUser', maxUsesPerUserUpdated)
+
+
+'Delete the created coupon'
+couponDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponDelete',[
+	('couponId') : GlobalVariable.couponId
+	]))
+
+
+'Verify the coupon has been deleted'
+verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponSearch'))
+WS.verifyElementPropertyValue(verifyDeleted,'results','[]') 
+GlobalVariable.couponId = WS.getElementPropertyValue(couponSearch,'results[0].id')
+
+
+'Delete the promotion from the first step'
+deletePromo = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoDelete', [
+	('promoId') : GlobalVariable.promoId
+	]))
+
+
+'VERIFY THE PROMO HAS BEEN DELETED'
+verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoSearch',[
+	('keyword') : GlobalVariable.firstName
+	]))
+WS.verifyElementPropertyValue(verifyDeleted,'totalCount', '0')

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot; : \u0027${couponName}\u0027\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'QwePromoCoupon'</defaultValue>
+      <description>name of the searched promo</description>
+      <id>786853e9-f044-466f-b7dc-de70d201ac54</id>
+      <masked>false</masked>
+      <name>couponName</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

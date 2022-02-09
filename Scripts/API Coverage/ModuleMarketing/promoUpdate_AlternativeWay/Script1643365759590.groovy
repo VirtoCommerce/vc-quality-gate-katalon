@@ -26,10 +26,6 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('test case: UPDATE PROMOTION')
 
 
-//GlobalVariable.promoId = 'AutoTestId'
-//GlobalVariable.promoName = 'QwePromo'
-
-
 'USER GROUP'
 dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
 userGroupDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
