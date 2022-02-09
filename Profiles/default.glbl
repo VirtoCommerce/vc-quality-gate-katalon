@@ -434,4 +434,9 @@
       <initValue>'QwePromo'</initValue>
       <name>promoName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created coupon</description>
+      <initValue>''</initValue>
+      <name>couponId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

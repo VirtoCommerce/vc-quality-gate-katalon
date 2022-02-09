@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>_DARFT_PromoCreate</name>
+   <name>PromoCreate_no_hardcoded_id</name>
    <tag></tag>
    <elementGuidId>20bdaba1-d794-494f-80f9-9a7978a86cea</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

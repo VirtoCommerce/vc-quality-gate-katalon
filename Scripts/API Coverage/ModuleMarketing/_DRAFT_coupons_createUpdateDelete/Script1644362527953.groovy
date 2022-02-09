@@ -18,20 +18,9 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper
 
-
-createPromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoCreate'),
-	 null)
-
-//verifyCreated =
-
-
-updatePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoUpdate_AlternativeWay'),
-	null)
-
-//verifyUdated
-
-//deletePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoDelete'),
-//	null)
-
-
-//vetifyDeleted = 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
