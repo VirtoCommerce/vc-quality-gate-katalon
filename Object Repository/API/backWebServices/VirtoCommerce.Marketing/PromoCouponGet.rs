@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>couponSearch</name>
+   <name>PromoCouponGet</name>
    <tag></tag>
-   <elementGuidId>1c52cc38-5c8c-4a77-8d2e-8be4c0eed6ef</elementGuidId>
+   <elementGuidId>58960c15-7f0b-4a5c-85ef-84874e92bb53</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions/coupons/search</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/marketing/promotions/coupons/${couponId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'2be765fe-9474-448d-bf65-1099621aeee6'</defaultValue>
+      <description>id of the existing coupon</description>
+      <id>b6f3ef2a-0e5a-4ce1-8cfe-bab8c4a32508</id>
+      <masked>false</masked>
+      <name>couponId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

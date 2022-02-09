@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>couponDelete</name>
+   <name>PromoCouponDelete</name>
    <tag></tag>
    <elementGuidId>a81f5f40-419b-4603-8503-62310e10f786</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

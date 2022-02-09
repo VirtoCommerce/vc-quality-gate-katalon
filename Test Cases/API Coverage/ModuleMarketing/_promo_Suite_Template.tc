@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>_DRAFT_coupons_createUpdateDelete</name>
+   <name>_promo_Suite_Template</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>b18f743a-b1fd-48f5-ad18-187ee8bcf653</testCaseGuid>
+   <testCaseGuid>f8a28e2f-7cad-4033-94cc-3a1654d10633</testCaseGuid>
 </TestCaseEntity>

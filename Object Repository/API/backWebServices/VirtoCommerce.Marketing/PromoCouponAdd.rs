@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>couponUpdate</name>
+   <name>PromoCouponAdd</name>
    <tag></tag>
-   <elementGuidId>bdacda4c-0675-4c22-bc0e-fc0e87e8c0ab</elementGuidId>
+   <elementGuidId>d6c21488-1697-4f03-b90a-5f69a3f33506</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;promotionId\&quot;: \&quot;${promoId}\&quot;,\n      \t\&quot;id\&quot; : \&quot;${couponId}\&quot;,\n\t\t\&quot;isNew\&quot;: true,\n\t\t\&quot;code\&quot;: \&quot;${couponName}\&quot;,\n\t\t\&quot;maxUsesNumber\&quot;: \&quot;${maxUsesNumber}\&quot;,\n\t\t\&quot;maxUsesPerUser\&quot;: \&quot;${maxUsesPerUser}\&quot;,\n\t\t\n\t}\n]&quot;,
+  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;promotionId\&quot;: \&quot;${promoId}\&quot;,\n\t\t\&quot;isNew\&quot;: true,\n\t\t\&quot;code\&quot;: \&quot;${couponName}\&quot;,\n\t\t\&quot;maxUsesNumber\&quot;: \&quot;${maxUsesNumber}\&quot;,\n\t\t\&quot;maxUsesPerUser\&quot;: \&quot;${maxUsesPerUser}\&quot;,\n\t\t\n\t}\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -75,13 +75,6 @@
       <id>038d02cb-6eb4-45ee-a4a9-7c140429bb42</id>
       <masked>false</masked>
       <name>maxUsesPerUser</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>id of the coupon to update (if exists)</description>
-      <id>ba3e0a73-6917-46fe-a1cf-7ff223c98b79</id>
-      <masked>false</masked>
-      <name>couponId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
