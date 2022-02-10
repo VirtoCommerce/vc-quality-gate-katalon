@@ -44,7 +44,9 @@ couponAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCom
 
 
 'Search for the created coupon to verify creation and and get the id'
-couponSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponSearch'))
+couponSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCouponSearch', [
+	('code') : couponName
+	]))
 WS.containsString(couponSearch, couponName, false)
 WS.verifyElementPropertyValue(couponSearch,'results[0].maxUsesNumber',maxUsesNumber)
 WS.verifyElementPropertyValue(couponSearch,'results[0].maxUsesPerUser',maxUsesPerUses)
