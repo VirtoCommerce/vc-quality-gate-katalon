@@ -29,7 +29,7 @@ promoUpdate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/back
 
 
 //'VERIFY THE PROMO HAS BEEN  UPDATED'
-//promoGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DRAFT_Promotions/PromoGetNew', [
+//promoGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoGetNew', [
 //	('promoId') : GlobalVariable.promoId
 //	]))
 

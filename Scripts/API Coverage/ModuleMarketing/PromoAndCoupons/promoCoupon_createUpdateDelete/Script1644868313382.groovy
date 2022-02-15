@@ -27,7 +27,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 
 'Create a promotion first'
-promoCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoCreate'),
+promoCreate = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/PromoAndCoupons/promoCreate'),
 	null)
 
 

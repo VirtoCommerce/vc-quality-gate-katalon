@@ -27,24 +27,24 @@
       <guid>722c486b-2300-4286-abc0-0d902d60b166</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleMarketing/promoCreate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c9324825-aff7-4135-8185-025bc87a87e6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleMarketing/promoUpdate_AlternativeWay</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoUpdate_AlternativeWay</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>16ba0547-e7fa-4882-a6b6-b1ad7d323a82</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleMarketing/promoDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>28be7e20-169a-4759-94f8-8dd219c08c59</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleMarketing/promoCoupon_createUpdateDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoCoupon_createUpdateDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

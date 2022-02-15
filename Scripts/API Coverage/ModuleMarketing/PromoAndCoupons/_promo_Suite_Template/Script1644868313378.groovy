@@ -19,18 +19,18 @@ import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper
 
 
-createPromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoCreate'),
+createPromo = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/PromoAndCoupons/promoCreate'),
 	 null)
 
 
-updatePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoUpdate_AlternativeWay'),
+updatePromo = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/PromoAndCoupons/promoUpdate_AlternativeWay'),
 	null)
 
 
-deletePromo = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/promoDelete'),
+deletePromo = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/PromoAndCoupons/promoDelete'),
     null)
 
-couponTests = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/promoCoupon_createUpdateDelete'), 
+couponTests = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/PromoAndCoupons/promoCoupon_createUpdateDelete'), 
 	null)
 
 

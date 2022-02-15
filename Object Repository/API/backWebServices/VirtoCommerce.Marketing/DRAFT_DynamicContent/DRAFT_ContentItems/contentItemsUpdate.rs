@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ContentItemsAdd</name>
+   <name>contentItemsUpdate</name>
    <tag></tag>
-   <elementGuidId>63d48d72-27fe-485b-a1ed-aa321ead106a</elementGuidId>
+   <elementGuidId>5202e4cf-860d-4378-9b06-29469119a7ca</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${itemName}\&quot;,\n\t\&quot;description\&quot;: \&quot;qwe qwe\&quot;,\n\t\&quot;folderId\&quot;: \&quot;ContentItem\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;contentType\&quot;: \&quot;Html\&quot;,\n\t\&quot;outline\&quot;: \&quot;ContentItem\&quot;,\n\t\&quot;path\&quot;: \&quot;ContentItem\&quot;,\n\t\&quot;folderId\&quot;: \&quot;ContentItem\&quot;,\n\t\&quot;folder\&quot;: {\n\t\t\&quot;path\&quot;: \&quot;ContentItem\&quot;,\n\t\t\&quot;outline\&quot;: \&quot;ContentItem\&quot;,\n\t\t\&quot;objectType\&quot;: \&quot;DynamicContentFolder\&quot;,\n\t\t\&quot;name\&quot;: \&quot;ContentItem\&quot;,\n\t\t\&quot;createdDate\&quot;: \&quot;2022-02-07T19:40:22.5482536Z\&quot;,\n\t\t\&quot;modifiedDate\&quot;: \&quot;2022-02-07T19:40:22.5482536Z\&quot;,\n\t\t\&quot;createdBy\&quot;: \&quot;unknown\&quot;,\n\t\t\&quot;modifiedBy\&quot;: \&quot;unknown\&quot;,\n\t\t\&quot;id\&quot;: \&quot;ContentItem\&quot;\n\t},\n\t\&quot;objectType\&quot;: \&quot;VirtoCommerce.MarketingModule.Core.Model.DynamicContentItem\&quot;,\n\t\&quot;dynamicProperties\&quot;: [],\n\t\&quot;name\&quot;: \&quot;${itemName}\&quot;,\n\t\&quot;description\&quot;: \&quot;${description}\&quot;,\n\t\&quot;id\&quot;: \&quot;${contentItemId}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,7 +31,7 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
+   <restRequestMethod>PUT</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/marketing/contentitems</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
@@ -42,11 +42,25 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'qwe'</defaultValue>
-      <description>name of the item to add</description>
-      <id>03f7967d-31e9-44aa-8200-4b4153f06a27</id>
+      <defaultValue>'qweUPD'</defaultValue>
+      <description>updated item name</description>
+      <id>714822ad-20df-436e-8e22-2aa0209e82bb</id>
       <masked>false</masked>
       <name>itemName</name>
+   </variables>
+   <variables>
+      <defaultValue>'30950c35-3d53-4708-9adb-a8021492692c'</defaultValue>
+      <description>id of an item to update</description>
+      <id>273ac79b-a324-4434-bf67-b1c17dd7d4ff</id>
+      <masked>false</masked>
+      <name>contentItemId</name>
+   </variables>
+   <variables>
+      <defaultValue>'qwe desc'</defaultValue>
+      <description>updated item description</description>
+      <id>911ad6c4-2bd3-4311-9828-04989b278ab8</id>
+      <masked>false</masked>
+      <name>description</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
