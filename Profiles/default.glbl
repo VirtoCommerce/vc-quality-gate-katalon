@@ -439,4 +439,14 @@
       <initValue>''</initValue>
       <name>couponId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>contentItemId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>name of the created content item</description>
+      <initValue>'QweItem'</initValue>
+      <name>contentItemName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

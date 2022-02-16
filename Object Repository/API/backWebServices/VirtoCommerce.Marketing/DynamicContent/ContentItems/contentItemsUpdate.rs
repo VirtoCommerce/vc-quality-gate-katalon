@@ -49,7 +49,7 @@
       <name>itemName</name>
    </variables>
    <variables>
-      <defaultValue>'30950c35-3d53-4708-9adb-a8021492692c'</defaultValue>
+      <defaultValue>'308b2f92-4dda-4c5b-bfc9-9291c5914f44'</defaultValue>
       <description>id of an item to update</description>
       <id>273ac79b-a324-4434-bf67-b1c17dd7d4ff</id>
       <masked>false</masked>
@@ -61,6 +61,13 @@
       <id>911ad6c4-2bd3-4311-9828-04989b278ab8</id>
       <masked>false</masked>
       <name>description</name>
+   </variables>
+   <variables>
+      <defaultValue>'{}'</defaultValue>
+      <description></description>
+      <id>ce42149c-fbd4-43d1-85f4-0c2d1d55eff5</id>
+      <masked>false</masked>
+      <name>dynamicProperties</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

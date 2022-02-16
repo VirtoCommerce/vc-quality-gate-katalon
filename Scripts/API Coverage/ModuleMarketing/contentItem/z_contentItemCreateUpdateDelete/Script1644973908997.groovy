@@ -1,4 +1,4 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+;import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -25,13 +25,12 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
-
 WebUI.comment('TEST CASE: content item add')
 
 
 'SEND REQUEST TO ADD A CONTENT ITEM'
 contentItemName = 'qweItem'
-contentItemAdd = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DRAFT_DynamicContent/DRAFT_ContentItems/ContentItemsAdd',[
+contentItemAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsAdd',[
 	('name') : contentItemName 
 	]))
 
@@ -42,7 +41,7 @@ println contentItemId
 
 
 'VERIFY THE CONTENT ITEM HAS EXISTS ON THE BACKEND'
-veifyCreated = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DRAFT_DynamicContent/DRAFT_ContentItems/ContentItemsGet',[
+veifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
 	('itemId') : contentItemId
 	]))
 WS.verifyElementPropertyValue(veifyCreated,'id', contentItemId)
@@ -51,16 +50,35 @@ WS.verifyElementPropertyValue(veifyCreated,'id', contentItemId)
 //return contentItemAdd
 
 
+'UPDATE THE CREATED ITEM'
+updatedItemName = contentItemName + 'UPD' 
+updatedDescription = 'updated description'
+contentItemUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/contentItemsUpdate',[
+	('itemName') : updatedItemName,
+	('description') : updatedDescription,
+	('contentItemId') : contentItemId
+	]))
+
+
+'GET THE UPDATED ITEM TO VERIFY `IT WAS UPDATED'
+veifyUpdated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
+	('itemId') : contentItemId
+	]))
+WS.verifyElementPropertyValue(veifyUpdated,'id', contentItemId)
+WS.verifyElementPropertyValue(veifyUpdated,'description', updatedDescription)
+WS.verifyElementPropertyValue(veifyUpdated,'name', updatedItemName)
+
+
 'DELETE THE CREATED CONTENT ITEM'
-contentItemDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DRAFT_DynamicContent/DRAFT_ContentItems/ContentItemsDelete',[
+contentItemDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsDelete',[
 	('itemId') : contentItemId
 	]))
 
 
 'VERIFY THE ITEM HAS BEEN DELETED'
-searchDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DRAFT_DynamicContent/DRAFT_ContentItems/ContentItemsSearch'
+searchDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsSearch'
 	))
 assert WS.containsString(searchDeleted, contentItemId, false, FailureHandling.OPTIONAL) == false
-//assert verifyDeleted == false
-//boolean 
+
+
 

@@ -16,7 +16,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/x-www-form-urlencoded</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -38,9 +38,9 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'06b479c7-4955-4bd3-a68c-536b0493e930'</defaultValue>
-      <description>id of the item to delete</description>
-      <id>a4a41569-1341-46a8-a7f2-17dd904f81bd</id>
+      <defaultValue>'cf905bee-c4e9-4b57-8d25-beebd9c05793&amp;ids=303f85ee-f724-4dcc-83a2-1624c7a24970&amp;ids=52e203fc-a678-4839-86be-7b3d839db55a\n'</defaultValue>
+      <description></description>
+      <id>02cce7f1-5555-4e37-9b1c-b8cb95abc629</id>
       <masked>false</masked>
       <name>itemId</name>
    </variables>
