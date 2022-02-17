@@ -25,35 +25,22 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
-WebUI.comment('TEST CASE: content item add')
+
+WebUI.comment('TEST CASE: content fodler delete')
 
 
-'SEND REQUEST TO ADD A CONTENT ITEM'
-contentItemAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsAdd',[
-	('name') : GlobalVariable.contentItemName  
+//GlobalVariable.folderId = '4c411e57-c0a7-4819-b70b-088d6afadffe'
+
+
+'SEND REQUEST TO DELETE THE CREATED CONTENT FOLDER'
+folderDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolder/ContentIFolderDelete',[
+	('folderId') : GlobalVariable.folderId
 	]))
 
 
-'GET CREATED CONTENT ITEM ID'
-GlobalVariable.contentItemId = WS.getElementPropertyValue(contentItemAdd, 'id')
-println GlobalVariable.contentItemId 
-
-
-'VERIFY THE CONTENT ITEM HAS EXISTS ON THE BACKEND'
-veifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
-	('itemId') : GlobalVariable.contentItemId 
+'VERIFY THE FOLDER HAS BEEN DELETED (not found by getById)'
+verifyDeleted = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolder/ContentFodlerGet',[
+	('folderId') : GlobalVariable.folderId
 	]))
-WS.verifyElementPropertyValue(veifyCreated,'id', GlobalVariable.contentItemId )
-
-
-'VERIFY THE ITEM IS AVAILABLE VIA SEARCH'
-searchItem = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsSearch'))
-WS.containsString(searchItem, GlobalVariable.contentItemName, false)
-
-
-'SEND REQUEST TO EVALUATE STORE ITEMS (to cover an endpoint without the related testRail case)'
-evaluateItem = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemEvaluate'))
-
-
-return contentItemAdd
+WS.verifyResponseStatusCode(verifyDeleted, 404)
 

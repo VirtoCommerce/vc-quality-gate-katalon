@@ -449,4 +449,9 @@
       <initValue>'QweItem'</initValue>
       <name>contentItemName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created folder</description>
+      <initValue>''</initValue>
+      <name>folderId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

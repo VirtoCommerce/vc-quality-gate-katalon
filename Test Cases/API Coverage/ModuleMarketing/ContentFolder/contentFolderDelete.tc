@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete a created content folder </description>
+   <name>contentFolderDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b1b616c0-ac05-4347-9afb-91069b999e4c</testCaseGuid>
+</TestCaseEntity>

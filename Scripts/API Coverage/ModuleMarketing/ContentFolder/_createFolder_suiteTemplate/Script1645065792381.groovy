@@ -16,28 +16,12 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import groovy.json.JsonSlurper
 
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
-import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
-import com.kms.katalon.core.testobject.RequestObject
-import groovy.json.JsonOutput
-import com.kms.katalon.core.testobject.ResponseObject
+crateFolder = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentFolder/contentFolderAdd'),
+	null) 
 
-
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentItem/contentItemCreate'),
+updateFolder = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentFolder/contentFolderUpdate'),
 	null)
 
-
-updateItem = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentItem/contentItemUpdate'), 
+deleteFolder = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentFolder/contentFolderDelete'),
 	null)
-
-
-deleteItem = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentItem/contentItemDelete'),
-	 null)
-
-deleteItemsBulk = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentItem/contentItemDeleteBulk'),
-	 null) 
- 

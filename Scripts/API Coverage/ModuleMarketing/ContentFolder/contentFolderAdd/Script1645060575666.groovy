@@ -25,35 +25,27 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
-WebUI.comment('TEST CASE: content item add')
+WebUI.comment('TEST CASE: content fodler add')
 
-
-'SEND REQUEST TO ADD A CONTENT ITEM'
-contentItemAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsAdd',[
-	('name') : GlobalVariable.contentItemName  
+'ADD A NEW CONTENT FOLDER'
+folderDescription = 'qwe folder description'
+folderCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolder/ContentFolderAdd',[
+	('folderName') : GlobalVariable.folderName,
+	('folderDescription') : folderDescription 
 	]))
 
 
-'GET CREATED CONTENT ITEM ID'
-GlobalVariable.contentItemId = WS.getElementPropertyValue(contentItemAdd, 'id')
-println GlobalVariable.contentItemId 
+'GET THE CREATED FOLDER ID'
+GlobalVariable.folderId = WS.getElementPropertyValue(folderCreate,'id')
 
 
-'VERIFY THE CONTENT ITEM HAS EXISTS ON THE BACKEND'
-veifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
-	('itemId') : GlobalVariable.contentItemId 
+'VERIFY THE FOLDER HAS BEEN ADDED'
+verifyAdded = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolder/ContentFodlerGet',[
+	('folderId') : GlobalVariable.folderId
 	]))
-WS.verifyElementPropertyValue(veifyCreated,'id', GlobalVariable.contentItemId )
+WS.verifyElementPropertyValue(verifyAdded,'id',GlobalVariable.folderId)
 
 
-'VERIFY THE ITEM IS AVAILABLE VIA SEARCH'
-searchItem = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsSearch'))
-WS.containsString(searchItem, GlobalVariable.contentItemName, false)
+return folderCreate
 
-
-'SEND REQUEST TO EVALUATE STORE ITEMS (to cover an endpoint without the related testRail case)'
-evaluateItem = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemEvaluate'))
-
-
-return contentItemAdd
-
+ 

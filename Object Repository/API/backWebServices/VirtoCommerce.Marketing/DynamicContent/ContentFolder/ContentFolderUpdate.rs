@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>_DRAFT_ContentFolderUpdate</name>
+   <name>ContentFolderUpdate</name>
    <tag></tag>
    <elementGuidId>a81efa9c-4769-4e5e-85d9-60735165afd5</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -10,8 +10,8 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{$body}&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;text&quot;: &quot;${body} \n//processed in script view at\n//Test Cases/API Coverage/ModuleMarketing/ContentFolder/contentFolderUpdate&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -20,7 +20,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -43,7 +43,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description>build in script view, pas as a variable</description>
+      <description>updated folder body.build in script view, pass as a variable</description>
       <id>e01223e6-8437-4a3d-8e6f-d8198d9ef6d8</id>
       <masked>false</masked>
       <name>body</name>
@@ -62,7 +62,7 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
