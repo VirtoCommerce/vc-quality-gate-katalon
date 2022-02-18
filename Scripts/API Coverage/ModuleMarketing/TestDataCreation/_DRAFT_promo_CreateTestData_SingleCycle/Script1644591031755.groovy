@@ -81,7 +81,7 @@ for (int b; b < userGroupPromoCondition.size();b++) {
 		
 		
 		'SEND THE REQUEST'
-		RequestObject promoCreate = findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCreate_no_hardcoded_id')
+		RequestObject promoCreate = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate_no_hardcoded_id')
 		promoCreate.setBodyContent(new HttpTextBodyContent(promoJson))
 		WS.sendRequestAndVerify(promoCreate)
 		//promoPostTemplateParsed.dynamicExpression.children[1].children[0]

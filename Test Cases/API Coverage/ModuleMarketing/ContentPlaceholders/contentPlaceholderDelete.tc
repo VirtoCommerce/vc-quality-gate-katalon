@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete the created placeholder</description>
+   <name>contentPlaceholderDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c493cdfa-bc0b-4d72-af98-78f3b9a58771</testCaseGuid>
+</TestCaseEntity>

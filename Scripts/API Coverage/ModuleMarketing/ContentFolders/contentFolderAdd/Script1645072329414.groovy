@@ -18,31 +18,34 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper
 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
 
-WebUI.comment('test case: PROMO UPDATE')
-GlobalVariable.promoName = GlobalVariable.promoName + 'UPD'
-//GlobalVariable.promoId = 'AutoTestId'
-promoUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoUpdate',[
-	('promoName') : GlobalVariable.promoName,
-	('id') : GlobalVariable.promoId 
+WebUI.comment('TEST CASE: content fodler add')
+
+'ADD A NEW CONTENT FOLDER'
+folderDescription = 'qwe folder description'
+folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolders/ContentFolderAdd',[
+	('folderName') : GlobalVariable.folderName,
+	('folderDescription') : folderDescription 
 	]))
 
 
-//'VERIFY THE PROMO HAS BEEN  UPDATED'
-//promoGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoGetNew', [
-//	('promoId') : GlobalVariable.promoId
-//	]))
+'GET THE CREATED FOLDER ID'
+GlobalVariable.folderId = WS.getElementPropertyValue(folderCreate,'id')
 
 
-'SEARCH FOR THE PROMO VERIFY THE PROMOTION HAS BEEN UPDATED SUCCESSFULLY'
-searchPromo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoSearch',[
-	('keyword') : GlobalVariable.firstName
+'VERIFY THE FOLDER HAS BEEN ADDED'
+verifyAdded = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolders/ContentFodlerGet',[
+	('folderId') : GlobalVariable.folderId
 	]))
-WS.verifyElementPropertyValue(searchPromo,'results[0].name', GlobalVariable.promoName)
+WS.verifyElementPropertyValue(verifyAdded,'id',GlobalVariable.folderId)
 
 
+return folderCreate
 
-return promoUpdate
-//promoGetParsed = new JsonSlurper().parseText(promoGetBody)
-//promoGetParsed.name = 'QweNameUPD'
-//PARSE AND EDIT RESPONSE BODY CONTENT HERE
+ 

@@ -25,19 +25,35 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
-
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemCreate'),
-	null)
+WebUI.comment('TEST CASE: content item add')
 
 
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemUpdate'), 
-	null)
+'SEND REQUEST TO ADD A CONTENT ITEM'
+contentItemAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsAdd',[
+	('name') : GlobalVariable.contentItemName  
+	]))
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemDelete'),
-	 null)
+'GET CREATED CONTENT ITEM ID'
+GlobalVariable.contentItemId = WS.getElementPropertyValue(contentItemAdd, 'id')
+println GlobalVariable.contentItemId 
 
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemDeleteBulk'),
-	 null) 
- 
+
+'VERIFY THE CONTENT ITEM HAS EXISTS ON THE BACKEND'
+veifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
+	('itemId') : GlobalVariable.contentItemId 
+	]))
+WS.verifyElementPropertyValue(veifyCreated,'id', GlobalVariable.contentItemId )
+
+
+'VERIFY THE ITEM IS AVAILABLE VIA SEARCH'
+searchItem = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsSearch'))
+WS.containsString(searchItem, GlobalVariable.contentItemName, false)
+
+
+'SEND REQUEST TO EVALUATE STORE ITEMS (to cover an endpoint without the related testRail case)'
+evaluateItem = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemEvaluate'))
+
+
+return contentItemAdd
+

@@ -23,13 +23,13 @@ WebUI.comment('test case: DELETE PROMOTION')
 
 
 'DELETE PROMOTION'
-deletePromo = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoDelete', [	
+deletePromo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoDelete', [	
 	('promoId') : GlobalVariable.promoId
 	]))
 
 
 'VERIFY THE PROMO HAS BEEN DELETED'
-verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoSearch',[
+verifyDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoSearch',[
 	('keyword') : GlobalVariable.firstName
 	]))
 WS.verifyElementPropertyValue(verifyDeleted,'totalCount', '0')

@@ -24,13 +24,13 @@ WebUI.comment('CREATE PROMOTION')
 //For now this promotion doesnt have any conditions
 'CREATE A PROMOTION'
 GlobalVariable.promoName = GlobalVariable.firstName + 'Promo'
-promoCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoCreate',[
+promoCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate',[
 	('name') : GlobalVariable.promoName
 	]))
 
 
 'SEARCH FOR THE PROMO VERIFY THE PROMOTION HAS BEEN CREATED SUCCESSFULLY'
-searchPromo = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoSearch',[
+searchPromo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoSearch',[
 	('keyword') : GlobalVariable.firstName
 	]))
 WS.verifyElementPropertyValue(searchPromo,'results[0].name', GlobalVariable.promoName)

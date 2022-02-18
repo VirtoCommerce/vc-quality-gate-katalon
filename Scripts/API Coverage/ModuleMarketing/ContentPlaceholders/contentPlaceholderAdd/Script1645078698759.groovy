@@ -18,31 +18,35 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper
 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
 
-WebUI.comment('test case: PROMO UPDATE')
-GlobalVariable.promoName = GlobalVariable.promoName + 'UPD'
-//GlobalVariable.promoId = 'AutoTestId'
-promoUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoUpdate',[
-	('promoName') : GlobalVariable.promoName,
-	('id') : GlobalVariable.promoId 
+WebUI.comment('TEST CASE: content placeholder add')
+
+
+'SEND REQUEST TO ADD A CONTENT PLACEHOLDER'
+//GlobalVariable.placeholderName = 'qwePlaceholder'
+placeholderDescription = 'qwe description'
+placeholderAdd = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesAdd',[
+	('placeName') : GlobalVariable.placeholderName,
+	('description') : placeholderDescription 
 	]))
 
 
-//'VERIFY THE PROMO HAS BEEN  UPDATED'
-//promoGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoGetNew', [
-//	('promoId') : GlobalVariable.promoId
-//	]))
+'GET THE CREATED PLACEHOLDER ID'
+GlobalVariable.placeholderId = WS.getElementPropertyValue(placeholderAdd,'id')
+ 
 
-
-'SEARCH FOR THE PROMO VERIFY THE PROMOTION HAS BEEN UPDATED SUCCESSFULLY'
-searchPromo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoSearch',[
-	('keyword') : GlobalVariable.firstName
+'VERIFY THE PLACEHOLDER HAS BEEN CREATED'
+verifyCreated = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesGetById',[
+	('placeId') : GlobalVariable.placeholderId   
 	]))
-WS.verifyElementPropertyValue(searchPromo,'results[0].name', GlobalVariable.promoName)
+WS.verifyElementPropertyValue(verifyCreated,'name', GlobalVariable.placeholderName)
+WS.verifyElementPropertyValue(verifyCreated,'description', placeholderDescription)
 
 
 
-return promoUpdate
-//promoGetParsed = new JsonSlurper().parseText(promoGetBody)
-//promoGetParsed.name = 'QweNameUPD'
-//PARSE AND EDIT RESPONSE BODY CONTENT HERE

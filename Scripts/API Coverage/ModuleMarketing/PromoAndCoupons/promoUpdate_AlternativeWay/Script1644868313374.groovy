@@ -62,7 +62,7 @@ rewardDataJson = new groovy.json.JsonBuilder(rewardDataParsed).toString()
 
 
 'GET THE CREATED PROMO DATA'
-promoDataGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoGetById',[
+promoDataGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoGetById',[
 	('promoId') : GlobalVariable.promoId 
 	]))
 
@@ -79,13 +79,13 @@ promoJson =  new groovy.json.JsonBuilder(createdPromoDataParsed).toString()
 
 
 'SEND REQUEST TO UPDATE A PROMOTION'
-RequestObject promoUpdateObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoUpdate')
+RequestObject promoUpdateObject = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoUpdate')
 promoUpdateObject.setBodyContent(new HttpTextBodyContent(promoJson))
 promoUpdate = WS.sendRequestAndVerify(promoUpdateObject)
 
 
 'SEARCH FOR THE PROMO VERIFY THE PROMOTION HAS BEEN UPDATED SUCCESSFULLY'
-searchPromo = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/PromoSearch',[
+searchPromo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoSearch',[
 	('keyword') : GlobalVariable.firstName
 	]))
 WS.verifyElementPropertyValue(searchPromo,'results[0].name', GlobalVariable.promoName)

@@ -454,4 +454,14 @@
       <initValue>''</initValue>
       <name>folderId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>name of the created placeholder</description>
+      <initValue>'qwePlaceholder'</initValue>
+      <name>placeholderName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>placeholderId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

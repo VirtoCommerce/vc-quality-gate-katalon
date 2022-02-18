@@ -102,7 +102,7 @@ for (int i; i < userGroupPromoCondition.size();i++) {
 		promoPostTemplateParsed.dynamicExpression.children[1].children[0] = promoDataCategoryParsed[a]
 		promoCategoryJson = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		'SEND THE REQUEST'
-		RequestObject promoCreateCategory = findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCreate_no_hardcoded_id')
+		RequestObject promoCreateCategory = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate_no_hardcoded_id')
 		promoCreateCategory.setBodyContent(new HttpTextBodyContent(promoCategoryJson))
 		WS.sendRequestAndVerify(promoCreateCategory)
 	}
@@ -115,7 +115,7 @@ for (int i; i < userGroupPromoCondition.size();i++) {
 		promoPostTemplateParsed.dynamicExpression.children[1].children[0] = productConditionsParsed[a]
 		promoJsonProduct = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		'SEND THE REQUEST'
-		RequestObject promoCreateProduct = findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCreate_no_hardcoded_id')
+		RequestObject promoCreateProduct = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate_no_hardcoded_id')
 		promoCreateProduct.setBodyContent(new HttpTextBodyContent(promoJsonProduct))
 		WS.sendRequestAndVerify(promoCreateProduct)
 	}
@@ -128,7 +128,7 @@ for (int i; i < userGroupPromoCondition.size();i++) {
 		promoPostTemplateParsed.dynamicExpression.children[1].children[0] = currencytConditionsParsed[a]
 		promoJsonCurrency = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		'SEND THE REQUEST'
-		RequestObject promoCreateCurrency = findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCreate_no_hardcoded_id')
+		RequestObject promoCreateCurrency = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate_no_hardcoded_id')
 		promoCreateCurrency.setBodyContent(new HttpTextBodyContent(promoJsonCurrency))
 		WS.sendRequestAndVerify(promoCreateCurrency)
 	}
@@ -141,7 +141,7 @@ for (int i; i < userGroupPromoCondition.size();i++) {
 		promoPostTemplateParsed.dynamicExpression.children[1].children[0] = qtyConditionsParsed[a]
 		promoJsonQty = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		'SEND THE REQUEST'
-		RequestObject promoCreateQty = findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCreate_no_hardcoded_id')
+		RequestObject promoCreateQty = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate_no_hardcoded_id')
 		promoCreateQty.setBodyContent(new HttpTextBodyContent(promoJsonQty))
 		WS.sendRequestAndVerify(promoCreateQty)
 	}
@@ -154,7 +154,7 @@ for (int i; i < userGroupPromoCondition.size();i++) {
 		promoPostTemplateParsed.dynamicExpression.children[2].children[0]  = cartItemsConditionsParsed[a]
 		promoJsonCartItems = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		'SEND THE REQUEST'
-		RequestObject promoCreatecartItems = findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCreate_no_hardcoded_id')
+		RequestObject promoCreatecartItems = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate_no_hardcoded_id')
 		promoCreatecartItems.setBodyContent(new HttpTextBodyContent(promoJsonCartItems))
 		WS.sendRequestAndVerify(promoCreatecartItems)
 	}
@@ -167,7 +167,7 @@ for (int i; i < userGroupPromoCondition.size();i++) {
 		promoPostTemplateParsed.dynamicExpression.children[2].children[0]  = cartSubtotalConditionsParsed[a]
 		promoJsonCartSubtotal = new groovy.json.JsonBuilder(promoPostTemplateParsed).toString()
 		'SEND THE REQUEST'
-		RequestObject promoCreatecartSubtotal = findTestObject('API/backWebServices/VirtoCommerce.Marketing/PromoCreate_no_hardcoded_id')
+		RequestObject promoCreatecartSubtotal = findTestObject('API/backWebServices/VirtoCommerce.Marketing/Promotions/PromoCreate_no_hardcoded_id')
 		promoCreatecartSubtotal.setBodyContent(new HttpTextBodyContent(promoJsonCartSubtotal))
 		WS.sendRequestAndVerify(promoCreatecartSubtotal)
 	}	

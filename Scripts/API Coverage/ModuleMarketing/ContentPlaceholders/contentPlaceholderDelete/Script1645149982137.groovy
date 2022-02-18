@@ -9,37 +9,26 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-
-WebUI.comment('TEST CASE: Assets. Upload file from local')
-
-
-//UPDATE THE BLACKLIST CONFIGURATION TO CHECK IF THE FORBIDDEN EXTENSION FILE CANT BE UPLOADED
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
-FailureHandling.STOP_ON_FAILURE)
+import org.openqa.selenium.Keys as Keys
 
 
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION
-errorMessage = 'This extension is not allowed. Please contact administrator.'
-fileName = 'forbidden.exe'
-uploadForbiddenFileLocal = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
-	('folderUrl') : GlobalVariable.folderUrl,
-	('url') : fileName
+WebUI.comment('TEST CASE: delete the created placeholder')
+
+
+'SEND REQUEST TO DELETE THE PLACEHOLDER'
+placeholderDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesDelete',[
+	('placeId') : GlobalVariable.placeholderId
 	]))
-WS.verifyResponseStatusCode(uploadForbiddenFileLocal, 405)
-WS.containsString(uploadForbiddenFileLocal, errorMessage, false)
 
 
-//UPLOAD A FILE WITH THE CORRECT EXTENSION
-uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUploadLocal', [
-	('folderUrl') : GlobalVariable.folderUrl
+'VERIFY THE PLACEHOLDER HAS BEEN DELETED'
+searchDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesSearch',[
+	('searchPhrase') : GlobalVariable.placeholderId
 	]))
-//get file url
-GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')
-
-
-return uploadFileUrlLocal
+assert WS.containsString(searchDeleted, GlobalVariable.placeholderId, false, FailureHandling.OPTIONAL) == false

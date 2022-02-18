@@ -9,37 +9,19 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Assets. Upload file from local')
+crateFolder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentFolders/contentFolderAdd'),
+	null) 
 
+updateFolder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentFolders/contentFolderUpdate'),
+	null)
 
-//UPDATE THE BLACKLIST CONFIGURATION TO CHECK IF THE FORBIDDEN EXTENSION FILE CANT BE UPLOADED
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
-FailureHandling.STOP_ON_FAILURE)
-
-
-//UPLOAD A FILE WITH THE FORBIDDEN EXTENSION
-errorMessage = 'This extension is not allowed. Please contact administrator.'
-fileName = 'forbidden.exe'
-uploadForbiddenFileLocal = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
-	('folderUrl') : GlobalVariable.folderUrl,
-	('url') : fileName
-	]))
-WS.verifyResponseStatusCode(uploadForbiddenFileLocal, 405)
-WS.containsString(uploadForbiddenFileLocal, errorMessage, false)
-
-
-//UPLOAD A FILE WITH THE CORRECT EXTENSION
-uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUploadLocal', [
-	('folderUrl') : GlobalVariable.folderUrl
-	]))
-//get file url
-GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')
-
-
-return uploadFileUrlLocal
+deleteFolder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentFolders/contentFolderDelete'),
+	null)
