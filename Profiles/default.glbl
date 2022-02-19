@@ -464,4 +464,14 @@
       <initValue>''</initValue>
       <name>placeholderId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qwePublication'</initValue>
+      <name>publicationName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created publication name</description>
+      <initValue>''</initValue>
+      <name>publicationId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

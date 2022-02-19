@@ -61,7 +61,7 @@ placeholderDataJson = new groovy.json.JsonBuilder(placeholderDataParced).toStrin
 
 'SEND REQUEST TO UPDATE THE CREATED PLACEHOLDER'
 RequestObject updatePlaceholder = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesUpdate')
-updatePlaceholder .setBodyContent(new HttpTextBodyContent(placeholderDataJson))
+updatePlaceholder.setBodyContent(new HttpTextBodyContent(placeholderDataJson))
 WS.sendRequestAndVerify(updatePlaceholder)
 
 

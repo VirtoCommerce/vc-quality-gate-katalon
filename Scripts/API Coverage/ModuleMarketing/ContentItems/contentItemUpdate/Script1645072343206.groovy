@@ -39,7 +39,7 @@ updatedHtmlContent = 'qweUpdated'
 promoDataContentItemHTMLObjectParsed[0].values[0].value = updatedHtmlContent
 
 
-'GET THE CREATED PROMOTION'
+'GET THE CREATED ITEM'
 getItem = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
 	('itemId') : GlobalVariable.contentItemId
 	]))

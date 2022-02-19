@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>_DRAFT_ContentPublicationsUpdate</name>
+   <name>ContentPublicationsAdd</name>
    <tag></tag>
-   <elementGuidId>74d86ad1-5c7c-454f-8635-b7216eb2eae3</elementGuidId>
+   <elementGuidId>e50572cd-e3bd-4abc-a2d8-5be5293947aa</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{$body}&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${publicationName}\&quot;,\n\t\&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \t\&quot;contentItems\&quot;: [${contentItems}],\n  \t\&quot;contentPlaces\&quot;: [${contentPlaces}],\n  \t\&quot;description\&quot;: \&quot;${description}\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
    <httpBodyType>text</httpBodyType>
@@ -20,7 +20,7 @@
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -31,7 +31,7 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
+   <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/marketing/contentpublications</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
@@ -42,11 +42,39 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description>build in script view, pas as a variable</description>
-      <id>e01223e6-8437-4a3d-8e6f-d8198d9ef6d8</id>
+      <defaultValue>'qwe'</defaultValue>
+      <description>name of the publication to add</description>
+      <id>03f7967d-31e9-44aa-8200-4b4153f06a27</id>
       <masked>false</masked>
-      <name>body</name>
+      <name>publicationName</name>
+   </variables>
+   <variables>
+      <defaultValue>'Electronics'</defaultValue>
+      <description></description>
+      <id>1d4c00f1-ab6f-479e-8538-8dff188d1043</id>
+      <masked>false</masked>
+      <name>storeId</name>
+   </variables>
+   <variables>
+      <defaultValue>'{&quot;123&quot;}'</defaultValue>
+      <description>added related contentItems</description>
+      <id>1277929e-526e-4fa2-bfc3-f717114290fd</id>
+      <masked>false</masked>
+      <name>contentItems</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>added related contentPlaces</description>
+      <id>2973550f-54fa-4ae6-82d5-52c1e254b1ff</id>
+      <masked>false</masked>
+      <name>contentPlaces</name>
+   </variables>
+   <variables>
+      <defaultValue>'qwe'</defaultValue>
+      <description></description>
+      <id>5ad3a9d5-fc5a-4b98-bfe9-7e17436c45d5</id>
+      <masked>false</masked>
+      <name>description</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
