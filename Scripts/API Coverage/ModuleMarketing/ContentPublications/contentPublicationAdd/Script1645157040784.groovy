@@ -52,12 +52,14 @@ getItemBodyJson = new groovy.json.JsonBuilder(getItemBodyParsed).toString()
 
 'SEND REQUEST TO ADD A CONTENT PUBLICATION'
 description = 'qwe description'
+status ='false'
 publicationAdd = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPublications/ContentPublicationsAdd',[
 	('publicationName') : GlobalVariable.publicationName,
 	('storeId') : GlobalVariable.storeId,
 	('contentItems') : getItemBodyJson,
 	('contentPlaces') : placeholderDataJson,
-	('description') : description 
+	('description') : description ,
+	('status') : status
 	]))
 GlobalVariable.publicationId = WS.getElementPropertyValue(publicationAdd,'id')
 
@@ -71,6 +73,8 @@ WS.verifyElementPropertyValue(verifyCreated,'storeId', GlobalVariable.storeId)
 WS.verifyElementPropertyValue(verifyCreated,'description', description)
 WS.verifyElementPropertyValue(verifyCreated,'contentPlaces[0].id', placeholderDataParsed.id)
 WS.verifyElementPropertyValue(verifyCreated,'contentItems[0].id', getItemBodyParsed.id)
+WS.verifyElementPropertyValue(verifyCreated,'contentItems[0].id', getItemBodyParsed.id)
+WS.verifyElementPropertyValue(verifyCreated,'isActive', status)
 
 
 'ADDITIONAL STEP TO COVER THE UNUSED REQUEST (200ok is supposed to be enough)'

@@ -1,0 +1,8 @@
+ {
+            "value": 41,
+            "secondValue": 0,
+            "compareCondition": "AtLeast",
+            "id": "ConditionAgeIs",
+            "availableChildren": [],
+            "children": []
+          }

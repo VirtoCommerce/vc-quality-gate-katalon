@@ -35,7 +35,7 @@ rewardDataParsed.id = rewardCondition
 rewardDataParsed << ['amount' : '1']
 
 
-'FPREPARE NAMES AND PROMO DATA CONFIGURATIONS FOR EACH POSSIBLE CONDITION'
+'PREPARE NAMES AND PROMO DATA CONFIGURATIONS FOR EACH POSSIBLE CONDITION'
 //CATEGORY
 List namesForCategory = ['Category - fully', 'Category - without Subcategory', 'Category - without Items']
 promoDataCategory = new File('Data Files/promoDataCategory.json').text

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${publicationName}\&quot;,\n\t\&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \t\&quot;contentItems\&quot;: [${contentItems}],\n  \t\&quot;contentPlaces\&quot;: [${contentPlaces}],\n  \t\&quot;description\&quot;: \&quot;${description}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${publicationName}\&quot;,\n\t\&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \t\&quot;contentItems\&quot;: [${contentItems}],\n  \t\&quot;contentPlaces\&quot;: [${contentPlaces}],\n  \t\&quot;description\&quot;: \&quot;${description}\&quot;,\n    \&quot;isActive\&quot;: \u0027${status}\u0027\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -56,7 +56,7 @@
       <name>storeId</name>
    </variables>
    <variables>
-      <defaultValue>'{&quot;123&quot;}'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description>added related contentItems</description>
       <id>1277929e-526e-4fa2-bfc3-f717114290fd</id>
       <masked>false</masked>
@@ -75,6 +75,13 @@
       <id>5ad3a9d5-fc5a-4b98-bfe9-7e17436c45d5</id>
       <masked>false</masked>
       <name>description</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fa37f5d4-96a0-4e47-992e-ec52c9f36b3d</id>
+      <masked>false</masked>
+      <name>status</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
