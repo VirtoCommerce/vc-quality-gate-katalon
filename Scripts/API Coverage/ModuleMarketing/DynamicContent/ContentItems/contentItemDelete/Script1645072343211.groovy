@@ -26,18 +26,18 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemCreate'),
-	null)
+WebUI.comment('TEST CASE: content item delete')
 
 
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemUpdate'), 
-	null)
+//GlobalVariable.contentItemId = '01bb114d-b726-44c4-980d-3ef9fdb51f98'
+
+'DELETE THE CREATED CONTENT ITEM'
+contentItemDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsDelete',[
+	('itemId') : GlobalVariable.contentItemId
+	]))
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDelete'),
-	 null)
-
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDeleteBulk'),
-	 null) 
- 
+'VERIFY THE ITEM HAS BEEN DELETED'
+searchDeleted = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsSearch'
+	))
+assert WS.containsString(searchDeleted, GlobalVariable.contentItemId, false, FailureHandling.OPTIONAL) == false

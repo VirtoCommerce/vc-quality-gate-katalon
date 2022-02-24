@@ -25,19 +25,40 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
+WebUI.comment('Bulk delete contentItems')
 
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemCreate'),
-	null)
+'Create three content items in a cycle and collect ids'
+List itemIds = []
+
+for (int i; i < 3; i++) {
+	
+	contentItemAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsAdd',[
+		('name') : GlobalVariable.contentItemName + i
+		]))
+	
+	
+	'GET CREATED CONTENT ITEM ID AND ADD TO THE LIST'
+	GlobalVariable.contentItemId = WS.getElementPropertyValue(contentItemAdd, 'id')
+	itemIds.add(GlobalVariable.contentItemId)
+	
+	'VERIFY THE CONTENT ITEM HAS EXISTS ON THE BACKEND'
+	veifyCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
+		('itemId') : GlobalVariable.contentItemId
+		]))
+	WS.verifyElementPropertyValue(veifyCreated,'id', GlobalVariable.contentItemId)
+}
 
 
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemUpdate'), 
-	null)
+'SEND REQUEST TO DELETE CREATED ITEMS'
+contentItemDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsDeleteBulk',[
+	('id0') : itemIds[0], 
+	('id1') : itemIds[1], 
+	('id2') : itemIds[2] 
+	]))
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDelete'),
-	 null)
+'VERIFY ITEMS HAVE BEEN DELETED'
+searchDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsListEntriesSearch'
+	))
+assert WS.containsString(searchDeleted, GlobalVariable.contentItemName, false, FailureHandling.OPTIONAL) == false
 
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDeleteBulk'),
-	 null) 
- 

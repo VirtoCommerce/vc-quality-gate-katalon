@@ -26,18 +26,21 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemCreate'),
-	null)
+WebUI.comment('TEST CASE: content fodler delete')
 
 
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemUpdate'), 
-	null)
+//GlobalVariable.folderId = '4c411e57-c0a7-4819-b70b-088d6afadffe'
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDelete'),
-	 null)
+'SEND REQUEST TO DELETE THE CREATED CONTENT FOLDER'
+folderDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolders/ContentIFolderDelete',[
+	('folderId') : GlobalVariable.folderId
+	]))
 
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDeleteBulk'),
-	 null) 
- 
+
+'VERIFY THE FOLDER HAS BEEN DELETED (not found by getById)'
+verifyDeleted = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolders/ContentFodlerGet',[
+	('folderId') : GlobalVariable.folderId
+	]))
+WS.verifyResponseStatusCode(verifyDeleted, 404)
+

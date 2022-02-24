@@ -16,28 +16,19 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import groovy.json.JsonSlurper
-
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
-import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
-import com.kms.katalon.core.testobject.RequestObject
-import groovy.json.JsonOutput
-import com.kms.katalon.core.testobject.ResponseObject
 
 
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemCreate'),
-	null)
+WebUI.comment('TEST CASE: delete the created placeholder')
 
 
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemUpdate'), 
-	null)
+'SEND REQUEST TO DELETE THE PLACEHOLDER'
+placeholderDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesDelete',[
+	('placeId') : GlobalVariable.placeholderId
+	]))
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDelete'),
-	 null)
-
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDeleteBulk'),
-	 null) 
- 
+'VERIFY THE PLACEHOLDER HAS BEEN DELETED'
+searchDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesSearch',[
+	('searchPhrase') : GlobalVariable.placeholderId
+	]))
+assert WS.containsString(searchDeleted, GlobalVariable.placeholderId, false, FailureHandling.OPTIONAL) == false

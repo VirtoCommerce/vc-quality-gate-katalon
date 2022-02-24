@@ -25,19 +25,27 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
+WebUI.comment('TEST CASE: content fodler add')
 
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemCreate'),
-	null)
+'ADD A NEW CONTENT FOLDER'
+folderDescription = 'qwe folder description'
+folderCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolders/ContentFolderAdd',[
+	('folderName') : GlobalVariable.folderName,
+	('folderDescription') : folderDescription 
+	]))
 
 
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemUpdate'), 
-	null)
+'GET THE CREATED FOLDER ID'
+GlobalVariable.folderId = WS.getElementPropertyValue(folderCreate,'id')
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDelete'),
-	 null)
+'VERIFY THE FOLDER HAS BEEN ADDED'
+verifyAdded = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentFolders/ContentFodlerGet',[
+	('folderId') : GlobalVariable.folderId
+	]))
+WS.verifyElementPropertyValue(verifyAdded,'id',GlobalVariable.folderId)
 
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDeleteBulk'),
-	 null) 
+
+return folderCreate
+
  

@@ -25,31 +25,28 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
-
-WebUI.comment('TEST CASE: content item update (name, description, html content)')
-
-
-GlobalVariable.contentItemId = '308b2f92-4dda-4c5b-bfc9-9291c5914f44'
+WebUI.comment('TEST CASE: content placeholder add')
 
 
-'UPDATE THE CREATED ITEM'
-updatedItemName = GlobalVariable.contentItemName + 'UPD'
-updatedDescription = 'updated description'
-contentItemUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/contentItemsUpdate',[
-	('itemName') : updatedItemName,
-	('description') : updatedDescription,
-	('contentItemId') : GlobalVariable.contentItemId
+'SEND REQUEST TO ADD A CONTENT PLACEHOLDER'
+//GlobalVariable.placeholderName = 'qwePlaceholder'
+placeholderDescription = 'qwe description'
+placeholderAdd = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesAdd',[
+	('placeName') : GlobalVariable.placeholderName,
+	('description') : placeholderDescription 
 	]))
 
 
-'GET THE UPDATED ITEM TO VERIFY `IT WAS UPDATED'
-veifyUpdated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentItems/ContentItemsGet',[
-	('itemId') : GlobalVariable.contentItemId
-	]))
-WS.verifyElementPropertyValue(veifyUpdated,'id', GlobalVariable.contentItemId)
-WS.verifyElementPropertyValue(veifyUpdated,'description', updatedDescription)
-WS.verifyElementPropertyValue(veifyUpdated,'name', updatedItemName)
+'GET THE CREATED PLACEHOLDER ID'
+GlobalVariable.placeholderId = WS.getElementPropertyValue(placeholderAdd,'id')
+ 
 
+'VERIFY THE PLACEHOLDER HAS BEEN CREATED'
+verifyCreated = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPlaces/ContentPlacesGetById',[
+	('placeId') : GlobalVariable.placeholderId   
+	]))
+WS.verifyElementPropertyValue(verifyCreated,'name', GlobalVariable.placeholderName)
+WS.verifyElementPropertyValue(verifyCreated,'description', placeholderDescription)
 
 
 

@@ -25,19 +25,16 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
+WebUI.comment('TEST CASE: content piblication delete')
 
-'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemCreate'),
-	null)
-
-
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemUpdate'), 
-	null)
+'SEND REQUEST TO DELETE CONTENT PUBLICATION'
+publicationDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPublications/ContentPublicationsDelete',[
+	('publicationId') : GlobalVariable.publicationId
+	]))
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDelete'),
-	 null)
-
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentItems/contentItemDeleteBulk'),
-	 null) 
- 
+'VERIFY THE PUBLICATION HAS BEEN DELETED'
+searchDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Marketing/DynamicContent/ContentPublications/ContentPublicationsSearch',[
+	('searchPhrase') : GlobalVariable.publicationId
+	]))
+assert WS.containsString(searchDeleted, GlobalVariable.contentItemId, false, FailureHandling.OPTIONAL) == false

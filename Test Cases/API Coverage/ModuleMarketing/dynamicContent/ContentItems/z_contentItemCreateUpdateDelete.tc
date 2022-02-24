@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>create a content item </description>
-   <name>z_contentItemCreateUpdateDelete</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>bf5dc969-104c-40db-b46c-a6b428b11532</testCaseGuid>
-</TestCaseEntity>
