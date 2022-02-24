@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update the created placeholder</description>
+   <name>contentPlaceholderUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bd4ffbcb-5c1c-46dd-8836-1e8569cac98f</testCaseGuid>
+</TestCaseEntity>
