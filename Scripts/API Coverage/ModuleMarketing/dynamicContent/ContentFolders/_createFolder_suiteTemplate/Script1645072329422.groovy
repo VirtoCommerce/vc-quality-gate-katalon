@@ -17,37 +17,11 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+crateFolder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentFolders/contentFolderAdd'),
+	null) 
 
-'PART 1'
-
-
-'PRECONDITION'
-contentItemAdd = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentItems/contentItemCreate'), 
+updateFolder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentFolders/contentFolderUpdate'),
 	null)
 
-contentPlaceholderAdd = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPlaceholders/contentPlaceholderAdd'), 
-	null)
-
-
-'ACTUAL SUITE'
-contentPublicationAdd = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPublications/contentPublicationAdd'), 
-	null)
-
-contentPublicationUpdate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPublications/contentPublicationUpdate'), 
-	null)
-
-deletePublication = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPublications/contentPublicationDelete'), 
-	null)
-
-
-'POSTCONDITION'
-deleteItem = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentItems/contentItemDelete'), 
-	null)
-
-deletePlaceholder = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPlaceholders/contentPlaceholderDelete'),
-	null)
-
-
-'PART 2 (Bulk case)'
-publicationsDeleteBulk = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPublications/contentPublicationDeleteBulk'),
+deleteFolder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentFolders/contentFolderDelete'),
 	null)

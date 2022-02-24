@@ -27,17 +27,17 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 
 'Content item suite template'
-createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemCreate'),
+createItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentItems/contentItemCreate'),
 	null)
 
 
-updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemUpdate'), 
+updateItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentItems/contentItemUpdate'), 
 	null)
 
 
-deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemDelete'),
+deleteItem = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentItems/contentItemDelete'),
 	 null)
 
-deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentItems/contentItemDeleteBulk'),
+deleteItemsBulk = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentItems/contentItemDeleteBulk'),
 	 null) 
  

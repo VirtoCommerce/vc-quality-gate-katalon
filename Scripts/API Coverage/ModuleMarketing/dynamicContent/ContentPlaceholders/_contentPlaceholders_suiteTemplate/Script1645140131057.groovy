@@ -19,19 +19,19 @@ import org.openqa.selenium.Keys as Keys
 
 
 
-placeholderAdd = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPlaceholders/contentPlaceholderAdd'),
+placeholderAdd = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentPlaceholders/contentPlaceholderAdd'),
 	null)
 
-placeholderUpdate = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/ContentPlaceholders/contentPlaceholderUpdate'),
+placeholderUpdate = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentPlaceholders/contentPlaceholderUpdate'),
 	null)
 
-deletePlaceholder = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPlaceholders/contentPlaceholderDelete'),
+deletePlaceholder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentPlaceholders/contentPlaceholderDelete'),
 	null)
 
 deletePlaceholderImageFolder = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'),
 	null) 
 
-placeholderBulkDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleMarketing/ContentPlaceholders/contentPlaceholderDeleteBulk'),
+placeholderBulkDelete = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/dynamicContent/ContentPlaceholders/contentPlaceholderDeleteBulk'),
 	null) 
 
 
