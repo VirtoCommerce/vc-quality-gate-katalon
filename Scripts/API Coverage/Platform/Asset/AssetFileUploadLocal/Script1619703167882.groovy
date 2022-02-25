@@ -40,3 +40,6 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	]))
 //get file url
 GlobalVariable.uploadFileUrl = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')
+
+
+return uploadFileUrlLocal
