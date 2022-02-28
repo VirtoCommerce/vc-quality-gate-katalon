@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_CloseMessage2</name>
+   <tag></tag>
+   <elementGuidId>34ae322c-d597-4f65-a029-c2d8829fca90</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[.='×']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>span[aria-hidden='true']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+</WebElementEntity>
