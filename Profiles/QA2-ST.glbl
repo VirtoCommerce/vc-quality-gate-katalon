@@ -46,11 +46,6 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Organization QA K'</initValue>
-      <name>organizationName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'BusinessQAk@BusinessQA.tt'</initValue>
       <name>contactEmail</name>
    </GlobalVariableEntity>
@@ -58,6 +53,11 @@
       <description></description>
       <initValue>'095172838'</initValue>
       <name>contactPhone</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Organization QA K'</initValue>
+      <name>organizationName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>

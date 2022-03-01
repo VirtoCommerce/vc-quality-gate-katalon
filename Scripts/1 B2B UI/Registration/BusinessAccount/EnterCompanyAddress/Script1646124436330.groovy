@@ -9,13 +9,27 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-//open register page
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/link_RegisterPage'))
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select countryCanada'), 'Canada', false)
+
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select ProvinceAlberta'), 'Alberta', false)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'))
+
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'), GlobalVariable.organizationPostalCode)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_City'))
+
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_City'), GlobalVariable.organizationCity)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Road'))
+
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Road'), GlobalVariable.organizationStreet)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitContinueSecondStep'))
+

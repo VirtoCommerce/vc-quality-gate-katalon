@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>RegisterBusinessAccount</name>
+   <name>RegisterPersonalAccount</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>c732c184-d008-4638-9cf8-05697a55b70b</testSuiteGuid>
+   <testSuiteGuid>1193b6f4-9342-4412-b07e-55c3bdf2e1bd</testSuiteGuid>
    <testCaseLink>
       <guid>a48b62a5-a46a-4133-9e15-178478b6f2ae</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -24,34 +24,34 @@
       <testCaseId>Test Cases/1 B2B UI/Registration/OpenRegisterPage</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>31f4c4a8-32a0-4025-8ce6-a6dfaa723518</guid>
+      <guid>0d69c7fa-0a15-43ca-aa13-bfffc54b0b84</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/BusinessAccount/EnterContactInfo</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/SelectPersonal</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>47199a10-c80a-4898-9362-a94a7244dc6e</guid>
+      <guid>ca410e29-48ee-4d08-a293-c8872fc4db8d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/BusinessAccount/EnterCompanyName</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/EnterPersonalContactInfo</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9dd24339-e9a9-4ac0-9387-4af92da9a0bf</guid>
+      <guid>8e928ba7-f18a-47ba-9424-77184b126ebc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/BusinessAccount/EnterCompanyAddress</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/EnterPersonalAddressInfo</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>63792f16-0fe2-4d60-9890-0696d7b92176</guid>
+      <guid>1a925946-59ca-4766-9f83-0fee02a96814</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/BusinessAccount/EnterBusinessAccountCredentials</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/EnterPersonalUserCredentials</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>206d06c8-bb2f-4439-bb3b-e1704a41eab3</guid>
+      <guid>e628f416-3c77-43c5-82be-02f8e96076d3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/BusinessAccount/CheckBusinessAccountNameAfterRegister</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/CheckPersonalAccountNameAfterRegister</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>448df9bc-78bf-4055-9e6e-9c180c762e4a</guid>

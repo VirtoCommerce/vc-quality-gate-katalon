@@ -6,6 +6,10 @@
    <elementGuidId>ad3da3c2-c0cd-439f-9dfd-3c1e497994f1</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'modal-content']</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>.modal-header</value>
       </entry>
@@ -13,12 +17,8 @@
          <key>XPATH</key>
          <value>//div[@class='modal-content']</value>
       </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[@class = 'modal-content']</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

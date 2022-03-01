@@ -51,42 +51,42 @@ WebUI.closeWindowUrl(GlobalVariable.B2BCredentialsPage)
 
 //REGISTER AS PERSON
 //open register page
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/a_RegisterPage'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/link_RegisterPage'))
 
 //select personal
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/personal account/LabelPersonal'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/LabelPersonal'))
 
 //enter contact information information
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_FirstName'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_FirstName'), GlobalVariable.personFirstName)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_LastName'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_LastName'), GlobalVariable.personLastName)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Email'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Email'), "3" + GlobalVariable.personEmail)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Phone'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Phone'), GlobalVariable.personPhone)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/button_SubmitContinueFirstStep'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_FirstName'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_FirstName'), GlobalVariable.personFirstName)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_LastName'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_LastName'), GlobalVariable.personLastName)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Email'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Email'), "3" + GlobalVariable.personEmail)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Phone'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Phone'), GlobalVariable.personPhone)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitContinueFirstStep'))
 
 //enter company address
-WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/select_Select countryCanada'), 'Canada', false)
-WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/select_Select ProvinceAlberta'), 'Alberta', false)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PostalCode'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PostalCode'), GlobalVariable.organizationPostalCode)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_City'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_City'), GlobalVariable.organizationCity)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Road'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Road'), GlobalVariable.organizationStreet)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/button_SubmitContinueSecondStep'))
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select countryCanada'), 'Canada', false)
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select ProvinceAlberta'), 'Alberta', false)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'), GlobalVariable.organizationPostalCode)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_City'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_City'), GlobalVariable.organizationCity)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Road'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Road'), GlobalVariable.organizationStreet)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitContinueSecondStep'))
 
 //enter user credentials
 //password = GlobalVariable.UserName + "!"
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_UserName'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_UserName'), GlobalVariable.personUserName)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Password'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Password'), GlobalVariable.userPassword)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PasswordConfirm'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PasswordConfirm'), GlobalVariable.userPassword)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/button_SubmitFinal'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_UserName'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_UserName'), GlobalVariable.personUserName)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Password'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Password'), GlobalVariable.userPassword)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_PasswordConfirm'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_PasswordConfirm'), GlobalVariable.userPassword)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitFinal'))
 
 
 //CHECK account name after  login
@@ -112,43 +112,43 @@ WebUI.verifyElementNotPresent(findTestObject('1 UI-B2B ST/Registration/text_Veri
 
 //REGISTER AS ORGANIZATION
 //open register page
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/a_RegisterPage'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/link_RegisterPage'))
 
 //enter contact information information
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_FirstName'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_FirstName'), GlobalVariable.contactFirstName)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_lastName'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_lastName'), GlobalVariable.contactLastName)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Email'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Email'), "3" + GlobalVariable.contactEmail)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Phone'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Phone'), GlobalVariable.contactPhone)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/button_SubmitContinueFirstStep'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_FirstName'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_FirstName'), GlobalVariable.contactFirstName)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/RegisterBusinessAccount/input_lastName'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/RegisterBusinessAccount/input_lastName'), GlobalVariable.contactLastName)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Email'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Email'), "3" + GlobalVariable.contactEmail)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Phone'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Phone'), GlobalVariable.contactPhone)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitContinueFirstStep'))
 
 //enter company name
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_CompanyName'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_CompanyName'), GlobalVariable.organizationName)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_CompanyName'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_CompanyName'), GlobalVariable.organizationName)
 
 //enter company address
-WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/select_Select countryCanada'), 'Canada', false)
-WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/select_Select ProvinceAlberta'), 'Alberta', false)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PostalCode'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PostalCode'), GlobalVariable.organizationPostalCode)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_City'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_City'), GlobalVariable.organizationCity)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Road'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Road'), GlobalVariable.organizationStreet)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/button_SubmitContinueSecondStep'))
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select countryCanada'), 'Canada', false)
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select ProvinceAlberta'), 'Alberta', false)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'), GlobalVariable.organizationPostalCode)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_City'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_City'), GlobalVariable.organizationCity)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Road'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Road'), GlobalVariable.organizationStreet)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitContinueSecondStep'))
 
 //enter user credentials
 //password = GlobalVariable.UserName + "!"
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_UserName'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_UserName'), GlobalVariable.userName)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Password'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_Password'), GlobalVariable.userPassword)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PasswordConfirm'))
-WebUI.setText(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/input_PasswordConfirm'), GlobalVariable.userPassword)
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/registerBusinessAccount/button_SubmitFinal'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_UserName'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_UserName'), GlobalVariable.userName)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Password'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Password'), GlobalVariable.userPassword)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_PasswordConfirm'))
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_PasswordConfirm'), GlobalVariable.userPassword)
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitFinal'))
 
 
 //CHECK account name after  login

@@ -17,5 +17,20 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-//open register page
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/link_RegisterPage'))
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select countryCanada'), 'Canada', false)
+
+WebUI.selectOptionByLabel(findTestObject('1 UI-B2B ST/Registration/select_Select ProvinceAlberta'), 'Alberta', false)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'))
+
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_PostalCode'), GlobalVariable.organizationPostalCode)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_City'))
+
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_City'), GlobalVariable.organizationCity)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_Road'))
+
+WebUI.setText(findTestObject('1 UI-B2B ST/Registration/input_Road'), GlobalVariable.organizationStreet)
+
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/button_SubmitContinueSecondStep'))

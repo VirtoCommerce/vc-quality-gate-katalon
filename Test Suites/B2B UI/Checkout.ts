@@ -15,7 +15,7 @@
       <guid>13cd0cf8-726d-4945-bf1f-58715bb6ed03</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Browser action/OpenBrowser</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/BrowserAction/OpenBrowser</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>97d2ba19-5028-4b36-8224-8d551f5657c1</guid>
@@ -123,6 +123,6 @@
       <guid>a1623d5a-26f1-4083-bce6-9315dcf9a8a7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Browser action/Close browser</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/BrowserAction/CloseBrowser</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

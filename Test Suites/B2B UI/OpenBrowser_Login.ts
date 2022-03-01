@@ -15,7 +15,7 @@
       <guid>8f868dcb-58f7-41b2-8dca-fc6defccd3e4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Browser action/OpenBrowser</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/BrowserAction/OpenBrowser</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>72d05df3-7ebc-4790-b3f2-55e2ef57e7a0</guid>
