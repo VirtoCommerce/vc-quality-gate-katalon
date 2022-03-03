@@ -51,7 +51,7 @@
       <guid>482a79c0-cc8d-4296-86aa-211b577f4e5a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Catalog/Product/ProductBlockView</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/Catalog/ProductPage/ProductBlockView</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e697e3c0-0626-47a4-9576-6643e2c3b3e3</guid>

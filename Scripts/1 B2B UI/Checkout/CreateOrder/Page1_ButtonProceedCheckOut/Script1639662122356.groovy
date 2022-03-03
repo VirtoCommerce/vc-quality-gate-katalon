@@ -17,4 +17,4 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/MainElementsForCheckOut/button_ProceedCheckoutPage1'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/MainElementsForCheckOut/button_ProceedCheckoutPage1'))

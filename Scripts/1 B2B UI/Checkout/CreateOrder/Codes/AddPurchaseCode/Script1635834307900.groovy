@@ -17,30 +17,30 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/div_PurchaseCode'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/div_PurchaseCode'))
 
-if (WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/button_RemovePurchasedCode'),10,FailureHandling.OPTIONAL) == true)
+if (WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/button_RemovePurchasedCode'),10,FailureHandling.OPTIONAL) == true)
 	{
-	WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/button_RemovePurchasedCode'))
-	WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/input_FieldPurchaseCode'))
-	WebUI.setText(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/input_FieldPurchaseCode'), '1275675634')
+	WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/button_RemovePurchasedCode'))
+	WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/input_FieldPurchaseCode'))
+	WebUI.setText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/input_FieldPurchaseCode'), '1275675634')
 	}
 else
 	{
-	WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/input_FieldPurchaseCode'))
-	WebUI.setText(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/input_FieldPurchaseCode'), '1275675634')
+	WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/input_FieldPurchaseCode'))
+	WebUI.setText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/input_FieldPurchaseCode'), '1275675634')
 	}
 	
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/button_SubmitPurchaseCode'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/button_SubmitPurchaseCode'))
 
 WebUI.waitForPageLoad(5)
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/Message'),)
+WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/Message'),)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/Message'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/Message'))
 
-def messagePurchasedCode = WebUI.getText(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Purchased code/Message'))
+def messagePurchasedCode = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Purchased code/Message'))
 
-WebUI.verifyMatch(messagePurchasedCode, '× Purchase order number has successfully changed', false)
+WebUI.verifyMatch(messagePurchasedCode, '× / Purchase order number has successfully changed', false)
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/button_CloseMessage2'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/button_CloseMessage2'))

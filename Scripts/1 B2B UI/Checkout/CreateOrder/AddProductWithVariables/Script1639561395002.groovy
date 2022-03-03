@@ -17,23 +17,27 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser(GlobalVariable.urlFront)
+
+WebUI.maximizeWindow()
+
 WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_AllProductsCatalog'))
 
 WebUI.click(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_CarriageBolts'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/Add product/div_ProductBlock'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/div_ProductBlock'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Catalog/Add product/a_OpenProduct'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/a_OpenProduct'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Add to the card/div_CustomizeOrderBlock'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/div_CustomizeOrderBlock'))
 
-WebUI.setText(findTestObject('1 UI-B2B ST/Check Out/Create order/Add to the card/input_QuantityForProductWithVariables'), '1')
+WebUI.setText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/input_QuantityForProductWithVariables'), '1')
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Add to the card/button_AddToCart'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/button_AddToCart'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/Add product/div_PopUpProductAdded'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/div_PopUpProductAdded'))
 
-def AddCartProductPage = WebUI.getText(findTestObject('1 UI-B2B ST/Catalog/Add product/h4_PopupTitle'))
+def AddCartProductPage = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/h4_PopupTitle'))
 
 WebUI.verifyMatch(AddCartProductPage, "1 ITEM WAS ADDED TO CART", false)
 

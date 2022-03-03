@@ -57,7 +57,7 @@
       <guid>448df9bc-78bf-4055-9e6e-9c180c762e4a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Home Page elements/LogOut</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/HomePageElements/LogOut</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bbcd3194-2681-42e2-8aff-13372a2eb8f9</guid>

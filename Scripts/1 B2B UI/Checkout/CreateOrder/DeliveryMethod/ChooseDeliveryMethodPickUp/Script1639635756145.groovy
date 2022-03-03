@@ -17,6 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/Check Out/Create order/MainElementsForCheckOut/div_CartPage2Presented'))
+WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/MainElementsForCheckOut/div_CartPage2Presented'))
 
 WebUI.click(findTestObject('11 UI-B2B ST/Check Out/Create order/PickUpDelivery/label_ChooseDeliveryMethodAsPickUp'))

@@ -17,34 +17,34 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/div_BlockOrderSummary'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/div_BlockOrderSummary'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_OrderSummary'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_OrderSummary'))
 
-def testText1 = WebUI.getText(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_OrderSummary'))
+def testText1 = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_OrderSummary'))
 
 WebUI.verifyMatch(testText1, 'ORDER SUMMARY', false)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/div_BlockShippingAddress'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/div_BlockShippingAddress'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_ShippingAddress'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_ShippingAddress'))
 
-def testText2 = WebUI.getText(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_ShippingAddress'))
+def testText2 = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_ShippingAddress'))
 
 WebUI.verifyMatch(testText2, 'SHIPPING ADDRESS', false)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/div_BlockPaymentMethod'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/div_BlockPaymentMethod'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_PaymentMethod'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_PaymentMethod'))
 
-def testText3 = WebUI.getText(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_PaymentMethod'))
+def testText3 = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_PaymentMethod'))
 
 WebUI.verifyMatch(testText3, 'PAYMENT METHOD', false)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/div_BlockMyPurchasedProducts'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/div_BlockMyPurchasedProducts'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_MyPurchasedProducts'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_MyPurchasedProducts'))
 
-def testText4 = WebUI.getText(findTestObject('1 UI-B2B ST/Check Out/Create order/Order details page/Order details/h5_MyPurchasedProducts'))
+def testText4 = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/OrderDetailsPage/OrderDetails/h5_MyPurchasedProducts'))
 
 WebUI.verifyMatch(testText4, 'MY PURCHASED PRODUCTS', false)

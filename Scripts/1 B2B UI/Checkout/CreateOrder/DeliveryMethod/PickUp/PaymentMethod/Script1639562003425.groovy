@@ -17,14 +17,14 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Payment method/div_PaymentMethodBlock'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/div_PaymentMethodBlock'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Payment method/a_openPopUpWindowWirhPaymentMethod'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/a_openPopUpWindowWirhPaymentMethod'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Payment method/a_ChoosePaymentMethodInvoice'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/a_ChoosePaymentMethodInvoice'))
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Payment method/span_ActivePaymentMethodInvoice'))
+WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/span_ActivePaymentMethodInvoice'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Payment method/button_SavePaymentMethodInvoice'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/button_SavePaymentMethodInvoice'))
 
 

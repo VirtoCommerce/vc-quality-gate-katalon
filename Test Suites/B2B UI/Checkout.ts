@@ -21,7 +21,7 @@
       <guid>97d2ba19-5028-4b36-8224-8d551f5657c1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/LogIn page/Main elements/Log In</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/LogInPage/LogIn</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5979aa56-2793-4b0b-92f1-2c399072d044</guid>
@@ -32,19 +32,19 @@
    <testCaseLink>
       <guid>edeadb5f-2816-4f1a-8a2c-9b254153cf34</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/AddProductWithoutVariables</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>52307945-3a12-40aa-a8b6-8310c225da88</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/PopUpButtonContinueShopping</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c637969a-5e4e-4bd7-8c0d-723d6cf51829</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/AddProductWithVariables</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -111,13 +111,13 @@
       <guid>7c3b5643-ec01-407f-b8d4-9b190f340151</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/Order Details Page/Notification</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/OrderDetailsPage/Notification</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4fdbb34c-6477-4088-9901-5f953f9664ec</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Home Page elements/LogOut</testCaseId>
+      <testCaseId>Test Cases/1 B2B UI/HomePageElements/LogOut</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a1623d5a-26f1-4083-bce6-9315dcf9a8a7</guid>

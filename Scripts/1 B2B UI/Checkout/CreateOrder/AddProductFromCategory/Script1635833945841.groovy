@@ -21,13 +21,13 @@ WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_AllProductsC
 
 WebUI.click(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_CarriageBolts'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/Add product/div_ProductBlock'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/div_ProductBlock'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Catalog/Add product/button_AddFromCatalog'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/button_AddFromCatalog'))
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/Catalog/Add product/div_PopUpProductAdded'))
+WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/div_PopUpProductAdded'))
 
-def AddCartCatalog = WebUI.getText(findTestObject('1 UI-B2B ST/Catalog/Add product/h4_PopupTitle'))
+def AddCartCatalog = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/h4_PopupTitle'))
 
 WebUI.verifyMatch(AddCartCatalog, "1 ITEM WAS ADDED TO CART", false)
 

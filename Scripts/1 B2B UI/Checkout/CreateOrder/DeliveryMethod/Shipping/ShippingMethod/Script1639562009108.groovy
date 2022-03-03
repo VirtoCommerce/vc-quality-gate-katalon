@@ -17,10 +17,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Shipping method/a_openPopUpWindowWirhShippingMethod'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/a_openPopUpWindowWirhShippingMethod'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Shipping method/a_ChooseFixedRateGround'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/a_ChooseFixedRateGround'))
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Shipping method/span_ActiveFixedRateGround'))
+WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/span_ActiveFixedRateGround'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Shipping delivery/Shipping method/button_OkShippingMethod'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/button_OkShippingMethod'))

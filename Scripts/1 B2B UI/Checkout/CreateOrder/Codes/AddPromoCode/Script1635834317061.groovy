@@ -17,31 +17,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/div_PromotionCode'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/div_PromotionCode'))
 
-if (WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/button_RemovePromoCode'),10,FailureHandling.OPTIONAL) == true)
+if (WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/button_RemovePromoCode'),10,FailureHandling.OPTIONAL) == true)
 	{
-	WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/button_RemovePromoCode'))
-	WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/input_FieldPromotionCode'))
-	WebUI.setText(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/input_FieldPromotionCode'), GlobalVariable.promoCode)
+	WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/button_RemovePromoCode'))
+	WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/input_FieldPromotionCode'))
+	WebUI.setText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/input_FieldPromotionCode'), GlobalVariable.promoCode)
 	}
 else
 	{
-	WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/input_FieldPromotionCode'))
-	WebUI.setText(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/input_FieldPromotionCode'), GlobalVariable.promoCode)
+	WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/input_FieldPromotionCode'))
+	WebUI.setText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/input_FieldPromotionCode'), GlobalVariable.promoCode)
 	}
 
 		
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/button_SubmitPromotionCode'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/button_SubmitPromotionCode'))
 
 WebUI.waitForPageLoad(5)
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/Message2'),)
+WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/Message2'),)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/Message2'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/Message2'))
 
-def messagePromoCode = WebUI.getText(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/Message2'))
+def messagePromoCode = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/Message2'))
 
 WebUI.verifyMatch(messagePromoCode, 'Your promocode was successfully applied', false)
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/Codes/Promo code/button_CloseMessage2'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/Codes/Promo code/button_CloseMessage2'))

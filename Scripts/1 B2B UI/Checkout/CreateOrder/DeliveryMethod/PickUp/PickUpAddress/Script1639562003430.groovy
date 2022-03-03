@@ -17,10 +17,10 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Check Out/Create order/PickUpDelivery/PickUp Address/div_PickUpAddress'))
+WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodPickUp/PickUpAddress/div_PickUpAddress'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/PickUpDelivery/PickUp Address/a_openPopUpWindowWirhAddress'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodPickUp/PickUpAddress/a_openPopUpWindowWirhAddress'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Check Out/Create order/PickUpDelivery/PickUp Address/a_SelectAddress'))
+WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodPickUp/PickUpAddress/a_SelectAddress'))
 
-WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Check Out/Create order/PickUpDelivery/PickUp Address/div_CheckSelectedAddress'),3)
+WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodPickUp/PickUpAddress/div_CheckSelectedAddress'),3)
