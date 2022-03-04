@@ -7,12 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>
-//div[@class='d-md-block col-md-3']/div[2]/div[@class='card-body']</value>
+         <value>//div[@class='d-md-block col-md-3']/div[2]/div[@class='card-body']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

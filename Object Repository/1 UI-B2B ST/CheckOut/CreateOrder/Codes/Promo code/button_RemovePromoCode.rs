@@ -6,9 +6,8 @@
    <elementGuidId>ec000c97-8426-4cf2-868a-f22ea3cca60e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>
-//i[@class='fa fa-times']</value>
+         <key>BASIC</key>
+         <value>//*[@id = 'removeCouponSubmit']</value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -16,8 +15,8 @@
 [ng-if='couponApplied']</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = 'removeCouponSubmit']</value>
+         <key>XPATH</key>
+         <value>//i[@class='fa fa-times']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
