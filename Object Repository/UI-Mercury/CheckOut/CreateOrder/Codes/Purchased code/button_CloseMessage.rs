@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_CloseMessage</name>
+   <tag></tag>
+   <elementGuidId>236cdcb4-3cc0-42a4-8c85-1120a12611b5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[.='×']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>[aria-label='Close']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+</WebElementEntity>

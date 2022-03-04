@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_PrintPopUp</name>
+   <tag></tag>
+   <elementGuidId>fcc99de2-1cec-4ca1-b5a0-b98644a865b3</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>/html</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'focus-outline-visible']</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>focus-outline-visible</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>print()</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Print</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;1-stainless-steel-carriage-bolt-18-8-nl-19sm-finish-14-20-diathread-size-50-pk&quot;)/main[@class=&quot;container pt-4 pb-6&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col&quot;]/ng-controller[@class=&quot;ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-3 mb-3 mb-md-0&quot;]/div[@class=&quot;card&quot;]/div[@class=&quot;card-body px-0&quot;]/div[@class=&quot;border-top pt-3&quot;]/ul[@class=&quot;list-inline d-flex px-3 mb-0 justify-content-between&quot;]/li[3]/a[@class=&quot;text-condensed font-weight-bold&quot;]</value>
+   </webElementProperties>
+</WebElementEntity>

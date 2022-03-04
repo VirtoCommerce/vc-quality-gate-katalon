@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Select countryCanada</name>
+   <tag></tag>
+   <elementGuidId>a6353642-d18a-4e7d-a6a7-dc2a3d0e4351</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>select[name=&quot;countryCode&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='countryCode']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>select</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-model</name>
+      <type>Main</type>
+      <value>registration.address.countryCode</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-options</name>
+      <type>Main</type>
+      <value>x.code3 as x.name for x in countries</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>countryCode</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>form-control ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>size</name>
+      <type>Main</type>
+      <value>1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Select countryCanadaUnited StatesUnited KingdomAlbaniaAlgeriaAndorraAngolaArgentinaArmeniaArubaAntigua And BarbudaAustraliaAustriaAzerbaijanBangladeshBahamasBahrainBarbadosBelarusBelgiumBelizeBermudaBhutanBoliviaBosnia And HerzegovinaBotswanaBrazilBruneiBulgariaCambodiaRepublic of CameroonCayman IslandsChileChinaColombiaComorosCongoCosta RicaCôte d'IvoireCroatiaCuraçaoCyprusCzech RepublicDenmarkDominicaDominican RepublicEcuadorEgyptEl SalvadorEstoniaEthiopiaFaroe IslandsFijiFinlandFranceFrench PolynesiaGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuatemalaGuernseyGuyanaHaitiHondurasHong KongHungaryIcelandIndiaIndonesiaIrelandIsle Of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKosovoKuwaitKyrgyzstanLatviaLebanonLiberiaLiechtensteinLithuaniaLuxembourgMacaoMacedonia, Republic OfMadagascarMalaysiaMaldivesMaltaMauritiusMexicoMoldova, Republic ofMonacoMongoliaMontenegroMoroccoMozambiqueMyanmarNamibiaNepalNetherlands AntillesNetherlandsNew ZealandNicaraguaNigerNigeriaNorwayOmanPakistanPalestinian Territory, OccupiedPanamaPapua New GuineaParaguayPeruPhilippinesPolandPortugalQatarReunionRomaniaRussiaRwandaSaint Kitts And NevisSaint LuciaSaint MartinSao Tome And PrincipeSamoaSaudi ArabiaSenegalSerbiaSeychellesSingaporeSint MaartenSlovakiaSloveniaSouth AfricaSouth KoreaSpainSri LankaSt. VincentSurinameSwedenSwitzerlandSyriaTaiwanThailandTanzania, United Republic OfTrinidad and TobagoTunisiaTurkeyTurkmenistanTurks and Caicos IslandsUgandaUkraineUnited Arab EmiratesUruguayUzbekistanVanuatuVenezuelaVietnamVirgin Islands, BritishYemenZambiaZimbabweAfghanistanAland IslandsAnguillaBeninBouvet IslandBritish Indian Ocean TerritoryBurkina FasoBurundiCape VerdeCentral African RepublicChadChristmas IslandCocos (Keeling) IslandsCongo, The Democratic Republic Of TheCook IslandsCubaDjiboutiEquatorial GuineaEritreaFalkland Islands (Malvinas)French GuianaFrench Southern TerritoriesGabonGuineaGuinea BissauHeard Island And Mcdonald IslandsHoly See (Vatican City State)Iran, Islamic Republic OfIraqKiribatiKorea, Democratic People's Republic OfLao People's Democratic RepublicLesothoLibyan Arab JamahiriyaMalawiMaliMartiniqueMauritaniaMayotteMontserratNauruNew CaledoniaNiueNorfolk IslandPitcairnSaint BarthélemySaint HelenaSaint Pierre And MiquelonSan MarinoSierra LeoneSolomon IslandsSomaliaSouth Georgia And The South Sandwich IslandsSudanSvalbard And Jan MayenSwazilandTajikistanTimor LesteTogoTokelauTongaTuvaluUnited States Minor Outlying IslandsWallis And FutunaWestern Sahara</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;h-100&quot;]/body[@class=&quot;customer-logged-in template-customersregister ng-scope&quot;]/main[@class=&quot;container pt-4 pb-5 flex-grow-1&quot;]/div[@class=&quot;row justify-content-md-center ng-scope&quot;]/div[@class=&quot;col-md-8&quot;]/div[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;steps ng-scope&quot;]/form[@class=&quot;ng-scope ng-dirty ng-valid-parse ng-valid-pattern ng-valid ng-valid-required&quot;]/section[@class=&quot;step ng-isolate-scope current&quot;]/div[@class=&quot;form-group ng-scope&quot;]/div[@class=&quot;form-group ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6&quot;]/div[@class=&quot;form-group form-select&quot;]/select[@class=&quot;form-control ng-not-empty ng-dirty ng-valid-parse ng-valid ng-valid-required ng-touched&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@name='countryCode']</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Country'])[1]/following::select[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Required'])[5]/following::select[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Please select country'])[1]/preceding::select[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Work Province'])[1]/preceding::select[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//select</value>
+   </webElementXpaths>
+</WebElementEntity>
