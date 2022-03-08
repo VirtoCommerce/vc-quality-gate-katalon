@@ -24,16 +24,16 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1e4a93a4-a1fc-44e6-929d-d0b08b67d522</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/PushNotificationsSearch</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>3701eb28-2ece-4018-abcf-9b95602a14c9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1e4a93a4-a1fc-44e6-929d-d0b08b67d522</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/PushNotificationsSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ac73720a-ca4b-480e-bddb-9cd25ad40bb3</guid>
