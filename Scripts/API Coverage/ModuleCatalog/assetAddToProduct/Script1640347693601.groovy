@@ -46,7 +46,7 @@ relativeUrl = assetBodyParsed[0].relativeUrl
 
 
 'Upload and process the assetsData template, pas it to global variable'
-assetsTemplate = new File('Data Files/assetsTemplate.json').text
+assetsTemplate = new File('TestDataFiles/assetsTemplate.json').text
 assetsTemplateParsed = new JsonSlurper().parseText(assetsTemplate)
 assetsTemplateParsed.mimeType = contentType
 assetsTemplateParsed.name = fileName

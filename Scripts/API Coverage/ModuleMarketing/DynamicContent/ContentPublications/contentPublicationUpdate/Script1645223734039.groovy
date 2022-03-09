@@ -50,7 +50,7 @@ getItemBodyParsed = new JsonSlurper().parseText(getItemBody)
 
 
 'PREPARE PUBLICATION CONDITION DATA'
-publicationConditionDataTemplate = new File('Data Files/publishingDynamicExpressionTemplate.json').text
+publicationConditionDataTemplate = new File('TestDataFiles/Marketing/publishingDynamicExpressionTemplate.json').text
 publicationConditionDataParsed = new JsonSlurper().parseText(publicationConditionDataTemplate)
 publicationConditionDataParsed.id = 'ConditionAgeIs'
 publicationConditionDataParsed.value = '31'

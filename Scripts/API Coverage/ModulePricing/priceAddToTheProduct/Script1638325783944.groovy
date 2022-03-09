@@ -33,7 +33,7 @@ initialPricesCount = WS.getElementPropertyValue(getInitialPricesCount, 'totalCou
 
 'PARSE AND PREPARE JSON TEMPLATE'
 productListPrice = 888
-Object priceTemplate = new File('Data Files/productPriceTemplate.json').text
+Object priceTemplate = new File('TestDataFiles/productPriceTemplate.json').text
 priceTemplateParsed = new JsonSlurper().parseText(priceTemplate)
 priceTemplateParsed.productId = GlobalVariable.productId
 priceTemplateParsed.list = productListPrice

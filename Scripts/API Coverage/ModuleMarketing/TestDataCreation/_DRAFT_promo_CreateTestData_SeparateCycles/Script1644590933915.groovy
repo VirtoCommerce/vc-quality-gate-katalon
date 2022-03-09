@@ -28,7 +28,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 
 'PREPAER REWARD OBJECT'//Static unless rewritten on the later stages of test
-dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
+dynamicExpessionData = new File('TestDataFiles/Marketing/promoDynamicExpressionTemplate.json').text
 rewardDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
 rewardCondition = 'RewardCartGetOfAbsSubtotal'
 rewardDataParsed.id = rewardCondition
@@ -38,37 +38,37 @@ rewardDataParsed << ['amount' : '1']
 'PREPARE NAMES AND PROMO DATA CONFIGURATIONS FOR EACH POSSIBLE CONDITION'
 //CATEGORY
 List namesForCategory = ['Category - fully', 'Category - without Subcategory', 'Category - without Items']
-promoDataCategory = new File('Data Files/promoDataCategory.json').text
+promoDataCategory = new File('TestDataFiles/Marketing/promoDataCategory.json').text
 List promoDataCategoryParsed = new JsonSlurper().parseText(promoDataCategory)
 
 
 //PRODUCT
 List namesForProduct = ['Product - contains SKU', 'Product - contains Name', 'Product - full price']
-pomoDataProduct = new File('Data Files/promoDataProduct.json').text
+pomoDataProduct = new File('TestDataFiles/Marketing/promoDataProduct.json').text
 List productConditionsParsed = new JsonSlurper().parseText(pomoDataProduct)
 
 
 //CURRENCY
 List namesForCurrency = ['Currency is [] USD, but the current currency in storefront is EUR - promo not applied', 'Currency is [] USD, and current currency in storefront is USD - promo applied']
-currencyCondition = new File('Data Files/promoDataCurrency.json').text
+currencyCondition = new File('TestDataFiles/Marketing/promoDataCurrency.json').text
 List currencytConditionsParsed = new JsonSlurper().parseText(currencyCondition )
 
 
 //IN STOCK QUANTITY
 List namesForInStockQuantity = ['InStock quantity - at least', 'InStock quantity - exactly', 'InStock quantity - less than or equals', 'InStock quantity - between']
-qtyCondition = new File('Data Files/promoDataQty.json').text
+qtyCondition = new File('TestDataFiles/Marketing/promoDataQty.json').text
 List qtyConditionsParsed = new JsonSlurper().parseText(qtyCondition)
 
 
 //CART ITEMS
 List namesForCartItemsConditions = ['Cart items - at least', 'Cart items - exactly', 'Cart items - less than or equals', 'Cart items - between', 'Cart items - with excluding items', 'Cart items of category', 'Cart items of entry']
-cartItemsCondition = new File('Data Files/promoDataCartItems.json').text
+cartItemsCondition = new File('TestDataFiles/Marketing/promoDataCartItems.json').text
 List cartItemsConditionsParsed = new JsonSlurper().parseText(cartItemsCondition)
 
 
 //CART SUBTOTAL
 List namesForCartSubtotalConditions = ['Cart subtotal - at least', 'Cart subtotal - exactly', 'Cart subtotal - less than or equals', 'Cart subtotal - between']
-cartSubtotalCondition = new File('Data Files/promoDataCartSubtotal.json').text
+cartSubtotalCondition = new File('TestDataFiles/Marketing/promoDataCartSubtotal.json').text
 List cartSubtotalConditionsParsed = new JsonSlurper().parseText(cartSubtotalCondition)
 
 
@@ -88,7 +88,7 @@ for (int i; i < userGroupPromoCondition.size();i++) {
 	
 	
 	'PREPARE THE REQUEST TEMPLATE'
-	postRequestTemplate = new File('Data Files/promoPostTemplate.json').text
+	postRequestTemplate = new File('TestDataFiles/Marketing/promoPostTemplate.json').text
 	promoPostTemplateParsed = new JsonSlurper().parseText(postRequestTemplate)
 	promoPostTemplateParsed.dynamicExpression.children[0].children[0] = userGroupDataParsed //'userGroup'
 	promoPostTemplateParsed.dynamicExpression.children[3].children[0] = rewardDataParsed //'reward'

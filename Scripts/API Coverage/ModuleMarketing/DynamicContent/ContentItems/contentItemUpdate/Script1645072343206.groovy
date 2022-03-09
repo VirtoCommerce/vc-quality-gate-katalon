@@ -33,7 +33,7 @@ WebUI.comment('TEST CASE: content item update (name, description, html content)'
 
 
 'FIRST UPLOAD AND PREPARE HTML CONTENT DATA'
-promoDataContentItemHTMLObject = new File('Data Files/promoDataContentItemHTMLObject.json').text
+promoDataContentItemHTMLObject = new File('TestDataFiles/Marketing/promoDataContentItemHTMLObject.json').text
 promoDataContentItemHTMLObjectParsed = new JsonSlurper().parseText(promoDataContentItemHTMLObject)
 updatedHtmlContent = 'qweUpdated'
 promoDataContentItemHTMLObjectParsed[0].values[0].value = updatedHtmlContent
