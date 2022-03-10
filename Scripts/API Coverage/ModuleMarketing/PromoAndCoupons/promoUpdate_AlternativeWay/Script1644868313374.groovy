@@ -27,14 +27,14 @@ WebUI.comment('test case: UPDATE PROMOTION')
 
 
 'USER GROUP'
-dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
+dynamicExpessionData = new File('TestDataFiles/Marketing/promoDynamicExpressionTemplate.json').text
 userGroupDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
 userGroupPromoCondition = 'ConditionIsEveryone'
 userGroupDataParsed.id = userGroupPromoCondition
 
 
 'CATALOG'
-dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
+dynamicExpessionData = new File('TestDataFiles/Marketing/promoDynamicExpressionTemplate.json').text
 catalogConditionDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
 catalogPromoCondition = 'ConditionCategoryIs'
 //HERE IM ADDING AN ID OF THE CATEGORY TO EXCLUDE (exclude condition)
@@ -53,7 +53,7 @@ conditionDataJson = new groovy.json.JsonBuilder(catalogConditionDataParsed).toSt
 
 
 'REWARD'
-dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
+dynamicExpessionData = new File('TestDataFiles/Marketing/promoDynamicExpressionTemplate.json').text
 rewardDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
 rewardCondition = 'RewardCartGetOfAbsSubtotal'
 rewardDataParsed.id = rewardCondition

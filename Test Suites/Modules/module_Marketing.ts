@@ -14,13 +14,13 @@
    <testCaseLink>
       <guid>8bd1cbe9-9315-4955-a97c-7763c4a7d3ee</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ef56195c-8764-424e-8132-7aa4109cc3f8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>

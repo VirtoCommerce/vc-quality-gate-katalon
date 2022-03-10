@@ -29,12 +29,12 @@ import com.kms.katalon.core.testobject.ResponseObject
 'QUESTION: Do we really need verification for this?'
 
 'FIRST PREPARE CATALOG CONDITION DATA'
-catalogConditionData = new File('Data Files/dynamicExpressionDataTable.json').text
+catalogConditionData = new File('TestDataFiles/dynamicExpressionDataTable.json').text
 List catalogConditionDataParsed = new JsonSlurper().parseText(catalogConditionData)
 
 
 'REWARD   (prepare data)'//Static throughout all the catalog conditions
-dynamicExpessionData = new File('Data Files/promoDynamicExpressionTemplate.json').text
+dynamicExpessionData = new File('TestDataFiles/Marketing/promoDynamicExpressionTemplate.json').text
 rewardDataParsed = new JsonSlurper().parseText(dynamicExpessionData)
 rewardCondition = 'RewardCartGetOfAbsSubtotal'
 rewardDataParsed.id = rewardCondition
@@ -55,7 +55,7 @@ for (int b; b < userGroupPromoCondition.size();b++) {
 	
 	
 	'PREPARE THE REQUEST TEMPLATE'
-	postRequestTemplate = new File('Data Files/promoPostTemplate.json').text
+	postRequestTemplate = new File('TestDataFiles/Marketing/promoPostTemplate.json').text
 	promoPostTemplateParsed = new JsonSlurper().parseText(postRequestTemplate)
 	promoPostTemplateParsed.dynamicExpression.children[0].children[0] = userGroupDataParsed //'userGroup'
 	promoPostTemplateParsed.dynamicExpression.children[3].children[0] = rewardDataParsed //'reward'

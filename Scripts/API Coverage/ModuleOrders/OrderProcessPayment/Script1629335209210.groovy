@@ -65,7 +65,7 @@ orderTotal = WS.getElementPropertyValue(orderGet, 'total')
 ////UPLOAD THE PAYMENTS DATA AND CHANGE ITS VALUES TO FIT THE CREATED ORDER
 paymentId = UUID.randomUUID().toString()
 slurper = new JsonSlurper()
-String paymentsData = new File('Data Files/paymentsData.json').text
+String paymentsData = new File('TestDataFiles/PaymentsData.json').text
 parsedPayments = slurper.parseText(paymentsData)
 parsedPayments.orderId = orderId
 parsedPayments.id = paymentId
