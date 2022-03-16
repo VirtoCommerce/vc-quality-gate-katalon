@@ -14,13 +14,13 @@
    <testCaseLink>
       <guid>776516d4-10e6-488a-9113-aeba8fe6e62e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>47873c37-9bf5-40e4-bc4b-a6be95427d4d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -30,15 +30,15 @@
       <testCaseId>Test Cases/API Coverage/ModuleSearch/DropIndex</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1e4a93a4-a1fc-44e6-929d-d0b08b67d522</guid>
+      <guid>f0a0d536-9ac2-4b2e-b6b6-028c3998274f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/PushNotificationsSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/categoryCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ac73720a-ca4b-480e-bddb-9cd25ad40bb3</guid>
+      <guid>4694baae-4087-4433-bdb1-ee0e6291e92b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/PushNotificationsMarkAsRead</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleCatalog/productCreate</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

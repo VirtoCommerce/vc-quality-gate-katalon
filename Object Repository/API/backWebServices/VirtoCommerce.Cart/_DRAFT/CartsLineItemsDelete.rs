@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CartItemsDeleteLineItem</name>
+   <name>CartsLineItemsDelete</name>
    <tag></tag>
    <elementGuidId>2beefc48-bc25-48b8-aae6-83d39c8cf386</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
+   <restRequestMethod>DELETE</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/carts/${cartId}/items/${lineItemId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
