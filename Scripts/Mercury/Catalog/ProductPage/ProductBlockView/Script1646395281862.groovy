@@ -17,26 +17,34 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_AllProductsCatalog'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_InkjetPrinters'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_AllProductsCatalog'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/div_ProductBlock'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_InkjetPrinters'))
 
-WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/img_Image'), 4)
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/div_ProductBlock'))
 
-WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/div_CompareCheckBox'), 4)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/img_ImageProduct'), 4)
 
-WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/a_ProductTitle'), 4)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/div_CompareCheckBox'), 4)
 
-WebUI.verifyElementText(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/span_ProductItem'), 'Item #')
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/a_ProductTitle'), 4)
 
-WebUI.verifyElementText(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/span_ProductModel'), 'Mfr. model #')
+WebUI.verifyElementText(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/text_TitleProductItem'), 'Item #')
 
-WebUI.verifyElementText(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/span_TitleYour price'), 'Your price')
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/text_ProductSKU'), 4)
 
-WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/span_TitleYour price'), 4)
+WebUI.verifyElementText(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/text_TitleProductModel'), 'Mfr. model #')
 
-WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/Catalog/ProductPage/ProductView/input_ProductAmountField'), 4)
+WebUI.verifyElementText(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/text_TitleYourPrice'), 'Your price')
 
-WebUI.verifyElementPresent(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/AddProduct/button_AddFromCatalog'),4)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/text_ProductPrice'), 4)
+
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/input_ProductAmountField'), 4)
+
+WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/ProductPage/ProductView/div_InputAndButtonBlock'))
+
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/button_AddFromCatalog'))
+
+WebUI.verifyElementClickable (findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/button_AddFromCatalog'))
+

@@ -10,18 +10,18 @@
          <value>.row-cols-1 > div:nth-of-type(2) .card-body</value>
       </entry>
       <entry>
+         <key>BASIC</key>
+         <value>//div[@class = 'flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//div[@class='row row-cols-1 row-cols-sm-2 row-cols-lg-4']/div[3]//div[@class='card-body']//div[@class='row row-cols-1 row-cols-sm-2 row-cols-lg-4']/div[3]//div[@class='card-body']</value>
       </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//*[@class = 'card-body']</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -32,7 +32,7 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>card-body</value>
+      <value>flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -147,7 +147,7 @@ $189.00
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;laser-printers&quot;)/main[@class=&quot;collection container pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row navigation&quot;]/div[@class=&quot;col&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;row row-cols-1 row-cols-sm-2 row-cols-lg-4&quot;]/div[@class=&quot;col-12 col-sm-6 col-md-4 col-lg-3 card-container&quot;]/div[@class=&quot;card border-gray-200&quot;]/div[@class=&quot;card-body&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 xl:gap-x-6 xl:gap-y-8&quot;]/div[@class=&quot;flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

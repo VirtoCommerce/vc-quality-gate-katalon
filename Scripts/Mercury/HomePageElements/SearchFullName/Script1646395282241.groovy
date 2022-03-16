@@ -18,15 +18,27 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
+WebUI.click(findTestObject('UI-Mercury/HomePageElements/Search/icon_Search'))
 
-WebUI.setText(findTestObject('1 UI-B2B ST/HomePageElements/Header/3rdHeader/input_SearchTab'), GlobalVariable.searchFullName)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/HomePageElements/Search/div_SearchBlock'), 4)
 
-WebUI.click(findTestObject('1 UI-B2B ST/HomePageElements/Header/3rdHeader/button_Search'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/HomePageElements/Search/button_Search'), 4)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/HomePageElements/Search/h2_SearchResultFullName'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/HomePageElements/Search/icon_CloseSearch'), 4)
 
-def search1 = WebUI.getText(findTestObject('1 UI-B2B ST/HomePageElements/Search/h2_SearchResultFullName'))
+WebUI.setText(findTestObject('UI-Mercury/HomePageElements/Search/input_SearchTab'), GlobalVariable.searchFullName)
+
+WebUI.click(findTestObject('UI-Mercury/HomePageElements/Search/button_Search'))
+
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/HomePageElements/Search/div_SearchDropNDown'), 4)
+
+WebUI.click(findTestObject('UI-Mercury/HomePageElements/Search/button_ViewAllResults'))
+
+WebUI.mouseOver(findTestObject('UI-Mercury/HomePageElements/Search/h2_SearchResultFullName'))
+
+def search1 = WebUI.getText(findTestObject('UI-Mercury/HomePageElements/Search/h2_SearchResultFullName'))
 
 // WebUI.verifyMatch(search1, 'YOUR SEARCH FOR "LASER" REVEALED THE FOLLOWING:', false)
 
-WebUI.verifyMatch(search1, 'YOUR SEARCH FOR "' + GlobalVariable.searchFullName + '" REVEALED THE FOLLOWING:', false)
+WebUI.verifyMatch(search1, 'Your search for "' + GlobalVariable.searchFullName + '" revealed the following', false)
+

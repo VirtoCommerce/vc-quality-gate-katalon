@@ -19,35 +19,35 @@ import org.openqa.selenium.WebDriver as WebDriver
 import org.openqa.selenium.WebElement as WebElement
 import com.kms.katalon.core.webui.driver.DriverFactory as DriverFactory
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_AllProductsCatalog'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_AllProductsCatalog'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_CarriageBolts'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_CarriageBolts'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/h1_CarriageBolts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/CategoryPages/h2_CarriageBolts'))
 
 WebUI.verifyTextPresent('Carriage Bolts', false)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_AllProductsCatalog'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_AllProductsCatalog'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_FlangeBolts'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_FlangeBolts'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/h1_FlangeBolts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/CategoryPages/h2_FlangeBolts'))
 
 WebUI.verifyTextPresent('Flange Bolts', false)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_AllProductsCatalog'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_AllProductsCatalog'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_InkjetPrinters'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_InkjetPrinters'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/h1_InkjetPrinters'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/CategoryPages/h2_InkjetPrinters'))
 
 WebUI.verifyTextPresent('Inkjet Printers', false)
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_AllProductsCatalog'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_AllProductsCatalog'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/a_LaserPrinters'))
+WebUI.click(findTestObject('UI-Mercury/Catalog/CategoryPages/a_LaserPrinters'))
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/Catalog/CategoryPages/h1_LaserPrinters'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/CategoryPages/h2_LaserPrinters'))
 
 WebUI.verifyTextPresent('Laser Printers', false)
 

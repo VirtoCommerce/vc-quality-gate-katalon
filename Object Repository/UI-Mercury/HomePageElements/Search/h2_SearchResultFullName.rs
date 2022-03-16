@@ -11,76 +11,76 @@
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//h2[(text() = 'Your search for &quot;laser&quot; revealed the following:' or . = 'Your search for &quot;laser&quot; revealed the following:')]</value>
+         <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner grow&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;flex flex-col&quot;]/h1[@class=&quot;text-2xl md:mt-2 md:mb-4&quot;][count(. | //*[@class = 'text-2xl md:mt-2 md:mb-4']) = count(//*[@class = 'text-2xl md:mt-2 md:mb-4'])]</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(.//*[normalize-space(text()) and normalize-space(.)='Search'])[2]/following::h2[1]</value>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>h2</value>
+      <value>h1</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>text-center</value>
+      <value>text-2xl md:mt-2 md:mb-4</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Your search for &quot;laser&quot; revealed the following:</value>
+      <value> Your search for &quot;printer&quot; revealed the following </value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[@class=&quot;js&quot;]/body[@class=&quot;customer-logged-in template-search ng-scope uib-dropdown-open&quot;]/main[@class=&quot;main&quot;]/article[@class=&quot;container&quot;]/div[@class=&quot;page-header&quot;]/h2[@class=&quot;text-center&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner grow&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;flex flex-col&quot;]/h1[@class=&quot;text-2xl md:mt-2 md:mb-4&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Search'])[2]/following::h2[1]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Compare'])[1]/preceding::h2[1]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Canon Imageclass WiFi MF232W Monochrome Laser Printer/Scanner/Copier'])[1]/preceding::h2[1]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Your search for &quot;laser&quot; revealed the following:']/parent::*</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//h2</value>
+      <value></value>
    </webElementXpaths>
 </WebElementEntity>

@@ -9,15 +9,15 @@
          <key>CSS</key>
       </entry>
       <entry>
+         <key>BASIC</key>
+         <value>.gap-x-4 > div:nth-of-type(1) .rounded-r</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//div[@class='row row-cols-1 row-cols-sm-2 row-cols-lg-4']/div[2]//button[@class='btn btn-outline-primary border-1 rounded-0']</value>
       </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//button[@title = 'Add to cart']</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -31,46 +31,21 @@
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn btn-outline-primary border-1 rounded-0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>title</name>
-      <type>Main</type>
-      <value>Add to cart</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-click</name>
-      <type>Main</type>
-      <value>addProductToCartById('e9de38b73c424db19f319c9538184d03', product['e9de38b73c424db19f319c9538184d03'].quantity, $event)</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-disabled</name>
-      <type>Main</type>
-      <value>unavailable || !product['e9de38b73c424db19f319c9538184d03'].quantity || product['e9de38b73c424db19f319c9538184d03'].quantity &lt;=0</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>text</name>
-      <type>Main</type>
-      <value>
-                        
-                            Add to cart
-                        
-                </value>
+      <value>hidden lg:inline</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;carriage-bolts&quot;)/main[@class=&quot;collection container pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row navigation&quot;]/div[@class=&quot;col&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;row row-cols-1 row-cols-sm-2 row-cols-lg-4&quot;]/div[@class=&quot;col-12 col-sm-6 col-md-4 col-lg-3 card-container&quot;]/div[@class=&quot;card border-gray-200&quot;]/div[@class=&quot;card-body&quot;]/ng-controller[@class=&quot;ng-scope&quot;]/div[@class=&quot;input-group&quot;]/span[@class=&quot;input-group-append&quot;]/button[@class=&quot;btn btn-outline-primary border-1 rounded-0&quot;]</value>
+      <value>//button[@class='rounded-r uppercase px-3 border font-roboto-condensed font-bold text-sm border-yellow-500 bg-yellow-500 text-white hover:bg-yellow-600 hover:border-yellow-600']</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>.gap-x-4 > div:nth-of-type(1) .rounded-r</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

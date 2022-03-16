@@ -32,19 +32,19 @@
    <testCaseLink>
       <guid>edeadb5f-2816-4f1a-8a2c-9b254153cf34</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/AddProductWithoutVariables</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>52307945-3a12-40aa-a8b6-8310c225da88</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/PopUpButtonContinueShopping</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c637969a-5e4e-4bd7-8c0d-723d6cf51829</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/AddProductWithVariables</testCaseId>
    </testCaseLink>
    <testCaseLink>

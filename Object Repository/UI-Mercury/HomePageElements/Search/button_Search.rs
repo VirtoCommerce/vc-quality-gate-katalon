@@ -3,18 +3,22 @@
    <description></description>
    <name>button_Search</name>
    <tag></tag>
-   <elementGuidId>8941861e-7dd9-43d0-8003-dd31777f752d</elementGuidId>
+   <elementGuidId>058af6e3-1e01-4768-ac5b-08e0108e63b0</elementGuidId>
    <selectorCollection>
-      <entry>
-         <key>XPATH</key>
-         <value>//button[@type='submit']</value>
-      </entry>
       <entry>
          <key>CSS</key>
          <value>button.btn.btn-primary.ng-binding</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'button' and (text() = 'Search' or . = 'Search')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -28,21 +32,21 @@
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>submit</value>
+      <value>button</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>btn btn-primary ng-binding</value>
+      <value>rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer bg-yellow-500 text-white hover:bg-yellow-600 h-9 text-base uppercase px-4 h-10</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ng-bind</name>
+      <name>is-disabled</name>
       <type>Main</type>
-      <value>$ctrl.submitLabel</value>
+      <value>false</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -56,41 +60,41 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[@class=&quot;js&quot;]/body[@class=&quot;customer-logged-in template-search ng-scope&quot;]/header[@class=&quot;hidden-print hidden-xs hidden-sm&quot;]/nav[@class=&quot;navbar navbar-inverse-light navbar-static-top&quot;]/div[@class=&quot;container&quot;]/vc-search-bar[@class=&quot;ng-isolate-scope&quot;]/form[@class=&quot;navbar-form navbar-form-justify ng-valid ng-dirty ng-valid-parse&quot;]/div[@class=&quot;input-group dropdown&quot;]/span[@class=&quot;input-group-btn&quot;]/button[@class=&quot;btn btn-primary ng-binding&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;z-10 shadow-md&quot;]/div[@class=&quot;relative&quot;]/div[@class=&quot;flex items-center justify-between px-12 py-7 bg-gray-800 select-none absolute top-0 w-full z-20 transition-transform duration-300&quot;]/div[@class=&quot;flex flex-grow relative&quot;]/button[@class=&quot;rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer bg-yellow-500 text-white hover:bg-yellow-600 h-9 text-base uppercase px-4 h-10&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>//button[@type='submit']</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Searching...'])[1]/preceding::button[1]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='No products found'])[1]/preceding::button[1]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Search']/parent::*</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//button</value>
+      <value></value>
    </webElementXpaths>
 </WebElementEntity>

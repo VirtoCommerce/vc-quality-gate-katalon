@@ -9,12 +9,12 @@
          <key>CSS</key>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//body[@id='inkjet-printers']/main/div[3]/div[2]/div/div[2]/div[2]/div/div/add-to-compare-checkbox-migration/div</value>
+         <key>BASIC</key>
+         <value>//*[@class = 'flex-grow hidden md:inline-flex items-center text-sm cursor-pointer' and (text() = 'Compare' or . = 'Compare')]</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@class = 'custom-control custom-checkbox my-2']</value>
+         <key>XPATH</key>
+         <value>//body[@id='inkjet-printers']/main/div[3]/div[2]/div/div[2]/div[2]/div/div/add-to-compare-checkbox-migration/div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,40 +24,28 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>label</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>custom-control custom-checkbox my-2</value>
+      <value>flex-grow hidden md:inline-flex items-center text-sm cursor-pointer</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-click</name>
-      <type>Main</type>
-      <value>$ctrl.addProductToCompareList($event);</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>
-    
-    
-        Compare
-    
-</value>
+      <value>Compare</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;inkjet-printers&quot;)/main[@class=&quot;collection container pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row navigation&quot;]/div[@class=&quot;col&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;row row-cols-1 row-cols-sm-2 row-cols-lg-4&quot;]/div[@class=&quot;col-12 col-sm-6 col-md-4 col-lg-3 card-container&quot;]/div[@class=&quot;card border-gray-200&quot;]/div[@class=&quot;card-body&quot;]/add-to-compare-checkbox-migration[@class=&quot;ng-isolate-scope&quot;]/div[@class=&quot;custom-control custom-checkbox my-2&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 xl:gap-x-6 xl:gap-y-8&quot;]/div[@class=&quot;flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden&quot;]/div[@class=&quot;flex flex-col flex-grow pt-4&quot;]/div[@class=&quot;flex items-center justify-between mb-3&quot;]/label[@class=&quot;flex-grow hidden md:inline-flex items-center text-sm cursor-pointer&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

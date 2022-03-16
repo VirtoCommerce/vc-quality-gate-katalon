@@ -6,18 +6,22 @@
    <elementGuidId>2346c976-fc33-4729-b026-aa1b6fa0edea</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Carriage Bolts' or . = 'Carriage Bolts')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>a.font-weight-bold.text-condensed.ng-binding</value>
       </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//a[contains(text(),'Carriage Bolts')]</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -26,30 +30,16 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ng-href</name>
+      <name>aria-current</name>
       <type>Main</type>
-      <value>~/bolts/carriage-bolts</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-bind</name>
-      <type>Main</type>
-      <value>link.title</value>
+      <value>page</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>font-weight-bold text-condensed ng-binding</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>href</name>
-      <type>Main</type>
-      <value>~/bolts/carriage-bolts</value>
+      <value>router-link-active router-link-exact-active font-bold text-gray-500 text-sm</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -63,55 +53,55 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>/html[@class=&quot;h-100 js&quot;]/body[@class=&quot;customer-logged-in template-customersaccount ng-scope&quot;]/header[@class=&quot;d-none d-md-block&quot;]/nav[@class=&quot;navbar-dark bg-gray-900&quot;]/div[@class=&quot;container&quot;]/div[@class=&quot;row no-gutters&quot;]/ul[@class=&quot;nav&quot;]/li[@class=&quot;nav-item active&quot;]/div[@class=&quot;popover ng-scope ng-isolate-scope bottom rounded-0 hide-arrow fade bs-popover-bottom-left show&quot;]/div[@class=&quot;popover-body&quot;]/div[@class=&quot;all-products-popover ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6 py-1 px-4 popover-category ng-scope&quot;]/ul[@class=&quot;nav text-nowrap&quot;]/li[1]/a[@class=&quot;font-weight-bold text-condensed ng-binding&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;z-10 shadow-md&quot;]/div[@class=&quot;relative&quot;]/div[@class=&quot;px-12 py-7 flex items-center justify-between bg-white&quot;]/div[@class=&quot;flex items-center space-x-8&quot;]/div[@class=&quot;relative&quot;]/div[@class=&quot;absolute z-10 bg-white rounded-md shadow-lg w-60 flex flex-col px-5 py-4 space-y-3 mt-2&quot;]/a[@class=&quot;router-link-active router-link-exact-active font-bold text-gray-500 text-sm&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:link</name>
       <type>Main</type>
-      <value>//a[contains(text(),'Carriage Bolts')]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Contact Us'])[1]/following::a[2]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Flange Bolts'])[1]/preceding::a[1]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Laser Printers'])[1]/preceding::a[2]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Carriage Bolts']/parent::*</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:href</name>
       <type>Main</type>
-      <value>//a[contains(@href, '~/bolts/carriage-bolts')]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div/div/div/ul/li/a</value>
+      <value></value>
    </webElementXpaths>
 </WebElementEntity>

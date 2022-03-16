@@ -9,11 +9,15 @@
          <key>CSS</key>
       </entry>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@type = 'number']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>(//input[@type='text'])[3]</value>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -27,55 +31,48 @@
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
-      <value>text</value>
+      <value>number</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>form-control ng-pristine ng-untouched ng-valid ng-not-empty</value>
+      <value>appearance-none border rounded-none rounded-l border-r-0 flex-1 w-full text-base lg:text-sm border-gray-300 focus:border-gray-400 h-9 outline-none px-3 leading-9 min-w-0</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ng-init</name>
+      <name>pattern</name>
       <type>Main</type>
-      <value>product['e3689aabceb44a12be512ec0acd89887'].quantity = 1; unavailable = false || false </value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-model</name>
-      <type>Main</type>
-      <value>product['e3689aabceb44a12be512ec0acd89887'].quantity</value>
+      <value>\d*</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;inkjet-printers&quot;)/main[@class=&quot;collection container pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row navigation&quot;]/div[@class=&quot;col&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;row row-cols-1 row-cols-sm-2 row-cols-lg-4&quot;]/div[@class=&quot;col-12 col-sm-6 col-md-4 col-lg-3 card-container&quot;]/div[@class=&quot;card border-gray-200&quot;]/div[@class=&quot;card-body&quot;]/ng-controller[@class=&quot;ng-scope&quot;]/div[@class=&quot;input-group&quot;]/input[@class=&quot;form-control ng-pristine ng-untouched ng-valid ng-not-empty&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 xl:gap-x-6 xl:gap-y-8&quot;]/div[@class=&quot;flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden&quot;]/div[@class=&quot;flex flex-col flex-grow pt-4&quot;]/div[@class=&quot;flex relative&quot;]/input[@class=&quot;appearance-none border rounded-none rounded-l border-r-0 flex-1 w-full text-base lg:text-sm border-gray-300 focus:border-gray-400 h-9 outline-none px-3 leading-9 min-w-0&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
       <type>Main</type>
-      <value>(//input[@type='text'])[3]</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//body[@id='inkjet-printers']/main/div[3]/div[2]/div/div[2]/div[2]/div/div/ng-controller/div[2]/input</value>
+      <value></value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/div/div/ng-controller/div[2]/input</value>
+      <value></value>
    </webElementXpaths>
 </WebElementEntity>

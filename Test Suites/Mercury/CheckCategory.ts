@@ -12,51 +12,39 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>8013cd61-3bca-41e7-96b9-3f1521cef422</testSuiteGuid>
    <testCaseLink>
-      <guid>23838123-8f78-411b-b8d6-ce7fd1960ebe</guid>
+      <guid>236ceffb-2435-467a-a512-3ebd4bad8ff2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/OpenBrowser</testCaseId>
+      <testCaseId>Test Cases/Mercury/BrowserAction/OpenBrowser</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4a9ef88f-6024-4282-af7f-d02db543fdd4</guid>
+      <guid>d3d592e8-fe71-4b7c-a629-df02966a7343</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Catalog/CheckCatalog/CheckCategoryPages</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/CheckCategoryPages</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>05bcfdab-2303-4839-a3e6-379ee3053be5</guid>
+      <guid>3c20615b-1b6e-419e-bbe0-70a471a9e51c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Catalog/CheckCatalog/OpenCategoryCarriageBolts</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/Filters/Filters</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c986ff2a-41fc-4037-a567-7d5f8b9c585d</guid>
+      <guid>b439e873-f945-4497-8ee4-9e505ca05d4d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Catalog/CheckCatalog/OpenCategoryInkjetPrinters</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/Sorting/Sorting</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b0e98c9e-8ab3-4b25-953e-c7cc1d37cd1d</guid>
+      <guid>e88cb160-441d-454a-9fde-60f7fdd68f61</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Catalog/Filters/Filters</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/Catalog/ProductPage/ProductBlockView</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5d85c36f-2ec2-4f82-9f7b-d4f3be0a0ecf</guid>
+      <guid>796b76d9-35f4-4e0a-a9ff-72fe7e71b637</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Catalog/Sorting/Sorting</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>482a79c0-cc8d-4296-86aa-211b577f4e5a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Catalog/ProductPage/ProductBlockView</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e697e3c0-0626-47a4-9576-6643e2c3b3e3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/CloseBrowser</testCaseId>
+      <testCaseId>Test Cases/Mercury/BrowserAction/CloseBrowser</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

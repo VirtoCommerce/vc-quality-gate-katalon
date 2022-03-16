@@ -31,6 +31,3 @@ def AddCartCatalog = WebUI.getText(findTestObject('1 UI-B2B ST/CheckOut/CreateOr
 
 WebUI.verifyMatch(AddCartCatalog, "1 ITEM WAS ADDED TO CART", false)
 
-
-
-
