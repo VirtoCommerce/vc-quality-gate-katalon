@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CartItemsAdd</name>
+   <name>CartsItemsAdd</name>
    <tag></tag>
    <elementGuidId>829d7cc7-83d6-422c-b636-b40dc2acbab1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

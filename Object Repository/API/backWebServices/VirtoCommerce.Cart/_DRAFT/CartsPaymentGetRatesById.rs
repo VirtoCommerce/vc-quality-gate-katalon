@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CartItemsDelete</name>
+   <name>CartsPaymentGetRatesById</name>
    <tag></tag>
-   <elementGuidId>180c79aa-7c32-4849-9a61-36622f262933</elementGuidId>
+   <elementGuidId>a62a47a1-baa3-419d-8710-f662d2e1a65e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${itemName}\&quot;,\n\t\&quot;description\&quot;: \&quot;qwe qwe\&quot;,\n\t\&quot;folderId\&quot;: \&quot;ContentItem\&quot;\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>text/plain</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -31,8 +27,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/carts/${cartId}/items</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}​/api/carts/${cartId}/availpaymentmethods</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,7 +40,7 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
-      <id>03f7967d-31e9-44aa-8200-4b4153f06a27</id>
+      <id>655b8482-1b68-417a-a4cc-91fd95d8a265</id>
       <masked>false</masked>
       <name>cartId</name>
    </variables>

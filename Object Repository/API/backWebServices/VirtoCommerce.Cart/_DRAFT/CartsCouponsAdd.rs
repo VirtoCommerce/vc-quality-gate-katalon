@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CartItemsAddLineItem</name>
+   <name>CartsCouponsAdd</name>
    <tag></tag>
-   <elementGuidId>a9710222-3e42-4310-a2e6-ae0f511e69cf</elementGuidId>
+   <elementGuidId>0e37ec37-b428-4a96-8275-7871f743386a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/carts/${cartId}/items?lineItemId=&amp;quantity=</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/carts/${cartId}/coupons/${couponCode}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -47,6 +47,13 @@
       <id>03f7967d-31e9-44aa-8200-4b4153f06a27</id>
       <masked>false</masked>
       <name>cartId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>ee776215-15d5-45f7-9cb7-cedafcc64339</id>
+      <masked>false</masked>
+      <name>couponCode</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

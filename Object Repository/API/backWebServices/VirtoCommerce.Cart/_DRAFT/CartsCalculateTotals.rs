@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>CartsGetFiltered</name>
+   <name>CartsCalculateTotals</name>
    <tag></tag>
-   <elementGuidId>e3b4c175-116e-41c6-9f3d-be8fc421a706</elementGuidId>
+   <elementGuidId>b57418c2-aa6d-4813-aecf-aab01424963d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n \&quot;id\&quot;: \&quot;d091212f-48c5-45ce-b591-f490a53f5bd4\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/carts/${storeId}/${customerId}/${cartName}/${currency}/${cultureName}/current</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/carts/recalculate</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,41 +41,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>id of the existing Store</description>
-      <id>e01223e6-8437-4a3d-8e6f-d8198d9ef6d8</id>
-      <masked>false</masked>
-      <name>storeId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>a537c91b-a166-4a46-bb69-fb5747136e78</id>
-      <masked>false</masked>
-      <name>customerId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>c269106b-df9f-4c2c-8168-d80a4a2fd9ee</id>
-      <masked>false</masked>
-      <name>cartName</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>367aeeaa-f225-44bb-bd50-abe1f8e229fd</id>
-      <masked>false</masked>
-      <name>currency</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>151e48ff-3d3c-406c-ae09-06a3ad4a0911</id>
-      <masked>false</masked>
-      <name>cultureName</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
