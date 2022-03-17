@@ -41,7 +41,7 @@ tagAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 
 
 'GET THE LIST OF TAGS AND VERIFY THE NEW TAG HAS BEEN ADDED'
-changedTagsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsTagsGet'))
+changedTagsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
 verifyAdded = WS.containsString(changedTagsGet, tag, false)
 
 
@@ -53,7 +53,7 @@ tagUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCom
 
 
 'VERIFY THE TAG HAS BEEN UPDATED'
-tagsUpdatedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsTagsGet'))
+tagsUpdatedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
 verifyUpdated = WS.containsString(tagsUpdatedGet, tag, false)
 
 
@@ -62,6 +62,6 @@ tagDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCom
  
 
 'VERIFY THE TAG HAS BEEN DELETED'
-tagsDeletedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsTagsGet'))
+tagsDeletedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
 verifyDeleted =  WS.containsString(tagsUpdatedGet, tag, false, FailureHandling.CONTINUE_ON_FAILURE) == false
 

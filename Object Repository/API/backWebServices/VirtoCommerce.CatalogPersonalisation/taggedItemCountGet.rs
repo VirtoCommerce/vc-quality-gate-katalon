@@ -3,7 +3,7 @@
    <description></description>
    <name>taggedItemCountGet</name>
    <tag></tag>
-   <elementGuidId>7f8da2d2-eb99-4231-944b-650b16a227ad</elementGuidId>
+   <elementGuidId>b5279197-cf27-4187-8133-9d2caca45ac6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/personalization/taggeditem/${taggedItemId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/personalization/taggeditem/${taggedItemId}/tags/count</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
