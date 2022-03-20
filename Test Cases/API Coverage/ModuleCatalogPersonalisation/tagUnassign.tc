@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>assign tag to a product</description>
+   <name>tagUnassign</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d085f5b0-70fd-4855-9c2c-893977687776</testCaseGuid>
+</TestCaseEntity>

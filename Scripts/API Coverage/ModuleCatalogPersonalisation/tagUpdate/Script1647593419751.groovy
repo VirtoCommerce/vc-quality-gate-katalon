@@ -25,43 +25,17 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
-WebUI.comment('TEST CASE: assign a tag to a product')
+WebUI.comment('TEST CASE: update tag')
 
 
-'GET THE PRODUCT DATA REQUIRED FOR ASSIGNING A TAG'
-productGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup',[
-	('id') : GlobalVariable.productId
-	]))
-label = WS.getElementPropertyValue(productGet,'[0].name')
-entityType = WS.getElementPropertyValue(productGet,'[0].properties[0].type')
-entityId = WS.getElementPropertyValue(productGet,'[0].id')
-assignmentId = UUID.randomUUID().toString()
-
-
-'ASSIGN THE CREATED TAG TO THE PRODUCT'
-tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagAssign',[
-	('entityType'): entityType,
-	('entityId'): entityId,
-	('tag'): GlobalVariable.tag,
-	('label'): label,
-	('assignmentId') : assignmentId
+'UPDATE THE CREATED TAG'
+GlobalVariable.tag = GlobalVariable.tag + 'UPD' 
+tagUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagAddUpdate',[
+	('tag') : GlobalVariable.tag 
 	]))
 
 
-/*
-'UNASSIGN THE TAG'
-tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagUnassign',[
-	('entityType'): entityType,
-	('entityId'): entityId,
-	('label'): label,
-	('assignmentId') : assignmentId
-	]))
+'VERIFY THE TAG HAS BEEN UPDATED'
+tagsUpdatedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
+verifyUpdated = WS.containsString(tagsUpdatedGet, GlobalVariable.tag, false)
 
-
-'VERIFY THE TAG HAS BEEN UNASSIGNED'
-verifyUnassigned = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemGetById',[
-	('taggedItemId') : GlobalVariable.productId
-	]))
-verification = WS.containsString(verifyUnassigned, GlobalVariable.tag, false, FailureHandling.OPTIONAL) == false
-*/
-  

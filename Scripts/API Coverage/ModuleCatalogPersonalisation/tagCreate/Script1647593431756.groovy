@@ -28,40 +28,12 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('TEST CASE: create a new tag')
 
 
-//'CREATE A PRODUCT FIRST'
-//productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'), 
-//	null)
-
-
 'ADD A NEW TAG TO THE DICTIONARY'
-tag = 'qweTag'
 tagAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagAddUpdate',[
-	('tag') : tag
+	('tag') : GlobalVariable.tag
 	]))
 
 
 'GET THE LIST OF TAGS AND VERIFY THE NEW TAG HAS BEEN ADDED'
 changedTagsGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
-verifyAdded = WS.containsString(changedTagsGet, tag, false)
-
-
-'UPDATE THE CREATED TAG'
-updatedTag = tag + 'UPD' 
-tagUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagAddUpdate',[
-	('tag') : updatedTag 
-	]))
-
-
-'VERIFY THE TAG HAS BEEN UPDATED'
-tagsUpdatedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
-verifyUpdated = WS.containsString(tagsUpdatedGet, tag, false)
-
-
-'DELETE THE CREATED TAG (revert to the initial state)'
-tagDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagDelete'))
- 
-
-'VERIFY THE TAG HAS BEEN DELETED'
-tagsDeletedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
-verifyDeleted =  WS.containsString(tagsUpdatedGet, tag, false, FailureHandling.CONTINUE_ON_FAILURE) == false
-
+verifyAdded = WS.containsString(changedTagsGet, GlobalVariable.tag, false)

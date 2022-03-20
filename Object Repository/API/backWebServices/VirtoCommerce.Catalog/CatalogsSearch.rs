@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'AutoTestCatalog'</defaultValue>
+      <defaultValue>'Electronics'</defaultValue>
       <description>keyword to search with</description>
       <id>4bb74c52-c3b4-433c-bab9-b4459004a280</id>
       <masked>false</masked>

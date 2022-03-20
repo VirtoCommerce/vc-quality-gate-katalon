@@ -25,43 +25,16 @@ import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
-WebUI.comment('TEST CASE: assign a tag to a product')
+WebUI.comment('TEST CASE: create a tag from the dictionary')
 
 
-'GET THE PRODUCT DATA REQUIRED FOR ASSIGNING A TAG'
-productGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup',[
-	('id') : GlobalVariable.productId
-	]))
-label = WS.getElementPropertyValue(productGet,'[0].name')
-entityType = WS.getElementPropertyValue(productGet,'[0].properties[0].type')
-entityId = WS.getElementPropertyValue(productGet,'[0].id')
-assignmentId = UUID.randomUUID().toString()
 
-
-'ASSIGN THE CREATED TAG TO THE PRODUCT'
-tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagAssign',[
-	('entityType'): entityType,
-	('entityId'): entityId,
-	('tag'): GlobalVariable.tag,
-	('label'): label,
-	('assignmentId') : assignmentId
-	]))
-
-
-/*
-'UNASSIGN THE TAG'
-tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagUnassign',[
-	('entityType'): entityType,
-	('entityId'): entityId,
-	('label'): label,
-	('assignmentId') : assignmentId
-	]))
-
-
-'VERIFY THE TAG HAS BEEN UNASSIGNED'
-verifyUnassigned = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemGetById',[
-	('taggedItemId') : GlobalVariable.productId
-	]))
-verification = WS.containsString(verifyUnassigned, GlobalVariable.tag, false, FailureHandling.OPTIONAL) == false
-*/
+ 'DELETE THE CREATED TAG (revert to the initial state)'
+ tagDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagDelete'))
   
+ 
+ 'VERIFY THE TAG HAS BEEN DELETED'
+ tagsDeletedGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/settingsTagsGet'))
+ verifyDeleted =  WS.containsString(tagsDeletedGet, GlobalVariable.tag, false, FailureHandling.OPTIONAL) == false
+
+ 

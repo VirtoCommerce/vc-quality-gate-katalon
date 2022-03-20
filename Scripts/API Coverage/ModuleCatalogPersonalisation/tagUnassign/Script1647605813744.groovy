@@ -48,7 +48,6 @@ tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWe
 	]))
 
 
-/*
 'UNASSIGN THE TAG'
 tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagUnassign',[
 	('entityType'): entityType,
@@ -63,5 +62,4 @@ verifyUnassigned = WS.sendRequestAndVerify(findTestObject('Object Repository/API
 	('taggedItemId') : GlobalVariable.productId
 	]))
 verification = WS.containsString(verifyUnassigned, GlobalVariable.tag, false, FailureHandling.OPTIONAL) == false
-*/
-  
+

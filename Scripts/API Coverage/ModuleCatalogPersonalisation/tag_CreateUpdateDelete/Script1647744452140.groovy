@@ -16,4 +16,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper
 
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+
+'TEST SUITE TEMPLATE'
+
+tagCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagCreate'),
+	null)
+
+tagUpdate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagUpdate'),
+		null)
+
+tagDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagDeleteFromDictionary'),
+		null)
+
+tagPropagationUpTree = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagPropagationUpTree'),
+		null)
+
+tagPropagationDownTree = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagPropagationDownTree'),
+		null)

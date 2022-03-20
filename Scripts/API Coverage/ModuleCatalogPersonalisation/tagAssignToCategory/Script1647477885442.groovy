@@ -28,11 +28,6 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('TEST CASE: assign a tag to a category')
 
 
-'CREATE A CATEGORY FIRST'
-categoryCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/categoryCreate'),
-	null)
-
-
 'GET THE NECESSARY DATA OF THE CATEGORY (BY ID)'
 categoryGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/CategoriesGetById',[
 	('id') : GlobalVariable.categoryId
@@ -42,24 +37,12 @@ entityType = WS.getElementPropertyValue(categoryGet,'seoObjectType')
 entityId = WS.getElementPropertyValue(categoryGet,'id')
 assignmentId = UUID.randomUUID().toString()
 
-println label
-println entityType
-println entityId
-println assignmentId
 
-
-'ADD A NEW TAG TO THE DICTIONARY'
-tag = 'qweTag2'
-tagAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagAddUpdate',[
-	('tag') : tag
-	]))
-
-
-'ASSIGN THE CREATED TAG TO THE PRODUCT'
+'ASSIGN THE CREATED TAG TO THE CATEGORY'
 tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagAssign',[
 	('entityType'): entityType,
 	('entityId'): entityId,
-	('tag'): tag,
+	('tag'): GlobalVariable.tag,
 	('label'): label,
 	('assignmentId') : assignmentId
 	]))
@@ -69,9 +52,9 @@ tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWe
 verifyTag = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemGetById',[
 	('taggedItemId') : GlobalVariable.categoryId
 	]))
-WS.verifyElementPropertyValue(verifyTag,'tags[0]', tag)
+WS.verifyElementPropertyValue(verifyTag,'tags[0]', GlobalVariable.tag)
 
-
+/*
 'UNASSIGN THE TAG'
 tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagUnassign',[
 	('entityType'): entityType,
@@ -85,6 +68,6 @@ tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 verifyUnassigned = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemGetById',[
 	('taggedItemId') : GlobalVariable.categoryId
 	]))
-verification = WS.containsString(verifyUnassigned, tag, false, FailureHandling.OPTIONAL) == false
-
+verification = WS.containsString(verifyUnassigned, GlobalVariable.tag, false, FailureHandling.OPTIONAL) == false
+*/
   
