@@ -28,7 +28,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('TEST CASE: assign a tag to a product')
 
 
-'GET THE PRODUCT DATA REQUIRED FOR ASSIGNING A TAG'
+'GET THE PRODUCT DATA REQUIRED TO UNASSIGNING A TAG'
 productGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/ProductsGetByIdAndGroup',[
 	('id') : GlobalVariable.productId
 	]))
@@ -38,18 +38,8 @@ entityId = WS.getElementPropertyValue(productGet,'[0].id')
 assignmentId = UUID.randomUUID().toString()
 
 
-'ASSIGN THE CREATED TAG TO THE PRODUCT'
-tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagAssign',[
-	('entityType'): entityType,
-	('entityId'): entityId,
-	('tag'): GlobalVariable.tag,
-	('label'): label,
-	('assignmentId') : assignmentId
-	]))
-
-
 'UNASSIGN THE TAG'
-tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagUnassign',[
+tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagPutUnassign',[
 	('entityType'): entityType,
 	('entityId'): entityId,
 	('label'): label,

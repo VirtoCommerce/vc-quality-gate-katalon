@@ -39,7 +39,7 @@ assignmentId = UUID.randomUUID().toString()
 
 
 'ASSIGN THE CREATED TAG TO THE PRODUCT'
-tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagAssign',[
+tagAssign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagPutAssign',[
 	('entityType'): entityType,
 	('entityId'): entityId,
 	('tag'): GlobalVariable.tag,
@@ -48,20 +48,9 @@ tagAssign = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWe
 	]))
 
 
-/*
-'UNASSIGN THE TAG'
-tagUnassign = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/tagUnassign',[
-	('entityType'): entityType,
-	('entityId'): entityId,
-	('label'): label,
-	('assignmentId') : assignmentId
-	]))
-
-
-'VERIFY THE TAG HAS BEEN UNASSIGNED'
-verifyUnassigned = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemGetById',[
+'VERIFY THE TAG HAS BEEN ADDED'
+verifyTag = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemGetById',[
 	('taggedItemId') : GlobalVariable.productId
 	]))
-verification = WS.containsString(verifyUnassigned, GlobalVariable.tag, false, FailureHandling.OPTIONAL) == false
-*/
-  
+WS.verifyElementPropertyValue(verifyTag,'tags[0]', GlobalVariable.tag)
+

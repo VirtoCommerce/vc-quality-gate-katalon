@@ -31,7 +31,7 @@ WebUI.comment('TEST CASE: policy propagate uptree')
 
 'SET THE PROPAGATION POLICY TO UPTREE'
 policySet = 'UpTree'
-policySetUpTree = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsPropagationChange',[
+policySetUpTree = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_relatedSettingsUpdate/settingsPropagationChange',[
 	('value') : policySet
 	]))
 
@@ -80,11 +80,24 @@ updatedTagAssignToTheProduct = WS.callTestCase(findTestCase('Test Cases/API Cove
 	null)
 
 
+'GET THE PRODUCT TAGS NUMBER (simple endpoint check)'
+tagsAssignedCountGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemCountGet',[
+	('taggedItemId') : GlobalVariable.productId
+	]))
+tagsAssignedCount = new JsonSlurper().parseText(tagsAssignedCountGet.getResponseBodyContent())
+assert tagsAssignedCount == 1
+
+
 'VERIFY THE CATEGORY INHERITS A TAG FROM THE PRODUCT'
 categoryInheriterTagGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/taggedItemGetById',[
 	('taggedItemId') : GlobalVariable.categoryId
 	]))
 WS.verifyElementPropertyValue(categoryInheriterTagGet,'inheritedTags[0]', GlobalVariable.tag)
+
+
+'UNASSIGN THE TAG FROM THE PRODUCT'
+tagUnassign = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagUnassignOfTheProduct'),
+	null)
 
 
 'Delete the created product'

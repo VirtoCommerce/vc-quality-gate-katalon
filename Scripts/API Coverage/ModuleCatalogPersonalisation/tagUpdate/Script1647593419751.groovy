@@ -30,7 +30,7 @@ WebUI.comment('TEST CASE: update tag')
 
 'UPDATE THE CREATED TAG'
 GlobalVariable.tag = GlobalVariable.tag + 'UPD' 
-tagUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagAddUpdate',[
+tagUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_relatedSettingsUpdate/settingsDictionaryTagAddUpdate',[
 	('tag') : GlobalVariable.tag 
 	]))
 

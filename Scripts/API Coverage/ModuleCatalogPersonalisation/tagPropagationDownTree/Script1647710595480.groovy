@@ -31,7 +31,7 @@ WebUI.comment('TEST CASE: policy propagate downtree')
 
 'SET THE PROPAGATION POLICY TO DOWNTREE'
 policySet = 'DownTree'
-policySetUpTree = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsPropagationChange',[
+policySetUpTree = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_relatedSettingsUpdate/settingsPropagationChange',[
 	('value') : policySet
 	]))
 
@@ -85,10 +85,6 @@ categoryInheriterTagGet = WS.sendRequestAndVerify(findTestObject('Object Reposit
 	('taggedItemId') : GlobalVariable.categoryId
 	]))
 WS.verifyElementPropertyValue(categoryInheriterTagGet,'inheritedTags[0]', null)
-
-
-'GET THE CATALOG TAGS TO VERIFY IT DOESNT INHERIT ANY TAGS'
-'YET TO FIGURE OUT, SEEMS THERES NO TAG ON CATALOG LEVEL'
 
 
 'Delete the created product'

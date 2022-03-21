@@ -29,7 +29,7 @@ WebUI.comment('TEST CASE: create a new tag')
 
 
 'ADD A NEW TAG TO THE DICTIONARY'
-tagAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagAddUpdate',[
+tagAdd = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_relatedSettingsUpdate/settingsDictionaryTagAddUpdate',[
 	('tag') : GlobalVariable.tag
 	]))
 

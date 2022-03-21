@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>tagAssign</name>
+   <name>tagPutUnassign</name>
    <tag></tag>
-   <elementGuidId>5c36bc09-8c34-473c-9967-be0752b4a2a0</elementGuidId>
+   <elementGuidId>d63a5b11-2bfb-4210-ad8d-cf6c4b0afc5d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;entityType\&quot;: \&quot;${entityType}\&quot;,\n\t\&quot;entityId\&quot;: \&quot;${entityId}\&quot;,\n\t\&quot;tags\&quot;: [\n\t\t\&quot;${tag}\&quot;\n\t],\n\t\&quot;inheritedTags\&quot;: [],\n\t\&quot;label\&quot;: \&quot;${label}\&quot;,\n  \t\&quot;id\&quot;: \&quot;${assignmetId}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;entityType\&quot;: \&quot;${entityType}\&quot;,\n\t\&quot;entityId\&quot;: \&quot;${entityId}\&quot;,\n\t\&quot;tags\&quot;: [],\n\t\&quot;inheritedTags\&quot;: [],\n\t\&quot;label\&quot;: \&quot;${label}\&quot;,\n  \t\&quot;id\&quot;: \&quot;${assignmetId}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>tag_CreateUpdateDelete</name>
+   <name>_suite_Template</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>d7ecdd43-260d-49c5-b85c-d36c72bbddfc</testCaseGuid>

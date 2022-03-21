@@ -30,7 +30,7 @@ WebUI.comment('TEST CASE: create a tag from the dictionary')
 
 
  'DELETE THE CREATED TAG (revert to the initial state)'
- tagDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_DRAFT/settingsDictionaryTagDelete'))
+ tagDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.CatalogPersonalisation/_relatedSettingsUpdate/settingsDictionaryTagDelete'))
   
  
  'VERIFY THE TAG HAS BEEN DELETED'
