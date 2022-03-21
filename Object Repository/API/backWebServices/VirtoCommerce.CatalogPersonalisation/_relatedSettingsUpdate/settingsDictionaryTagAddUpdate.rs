@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductsGetByIdAndGroup</name>
+   <name>settingsDictionaryTagAddUpdate</name>
    <tag></tag>
-   <elementGuidId>c1a70609-929d-4f78-b844-7439d19a4794</elementGuidId>
+   <elementGuidId>1561f710-7eea-469a-ba71-19935cf4ae1d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;itHasValues\&quot;: true,\n\t\t\&quot;restartRequired\&quot;: false,\n\t\t\&quot;moduleId\&quot;: \&quot;VirtoCommerce.Customer\&quot;,\n\t\t\&quot;groupName\&quot;: \&quot;Customer|General\&quot;,\n\t\t\&quot;name\&quot;: \&quot;Customer.MemberGroups\&quot;,\n\t\t\&quot;isHidden\&quot;: false,\n\t\t\&quot;valueType\&quot;: \&quot;ShortText\&quot;,\n\t\t\&quot;allowedValues\&quot;: [\n\t\t\t\&quot;${tag}\&quot;,\n\t\t\t\&quot;VIP\&quot;,\n\t\t\t\&quot;Wholesaler\&quot;\n\t\t],\n\t\t\&quot;defaultValue\&quot;: \&quot;New\&quot;,\n\t\t\&quot;isDictionary\&quot;: true\n\t}\n]&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products?ids=${id}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/settings</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'d154d30d76d548fb8505f5124d18c1f3'</defaultValue>
-      <description>searched product id</description>
-      <id>8b64082b-4e68-4358-b546-2618a39079d3</id>
+      <defaultValue>''</defaultValue>
+      <description>tag to add to the dictionary</description>
+      <id>4bb74c52-c3b4-433c-bab9-b4459004a280</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>tag</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -56,8 +60,8 @@ import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-//KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
+KeywordUtil.logInfo(prettyJson)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ProductsGetByIdAndGroup</name>
+   <name>personalisationSearch</name>
    <tag></tag>
-   <elementGuidId>c1a70609-929d-4f78-b844-7439d19a4794</elementGuidId>
+   <elementGuidId>899d98cf-6ec0-4db6-87a0-7c5d9ad08049</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n   \&quot;skip\&quot;:0,\n   \&quot;take\&quot;:20\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>text/plain</value>
+      <value>application/json</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/catalog/products?ids=${id}</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/personalization/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'d154d30d76d548fb8505f5124d18c1f3'</defaultValue>
-      <description>searched product id</description>
-      <id>8b64082b-4e68-4358-b546-2618a39079d3</id>
+      <defaultValue>'AutoTestCatalog'</defaultValue>
+      <description>keyword to search with</description>
+      <id>4bb74c52-c3b4-433c-bab9-b4459004a280</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -56,7 +60,7 @@ import com.kms.katalon.core.util.KeywordUtil
 
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-//KeywordUtil.logInfo(prettyJson)
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
 </verificationScript>
    <wsdlAddress></wsdlAddress>

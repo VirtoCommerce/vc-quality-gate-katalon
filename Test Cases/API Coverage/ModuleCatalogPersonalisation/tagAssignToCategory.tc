@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>add a tag to the category</description>
+   <name>tagAssignToCategory</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c11d51a3-1bb5-4bdf-9ec7-b14e45bb2ee9</testCaseGuid>
+</TestCaseEntity>

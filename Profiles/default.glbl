@@ -474,4 +474,14 @@
       <initValue>''</initValue>
       <name>publicationId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>catalog personalisation tag</description>
+      <initValue>'qweTag'</initValue>
+      <name>tag</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the tag assignment</description>
+      <initValue>''</initValue>
+      <name>tagAssignmentId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
