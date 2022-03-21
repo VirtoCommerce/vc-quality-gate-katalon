@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>update the  created tag </description>
    <name>tagUpdate</name>
    <tag></tag>
    <comment></comment>

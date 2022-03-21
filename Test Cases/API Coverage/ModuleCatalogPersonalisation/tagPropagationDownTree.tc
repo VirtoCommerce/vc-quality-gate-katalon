@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>set tag propagation to downTree and check if its being inherit properly
+</description>
    <name>tagPropagationDownTree</name>
    <tag></tag>
    <comment></comment>

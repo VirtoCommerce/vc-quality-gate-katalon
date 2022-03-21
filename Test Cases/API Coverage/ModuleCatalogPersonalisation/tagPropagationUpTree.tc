@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>set tag propagation to upTree and check if its being inherit properly
+</description>
    <name>tagPropagationUpTree</name>
    <tag></tag>
    <comment></comment>

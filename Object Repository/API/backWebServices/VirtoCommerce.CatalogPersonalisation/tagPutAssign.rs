@@ -71,7 +71,7 @@
    </variables>
    <variables>
       <defaultValue>'f00beb14-2845-48d3-9c76-b53b6b509b62'</defaultValue>
-      <description></description>
+      <description>id of the tag assignment</description>
       <id>4443f856-27cc-4326-aec0-ec85c64ddddf</id>
       <masked>false</masked>
       <name>assignmetId</name>
