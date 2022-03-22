@@ -54,3 +54,8 @@ verifyTag = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWe
 	]))
 WS.verifyElementPropertyValue(verifyTag,'tags[0]', GlobalVariable.tag)
 
+
+'VERIFY THE ADDED TAG IS AVAILABLE VIA PERSONALISATION SEARCH (simple endpoint check)'
+personalisationSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPersonalisation/personalisationSearch'))
+verifyAvailable = WS.containsString(personalisationSearch, GlobalVariable.tag, false)
+
