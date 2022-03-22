@@ -59,7 +59,7 @@ productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 
 
 'ASSIGN THE TAG TO THE CATEGORY'
-tagAssignToCategory = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagAssignToCategory'), 
+tagAssignToCategory = WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPersonalisation/tagPostAssignToCategory'), 
 	null)
 
 
@@ -76,7 +76,7 @@ tagUpdate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogP
 
 
 'ASSIGN THE UPDATED TAG TO THE PRODUCT'
-updatedTagAssignToTheProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagAssignToProduct'),
+updatedTagAssignToTheProduct = WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPersonalisation/tagPostAssignToProduct'),
 	null)
 
 

@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/personalization/outlines/synchronize</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/personalization/outlines/synchronization/cancel</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'jobId'</defaultValue>
+      <defaultValue>'11204'</defaultValue>
       <description>id of thejob to cancel syncronisation</description>
       <id>4bb74c52-c3b4-433c-bab9-b4459004a280</id>
       <masked>false</masked>
@@ -61,7 +61,7 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

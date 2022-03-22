@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>assign tag to a product</description>
-   <name>tagUnassignOfTheProduct</name>
+   <name>tagPostAssignToProduct</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>d085f5b0-70fd-4855-9c2c-893977687776</testCaseGuid>
+   <testCaseGuid>0a44897f-9521-4b92-9cf6-cd817669acf1</testCaseGuid>
 </TestCaseEntity>

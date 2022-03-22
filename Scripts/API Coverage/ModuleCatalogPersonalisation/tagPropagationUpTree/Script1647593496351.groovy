@@ -36,6 +36,11 @@ policySetUpTree = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vi
 	]))
 
 
+'RUN THE OUTLINES SYNC'
+oulinesSync = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagOutlinesSync'), 
+	null)
+
+
 'GET THE CURRENT PROPAGATION POLICY'
 policyGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/SettingsGetByName',[
 	('name') : 'CatalogPersonalization.TagsInheritancePolicy'
@@ -59,7 +64,7 @@ productCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCata
 
 
 'ASSIGN THE TAG TO THE CATEGORY'
-tagAssignToCategory = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagAssignToCategory'), 
+tagAssignToCategory = WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPersonalisation/tagPostAssignToCategory'), 
 	null)
 
 
@@ -76,7 +81,7 @@ tagUpdate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogP
 
 
 'ASSIGN THE UPDATED TAG TO THE PRODUCT'
-updatedTagAssignToTheProduct = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagAssignToProduct'), 
+updatedTagAssignToTheProduct = WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPersonalisation/tagPostAssignToProduct'), 
 	null)
 
 
@@ -96,21 +101,21 @@ WS.verifyElementPropertyValue(categoryInheriterTagGet,'inheritedTags[0]', Global
 
 
 'UNASSIGN THE TAG FROM THE PRODUCT'
-tagUnassign = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagUnassignOfTheProduct'),
+tagUnassign = WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPersonalisation/tagPostUnassignOfTheProduct'),
 	null)
 
 
-'Delete the created product'
+'DELETE THE CREATED PRODUCT'
 productDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
 	null)
 
 
-'Delete the created category'
+'DELETE THE CREATED CATEGORY'
 categoryDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/categoryDelete'),
 	null)
 
 
-'Delete the created tag'
+'DELETE THE CREATED TAG'
 tagDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPersonalisation/tagDeleteFromDictionary'),
 	null)
 
