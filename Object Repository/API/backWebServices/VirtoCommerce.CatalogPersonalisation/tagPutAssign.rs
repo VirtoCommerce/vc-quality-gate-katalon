@@ -49,7 +49,7 @@
       <name>entityType</name>
    </variables>
    <variables>
-      <defaultValue>'d154d30d76d548fb8505f5124d18c1f3'</defaultValue>
+      <defaultValue>'f0ddac0d-f987-4ca9-b6cb-da250bd279c7'</defaultValue>
       <description>id of the entity</description>
       <id>7d09f5f0-c51d-4005-a0da-9ffd2e1b81d0</id>
       <masked>false</masked>
@@ -63,7 +63,7 @@
       <name>tag</name>
    </variables>
    <variables>
-      <defaultValue>'BLU Win HD LTE X150Q 8GB'</defaultValue>
+      <defaultValue>'QweProduct'</defaultValue>
       <description>enity title</description>
       <id>5e108b73-b1ac-48f4-93b4-164ac1aa3f56</id>
       <masked>false</masked>
