@@ -1,98 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_AccountDropDownMenu</name>
+   <name>1div_AllVariationsBlock</name>
    <tag></tag>
-   <elementGuidId>ef32d3d3-965d-4db8-ab7a-0e1614c38dca</elementGuidId>
+   <elementGuidId>b38eae1e-0b60-47c6-8d7e-5794c0272c30</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+         <key>CSS</key>
+         <value>div.card.mt-3</value>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>BASIC</key>
+         <value>//div[@class = 'flex flex-col mt-5']</value>
       </entry>
       <entry>
          <key>XPATH</key>
+         <value>//body[@id='1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk']/main/div[2]/div/ng-controller/div[2]/div[2]/div[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>css</name>
+      <name>class</name>
       <type>Main</type>
-      <value>.cursor-pointer.relative > .text-white > div</value>
+      <value>flex flex-col mt-5</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+      <value>id(&quot;1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk&quot;)/main[@class=&quot;container pt-4 pb-6&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col&quot;]/ng-controller[@class=&quot;ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6 mb-3 mb-md-0&quot;]/div[@class=&quot;card mt-3&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:link</name>
-      <type>Main</type>
-      <value></value>
+      <value>//body[@id='1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk']/main/div[2]/div/ng-controller/div[2]/div[2]/div[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value></value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Inch'])[1]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:href</name>
-      <type>Main</type>
-      <value></value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SYSTEM OF MEASUREMENT'])[1]/following::div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value></value>
+      <value>//div[2]/div[2]/div[3]</value>
    </webElementXpaths>
 </WebElementEntity>

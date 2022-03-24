@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_AccountDropDownMenu</name>
+   <name>button_ViewAllResults</name>
    <tag></tag>
-   <elementGuidId>ef32d3d3-965d-4db8-ab7a-0e1614c38dca</elementGuidId>
+   <elementGuidId>31e45aef-a772-4193-a159-c77575b786d1</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+         <value>//a[@class = 'rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer whitespace-nowrap bg-[color:var(--color-primary)] text-white hover:bg-[color:var(--color-primary-hover)] h-8 text-sm uppercase px-4']</value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value>button.btn.btn-primary.ng-binding</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -19,25 +20,32 @@
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>css</name>
-      <type>Main</type>
-      <value>.cursor-pointer.relative > .text-white > div</value>
+      <value>a</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer whitespace-nowrap bg-[color:var(--color-primary)] text-white hover:bg-[color:var(--color-primary-hover)] h-8 text-sm uppercase px-4</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>disabled</name>
+      <type>Main</type>
+      <value>false</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;z-10 shadow-md&quot;]/div[@class=&quot;relative&quot;]/div[@class=&quot;flex items-center justify-between px-12 py-7 bg-gray-800 select-none absolute top-0 w-full z-20 transition-transform duration-300&quot;]/div[@class=&quot;flex flex-grow relative&quot;]/div[@class=&quot;absolute top-14 w-full flex flex-col gap-3 rounded bg-white shadow-lg overflow-hidden&quot;]/section[@class=&quot;px-5 py-4 border-t border-gray-100&quot;]/a[@class=&quot;rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer whitespace-nowrap bg-yellow-500 text-white hover:bg-yellow-600 h-8 text-sm uppercase px-4&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -49,13 +57,6 @@
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:link</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value></value>
@@ -71,20 +72,6 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:href</name>
       <type>Main</type>
       <value></value>
    </webElementXpaths>

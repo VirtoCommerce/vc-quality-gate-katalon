@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_AccountDropDownMenu</name>
+   <name>icon_Search</name>
    <tag></tag>
-   <elementGuidId>ef32d3d3-965d-4db8-ab7a-0e1614c38dca</elementGuidId>
+   <elementGuidId>8941861e-7dd9-43d0-8003-dd31777f752d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+         <value>.fa-search</value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value>button.btn.btn-primary.ng-binding</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -19,25 +20,33 @@
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>css</name>
-      <type>Main</type>
-      <value>.cursor-pointer.relative > .text-white > div</value>
+      <value>i</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>
+fas fa-search text-[color:var(--color-primary)] cursor-pointer</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+      <value>//i[@class='fas fa-search text-[color:var(--color-primary)] cursor-pointer']</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>.fa-search</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -49,13 +58,6 @@
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:link</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value></value>
@@ -71,20 +73,6 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:href</name>
       <type>Main</type>
       <value></value>
    </webElementXpaths>

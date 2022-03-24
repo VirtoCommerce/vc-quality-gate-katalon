@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_AccountDropDownMenu</name>
+   <name>1text_PopupTitle</name>
    <tag></tag>
-   <elementGuidId>ef32d3d3-965d-4db8-ab7a-0e1614c38dca</elementGuidId>
+   <elementGuidId>9611a127-5bd5-4871-a272-fa0314b92140</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+         <value>//span[@class = 'flex-grow' and (text() = '1 Product added to cart' or . = '1 Product added to cart')]</value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value>h4.modal-title.ng-binding.ng-scope</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -19,37 +20,37 @@
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>css</name>
-      <type>Main</type>
-      <value>.cursor-pointer.relative > .text-white > div</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex-grow</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>1 Product added to cart</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+      <value>id(&quot;headlessui-dialog-title-6&quot;)/span[@class=&quot;flex-grow&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:link</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
       <value></value>
    </webElementXpaths>
@@ -71,20 +72,6 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:href</name>
       <type>Main</type>
       <value></value>
    </webElementXpaths>

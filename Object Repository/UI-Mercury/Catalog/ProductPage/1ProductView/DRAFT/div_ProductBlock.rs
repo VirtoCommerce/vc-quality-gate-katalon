@@ -1,57 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_AccountDropDownMenu</name>
+   <name>div_ProductBlock</name>
    <tag></tag>
-   <elementGuidId>ef32d3d3-965d-4db8-ab7a-0e1614c38dca</elementGuidId>
+   <elementGuidId>9fa1ef9f-3ee2-4c2a-9bac-8a3beb27a11f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+         <value>//div[@class = 'flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden']</value>
       </entry>
       <entry>
          <key>CSS</key>
+         <value>.row-cols-1 > div:nth-of-type(2) .card-body</value>
       </entry>
       <entry>
          <key>XPATH</key>
+         <value>//div[@id='app']/div/div[2]/div/div/div/div[3]/div[2]/div</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>css</name>
+      <name>class</name>
       <type>Main</type>
-      <value>.cursor-pointer.relative > .text-white > div</value>
+      <value>flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Compare
+    </value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>//i[@class='fas fa-chevron-down ml-3 text-[color:var(--color-primary)] align-baseline']</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 xl:gap-x-6 xl:gap-y-8&quot;]/div[@class=&quot;flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath:attributes</name>
+      <name>xpath:idRelative</name>
       <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:link</name>
-      <type>Main</type>
-      <value></value>
+      <value>//div[@id='app']/div/div[2]/div/div/div/div[3]/div[2]/div[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -64,27 +67,6 @@
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value></value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:href</name>
       <type>Main</type>
       <value></value>
    </webElementXpaths>
@@ -93,6 +75,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value></value>
+      <value>//div[3]/div[2]/div[2]</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>a_OpenProduct</name>
+   <name>1button_PopUpButtonContinueShopping</name>
    <tag></tag>
-   <elementGuidId>4407a936-2ee0-4a6d-b939-f7328f35d54c</elementGuidId>
+   <elementGuidId>24768b11-166b-41cb-a416-b4c4c6f0bf2a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//a[@class = 'font-weight-bold text-truncate d-inline-block mw-100']</value>
+         <value>
+.border-2.rounded</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>.row-cols-1 > div:nth-of-type(2) .text-truncate</value>
+         <value>//button[@class='btn btn-outline-primary']</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//body[@id='laser-printers']/main/div[3]/div[2]/div/div[2]/div/div/div/div[2]/a</value>
+         <value>//button[@class='btn btn-outline-primary']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -23,99 +24,100 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>href</name>
+      <name>tag</name>
       <type>Main</type>
-      <value>/B2B-store/laser-monochrome/canon-imageclass-wifi-mf232w-monochrome-laser-printerscannercopier-color-black?resp_group=7340919</value>
+      <value>button</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-outline-primary</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>close()</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Canon Imageclass WiFi MF232W Monochrome Laser Printer/Scanner/Copier</value>
+      <value>Continue shopping</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;laser-printers&quot;)/main[@class=&quot;collection container pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row navigation&quot;]/div[@class=&quot;col&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;row row-cols-1 row-cols-sm-2 row-cols-lg-4&quot;]/div[@class=&quot;col-12 col-sm-6 col-md-4 col-lg-3 card-container&quot;]/div[@class=&quot;card border-gray-200&quot;]/div[@class=&quot;card-body&quot;]/div[@class=&quot;mb-3&quot;]/a[@class=&quot;font-weight-bold text-truncate d-inline-block mw-100&quot;]</value>
+      <value>id(&quot;carriage-bolts&quot;)/div[@class=&quot;modal fade ng-scope ng-isolate-scope show&quot;]/div[@class=&quot;modal-dialog modal-lg&quot;]/div[@class=&quot;modal-content&quot;]/form[@class=&quot;ng-pristine ng-valid ng-scope&quot;]/div[@class=&quot;modal-footer ng-scope&quot;]/button[@class=&quot;btn btn-outline-primary&quot;]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>css</name>
       <type>Main</type>
-      <value>font-weight-bold text-truncate d-inline-block mw-100</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>tag</name>
-      <type>Main</type>
-      <value>a</value>
+      <value>
+.border-2.rounded</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>(//button[@type='button'])[4]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
       <type>Main</type>
-      <value>//body[@id='laser-printers']/main/div[3]/div[2]/div/div[2]/div/div/div/div[2]/a</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:link</name>
-      <type>Main</type>
-      <value>//a[contains(text(),'Canon Imageclass WiFi MF232W Monochrome Laser Printer/Scanner/Copier')]</value>
+      <value>//body[@id='carriage-bolts']/div/div/div/form/div[3]/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Compare'])[1]/following::a[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='›'])[1]/following::button[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Date, old to new'])[1]/following::a[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='‹'])[1]/following::button[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Item #'])[1]/preceding::a[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='View Cart'])[1]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Mfr. model #'])[1]/preceding::a[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='My Account'])[1]/preceding::button[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
       <type>Main</type>
-      <value>//*/text()[normalize-space(.)='Canon Imageclass WiFi MF232W Monochrome Laser Printer/Scanner/Copier']/parent::*</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:href</name>
-      <type>Main</type>
-      <value>(//a[contains(@href, '/B2B-store/laser-monochrome/canon-imageclass-wifi-mf232w-monochrome-laser-printerscannercopier-color-black?resp_group=7340919')])[2]</value>
+      <value>//*/text()[normalize-space(.)='Continue shopping']/parent::*</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[2]/a</value>
+      <value>//div[3]/button</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -10,119 +10,113 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>eb827ba5-0266-401a-94c0-31903f1fd4ed</testSuiteGuid>
+   <testSuiteGuid>4a73c85a-1bfd-4446-a7f6-41bd97decec1</testSuiteGuid>
    <testCaseLink>
-      <guid>13cd0cf8-726d-4945-bf1f-58715bb6ed03</guid>
+      <guid>aedb40e3-2d32-415c-8c9b-302de8aac8f5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/OpenBrowser</testCaseId>
+      <testCaseId>Test Cases/Mercury/BrowserAction/OpenBrowser</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>97d2ba19-5028-4b36-8224-8d551f5657c1</guid>
+      <guid>d3596b98-b3a9-43e7-b0da-239caeefd679</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/LogInPage/LogIn</testCaseId>
+      <testCaseId>Test Cases/Mercury/LogInPage/LogIn</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5979aa56-2793-4b0b-92f1-2c399072d044</guid>
+      <guid>5f6a79da-69ac-4ad3-b59d-0b811442fcbd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/AddProductFromCategory</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/1OpenCategoryWithoutVariables</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>edeadb5f-2816-4f1a-8a2c-9b254153cf34</guid>
+      <guid>7989f2a2-fcce-4b93-a0cf-62c1ecce4fc0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/AddProductWithoutVariables</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/1AddProductFromCategory</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>52307945-3a12-40aa-a8b6-8310c225da88</guid>
+      <guid>c83fc74f-cb17-424e-9f8e-a37085b8b8c5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/PopUpButtonContinueShopping</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/1PopUpButtonContinueShopping</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c637969a-5e4e-4bd7-8c0d-723d6cf51829</guid>
+      <guid>d711f91d-f34f-4472-9fcc-4733f9caaab5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/AddProductWithVariables</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/1OpenCategoryWithVariables</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>25041b87-50a2-4353-889c-c677b04deeac</guid>
+      <guid>b0e75827-3e08-4df0-88d8-49334b3a215b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/PopUpButtonViewCart</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/1AddProductWithVariablesFromProductPage</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ea01ab1d-8b67-4b5e-b47a-ee55f35eb05a</guid>
+      <guid>ae7101bc-3801-4810-bd09-d5a8ce748377</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/Codes/AddPromoCode</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/1PopUpButtonViewCart</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4ed1089e-7790-42fc-8186-86db50e9b38e</guid>
+      <guid>fd80435e-336e-4f76-8b92-cf818bf3ced7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/Codes/AddPurchaseCode</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1VerifyCheckOutPage</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>564d9b6d-c62a-4652-b211-50aee5da9237</guid>
+      <guid>967384e5-7ba9-4d1b-9144-8ec361e05446</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/Page1_ButtonProceedCheckOut</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/1UpdateProductAmountInTheCart</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>12908f22-2f0d-4769-b1ec-ab8e8175a8de</guid>
+      <guid>56c33134-4ef7-4232-82cc-3edb951f23df</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/DeliveryMethod/ChooseDeliveryMethodShipping</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1AddGift</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0655d634-712a-4998-8f62-95f32415d728</guid>
+      <guid>c44c9197-935a-4196-9026-a0fad8c911a0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/DeliveryMethod/Shipping/ShippingAddress</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1ShippingDetailsBlock</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>436ccac7-187d-4ea8-8177-0c19019b4e5c</guid>
+      <guid>01d01864-5d80-471f-a345-f5e3ab12f5e6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/DeliveryMethod/Shipping/ShippingMethod</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1PaymentDetailsBlock</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e1b5ab57-02dc-4686-93f7-8d5f4eadfb7e</guid>
+      <guid>77c84571-6d6c-4b80-8fa2-10164f1ed0d3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/DeliveryMethod/Shipping/PaymentMethod</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/1_Button_PlaceOrder</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>77fd3418-7694-4854-b159-c2eb6524914e</guid>
+      <guid>fe83c4a4-db7a-4f8d-8e9d-63e6db82307b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/Page2_ButtonSubmitOrderPage</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/Checkout/OrderDetailsPage/CheckOrderDetailsPage</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a861a53c-1fb9-4120-a2af-c4069ad092b4</guid>
+      <guid>ad78b57d-3e97-4651-8714-8748f7f84c64</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/DeliveryMethod/PickUp/OrderDetailsPickUpDelivery</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/HomePageElements/LogOut</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7c3b5643-ec01-407f-b8d4-9b190f340151</guid>
+      <guid>e7d2ca11-4d7f-4a45-8f77-a9d8babba3c4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Checkout/CreateOrder/OrderDetailsPage/Notification</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Mercury/BrowserAction/CloseBrowser</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4fdbb34c-6477-4088-9901-5f953f9664ec</guid>
+      <guid>89c78584-4038-4b64-a1a1-20938d4b5cdb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/HomePageElements/LogOut</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a1623d5a-26f1-4083-bce6-9315dcf9a8a7</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/CloseBrowser</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1AddExtra</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

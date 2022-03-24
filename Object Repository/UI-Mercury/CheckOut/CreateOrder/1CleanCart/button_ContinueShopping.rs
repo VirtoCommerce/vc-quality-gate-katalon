@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_ContinueShopping</name>
+   <tag></tag>
+   <elementGuidId>bb6f61f9-f29b-409a-97c6-e40000101148</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@class = 'rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer whitespace-nowrap bg-[color:var(--color-primary)] text-white hover:bg-[color:var(--color-primary-hover)] h-11 text-lg w-48 uppercase font-bold' and (text() = 'Continue shopping' or . = 'Continue shopping') and @disabled = 'false']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer whitespace-nowrap bg-[color:var(--color-primary)] text-white hover:bg-[color:var(--color-primary-hover)] h-11 text-lg w-48 uppercase font-bold</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;polygon-bg flex-grow&quot;]/div[@class=&quot;container mx-auto pt-5 pb-52 px-7 max-w-screen-lg&quot;]/div[@class=&quot;flex lg:space-x-24&quot;]/div[@class=&quot;w-full lg:w-1/2 lg:mt-8&quot;]/div[@class=&quot;flex flex-col h-full py-12 justify-center items-center lg:items-start&quot;]/a[@class=&quot;rounded inline-flex justify-center items-center font-roboto-condensed cursor-pointer whitespace-nowrap bg-[color:var(--color-primary)] text-white hover:bg-[color:var(--color-primary-hover)] h-11 text-lg w-48 uppercase font-bold&quot;]</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Continue shopping</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>disabled</name>
+      <type>Main</type>
+      <value>false</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value></value>
+   </webElementXpaths>
+</WebElementEntity>
