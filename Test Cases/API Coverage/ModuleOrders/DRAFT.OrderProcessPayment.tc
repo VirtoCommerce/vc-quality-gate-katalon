@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Add, update, process payment, check dashboard statistics</description>
-   <name>OrderProcessPayment</name>
+   <name>DRAFT.OrderProcessPayment</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b9f85b97-ed62-4c7c-9dba-5199911cea28</testCaseGuid>
