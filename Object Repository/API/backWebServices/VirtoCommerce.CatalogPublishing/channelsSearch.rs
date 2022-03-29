@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n//\&quot;keyword\&quot;: \&quot;string\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;text&quot;: &quot;{\n\&quot;keyword\&quot;: \&quot;${keyword]\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -42,18 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'a1cfeec7-7117-441f-bee7-6ff9bd460eb5'</defaultValue>
-      <description>id of the evaluated channel</description>
-      <id>e531806a-1e6c-4555-b3c1-58b78e0a1250</id>
+      <defaultValue>''</defaultValue>
+      <description>search query keword</description>
+      <id>b35856e7-9d0c-41f6-929e-e49e16152dbc</id>
       <masked>false</masked>
-      <name>channelId</name>
-   </variables>
-   <variables>
-      <defaultValue>'8b7b07c165924a879392f4f51a6f7ce0'</defaultValue>
-      <description>id of the evaluated product</description>
-      <id>e6d18e16-a7bf-4e16-bc64-b63543bb24b3</id>
-      <masked>false</masked>
-      <name>productId</name>
+      <name>keyword</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

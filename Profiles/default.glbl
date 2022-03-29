@@ -484,4 +484,14 @@
       <initValue>''</initValue>
       <name>tagAssignmentId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qweChan'</initValue>
+      <name>channelName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>channelId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
