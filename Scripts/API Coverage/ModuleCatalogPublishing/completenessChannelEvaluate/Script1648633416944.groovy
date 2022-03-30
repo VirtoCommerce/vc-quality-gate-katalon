@@ -16,27 +16,27 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper
+
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
+
+WebUI.comment('TEST CASE: evaluate channel completeness')
 
 
-'Precondition'
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
-	null)
+'SEND REQUEST TO GET EVALUATORS (simple endpoint check)'
+evaluatorsGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/evaluatorsGet'))
 
 
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/сhannelCreate'),
-	null)
-WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPublishing/completenessChannelEvaluate'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelEdit'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/competenessProductEvaluateAndSave'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelsDelete'),
-	null)
+'SEND REQUEST TO EVALUATE CREATED CHANNEL COMPLETENESS'
+//GlobalVariable.channelId = '3da8d9bf-de9c-44b3-8412-04e8357772ca'
+completenessEvaluate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/completenessEvaluate',[
+	('channelId') : GlobalVariable.channelId
+	]))
 
-
-'Postcondition'
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
-	null)
 
 
