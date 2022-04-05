@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'qwe'</defaultValue>
       <description>search query keword</description>
       <id>b35856e7-9d0c-41f6-929e-e49e16152dbc</id>
       <masked>false</masked>

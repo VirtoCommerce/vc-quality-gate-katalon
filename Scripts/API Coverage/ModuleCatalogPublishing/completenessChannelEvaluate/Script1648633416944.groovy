@@ -39,4 +39,22 @@ completenessEvaluate = WS.sendRequestAndVerify(findTestObject('Object Repository
 	]))
 
 
+'DROP INDEX'
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
+WS.delay(60)
+
+
+'SEARCH FOR THE UPDATED CHANNEL TO GET THE FINAL COMPLETENESS DATA'
+updatedChannelSearchEvaluated = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
+	('keyword') : GlobalVariable.channelName
+	]))
+channelCompleteness = WS.getElementPropertyValue(updatedChannelSearchEvaluated ,'results[0].completenessPercent') 
+GlobalVariable.channelCompleteness = [] 
+GlobalVariable.channelCompleteness.add(channelCompleteness)
+
+
+'VERIFY THE CHANNEL COMPLETENESS HAS BEEN INCREASED (in case it was updated beforehand)'
+if (GlobalVariable.channelCompleteness.size() > 1) {
+	assert GlobalVariable.channelCompleteness[0] < GlobalVariable.channelCompleteness[1]
+	}
 

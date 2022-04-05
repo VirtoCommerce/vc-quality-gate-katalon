@@ -42,18 +42,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'a1cfeec7-7117-441f-bee7-6ff9bd460eb5'</defaultValue>
+      <defaultValue>'f3d89265-1b28-4c0a-b11e-67ed5dfded7d'</defaultValue>
       <description>id of the evaluated channel</description>
       <id>e531806a-1e6c-4555-b3c1-58b78e0a1250</id>
       <masked>false</masked>
       <name>channelId</name>
-   </variables>
-   <variables>
-      <defaultValue>'8b7b07c165924a879392f4f51a6f7ce0'</defaultValue>
-      <description>id of the evaluated product</description>
-      <id>e6d18e16-a7bf-4e16-bc64-b63543bb24b3</id>
-      <masked>false</masked>
-      <name>productId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

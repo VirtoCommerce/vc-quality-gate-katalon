@@ -30,17 +30,20 @@ WebUI.comment('TEST CASE: edit the created test case')
 
 
 'SEARCH FOR THE CREATED CHANNEL TO GET ITS BODY'
-channelSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
-	('keyword') : GlobalVariable.channelName
+//GlobalVariable.channelId = 'a0311996-f3b1-42e5-8030-62a7afb696b8'
+channelSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelGet',[
+	('channelId') : GlobalVariable.channelId
 	]))
 
  
 'PARSE SEARCH RESULTS TO GET THE BODY DATA AND EDIT IT'
 searchResults = channelSearch.getResponseBodyContent()
 searchResultsParsed = new JsonSlurper().parseText(searchResults)
-channelBodyParsed = searchResultsParsed.results[0] 
+channelBodyParsed = searchResultsParsed
 
-updatedName = GlobalVariable.channelName + 'UPD'
+println GlobalVariable.channelId
+GlobalVariable.channelName = GlobalVariable.channelName + 'UPD'
+updatedName = GlobalVariable.channelName 
 updatedLanguage = 'fr-FR'
 updatedCurrency = 'EUR'
 updatedCatalog = GlobalVariable.catalogId

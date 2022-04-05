@@ -29,9 +29,19 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('TEST CASE: delete the created channel')
 
 
+'GET ALL THE CHANNELS TO DELETE'
+GlobalVariable.channelName = 'qwe'
+getIds = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
+	('keyword') : GlobalVariable.channelName
+	]))
+List ids = WS.getElementPropertyValue(getIds,'results.id')
+GlobalVariable.channelId = ids
+
+
+for (int i; i < ids.size(); i++) {
 'SEND REQUEST TO DELETE THE CREATED CHANNEL'
 channelDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsDelete',[
-	('channelId') : GlobalVariable.channelId
+	('channelId') : ids[i]
 	]))
 
 
@@ -39,5 +49,5 @@ channelDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/ba
 verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
 	('keyword') : GlobalVariable.channelName
 	]))
-WS.containsString(verifyDeleted,GlobalVariable.channelName,false, FailureHandling.OPTIONAL) == false
-
+WS.containsString(verifyDeleted, GlobalVariable.channelName, false, FailureHandling.OPTIONAL) == false
+}

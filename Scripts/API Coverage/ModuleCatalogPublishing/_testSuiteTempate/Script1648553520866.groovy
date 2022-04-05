@@ -18,25 +18,44 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-'Precondition'
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
-	null)
+'PRECONDITION'
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/catalogCreate'), null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/categoryCreate'), null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'), null)
+
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistCreate'), null)
+WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'), null)
 
 
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/сhannelCreate'),
-	null)
-WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPublishing/completenessChannelEvaluate'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelEdit'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/competenessProductEvaluateAndSave'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelsDelete'),
+channelCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/сhannelCreate'), 
 	null)
 
-
-'Postcondition'
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),
+channelCompletenessEvaluate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/completenessChannelEvaluate'), 
 	null)
+
+productCompletenessEvaluateAndUpdate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/competenessProductEvaluateAndSave'), 
+	null)
+
+channelCompletenessEvaluate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/completenessChannelEvaluate'),
+	null)
+
+//another channel part
+channelCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/сhannelCreate'), 
+	null)
+
+channelEdit = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelEdit'), 
+	null)
+
+channelChange = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelChangeCatalog'), 
+	null)
+
+channelDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelsDelete'),
+	null)
+
+'POSTCONDITION'
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/categoryDelete'),null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/catalogDelete'),null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistDelete'),null)
 
 

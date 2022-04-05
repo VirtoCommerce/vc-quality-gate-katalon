@@ -494,4 +494,9 @@
       <initValue>''</initValue>
       <name>channelId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>completeness of the created channel</description>
+      <initValue>''</initValue>
+      <name>channelCompleteness</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

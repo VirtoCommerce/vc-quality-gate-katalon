@@ -32,7 +32,9 @@ WebUI.comment('TEST CASE: new channel create')
 'CREATE A NEW CHANNEL AND GET THE ID'
 GlobalVariable.channelName = 'qweChan'
 channelCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/cnannelsCreate',[
-	('channelName') : GlobalVariable.channelName
+	('channelName') : GlobalVariable.channelName,
+	('catalogId') : GlobalVariable.catalogId,
+	('catalogName') : GlobalVariable.catalogName
 	]))
 GlobalVariable.channelId = WS.getElementPropertyValue(channelCreate,'id')
 println GlobalVariable.channelId
@@ -43,5 +45,4 @@ channelGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backW
 	('channelId') : GlobalVariable.channelId
 	]))
 WS.verifyElementPropertyValue(channelGet,'name', GlobalVariable.channelName)
-
 
