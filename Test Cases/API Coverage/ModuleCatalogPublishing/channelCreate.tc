@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create a channel</description>
+   <name>channelCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>535ea2d9-2b68-46cf-a165-6463b3d9ecfd</testCaseGuid>
+</TestCaseEntity>

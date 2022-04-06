@@ -484,4 +484,19 @@
       <initValue>''</initValue>
       <name>tagAssignmentId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>name of the creaed channel</description>
+      <initValue>'qweChan'</initValue>
+      <name>channelName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created channel</description>
+      <initValue>[]</initValue>
+      <name>channelId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>completeness of the created channel</description>
+      <initValue>''</initValue>
+      <name>channelCompleteness</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
