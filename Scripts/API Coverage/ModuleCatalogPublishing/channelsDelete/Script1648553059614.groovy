@@ -29,25 +29,25 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('TEST CASE: delete the created channel')
 
 
-'GET ALL THE CHANNELS TO DELETE'
-GlobalVariable.channelName = 'qwe'
-getIds = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
-	('keyword') : GlobalVariable.channelName
-	]))
-List ids = WS.getElementPropertyValue(getIds,'results.id')
-GlobalVariable.channelId = ids
+//'GET ALL THE CHANNELS TO DELETE'
+//GlobalVariable.channelName = 'qwe'
+//getIds = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
+//	('keyword') : GlobalVariable.channelName
+//	]))
+//List ids = WS.getElementPropertyValue(getIds,'results.id')
+//GlobalVariable.channelId = ids
 
 
-for (int i; i < ids.size(); i++) {
+for (int i; i < GlobalVariable.channelId.size(); i++) {
 'SEND REQUEST TO DELETE THE CREATED CHANNEL'
 channelDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsDelete',[
-	('channelId') : ids[i]
+	('channelId') : GlobalVariable.channelId[i]
 	]))
 
 
 'VERIFY THE CHANEEL HAS BEEN DELETED'
-verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
-	('keyword') : GlobalVariable.channelName
+verifyDeleted = WS.sendRequest(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelGet',[
+	('channelId') : GlobalVariable.channelId[i]
 	]))
-WS.containsString(verifyDeleted, GlobalVariable.channelName, false, FailureHandling.OPTIONAL) == false
+WS.verifyResponseStatusCode(verifyDeleted, 404)
 }

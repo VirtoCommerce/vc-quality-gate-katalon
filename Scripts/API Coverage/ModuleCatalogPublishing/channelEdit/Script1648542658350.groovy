@@ -26,13 +26,12 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-WebUI.comment('TEST CASE: edit the created test case')
+WebUI.comment('TEST CASE: edit the created channel')
 
 
 'SEARCH FOR THE CREATED CHANNEL TO GET ITS BODY'
-//GlobalVariable.channelId = 'a0311996-f3b1-42e5-8030-62a7afb696b8'
 channelSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelGet',[
-	('channelId') : GlobalVariable.channelId
+	('channelId') : GlobalVariable.channelId.last()
 	]))
 
  
@@ -41,7 +40,7 @@ searchResults = channelSearch.getResponseBodyContent()
 searchResultsParsed = new JsonSlurper().parseText(searchResults)
 channelBodyParsed = searchResultsParsed
 
-println GlobalVariable.channelId
+println GlobalVariable.channelId.last()
 GlobalVariable.channelName = GlobalVariable.channelName + 'UPD'
 updatedName = GlobalVariable.channelName 
 updatedLanguage = 'fr-FR'
@@ -67,7 +66,7 @@ channelUpdated = WS.sendRequestAndVerify(channelUpdateObject)
 
 'VERIFY THE CHANNEL HAS BEEN UPDATED'
 verifyUpdated = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelGet',[
-	('channelId') : GlobalVariable.channelId
+	('channelId') : GlobalVariable.channelId.last()
 	]))
 WS.verifyElementPropertyValue(verifyUpdated,'name', updatedName)
 WS.verifyElementPropertyValue(verifyUpdated,'languages[0]', updatedLanguage)

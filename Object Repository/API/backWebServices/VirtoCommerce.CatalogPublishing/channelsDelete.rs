@@ -39,7 +39,7 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>id of the channel to delete</description>
       <id>39de9204-8a6f-4d05-8692-da27cb6ed48c</id>
       <masked>false</masked>
       <name>channelId</name>

@@ -38,8 +38,8 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'a1cfeec7-7117-441f-bee7-6ff9bd460eb5'</defaultValue>
-      <description></description>
+      <defaultValue>'7d81869d-52a0-422f-8798-389443858aad'</defaultValue>
+      <description>request channel id</description>
       <id>809da3de-8cd3-4722-a72c-0d39fd636fd9</id>
       <masked>false</masked>
       <name>channelId</name>

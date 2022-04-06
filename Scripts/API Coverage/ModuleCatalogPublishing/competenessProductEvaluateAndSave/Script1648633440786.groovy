@@ -33,10 +33,10 @@ WebUI.comment('TEST CASE: evaluate product completeness')
 //GlobalVariable.channelId = '36574e43-3360-4646-b19f-a2b5ea67a2fa'
 //GlobalVariable.productId = 'c844b137-8199-4b8e-8197-7f6e9ca0208d'
 productCompletenessEvaluate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/completenessProductEvaluate',[
-	('channelId') : GlobalVariable.channelId,
+	('channelId') : GlobalVariable.channelId.last(),
 	('productId') : GlobalVariable.productId
 	]))
-WS.verifyElementPropertyValue(productCompletenessEvaluate,'[0].channelId', GlobalVariable.channelId)
+WS.verifyElementPropertyValue(productCompletenessEvaluate,'[0].channelId', GlobalVariable.channelId.last())
 WS.verifyElementPropertyValue(productCompletenessEvaluate,'[0].productId', GlobalVariable.productId)
 initialProductCompleteness = WS.getElementPropertyValue(productCompletenessEvaluate,'[0]. completenessPercent')
 
@@ -55,7 +55,7 @@ WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistPro
 
 'GET THE UPDATED UPRODUCT COMPLETENSS TO VERIFY IT WAS INCREASED'
 updatedProductCompletenessEvaluate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/completenessProductEvaluate',[
-	('channelId') : GlobalVariable.channelId,
+	('channelId') : GlobalVariable.channelId.last(),
 	('productId') : GlobalVariable.productId
 	]))
 updatedProductCompleteness = WS.getElementPropertyValue(updatedProductCompletenessEvaluate,'[0]. completenessPercent')

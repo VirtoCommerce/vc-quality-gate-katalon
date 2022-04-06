@@ -27,7 +27,7 @@ WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistCre
 WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentCreate'), null)
 
 
-channelCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/сhannelCreate'), 
+channelCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelCreate'), 
 	null)
 
 channelCompletenessEvaluate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/completenessChannelEvaluate'), 
@@ -40,22 +40,21 @@ channelCompletenessEvaluate = WS.callTestCase(findTestCase('Test Cases/API Cover
 	null)
 
 //another channel part
-channelCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/сhannelCreate'), 
+channelCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelCreate'), 
 	null)
 
 channelEdit = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelEdit'), 
 	null)
 
-channelChange = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelChangeCatalog'), 
+channelChange = WS.callTestCase(findTestCase('API Coverage/ModuleCatalogPublishing/channelChange'), 
 	null)
 
 channelDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalogPublishing/channelsDelete'),
 	null)
 
 'POSTCONDITION'
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/categoryDelete'),null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'),null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/catalogDelete'),null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistDelete'),null)
-
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/categoryDelete'), null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productsDelete'), null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/catalogDelete'), null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistDelete'), null)
 

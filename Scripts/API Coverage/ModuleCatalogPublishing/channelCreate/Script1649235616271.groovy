@@ -36,13 +36,20 @@ channelCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/ba
 	('catalogId') : GlobalVariable.catalogId,
 	('catalogName') : GlobalVariable.catalogName
 	]))
-GlobalVariable.channelId = WS.getElementPropertyValue(channelCreate,'id')
-println GlobalVariable.channelId
+channelId = WS.getElementPropertyValue(channelCreate,'id')
+GlobalVariable.channelId.add(channelId)
 
 
 'VERIFY THE CHANNEL HAS BEEN CREATED'
 channelGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelGet',[
-	('channelId') : GlobalVariable.channelId
+	('channelId') : GlobalVariable.channelId.last()
 	]))
 WS.verifyElementPropertyValue(channelGet,'name', GlobalVariable.channelName)
+
+
+'VERIFY THE CHANNEL IS ACCESSIBLE VIA SEARCH'
+channelSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsSearch',[
+		('keyword') : GlobalVariable.channelName
+		]))
+WS.containsString(channelSearch, GlobalVariable.channelId.last(), false)
 

@@ -35,13 +35,8 @@ evaluatorsGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/ba
 'SEND REQUEST TO EVALUATE CREATED CHANNEL COMPLETENESS'
 //GlobalVariable.channelId = '3da8d9bf-de9c-44b3-8412-04e8357772ca'
 completenessEvaluate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/completenessEvaluate',[
-	('channelId') : GlobalVariable.channelId
+	('channelId') : GlobalVariable.channelId.last()
 	]))
-
-
-'DROP INDEX'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
-WS.delay(60)
 
 
 'SEARCH FOR THE UPDATED CHANNEL TO GET THE FINAL COMPLETENESS DATA'

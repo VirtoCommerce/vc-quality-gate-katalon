@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{body}&quot;,
+  &quot;text&quot;: &quot;{body}\n//proccessed in the testCase script at:\n//Test Cases/API Coverage/ModuleCatalogPublishing/channelChange&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
