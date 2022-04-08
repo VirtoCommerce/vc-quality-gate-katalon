@@ -164,7 +164,7 @@
             <requireConfigurationData>false</requireConfigurationData>
             <runConfigurationId>Chrome</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/Modules/module_Customer_Refactored</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
