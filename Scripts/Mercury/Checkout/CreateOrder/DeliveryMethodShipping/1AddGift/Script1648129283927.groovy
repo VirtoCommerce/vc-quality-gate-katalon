@@ -19,18 +19,23 @@ import org.openqa.selenium.Keys as Keys
 
 //verify my gifts block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_GiftsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1div_GiftsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_GiftsBlock'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1div_GiftsBlock'), 3)
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1h3_TitleGifts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1h3_TitleGifts'))
 
-WebUI.verifyTextPresent('Checkout', false)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1h3_TitleGifts'), 3)
+
+//WebUI.verifyTextPresent('+ Add a Gift', false)
 
 //add gift
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_Gift'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1div_Gift'),3)
 
-WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/label_ChooseDeliveryMethodAsShipping'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1checkbox_AddGift'))
+
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1checkbox_AddGift'))
+
 
 

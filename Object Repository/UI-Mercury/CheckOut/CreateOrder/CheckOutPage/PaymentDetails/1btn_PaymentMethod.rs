@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>1h2_TitleCheckOut</name>
+   <name>1btn_PaymentMethod</name>
    <tag></tag>
-   <elementGuidId>7dfb33da-ca41-4462-86cd-b09c0a7580bb</elementGuidId>
+   <elementGuidId>6d4085ec-6bcd-43cb-affb-1422523faf9d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.col-md-9</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//h2[@class = 'text-gray-800 px-5 md:px-0 text-2xl lg:text-3xl font-bold uppercase mb-7' and (text() = 'Checkout' or . = 'Checkout')]</value>
+         <value>.w-full.flex-grow > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) span:nth-of-type(1)</value>
       </entry>
       <entry>
          <key>XPATH</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>h2</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>css</name>
       <type>Main</type>
-      <value>text-gray-800 px-5 md:px-0 text-2xl lg:text-3xl font-bold uppercase mb-7</value>
+      <value>.w-full.flex-grow > div:nth-of-type(4) > div:nth-of-type(2) > div:nth-of-type(2) span:nth-of-type(1)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath</name>
+      <name>class</name>
       <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl md:px-12 mx-auto&quot;]/h2[@class=&quot;text-gray-800 px-5 md:px-0 text-2xl lg:text-3xl font-bold uppercase mb-7&quot;]</value>
+      <value>vc-button__content</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Checkout</value>
+      <value>Change</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

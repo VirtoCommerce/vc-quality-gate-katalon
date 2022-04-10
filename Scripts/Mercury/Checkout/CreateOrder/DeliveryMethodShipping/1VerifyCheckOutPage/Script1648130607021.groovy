@@ -23,4 +23,6 @@ WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1di
 
 WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1h2_TitleCheckOut'))
 
-WebUI.verifyTextPresent('Checkout', false)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1h2_TitleCheckOut'), 3)
+
+//WebUI.verifyTextPresent('Checkout', false)

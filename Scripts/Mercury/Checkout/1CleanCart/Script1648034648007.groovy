@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 //remove item from the card
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_ProductsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'))
 
 WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/1CleanCart/span_RemoveItemLink'))
 

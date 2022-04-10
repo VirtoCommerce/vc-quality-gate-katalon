@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>1AddExtra</name>
+   <name>Button_PlaceOrder</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>908eb65c-a36c-4f58-9f06-5e2f4150e6ec</testCaseGuid>
+   <testCaseGuid>87470152-437d-4d59-a828-cf4956f2b45c</testCaseGuid>
 </TestCaseEntity>

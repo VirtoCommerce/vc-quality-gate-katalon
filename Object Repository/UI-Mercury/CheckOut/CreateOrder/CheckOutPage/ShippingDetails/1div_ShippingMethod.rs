@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>1input_UpdateProductCount</name>
+   <name>1div_ShippingMethod</name>
    <tag></tag>
-   <elementGuidId>65fffcf1-bfa6-4b1d-b1bf-f4d977c07ca8</elementGuidId>
+   <elementGuidId>0d6b15c8-a49d-4b87-9862-1e5eb2439a50</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//div[@class = 'max-w-screen-2xl md:px-12 mx-auto']</value>
+         <value>//*[@class = 'p-5 flex flex-col space-y-2 lg:space-y-0 text-sm lg:flex-row lg:justify-between lg:items-center']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
       </entry>
       <entry>
          <key>CSS</key>
          <value>div.col-md-9</value>
       </entry>
-      <entry>
-         <key>XPATH</key>
-      </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
    </webElementProperties>
    <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>
+.w-full.flex-grow > div:nth-of-type(2) div:nth-of-type(2) > .p-5</value>
+   </webElementProperties>
+   <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>max-w-screen-2xl md:px-12 mx-auto</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl md:px-12 mx-auto&quot;]</value>
+      <value>p-5 flex flex-col space-y-2 lg:space-y-0 text-sm lg:flex-row lg:justify-between lg:items-center</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

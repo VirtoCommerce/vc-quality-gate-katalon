@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>LabelPersonal</name>
+   <name>label_Organization</name>
    <tag></tag>
    <elementGuidId>aabb661c-c339-4cea-86db-30c2d8d2f0bf</elementGuidId>
    <selectorCollection>

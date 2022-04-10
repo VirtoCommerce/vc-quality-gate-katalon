@@ -6,12 +6,12 @@
    <elementGuidId>c26e43d9-d437-4992-a753-3690b394d075</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//div[@class = 'xl:ml-28 lg:ml-6 xl:mr-11 lg:mr-6 lg:border lg:rounded' and (text() = 'My products' or . = 'My products')]</value>
-      </entry>
-      <entry>
          <key>CSS</key>
          <value>div.col-md-9</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class = 'xl:ml-28 lg:ml-6 xl:mr-11 lg:mr-6 lg:border lg:rounded' and (text() = 'My products' or . = 'My products')]</value>
       </entry>
       <entry>
          <key>XPATH</key>

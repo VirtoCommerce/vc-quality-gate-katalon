@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>div_PaymentDetailsBlock</name>
+   <name>1btn_ShippingMethod</name>
    <tag></tag>
-   <elementGuidId>8311df13-fde7-4a6d-b3aa-66b1b1baabd0</elementGuidId>
+   <elementGuidId>36920bbc-e476-4d6e-881a-f19aec2eabc0</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.col-md-9</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//div[@class = 'bg-white lg:mb-6 lg:rounded shadow-inner pb-8 lg:shadow']</value>
+         <value>.w-full.flex-grow > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) span:nth-of-type(1)</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>div</value>
+      <value>span</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>css</name>
       <type>Main</type>
-      <value>bg-white lg:mb-6 lg:rounded shadow-inner pb-8 lg:shadow</value>
+      <value>.w-full.flex-grow > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) span:nth-of-type(1)</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath</name>
+      <name>class</name>
       <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl md:px-12 mx-auto&quot;]/div[@class=&quot;flex flex-col lg:flex-row lg:flex-nowrap lg:space-x-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow w-full&quot;]/div[@class=&quot;bg-white lg:mb-6 lg:rounded shadow-inner pb-8 lg:shadow&quot;]</value>
+      <value>vc-button__content</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Payment details</value>
+      <value>Change</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

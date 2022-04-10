@@ -19,24 +19,43 @@ import org.openqa.selenium.Keys as Keys
 
 //verify Shipping Details block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_ShippingDetailsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingDetailsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_ShippingDetailsBlock'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingDetailsBlock'), 3)
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1h3_TitleGifts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1h3_ShippingDetailsTitle'))
 
-WebUI.verifyTextPresent('Checkout', false)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1h3_ShippingDetailsTitle'), 3)
+
+//WebUI.verifyTextPresent('Shipping details', false)
 
 //add Shipping address
 
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingAddress'))
+
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1btn_ShippingAddress'))
+
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingAddressPopUp'))
+
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingAddressLine'))
+
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1btn_ShippingAddressSelect'))
+
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1btn_ShippingAddressConfirm'))
 
 
 //add Shipping method 
 
-WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/a_openPopUpWindowWirhShippingMethod'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingMethod'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/a_ChooseFixedRateGround'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1btn_ShippingMethod'))
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/span_ActiveFixedRateGround'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingMethodPopUp'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/ShippingMethod/button_OkShippingMethod'))
+//WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingMethodLine'))
+
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1btn_ShippingMethodSelect'))
+
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1btn_ShippingMethodConfirm'))
+
+

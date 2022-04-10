@@ -7,15 +7,14 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>
-.border-2.rounded</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
-         <value>//button[@class='btn btn-outline-primary']</value>
+         <value>.vc-button--outline</value>
       </entry>
       <entry>
          <key>XPATH</key>
+         <value>//button[@class='btn btn-outline-primary']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
          <value>//button[@class='btn btn-outline-primary']</value>
       </entry>
    </selectorCollection>
@@ -61,8 +60,7 @@
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>
-.border-2.rounded</value>
+      <value>.vc-button--outline</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

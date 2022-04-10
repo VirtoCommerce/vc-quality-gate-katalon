@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>1h2_TitleCheckOut</name>
+   <name>1div_ShippingDetailsBlock</name>
    <tag></tag>
-   <elementGuidId>7dfb33da-ca41-4462-86cd-b09c0a7580bb</elementGuidId>
+   <elementGuidId>8a014f2f-93a5-493b-af8f-a08743ceaa0b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>div.col-md-9</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//h2[@class = 'text-gray-800 px-5 md:px-0 text-2xl lg:text-3xl font-bold uppercase mb-7' and (text() = 'Checkout' or . = 'Checkout')]</value>
+         <value>
+.w-full.flex-grow > div:nth-of-type(2)</value>
       </entry>
       <entry>
          <key>XPATH</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,28 +25,36 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>h2</value>
+      <value>div</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>text-gray-800 px-5 md:px-0 text-2xl lg:text-3xl font-bold uppercase mb-7</value>
+      <value>bg-white lg:mb-6 lg:rounded shadow-inner pb-8 lg:shadow</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl md:px-12 mx-auto&quot;]/h2[@class=&quot;text-gray-800 px-5 md:px-0 text-2xl lg:text-3xl font-bold uppercase mb-7&quot;]</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl md:px-12 mx-auto&quot;]/div[@class=&quot;flex flex-col lg:flex-row lg:flex-nowrap lg:space-x-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow w-full&quot;]/div[@class=&quot;bg-white lg:mb-6 lg:rounded shadow-inner pb-8 lg:shadow&quot;]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Checkout</value>
+      <value>Shipping details</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>
+.w-full.flex-grow > div:nth-of-type(2)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>

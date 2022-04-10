@@ -19,22 +19,32 @@ import org.openqa.selenium.Keys as Keys
 
 //verify my products block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_ProductsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_ProductsBlock'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'),3)
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1h3_TitleProducts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'))
 
-WebUI.verifyTextPresent('My products', false)
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'), 3)
+
+//WebUI.verifyTextPresent('My products', false)
 
 //update product amount
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_ProductsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_Product'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1input_UpdateProductCount'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1input_UpdateProductCount'))
 
-WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1input_UpdateProductCount'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1input_UpdateProductCount'))
 
-WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1input_QuantityForProductWithVariables'), '5')
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1input_UpdateProductCount'), GlobalVariable.productAmount)
 
-WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1button_UnpdateProductCount'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1button_UnpdateProductCount'))
+
+//verify update product amount
+
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1input_UpdateProductCount'))
+
+WebUI.verifyTextPresent('5', false)
+
+

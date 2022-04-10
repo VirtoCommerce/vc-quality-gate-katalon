@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>1input_QuantityForProductWithVariables</name>
+   <name>input_QuantityForProductWithVariables</name>
    <tag></tag>
    <elementGuidId>a3602711-5135-4d56-8a63-2c689f640247</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+      </entry>
       <entry>
          <key>CSS</key>
          <value>#qty_e9de38b73c424db19f319c9538184d03</value>
@@ -12,10 +15,6 @@
       <entry>
          <key>BASIC</key>
          <value>//*[@type = 'number']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>

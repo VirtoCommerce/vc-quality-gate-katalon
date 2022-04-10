@@ -62,7 +62,7 @@
    <testCaseLink>
       <guid>fd80435e-336e-4f76-8b92-cf818bf3ced7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1VerifyCheckOutPage</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -80,20 +80,20 @@
    <testCaseLink>
       <guid>c44c9197-935a-4196-9026-a0fad8c911a0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1ShippingDetailsBlock</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>01d01864-5d80-471f-a345-f5e3ab12f5e6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1PaymentDetailsBlock</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>77c84571-6d6c-4b80-8fa2-10164f1ed0d3</guid>
+      <guid>89c78584-4038-4b64-a1a1-20938d4b5cdb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/1_Button_PlaceOrder</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/AddExtra</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>fe83c4a4-db7a-4f8d-8e9d-63e6db82307b</guid>
@@ -112,11 +112,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/Mercury/BrowserAction/CloseBrowser</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>89c78584-4038-4b64-a1a1-20938d4b5cdb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/DeliveryMethodShipping/1AddExtra</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

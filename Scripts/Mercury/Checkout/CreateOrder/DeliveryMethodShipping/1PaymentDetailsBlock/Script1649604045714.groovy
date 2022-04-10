@@ -19,20 +19,24 @@ import org.openqa.selenium.Keys as Keys
 
 //verify Payment Details block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_PaymentDetailsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/div_PaymentDetailsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_PaymentDetailsBlock'))
+WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/div_PaymentDetailsBlock'))
 
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1h3_PaymentDetailsTitle'))
 
+//WebUI.verifyTextPresent('Checkout', false)
 
+//choose Payment Method 
 
-WebUI.mouseOver(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/div_PaymentMethodBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1div_PaymentMethod'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/a_openPopUpWindowWirhPaymentMethod'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1btn_PaymentMethod'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/a_ChoosePaymentMethodInvoice'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1div_PaymentMethodPopUp'))
 
-WebUI.verifyElementVisible(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/span_ActivePaymentMethodInvoice'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1btn_PaymentMethodSelect'))
 
-WebUI.click(findTestObject('1 UI-B2B ST/CheckOut/CreateOrder/DeliveryMethodShipping/PaymentMethod/button_SavePaymentMethodInvoice'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1btn_PaymentMethodConfirm'))
+
 

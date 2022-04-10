@@ -18,10 +18,10 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_ProductsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'))
 
 WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/a_OpenProduct'))
 
 WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_AllVariationsBlock'))
 
-WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1input_QuantityForProductWithVariables'), '1')
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/input_QuantityForProductWithVariables'), '1')

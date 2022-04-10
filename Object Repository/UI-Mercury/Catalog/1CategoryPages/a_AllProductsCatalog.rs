@@ -6,11 +6,11 @@
    <elementGuidId>6a71039e-a827-4546-90f5-b04111901346</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//div[(text() = 'All products' or . = 'All products')]</value>
+         <key>CSS</key>
       </entry>
       <entry>
-         <key>CSS</key>
+         <key>BASIC</key>
+         <value>//div[(text() = 'Products' or . = 'Products')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
@@ -30,7 +30,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>All products</value>
+      <value>Products</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

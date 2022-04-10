@@ -8,13 +8,13 @@
       <entry>
          <key>BASIC</key>
          <value>
-//span[.='Remove'][count(. | //span[(text() = 'Remove' or . = 'Remove') and @class = 'cursor-pointer']) = count(//span[(text() = 'Remove' or . = 'Remove') and @class = 'cursor-pointer'])]</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
+//span[.='Update'][count(. | //span[(text() = 'Update' or . = 'Update') and @class = 'cursor-pointer']) = count(//span[(text() = 'Update' or . = 'Update') and @class = 'cursor-pointer'])]</value>
       </entry>
       <entry>
          <key>XPATH</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -31,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>Remove</value>
+      <value>Update</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -46,7 +46,7 @@
       <name>xpath</name>
       <type>Main</type>
       <value>
-//span[.='Remove']</value>
+//span[.='Update']</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
