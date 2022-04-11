@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>SettingsGetByName</name>
+   <name>currencyUpdate</name>
    <tag></tag>
-   <elementGuidId>73ddf32a-295b-4ff3-8750-49292d392718</elementGuidId>
+   <elementGuidId>67dc6023-a064-4a35-ae4f-3b742b90aa21</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent></httpBodyContent>
-   <httpBodyType></httpBodyType>
+   <httpBodyContent>{
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${currencieCode}\&quot;, \n  \&quot;name\&quot;: \&quot;${currencieName}\&quot;\n}&quot;,
+  &quot;contentType&quot;: &quot;application/json&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;
+}</httpBodyContent>
+   <httpBodyType>text</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
@@ -27,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/settings/${name}</restUrl>
+   <restRequestMethod>PUT</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/currencies</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +42,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'VirtoCommerce.Core.General.WeightUnits'</defaultValue>
-      <description>setting name</description>
-      <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
+      <defaultValue>'QWE'</defaultValue>
+      <description>updated currencie code</description>
+      <id>d6a1d979-0d09-4266-bcc0-84673fd590b6</id>
       <masked>false</masked>
-      <name>name</name>
+      <name>currencyCode</name>
+   </variables>
+   <variables>
+      <defaultValue>'qweCurUPD'</defaultValue>
+      <description>updated currencie name</description>
+      <id>b39c76e1-fcc2-4e06-8c4d-7337171d2312</id>
+      <masked>false</masked>
+      <name>currencyName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -57,7 +68,7 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
+WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

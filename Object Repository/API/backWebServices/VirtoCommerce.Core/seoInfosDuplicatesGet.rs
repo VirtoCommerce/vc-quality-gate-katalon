@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>SettingsGetByName</name>
+   <name>seoInfosDuplicatesGet</name>
    <tag></tag>
-   <elementGuidId>73ddf32a-295b-4ff3-8750-49292d392718</elementGuidId>
+   <elementGuidId>49ff4d14-fec8-4085-a5ed-dcf7be318999</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/settings/${name}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/seoinfos/duplicates?objectId=${objectId}&amp;objectType=${objectType}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +38,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'VirtoCommerce.Core.General.WeightUnits'</defaultValue>
-      <description>setting name</description>
-      <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
+      <defaultValue>'Electronics'</defaultValue>
+      <description></description>
+      <id>29437f0c-0b85-40d7-b012-824a3e6967c9</id>
       <masked>false</masked>
-      <name>name</name>
+      <name>objectId</name>
+   </variables>
+   <variables>
+      <defaultValue>'Store'</defaultValue>
+      <description></description>
+      <id>b8d9afd3-c258-4517-96b2-d71ef66929ae</id>
+      <masked>false</masked>
+      <name>objectType</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -54,10 +61,11 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
 
+//No need to parse and return JSON. 
+//Because somtimes returned content is in HTML format and this will cause an error.
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(prettyJson)
+KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+  </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

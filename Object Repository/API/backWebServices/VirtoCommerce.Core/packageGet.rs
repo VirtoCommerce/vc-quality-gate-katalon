@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>SettingsGetByName</name>
+   <name>packageGet</name>
    <tag></tag>
-   <elementGuidId>73ddf32a-295b-4ff3-8750-49292d392718</elementGuidId>
+   <elementGuidId>9627e6af-799d-41ba-a3a9-dd3e6e2c1f63</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,7 +28,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/settings/${name}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/packageTypes</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -37,13 +37,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>'VirtoCommerce.Core.General.WeightUnits'</defaultValue>
-      <description>setting name</description>
-      <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
-      <masked>false</masked>
-      <name>name</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject
@@ -54,10 +47,11 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
 
+//No need to parse and return JSON. 
+//Because somtimes returned content is in HTML format and this will cause an error.
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
-def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
-KeywordUtil.logInfo(prettyJson)
+KeywordUtil.logInfo(response.responseBodyContent)
 WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+  </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
