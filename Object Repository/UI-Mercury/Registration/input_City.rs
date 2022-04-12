@@ -6,12 +6,12 @@
    <elementGuidId>6326ffe2-90fb-4e39-9dcd-9e70a9118de0</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>input[name=&quot;city&quot;]</value>
+         <key>XPATH</key>
+         <value>//div[3]/div/div[4]/input</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@name='city']</value>
+         <key>CSS</key>
+         <value>input[name=&quot;city&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -77,6 +77,6 @@
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
       <type>Main</type>
-      <value>//div[3]/div/div[2]/input</value>
+      <value>//div[3]/div/div[4]/input</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -33,7 +33,7 @@
       <guid>328de752-7064-4250-ba1e-0007e58a2dbc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Mercury/Catalog/ProductPage/1ProductBlockView</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/1ProductBlockView</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ab75bad7-0bc4-4859-a163-1822b4ce5759</guid>
@@ -51,7 +51,7 @@
       <guid>a50bd878-80ff-4b63-ac8f-74fcaf5c8ec5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Mercury/Checkout/1CleanCart</testCaseId>
+      <testCaseId>Test Cases/Mercury/Checkout/CreateOrder/CheckoutPage/1CleanCart</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ad78b57d-3e97-4651-8714-8748f7f84c64</guid>

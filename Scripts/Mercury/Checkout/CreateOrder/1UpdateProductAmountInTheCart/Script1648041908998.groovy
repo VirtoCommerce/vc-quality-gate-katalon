@@ -19,19 +19,27 @@ import org.openqa.selenium.Keys as Keys
 
 //verify my products block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'))
+//WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'))
 
 WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'),3)
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'))
+WebUI.verifyElementText (findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'),'MY PRODUCTS')
 
-WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'), 3)
+//WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'))
+
+//WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'), 3)
+
+
+
+//on product page - get price - variables - on checkout page check price/
 
 //WebUI.verifyTextPresent('My products', false)
 
 //update product amount
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_Product'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_Product'),3)
+
+WebUI.verifyElementText (findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/txt_PriceOnCheckout'), GlobalVariable.priceFromPopup)
 
 WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1input_UpdateProductCount'))
 

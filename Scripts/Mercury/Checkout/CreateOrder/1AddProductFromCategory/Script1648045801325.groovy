@@ -17,11 +17,15 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.click(findTestObject('UI-Mercury/Catalog/1CategoryPages/a_AllProductsCatalog'))
+
+WebUI.click(findTestObject('UI-Mercury/Catalog/1CategoryPages/a_InkjetPrinters'))
+
 WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/ProductPage/1ProductView/div_ProductBlock'))
 
 WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1button_AddFromCatalog'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_PopUpProductAdded'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_PopUpProductAdded'), 3)
 
 def AddCartCatalog = WebUI.getText(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1text_PopupTitle'))
 

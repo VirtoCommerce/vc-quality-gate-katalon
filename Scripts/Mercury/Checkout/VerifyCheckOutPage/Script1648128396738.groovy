@@ -69,9 +69,9 @@ WebUI.verifyTextPresent('Checkout', false)
 
 //verify Extra block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_ExtraBlock'))
+WebUI.mouseOver(findTestObject('null'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_ExtraBlock'))
+WebUI.verifyElementVisible(findTestObject('null'))
 
 WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1h3_TitleGifts'))
 
@@ -80,11 +80,11 @@ WebUI.verifyTextPresent('Checkout', false)
 //
 
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_SummaryBlock'))
+WebUI.mouseOver(findTestObject('null'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/div_SummaryBlock'))
+WebUI.verifyElementVisible(findTestObject('null'))
 
-WebUI.verifyElementClickable (findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/button_PlaceOrder'))
+WebUI.verifyElementClickable (findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1button_PlaceOrder'))
 
 
 

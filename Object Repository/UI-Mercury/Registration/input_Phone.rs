@@ -6,11 +6,15 @@
    <elementGuidId>06fd7f42-e2c5-4425-9985-7b03ae1b8b41</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[4]/input</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//input[@name = 'phone']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

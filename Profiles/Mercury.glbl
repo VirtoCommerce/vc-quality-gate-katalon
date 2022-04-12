@@ -6,12 +6,12 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://st-storefront.demo.govirto.com/'</initValue>
+      <initValue>'https://st-storefront.demo.govirto.com'</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://st-platform.demo.govirto.com/'</initValue>
+      <initValue>'https://st-platform.demo.govirto.com'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

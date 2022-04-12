@@ -17,22 +17,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.click(findTestObject('UI-Mercury/Catalog/1CategoryPages/a_AllProductsCatalog'))
+
+WebUI.click(findTestObject('UI-Mercury/Catalog/1CategoryPages/a_CarriageBolts'))
 
 WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/ProductPage/1ProductView/div_ProductBlock'))
 
 WebUI.click(findTestObject('UI-Mercury/Catalog/ProductPage/1ProductView/a_ProductTitle'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_AllVariationsBlock'))
+//WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_AllVariationsBlock'))
 
 WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_OneVariationBlock'))
 
 WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1button_AddToCart'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_PopUpProductAdded'))
+WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1div_PopUpProductAdded'), 3)
 
 def AddCartProductPage = WebUI.getText(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/1text_PopupTitle'))
 
 WebUI.verifyMatch(AddCartProductPage, "1 Product added to cart", false)
+
+GlobalVariable.priceFromPopup = WebUI.getText(findTestObject('UI-Mercury/CheckOut/CreateOrder/AddProduct/txt_PriceOnPopup'))
+
+println ("PRICE FROM POPUP IS : " + GlobalVariable.priceFromPopup)
+
+WebUI.delay(10)
 
 
 

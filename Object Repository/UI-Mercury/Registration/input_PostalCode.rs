@@ -6,11 +6,15 @@
    <elementGuidId>b049ae2c-c20b-493e-8f68-7c4423ac2bfa</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[3]/div/div[2]/input</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//input[@name = 'postalCode']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

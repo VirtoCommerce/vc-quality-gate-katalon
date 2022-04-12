@@ -6,24 +6,35 @@
    <elementGuidId>2f6c48ad-88db-4e47-bcd0-54e67e3515bd</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[1]/input</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>//input[@name = 'firstName']</value>
+         <value>form div:nth-of-type(1) > [placeholder]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
       <value>firstName</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>form div:nth-of-type(1) > [placeholder]</value>
    </webElementProperties>
 </WebElementEntity>

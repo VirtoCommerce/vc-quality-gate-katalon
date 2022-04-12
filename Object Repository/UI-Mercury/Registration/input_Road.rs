@@ -6,12 +6,12 @@
    <elementGuidId>82a20e30-411c-4c21-a7c2-24bcaf0991fc</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>input[name=&quot;line1&quot;]</value>
+         <key>XPATH</key>
+         <value>//div[3]/div[2]/input</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@name='line1']</value>
+         <key>CSS</key>
+         <value>input[name=&quot;line1&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
