@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>settingsWeightUnitCreate</name>
+   <name>settingsUnitOrLanguageCreate</name>
    <tag></tag>
    <elementGuidId>cbe737be-ce29-4ad1-bc78-8b4df4e842e0</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

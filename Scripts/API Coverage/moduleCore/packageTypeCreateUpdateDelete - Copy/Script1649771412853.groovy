@@ -46,7 +46,6 @@ packageGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 //packageName = WS.getElementPropertyValue(packageGet,'[0].name') 
 WS.containsString(packageGet, packageName, false)
 packageId = WS.getElementPropertyValue(packageGet,'[0].id')
-println packageId
  
 
 'UPDATE THE CREATED PACKAGE'

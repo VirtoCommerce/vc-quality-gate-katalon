@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${currencieCode}\&quot;,\n  \&quot;name\&quot;: \&quot;${currencieName}\&quot;,\n  }&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${currencyCode}\&quot;,\n  \&quot;name\&quot;: \&quot;${currencyName}\&quot;,\n  }&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
