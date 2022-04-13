@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>seoInfosDuplicatesGet</name>
+   <name>DRAFT.seoInfosDuplicatesGet</name>
    <tag></tag>
    <elementGuidId>49ff4d14-fec8-4085-a5ed-dcf7be318999</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

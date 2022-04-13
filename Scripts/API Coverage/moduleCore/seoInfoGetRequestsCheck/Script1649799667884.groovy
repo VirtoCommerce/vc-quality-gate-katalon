@@ -43,10 +43,6 @@ seoInfoGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backW
 WS.verifyElementPropertyValue(seoInfoGet, '[0].objectId', GlobalVariable.categoryId)
 
 
-'RUN seoInfo/duplicates ENDPOINT(simple endpoints check)'
-seoDuplicatesGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Core/seoInfosDuplicatesGet'))
-
-
 'DELETE CATEGORY'
 categoryDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ListentriesDelete', [
 	('objectIds') : GlobalVariable.categoryId

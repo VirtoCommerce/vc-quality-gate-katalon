@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>seoInfosBatchUpdate(not used)</name>
+   <name>NOT_SUPPORTED.exposeAddressInOpenAPI</name>
    <tag></tag>
-   <elementGuidId>988d387a-b249-4a42-b903-8d78c302fb79</elementGuidId>
+   <elementGuidId>78b61989-b500-44bb-a1fd-90691d1a1991</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;name\&quot;: \&quot;string\&quot;,\n    \&quot;semanticUrl\&quot;: \&quot;string\&quot;,\n    \&quot;pageTitle\&quot;: \&quot;string\&quot;,\n    \&quot;metaDescription\&quot;: \&quot;string\&quot;,\n    \&quot;imageAltDescription\&quot;: \&quot;string\&quot;,\n    \&quot;metaKeywords\&quot;: \&quot;string\&quot;,\n    \&quot;storeId\&quot;: \&quot;string\&quot;,\n    \&quot;objectId\&quot;: \&quot;string\&quot;,\n    \&quot;objectType\&quot;: \&quot;string\&quot;,\n    \&quot;isActive\&quot;: true,\n    \&quot;languageCode\&quot;: \&quot;string\&quot;,\n    \&quot;createdDate\&quot;: \&quot;2022-04-08T12:29:43.999Z\&quot;,\n    \&quot;modifiedDate\&quot;: \&quot;2022-04-08T12:29:43.999Z\&quot;,\n    \&quot;createdBy\&quot;: \&quot;string\&quot;,\n    \&quot;modifiedBy\&quot;: \&quot;string\&quot;,\n    \&quot;id\&quot;: \&quot;string\&quot;\n  }\n]&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;addressType\&quot;: \&quot;Billing\&quot;,\n  \&quot;key\&quot;: \&quot;string\&quot;,\n  \&quot;name\&quot;: \&quot;string\&quot;,\n  \&quot;organization\&quot;: \&quot;string\&quot;,\n  \&quot;countryCode\&quot;: \&quot;string\&quot;,\n  \&quot;countryName\&quot;: \&quot;string\&quot;,\n  \&quot;city\&quot;: \&quot;string\&quot;,\n  \&quot;postalCode\&quot;: \&quot;string\&quot;,\n  \&quot;zip\&quot;: \&quot;string\&quot;,\n  \&quot;line1\&quot;: \&quot;string\&quot;,\n  \&quot;line2\&quot;: \&quot;string\&quot;,\n  \&quot;regionId\&quot;: \&quot;string\&quot;,\n  \&quot;regionName\&quot;: \&quot;string\&quot;,\n  \&quot;firstName\&quot;: \&quot;string\&quot;,\n  \&quot;middleName\&quot;: \&quot;string\&quot;,\n  \&quot;lastName\&quot;: \&quot;string\&quot;,\n  \&quot;phone\&quot;: \&quot;string\&quot;,\n  \&quot;email\&quot;: \&quot;string\&quot;,\n  \&quot;outerId\&quot;: \&quot;string\&quot;,\n  \&quot;isDefault\&quot;: true\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/seoinfos/batchupdate</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -43,15 +43,15 @@
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'QWE'</defaultValue>
-      <description>updated currencie code</description>
-      <id>d6a1d979-0d09-4266-bcc0-84673fd590b6</id>
+      <description>code of the created currencie</description>
+      <id>6d8812e4-fce4-4dbd-88b7-cf4c31d763e4</id>
       <masked>false</masked>
       <name>currencyCode</name>
    </variables>
    <variables>
-      <defaultValue>'qweCurUPD'</defaultValue>
-      <description>updated currencie name</description>
-      <id>b39c76e1-fcc2-4e06-8c4d-7337171d2312</id>
+      <defaultValue>'qweCurrencie'</defaultValue>
+      <description>name of the created currencie</description>
+      <id>caf01b4b-39e4-46da-b0d4-81e321215120</id>
       <masked>false</masked>
       <name>currencyName</name>
    </variables>
