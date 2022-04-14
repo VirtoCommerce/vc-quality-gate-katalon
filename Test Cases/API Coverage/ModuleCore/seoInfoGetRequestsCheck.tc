@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>check seoInfo related endpoints check</description>
    <name>seoInfoGetRequestsCheck</name>
    <tag></tag>
    <comment></comment>
