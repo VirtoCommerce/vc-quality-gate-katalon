@@ -499,4 +499,9 @@
       <initValue>''</initValue>
       <name>channelCompleteness</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>semantic url used in seoInfos (slug url)</description>
+      <initValue>'QWE'</initValue>
+      <name>semanticUrl</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
