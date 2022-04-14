@@ -24,25 +24,25 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>986bf07b-3343-4683-8128-5033681bcaa2</guid>
+      <guid>905228b6-6671-4ef6-92c8-4475b1a17024</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCore/coreUnitSettingsCreateUpdateDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>22d0ac0a-4aa2-4d6c-b014-b2f24da6e30e</guid>
+      <guid>4315c3c3-ee00-4b01-860a-dd5536c507cf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCore/currenciesCreateUpdateDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>bb6b39ee-b5ed-49da-a642-c094692036de</guid>
+      <guid>5a02b0c9-5c59-47d9-a379-32fc475277b3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCore/packageTypeCreateUpdateDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>94526b31-8b30-423c-be31-97c7ea570657</guid>
+      <guid>641fcb19-814b-48f4-9fbe-017504934b80</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCore/seoInfoGetRequestsCheck</testCaseId>
