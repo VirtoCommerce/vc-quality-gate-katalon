@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>create update delete settings for unit</description>
    <name>coreUnitSettingsCreateUpdateDelete</name>
    <tag></tag>
    <comment></comment>
