@@ -79,4 +79,3 @@ for ( int i; i < settingsNames.size(); i++ ) {
 	assert WS.containsString(deltedUnitSettingsGet, newUnitName, false, FailureHandling.OPTIONAL) == false
 	
 	}
-

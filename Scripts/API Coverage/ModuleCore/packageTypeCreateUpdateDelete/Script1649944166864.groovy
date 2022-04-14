@@ -43,7 +43,7 @@ packageCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 
 'VERIFY PACKAGE HAS BEEN CREATED'
 packageGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Core/packageGet'))
-//packageName = WS.getElementPropertyValue(packageGet,'[0].name') 
+//packageName = WS.getElementPropertyValue(packageGet,'[0].name')
 WS.containsString(packageGet, packageName, false)
 packageId = WS.getElementPropertyValue(packageGet,'[0].id')
 println packageId
