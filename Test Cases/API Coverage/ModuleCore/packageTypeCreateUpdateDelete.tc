@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>check core module endpoints</description>
+   <description>create update and delete packege type</description>
    <name>packageTypeCreateUpdateDelete</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>b42fe793-ef65-4483-a826-fc9e9a973c98</testCaseGuid>
+   <testCaseGuid>0fc213b0-0e53-4848-b806-48e8ac2b0a94</testCaseGuid>
 </TestCaseEntity>
