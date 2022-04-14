@@ -54,7 +54,7 @@ for ( int i; i < settingsNames.size(); i++ ) {
 	
 	
 	'SEND REQUEST TO UPDATE PLATFORM SETTINGS'
-	RequestObject settingsUpdateObject = findTestObject('API/backWebServices/VirtoCommerce.Core/relatedSettingsCreateUpdate/settingsUnitOrLanguageCreate')
+	RequestObject settingsUpdateObject = findTestObject('API/backWebServices/VirtoCommerce.Core/_relatedSettingsCreateUpdate/settingsUnitOrLanguageCreate')
 	settingsUpdateObject.setBodyContent(new HttpTextBodyContent(unitSettingsJson))
 	settingsUpdate = WS.sendRequestAndVerify(settingsUpdateObject)
 	
@@ -67,7 +67,7 @@ for ( int i; i < settingsNames.size(); i++ ) {
 	
 	
 	'DELETE THE ADDED VALUE (send the initial settings)'
-	RequestObject settingsDeleteObject = findTestObject('API/backWebServices/VirtoCommerce.Core/relatedSettingsCreateUpdate/settingsUnitOrLanguageCreate')
+	RequestObject settingsDeleteObject = findTestObject('API/backWebServices/VirtoCommerce.Core/_relatedSettingsCreateUpdate/settingsUnitOrLanguageCreate')
 	settingsDeleteObject.setBodyContent(new HttpTextBodyContent(initialUnitSettings))
 	settingsDelete= WS.sendRequestAndVerify(settingsDeleteObject)
 	
