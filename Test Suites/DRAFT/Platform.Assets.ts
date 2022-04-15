@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description></description>
-   <name>module_Platform_Assets</name>
+   <description>Old version where requests are placed in Platform module</description>
+   <name>Platform.Assets</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,99 +10,99 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>1ac72814-7886-4cb6-8e4e-ec5a88e64a1a</testSuiteGuid>
+   <testSuiteGuid>5a670269-fd46-4f4f-80c2-a3dbaef20680</testSuiteGuid>
    <testCaseLink>
-      <guid>a41e52dc-8be5-4b8a-a967-297ef91a5fd5</guid>
+      <guid>ee0c00ea-0b53-4b15-b1bb-05067ce8fbcf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2243ebe1-29f1-4d06-be5f-f5a6a31c7cc2</guid>
+      <guid>bc34a554-6802-4b8d-b10b-89fb723312be</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4c3cc0ee-e4f9-4370-9c89-b88b0fda4bf6</guid>
+      <guid>c4b794e2-3625-465e-ba89-12dd9fe3d1da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ef8ae7f9-370f-431a-a48f-9d418ebabb87</guid>
+      <guid>f46e9d3d-e860-4a3c-81ec-74c851a3d5ef</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>eea4e54c-bab0-4354-aed1-dc1436351090</guid>
+      <guid>9a9db64f-5e64-4bf7-b883-2e34c560bdb6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5ade4401-2888-43b3-a9ae-b0c56a588775</guid>
+      <guid>60f60fe8-86b8-4a0b-9def-57a323c6cd8c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2b38c168-87d9-4e9d-b135-99f721eaea6e</guid>
+      <guid>9418346c-f79b-4517-8266-5c763773d0a5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrlImage</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>66093d13-a182-4a7e-af45-974d95f00281</guid>
+      <guid>f3099dc2-6e3d-4695-8e84-cb16a59f6a18</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>28f6e567-1df1-47ee-b909-413f99ba4346</guid>
+      <guid>da6fde6a-c3e8-4be1-b28f-613c5661add5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrl</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c4d4f7f4-fe41-418d-999c-0ebc3bb1cff4</guid>
+      <guid>a8b5cc45-b7d2-455c-80cc-d74d8697000d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>861e4a92-9b6c-4505-86db-32ca7007ca68</guid>
+      <guid>aaabd52f-bdab-4309-bbdb-4fc98f21afd0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocal</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>880c1983-631e-4857-a299-a6c5141aded3</guid>
+      <guid>606c693a-bd85-4f0d-9e6d-1d41e78ab466</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>73edf970-34ee-4f1c-9884-12d7041397f2</guid>
+      <guid>22959507-029f-4e19-b498-88d37c20942c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocalStorage</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3917ff9a-4e6a-4450-9dd1-39527b6c7af0</guid>
+      <guid>426db9e9-d0f3-47a9-85da-de156b29971a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>37793dc0-e5a1-4438-b34f-fe34acbba9ed</guid>
+      <guid>74dfa3d2-8f6d-480e-bdb7-f382938a520d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccessAfterDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>893bca20-dcb0-42d0-af70-d6dbbe64df9e</guid>
+      <guid>8e15de69-d13f-4de2-bc40-87b7c15be0b6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk</testCaseId>

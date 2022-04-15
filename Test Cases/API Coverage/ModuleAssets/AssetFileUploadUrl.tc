@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Upload ZIP file by URL</description>
+   <name>AssetFileUploadUrl</name>
+   <tag></tag>
+   <comment>TEST CASE: Assets. Upload ZIP file by URL
+GlobalVariable.localUrl
+GlobalVariable.folderUrl</comment>
+   <testCaseGuid>e2f72e76-a581-47ba-b201-6d758ab30fd0</testCaseGuid>
+</TestCaseEntity>
