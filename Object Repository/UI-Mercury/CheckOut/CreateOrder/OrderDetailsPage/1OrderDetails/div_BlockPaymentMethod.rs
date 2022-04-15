@@ -6,15 +6,19 @@
    <elementGuidId>757a3dcc-60d2-4e14-8191-5a619361e08c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value>.mb-3.card div:nth-of-type(3) > .card</value>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Payment method' or . = 'Payment method')]</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//h5[.='Payment Method']</value>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -22,59 +26,22 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
+      <webElementGuid>42c345c7-8024-4ebf-b574-ca3535d2e9f7</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>card h-100 mb-0</value>
+      <value>bg-white rounded border shadow-sm mb-5</value>
+      <webElementGuid>b606942c-d0a4-4170-b8d1-c8353701e7ca</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>
-                                                Payment method
-                                                
-                                                    
-                                                        
-                                                        
-                                                            Invoice
-                                                            
-                                                        
-                                                        
-                                                    
-                                                
-                                            </value>
+      <value>Payment method</value>
+      <webElementGuid>747687fb-125d-43cb-884f-2cd8274f6d7f</webElementGuid>
    </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>/html[@class=&quot;h-100&quot;]/body[@class=&quot;customer-logged-in template-cart ng-scope&quot;]/main[@class=&quot;container flex-grow-1 pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col&quot;]/vc-checkout-wizard[@class=&quot;ng-isolate-scope&quot;]/div[1]/vc-checkout-wizard-step[@class=&quot;ng-scope ng-isolate-scope&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;col-12 ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;card mb-3&quot;]/div[@class=&quot;card-body&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12 col-md-4&quot;]/div[@class=&quot;card h-100 mb-0&quot;]</value>
-   </webElementProperties>
-   <webElementXpaths>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='BusinessQA@BusinessQA.tt'])[1]/following::div[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Email:'])[1]/following::div[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:position</name>
-      <type>Main</type>
-      <value>//div[3]/div</value>
-   </webElementXpaths>
 </WebElementEntity>

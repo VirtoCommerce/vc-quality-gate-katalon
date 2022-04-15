@@ -16,6 +16,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/LabelPersonal'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/label_Organization'))
 
 

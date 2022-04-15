@@ -7,30 +7,43 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//label[@for = 'personalRadio']</value>
+         <value>
+[value='organization']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>label</value>
+      <value>input</value>
+      <webElementGuid>0e0e4bdf-a09e-4158-b3ef-69978807d8ca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>
+[value='organization']</value>
+      <webElementGuid>025e65fb-2708-493b-a934-b81509aee832</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>value</name>
       <type>Main</type>
-      <value>Personal Use</value>
+      <value>organization</value>
+      <webElementGuid>5a7fc677-d0e1-43d3-b10d-38a3e849745f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>for</name>
+      <name>type</name>
       <type>Main</type>
-      <value>personalRadio</value>
+      <value>radio</value>
+      <webElementGuid>27672b53-88f5-44f9-b8cd-b440cc41d9c6</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

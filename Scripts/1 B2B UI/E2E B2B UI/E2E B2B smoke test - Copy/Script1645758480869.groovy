@@ -51,10 +51,10 @@ WebUI.closeWindowUrl(GlobalVariable.B2BCredentialsPage)
 
 //REGISTER AS PERSON
 //open register page
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/link_RegisterPage'))
+WebUI.click(findTestObject('UI-Mercury/Registration/link_RegisterPage'))
 
 //select personal
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/LabelPersonal'))
+WebUI.click(findTestObject('1 UI-B2B ST/Registration/label_Organization'))
 
 //enter contact information information
 WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_FirstName'))
@@ -112,7 +112,7 @@ WebUI.verifyElementNotPresent(findTestObject('1 UI-B2B ST/Registration/text_Veri
 
 //REGISTER AS ORGANIZATION
 //open register page
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/link_RegisterPage'))
+WebUI.click(findTestObject('UI-Mercury/Registration/link_RegisterPage'))
 
 //enter contact information information
 WebUI.click(findTestObject('1 UI-B2B ST/Registration/input_FirstName'))

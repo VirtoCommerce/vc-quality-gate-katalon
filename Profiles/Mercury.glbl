@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'UserDemoQA'</initValue>
+      <initValue>'UserQAKatalon'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Contact QA K'</initValue>
+      <initValue>'Contact QA Katalon'</initValue>
       <name>contactName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -41,12 +41,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Contact QA K'</initValue>
+      <initValue>'Contact QA Katalon'</initValue>
       <name>contactLastName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'BusinessQAk@BusinessQA.tt'</initValue>
+      <initValue>'UserQAKatalon@BusinessQA.tt'</initValue>
       <name>contactEmail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -56,7 +56,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Organization QA K'</initValue>
+      <initValue>'Organization QA Katalon'</initValue>
       <name>organizationName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -188,5 +188,15 @@
       <description></description>
       <initValue>'5'</initValue>
       <name>productAmount</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'VALUE'</initValue>
+      <name>updateQuantity</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'0a773137-7ac5-4ebc-8d24-94419ed988b6'</initValue>
+      <name>userId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

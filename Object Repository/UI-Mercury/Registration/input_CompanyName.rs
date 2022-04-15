@@ -7,23 +7,39 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@name = 'companyName']</value>
+         <value>
+[placeholder='Enter organization name']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
+      <webElementGuid>9521b332-c7af-4649-92e7-402d28df98cd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value></value>
+      <webElementGuid>5d1557ce-aaf9-4e0b-b1dc-949baddf0885</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>name</name>
+      <name>css</name>
       <type>Main</type>
-      <value>companyName</value>
+      <value>
+[placeholder='Enter organization name']</value>
+      <webElementGuid>ec890e96-6689-4dc3-af30-b4977866a0cd</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

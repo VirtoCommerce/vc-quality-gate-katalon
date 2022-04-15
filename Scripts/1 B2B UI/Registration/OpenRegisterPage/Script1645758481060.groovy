@@ -18,4 +18,4 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 //open register page
-WebUI.click(findTestObject('1 UI-B2B ST/Registration/link_RegisterPage'))
+WebUI.click(findTestObject('UI-Mercury/Registration/link_RegisterPage'))

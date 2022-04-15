@@ -6,15 +6,16 @@
    <elementGuidId>1fba7bb2-884a-436e-b1e1-1867e9f48334</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//*[@class = 'flex-grow hidden md:inline-flex items-center text-sm cursor-pointer' and (text() = 'Compare' or . = 'Compare')]</value>
+         <value>
+.gap-x-4 > div:nth-of-type(1) .ml-2</value>
       </entry>
       <entry>
          <key>XPATH</key>
          <value>//body[@id='inkjet-printers']/main/div[3]/div[2]/div/div[2]/div[2]/div/div/add-to-compare-checkbox-migration/div</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -24,14 +25,17 @@
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>label</value>
+      <value>span</value>
+      <webElementGuid>3fd82814-6d53-4429-a7a1-110c141010a6</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>css</name>
       <type>Main</type>
-      <value>flex-grow hidden md:inline-flex items-center text-sm cursor-pointer</value>
+      <value>
+.gap-x-4 > div:nth-of-type(1) .ml-2</value>
+      <webElementGuid>0a8fca79-c2b6-4cd9-90e1-8c1aaf6fff5d</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -39,13 +43,7 @@
       <name>text</name>
       <type>Main</type>
       <value>Compare</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-6 xl:gap-x-6 xl:gap-y-8&quot;]/div[@class=&quot;flex flex-col bg-white rounded border p-4 shadow-sm hover:shadow-lg overflow-hidden&quot;]/div[@class=&quot;flex flex-col flex-grow pt-4&quot;]/div[@class=&quot;flex items-center justify-between mb-3&quot;]/label[@class=&quot;flex-grow hidden md:inline-flex items-center text-sm cursor-pointer&quot;]</value>
+      <webElementGuid>f2894517-3acf-4995-afbd-4b4a431dab89</webElementGuid>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
@@ -53,6 +51,7 @@
       <name>xpath:idRelative</name>
       <type>Main</type>
       <value>//body[@id='inkjet-printers']/main/div[3]/div[2]/div/div[2]/div[2]/div/div/add-to-compare-checkbox-migration/div</value>
+      <webElementGuid>0f293bf0-a3ed-4168-973f-a0db6d8f61b7</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -60,6 +59,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Unavailable'])[1]/following::div[4]</value>
+      <webElementGuid>29aa614e-9f6c-4a61-96d2-577613005c85</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -67,6 +67,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='/ each'])[1]/following::div[5]</value>
+      <webElementGuid>ac63ccb7-b478-4ecd-b975-ad1e00fd413c</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -74,6 +75,7 @@
       <name>xpath:neighbor</name>
       <type>Main</type>
       <value>(.//*[normalize-space(text()) and normalize-space(.)='Epson Expression Premium XP-820 Wireless Color Photo Printer/Copier/Scanner/Fax Machine'])[1]/preceding::div[2]</value>
+      <webElementGuid>fe1bed56-3b28-4e1c-ae5b-1aaf7cae8865</webElementGuid>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
@@ -81,5 +83,6 @@
       <name>xpath:position</name>
       <type>Main</type>
       <value>//div[2]/div/div/add-to-compare-checkbox-migration/div</value>
+      <webElementGuid>6169dd91-8c39-40cd-8c44-44e9309c9445</webElementGuid>
    </webElementXpaths>
 </WebElementEntity>

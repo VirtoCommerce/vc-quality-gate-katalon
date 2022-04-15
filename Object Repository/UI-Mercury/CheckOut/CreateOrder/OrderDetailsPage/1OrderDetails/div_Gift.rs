@@ -7,14 +7,17 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>.pl-md-2 > .card</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>.pl-md-2 > .card</value>
       </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>.items-center.flex-grow</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -22,66 +25,14 @@
       <name>tag</name>
       <type>Main</type>
       <value>div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>card h-100 mb-0</value>
+      <webElementGuid>7b7eaa19-e036-4584-bbdf-5450a4261681</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>text</name>
+      <name>css</name>
       <type>Main</type>
-      <value>
-                                                Shipping address
-                                                
-                                                    
-
-
-    
-    
-        BusinessQA BusinessQA
-        
-    
-    street, 5
-    city, , SLB 333444
-    Phone: 123123123
-    Email: BusinessQA@BusinessQA.tt
-    
-
-
-                                                
-                                            </value>
+      <value>.items-center.flex-grow</value>
+      <webElementGuid>76ae764a-d57d-4a88-9210-8bac1c3eb92f</webElementGuid>
    </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath</name>
-      <type>Main</type>
-      <value>/html[@class=&quot;h-100&quot;]/body[@class=&quot;customer-logged-in template-cart ng-scope&quot;]/main[@class=&quot;container flex-grow-1 pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col&quot;]/vc-checkout-wizard[@class=&quot;ng-isolate-scope&quot;]/div[1]/vc-checkout-wizard-step[@class=&quot;ng-scope ng-isolate-scope&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;col-12 ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;card mb-3&quot;]/div[@class=&quot;card-body&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-12 col-md-4 mb-3 mb-sm-0 pl-md-2 pr-md-2 ng-scope&quot;]/div[@class=&quot;card h-100 mb-0&quot;]</value>
-   </webElementProperties>
-   <webElementXpaths>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='$208.10'])[1]/following::div[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:neighbor</name>
-      <type>Main</type>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Total'])[1]/following::div[2]</value>
-   </webElementXpaths>
-   <webElementXpaths>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xpath:position</name>
-      <type>Main</type>
-      <value>//div[2]/div/div[2]/div</value>
-   </webElementXpaths>
 </WebElementEntity>

@@ -3,33 +3,45 @@
    <description></description>
    <name>link_RegisterPage</name>
    <tag></tag>
-   <elementGuidId>9174e48b-528b-4b4a-b3bf-54d87147f572</elementGuidId>
+   <elementGuidId>b3ec279f-6230-4331-9de3-4717b8ba1503</elementGuidId>
    <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
       <entry>
          <key>CSS</key>
       </entry>
       <entry>
-         <key>XPATH</key>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//a[@id = 'customer_register_link']</value>
+         <value>[href='/sign-up']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>a</value>
+      <webElementGuid>2916a4b5-2aa4-4b81-9dd4-09b86dd30e14</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>
+//a[.='Register now']</value>
+      <webElementGuid>c5af9b31-8b9a-434a-a7da-4f1b1158cd47</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>id</name>
+      <name>css</name>
       <type>Main</type>
-      <value>customer_register_link</value>
+      <value>[href='/sign-up']</value>
+      <webElementGuid>d87c5543-0b3f-4f5e-b3e6-c57f1e9acd0c</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

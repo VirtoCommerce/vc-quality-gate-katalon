@@ -6,12 +6,13 @@
    <elementGuidId>2f6c48ad-88db-4e47-bcd0-54e67e3515bd</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//div[1]/input</value>
+         <key>BASIC</key>
+         <value>
+[placeholder='Enter your first name']</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>form div:nth-of-type(1) > [placeholder]</value>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -22,6 +23,7 @@
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
+      <webElementGuid>49bccf36-c8b7-4f88-82b7-01438c28ea25</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -29,12 +31,15 @@
       <name>name</name>
       <type>Main</type>
       <value>firstName</value>
+      <webElementGuid>6b5a171f-25eb-455f-8752-212b64e4d44f</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>form div:nth-of-type(1) > [placeholder]</value>
+      <value>
+[placeholder='Enter your first name']</value>
+      <webElementGuid>ca9df2d2-5169-4245-a434-c5680da17edb</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

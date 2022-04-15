@@ -23,7 +23,7 @@ WebUI.click(findTestObject('UI-Mercury/Catalog/1CategoryPages/a_AllProductsCatal
 
 WebUI.click(findTestObject('UI-Mercury/Catalog/1CategoryPages/a_CarriageBolts'))
       
-//???WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/1CategoryPages/h2_CarriageBolts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Catalog/1CategoryPages/h2_CarriageBolts'))
 
 WebUI.verifyTextPresent('Carriage Bolts', false)
 

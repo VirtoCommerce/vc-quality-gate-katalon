@@ -32,6 +32,8 @@ WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Payment
 
 WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1div_PaymentMethodPopUp'),3)
 
+WebUI.delay(5)
+
 WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1btn_PaymentMethodSelect'))
 
 WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/1btn_PaymentMethodConfirm'))

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h1_Registration</name>
+   <tag></tag>
+   <elementGuidId>37c20a7f-115a-47ef-ad83-1f4a14586a45</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h1[(text() = 'Registration' or . = 'Registration')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//li[@class='list-inline-item ng-binding']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>
+.text-3xl</value>
+      <webElementGuid>c6e0719e-b7c3-4fad-b965-171d5bf326da</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h1</value>
+      <webElementGuid>37f4c46b-7791-42a3-bce7-980995a33190</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Registration</value>
+      <webElementGuid>bbb390a6-1a3e-42b5-aae0-7aa538b2ec1b</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

@@ -49,55 +49,55 @@ WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Shippin
 
 //enter contact information information
 
-WebUI.click(findTestObject('UI-Mercury/Registration/input_FirstName'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_FirstName'))
 
-WebUI.setText(findTestObject('UI-Mercury/Registration/input_FirstName'), GlobalVariable.contactFirstName)
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_FirstName'), GlobalVariable.contactFirstName)
 
-WebUI.click(findTestObject('UI-Mercury/Registration/input_LastName'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_LastName'))
 
-WebUI.setText(findTestObject('UI-Mercury/Registration/input_LastName'), GlobalVariable.contactLastName)
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_LastName'), GlobalVariable.contactLastName)
 
-WebUI.click(findTestObject('UI-Mercury/Registration/input_Email'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_Email'))
 
-WebUI.setText(findTestObject('UI-Mercury/Registration/input_Email'), GlobalVariable.contactEmail)
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_Email'), GlobalVariable.contactEmail)
 
-WebUI.click(findTestObject('UI-Mercury/Registration/input_Phone'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_Phone'))
 
-WebUI.setText(findTestObject('UI-Mercury/Registration/input_Phone'), GlobalVariable.contactPhone)
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_Phone'), GlobalVariable.contactPhone)
 
 //enter address
 
-WebUI.click(findTestObject('UI-Mercury/Registration/select_Country'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_Country'))
 
-//WebUI.scrollToElement(findTestObject('UI-Mercury/Registration/select_CountryCanada'), 3)
+//WebUI.scrollToElement(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_CountryCanada'), 3)
 
 //WebUI.scrollToPosition(40, 40)
 
-WebUI.click(findTestObject('UI-Mercury/Registration/select_CountryCanada'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_CountryCanada'))
 
-//WebUI.selectOptionByIndex(findTestObject('UI-Mercury/Registration/select_CountryCanada'), 40)
+//WebUI.selectOptionByIndex(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_CountryCanada'), 40)
 
-//WebUI.selectOptionByValue(findTestObject('UI-Mercury/Registration/select_CountryCanada'), 40, false)
+//WebUI.selectOptionByValue(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_CountryCanada'), 40, false)
 
-//WebUI.selectOptionByLabel(findTestObject('UI-Mercury/Registration/select_CountryCanada'), 40, false)
+//WebUI.selectOptionByLabel(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_CountryCanada'), 40, false)
 
-//WebUI.click(findTestObject('UI-Mercury/Registration/select_CountryCanada'))
+//WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_CountryCanada'))
 
-WebUI.click(findTestObject('UI-Mercury/Registration/select_Province'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_Province'))
 
-WebUI.click(findTestObject('UI-Mercury/Registration/select_ProvinceAlberta'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/select_ProvinceAlberta'))
 
-WebUI.click(findTestObject('UI-Mercury/Registration/input_PostalCode'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_PostalCode'))
 
-WebUI.setText(findTestObject('UI-Mercury/Registration/input_PostalCode'), GlobalVariable.organizationPostalCode)
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_PostalCode'), GlobalVariable.organizationPostalCode)
 
-WebUI.click(findTestObject('UI-Mercury/Registration/input_City'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_City'))
 
-WebUI.setText(findTestObject('UI-Mercury/Registration/input_City'), GlobalVariable.organizationCity)
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_City'), GlobalVariable.organizationCity)
 
-WebUI.click(findTestObject('UI-Mercury/Registration/input_Road'))
+WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_Road'))
 
-WebUI.setText(findTestObject('UI-Mercury/Registration/input_Road'), GlobalVariable.organizationStreet)
+WebUI.setText(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/ShippingAddress/FillInShippingAddress/input_Road'), GlobalVariable.organizationStreet)
 
 
 

@@ -26,3 +26,16 @@ WebUI.click(findTestObject('UI-Mercury/LoginPage/LogIn/input_Password'))
 WebUI.setText(findTestObject('UI-Mercury/LoginPage/LogIn/input_Password'), GlobalVariable.userPassword)
 
 WebUI.click(findTestObject('UI-Mercury/LoginPage/LogIn/button_Login'))
+
+WebUI.delay(50)
+
+assert WebUI.getUrl() == (GlobalVariable.urlFront + '/account/dashboard')
+
+//WebUI.verifyElementText (findTestObject('UI-Mercury/Registration/h1_Registration'),'REGISTRATION')
+
+WebUI.delay(50)
+
+
+
+
+

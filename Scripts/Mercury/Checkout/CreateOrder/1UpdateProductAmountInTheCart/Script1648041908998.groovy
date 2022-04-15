@@ -29,8 +29,6 @@ WebUI.verifyElementText (findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOu
 
 //WebUI.verifyElementPresent(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'), 3)
 
-
-
 //on product page - get price - variables - on checkout page check price/
 
 //WebUI.verifyTextPresent('My products', false)
@@ -53,6 +51,10 @@ WebUI.click(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Product
 
 WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1input_UpdateProductCount'))
 
-WebUI.verifyTextPresent('5', false)
+GlobalVariable.updateQuantity = WebUI.verifyTextPresent('5', false)
+
+println ("QUANTITY IS : " + GlobalVariable.updateQuantity)
+
+WebUI.delay(10)
 
 

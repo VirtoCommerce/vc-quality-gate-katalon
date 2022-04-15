@@ -7,23 +7,39 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//input[@name = 'userName']</value>
+         <value>
+[placeholder='Enter your username']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>input</value>
+      <webElementGuid>6423d917-9bfd-4a21-83e4-a614cf90203b</webElementGuid>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
       <value>userName</value>
+      <webElementGuid>ed506ac9-d4c0-46b5-8e5b-1311e091b5aa</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>
+[placeholder='Enter your username']</value>
+      <webElementGuid>6d3dc3af-59fb-4cda-bc72-980cd78ae967</webElementGuid>
    </webElementProperties>
 </WebElementEntity>

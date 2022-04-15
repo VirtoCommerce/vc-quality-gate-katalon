@@ -7,15 +7,13 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value></value>
-      </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>.cursor-pointer.relative > .text-white > div</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>.px-12.h-12 > .flex .flex > div</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -26,19 +24,14 @@
       <name>div</name>
       <type>Main</type>
       <value>div</value>
+      <webElementGuid>85c90466-fced-4690-b197-7331e50f22be</webElementGuid>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>css</name>
       <type>Main</type>
-      <value>.cursor-pointer.relative > .text-white > div</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>xp</name>
-      <type>Main</type>
-      <value>//div[@class='text-white flex items-center']/div[.='ContactDemo QA']</value>
+      <value>.px-12.h-12 > .flex .flex > div</value>
+      <webElementGuid>f13e14a8-769e-4048-a0d4-acfd0f6288d9</webElementGuid>
    </webElementProperties>
 </WebElementEntity>
