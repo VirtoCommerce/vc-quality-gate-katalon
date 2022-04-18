@@ -24,10 +24,10 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>30ef0b78-b1c1-495a-82b6-21050cf051e7</guid>
+      <guid>cd9c6251-ad9a-4613-9fff-69525d7a9c1a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete2</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c4b794e2-3625-465e-ba89-12dd9fe3d1da</guid>

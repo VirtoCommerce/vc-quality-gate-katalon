@@ -21,12 +21,15 @@ WebUI.comment('TEST CASE: Assets. Delete folder')
 
 'SEND REQUEST TO DELETE A FOLDER' 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDelete', [
-	('itemName') : GlobalVariable.folderUrl
+	('itemName') : "qwefolder1"
 	]))
 
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDelete', [
+	('itemName') : "null"
+	]))
 
 'VERIFY THE FOLDER HAS BEEN DELETED'
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('keyword') : GlobalVariable.folderName
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '5')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '3')

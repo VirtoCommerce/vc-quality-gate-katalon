@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Delete created folder with files inside</description>
+   <name>AssetFolderDelete2</name>
+   <tag></tag>
+   <comment>TEST CASE: Assets. Delete folder</comment>
+   <testCaseGuid>f88228ac-0064-4a46-9a1b-87155aed3a0c</testCaseGuid>
+</TestCaseEntity>
