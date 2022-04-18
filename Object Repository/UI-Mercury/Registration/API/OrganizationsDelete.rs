@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>efd18142-d96a-4ffa-9800-ba28d0c11c13</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,11 +29,12 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>a81cb233-8c0a-4aa3-a09c-cd43578bf4e2</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/organizations?ids=${orgId1}&amp;ids=${orgId2}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/organizations?ids=${orgId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -46,14 +48,7 @@
       <description></description>
       <id>59017480-b2ef-463f-ac0c-9908ff304944</id>
       <masked>false</masked>
-      <name>orgId1</name>
-   </variables>
-   <variables>
-      <defaultValue>'0'</defaultValue>
-      <description></description>
-      <id>ecb51fbe-adc4-464f-b26e-ecbc92a8b98f</id>
-      <masked>false</masked>
-      <name>orgId2</name>
+      <name>orgId</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

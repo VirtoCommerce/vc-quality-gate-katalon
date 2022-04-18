@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>3b646c0e-dc33-4792-9455-5cd962502eca</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>f80dee34-199b-4a1f-8abe-75b13cb86084</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -42,7 +44,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'QweUserUpdated'</defaultValue>
+      <defaultValue>'UserQAKatalon'</defaultValue>
       <description></description>
       <id>18be38b2-f2a8-4368-8077-5a8267e6db5a</id>
       <masked>false</masked>

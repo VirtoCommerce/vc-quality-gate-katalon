@@ -31,7 +31,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Contact QA Katalon'</initValue>
+      <initValue>'Eve Contact QA Katalon'</initValue>
       <name>contactName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

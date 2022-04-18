@@ -17,6 +17,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>51bf7d31-9d69-4c20-aa54-f7c53fee5bd1</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -24,11 +25,12 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>47692ef4-9820-47bf-8252-29d4431d8e62</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/members?ids=${id}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/members?ids=${contact}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,11 +40,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'123'</defaultValue>
+      <defaultValue>'GlobalVariable.contactName'</defaultValue>
       <description></description>
       <id>19928168-0635-454e-838c-89bccc442608</id>
       <masked>false</masked>
-      <name>id</name>
+      <name>contact</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

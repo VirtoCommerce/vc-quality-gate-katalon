@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>text/plain</value>
+      <webElementGuid>80df340e-3b12-4e9e-b5e2-b370e46055e6</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>f00e1b89-fce1-4ff9-bae8-92259dbe6475</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -42,7 +44,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'UserQAKatalon'</defaultValue>
       <description></description>
       <id>a3145a1e-3fd7-4cca-8993-f644f80c947a</id>
       <masked>false</masked>

@@ -1,4 +1,4 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
+ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -16,34 +16,98 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
-
-responseSearch = WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/MemberSearch', 
-        [('searchPhrase') : GlobalVariable.contactName]))
-
-
-JsonSlurper slurper = new JsonSlurper()
-Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
-
-
-
-//Block Account
-def userName = productJson.results[0].securityAccounts[0].userName
-WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/UserDelete', [('userName') : userName]))
-
-//Block Organization
-def organizationID = productJson.results[0].organizations[0]
-println('Organization:' + organizationID)
-WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/OrganizationsDelete', 
-        [('orgId1') : organizationID]))
-
-def ContactId = productJson.results[0].id
-WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/MemberDelete', [('id') : ContactId]))
-
-
-// Verify that user is deleted
-response = WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/UserSearch', [
+// TITLE 'TEST CASE: Delete user'
+// EXAMPLE OF THE CODES Verify that user is deleted
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
 	('userName') : GlobalVariable.userName
 	]))
 WS.verifyElementPropertyValue(response, 'totalCount', 0)
 WS.verifyElementPropertyValue(response, 'results', '[]')
 
+
+
+
+
+
+'TEST CASE: Search member'
+responseSearch = WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/MemberSearch', 
+	[('searchPhrase') : GlobalVariable.userName
+	]))
+
+JsonSlurper slurper = new JsonSlurper()
+Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
+
+
+'TEST CASE: delete User'
+//def userName = GlobalVariable.userName
+WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/UserDelete', 
+	[('userName') : GlobalVariable.userName
+	]))
+
+
+'TEST CASE: delete Organization' 
+def organizationID = productJson.results[0].organizations[0]
+println('Organization:' + organizationID)
+WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/OrganizationsDelete', 
+	[('orgId1') : organizationID
+	]))
+
+'TEST CASE: delete Contact' 
+def ContactId = productJson.results[0].id
+WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/ContactsDelete',
+	[('contactId') : ContactId
+	]))
+
+
+// Verify that user is deleted
+response = WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/UserSearch'))
+WS.verifyElementPropertyValue(response, 'totalCount', 0)
+WS.verifyElementPropertyValue(response, 'results', '[]')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////_________________________________
+////search contact
+//responseSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/UI-Mercury/Registration/API/MemberSearch', 
+//[('searchPhrase') : GlobalVariable.FirstNameB2B]))
+//
+//
+//JsonSlurper slurper = new JsonSlurper()
+//Map productJson = slurper.parseText(responseSearch.getResponseBodyContent())
+//
+////delete Account
+//def userName = productJson.results[0].securityAccounts[0].userName
+//WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/UserDelete'), [('userName') : userName])
+//
+////delete Organization
+//def organizationID = productJson.results[0].organizations[0]
+//println('Organization:' + organizationID)
+//WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/OrganizationsDelete'), 
+//        [('orgId1') : organizationID])
+//
+////delete Contact
+//def ContactId = productJson.results[0].id
+//WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/MemberDelete') [('id') : ContactId])
+//
+//
+//// Verify that user is deleted
+//response = WS.sendRequestAndVerify(findTestObject('UI-Mercury/Registration/API/UserSearch'))
+//WS.verifyElementPropertyValue(response, 'totalCount', 0)
+//WS.verifyElementPropertyValue(response, 'results', '[]')
+//
