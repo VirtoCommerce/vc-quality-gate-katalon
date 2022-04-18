@@ -60,6 +60,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>b7a56cf2-e9be-424f-a4c0-a23ae2362d47</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>da6fde6a-c3e8-4be1-b28f-613c5661add5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -72,6 +78,12 @@
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>fab09083-9dc0-4fea-8b11-283b2713992c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>aaabd52f-bdab-4309-bbdb-4fc98f21afd0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -82,6 +94,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccess</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f654c761-01bd-4c45-9b77-13456956ede3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>22959507-029f-4e19-b498-88d37c20942c</guid>
