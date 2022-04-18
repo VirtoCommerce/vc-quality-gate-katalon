@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>9a9db64f-5e64-4bf7-b883-2e34c560bdb6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>

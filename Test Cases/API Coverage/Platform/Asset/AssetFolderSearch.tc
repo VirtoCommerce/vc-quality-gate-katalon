@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Find the new folder in the list by keyword</description>
+   <description>!Need to refactor
+Find the new folder in the list by keyword</description>
    <name>AssetFolderSearch</name>
    <tag></tag>
    <comment>TEST CASE: Assets. Search folder

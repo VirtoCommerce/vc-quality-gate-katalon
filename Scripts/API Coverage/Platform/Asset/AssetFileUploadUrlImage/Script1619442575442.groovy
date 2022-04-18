@@ -18,6 +18,8 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Upload file by URL')
 
+GlobalVariable.folderUrl = GlobalVariable.folderName //Used for updated body structure
+
 uploadFileUrlImg = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,
 	('url') : 'https://virtocommerce.blob.core.windows.net/catalog/slide_1.jpg'
