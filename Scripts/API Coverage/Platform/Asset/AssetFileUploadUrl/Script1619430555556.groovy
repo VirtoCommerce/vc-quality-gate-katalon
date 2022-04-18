@@ -27,7 +27,7 @@ FailureHandling.STOP_ON_FAILURE)
 //UPLOAD A FILE WITH THE FORBIDDEN EXTENSION
 errorMessage = 'This extension is not allowed. Please contact administrator.'
 forbiddenFileUrl = 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.exe'
-uploadForbiddenFileUrl = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
+uploadForbiddenFileUrl = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,
 	('url') : forbiddenFileUrl
 	]))
@@ -37,7 +37,7 @@ WS.containsString(uploadForbiddenFileUrl, errorMessage, false)
 
 //UPLOAD AN ARCHIVE WITH THE CORRECT EXTENSION
 correctFileUrl = 'https://github.com/VirtoCommerce/vc-module-cart/releases/download/3.15.0/VirtoCommerce.Cart_3.15.0.zip'
-uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
+uploadFileUrl = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,
 	('url') : correctFileUrl
 	]))
