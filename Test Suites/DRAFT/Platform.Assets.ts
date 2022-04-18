@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>47ea097c-c48f-4f7b-b973-93d0160ff0c1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -56,7 +56,7 @@
    <testCaseLink>
       <guid>60f60fe8-86b8-4a0b-9def-57a323c6cd8c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
    </testCaseLink>
    <testCaseLink>
