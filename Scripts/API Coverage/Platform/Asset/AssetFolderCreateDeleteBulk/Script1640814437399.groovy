@@ -50,5 +50,5 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('keyword') : GlobalVariable.folderName
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '0')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
 
