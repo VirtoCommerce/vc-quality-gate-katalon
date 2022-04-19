@@ -27,7 +27,7 @@
       <guid>eea4e54c-bab0-4354-aed1-dc1436351090</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/DRAFT.AssetFolderSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5ade4401-2888-43b3-a9ae-b0c56a588775</guid>

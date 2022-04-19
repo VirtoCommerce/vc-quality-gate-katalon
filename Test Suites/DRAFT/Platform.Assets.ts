@@ -24,12 +24,6 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>cd9c6251-ad9a-4613-9fff-69525d7a9c1a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete2</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>c4b794e2-3625-465e-ba89-12dd9fe3d1da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -40,12 +34,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>9a9db64f-5e64-4bf7-b883-2e34c560bdb6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>60f60fe8-86b8-4a0b-9def-57a323c6cd8c</guid>
