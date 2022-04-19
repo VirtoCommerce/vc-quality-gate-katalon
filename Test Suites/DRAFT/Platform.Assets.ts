@@ -26,7 +26,7 @@
    <testCaseLink>
       <guid>cd9c6251-ad9a-4613-9fff-69525d7a9c1a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete2</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -34,12 +34,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>47ea097c-c48f-4f7b-b973-93d0160ff0c1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderGet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f46e9d3d-e860-4a3c-81ec-74c851a3d5ef</guid>
