@@ -31,12 +31,12 @@ for (i = 1; i < 3; i++ ) {
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('keyword') : GlobalVariable.folderName
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '4')
 
 
 // Save folder Url's
-def folderUrl1 = WS.getElementPropertyValue(folderList, 'results[0].url')
-def folderUrl2 = WS.getElementPropertyValue(folderList, 'results[1].url')
+def folderUrl1 = GlobalVariable.folderName + 1
+def folderUrl2 = GlobalVariable.folderName + 2
 
 
 // Bulk delete of both folders using folderUrls's
