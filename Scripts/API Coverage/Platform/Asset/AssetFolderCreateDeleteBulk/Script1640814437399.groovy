@@ -36,6 +36,7 @@ WS.verifyElementPropertyValue(folderList, 'totalCount', '4')
 
 // Save folder Url's
 def folderUrl1 = GlobalVariable.folderName + 1
+println folderUrl1
 def folderUrl2 = GlobalVariable.folderName + 2
 
 
