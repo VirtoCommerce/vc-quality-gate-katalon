@@ -31,37 +31,37 @@ directoryPath = '/stores/'
 
 'CHECK FOLDER NAME VALIDATION'
 GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
-validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleAssets/AssetFolderCreateErrorValidation'), 
+validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation'), 
 	null)
 
 
 'CREATE AND DELETE SEVERAL FOLDERS SIMULTANEOUSLY'
-assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/ModuleAssets/AssetFolderCreateDeleteBulk'),
+assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk'),
 	null)
 
 
 'CREATE A SINGLE FOLDER'
-assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleAssets/AssetFolderCreateNew'),
+assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew'),
 	null)
 
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/ModuleAssets/DRAFT.AssetFolderSearch'), 
+assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/DRAFT.AssetFolderSearch'), 
 	null)
 
 
 'UPLOAD A FILE(picture) FROM LOCAL STORAGE'
-assetsUploadLocalImage = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleAssets/AssetFileUploadLocal'), 
+assetsUploadLocalImage = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocal'), 
 	null)
 
 
 'UPLOAD AN ARCHIVE FROM URL'
-assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleAssets/AssetFileUploadUrl'), 
+assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrl'), 
 	null)
 
 
 'DELETE THE CREATED SINGLE FOLDER'
 GlobalVariable.folderUrl = GlobalVariable.folderParentUrl 
-assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleAssets/AssetFolderDelete'), 
+assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'), 
 	null)
 
