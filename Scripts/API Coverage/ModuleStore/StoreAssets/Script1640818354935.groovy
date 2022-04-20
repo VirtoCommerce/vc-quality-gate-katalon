@@ -46,7 +46,7 @@ assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage
 
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/ModuleAssets/DRAFT.AssetFolderSearch'), 
+assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/ModuleAssets/AssetFolderSearch'), 
 	null)
 
 
