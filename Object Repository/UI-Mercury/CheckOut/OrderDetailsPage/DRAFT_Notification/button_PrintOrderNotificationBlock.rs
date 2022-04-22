@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>button_PrintOrderNotificationBlock</name>
+   <tag></tag>
+   <elementGuidId>8f366dc2-d0c8-4b4b-abbb-801fcbf7a184</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@type='button']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>button.btn.btn-white.border-0</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>2f66a7cc-de2d-49c1-bbce-b16cce9a7aa4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>9d058dd9-b7bc-4ef9-abfc-7de65a55aaa5</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>btn btn-white border-0</value>
+      <webElementGuid>6fd6cc98-da72-4c48-80a4-fa924da96365</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>getInvoicePdf()</value>
+      <webElementGuid>a545e143-32d4-4e1e-83a5-5f5d488fe35b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Print order</value>
+      <webElementGuid>af72a4b1-1241-4ba9-a4b9-12852e52339e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html[@class=&quot;h-100&quot;]/body[@class=&quot;customer-logged-in template-cart ng-scope&quot;]/main[@class=&quot;container flex-grow-1 pt-4 pb-6 ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col&quot;]/vc-checkout-wizard[@class=&quot;ng-isolate-scope&quot;]/div[1]/vc-checkout-wizard-step[@class=&quot;ng-scope ng-isolate-scope&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;col-12 ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;card mb-3&quot;]/div[@class=&quot;card-header text-white bg-success&quot;]/div[@class=&quot;row align-items-center&quot;]/div[@class=&quot;col-4 col-sm-3 text-right&quot;]/button[@class=&quot;btn btn-white border-0&quot;]</value>
+      <webElementGuid>955b519c-b79c-40c0-baca-a03f641481a5</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//button[@type='button']</value>
+      <webElementGuid>1140327c-b6a1-488d-a66f-0ade65675776</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='CO211126-00001'])[1]/following::button[1]</value>
+      <webElementGuid>d651a940-d828-4710-9229-fa7a0336607d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Order summary'])[1]/preceding::button[1]</value>
+      <webElementGuid>f47f36b1-bfee-43dc-b821-9463c612d3a9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Subtotal'])[1]/preceding::button[1]</value>
+      <webElementGuid>2a1223ff-cc4a-434e-9485-ab78cc335161</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='Print order']/parent::*</value>
+      <webElementGuid>de328392-cb59-41c2-87cc-e08c07a44b8d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/button</value>
+      <webElementGuid>ab6aa67d-2754-45bb-a3c4-41b2e770bc78</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
