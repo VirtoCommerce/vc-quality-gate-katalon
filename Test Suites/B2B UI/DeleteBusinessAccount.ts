@@ -15,7 +15,7 @@
       <guid>a48b62a5-a46a-4133-9e15-178478b6f2ae</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/OpenBrowser</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/BrowserAction/OpenBrowser</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -43,14 +43,14 @@
       <guid>d7f41f39-fd25-4fcb-b140-dc9bddaeda6c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/BusinessAccount/DeleteBusinessAccountAndOrganization</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/Registration/BusinessAccount/DeleteBusinessAccountAndOrganization</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>f289a645-94db-4d00-a7c6-1b62fb1e0bb6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/CloseBrowser</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/BrowserAction/CloseBrowser</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

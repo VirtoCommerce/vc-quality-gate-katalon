@@ -22,28 +22,28 @@
       <guid>d3d592e8-fe71-4b7c-a629-df02966a7343</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/1CheckCategoryPages</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/CheckCategoryPages</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>3c20615b-1b6e-419e-bbe0-70a471a9e51c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Mercury/Catalog/DRAFT_Filters/Filters</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/DRAFT_CatalogElements/Filters</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>b439e873-f945-4497-8ee4-9e505ca05d4d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Mercury/Catalog/DRAFT_ProductPage/Variations/Sorting/Sorting</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/DRAFT_CatalogElements/Sorting</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>e88cb160-441d-454a-9fde-60f7fdd68f61</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/1ProductBlockView</testCaseId>
+      <testCaseId>Test Cases/Mercury/Catalog/CheckCatalog/ProductBlockViewOnCategory</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

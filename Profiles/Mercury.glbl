@@ -21,7 +21,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'UserQAKatalon'</initValue>
+      <initValue>'UserQAKatalon2'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -46,7 +46,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'UserQAKatalon@BusinessQA.tt'</initValue>
+      <initValue>'2UserQAKatalon@BusinessQA.tt'</initValue>
       <name>contactEmail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

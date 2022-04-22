@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_OrderNotification</name>
+   <tag></tag>
+   <elementGuidId>5b90d593-3ad8-4822-9733-6a69b95d73f2</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>h5.card-header.text-uppercase</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'text-green-700 px-5 md:px-0 font-extrabold mb-5']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>p</value>
+      <webElementGuid>39df34ad-dba8-4755-abf5-794934c8f595</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>.px-5.text-green-700</value>
+      <webElementGuid>aeacd221-361a-4147-928e-e3a823b91e3b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpat</name>
+      <type>Main</type>
+      <value>//p[@class='text-green-700 px-5 md:px-0 font-extrabold mb-5']</value>
+      <webElementGuid>fa3caabf-76b5-4e1c-94f6-e60862004a78</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>text-green-700 px-5 md:px-0 font-extrabold mb-5</value>
+      <webElementGuid>e344b807-1ed7-4df1-9ab6-6c4bf45cd450</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

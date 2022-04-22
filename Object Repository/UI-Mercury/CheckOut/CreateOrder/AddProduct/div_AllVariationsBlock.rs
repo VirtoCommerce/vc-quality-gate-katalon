@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_AllVariationsBlock</name>
+   <tag></tag>
+   <elementGuidId>b38eae1e-0b60-47c6-8d7e-5794c0272c30</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class = 'flex flex-col mt-5']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk']/main/div[2]/div/ng-controller/div[2]/div[2]/div[3]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.card.mt-3</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>8f46cd43-4c1f-4fd4-94ce-ce5e444a5a0c</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex flex-col mt-5</value>
+      <webElementGuid>db12bd4a-8070-4974-9af7-caa0a0d742f2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk&quot;)/main[@class=&quot;container pt-4 pb-6&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col&quot;]/ng-controller[@class=&quot;ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-6 mb-3 mb-md-0&quot;]/div[@class=&quot;card mt-3&quot;]</value>
+      <webElementGuid>e10a8491-c9ea-42c1-ab2f-2425b67ff697</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk']/main/div[2]/div/ng-controller/div[2]/div[2]/div[3]</value>
+      <webElementGuid>1f586a2a-d658-457b-b098-d19f987d6720</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Inch'])[1]/following::div[2]</value>
+      <webElementGuid>7844b092-f0c4-4091-9e03-5f6878f3f67c</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SYSTEM OF MEASUREMENT'])[1]/following::div[2]</value>
+      <webElementGuid>2b500af5-f658-4a71-8866-a12a3a96b4d6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[2]/div[3]</value>
+      <webElementGuid>301104e2-2f16-4b2d-a905-02f2437ccd32</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

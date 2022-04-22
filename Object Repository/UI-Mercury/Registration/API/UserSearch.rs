@@ -44,7 +44,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'UserQAKatalon'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>18be38b2-f2a8-4368-8077-5a8267e6db5a</id>
       <masked>false</masked>

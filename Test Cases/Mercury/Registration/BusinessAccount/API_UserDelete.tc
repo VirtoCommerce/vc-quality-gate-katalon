@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Delete created user and verify</description>
-   <name>API_UserDelete</name>
-   <tag></tag>
-   <comment>TEST CASE: Delete user</comment>
-   <testCaseGuid>22039a05-40bd-4a78-9735-b276e8737bbb</testCaseGuid>
-</TestCaseEntity>

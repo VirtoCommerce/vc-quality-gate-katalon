@@ -15,54 +15,63 @@
       <guid>a48b62a5-a46a-4133-9e15-178478b6f2ae</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/OpenBrowser</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/BrowserAction/OpenBrowser</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>8b816e2d-b9b6-4f56-9d65-11e009d95e7c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/OpenRegisterPage</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/Registration/OpenRegisterPage</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>0d69c7fa-0a15-43ca-aa13-bfffc54b0b84</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/SelectPersonal</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/Registration/PersonalAccount/SelectPersonal</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>ca410e29-48ee-4d08-a293-c8872fc4db8d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/EnterPersonalContactInfo</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/Registration/PersonalAccount/EnterPersonalContactInfo</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>8e928ba7-f18a-47ba-9424-77184b126ebc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/EnterPersonalAddressInfo</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/Registration/PersonalAccount/EnterPersonalAddressInfo</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>1a925946-59ca-4766-9f83-0fee02a96814</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/EnterPersonalUserCredentials</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/Registration/PersonalAccount/EnterPersonalUserCredentials</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>e628f416-3c77-43c5-82be-02f8e96076d3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/Registration/PersonalAccount/CheckPersonalAccountNameAfterRegister</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/Registration/PersonalAccount/CheckPersonalAccountNameAfterRegister</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>448df9bc-78bf-4055-9e6e-9c180c762e4a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/HomePageElements/LogOut</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/HomePageElements/LogOut</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>bbcd3194-2681-42e2-8aff-13372a2eb8f9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/CloseBrowser</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/BrowserAction/CloseBrowser</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

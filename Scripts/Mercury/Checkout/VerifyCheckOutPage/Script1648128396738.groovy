@@ -19,51 +19,51 @@ import org.openqa.selenium.Keys as Keys
 
 //verify checkout page
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1div_CheckOutPage'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/DRAFT/1div_CheckOutPage'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1h2_TitleCheckOut'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/h2_TitleCheckOut'))
 
 WebUI.verifyTextPresent('Checkout', false)
 
 //verify my products block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/ProductsBlock/div_ProductsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1div_ProductsBlock'))
+WebUI.verifyElementVisible(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/ProductsBlock/div_ProductsBlock'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Products/1h3_TitleProducts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/ProductsBlock/h3_TitleProducts'))
 
 WebUI.verifyTextPresent('My products', false)
 
 ///verify Gifts block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1div_GiftsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/Gifts/div_GiftsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1div_GiftsBlock'))
+WebUI.verifyElementVisible(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/Gifts/div_GiftsBlock'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1h3_TitleGifts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/Gifts/h3_TitleGifts'))
 
 WebUI.verifyTextPresent('Checkout', false)
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1div_Gift'))
+WebUI.verifyElementVisible(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/Gifts/div_Gift'))
 
 //verify Shipping Details block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingDetailsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/ShippingDetails/div_ShippingDetailsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/ShippingDetails/1div_ShippingDetailsBlock'))
+WebUI.verifyElementVisible(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/ShippingDetails/div_ShippingDetailsBlock'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1h3_TitleGifts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/Gifts/h3_TitleGifts'))
 
 WebUI.verifyTextPresent('Checkout', false)
 
 //verify Payment Details block
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/div_PaymentDetailsBlock'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/PaymentDetails/div_PaymentDetailsBlock'))
 
-WebUI.verifyElementVisible(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/PaymentDetails/div_PaymentDetailsBlock'))
+WebUI.verifyElementVisible(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/PaymentDetails/div_PaymentDetailsBlock'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1h3_TitleGifts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/Gifts/h3_TitleGifts'))
 
 WebUI.verifyTextPresent('Checkout', false)
 
@@ -73,7 +73,7 @@ WebUI.mouseOver(findTestObject('null'))
 
 WebUI.verifyElementVisible(findTestObject('null'))
 
-WebUI.mouseOver(findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/Gifts/1h3_TitleGifts'))
+WebUI.mouseOver(findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/Gifts/h3_TitleGifts'))
 
 WebUI.verifyTextPresent('Checkout', false)
 
@@ -84,7 +84,7 @@ WebUI.mouseOver(findTestObject('null'))
 
 WebUI.verifyElementVisible(findTestObject('null'))
 
-WebUI.verifyElementClickable (findTestObject('UI-Mercury/CheckOut/CreateOrder/CheckOutPage/1button_PlaceOrder'))
+WebUI.verifyElementClickable (findTestObject('UI-Mercury/Checkout/CreateOrder/CheckoutPage/button_PlaceOrder'))
 
 
 

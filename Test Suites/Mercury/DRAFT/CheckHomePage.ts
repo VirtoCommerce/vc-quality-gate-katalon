@@ -15,24 +15,28 @@
       <guid>2f16fcc2-c223-44dd-bfef-16b0ebdb0fc9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/OpenBrowser</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/BrowserAction/OpenBrowser</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>e0f938da-5d5d-42ed-8200-4ac6281903ad</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/LogInPage/Subscribe</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/LogInPage/Subscribe</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>2350c0d3-3b11-40a4-bd8b-3e846376010e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/LogInPage/AccessLinkToB2BStore</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/LogInPage/AccessLinkToB2BStore</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>a75e7847-9d0c-4c3a-a5d9-ef15453aae15</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/1 B2B UI/BrowserAction/CloseBrowser</testCaseId>
+      <testCaseId>Test Cases/UI-B2B store/BrowserAction/CloseBrowser</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

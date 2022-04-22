@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_OneVariationBlock</name>
+   <tag></tag>
+   <elementGuidId>22bad0ff-9d95-43bc-939e-cb5dccc72e96</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'flex flex-row space-x-2.5 border border-gray-100 rounded-sm p-5 mb-5']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//body[@id='1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk']/main/div[2]/div/ng-controller/div[2]/div[2]/div[3]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.card.mt-3</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>e74d8b7e-dd6b-42cd-afee-cd740e726355</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex flex-row space-x-2.5 border border-gray-100 rounded-sm p-5 mb-5</value>
+      <webElementGuid>02737a12-1804-4135-bd9f-0ae1d1bec6e2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-8 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex flex-col lg:flex-row lg:space-x-8 mt-5&quot;]/div[@class=&quot;-mx-5 md:mx-0 lg:w-8/12 xl:w-9/12&quot;]/div[@class=&quot;flex flex-grow flex-col lg:flex-row p-6 lg:space-x-12 bg-white shadow-sm border rounded-none md:rounded&quot;]/div[@class=&quot;flex flex-col lg:w-2/3&quot;]/div[@class=&quot;flex flex-col mt-5&quot;]/div[@class=&quot;flex flex-row space-x-2.5 border border-gray-100 rounded-sm p-5 mb-5&quot;]</value>
+      <webElementGuid>a94749e9-3b45-4fda-9bd7-e42c0dd90e01</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//body[@id='1-steel-carriage-bolt-grade-5-chrome-plated-finish-14-20-diathread-size-5-pk']/main/div[2]/div/ng-controller/div[2]/div[2]/div[3]</value>
+      <webElementGuid>c8f3c4b9-6e33-4167-9a9c-cf32e9d990a6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Inch'])[1]/following::div[2]</value>
+      <webElementGuid>40bc5b38-bd54-4a2d-91ef-0f6752d0981b</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='SYSTEM OF MEASUREMENT'])[1]/following::div[2]</value>
+      <webElementGuid>3b1f9d6c-e62c-4844-a604-ff32bf0cf4c9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div[2]/div[3]</value>
+      <webElementGuid>95d2afbc-c742-45f2-82d2-0ad0e2c5f4d1</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
