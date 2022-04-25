@@ -20,7 +20,7 @@ WebUI.comment('TEST CASE: Assets. Bulk delete folders')
 
 // Create new folders
 for (i = 1; i < 3; i++ ) {
-	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetCreateBlobFolder', [
+	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
 		('folderName') : GlobalVariable.folderName + i,
 		('parentUrl') : GlobalVariable.folderParentUrl
 		]))
@@ -28,27 +28,28 @@ for (i = 1; i < 3; i++ ) {
 
 
 // Find created folders in the list
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetGetList', [
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('keyword') : GlobalVariable.folderName
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '4')
 
 
 // Save folder Url's
-def folderUrl1 = WS.getElementPropertyValue(folderList, 'results[0].url')
-def folderUrl2 = WS.getElementPropertyValue(folderList, 'results[1].url')
+def folderUrl1 = GlobalVariable.folderName + 1
+println folderUrl1
+def folderUrl2 = GlobalVariable.folderName + 2
 
 
 // Bulk delete of both folders using folderUrls's
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetDeleteBulk', [
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDeleteBulk', [
 	('itemName1') : folderUrl1, 
 	('itemName2') : folderUrl2
 	]))
 
 
 // Check that folders are deleted
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetGetList', [
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('keyword') : GlobalVariable.folderName
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '0')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
 

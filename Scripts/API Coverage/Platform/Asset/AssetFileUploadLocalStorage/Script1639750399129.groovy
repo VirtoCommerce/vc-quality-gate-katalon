@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: UPLOAD A FILE TO LOCAL STORAGE')
 
 'SEND ERQUEST TO UPLOAD A FILE'
 fileName = 'localStorageImport.zip'
-uploadFile = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Assets/AssetFileUploadLocalStorage',[
+uploadFile = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetFileUploadLocalStorage',[
 	('fileName') : fileName
 	]))
 WS.verifyElementPropertyValue(uploadFile,'[0].name', fileName)

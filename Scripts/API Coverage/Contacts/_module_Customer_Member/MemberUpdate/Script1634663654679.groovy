@@ -30,7 +30,7 @@ List <String> addressTypes = GlobalVariable.addressTypes
 'CREATE ADDRESSES TEMPLATE'
 List <Object>addressesList = []
 for (int b = 0; b < addressTypes.size(); b++) {
-	addressDataTemplate = new File('Data Files/addressDataTemplate.json').text
+	addressDataTemplate = new File('TestDataFiles/addressDataTemplate.json').text
 	addressDataTemplateDefault = new JsonSlurper().parseText(addressDataTemplate)
 	addressDataTemplateDefault.isDefault = 'true'
 	addressDataTemplateDefault.addressType = addressTypes.get(b)

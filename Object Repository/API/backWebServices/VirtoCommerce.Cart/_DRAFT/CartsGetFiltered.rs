@@ -61,6 +61,13 @@
    <variables>
       <defaultValue>''</defaultValue>
       <description></description>
+      <id>367aeeaa-f225-44bb-bd50-abe1f8e229fd</id>
+      <masked>false</masked>
+      <name>currency</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
       <id>151e48ff-3d3c-406c-ae09-06a3ad4a0911</id>
       <masked>false</masked>
       <name>cultureName</name>

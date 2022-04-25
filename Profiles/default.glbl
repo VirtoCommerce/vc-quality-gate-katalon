@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8107'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8110'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -473,5 +473,35 @@
       <description>id of the created publication name</description>
       <initValue>''</initValue>
       <name>publicationId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>catalog personalisation tag</description>
+      <initValue>'qweTag'</initValue>
+      <name>tag</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the tag assignment</description>
+      <initValue>''</initValue>
+      <name>tagAssignmentId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>name of the creaed channel</description>
+      <initValue>'qweChan'</initValue>
+      <name>channelName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created channel</description>
+      <initValue>[]</initValue>
+      <name>channelId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>completeness of the created channel</description>
+      <initValue>''</initValue>
+      <name>channelCompleteness</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>semantic url used in seoInfos (slug url)</description>
+      <initValue>'QWE'</initValue>
+      <name>semanticUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

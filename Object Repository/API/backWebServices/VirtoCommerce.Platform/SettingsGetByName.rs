@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'VirtoCommerce.ModulesAutoInstallState'</defaultValue>
+      <defaultValue>'VirtoCommerce.Core.General.WeightUnits'</defaultValue>
       <description>setting name</description>
       <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
       <masked>false</masked>

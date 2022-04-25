@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'5d41c224-1e9b-4ffc-bf9d-d660fb5e88df'</defaultValue>
+      <defaultValue>'f3459a68-b249-4150-a1c0-1b8a5870ee24'</defaultValue>
       <description>existing category Id</description>
       <id>b5e8170f-182c-49df-90fc-a7456d8de33a</id>
       <masked>false</masked>

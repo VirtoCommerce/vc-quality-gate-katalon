@@ -23,7 +23,7 @@ HashMap<String, String> responseMap = GlobalVariable.folderNameList
  
 for (String name : responseMap.keySet()) {
 	WebUI.comment("Attempt to create folder with name: \"" + name + "\". Received error should be is: " + responseMap.get(name));
-	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetCreateBlobFolder', [
+	response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
 		('folderName') : name,
 		('parentUrl') : GlobalVariable.folderParentUrl
 		]))

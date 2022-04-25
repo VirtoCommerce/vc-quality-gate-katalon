@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update the  created tag </description>
+   <name>tagUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d71cfd37-7d02-4f03-81db-85c770dd046d</testCaseGuid>
+</TestCaseEntity>

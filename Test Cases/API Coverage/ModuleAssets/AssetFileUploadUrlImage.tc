@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Upload IMAGE file by URL</description>
+   <name>AssetFileUploadUrlImage</name>
+   <tag></tag>
+   <comment>TEST CASE: Assets. Upload file by URL
+GlobalVariable.localUrl
+GlobalVariable.folderUrl</comment>
+   <testCaseGuid>f8dd3bcf-1dbd-4c60-ac38-b1fb6841c63a</testCaseGuid>
+</TestCaseEntity>
