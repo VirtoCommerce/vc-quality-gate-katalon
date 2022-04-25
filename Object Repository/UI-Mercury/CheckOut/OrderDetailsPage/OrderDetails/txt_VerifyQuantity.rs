@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>txt_VerifyQuantity</name>
+   <tag></tag>
+   <elementGuidId>f3ea9c62-b415-482a-af75-251d62287ad8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'w-20 border rounded overflow-hidden h-8 lg:h-10 focus:ring ring-inset outline-none p-1 text-center']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>h1</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>.w-20</value>
+      <webElementGuid>74e5432c-6823-4239-bc91-671a891383bb</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>97b9e03d-68a5-4c57-8869-764b6190d46b</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>w-20 border rounded overflow-hidden h-8 lg:h-10 focus:ring ring-inset outline-none p-1 text-center</value>
+      <webElementGuid>1bcaab14-4859-415b-a141-aa2272b2b546</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>
