@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>select_Country</name>
+   <tag></tag>
+   <elementGuidId>7896e041-ddb0-4374-826c-5a42b50de540</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[(text() = 'Select country' or . = 'Select country')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='countryCode']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>select[name=&quot;countryCode&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>8ad35eb2-6dd0-40f3-babf-c1bd657a8eca</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>h-11 text-base relative truncate text-left w-full appearance-none rounded pl-3 pr-7 leading-none border border-gray-300 outline-none bg-white disabled:bg-gray-50 disabled:cursor-not-allowed focus:border-gray-400</value>
+      <webElementGuid>47bed7a6-7270-4f6c-abf0-f4b0d4086c9e</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>Select country</value>
+      <webElementGuid>8e64a2f6-8c6f-4634-9a49-7e3e496b6b6f</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//button[.='Canada']</value>
+      <webElementGuid>7b3303cc-6c6b-4829-8083-6dd7ee2ee2d8</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:attributes</name>
+      <type>Main</type>
+      <value>//select[@name='countryCode']</value>
+      <webElementGuid>89fa0c71-b9ae-4144-9b36-48341eaf14cf</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Country'])[1]/following::select[1]</value>
+      <webElementGuid>645889f1-1b5f-4dbb-94e5-d30c243a0925</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Required'])[5]/following::select[1]</value>
+      <webElementGuid>24ce1012-1cbd-4300-a077-76c19f71101d</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Please select country'])[1]/preceding::select[1]</value>
+      <webElementGuid>0a87070e-1983-4e17-a36a-13c884bb9103</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Work Province'])[1]/preceding::select[1]</value>
+      <webElementGuid>eee11021-e56d-4b37-a23f-d956f3186253</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//select</value>
+      <webElementGuid>db9a4b8d-ffcb-4bb2-bfd0-eb4b279ef38d</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

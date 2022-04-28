@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h3_TitleGifts</name>
+   <tag></tag>
+   <elementGuidId>d5d71748-84c4-4965-80e0-f3e49e3d7a20</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//h3[(text() = '+ Add a Gift' or . = '+ Add a Gift')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h3</value>
+      <webElementGuid>aa008e68-5b16-4695-a446-7aa202cba9b4</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>text-gray-800 px-5 md:px-0 text-2xl lg:text-3xl font-bold uppercase mb-7</value>
+      <webElementGuid>63701ee8-2c26-4e99-8632-7afc297d5f30</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//h3[.='+ Add a Gift']</value>
+      <webElementGuid>81696c28-372a-49d1-a2b4-3a6b56c1d626</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>+ Add a Gift</value>
+      <webElementGuid>dc44c947-5044-4433-a0c4-71bd492151e9</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value></value>
+      <webElementGuid>9ca19a9c-9269-4549-aee7-5b847b6993a7</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_ProductsBlock</name>
+   <tag></tag>
+   <elementGuidId>c26e43d9-d437-4992-a753-3690b394d075</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class = 'xl:ml-28 lg:ml-6 xl:mr-11 lg:mr-6 lg:border lg:rounded' and (text() = 'My products' or . = 'My products')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[2]/div/div/div/div/div/div[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>3a9b8263-111a-4aff-9c5e-bbc67da0d2ef</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>xl:ml-28 lg:ml-6 xl:mr-11 lg:mr-6 lg:border lg:rounded</value>
+      <webElementGuid>200c9d17-60c4-4ddf-b5ce-21fa3e02841d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl md:px-12 mx-auto&quot;]/div[@class=&quot;flex flex-col lg:flex-row lg:flex-nowrap lg:space-x-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow w-full&quot;]/div[@class=&quot;bg-white lg:mb-6 lg:rounded shadow lg:pb-11&quot;]</value>
+      <webElementGuid>676eead8-6fae-4fe8-b2e7-e70a558952b7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>My products</value>
+      <webElementGuid>d68119e5-c81e-4318-9576-1d190645490d</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div/div/div[2]</value>
+      <webElementGuid>77d4adaa-7fe3-4c0f-a525-5f82f0c0ab1f</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

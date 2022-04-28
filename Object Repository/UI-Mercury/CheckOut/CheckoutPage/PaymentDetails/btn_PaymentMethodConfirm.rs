@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>btn_PaymentMethodConfirm</name>
+   <tag></tag>
+   <elementGuidId>5ae3eb5b-c1ad-43ad-9f65-9b94920529b9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'vc-button vc-button--md vc-button--primary w-1/2 lg:w-auto uppercase flex-grow lg:flex-grow-0 inline-flex lg:px-10']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[4]/div/div/div/div/div[2]/div[2]/button[2]/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>ok</value>
+      <webElementGuid>b68628a9-0c3d-45bb-befa-8720e4cbdadd</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>efd23478-28c9-4376-8785-e64592040e7d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>vc-button vc-button--md vc-button--primary w-1/2 lg:w-auto uppercase flex-grow lg:flex-grow-0 inline-flex lg:px-10</value>
+      <webElementGuid>3dd30509-b2da-47f1-bb91-ae0bcb98fa09</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>.inline-flex.vc-button--primary > .vc-button__content</value>
+      <webElementGuid>ec2e088a-fdd3-48a4-b483-4865d02d3265</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;headlessui-dialog-8&quot;)/div[@class=&quot;fixed inset-0 z-50 overflow-y-auto&quot;]/div[@class=&quot;min-h-screen px-4 text-center&quot;]/div[@class=&quot;inline-block w-full my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-md max-w-2xl&quot;]/div[@class=&quot;px-6 py-4 flex items-center justify-between lg:justify-end space-x-4&quot;]/button[@class=&quot;vc-button vc-button--md vc-button--primary w-1/2 lg:w-auto uppercase flex-grow lg:flex-grow-0 inline-flex lg:px-10&quot;]/span[@class=&quot;vc-button__content&quot;]</value>
+      <webElementGuid>6b1c5233-66d0-4abf-a878-c254e526473c</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[4]/div/div/div/div/div[2]/div[2]/button[2]/span</value>
+      <webElementGuid>6fe05804-b460-4cac-a479-9fc4de8102c9</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>
