@@ -101,10 +101,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFileAccessAfterDelete</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>8e15de69-d13f-4de2-bc40-87b7c15be0b6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/DRAFT.AssetFolderDelete2</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>
