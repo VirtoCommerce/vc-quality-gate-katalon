@@ -26,7 +26,7 @@
    <testCaseLink>
       <guid>c24a521f-e0dc-42a8-9b4a-a5d9692ed46e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreUserAccessValidation</testCaseId>
    </testCaseLink>
    <testCaseLink>
