@@ -29,6 +29,10 @@ WebUI.comment('TEST CASE: Store assets')
 directoryPath = '/stores/'
 
 
+//'VERIFY THE FOLDER HAS BEEN CREATED'
+WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'),	null)
+
+
 'CHECK FOLDER NAME VALIDATION'
 GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
 validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation'), 
@@ -36,6 +40,7 @@ validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platf
 
 
 'CREATE AND DELETE SEVERAL FOLDERS SIMULTANEOUSLY'
+GlobalVariable.folderName = directoryPath + GlobalVariable.folderName
 assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk'),
 	null)
 
@@ -46,7 +51,7 @@ assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage
 
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderSearch'), 
+assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), 
 	null)
 
 
