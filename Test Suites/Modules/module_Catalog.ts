@@ -92,7 +92,7 @@
    <testCaseLink>
       <guid>6c28fc2b-44d5-4e0a-99bf-f154dff1423e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleCatalog/catalogListentriesSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>

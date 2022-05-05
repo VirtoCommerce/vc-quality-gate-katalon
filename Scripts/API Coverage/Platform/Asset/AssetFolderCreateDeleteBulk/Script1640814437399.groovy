@@ -29,6 +29,7 @@ for (i = 1; i < 3; i++ ) {
 
 // Find created folders in the list
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+	('folderName') : "store",
 	('keyword') : GlobalVariable.folderName
 	]))
 WS.verifyElementPropertyValue(folderList, 'totalCount', '4')
@@ -36,7 +37,7 @@ WS.verifyElementPropertyValue(folderList, 'totalCount', '4')
 
 // Save folder Url's
 def folderUrl1 = GlobalVariable.folderName + 1
-println folderUrl1
+WebUI.comment(folderUrl1)
 def folderUrl2 = GlobalVariable.folderName + 2
 
 

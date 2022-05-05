@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>5551052f-140c-4163-81b7-6e49a105c2fd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -50,31 +50,31 @@
    <testCaseLink>
       <guid>3df55a28-37dd-498c-9dd6-583ed7b524ce</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreGetAll</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>74dd84a7-3ce2-471a-adfe-cd7bb6e11795</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreUpdate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f9f0e04b-25da-480a-ace6-4ab4e01e1720</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreGetById</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0fa818ea-60ab-4951-b193-a15aba9eff2d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2320fe0a-e763-41ca-9ac9-b95ba8e0f0b5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreSearch</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
