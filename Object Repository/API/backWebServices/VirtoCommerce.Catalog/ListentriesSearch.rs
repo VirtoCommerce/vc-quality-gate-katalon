@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;keyword\&quot;:\&quot;${keyword}\&quot;,\n   \&quot;searchInVariations\&quot;:false,\n   \&quot;responseGroup\&quot;:\&quot;withCategories, withProducts\&quot;,\n   \&quot;sort\&quot;:\&quot;\&quot;,\n   \&quot;skip\&quot;:0,\n   \&quot;take\&quot;:50\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;searchPhrase\&quot;:\&quot;${keyword}\&quot;,\n   \&quot;searchInVariations\&quot;:false,\n   \&quot;responseGroup\&quot;:\&quot;withCategories, withProducts\&quot;,\n   \&quot;sort\&quot;:\&quot;\&quot;,\n   \&quot;skip\&quot;:0,\n   \&quot;take\&quot;:50\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

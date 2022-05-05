@@ -36,10 +36,10 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 	]))
 
 
-'CHECK FOLDER NAME VALIDATION'
-GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
-validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation'), 
-	null)
+//'CHECK FOLDER NAME VALIDATION'
+//GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
+//validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation'), 
+//	null)
 
 
 'CREATE AND DELETE SEVERAL FOLDERS SIMULTANEOUSLY'
