@@ -44,7 +44,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search
 WS.delay(30)
 WebUI.comment(GlobalVariable.keyword)
  verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
-	('keyword') : ""
+	('keyword') : GlobalVariable.keyword 
 	]))	
 //name = WS.getElementPropertyValue(verifyDeleted,'listEntries[0].name')
 //WebUI.comment(name)

@@ -32,7 +32,7 @@ folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 	('folderName') : "store",
 	('keyword') : GlobalVariable.folderName
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '4')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
 
 
 // Save folder Url's

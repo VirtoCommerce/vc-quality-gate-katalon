@@ -29,8 +29,11 @@ WebUI.comment('TEST CASE: Store assets')
 directoryPath = '/stores/'
 
 
-//'VERIFY THE FOLDER HAS BEEN CREATED'
-WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'),	null)
+//TEMP
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+	('folderName') : '',
+	('keyword') : ''
+	]))
 
 
 'CHECK FOLDER NAME VALIDATION'
@@ -40,7 +43,7 @@ validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platf
 
 
 'CREATE AND DELETE SEVERAL FOLDERS SIMULTANEOUSLY'
-GlobalVariable.folderName = directoryPath + GlobalVariable.folderName
+//GlobalVariable.folderName = directoryPath + GlobalVariable.folderName
 assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk'),
 	null)
 

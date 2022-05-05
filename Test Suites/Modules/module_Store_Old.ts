@@ -42,6 +42,12 @@
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>cae6b555-f941-4265-b9f6-78f8c5ffbb52</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/Asset/DRAFT.AssetFolderDelete2</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>60c8bca6-7ce1-4ac5-bfdf-5d399fd95687</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
