@@ -18,9 +18,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Bulk delete folders')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
-	('folderName') : "store"
-	]))
+//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
+//	('folderName') : "store"
+//	]))
 
 // Create new folders
 for (i = 1; i < 3; i++ ) {
@@ -30,11 +30,15 @@ for (i = 1; i < 3; i++ ) {
 		]))
 }
 
+//TEMP
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+	('folderName') : GlobalVariable.folderParentUrl,
+	('keyword') : ''
+	]))
 
 // Find created folders in the list
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('folderName') : "store",
-	('keyword') : GlobalVariable.folderName
+	('folderName') : GlobalVariable.folderName
 	]))
 WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
 

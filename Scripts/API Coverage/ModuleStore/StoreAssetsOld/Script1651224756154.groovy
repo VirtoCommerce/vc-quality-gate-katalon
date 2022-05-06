@@ -37,7 +37,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 
 //'CHECK FOLDER NAME VALIDATION'
-//GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
+GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
 //validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation'), 
 //	null)
 
