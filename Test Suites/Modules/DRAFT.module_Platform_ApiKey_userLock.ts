@@ -38,7 +38,7 @@
    <testCaseLink>
       <guid>1e988709-b992-414d-8ee8-8f825be35827</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
