@@ -37,6 +37,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 
 //'CHECK FOLDER NAME VALIDATION'
+WebUI.comment(GlobalVariable.folderParentUrl)
 GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
 //validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation'), 
 //	null)
@@ -69,6 +70,7 @@ assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/P
 
 
 'DELETE THE CREATED SINGLE FOLDER'
+WebUI.comment(GlobalVariable.folderUrl)
 GlobalVariable.folderUrl = GlobalVariable.folderParentUrl 
 assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'), 
 	null)
