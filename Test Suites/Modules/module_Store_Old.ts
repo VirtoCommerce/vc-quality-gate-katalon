@@ -38,13 +38,13 @@
    <testCaseLink>
       <guid>5551052f-140c-4163-81b7-6e49a105c2fd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>22d33c33-01b7-421f-80dc-6721e263b2a2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/DRAFT.AssetFolderDelete2</testCaseId>
    </testCaseLink>
    <testCaseLink>
