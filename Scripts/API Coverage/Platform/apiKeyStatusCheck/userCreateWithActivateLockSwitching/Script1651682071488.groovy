@@ -32,6 +32,7 @@ WebUI.comment('TEST CASE: create a user and make it available for locking')
 'SET APIKEY FOR THE CREATED USER'
 GlobalVariable.apiKeyStatus = true
 GlobalVariable.userApiKey = UUID.randomUUID()
+WebUI.comment('USER ID is: ' + GlobalVariable.userId)
 WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/apiKeyStatusCheck/apiKeySetOrUpdateToUser'),
 	null)
 
