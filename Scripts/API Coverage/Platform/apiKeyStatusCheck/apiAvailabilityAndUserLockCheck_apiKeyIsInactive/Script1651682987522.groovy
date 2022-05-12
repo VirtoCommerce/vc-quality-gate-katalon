@@ -31,7 +31,7 @@ WebUI.comment('TEST CASE: chec api availability and user locking when apiKey is 
 
 'UPDATE THE API KEY FOR THE CREATED USER (ISACTIVE = false)'
 GlobalVariable.apiKeyStatus = false
-WS.callTestCase(findTestCase('API Coverage/Platform/apiKeyStatusCheck/apiKeySetOrUpdateToUser'),
+WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/apiKeyStatusCheck/apiKeyUserUpdate'),
 	null)
 
 

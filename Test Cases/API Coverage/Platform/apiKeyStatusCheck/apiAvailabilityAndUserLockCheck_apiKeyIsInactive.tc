@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>check if api is available for locked/unlocked user when apiKey is active</description>
+   <description>check if api is available for locked/unlocked user when apiKey is inactive</description>
    <name>apiAvailabilityAndUserLockCheck_apiKeyIsInactive</name>
    <tag></tag>
    <comment></comment>

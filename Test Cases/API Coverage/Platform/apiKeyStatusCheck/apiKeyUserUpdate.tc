@@ -2,8 +2,8 @@
 <TestCaseEntity>
    <description>Add api key to operator@mail.com user 
 (this version allows changing apiKey active/inactive status)</description>
-   <name>apiKeySetOrUpdateToUser</name>
+   <name>apiKeyUserUpdate</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>f155cfbf-fc28-496a-9829-ceb8074f57d9</testCaseGuid>
+   <testCaseGuid>2e9334db-d5b7-4b03-8f07-e38b0c82541e</testCaseGuid>
 </TestCaseEntity>

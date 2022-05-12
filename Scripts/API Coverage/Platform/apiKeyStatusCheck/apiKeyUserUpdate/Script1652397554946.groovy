@@ -17,15 +17,14 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 
-//STEP | set new API key to user not admin
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeySetToUser', [
+//STEP | set new API key to user not admin 
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
 	('userName') : GlobalVariable.userName,
 	('api_key') : GlobalVariable.userApiKey,
 	('userId') : GlobalVariable.userId,
 	('apiKeyStatus') : GlobalVariable.apiKeyStatus,
 	('apiKeyId') : GlobalVariable.apiKeyId
 	]))
-//uses apiKeyId and status
 
 responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
 	('userId') : GlobalVariable.userId

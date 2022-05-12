@@ -51,7 +51,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 //'SET APIKEY FOR THE CREATED USER'
 //GlobalVariable.apiKeyStatus = apiKeyIsActive[0]
 //GlobalVariable.userApiKey = UUID.randomUUID()
-//WS.callTestCase(findTestCase('API Coverage/Platform/apiKeyStatusCheck/apiKeySetOrUpdateToUser'),
+//WS.callTestCase(findTestCase('API Coverage/Platform/apiKeyStatusCheck/apiKeyUserSet'),
 //	null)
 //println GlobalVariable.apiKeyId
 //println GlobalVariable.userId
@@ -143,7 +143,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 //'UPDATE THE API KEY FOR THE CREATED USER (ISACTIVE = false)'
 //GlobalVariable.apiKeyStatus = apiKeyIsActive[1]
 ////GlobalVariable.userApiKey = UUID.randomUUID()
-//WS.callTestCase(findTestCase('API Coverage/Platform/apiKeyStatusCheck/apiKeySetOrUpdateToUser'),
+//WS.callTestCase(findTestCase('API Coverage/Platform/apiKeyStatusCheck/apiKeyUserSet'),
 //	null)
 //println GlobalVariable.apiKeyId
 //println GlobalVariable.userId

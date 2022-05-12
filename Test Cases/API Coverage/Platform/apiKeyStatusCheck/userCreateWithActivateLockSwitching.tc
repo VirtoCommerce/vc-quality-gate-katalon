@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Create a user and update it to make locking available</description>
+   <description>Update a user to make locking available (for the created user)</description>
    <name>userCreateWithActivateLockSwitching</name>
    <tag></tag>
    <comment></comment>

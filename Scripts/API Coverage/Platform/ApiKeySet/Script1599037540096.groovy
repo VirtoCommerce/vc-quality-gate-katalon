@@ -21,7 +21,8 @@ import groovy.json.JsonSlurper as JsonSlurper
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
 	('userName') : 'operator@mail.com',
 	('api_key') : GlobalVariable.api_key,
-	('userId') : GlobalVariable.userId
+	('userId') : GlobalVariable.userId,
+	('apiKeyStatus') : GlobalVariable.apiKeyStatus
 	]))
 
 responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
