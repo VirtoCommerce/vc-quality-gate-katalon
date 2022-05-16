@@ -33,24 +33,28 @@ for (i = 1; i < 3; i++ ) {
 
 //TEMP
 WebUI.comment(GlobalVariable.folderParentUrl)
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+getAssetList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('folderName') : GlobalVariable.folderParentUrl,
 	('keyword') : ''
 	]))
-
-
-// Find created folders in the list
-WebUI.comment(GlobalVariable.folderName)
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('folderName') : GlobalVariable.folderName
-	]))
-//WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
-
-
-// Save folder Url's
-def folderUrl1 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 1
+def folderUrl1 = WS.getElementPropertyValue(getAssetList, "[0].relativeUrl")
 WebUI.comment(folderUrl1)
-def folderUrl2 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 2
+def folderUrl2 = WS.getElementPropertyValue(getAssetList, "[1].relativeUrl")
+
+
+
+//// Find created folders in the list
+//WebUI.comment(GlobalVariable.folderName)
+//folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+//	('folderName') : GlobalVariable.folderName
+//	]))
+////WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+//
+//
+//// Save folder Url's
+//def folderUrl1 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 1
+//WebUI.comment(folderUrl1)
+//def folderUrl2 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 2
 
 
 // Bulk delete of both folders using folderUrls's
@@ -61,13 +65,13 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 'SEND REQUEST TO DELETE A STORE FOLDER'
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDelete', [
-	('itemName') : "store"
+	('itemName') : "stores"
 	]))
 
 // Check that folders are deleted
 WebUI.comment(GlobalVariable.folderName)
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('keyword') : GlobalVariable.folderName
+	('keyword') : ''
 	]))
 WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
 

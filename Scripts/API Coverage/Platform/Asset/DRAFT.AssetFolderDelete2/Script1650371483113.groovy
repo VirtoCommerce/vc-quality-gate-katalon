@@ -34,6 +34,6 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 'VERIFY THE FOLDER HAS BEEN DELETED'
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('keyword') : GlobalVariable.folderName
+	('keyword') : ''
 	]))
 WS.verifyElementPropertyValue(folderList, 'totalCount', '2')

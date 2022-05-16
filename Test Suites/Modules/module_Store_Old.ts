@@ -44,7 +44,7 @@
    <testCaseLink>
       <guid>22d33c33-01b7-421f-80dc-6721e263b2a2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Asset/DRAFT.AssetFolderDelete2</testCaseId>
    </testCaseLink>
    <testCaseLink>
