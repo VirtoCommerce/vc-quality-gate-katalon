@@ -73,5 +73,5 @@ WebUI.comment(GlobalVariable.folderName)
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('keyword') : ''
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '3')
 
