@@ -37,9 +37,9 @@ getAssetList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('folderName') : GlobalVariable.folderParentUrl,
 	('keyword') : ''
 	]))
-def folderUrl1 = WS.getElementPropertyValue(getAssetList, "[0].relativeUrl")
+def folderUrl1 = WS.getElementPropertyValue(getAssetList, "result[0].relativeUrl")
 WebUI.comment(folderUrl1)
-def folderUrl2 = WS.getElementPropertyValue(getAssetList, "[1].relativeUrl")
+def folderUrl2 = WS.getElementPropertyValue(getAssetList, "result[1].relativeUrl")
 
 
 

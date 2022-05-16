@@ -46,7 +46,7 @@
       <name>folderName</name>
    </variables>
    <variables>
-      <defaultValue>'qwefolder'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description>search request</description>
       <id>2474aa2a-238e-425c-bd92-58cad6a36bb7</id>
       <masked>false</masked>
