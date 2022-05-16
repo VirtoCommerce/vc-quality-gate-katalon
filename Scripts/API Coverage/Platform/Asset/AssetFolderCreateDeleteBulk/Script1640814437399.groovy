@@ -48,9 +48,9 @@ folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 
 
 // Save folder Url's
-def folderUrl1 = GlobalVariable.folderName + 1
+def folderUrl1 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 1
 WebUI.comment(folderUrl1)
-def folderUrl2 = GlobalVariable.folderName + 2
+def folderUrl2 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 2
 
 
 // Bulk delete of both folders using folderUrls's
@@ -59,11 +59,15 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 	('itemName2') : folderUrl2
 	]))
 
+'SEND REQUEST TO DELETE A STORE FOLDER'
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDelete', [
+	('itemName') : "store"
+	]))
 
 // Check that folders are deleted
 WebUI.comment(GlobalVariable.folderName)
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('keyword') : GlobalVariable.folderName
 	]))
-//WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
 
