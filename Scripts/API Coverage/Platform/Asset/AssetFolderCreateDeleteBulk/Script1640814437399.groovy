@@ -63,10 +63,10 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 	('itemName2') : folderUrl2
 	]))
 
-'SEND REQUEST TO DELETE A STORE FOLDER'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDelete', [
-	('itemName') : "stores"
-	]))
+//'SEND REQUEST TO DELETE A STORE FOLDER'
+//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDelete', [
+//	('itemName') : "stores"
+//	]))
 
 // Check that folders are deleted
 WebUI.comment(GlobalVariable.folderName)
