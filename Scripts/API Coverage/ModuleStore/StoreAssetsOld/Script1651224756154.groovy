@@ -53,14 +53,15 @@ assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Ass
 'CREATE A SINGLE FOLDER'
 assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew'), [
 		('folderName') : GlobalVariable.folderName,
-		('parentUrl') : ""
-		], 
-		null)
+		('parentUrl') : ''
+		])
 
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), 
-	null)
+assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), [
+	('folderName') : GlobalVariable.folderParentUrl,
+	('keyword') : ''
+	])
 
 WebUI.comment(GlobalVariable.folderUrl)
 'UPLOAD A FILE(picture) FROM LOCAL STORAGE'
