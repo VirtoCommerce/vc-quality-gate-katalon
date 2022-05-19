@@ -53,10 +53,12 @@ assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Ass
 'CREATE A SINGLE FOLDER'
 assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew'), [
 		('folderName') : GlobalVariable.folderName,
-		('parentUrl') : ''
+		('parentUrl') : null
 		])
 
 
+'temp'
+WebUI.comment(GlobalVariable.folderParentUrl)
 'VERIFY THE FOLDER HAS BEEN CREATED'
 assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), [
 	('folderName') : GlobalVariable.folderParentUrl,
