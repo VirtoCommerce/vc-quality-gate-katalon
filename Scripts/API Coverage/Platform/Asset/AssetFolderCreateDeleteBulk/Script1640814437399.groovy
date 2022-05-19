@@ -28,7 +28,6 @@ for (i = 1; i < 3; i++ ) {
 		('folderName') : GlobalVariable.folderName + i,
 		('parentUrl') : GlobalVariable.folderParentUrl
 		]))
-	WebUI.comment(GlobalVariable.folderParentUrl)
 }
 
 //TEMP
@@ -71,7 +70,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 // Check that folders are deleted
 WebUI.comment(GlobalVariable.folderName)
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('folderName') : GlobalVariable.folderParentUrl,
+	('folderName') : parentUrl,
 	('keyword') : ''
 	]))
 //WS.verifyElementPropertyValue(folderList, 'totalCount', '3')
