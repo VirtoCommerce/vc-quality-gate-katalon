@@ -40,8 +40,8 @@ getAssetList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 def folderUrl1 = WS.getElementPropertyValue(getAssetList, "results[0].relativeUrl")
 WebUI.comment(folderUrl1)
 def folderUrl2 = WS.getElementPropertyValue(getAssetList, "results[1].relativeUrl")
-
-
+def parentUrl = WS.getElementPropertyValue(getAssetList, "results[0].parentUrl")
+WebUI.comment(parentUrl)
 
 //// Find created folders in the list
 //WebUI.comment(GlobalVariable.folderName)
