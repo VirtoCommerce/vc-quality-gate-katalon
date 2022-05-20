@@ -34,6 +34,7 @@ folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 	]))
 WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
 
+
 def folderUrl1 = WS.getElementPropertyValue(folderList, "results[0].relativeUrl")
 WebUI.comment(folderUrl1)
 def folderUrl2 = WS.getElementPropertyValue(folderList, "results[1].relativeUrl")
@@ -49,10 +50,16 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 
 // Check that folders are deleted
-WebUI.comment(GlobalVariable.folderName)
+//WebUI.comment(GlobalVariable.folderName)
+//folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+//	('folderName') : parentUrl,
+//	('keyword') : ''
+//	]))
+//WS.verifyElementPropertyValue(folderList, 'totalCount', '0')
+
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('folderName') : parentUrl,
+	('folderName') : GlobalVariable.folderParentUrl,
 	('keyword') : ''
 	]))
-//WS.verifyElementPropertyValue(folderList, 'totalCount', '3')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '0')
 

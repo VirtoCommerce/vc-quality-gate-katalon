@@ -62,6 +62,7 @@ assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage
 
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
+WebUI.comment(GlobalVariable.folderParentUrl)
 assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), [
 	('folderName') : GlobalVariable.folderParentUrl
 	])
