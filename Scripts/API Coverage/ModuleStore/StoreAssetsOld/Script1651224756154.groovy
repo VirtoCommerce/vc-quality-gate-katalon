@@ -62,22 +62,27 @@ assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage
 
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
-WebUI.comment(GlobalVariable.folderParentUrl)
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderGet'), [
-	('folderName') : GlobalVariable.folderParentUrl,
-	('keyword') : ''
-	], null)
-WS.verifyElementPropertyValue(assetsFolderSearchCreated, 'totalCount', '2')
+WebUI.comment("GET FOLDER CALL")
+WebUI.comment("AFTER CREATION: " + GlobalVariable.folderParentUrl)
+//assetsFolderSearchCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderGet'), [
+//	('folderName') : GlobalVariable.folderParentUrl,
+//	('keyword') : ''
+//	], null)
+//WS.verifyElementPropertyValue(assetsFolderSearchCreated, 'totalCount', '1')
 
 //TEMP
+WebUI.comment("GET FOLDER REUQEST")
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
 	('folderName') : GlobalVariable.folderParentUrl
 	]))
-WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+WS.verifyElementPropertyValue(folderList, 'totalCount', '1')
 
 
-
+//TEMP
 WebUI.comment(GlobalVariable.folderUrl)
+GlobalVariable.folderUrl = GlobalVariable.folderParentUrl
+WebUI.comment(GlobalVariable.folderUrl)
+
 'UPLOAD A FILE(picture) FROM LOCAL STORAGE'
 assetsUploadLocalImage = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocal'), null)
 
@@ -87,6 +92,4 @@ assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/P
 
 
 'DELETE THE CREATED SINGLE FOLDER'
-WebUI.comment(GlobalVariable.folderUrl)
-GlobalVariable.folderUrl = GlobalVariable.folderParentUrl 
 assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'), null)
