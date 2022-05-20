@@ -92,4 +92,5 @@ assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/P
 
 
 'DELETE THE CREATED SINGLE FOLDER'
+GlobalVariable.folderUrl = directoryPath
 assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'), null)
