@@ -63,9 +63,17 @@ assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
 WebUI.comment(GlobalVariable.folderParentUrl)
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), [
+assetsFolderSearchCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderGet'), [
 	('folderName') : GlobalVariable.folderParentUrl
 	])
+WS.verifyElementPropertyValue(assetsFolderSearchCreated, 'totalCount', '2')
+
+
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+	('folderName') : GlobalVariable.folderParentUrl
+	]))
+WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+
 
 WebUI.comment(GlobalVariable.folderUrl)
 'UPLOAD A FILE(picture) FROM LOCAL STORAGE'
