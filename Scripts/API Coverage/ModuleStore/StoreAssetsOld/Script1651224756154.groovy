@@ -66,7 +66,7 @@ WebUI.comment(GlobalVariable.folderParentUrl)
 assetsFolderSearchCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderGet'), [
 	('folderName') : GlobalVariable.folderParentUrl,
 	('keyword') : ''
-	])
+	], null)
 WS.verifyElementPropertyValue(assetsFolderSearchCreated, 'totalCount', '2')
 
 //TEMP

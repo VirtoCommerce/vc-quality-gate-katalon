@@ -19,8 +19,6 @@ import internal.GlobalVariable as GlobalVariable
 WebUI.comment('TEST CASE: Assets. Check list on CI environment. Added /assets in url')
 
 folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('folderName') : '',
-	('keyword') : ''
 	]))
 
 // check if new folder is in the search results
