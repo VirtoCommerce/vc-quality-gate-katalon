@@ -49,36 +49,35 @@ WebUI.comment("NEW: " + GlobalVariable.folderParentUrl)
 assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk'),
 	null)
 
-
-'CREATE A SINGLE FOLDER'
-assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew'), [
-		('folderName') : GlobalVariable.folderName,
-		('parentUrl') : null
-		])
-
-
-'temp'
-WebUI.comment(GlobalVariable.folderParentUrl)
-'VERIFY THE FOLDER HAS BEEN CREATED'
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), [
-	('folderName') : GlobalVariable.folderParentUrl,
-	('keyword') : ''
-	])
-
-WebUI.comment(GlobalVariable.folderUrl)
-'UPLOAD A FILE(picture) FROM LOCAL STORAGE'
-assetsUploadLocalImage = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocal'), 
-	null)
-
-
-'UPLOAD AN ARCHIVE FROM URL'
-assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrl'), 
-	null)
-
-
-'DELETE THE CREATED SINGLE FOLDER'
-WebUI.comment(GlobalVariable.folderUrl)
-GlobalVariable.folderUrl = GlobalVariable.folderParentUrl 
-assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'), 
-	null)
-
+WebUI.comment("BULK FINISHED")
+//'CREATE A SINGLE FOLDER'
+//assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew'), [
+//		('folderName') : GlobalVariable.folderName,
+//		('parentUrl') : null
+//		])
+//
+//
+//'temp'
+//WebUI.comment(GlobalVariable.folderParentUrl)
+//'VERIFY THE FOLDER HAS BEEN CREATED'
+//assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), [
+//	('folderName') : GlobalVariable.folderParentUrl,
+//	('keyword') : ''
+//	])
+//
+//WebUI.comment(GlobalVariable.folderUrl)
+//'UPLOAD A FILE(picture) FROM LOCAL STORAGE'
+//assetsUploadLocalImage = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocal'), 
+//	null)
+//
+//
+//'UPLOAD AN ARCHIVE FROM URL'
+//assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrl'), 
+//	null)
+//
+//
+//'DELETE THE CREATED SINGLE FOLDER'
+//WebUI.comment(GlobalVariable.folderUrl)
+//GlobalVariable.folderUrl = GlobalVariable.folderParentUrl 
+//assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'), 
+//	null)

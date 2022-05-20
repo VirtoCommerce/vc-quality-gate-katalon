@@ -18,10 +18,6 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Bulk delete folders')
 
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
-//	('folderName') : "store"
-//	]))
-
 // Create new folders
 for (i = 1; i < 3; i++ ) {
 	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
@@ -30,30 +26,19 @@ for (i = 1; i < 3; i++ ) {
 		]))
 }
 
-//TEMP
-WebUI.comment(GlobalVariable.folderParentUrl)
-getAssetList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-	('folderName') : GlobalVariable.folderParentUrl,
-	('keyword') : ''
-	]))
-def folderUrl1 = WS.getElementPropertyValue(getAssetList, "results[0].relativeUrl")
-WebUI.comment(folderUrl1)
-def folderUrl2 = WS.getElementPropertyValue(getAssetList, "results[1].relativeUrl")
-def parentUrl = WS.getElementPropertyValue(getAssetList, "results[0].parentUrl")
-WebUI.comment(parentUrl)
 
-//// Find created folders in the list
-//WebUI.comment(GlobalVariable.folderName)
-//folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
-//	('folderName') : GlobalVariable.folderName
-//	]))
-////WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
-//
-//
-//// Save folder Url's
-//def folderUrl1 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 1
-//WebUI.comment(folderUrl1)
-//def folderUrl2 = GlobalVariable.folderParentUrl + GlobalVariable.folderName + 2
+// Find created folders in the list
+WebUI.comment(GlobalVariable.folderParentUrl)
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+	('folderName') : GlobalVariable.folderParentUrl
+	]))
+WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
+
+def folderUrl1 = WS.getElementPropertyValue(folderList, "results[0].relativeUrl")
+WebUI.comment(folderUrl1)
+def folderUrl2 = WS.getElementPropertyValue(folderList, "results[1].relativeUrl")
+def parentUrl = WS.getElementPropertyValue(folderList, "results[0].parentUrl")
+WebUI.comment(parentUrl)
 
 
 // Bulk delete of both folders using folderUrls's
@@ -62,10 +47,6 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 	('itemName2') : folderUrl2
 	]))
 
-//'SEND REQUEST TO DELETE A STORE FOLDER'
-//WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDelete', [
-//	('itemName') : "stores"
-//	]))
 
 // Check that folders are deleted
 WebUI.comment(GlobalVariable.folderName)
