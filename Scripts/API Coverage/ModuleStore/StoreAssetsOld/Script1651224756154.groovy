@@ -50,9 +50,9 @@ assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Ass
 	null)
 
 
-'temp'
-WebUI.comment("BULK FINISHED")
-WebUI.comment(GlobalVariable.folderParentUrl)
+//'temp'
+//WebUI.comment("BULK FINISHED")
+//WebUI.comment(GlobalVariable.folderParentUrl)
 
 'CREATE A SINGLE FOLDER'
 assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew'), [
