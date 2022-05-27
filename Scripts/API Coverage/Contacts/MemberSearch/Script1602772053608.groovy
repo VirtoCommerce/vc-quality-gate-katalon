@@ -25,7 +25,8 @@ dropIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/D
 
 'SEARCH FOR NEW MEMBERS'
 responseSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch', [
-	('searchPhrase') : GlobalVariable.firstName
+//	('searchPhrase') : GlobalVariable.firstName
+	('searchPhrase') : ''
 	]))
 return responseSearch
 //WS.verifyElementPropertyValue(responseSearch, 'totalCount', 4)

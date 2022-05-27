@@ -24,12 +24,6 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7cee36a1-d11e-4ffd-bfba-af3a050efaa3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/DRAFT.AssetFolderDelete2</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>c4b794e2-3625-465e-ba89-12dd9fe3d1da</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
