@@ -504,4 +504,14 @@
       <initValue>'QWE'</initValue>
       <name>semanticUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>apiKey isActive flag status (keep it true)</description>
+      <initValue>'true'</initValue>
+      <name>apiKeyStatus</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>set apiKey to regular user (not admin authhorization)</description>
+      <initValue>''</initValue>
+      <name>userApiKey</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

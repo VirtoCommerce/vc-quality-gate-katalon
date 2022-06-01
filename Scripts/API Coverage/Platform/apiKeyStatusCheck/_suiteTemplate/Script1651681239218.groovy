@@ -17,12 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Update existing ApiKey')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
-	('userName') : 'operator@mail.com',
-	('apiKeyId') : GlobalVariable.apiKeyId,
-	('api_key') : GlobalVariable.api_key+"upd", 
-	('userId') : GlobalVariable.userId,
-	('apiKeyStatus') : GlobalVariable.apiKeyStatus
-	]))
+'PRECONDITION'
+'First create a user'
+userCreate = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserCreate'),
+	null)
+'Get the created user by name id'
+getUserId = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserSearchSetUserID'),
+	null)
+'Authorize and get the auth token'
+auth = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/AuthBackToken'),
+	null)
+'****************'
+
+
+s1 = WS.callTestCase(findTestCase('API Coverage/Platform/apiKeyStatusCheck/userCreateWithActivateLockSwitching')
+	,null)
+s2 = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_apiKeyIsActive')
+		,null)
+s3 = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_apiKeyIsInactive')
+		,null)
+s4 = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_userDeleted')
+		,null)

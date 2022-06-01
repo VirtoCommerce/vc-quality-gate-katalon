@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description></description>
+   <description>check API availability for locked/unlocked user with active/inactive apiKey</description>
    <name>_DRAFT.Core</name>
    <tag></tag>
    <isRerun>false</isRerun>

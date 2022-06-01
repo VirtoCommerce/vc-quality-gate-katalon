@@ -9,20 +9,27 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper as JsonSlurper
 
-WebUI.comment('TEST CASE: Update existing ApiKey')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
-	('userName') : 'operator@mail.com',
-	('apiKeyId') : GlobalVariable.apiKeyId,
-	('api_key') : GlobalVariable.api_key+"upd", 
+//STEP | set new API key to user not admin 
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
+	('userName') : GlobalVariable.userName,
+	('api_key') : GlobalVariable.userApiKey,
 	('userId') : GlobalVariable.userId,
-	('apiKeyStatus') : GlobalVariable.apiKeyStatus
+	('apiKeyStatus') : GlobalVariable.apiKeyStatus,
+	('apiKeyId') : GlobalVariable.apiKeyId
 	]))
+
+responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
+	('userId') : GlobalVariable.userId
+	]))
+WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.userApiKey)
+WS.verifyElementPropertyValue(responseApiKey, '[0].isActive', GlobalVariable.apiKeyStatus)
+GlobalVariable.apiKeyId = (WS.getElementPropertyValue(responseApiKey, '[0].id'))
+WebUI.comment('API KEY ID : ' + GlobalVariable.apiKeyId)

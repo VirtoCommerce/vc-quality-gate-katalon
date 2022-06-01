@@ -17,12 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Update existing ApiKey')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
-	('userName') : 'operator@mail.com',
-	('apiKeyId') : GlobalVariable.apiKeyId,
-	('api_key') : GlobalVariable.api_key+"upd", 
-	('userId') : GlobalVariable.userId,
-	('apiKeyStatus') : GlobalVariable.apiKeyStatus
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
+
+
+WebUI.comment('TEST CASE: check api availability and for a deleted user')
+
+
+'SEND REQUEST TO DELETE THE CREATED USER'
+userDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserDelete'),
+	null)
+
+
+'VERIFY THE RESPONSE CHECK RETURN THE EXPECTED RESULT'
+lockedStateResponseCheck = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Platform/apiKeyResponseCheck',[
+	('apiKey') : GlobalVariable.userApiKey
 	]))
+WS.verifyResponseStatusCode(lockedStateResponseCheck, 401)

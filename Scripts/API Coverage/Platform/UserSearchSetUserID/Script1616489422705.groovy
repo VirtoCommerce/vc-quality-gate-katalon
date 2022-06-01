@@ -30,3 +30,5 @@ WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', Failu
 
 // set user Id in global variables
 GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')
+WebUI.comment('USER ID is: ' + GlobalVariable.userId)
+

@@ -50,8 +50,8 @@ settings/internal/com.kms.katalon.composer.testcase.properties
 
 .cache/
 
-Scripts/_Debug/
-Test Cases/_Debug/
+Scripts/_DEBUG/
+Test Cases/_DEBUG/
 Test Suites/_DEBUG/
 Object Repository/_DEBUG
 

@@ -17,12 +17,28 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.comment('TEST CASE: Update existing ApiKey')
 
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
-	('userName') : 'operator@mail.com',
-	('apiKeyId') : GlobalVariable.apiKeyId,
-	('api_key') : GlobalVariable.api_key+"upd", 
-	('userId') : GlobalVariable.userId,
-	('apiKeyStatus') : GlobalVariable.apiKeyStatus
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
+
+
+'GET USER DATA'
+GlobalVariable.userId = '95cbfd74-b411-45c7-a24d-34cb9d85b037'
+userGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [
+	('userId') : GlobalVariable.userId
 	]))
+userGetBody = userGet.getResponseBodyContent()
+println userGetBody
+userBodyParsed = new JsonSlurper().parseText(userGetBody)
+userBodyJson = new groovy.json.JsonBuilder(userBodyParsed).toString()
+
+
+'SEND REQUEST TO UPDATE THE CREATED USER'
+RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServices/_DEBUG/UserUpdateNoRoles')
+userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
+userBodyUpdate = WS.sendRequestAndVerify(userBodyObject)
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Update a user to make locking available (for the created user)</description>
+   <name>userCreateWithActivateLockSwitching</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bcf67f00-dd7f-4c10-9298-dd02df3c918b</testCaseGuid>
+</TestCaseEntity>
