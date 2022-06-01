@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>check API availability for locked/unlocked user with active/inactive apiKey</description>
-   <name>DRAFT.module_Platform_ApiKey_userLock</name>
+   <name>Platform_ApiKey_userLock</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,18 +10,12 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>5e2b3d4a-a6a9-4e2f-844c-886546c376b5</testSuiteGuid>
+   <testSuiteGuid>d0e84200-5d7a-4a93-a89f-e3f6809ae22c</testSuiteGuid>
    <testCaseLink>
       <guid>438d6bef-78a7-449c-b5e4-c28135ded0e3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d9713c6c-749d-4ac3-98cd-d1e63beeaf58</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>60db746e-d84c-461e-a8cc-1663a585f076</guid>
@@ -34,12 +28,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserSearchSetUserID</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1e988709-b992-414d-8ee8-8f825be35827</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c92280c4-4dcc-400b-a6e6-9c92080ff866</guid>
