@@ -43,6 +43,6 @@ for (String contentType : contentTypes.keySet()) {
 		('folderName') : GlobalVariable.folderName,
 		('fileName') : fileName
 		]))//;FailureHandling.OPTIONAL
-	WS.verifyResponseStatusCode(upload, 500)
+	WS.verifyResponseStatusCode(upload, 405)
 	WS.containsString(upload, errorMessage, false)
 	}
