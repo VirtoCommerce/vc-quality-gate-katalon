@@ -12,6 +12,18 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>eefac15c-96a3-4ff6-896e-a54f43249b56</testSuiteGuid>
    <testCaseLink>
+      <guid>992bfdf7-66ff-4bb2-8f27-fe36d394f9a7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b91d5448-f7be-4e8c-aebd-a37f857686a0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>9a15fb28-da57-48ab-9ac4-27e18b7f4d02</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
