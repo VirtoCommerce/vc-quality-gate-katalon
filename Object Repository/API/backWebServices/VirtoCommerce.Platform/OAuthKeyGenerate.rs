@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://webstore-platform.qa.govirto.com/api/platform/oauthapps/new</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/oauthapps/new</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
