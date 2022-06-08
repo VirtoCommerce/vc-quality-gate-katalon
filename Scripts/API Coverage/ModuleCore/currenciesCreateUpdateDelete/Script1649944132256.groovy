@@ -36,7 +36,7 @@ initialCurrenciesGet = WS.sendRequestAndVerify(findTestObject('Object Repository
 assert WS.containsString(initialCurrenciesGet, currencyName, false, FailureHandling.OPTIONAL) == false
 
 
-'SEND REQUEST TO CREATE A CURRENCY TYPE AND GET THE ID'
+'SEND REQUEST TO CREATE A CURRENCY TYPE'
 currencieCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Core/currencyCreate',[
 	('currencyName') : currencyName,
 	('currencyCode') : currencyCode

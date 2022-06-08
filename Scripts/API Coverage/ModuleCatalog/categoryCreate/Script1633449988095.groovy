@@ -36,10 +36,6 @@ WS.verifyElementPropertyValue(categoryCreate, 'code', GlobalVariable.categoryCod
 
 
 'EXTRACT CATEGORY ID'
-//I guess it would be better to stick to the generic 'id' global variable
-//To keep things versitale, need to discuss
-//Ive read that it is possible to write return(test case name variable)
-//And it is possible to receive this in another test case, need to explore
 GlobalVariable.categoryId = WS.getElementPropertyValue(categoryCreate, 'id')
 WebUI.comment(GlobalVariable.categoryId)
 
