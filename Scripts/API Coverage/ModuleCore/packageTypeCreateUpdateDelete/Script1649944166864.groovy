@@ -35,18 +35,16 @@ initialPackagesGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 assert WS.containsString(initialPackagesGet, packageName, false, FailureHandling.OPTIONAL) == false
 
 
-'SEND REQUEST TO CREATE A PACKAGE TYPE AND GET THE ID'
+'SEND REQUEST TO CREATE A PACKAGE TYPE'
 packageCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Core/packageCreate',[
 	('packageName') : packageName
 	]))
 
 
-'VERIFY PACKAGE HAS BEEN CREATED'
+'VERIFY PACKAGE HAS BEEN CREATED AND GET THE ID'
 packageGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Core/packageGet'))
-//packageName = WS.getElementPropertyValue(packageGet,'[0].name')
 WS.containsString(packageGet, packageName, false)
 packageId = WS.getElementPropertyValue(packageGet,'[0].id')
-println packageId
  
 
 'UPDATE THE CREATED PACKAGE'
