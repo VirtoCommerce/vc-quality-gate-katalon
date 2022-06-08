@@ -31,7 +31,7 @@ WebUI.comment('TEST CASE: new channel create')
 
 'CREATE A NEW CHANNEL AND GET THE ID'
 GlobalVariable.channelName = 'qweChan'
-channelCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/cnannelsCreate',[
+channelCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.CatalogPublishing/channelsCreate',[
 	('channelName') : GlobalVariable.channelName,
 	('catalogId') : GlobalVariable.catalogId,
 	('catalogName') : GlobalVariable.catalogName
