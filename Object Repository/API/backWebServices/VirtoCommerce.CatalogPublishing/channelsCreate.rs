@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>cnannelsCreate</name>
+   <name>channelsCreate</name>
    <tag></tag>
    <elementGuidId>7978566f-b3fc-4bba-9082-484b0b10c4de</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${channelName}\&quot;,\n\t\&quot;languages\&quot;: [\n\t\t\&quot;en-US\&quot;\n\t],\n\t\&quot;currencies\&quot;: [\n\t\t\&quot;USD\&quot;\n\t],\n\t\&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n\t\&quot;evaluatorType\&quot;: \&quot;DefaultCompletenessEvaluator\&quot;,\n\t\&quot;catalogName\&quot;: \&quot;${catalogName}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${channelName}\&quot;,\n\t\&quot;languages\&quot;: [\n\t\t\&quot;en-US\&quot;\n\t],\n\t\&quot;currencies\&quot;: [\n\t\t\&quot;USD\&quot;\n\t],\n\t\&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n\t\&quot;catalogName\&quot;: \&quot;${catalogName}\&quot;,\n  \t\&quot;evaluatorType\&quot;: \&quot;DefaultCompletenessEvaluator\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
