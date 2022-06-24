@@ -19,7 +19,7 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Get installed modules')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/GetInstalledModules'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/Modules/ModulesGetInstalled'))
 
 WS.verifyElementPropertyValue(response, '[0].title', 'Authorize.Net DPM payment gateway')
 WS.verifyElementPropertyValue(response, '[0].description', 'APIs and UI for Authorize.Net Direct Post Method (DPM) payment gateway')

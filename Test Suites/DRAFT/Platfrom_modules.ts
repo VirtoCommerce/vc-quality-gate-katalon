@@ -15,18 +15,18 @@
       <guid>603b7fc2-4bcb-4794-93a8-6d8bc9544e91</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetInstalledModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Modules/ModulesGetInstalled</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9f29c886-6c76-459f-a4cf-05a576db7dc3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetDependentModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Modules/ModulesGetDependent</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>80d3228c-4f42-4335-9473-c6beaf8747c4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ReloadModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Modules/ModulesReload</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
