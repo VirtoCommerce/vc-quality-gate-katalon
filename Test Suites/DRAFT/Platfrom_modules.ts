@@ -24,7 +24,7 @@
       <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6c0064ac-296d-4154-ae79-6ccbe3afb4ef</guid>
+      <guid>92ff1f32-60aa-488f-a07a-c7138280b515</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/Modules/Modules_Mangement</testCaseId>
