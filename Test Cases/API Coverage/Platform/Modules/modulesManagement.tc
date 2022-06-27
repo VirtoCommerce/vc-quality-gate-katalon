@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>get the list of modules, check dependencies</description>
+   <name>modulesManagement</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>76a40d19-95dc-4b4b-bc66-1fee8e79d116</testCaseGuid>
+</TestCaseEntity>
