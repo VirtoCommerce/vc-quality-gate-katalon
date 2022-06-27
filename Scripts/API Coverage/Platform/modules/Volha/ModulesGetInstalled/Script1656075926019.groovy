@@ -30,6 +30,8 @@ WS.verifyElementPropertyValue(response, '[0].isRemovable', false)
 WS.verifyElementPropertyValue(response, '[0].isInstalled', true)
 WS.verifyElementPropertyValue(response, '[0].id', 'VirtoCommerce.AuthorizeNet')
 
+
+
 responseText = response.getResponseText();
 def json = new JsonSlurper().parseText(responseText)
 WebUI.comment( json.results.size().toString());
@@ -47,4 +49,3 @@ for (def i : (0..json.results.size()) ) {
 	
 	
 }
-

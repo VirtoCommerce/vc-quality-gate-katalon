@@ -12,21 +12,21 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>ee00357b-b4d3-4604-b85a-7e07d8962879</testSuiteGuid>
    <testCaseLink>
-      <guid>603b7fc2-4bcb-4794-93a8-6d8bc9544e91</guid>
+      <guid>d4318587-ecc0-4a65-9481-5365393670ad</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Modules/ModulesGetInstalled</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9f29c886-6c76-459f-a4cf-05a576db7dc3</guid>
+      <guid>4d5f00be-8bf1-4378-bea2-ee5cb3c3f24f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Modules/ModulesGetDependent</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>80d3228c-4f42-4335-9473-c6beaf8747c4</guid>
+      <guid>6c0064ac-296d-4154-ae79-6ccbe3afb4ef</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Modules/ModulesReload</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/Modules/Modules_Mangement</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

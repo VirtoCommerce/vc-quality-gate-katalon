@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n {\n    \&quot;version\&quot;: \&quot;${GlobalVariable.storeModuleVersion}\&quot;,\n    \&quot;title\&quot;: \&quot;Store module\&quot;,\n    \&quot;validationErrors\&quot;: [],\n    \&quot;isRemovable\&quot;: false,\n    \&quot;isInstalled\&quot;: true,\n    \&quot;id\&quot;: \&quot;VirtoCommerce.Store\&quot;\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n {\n //the request body was processed in the test case script\n }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
