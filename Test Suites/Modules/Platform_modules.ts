@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
-   <description></description>
+   <description>get the list of modules, check dependencies endpoints</description>
    <name>Platform_modules</name>
    <tag></tag>
    <isRerun>false</isRerun>
