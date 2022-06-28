@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>GetInstalledModules</name>
+   <name>ModulesGetInstalled</name>
    <tag></tag>
    <elementGuidId>82ffb0a9-4d6b-40a9-b18d-e6b9923930cd</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>

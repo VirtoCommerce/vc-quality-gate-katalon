@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Platfrom_modules</name>
+   <name>Platform_modules</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
-   <pageLoadTimeout>5</pageLoadTimeout>
+   <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>ee00357b-b4d3-4604-b85a-7e07d8962879</testSuiteGuid>
+   <testSuiteGuid>23485d42-a6f3-4750-b1b5-dd387261af72</testSuiteGuid>
    <testCaseLink>
-      <guid>603b7fc2-4bcb-4794-93a8-6d8bc9544e91</guid>
+      <guid>e8e2be76-ad41-498b-8af6-093c21402311</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetInstalledModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9f29c886-6c76-459f-a4cf-05a576db7dc3</guid>
+      <guid>b032ec2a-c6b7-4b1d-ab99-6b044f447b9e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/GetDependentModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>80d3228c-4f42-4335-9473-c6beaf8747c4</guid>
+      <guid>59fa339a-1ae1-4ed4-8cde-aba742dfc531</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ReloadModules</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/ModulesManagement/modulesManagement</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
