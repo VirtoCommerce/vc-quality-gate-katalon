@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>ModulesGetInstalled</name>
-   <tag></tag>
-   <comment>TEST CASE: Get installed modules
-json.results.size().toString()</comment>
-   <testCaseGuid>b009c4be-8bcd-45ac-8e44-52cc2c2d77a8</testCaseGuid>
-</TestCaseEntity>
