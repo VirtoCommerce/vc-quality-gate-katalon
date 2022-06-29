@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 import groovy.json.JsonSlurper
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/DRAFT/DRAFT.searchFFC'))
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Inventory/DRAFT/DRAFT.searchFFC'))
 //
 //JsonSlurper responseJson = new JsonSlurper()
 //def parsedResult = responseJson.parseText(response.getResponseBodyContent())

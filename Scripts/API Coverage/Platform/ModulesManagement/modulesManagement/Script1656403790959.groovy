@@ -41,13 +41,13 @@ modulesGetBody = new JsonSlurper().parseText(modulesGet.getResponseBodyContent()
 
 'GET THE QUANTITY OF MODULES IN THE LIST AND VERIFY ITS NOT EMPTY'
 modulesListSize =  modulesGetBody.results.size()
-assert modulesListSize != 0 && modulesListSize != null 
+assert modulesListSize > 0
 
 
-'FIND ASSETS MODULE IN THE LIST OF MODULES TO USE IT AS A REQUEST BODY (SEE BELOW)'//actually any module body can be used e.g. the first in the list
+'FIND ASSETS MODULE IN THE LIST OF MODULES TO USE IT AS A REQUEST BODY (SEE BELOW)'//actually any module body can be used
 moduleBody = []
 for (def i : (0..modulesListSize) ) {
-	if((modulesGetBody.id[i] == "VirtoCommerce.Assets"))  {
+	if((modulesGetBody.id[i] == "VirtoCommerce.Catalog"))  {
 		WebUI.comment(modulesGetBody.version[i].toString())
 		moduleBody.add(modulesGetBody[i])
 		break;

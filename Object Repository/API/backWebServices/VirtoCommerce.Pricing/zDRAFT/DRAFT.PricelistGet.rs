@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>DRAFT.Pricelist</name>
+   <name>DRAFT.PricelistGet</name>
    <tag></tag>
-   <elementGuidId>2554cffc-a2a9-4fbc-9c1e-7096a33564d4</elementGuidId>
+   <elementGuidId>60492a1f-bef3-492f-b5bb-18c2790c32d1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;QwePricelist\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;,\n  \&quot;prices\&quot;: [\n    {\n      \&quot;productId\&quot;: \&quot;6787f2bb-7e06-4e98-b60c-cfd48121bdca\&quot;,\n      \&quot;sale\&quot;: 555,\n      \&quot;list\&quot;: 999,\n      \&quot;minQuantity\&quot;: 1,\n      \&quot;startDate\&quot;: \&quot;2020-08-10T16:39:19.340Z\&quot;\n    }\n  ],\n  \&quot;assignments\&quot;: [\n    {\n      \&quot;catalogId\&quot;: \&quot;4974648a41df4e6ea67ef2ad76d7bbd4\&quot;,\n      \&quot;name\&quot;: \&quot;QweAssign\&quot;,\n      \&quot;priority\&quot;: 1,\n      \&quot;startDate\&quot;: \&quot;2020-08-10T16:40:19.340Z\&quot;\n    }\n  ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;QwePricelist\&quot;,\n//  \&quot;description\&quot;: \&quot;string\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;\n//  \&quot;outerId\&quot;: \&quot;Electronics\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,8 +31,8 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists</restUrl>
+   <restRequestMethod>GET</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/pricing/pricelists/1a720522-8c9d-4ada-be63-62aafe569a70</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
