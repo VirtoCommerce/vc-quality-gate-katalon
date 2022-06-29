@@ -54,5 +54,6 @@ Scripts/_DEBUG/
 Test Cases/_DEBUG/
 Test Suites/_DEBUG/
 Object Repository/_DEBUG
+Object Repository/API/backWebServices/_DEBUG
 
 .groovy/
