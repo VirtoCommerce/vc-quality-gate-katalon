@@ -75,3 +75,4 @@ WS.verifyElementPropertyValue(veifyUpdated,'results[0].name', updatedPlaceholder
 WS.verifyElementPropertyValue(veifyUpdated,'results[0].imageUrl', GlobalVariable.uploadFileUrl)
 
 
+
