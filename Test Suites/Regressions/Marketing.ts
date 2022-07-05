@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Marketing_DynamicContent</name>
+   <name>Marketing</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -112,5 +112,29 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleMarketing/DynamicContent/ContentPublications/contentPublicationDeleteBulk</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c84a2899-c811-4abf-823c-be1bade97223</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoCreate</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>17a71ae0-3109-4e57-b8a9-a1100281cbba</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoUpdate_AlternativeWay</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8b22d566-e6f4-43e9-9102-3cd1a6ab6cec</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoDelete</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>33a7e06b-d18d-42d7-a320-7b57a4c6ef10</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/PromoAndCoupons/promoCoupon_createUpdateDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
