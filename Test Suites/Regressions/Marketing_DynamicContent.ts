@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>module_Marketing_dynamicContent</name>
+   <name>Marketing_DynamicContent</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>d727209c-5f3a-400f-a670-0b6a3ec777a4</testSuiteGuid>
+   <testSuiteGuid>d8f0ad16-ded5-43e5-a5dd-d3d3b902172d</testSuiteGuid>
    <testCaseLink>
       <guid>d5ebd59f-8f44-4f81-8f02-c38d0fceef2e</guid>
       <isReuseDriver>false</isReuseDriver>
