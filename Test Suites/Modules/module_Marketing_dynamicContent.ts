@@ -96,10 +96,10 @@
       <testCaseId>Test Cases/API Coverage/ModuleMarketing/DynamicContent/ContentPlaceholders/contentPlaceholderDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a009ca50-d7c5-449c-8b4d-4cfff7f38f0a</guid>
+      <guid>8847aed9-d92b-412c-ab80-12b933429735</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/AssetFolderDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModuleMarketing/DynamicContent/ContentFolders/contentFolderDelete</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7990a1ca-8165-4b39-b0ec-7f1fb1e8d5c2</guid>

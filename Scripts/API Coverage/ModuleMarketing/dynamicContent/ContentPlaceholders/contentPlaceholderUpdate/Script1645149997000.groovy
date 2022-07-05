@@ -29,7 +29,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('TEST CASE: content placeholder update')
 
 
-//GlobalVariable.placeholderId = '6f61fd44-cf18-4574-921c-ff0b51f1b31d'
+//GlobalVariable.placeholderId = 'a2bad928-edb4-44b4-ae90-28a9f80bc17b'
 //GlobalVariable.placeholderName = 'evgTest'
 
 
