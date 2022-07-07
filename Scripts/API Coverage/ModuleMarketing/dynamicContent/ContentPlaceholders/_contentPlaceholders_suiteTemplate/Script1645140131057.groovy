@@ -28,7 +28,7 @@ placeholderUpdate = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/D
 deletePlaceholder = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentPlaceholders/contentPlaceholderDelete'),
 	null)
 
-deletePlaceholderImageFolder = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'),
+deletePlaceholderImageFolder = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleAssets/AssetFolderDelete'),
 	null) 
 
 placeholderBulkDelete = WS.callTestCase(findTestCase('API Coverage/ModuleMarketing/DynamicContent/ContentPlaceholders/contentPlaceholderDeleteBulk'),
