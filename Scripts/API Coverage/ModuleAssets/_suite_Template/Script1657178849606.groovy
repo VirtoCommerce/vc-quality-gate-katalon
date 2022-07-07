@@ -9,24 +9,11 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
+import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-
-WebUI.comment('TEST CASE: Assets. Search folder')
-
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetGetList', [
-	('folderName') : '',
-	('keyword') : GlobalVariable.folderName
-	]))
-
-// check if new folder is in the search results
-WS.containsString(folderList, GlobalVariable.folderName, false)
-GlobalVariable.folderUrl = (WS.getElementPropertyValue(folderList, 'results[0].url'))
-//GlobalVariable.folderUrl = GlobalVariable.localUrl + '/' + GlobalVariable.folderName // Special url for test in docker
-
-//WebUI.comment ('Local URL is: ' + GlobalVariable.localUrl)
-WebUI.comment ('Folder URL is: ' + GlobalVariable.folderUrl)

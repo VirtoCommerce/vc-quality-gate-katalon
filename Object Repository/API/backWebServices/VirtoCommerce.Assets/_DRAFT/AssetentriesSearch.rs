@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>UserUpdateNoRoles</name>
+   <name>AssetentriesSearch</name>
    <tag></tag>
-   <elementGuidId>ef082aaa-d450-4d44-a96c-4e9eee0c8082</elementGuidId>
+   <elementGuidId>d1b2ebab-e534-470e-bd54-ea6782c629e3</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n  \&quot;lockoutEnabled\&quot;: true,\n\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;sort\&quot;: \&quot;string\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -29,10 +29,11 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <katalonVersion>7.9.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users</restUrl>
+   <restRequestMethod>POST</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/assetentries/search</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,56 +43,22 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
+      <defaultValue>'qwefolder'</defaultValue>
+      <description>folder name</description>
+      <id>a000e688-e42b-4a01-92eb-31a30eb41bd8</id>
       <masked>false</masked>
-      <name>userName</name>
-   </variables>
-   <variables>
-      <defaultValue>'Manager'</defaultValue>
-      <description></description>
-      <id>852b8fa8-c9a3-4b89-bad8-c8115364e1d4</id>
-      <masked>false</masked>
-      <name>userType</name>
+      <name>folderName</name>
    </variables>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
-      <id>73dd08ad-e5c2-4242-84fa-fe21a969cbc1</id>
+      <description>folder parent location</description>
+      <id>01ac9f7a-ffd7-4e0d-8f1d-4deac9695502</id>
       <masked>false</masked>
-      <name>email</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>c69bffe4-66b9-423f-acf2-b036c7f8d1d9</id>
-      <masked>false</masked>
-      <name>userId</name>
-   </variables>
-   <variables>
-      <defaultValue>'false'</defaultValue>
-      <description></description>
-      <id>24f7e443-af4a-4483-862a-e8e15c22f77c</id>
-      <masked>false</masked>
-      <name>emailConfirmed</name>
-   </variables>
-   <variables>
-      <defaultValue>'6c3de7a1-ccbe-4a64-8b6d-258dcd92f0f8'</defaultValue>
-      <description></description>
-      <id>2479e8f0-def0-4b75-bece-f992747d7735</id>
-      <masked>false</masked>
-      <name>roleId</name>
-   </variables>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description></description>
-      <id>3b6ec929-ea75-4622-99a5-8b20bad848a2</id>
-      <masked>false</masked>
-      <name>roles</name>
+      <name>parentUrl</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
+import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
@@ -103,7 +70,8 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
+//Status verification is turned off as it returns empty response
+//WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AssetGetList</name>
+   <name>AssetentriesDelete</name>
    <tag></tag>
-   <elementGuidId>d0b19b7b-2c89-4ae1-8778-f99da36e6d80</elementGuidId>
+   <elementGuidId>d5098c51-5adc-48a9-946f-be07f286179b</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -28,8 +28,8 @@
    <katalonVersion>7.9.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
-   <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/assets?folderUrl=${folderName}&amp;keyword=${keyword}</restUrl>
+   <restRequestMethod>DELETE</restRequestMethod>
+   <restUrl>${GlobalVariable.urlBack}/api/assetentries</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -38,20 +38,6 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
-   <variables>
-      <defaultValue>''</defaultValue>
-      <description>folder name</description>
-      <id>cc65020b-d5c4-4b47-b0a9-481ab383941b</id>
-      <masked>false</masked>
-      <name>folderName</name>
-   </variables>
-   <variables>
-      <defaultValue>'qwefolder'</defaultValue>
-      <description>search request</description>
-      <id>2474aa2a-238e-425c-bd92-58cad6a36bb7</id>
-      <masked>false</masked>
-      <name>keyword</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject
@@ -66,7 +52,8 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
+//Status verification is turned off as it returns empty response
+//WS.verifyResponseStatusCode(response, 204)
 </verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>
