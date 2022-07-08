@@ -39,7 +39,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'folderName'</defaultValue>
+      <defaultValue>'qwefolder'</defaultValue>
       <description></description>
       <id>28ecdd94-996f-42ef-a026-a98c61f04212</id>
       <masked>false</masked>

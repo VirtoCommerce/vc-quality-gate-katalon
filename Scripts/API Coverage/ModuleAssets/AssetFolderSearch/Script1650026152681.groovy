@@ -25,8 +25,8 @@ folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 
 // check if new folder is in the search results
 WS.containsString(folderList, GlobalVariable.folderName, false)
-GlobalVariable.localUrl = (WS.getElementPropertyValue(folderList, 'results[0].parentUrl'))
-GlobalVariable.folderUrl = GlobalVariable.localUrl + '/' + GlobalVariable.folderName // Special url for test in docker
+GlobalVariable.folderUrl = (WS.getElementPropertyValue(folderList, 'results[0].url'))
+//GlobalVariable.folderUrl = GlobalVariable.localUrl + '/' + GlobalVariable.folderName // Special url for test in docker
 
-WebUI.comment ('Local URL is: ' + GlobalVariable.localUrl)
+//WebUI.comment ('Local URL is: ' + GlobalVariable.localUrl)
 WebUI.comment ('Folder URL is: ' + GlobalVariable.folderUrl)

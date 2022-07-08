@@ -37,7 +37,7 @@ WebUI.comment('TEST CASE: content placeholder update')
 
 'UPLOAD ASSET IMAGE TO THE PLACEHOLDER INAGES FOLDER'
 GlobalVariable.folderUrl = 'placeholders-images'
-assetFileUpload = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocal'),
+assetFileUpload = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleAssets/AssetFileUploadLocal'),
 	null)
 
 
