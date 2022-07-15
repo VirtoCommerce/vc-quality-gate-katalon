@@ -81,7 +81,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 
 WebUI.comment("TEST CASE : Update user password as admin way")
-responseResetPassword = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ResetPassword', [
+responseResetPassword = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserPassword/UserPasswordReset', [
 	('userName') : GlobalVariable.userName
 	]))
 WS.verifyElementPropertyValue(responseResetPassword, 'succeeded', true)
