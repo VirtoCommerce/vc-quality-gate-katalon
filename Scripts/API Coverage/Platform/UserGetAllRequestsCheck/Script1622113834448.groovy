@@ -28,22 +28,12 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 WebUI.comment('TEST CASE: Check all GET requests related to User')
 
-//operatorId = '0a773137-7ac5-4ebc-8d24-94419ed988b6'
 
 currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
 operatorId = WS.getElementPropertyValue(currentUser, 'id')
-body = currentUser.getResponseBodyContent()
-bodyParsed = new JsonSlurper().parseText(body)
-bodyJson = new groovy.json.JsonBuilder(bodyParsed).toString()
-println operatorId
-println bodyJson
 
 
 userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-body2 = userByEmail.getResponseBodyContent()
-body2Parsed = new JsonSlurper().parseText(body2)
-body2Json = new groovy.json.JsonBuilder(body2Parsed).toString()
-println body2Json
 WS.verifyElementPropertyValue(userByEmail, 'id', operatorId)
 
 userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
