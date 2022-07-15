@@ -26,21 +26,23 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
+
+
 WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserGetAllRequestsCheck'),
 	    null)
 WS.callTestCase(findTestCase('API Coverage/Platform/UserCreateAdminAndGetToken'),
-		null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserCreateAlreadyExisted'),
-		null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserSendVerifictaionEmail'),
-		null)
-WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordValidate'),
-		null)
-WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordResetOnLoginPage'),
-		null)
-WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordOperationsAdminPath'),
-		null)
-WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordOperationsCurrentUser'),
-		null)
+	null)
+//WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserCreateAlreadyExisted'),
+//		null)
+//WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserSendVerifictaionEmail'),
+//		null)
+//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordValidate'),
+//		null)
+//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordResetOnLoginPage'),
+//		null)
+//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordOperationsAdminPath'),
+//		null)
+//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordOperationsCurrentUser'),
+//		null)
 WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserDelete'),
 		null)

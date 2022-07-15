@@ -32,13 +32,13 @@
    <testCaseLink>
       <guid>7f7ae5fb-6440-4099-a559-98ac7129561c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserCreateAdminAndGetToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c38d7c1f-b2d2-4548-b962-710cc5db8087</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserCreateAlreadyExisted</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -50,7 +50,7 @@
    <testCaseLink>
       <guid>3e81f9a6-299c-4e87-b35a-6b702ec3b85c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordValidate</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -62,19 +62,19 @@
    <testCaseLink>
       <guid>bbc3d46a-fb27-4b0f-9925-e9f3ac083ff6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordOperationsAdminPath</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0b3bc822-14ba-407e-b8b3-94a600464a6f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordOperationsCurrentUser</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9bcba098-3799-4129-aae2-6e180a6c5aaa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

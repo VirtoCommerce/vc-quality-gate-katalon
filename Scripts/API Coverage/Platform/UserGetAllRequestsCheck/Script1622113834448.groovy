@@ -17,14 +17,33 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
+
+
 WebUI.comment('TEST CASE: Check all GET requests related to User')
 
 //adminUserId = '1eb2fa8ac6574541afdb525833dadb46'
 
 currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
 adminUserId = WS.getElementPropertyValue(currentUser, 'id')
+body = currentUser.getResponseBodyContent()
+bodyParsed = new JsonSlurper().parseText(body)
+bodyJson = new groovy.json.JsonBuilder(bodyParsed).toString()
+println adminUserId
+println bodyJson
+
 
 userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
+body2 = userByEmail.getResponseBodyContent()
+body2Parsed = new JsonSlurper().parseText(body2)
+body2Json = new groovy.json.JsonBuilder(body2Parsed).toString()
+println body2Json
 WS.verifyElementPropertyValue(userByEmail, 'id', adminUserId)
 
 userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
