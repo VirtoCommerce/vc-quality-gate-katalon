@@ -19,10 +19,10 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.comment('TEST CASE: Check all GET requests related to User')
 
-adminUserId = '1eb2fa8ac6574541afdb525833dadb46'
+//adminUserId = '1eb2fa8ac6574541afdb525833dadb46'
 
 currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-WS.verifyElementPropertyValue(currentUser, 'id', adminUserId)
+adminUserId = WS.getElementPropertyValue(currentUser, 'id')
 
 userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
 WS.verifyElementPropertyValue(userByEmail, 'id', adminUserId)
