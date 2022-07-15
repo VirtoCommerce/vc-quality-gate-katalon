@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'1eb2fa8ac6574541afdb525833dadb46'</defaultValue>
+      <defaultValue>'0a773137-7ac5-4ebc-8d24-94419ed988b6'</defaultValue>
       <description>Admin user ID</description>
       <id>18be38b2-f2a8-4368-8077-5a8267e6db5a</id>
       <masked>false</masked>

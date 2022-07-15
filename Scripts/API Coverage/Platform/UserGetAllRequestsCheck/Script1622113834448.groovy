@@ -28,14 +28,14 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 WebUI.comment('TEST CASE: Check all GET requests related to User')
 
-//adminUserId = '1eb2fa8ac6574541afdb525833dadb46'
+//operatorId = '0a773137-7ac5-4ebc-8d24-94419ed988b6'
 
 currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-adminUserId = WS.getElementPropertyValue(currentUser, 'id')
+operatorId = WS.getElementPropertyValue(currentUser, 'id')
 body = currentUser.getResponseBodyContent()
 bodyParsed = new JsonSlurper().parseText(body)
 bodyJson = new groovy.json.JsonBuilder(bodyParsed).toString()
-println adminUserId
+println operatorId
 println bodyJson
 
 
@@ -44,13 +44,13 @@ body2 = userByEmail.getResponseBodyContent()
 body2Parsed = new JsonSlurper().parseText(body2)
 body2Json = new groovy.json.JsonBuilder(body2Parsed).toString()
 println body2Json
-WS.verifyElementPropertyValue(userByEmail, 'id', adminUserId)
+WS.verifyElementPropertyValue(userByEmail, 'id', operatorId)
 
 userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', adminUserId)
+WS.verifyElementPropertyValue(userByName, 'id', operatorId)
 
 userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
-WS.verifyElementPropertyValue(userInfo, 'sub', adminUserId)
+WS.verifyElementPropertyValue(userInfo, 'sub', operatorId)
 
 responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById'))
-WS.verifyElementPropertyValue(responseById, 'userName', 'admin')
+WS.verifyElementPropertyValue(responseById, 'userName', 'operator@mail.com')
