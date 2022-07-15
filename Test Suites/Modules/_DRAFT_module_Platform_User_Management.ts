@@ -54,10 +54,16 @@
       <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordValidate</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>17cf3a5a-d00a-41a5-9074-9d5d371f85b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordResetOnLoginPage/UserPasswordResetOnLoginPageRequest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>15a2c547-b243-4573-afaf-ec65882ea082</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordResetOnLoginPage</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordResetOnLoginPage/UserPasswordResetOnLoginPageConfirm</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bbc3d46a-fb27-4b0f-9925-e9f3ac083ff6</guid>

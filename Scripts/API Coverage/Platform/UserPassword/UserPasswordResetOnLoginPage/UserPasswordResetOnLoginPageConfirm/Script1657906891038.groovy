@@ -30,11 +30,6 @@ WebUI.comment('TEST CASE: Change or reset password via request on login page')
 //this operations can not be fully tested due to Katalon <> Platform integration limitations
 
 
-'REQUEST PASSWORD RESET BY LOGIN OR EMAIL'//simple check for 200ok
-passwordRequestReset = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserPassword/UserPasswordRequestResetEmail'))
-//WS.verifyElementPropertyValue(passwordRequestReset, 'succeeded', true)
-
-
 'VALIDATE PASSWORD RESET TOKEN'//only checks for 200ok for now
 passwordValidateResetToken = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserPassword/UserPasswordValidateResetToken',[
 	('userId') : GlobalVariable.userId,
@@ -45,7 +40,7 @@ passwordValidateResetToken = WS.sendRequestAndVerify(findTestObject('API/backWeb
 
 'CONFIRM RESET PASSWORD'//only checks for 200ok for now
 newPassword = GlobalVariable.userPassword + '!'
-passwordResetConfirm = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserPassword/UserPasswordResetConfirm',[
+passwordResetConfirm = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserPassword/UserPasswordResetConfirm',[
 	('newPassword') : newPassword,
 	('userId') : GlobalVariable.userId,
 	('token') : GlobalVariable.token

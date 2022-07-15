@@ -26,23 +26,14 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
+WebUI.comment('TEST CASE: Change or reset password via request on login page')
+//this operations can not be fully tested due to Katalon <> Platform integration limitations
 
 
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserGetAllRequestsCheck'),
-	    null)
-WS.callTestCase(findTestCase('API Coverage/Platform/UserCreateAdminAndGetToken'),
-	null)
-//WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserCreateAlreadyExisted'),
-//		null)
-//WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserSendVerifictaionEmail'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordValidate'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordResetOnLoginPage/UserPasswordResetOnLoginPageConfirm'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordOperationsAdminPath'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/Platform/UserPassword/UserPasswordOperationsCurrentUser'),
-//		null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/UserDelete'),
-		null)
+'REQUEST PASSWORD RESET BY LOGIN OR EMAIL'//simple check for 200ok
+passwordRequestReset = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserPassword/UserPasswordRequestResetEmail'))
+//WS.verifyElementPropertyValue(passwordRequestReset, 'succeeded', true)
+
+
+
+
