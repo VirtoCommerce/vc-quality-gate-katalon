@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ResetPassword</name>
+   <name>PasswordValidateUser</name>
    <tag></tag>
-   <elementGuidId>0e6447fd-5315-4931-ac20-982a6b1efe42</elementGuidId>
+   <elementGuidId>61a289c8-3291-4723-9b4c-dab7453fe251</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;,\n  \&quot;forcePasswordChangeOnNextSignIn\&quot;:false\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/validateuserpassword</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,18 +42,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'QweUser'</defaultValue>
-      <description></description>
-      <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
-      <masked>false</masked>
-      <name>userName</name>
-   </variables>
-   <variables>
-      <defaultValue>'1!Password'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
       <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
       <masked>false</masked>
       <name>newPassword</name>
+   </variables>
+   <variables>
+      <defaultValue>'QweUser'</defaultValue>
+      <description></description>
+      <id>f904d9c9-7e67-4317-b676-436bdd1c2ea6</id>
+      <masked>false</masked>
+      <name>userName</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

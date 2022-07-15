@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ResetPassword</name>
+   <name>PasswordValidateResetToken</name>
    <tag></tag>
-   <elementGuidId>0e6447fd-5315-4931-ac20-982a6b1efe42</elementGuidId>
+   <elementGuidId>9ce806fe-11b5-4735-b352-fb31f3074782</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;,\n  \&quot;forcePasswordChangeOnNextSignIn\&quot;:false\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;token\&quot;: \&quot;${token}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userId}/validatepasswordresettoken</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,18 +42,18 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'QweUser'</defaultValue>
+      <defaultValue>'a53bdfba-3ace-455a-90f0-70b6f7dba618'</defaultValue>
       <description></description>
-      <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
+      <id>770756ba-251e-40fe-a98b-7661095218e3</id>
       <masked>false</masked>
-      <name>userName</name>
+      <name>userId</name>
    </variables>
    <variables>
-      <defaultValue>'1!Password'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
+      <id>dac690c8-970a-47af-a752-7b46803b1b65</id>
       <masked>false</masked>
-      <name>newPassword</name>
+      <name>token</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
@@ -69,7 +69,6 @@ import com.kms.katalon.core.util.KeywordUtil
 ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
-WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+WS.verifyResponseStatusCode(response, 200)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

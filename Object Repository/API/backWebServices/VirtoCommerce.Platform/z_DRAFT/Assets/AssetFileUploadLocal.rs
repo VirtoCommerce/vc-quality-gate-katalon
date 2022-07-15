@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ResetPassword</name>
+   <name>AssetFileUploadLocal</name>
    <tag></tag>
-   <elementGuidId>0e6447fd-5315-4931-ac20-982a6b1efe42</elementGuidId>
+   <elementGuidId>5eabad0f-c529-4b46-bec8-9eb8063722b2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;,\n  \&quot;forcePasswordChangeOnNextSignIn\&quot;:false\n}&quot;,
-  &quot;contentType&quot;: &quot;application/json&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
+  &quot;contentType&quot;: &quot;multipart/form-data&quot;,
+  &quot;charset&quot;: &quot;UTF-8&quot;,
+  &quot;parameters&quot;: [
+    {
+      &quot;name&quot;: &quot;file&quot;,
+      &quot;value&quot;: &quot;TestFiles/testuploadfile.jpeg&quot;,
+      &quot;type&quot;: &quot;File&quot;,
+      &quot;contentType&quot;: &quot;image/jpeg&quot;
+    }
+  ]
 }</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyType>form-data</httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>multipart/form-data</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -29,10 +36,11 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <katalonVersion>7.9.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/assets?folderUrl=${folderUrl}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,18 +50,11 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'QweUser'</defaultValue>
+      <defaultValue>'placeholders-images'</defaultValue>
       <description></description>
-      <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
+      <id>1c7ff1bb-764e-4657-9382-9e432f7a1237</id>
       <masked>false</masked>
-      <name>userName</name>
-   </variables>
-   <variables>
-      <defaultValue>'1!Password'</defaultValue>
-      <description></description>
-      <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
-      <masked>false</masked>
-      <name>newPassword</name>
+      <name>folderUrl</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

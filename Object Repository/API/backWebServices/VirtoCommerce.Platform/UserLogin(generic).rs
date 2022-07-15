@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ResetPassword</name>
+   <name>UserLogin(generic)</name>
    <tag></tag>
-   <elementGuidId>0e6447fd-5315-4931-ac20-982a6b1efe42</elementGuidId>
+   <elementGuidId>54fb9583-1569-48e9-8aa1-fded7c767a2a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;newPassword\&quot;: \&quot;${newPassword}\&quot;,\n  \&quot;forcePasswordChangeOnNextSignIn\&quot;:false\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;password\&quot;: \&quot;${userPassword}\&quot;,\n  \&quot;rememberMe\&quot;: false\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -22,17 +22,10 @@
       <type>Main</type>
       <value>application/json</value>
    </httpHeaderProperties>
-   <httpHeaderProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>api_key</name>
-      <type>Main</type>
-      <value>${GlobalVariable.api_key}</value>
-   </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/login</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,22 +35,21 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'QweUser'</defaultValue>
+      <defaultValue>''</defaultValue>
       <description></description>
-      <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
+      <id>bec590da-1286-456a-861f-92b542c553a5</id>
+      <masked>false</masked>
+      <name>userPassword</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>7e878e25-02e6-4a67-b036-d951d3da1d99</id>
       <masked>false</masked>
       <name>userName</name>
    </variables>
-   <variables>
-      <defaultValue>'1!Password'</defaultValue>
-      <description></description>
-      <id>e42f9b27-872e-41b7-9dcd-ed89527ab54c</id>
-      <masked>false</masked>
-      <name>newPassword</name>
-   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
-import com.kms.katalon.core.testobject.RequestObject
 import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager

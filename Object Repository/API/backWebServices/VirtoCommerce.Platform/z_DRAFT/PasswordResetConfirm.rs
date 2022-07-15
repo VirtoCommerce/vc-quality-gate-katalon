@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>ResetPassword</name>
+   <name>PasswordResetConfirm</name>
    <tag></tag>
-   <elementGuidId>0e6447fd-5315-4931-ac20-982a6b1efe42</elementGuidId>
+   <elementGuidId>67b538e0-1f9d-4dd4-913a-d287a921d34d</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -32,7 +32,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpassword</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/security/users/${userName}/resetpasswordconfirm</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -42,7 +42,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'QweUser'</defaultValue>
+      <defaultValue>'test@mail.com'</defaultValue>
       <description></description>
       <id>5429975e-c776-497b-b876-e4483e28fd1a</id>
       <masked>false</masked>
@@ -70,6 +70,6 @@ ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
 KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 200)
-</verificationScript>
+WS.verifyElementPropertyValue(response, 'succeeded', true)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

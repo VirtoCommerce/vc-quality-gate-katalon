@@ -14,19 +14,23 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrlEncodedBodyContent
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
+import groovy.json.JsonSlurper as JsonSlurper
 
-WebUI.comment('TEST CASE: password validation check')
+def request = findTestObject('API/backWebServices/VirtoCommerce.Platform/AuthorizationToken')
+
+List<UrlEncodedBodyParameter> body = new ArrayList()
+body.add(new UrlEncodedBodyParameter('grant_type', 'password'))
+body.add(new UrlEncodedBodyParameter('scope', 'offline_access'))
+body.add(new UrlEncodedBodyParameter('username', GlobalVariable.userName))
+body.add(new UrlEncodedBodyParameter('password', GlobalVariable.userPassword))
+
+request.setBodyContent(new HttpUrlEncodedBodyContent(body))
+response = WS.sendRequestAndVerify(request)
 
 
-'PREPARE A MAP OF PASSWORD PARAMETERS'
-HashMap<String, String> passwordsMap = GlobalVariable.passwordsListContent
-
-
-'CRETE LOOP TO VALIDATE PAIRS OF RELATED PASSWORDS/ERROR-MESSAGES BY LOOP ITERATIONS'
-for (String password : passwordsMap.keySet()) {
-	validatePassword = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/PasswordValidate', [
-		('password') : password
-		]))
-	WS.containsString(validatePassword, passwordsMap.get(password), false)
-	WebUI.comment('Password: ' + password + ' and the related message: "' + passwordsMap.get(password) + '" are validated')
-}
+// STEP | Parse request and save token to the GlobalVariable
+def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+GlobalVariable.token = ((responseJson.token_type + ' ') + responseJson.access_token)
+WebUI.comment(GlobalVariable.token)
