@@ -44,7 +44,7 @@
    <testCaseLink>
       <guid>1ccea60e-1b02-4e23-ba4d-bae9a4fa1ccd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserSendVerifictaionEmail</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -56,7 +56,7 @@
    <testCaseLink>
       <guid>15a2c547-b243-4573-afaf-ec65882ea082</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/Platform/UserPassword/UserPasswordResetOnLoginPage</testCaseId>
    </testCaseLink>
    <testCaseLink>
