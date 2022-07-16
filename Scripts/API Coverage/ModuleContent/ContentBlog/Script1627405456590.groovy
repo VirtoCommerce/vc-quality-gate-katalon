@@ -22,7 +22,7 @@ GlobalVariable.contentType = "blogs"
 
 
 //UPDATE THE BLACKLIST CONFIGURATION
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+WS.callTestCase(findTestCase('API Coverage/ModulePlatform/SettingsUpdateBlacklist'), null,
 FailureHandling.STOP_ON_FAILURE)
 
 

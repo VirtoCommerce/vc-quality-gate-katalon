@@ -15,13 +15,13 @@
       <guid>97a10c29-7f33-4963-bc12-b0350c7e4fd4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c538ea11-872e-4e7c-aca8-dd17725c5d08</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c24a521f-e0dc-42a8-9b4a-a5d9692ed46e</guid>
@@ -45,7 +45,7 @@
       <guid>22d33c33-01b7-421f-80dc-6721e263b2a2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/Asset/DRAFT.AssetFolderDelete2</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/Asset/DRAFT.AssetFolderDelete2</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>60c8bca6-7ce1-4ac5-bfdf-5d399fd95687</guid>

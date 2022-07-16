@@ -25,7 +25,7 @@ import com.kms.katalon.core.util.KeywordUtil
 WebUI.comment('TEST CASE: Content. Check errors during to uploading a new file')
 
 //UPDATE THE BLACKLIST CONFIGURATION
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+WS.callTestCase(findTestCase('API Coverage/ModulePlatform/SettingsUpdateBlacklist'), null,
 FailureHandling.STOP_ON_FAILURE)
 
 
