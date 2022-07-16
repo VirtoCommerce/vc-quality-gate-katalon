@@ -30,7 +30,7 @@ directoryPath = '/stores/'
 
 
 //TEMP
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetGetList', [
 	('folderName') : '',
 	('keyword') : ''
 	]))
@@ -40,13 +40,13 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 WebUI.comment(GlobalVariable.folderParentUrl)
 GlobalVariable.folderParentUrl = directoryPath + GlobalVariable.storeName
 WebUI.comment("NEW: " + GlobalVariable.folderParentUrl)
-//validateFolderName = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateErrorValidation'), 
+//validateFolderName = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/Asset/AssetFolderCreateErrorValidation'), 
 //	null)
 
 
 'CREATE AND DELETE SEVERAL FOLDERS SIMULTANEOUSLY'
 //GlobalVariable.folderName = directoryPath + GlobalVariable.folderName
-assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderCreateDeleteBulk'),
+assetsFolderDeleteBulk = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/Asset/AssetFolderCreateDeleteBulk'),
 	null)
 
 
@@ -55,30 +55,30 @@ WebUI.comment("BULK FINISHED")
 WebUI.comment(GlobalVariable.folderParentUrl)
 
 'CREATE A SINGLE FOLDER'
-assetsFolderCreateSingle = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderCreateNew'), [
+assetsFolderCreateSingle = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/Asset/AssetFolderCreateNew'), [
 		('folderName') : GlobalVariable.folderName,
 		('parentUrl') : GlobalVariable.folderParentUrl
 		])
 
 
 'VERIFY THE FOLDER HAS BEEN CREATED'
-assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/Platform/Asset/AssetFolderGet'), [
+assetsFolderSearchCreated = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/Asset/AssetFolderGet'), [
 	('folderName') : GlobalVariable.folderParentUrl
 	])
 
 WebUI.comment(GlobalVariable.folderUrl)
 'UPLOAD A FILE(picture) FROM LOCAL STORAGE'
-assetsUploadLocalImage = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadLocal'), 
+assetsUploadLocalImage = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/Asset/AssetFileUploadLocal'), 
 	null)
 
 
 'UPLOAD AN ARCHIVE FROM URL'
-assetsFileUploadUrlZip = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFileUploadUrl'), 
+assetsFileUploadUrlZip = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/Asset/AssetFileUploadUrl'), 
 	null)
 
 
 'DELETE THE CREATED SINGLE FOLDER'
 WebUI.comment(GlobalVariable.folderUrl)
 GlobalVariable.folderUrl = GlobalVariable.folderParentUrl 
-assetsSingleFolderDelete = WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/Asset/AssetFolderDelete'), 
+assetsSingleFolderDelete = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/Asset/AssetFolderDelete'), 
 	null)

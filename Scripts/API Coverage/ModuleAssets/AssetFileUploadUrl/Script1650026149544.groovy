@@ -20,7 +20,7 @@ WebUI.comment('TEST CASE: Assets. Upload ZIP file by URL')
 
 
 //UPDATE THE BLACKLIST CONFIGURATION TO CHECK IF THE FORBIDDEN EXTENSION FILE CANT BE UPLOADED
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+WS.callTestCase(findTestCase('API Coverage/ModulePlatform/SettingsUpdateBlacklist'), null,
 FailureHandling.STOP_ON_FAILURE)
 
 

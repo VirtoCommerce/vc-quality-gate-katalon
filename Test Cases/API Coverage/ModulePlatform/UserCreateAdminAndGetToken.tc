@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Creates a user that is able to operate on the backend with token logged requests, but leaves the initial admin related requests untouched, so won't interefere with other tests (changing behavior on the initial admin level would require deeper refactoring)</description>
+   <name>UserCreateAdminAndGetToken</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c408498e-2d17-4341-bc3e-12c8a730836a</testCaseGuid>
+</TestCaseEntity>

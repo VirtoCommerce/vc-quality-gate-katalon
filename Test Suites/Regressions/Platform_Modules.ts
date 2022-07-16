@@ -15,18 +15,18 @@
       <guid>e8e2be76-ad41-498b-8af6-093c21402311</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/AuthBackToken</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b032ec2a-c6b7-4b1d-ab99-6b044f447b9e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>59fa339a-1ae1-4ed4-8cde-aba742dfc531</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ModulesManagement/modulesManagement</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ModulesManagement/modulesManagement</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

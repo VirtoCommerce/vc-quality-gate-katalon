@@ -15,6 +15,6 @@
       <guid>e6e17671-dc29-4b88-b62d-72e695aa5cb4</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/DRAFT/GetExternalSignInProviders</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/DRAFT/GetExternalSignInProviders</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
