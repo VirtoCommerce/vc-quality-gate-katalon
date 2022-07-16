@@ -30,7 +30,7 @@ directoryPath = '/stores/'
 
 
 //TEMP
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetGetList', [
 	('folderName') : '',
 	('keyword') : ''
 	]))

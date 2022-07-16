@@ -20,7 +20,7 @@ WebUI.comment('TEST CASE: Assets. Bulk delete folders')
 
 // Create new folders
 for (i = 1; i < 3; i++ ) {
-	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
+	WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetCreateBlobFolder', [
 		('folderName') : GlobalVariable.folderName + i,
 		('parentUrl') : GlobalVariable.folderParentUrl
 		]))
@@ -29,7 +29,7 @@ for (i = 1; i < 3; i++ ) {
 
 // Find created folders in the list
 WebUI.comment(GlobalVariable.folderParentUrl)
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetGetList', [
 	('folderName') : GlobalVariable.folderParentUrl
 	]))
 WS.verifyElementPropertyValue(folderList, 'totalCount', '2')
@@ -42,7 +42,7 @@ WebUI.comment(parentUrl)
 
 
 // Bulk delete of both folders using folderUrls's
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetDeleteBulk', [
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetDeleteBulk', [
 	('itemName1') : folderUrl1, 
 	('itemName2') : folderUrl2
 	]))
@@ -50,7 +50,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 // Check that folders are deleted
 WebUI.comment(GlobalVariable.folderName)
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetGetList', [
 	('folderName') : parentUrl,
 	('keyword') : ''
 	]))

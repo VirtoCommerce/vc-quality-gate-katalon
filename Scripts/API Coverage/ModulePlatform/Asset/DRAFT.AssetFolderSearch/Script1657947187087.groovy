@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Search folder')
 
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetGetList', [
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetGetList', [
 	('folderName') : '',
 	('keyword') : GlobalVariable.folderName
 	]))

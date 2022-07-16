@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.comment('TEST CASE: Assets. Create new folder')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DRAFT/Assets/AssetCreateBlobFolder', [
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/_DRAFT/Assets/AssetCreateBlobFolder', [
 		('folderName') : GlobalVariable.folderName,
 		('parentUrl') : GlobalVariable.folderParentUrl
 		]))
