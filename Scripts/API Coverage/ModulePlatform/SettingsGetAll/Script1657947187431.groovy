@@ -21,4 +21,4 @@ WebUI.comment('TEST CASE: Get info about all settings')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetAll'))
 WS.verifyElementPropertyValue(response, '[0].name', "VirtoCommerce.Platform.Security.AccountTypes")
-WS.verifyElementPropertyValue(response, '[0].defaultValue', "Manager")
+WS.verifyElementPropertyValue(response, '[0].defaultValue', "Customer")
