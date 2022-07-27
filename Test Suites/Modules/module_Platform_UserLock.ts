@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description>check API availability for locked/unlocked user with active/inactive apiKey</description>
-   <name>Platform_ApiKey_userLock</name>
+   <name>module_Platform_UserLock</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>d0e84200-5d7a-4a93-a89f-e3f6809ae22c</testSuiteGuid>
+   <testSuiteGuid>5e2b3d4a-a6a9-4e2f-844c-886546c376b5</testSuiteGuid>
    <testCaseLink>
       <guid>438d6bef-78a7-449c-b5e4-c28135ded0e3</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -19,24 +19,24 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>60db746e-d84c-461e-a8cc-1663a585f076</guid>
+      <guid>d9713c6c-749d-4ac3-98cd-d1e63beeaf58</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreate</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>3910131c-b1ad-4c6b-8c95-899948140f3d</guid>
+      <guid>fff655a1-05b1-48f8-8de8-b303e071297a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserSearchSetUserID</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/userCreateFull</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>c92280c4-4dcc-400b-a6e6-9c92080ff866</guid>
+      <guid>cfb3d094-1049-4d18-87e5-305347b4164d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserLock/userCreateWithActivateLockSwitching</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserApiKeySetAndGetId</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
