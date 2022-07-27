@@ -29,11 +29,6 @@ import com.kms.katalon.core.testobject.ResponseObject
 WebUI.comment('TEST CASE: Change or edit password as admin')
 
 
-//'CREATE AND AUTHORIZE AS ADMIN USER'
-//authorize = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateFull(old)'),
-//	null)
-//
-
 'CHECK NEGATIVE PASSWORD CHANGE SCENARIOS (invalid/old passwords)'
 //use map to cover both scenarios in a single loop
 HashMap<String, String> passwordsMap = [ 'Password0' : 'Incorrect password.', 'Password1!' : 'You have used this password in the past. Choose another one.']
@@ -95,9 +90,4 @@ for (int b; b < passwordsList.size(); b++) {
 	  WS.verifyElementPropertyValue(loginAfterChange, 'succeeded', false)
 	}
 }
-
-
-//'delete user'
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserDelete'),
-//	null)
 
