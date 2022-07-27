@@ -31,11 +31,11 @@ auth = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/AuthBackToken')
 '****************'
 
 
-s1 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/userCreateWithActivateLockSwitching')
+s1 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserLock/userCreateWithActivateLockSwitching')
 	,null)
-s2 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_apiKeyIsActive')
+s2 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserLock/UserLock_apiKeyIsActive')
 		,null)
-s3 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_apiKeyIsInactive')
+s3 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserLock/UserLock_apiKeyIsInactive')
 		,null)
-s4 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_userDeleted')
+s4 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserLock/UserLock_userDeleted')
 		,null)

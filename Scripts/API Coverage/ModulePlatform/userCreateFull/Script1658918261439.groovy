@@ -26,23 +26,30 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
+'CREATE A USER FIRST'
+ userCreate = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreate'),
+	 null)
+ 'Get the created user by name id'
+ getUserId = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserSearchSetUserID'),
+	 null)
 
+ 
+ 'UPDATE REQUIRED, AS ITS IMPOSSIBLE CREATE ADMIN USER WITH JUST ONE REQUEST (PLATFORM SPECIFIC BEHAVIOR)'
+ 'GET USER DATA'
+ userGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [
+	 ('userId') : GlobalVariable.userId
+	 ]))
+ userGetBody = userGet.getResponseBodyContent()
+ println userGetBody
+ userBodyParsed = new JsonSlurper().parseText(userGetBody)
+ userBodyParsed.userType = GlobalVariable.userType
+ userBodyJson = new groovy.json.JsonBuilder(userBodyParsed).toString()
+ println userBodyJson
+ 
+ 
+ 'SEND REQUEST TO UPDATE THE CREATED USER (update is required to make a user lockble (workflow peculiarity))'
+ RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserUpdate')
+ userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
+ userBodyUpdate = WS.sendRequestAndVerify(userBodyObject)
 
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserGetAllRequestsCheck'),
-	    null)
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateFull(old)'),
-	null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateAlreadyExisted'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserSendVerifictaionEmail'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordValidate'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordResetOnLoginPage/UserPasswordResetOnLoginPageConfirm'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordOperationsAdminPath'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordOperationsCurrentUser'),
-//		null)
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserDelete'),
-		null)
+ 

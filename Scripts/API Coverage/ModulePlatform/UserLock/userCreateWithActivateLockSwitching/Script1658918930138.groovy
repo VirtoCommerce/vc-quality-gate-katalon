@@ -33,7 +33,7 @@ WebUI.comment('TEST CASE: set apiKey  and update a user and to make it available
 GlobalVariable.apiKeyStatus = true
 GlobalVariable.userApiKey = UUID.randomUUID()
 WebUI.comment('USER ID is: ' + GlobalVariable.userId)
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiKeyUserSet'),
+WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserApiKeySetAndGetId'),
 	null)
 
 
