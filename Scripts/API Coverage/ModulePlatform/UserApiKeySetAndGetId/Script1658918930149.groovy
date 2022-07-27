@@ -17,7 +17,19 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
 
-//STEP | set new API key to user not admin 
+
+WebUI.comment('TEST CASE: add apiKey to the created user')
+//This test case is required to separate the initial admin 
+//from the generic platform user apiKey processing flow
+//so the initial admin and its apiKey, that validates most requests 
+//of the coverage, are not affected
+
+
+'GENERATE APIKEY VALUE'
+GlobalVariable.userApiKey = UUID.randomUUID()
+
+
+'ADD API KEY TO THE CREATED USER'
 WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
 	('userName') : GlobalVariable.userName,
 	('api_key') : GlobalVariable.userApiKey,

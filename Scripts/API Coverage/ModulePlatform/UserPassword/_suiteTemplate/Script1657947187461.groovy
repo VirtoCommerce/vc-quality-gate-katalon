@@ -30,7 +30,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserGetAllRequestsCheck'),
 	    null)
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateAdminAndGetToken'),
+WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateFull(old)'),
 	null)
 //WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateAlreadyExisted'),
 //		null)

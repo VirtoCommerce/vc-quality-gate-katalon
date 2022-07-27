@@ -30,7 +30,7 @@ WebUI.comment('TEST CASE: Change or edit password as admin')
 
 
 //'CREATE AND AUTHORIZE AS ADMIN USER'
-//authorize = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateAdminAndGetToken'),
+//authorize = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateFull(old)'),
 //	null)
 //
 

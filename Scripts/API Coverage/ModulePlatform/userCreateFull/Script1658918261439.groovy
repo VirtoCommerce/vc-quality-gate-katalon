@@ -26,31 +26,30 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-WebUI.comment('TEST CASE: set apiKey  and update a user and to make it available for locking')
+'CREATE A USER FIRST'
+ userCreate = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreate'),
+	 null)
+ 'Get the created user by name id'
+ getUserId = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserSearchSetUserID'),
+	 null)
 
+ 
+ 'UPDATE REQUIRED, AS ITS IMPOSSIBLE CREATE ADMIN USER WITH JUST ONE REQUEST (PLATFORM SPECIFIC BEHAVIOR)'
+ 'GET USER DATA'
+ userGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [
+	 ('userId') : GlobalVariable.userId
+	 ]))
+ userGetBody = userGet.getResponseBodyContent()
+ println userGetBody
+ userBodyParsed = new JsonSlurper().parseText(userGetBody)
+ userBodyParsed.userType = GlobalVariable.userType
+ userBodyJson = new groovy.json.JsonBuilder(userBodyParsed).toString()
+ println userBodyJson
+ 
+ 
+ 'SEND REQUEST TO UPDATE THE CREATED USER (update is required to make a user lockble (workflow peculiarity))'
+ RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserUpdate')
+ userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
+ userBodyUpdate = WS.sendRequestAndVerify(userBodyObject)
 
-'SET APIKEY FOR THE CREATED USER'
-GlobalVariable.apiKeyStatus = true
-GlobalVariable.userApiKey = UUID.randomUUID()
-WebUI.comment('USER ID is: ' + GlobalVariable.userId)
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiKeyUserSet'),
-	null)
-
-
-'GET USER DATA'
-userGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [
-	('userId') : GlobalVariable.userId
-	]))
-userGetBody = userGet.getResponseBodyContent()
-println userGetBody
-userBodyParsed = new JsonSlurper().parseText(userGetBody)
-userBodyParsed.userType = 'Manager' 
-userBodyJson = new groovy.json.JsonBuilder(userBodyParsed).toString()
-println userBodyJson
-
-
-'SEND REQUEST TO UPDATE THE CREATED USER (update is required to make a user lockble (workflow peculiarity))'
-RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserUpdate')
-userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
-userBodyUpdate = WS.sendRequestAndVerify(userBodyObject)
-
+ 
