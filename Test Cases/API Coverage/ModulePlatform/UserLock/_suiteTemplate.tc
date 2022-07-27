@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>userCreateFull</name>
+   <name>_suiteTemplate</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>f79761ce-bd5a-470d-8210-c2c74bf80c64</testCaseGuid>
+   <testCaseGuid>fd16fe0d-93b3-478f-8822-5153d521a850</testCaseGuid>
 </TestCaseEntity>

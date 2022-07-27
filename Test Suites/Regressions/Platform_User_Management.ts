@@ -10,7 +10,7 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>167d22e4-b1b7-455e-9c87-599ebcae40af</testSuiteGuid>
+   <testSuiteGuid>cab8cf4f-8757-49af-bfe5-2f4d9960c03d</testSuiteGuid>
    <testCaseLink>
       <guid>373d7656-3acb-4352-8eef-228ed074e2ee</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -33,10 +33,17 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>7f7ae5fb-6440-4099-a559-98ac7129561c</guid>
+      <guid>5754c69b-b1a4-46fe-87f4-a5ef326a1a8d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateFull(old)</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateAndGetId</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ceaeb27a-31fb-4330-9127-b66c3be46253</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserGetAuthorizationToken(Generic)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
