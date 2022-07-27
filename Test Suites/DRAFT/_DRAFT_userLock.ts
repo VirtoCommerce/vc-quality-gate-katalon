@@ -21,7 +21,7 @@
    <testCaseLink>
       <guid>d9713c6c-749d-4ac3-98cd-d1e63beeaf58</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
