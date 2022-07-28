@@ -18,24 +18,15 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-'PRECONDITION'
-'First create a user'
-userCreate = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreate'),
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/AuthBackToken'),
 	null)
-'Get the created user by name id'
-getUserId = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserSearchSetUserID'),
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserCreateAndGetId'),
 	null)
-'Authorize and get the auth token'
-auth = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/AuthBackToken'),
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserApiKeySetAndGetId'),
 	null)
-'****************'
-
-
-s1 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/userCreateWithActivateLockSwitching')
-	,null)
-s2 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_apiKeyIsActive')
-		,null)
-s3 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_apiKeyIsInactive')
-		,null)
-s4 = WS.callTestCase(findTestCase('API Coverage/ModulePlatform/apiKeyStatusCheck/apiAvailabilityAndUserLockCheck_userDeleted')
-		,null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserLock/UserLock_apiKeyIsActive'),
+	null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserLock/UserLock_apiKeyIsInactive'),
+	null)
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserLock/UserLock_userDeleted'),
+	null)

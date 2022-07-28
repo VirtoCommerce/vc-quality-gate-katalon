@@ -514,4 +514,9 @@
       <initValue>''</initValue>
       <name>userApiKey</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>userType to set for the created/updated user</description>
+      <initValue>'Manager'</initValue>
+      <name>userType</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

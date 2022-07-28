@@ -15,20 +15,31 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+WebUI.comment('TEST CASE: Create new user and get userId')
 
-//STEP | set new API key to user not admin 
-WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
+// create unique email
+GlobalVariable.email = new Random().nextInt(100)+'@email.com'
+
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
+	('email') : GlobalVariable.email, 
 	('userName') : GlobalVariable.userName,
-	('api_key') : GlobalVariable.userApiKey,
-	('userId') : GlobalVariable.userId,
-	('apiKeyStatus') : GlobalVariable.apiKeyStatus
+	('userType') : GlobalVariable.userType
+	]))
+WS.verifyElementPropertyValue(response, 'succeeded', true)
+
+
+WebUI.comment(GlobalVariable.userName)
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
+	('searchPhrase') : GlobalVariable.userName
 	]))
 
-responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
-	('userId') : GlobalVariable.userId
-	]))
-WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.userApiKey)
-WS.verifyElementPropertyValue(responseApiKey, '[0].isActive', GlobalVariable.apiKeyStatus)
-GlobalVariable.apiKeyId = (WS.getElementPropertyValue(responseApiKey, '[0].id'))
-WebUI.comment('API KEY ID : ' + GlobalVariable.apiKeyId)
+// verify that requested user is received
+WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
+WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
+
+// set user Id in global variables
+GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')
+WebUI.comment('USER ID is: ' + GlobalVariable.userId)
+

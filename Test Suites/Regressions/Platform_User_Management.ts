@@ -10,77 +10,96 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>167d22e4-b1b7-455e-9c87-599ebcae40af</testSuiteGuid>
+   <testSuiteGuid>cab8cf4f-8757-49af-bfe5-2f4d9960c03d</testSuiteGuid>
    <testCaseLink>
       <guid>373d7656-3acb-4352-8eef-228ed074e2ee</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/AuthBackToken</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>29b89881-58ea-42a8-9b1a-61cc19f392d8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>efe8795f-1f8d-4796-b45b-0870c8c3b83f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserGetAllRequestsCheck</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>7f7ae5fb-6440-4099-a559-98ac7129561c</guid>
+      <guid>5754c69b-b1a4-46fe-87f4-a5ef326a1a8d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateAdminAndGetToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateAndGetId</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ceaeb27a-31fb-4330-9127-b66c3be46253</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserGetAuthorizationToken(Generic)</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>c38d7c1f-b2d2-4548-b962-710cc5db8087</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateAlreadyExisted</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>1ccea60e-1b02-4e23-ba4d-bae9a4fa1ccd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserSendVerifictaionEmail</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>3e81f9a6-299c-4e87-b35a-6b702ec3b85c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserPassword/UserPasswordValidate</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>17cf3a5a-d00a-41a5-9074-9d5d371f85b6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserPassword/UserPasswordResetOnLoginPage/UserPasswordResetOnLoginPageRequest</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>15a2c547-b243-4573-afaf-ec65882ea082</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserPassword/UserPasswordResetOnLoginPage/UserPasswordResetOnLoginPageConfirm</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>bbc3d46a-fb27-4b0f-9925-e9f3ac083ff6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserPassword/UserPasswordOperationsAdminPath</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>0b3bc822-14ba-407e-b8b3-94a600464a6f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserPassword/UserPasswordOperationsCurrentUser</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>9bcba098-3799-4129-aae2-6e180a6c5aaa</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserDelete</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

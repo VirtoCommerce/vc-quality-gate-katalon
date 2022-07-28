@@ -15,15 +15,32 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Create new user')
 
-// create unique email
-GlobalVariable.email = new Random().nextInt(100)+'@email.com'
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
-	('email') : GlobalVariable.email, 
-	('userName') : GlobalVariable.userName
+WebUI.comment('TEST CASE: add apiKey to the created user')
+//This test case is required to separate the initial admin 
+//from the generic platform user apiKey processing flow
+//so the initial admin and its apiKey, that validates most requests 
+//of the coverage, are not affected
+
+
+'GENERATE APIKEY VALUE'
+GlobalVariable.userApiKey = UUID.randomUUID()
+
+
+'ADD API KEY TO THE CREATED USER'
+WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
+	('userName') : GlobalVariable.userName,
+	('api_key') : GlobalVariable.userApiKey,
+	('userId') : GlobalVariable.userId,
+	('apiKeyStatus') : GlobalVariable.apiKeyStatus
 	]))
-WS.verifyElementPropertyValue(response, 'succeeded', true)
+
+responseApiKey = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyGet', [
+	('userId') : GlobalVariable.userId
+	]))
+WS.verifyElementPropertyValue(responseApiKey, '[0].apiKey', GlobalVariable.userApiKey)
+WS.verifyElementPropertyValue(responseApiKey, '[0].isActive', GlobalVariable.apiKeyStatus)
+GlobalVariable.apiKeyId = (WS.getElementPropertyValue(responseApiKey, '[0].id'))
+WebUI.comment('API KEY ID : ' + GlobalVariable.apiKeyId)

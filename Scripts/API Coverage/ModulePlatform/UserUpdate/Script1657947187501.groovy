@@ -32,5 +32,4 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('emailConfirmed')	: 'false',
 	('roles') : GlobalVariable.roleFull
 	]))
-
 WS.verifyElementPropertyValue(response, 'succeeded', true)
