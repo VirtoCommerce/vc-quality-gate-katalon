@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/x-www-form-urlencoded</value>
+      <webElementGuid>05a07bcd-1060-4dc1-a9a8-18eefefbc9bc</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
