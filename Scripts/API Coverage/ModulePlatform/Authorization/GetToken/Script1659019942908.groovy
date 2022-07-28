@@ -18,15 +18,16 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/AuthBackToken'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserCreateGetIdUpdate'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserApiKeySetAndGetId'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserLock/UserLock_apiKeyIsActive'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserLock/UserLock_apiKeyIsInactive'),
-	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserLock/UserLock_userDeleted'),
-	null)
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
+
+
+
+WebUI.comment('TEST CASE: get token scenarios')
+
+
+'CHECK USER/PASSWORD VALIDATION SCENARIOS'	

@@ -17,29 +17,53 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Create new user and get userId')
+WebUI.comment('TEST CASE: Create and update')
 
-// create unique email
+
+'GENERATE UNIQUE EMAIL'
 GlobalVariable.email = new Random().nextInt(100)+'@email.com'
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
+
+'CREATE USER'
+userCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
 	('email') : GlobalVariable.email, 
 	('userName') : GlobalVariable.userName,
-	('userType') : GlobalVariable.userType
+	('userType') : 'Customer'//hardcoded as user can not be manually created with any other userType
 	]))
-WS.verifyElementPropertyValue(response, 'succeeded', true)
+WS.verifyElementPropertyValue(userCreate, 'succeeded', true)
 
 
-WebUI.comment(GlobalVariable.userName)
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
+'SEARCH FOR THE CREATED USER'
+userSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
 	('searchPhrase') : GlobalVariable.userName
 	]))
+WS.verifyElementPropertyValue(userSearch, 'users[0].userName', GlobalVariable.userName)
+WS.verifyElementPropertyValue(userSearch, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
 
-// verify that requested user is received
-WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
 
-// set user Id in global variables
-GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')
+'GET CREATED USER ID'
+GlobalVariable.userId = WS.getElementPropertyValue(userSearch, 'users[0].id')
 WebUI.comment('USER ID is: ' + GlobalVariable.userId)
+
+
+'UPDATE THE CREATED USER'
+//GlobalVariable.userName = GlobalVariable.userName + "UPD"
+GlobalVariable.email = "Updated" + GlobalVariable.email
+userUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
+	('userName') : GlobalVariable.userName,
+	('email') : GlobalVariable.email,
+	('userId') : GlobalVariable.userId,
+	('userType') : GlobalVariable.userType,
+	('isAdministrator') : GlobalVariable.isAdminStatus,
+	('emailConfirmed')	: 'false',
+	('roles') : GlobalVariable.roleFull
+	]))
+WS.verifyElementPropertyValue(userUpdate, 'succeeded', true)
+
+
+
+
+
+
+
 
