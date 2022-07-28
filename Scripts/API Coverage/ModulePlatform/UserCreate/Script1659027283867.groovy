@@ -26,7 +26,7 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
-WebUI.comment('TEST CASE: Create and update')
+WebUI.comment('TEST CASE: user create')
 
 
 'GENERATE UNIQUE EMAIL'
