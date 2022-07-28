@@ -17,6 +17,15 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
+
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
+
+
 WebUI.comment('TEST CASE: Create and update')
 
 
@@ -46,22 +55,24 @@ GlobalVariable.userId = WS.getElementPropertyValue(userSearch, 'users[0].id')
 WebUI.comment('USER ID is: ' + GlobalVariable.userId)
 
 
-'UPDATE THE CREATED USER'
-//GlobalVariable.userName = GlobalVariable.userName + "UPD"
-GlobalVariable.email = "Updated" + GlobalVariable.email
-userUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserUpdate', [
-	('userName') : GlobalVariable.userName,
-	('email') : GlobalVariable.email,
-	('userId') : GlobalVariable.userId,
-	('userType') : GlobalVariable.userType,
-	('isAdministrator') : GlobalVariable.isAdminStatus,
-	('emailConfirmed')	: 'false',
-	('roles') : GlobalVariable.roleFull
-	]))
-WS.verifyElementPropertyValue(userUpdate, 'succeeded', true)
-
-
-
+//'GET CREATED USER DATA TO UPDATE USER'
+//userGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [
+//	('userId') : GlobalVariable.userId
+//	]))
+//userGetBody = userGet.getResponseBodyContent()
+//println userGetBody
+//userBodyParsed = new JsonSlurper().parseText(userGetBody)
+//userBodyParsed.userType = GlobalVariable.userType
+//userBodyParsed.isAdministrator = GlobalVariable.isAdministratorStatus
+//userBodyJson = new groovy.json.JsonBuilder(userBodyParsed).toString()
+//println userBodyJson
+//
+//
+//'SEND REQUEST TO UPDATE THE CREATED USER (update is required to make a user lockble (workflow peculiarity))'
+//RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserUpdate')
+//userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
+//userUpdate = WS.sendRequestAndVerify(userBodyObject)
+//WS.verifyElementPropertyValue(userUpdate, 'succeeded', true)
 
 
 

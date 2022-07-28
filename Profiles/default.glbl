@@ -522,6 +522,6 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'false'</initValue>
-      <name>isAdminStatus</name>
+      <name>isAdministratorStatus</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

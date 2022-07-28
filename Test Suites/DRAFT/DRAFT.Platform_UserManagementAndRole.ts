@@ -15,7 +15,7 @@
       <guid>265a8753-eb7e-4e72-a6f7-6d6aa9a089ef</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateGetIdUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

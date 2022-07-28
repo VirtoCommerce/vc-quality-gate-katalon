@@ -9,13 +9,13 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
+import groovy.json.JsonSlurper as JsonSlurper
+import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 
 import groovy.json.JsonBuilder
@@ -26,23 +26,23 @@ import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
 
 
+WebUI.comment('TEST CASE: update created user')
+
+'GET CREATED USER DATA TO UPDATE USER'
+userGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById', [
+	('userId') : GlobalVariable.userId
+	]))
+userGetBody = userGet.getResponseBodyContent()
+println userGetBody
+userBodyParsed = new JsonSlurper().parseText(userGetBody)
+userBodyParsed.userType = GlobalVariable.userType
+userBodyParsed.isAdministrator = GlobalVariable.isAdministratorStatus
+userBodyJson = new groovy.json.JsonBuilder(userBodyParsed).toString()
+println userBodyJson
 
 
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserGetAllRequestsCheck'),
-	    null)
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreate'),
-	null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserCreateAlreadyExisted'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserSendVerifictaionEmail'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordValidate'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordResetOnLoginPage/UserPasswordResetOnLoginPageConfirm'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordOperationsAdminPath'),
-//		null)
-//WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserPassword/UserPasswordOperationsCurrentUser'),
-//		null)
-WS.callTestCase(findTestCase('API Coverage/ModulePlatform/UserDelete'),
-		null)
+'SEND REQUEST TO UPDATE THE CREATED USER (update is required to make a user lockble (workflow peculiarity))'
+RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserUpdate')
+userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
+userUpdate = WS.sendRequestAndVerify(userBodyObject)
+WS.verifyElementPropertyValue(userUpdate, 'succeeded', true)

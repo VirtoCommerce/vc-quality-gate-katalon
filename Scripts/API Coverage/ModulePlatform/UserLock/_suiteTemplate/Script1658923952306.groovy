@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 
 WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/AuthBackToken'),
 	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserCreateGetIdUpdate'),
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserCreate'),
 	null)
 WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserApiKeySetAndGetId'),
 	null)
