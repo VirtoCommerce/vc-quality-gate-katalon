@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Get information about all settings</description>
-   <name>HealthCheck</name>
-   <tag></tag>
-   <comment>TEST CASE: Get background job status</comment>
-   <testCaseGuid>397c6230-66ab-4a63-bcd8-4af7abd7ad9f</testCaseGuid>
-</TestCaseEntity>
