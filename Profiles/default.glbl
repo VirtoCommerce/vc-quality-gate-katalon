@@ -519,4 +519,9 @@
       <initValue>'Manager'</initValue>
       <name>userType</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'false'</initValue>
+      <name>isAdministratorStatus</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -18,9 +18,9 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/AuthBackToken'),
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/Authorization/AuthBackToken'),
 	null)
-WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserCreateAndGetId'),
+WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserCreate'),
 	null)
 WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/UserApiKeySetAndGetId'),
 	null)

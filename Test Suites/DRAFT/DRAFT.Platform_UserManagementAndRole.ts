@@ -15,7 +15,7 @@
       <guid>265a8753-eb7e-4e72-a6f7-6d6aa9a089ef</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateAndGetId</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -57,7 +57,7 @@
       <guid>32774617-696e-43a1-b3fa-c138db262ed1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserUpdate(deprecated)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -78,7 +78,7 @@
       <guid>5d772f72-c4c0-4437-946f-642102a3523c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserUpdate(deprecated)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

@@ -15,7 +15,7 @@
       <guid>373d7656-3acb-4352-8eef-228ed074e2ee</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/Authorization/AuthBackToken</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
@@ -36,14 +36,14 @@
       <guid>5754c69b-b1a4-46fe-87f4-a5ef326a1a8d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateAndGetId</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>ceaeb27a-31fb-4330-9127-b66c3be46253</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserGetAuthorizationToken(Generic)</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/Roles/UserGetAuthorizationToken(Generic)</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

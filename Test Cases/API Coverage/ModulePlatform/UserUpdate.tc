@@ -4,5 +4,5 @@
    <name>UserUpdate</name>
    <tag></tag>
    <comment>TEST CASE: Update userName/email/userType</comment>
-   <testCaseGuid>44315dba-992e-4c15-9f55-a6f6901e2b97</testCaseGuid>
+   <testCaseGuid>9cf24b39-1ea8-424e-8157-e7b27fa9309c</testCaseGuid>
 </TestCaseEntity>

@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>33183432-f66f-48b0-aff4-96d511d8b681</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>ec7c9c12-ed60-452f-8525-f0bb87b4cd1f</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

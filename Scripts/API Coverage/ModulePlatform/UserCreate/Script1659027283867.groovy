@@ -17,29 +17,40 @@ import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-WebUI.comment('TEST CASE: Create new user and get userId')
 
-// create unique email
+import groovy.json.JsonBuilder
+import groovy.json.JsonSlurper
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.RequestObject
+import groovy.json.JsonOutput
+import com.kms.katalon.core.testobject.ResponseObject
+
+
+WebUI.comment('TEST CASE: user create')
+
+
+'GENERATE UNIQUE EMAIL'
 GlobalVariable.email = new Random().nextInt(100)+'@email.com'
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
+
+'CREATE USER'
+userCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
 	('email') : GlobalVariable.email, 
 	('userName') : GlobalVariable.userName,
-	('userType') : GlobalVariable.userType
+	('userType') : 'Customer'//hardcoded as user can not be manually created with any other userType
 	]))
-WS.verifyElementPropertyValue(response, 'succeeded', true)
+WS.verifyElementPropertyValue(userCreate, 'succeeded', true)
 
 
-WebUI.comment(GlobalVariable.userName)
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
+'SEARCH FOR THE CREATED USER'
+userSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
 	('searchPhrase') : GlobalVariable.userName
 	]))
+WS.verifyElementPropertyValue(userSearch, 'users[0].userName', GlobalVariable.userName)
+WS.verifyElementPropertyValue(userSearch, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
 
-// verify that requested user is received
-WS.verifyElementPropertyValue(response, 'users[0].userName', GlobalVariable.userName)
-WS.verifyElementPropertyValue(response, 'users[0].emailConfirmed', 'true', FailureHandling.STOP_ON_FAILURE)
 
-// set user Id in global variables
-GlobalVariable.userId = WS.getElementPropertyValue(response, 'users[0].id')
+'GET CREATED USER ID'
+GlobalVariable.userId = WS.getElementPropertyValue(userSearch, 'users[0].id')
 WebUI.comment('USER ID is: ' + GlobalVariable.userId)
 

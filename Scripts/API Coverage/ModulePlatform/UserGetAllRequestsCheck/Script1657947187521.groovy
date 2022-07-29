@@ -42,5 +42,7 @@ WS.verifyElementPropertyValue(userByName, 'id', operatorId)
 userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
 WS.verifyElementPropertyValue(userInfo, 'sub', operatorId)
 
-responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById'))
+responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById',[
+	('userId') : operatorId
+	]))
 WS.verifyElementPropertyValue(responseById, 'userName', 'operator@mail.com')

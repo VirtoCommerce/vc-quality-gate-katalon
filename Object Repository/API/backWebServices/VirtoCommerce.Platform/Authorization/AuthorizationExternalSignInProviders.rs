@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>AuthorizationExternalSignIn</name>
+   <name>AuthorizationExternalSignInProviders</name>
    <tag></tag>
-   <elementGuidId>f2d9b87a-49a8-4f54-a430-cb071a6b2737</elementGuidId>
+   <elementGuidId>dc25d9d9-71cd-4d04-b3f4-e21d351ac1aa</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -17,6 +17,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>ac9259d3-6624-4417-a3a2-13e9cc5e9ab1</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -24,11 +25,12 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>641a33d1-55bf-40fa-89e3-b31ce15734aa</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/externalsignin?authenticationType=${GlobalVariable.externalsigninProvider}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/externalsignin/providers</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,7 +46,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-iimport groovy.json.JsonOutput
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
 

@@ -20,10 +20,13 @@ import org.openqa.selenium.Keys as Keys
 
 import groovy.json.JsonBuilder
 import groovy.json.JsonSlurper
-import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
 import com.kms.katalon.core.testobject.RequestObject
 import groovy.json.JsonOutput
 import com.kms.katalon.core.testobject.ResponseObject
+
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
+import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
+import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrlEncodedBodyContent
 
 
 WebUI.comment('TEST CASE: chec api availability and user locking when apiKey is active')
@@ -40,6 +43,19 @@ lockStateGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	('userId') : GlobalVariable.userId
 	]))
 WS.verifyElementPropertyValue(lockStateGet,'locked', true)
+
+
+'VERIFY A LOCKED USER CANT LOG IN'//covers a part of /AuthorizationFlow scenario
+def getTokenObject = findTestObject('API/backWebServices/VirtoCommerce.Platform/Authorization/AuthorizationToken')
+List<UrlEncodedBodyParameter> body = new ArrayList()
+body.add(new UrlEncodedBodyParameter('grant_type', 'password'))
+body.add(new UrlEncodedBodyParameter('scope', 'offline_access'))
+body.add(new UrlEncodedBodyParameter('username', GlobalVariable.userName))
+body.add(new UrlEncodedBodyParameter('password', GlobalVariable.userPassword))
+getTokenObject.setBodyContent(new HttpUrlEncodedBodyContent(body))
+getToken = WS.sendRequest(getTokenObject)
+WS.verifyResponseStatusCode(getToken, 400)
+WS.verifyElementPropertyValue(getToken,'errorDescription', 'The username/password couple is invalid.')
 
 
 'CHECK LOCKED STATE RESPONSE'

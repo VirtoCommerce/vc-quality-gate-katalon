@@ -15,18 +15,21 @@
       <guid>8cbaeb4c-17a8-412a-b139-d3162a163c9a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/Authorization/AuthBackToken</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>d8432e8e-6811-4679-9588-b979e402f3ea</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>b6134554-fd1b-4eaf-a04d-4af24184740e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/DRAFT/Test.SettingsUpdEventBasedIndexation</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
