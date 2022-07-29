@@ -29,7 +29,7 @@ import com.kms.katalon.core.testobject.ResponseObject
 
 
 WebUI.comment('TEST CASE: external signIn check')
-
+//these tests won't run in docker
 
 'CHECK EXTERNAL SIGN IN AUHTHENTOCATION TYPE AVAILABILITY'//simple endpoint check
 authenticatonType = 'AzureAD'
