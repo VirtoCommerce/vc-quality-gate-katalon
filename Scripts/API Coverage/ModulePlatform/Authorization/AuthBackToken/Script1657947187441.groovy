@@ -9,25 +9,28 @@ import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
 import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.testobject.impl.HttpUrlEncodedBodyContent as HttpUrlEncodedBodyContent
+import com.kms.katalon.core.testobject.UrlEncodedBodyParameter as UrlEncodedBodyParameter
+import groovy.json.JsonSlurper as JsonSlurper
+
+def request = findTestObject('API/backWebServices/VirtoCommerce.Platform/Authorization/AuthorizationToken')
+
+List<UrlEncodedBodyParameter> body = new ArrayList()
+body.add(new UrlEncodedBodyParameter('grant_type', 'password'))
+body.add(new UrlEncodedBodyParameter('scope', 'offline_access'))
+body.add(new UrlEncodedBodyParameter('username', 'admin'))
+body.add(new UrlEncodedBodyParameter('password', 'store'))
+
+request.setBodyContent(new HttpUrlEncodedBodyContent(body))
+response = WS.sendRequestAndVerify(request)
 
 
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
-import com.kms.katalon.core.testobject.impl.HttpTextBodyContent
-import com.kms.katalon.core.testobject.RequestObject
-import groovy.json.JsonOutput
-import com.kms.katalon.core.testobject.ResponseObject
-
-
-
-WebUI.comment('TEST CASE: get token scenarios')
-
-
-'CHECK USER/PASSWORD VALIDATION SCENARIOS'	
+// STEP | Parse request and save token to the GlobalVariable
+def responseJson = new JsonSlurper().parseText(response.getResponseBodyContent())
+GlobalVariable.token = ((responseJson.token_type + ' ') + responseJson.access_token)
+WebUI.comment(GlobalVariable.token)

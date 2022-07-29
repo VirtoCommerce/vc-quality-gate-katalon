@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Draft.Settings_debug</name>
+   <name>module_Platform_Authorization</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
-   <pageLoadTimeout>5</pageLoadTimeout>
+   <pageLoadTimeout>10</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>6df52b9d-0597-4e0c-a109-786c5973b5a9</testSuiteGuid>
+   <testSuiteGuid>aa513eae-f7cd-44b4-808d-52dd03a6390d</testSuiteGuid>
    <testCaseLink>
-      <guid>8cbaeb4c-17a8-412a-b139-d3162a163c9a</guid>
+      <guid>1832031e-1e67-47ff-8bc1-dfe1c4b24fe7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/Authorization/AuthBackToken</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>d8432e8e-6811-4679-9588-b979e402f3ea</guid>
+      <guid>c2e9f6c5-994c-4cc3-8b4e-e8d6d69a717d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>b6134554-fd1b-4eaf-a04d-4af24184740e</guid>
+      <guid>f0a8dce9-4e36-447e-b440-b70fb04b470d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/DRAFT/Test.SettingsUpdEventBasedIndexation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/Authorization/AuthExternalSignIn</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ccd066bc-b082-4036-9f73-53bdfa813106</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/Authorization/AuthValidation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

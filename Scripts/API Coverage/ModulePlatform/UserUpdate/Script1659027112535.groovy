@@ -46,3 +46,4 @@ RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServ
 userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
 userUpdate = WS.sendRequestAndVerify(userBodyObject)
 WS.verifyElementPropertyValue(userUpdate, 'succeeded', true)
+
