@@ -3,9 +3,6 @@ import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-
-import java.nio.file.WatchService
-
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
@@ -28,10 +25,8 @@ WebUI.comment('TEST CASE: Get information about cache and modules health')
 healthyStatus = 'Healthy'
 healthyModulesDecription = 'All modules are loaded'
 healthyCacheDescription = 'Cache is active'
-
 unhealthyStatus = 'Degraded'
 unhealthyModulesDecription = 'Some modules have errors'
-
 healthInformationGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.HealthCheck/HealthCheck'))
 if (WS.getElementPropertyValue(healthInformationGet, '"Modules health".Status')==healthyStatus){
 	WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', healthyStatus)
