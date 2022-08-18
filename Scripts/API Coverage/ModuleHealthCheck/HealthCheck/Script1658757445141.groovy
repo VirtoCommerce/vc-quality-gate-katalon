@@ -1,41 +1,40 @@
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testobject.ObjectRepository.findWindowsObject
-import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling as FailureHandling
-import com.kms.katalon.core.testcase.TestCase as TestCase
-import com.kms.katalon.core.testdata.TestData as TestData
-import com.kms.katalon.core.testobject.TestObject as TestObject
+
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
-import groovy.json.JsonSlurper as JsonSlurper
-import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
+
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
 
 
 WebUI.comment('TEST CASE: Get information about cache and modules health')
 
 
-'GET STATUS AND DESCRIPTION OF MODULES AND CACHE'
 healthyStatus = 'Healthy'
 healthyModulesDecription = 'All modules are loaded'
 healthyCacheDescription = 'Cache is active'
-unhealthyStatus = 'Degraded'
-unhealthyModulesDecription = 'Some modules have errors'
+//unhealthyStatus = 'Degraded'
+//unhealthyModulesDecription = 'Some modules have errors'
+
+
+'GET HEALTH STATUS AND DESCRIPTION OF MODULES AND CACHE'
 healthInformationGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.HealthCheck/HealthCheck'))
-if (WS.getElementPropertyValue(healthInformationGet, '"Modules health".Status')==healthyStatus){
-	WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', healthyStatus)
+if (WS.getElementPropertyValue(healthInformationGet, '"Modules health".Status') == healthyStatus) {
 	WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Description', healthyModulesDecription)
 	WS.verifyElementPropertyValue(healthInformationGet, '"Cache health".Description', healthyCacheDescription)
 	WS.verifyElementPropertyValue(healthInformationGet, '"Cache health".Status', healthyStatus)
-}	else {
-		WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', healthyStatus)
-		WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', unhealthyStatus)
-		WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Description', unhealthyModulesDecription)
-		println("\nInformation about errors: \n" + WS.getElementPropertyValue(healthInformationGet, '"Modules health".Data'))
+} else {
+		WebUI.comment("\nMODULES HEALTH STATUS IS: \n" + WS.getElementPropertyValue(healthInformationGet, '"Modules health".Status'))
+		WebUI.comment("\nMODULES HEAlTH DESCRIPTION IS: \n" + WS.getElementPropertyValue(healthInformationGet, '"Modules health".Description'))
+		responseBody = healthInformationGet.getResponseBodyContent()
+		responseBodyParsed = new JsonSlurper().parseText(responseBody)
+		errorsData = responseBodyParsed."Modules health".Data
+		errorsDataJson = new groovy.json.JsonBuilder(errorsData).toString()
+		WebUI.comment("\nMODULES ERRORS DATA: \n" +JsonOutput.prettyPrint(errorsDataJson))
+		//WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', healthyStatus)
+		KeywordUtil.markFailed("UNHEALTHY")//just as an alternative way to fail test case
+		//probably we should also cover scenarios for cache failure
+		//need to explore
 }
+
