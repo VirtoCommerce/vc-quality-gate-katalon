@@ -21,13 +21,21 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Get information about cache and modules health')
 
 
-'VERIFY THAT STATUS AND DESCRIPTION ARE HEALTHY'
+'GET STATUS AND DESCRIPTION OF MODULES AND CACHE'
 healthyStatus = 'Healthy'
 healthyModulesDecription = 'All modules are loaded'
 healthyCacheDescription = 'Cache is active'
-
+unhealthyStatus = 'Degraded'
+unhealthyModulesDecription = 'Some modules have errors'
 healthInformationGet = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.HealthCheck/HealthCheck'))
-WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Description', healthyModulesDecription)
-WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', healthyStatus)
-WS.verifyElementPropertyValue(healthInformationGet, '"Cache health".Description', healthyCacheDescription)
-WS.verifyElementPropertyValue(healthInformationGet, '"Cache health".Status', healthyStatus)
+if (WS.getElementPropertyValue(healthInformationGet, '"Modules health".Status')==healthyStatus){
+	WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', healthyStatus)
+	WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Description', healthyModulesDecription)
+	WS.verifyElementPropertyValue(healthInformationGet, '"Cache health".Description', healthyCacheDescription)
+	WS.verifyElementPropertyValue(healthInformationGet, '"Cache health".Status', healthyStatus)
+}	else {
+		WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', healthyStatus)
+		WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Status', unhealthyStatus)
+		WS.verifyElementPropertyValue(healthInformationGet, '"Modules health".Description', unhealthyModulesDecription)
+		println("\nInformation about errors: \n" + WS.getElementPropertyValue(healthInformationGet, '"Modules health".Data'))
+}
