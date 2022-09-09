@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>E2E B2B smoke test - Copy</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>da5d8be3-2c76-4f99-b73d-ae06e13c2f69</testCaseGuid>
-</TestCaseEntity>

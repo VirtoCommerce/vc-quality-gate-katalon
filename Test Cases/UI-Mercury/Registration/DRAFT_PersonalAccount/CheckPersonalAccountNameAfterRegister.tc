@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>CheckPersonalAccountNameAfterRegister</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>1c052583-5176-4073-9048-3d13963e39fe</testCaseGuid>
-</TestCaseEntity>

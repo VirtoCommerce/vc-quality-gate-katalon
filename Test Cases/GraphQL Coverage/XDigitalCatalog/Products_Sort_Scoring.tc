@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>This test check if sorting by scoring works properly for GraphQL products query</description>
-   <name>Products_Sort_Scoring</name>
-   <tag>sorting, products</tag>
-   <comment></comment>
-   <testCaseGuid>f6884af3-db86-44f3-9c20-01d2c8f89ee9</testCaseGuid>
-</TestCaseEntity>

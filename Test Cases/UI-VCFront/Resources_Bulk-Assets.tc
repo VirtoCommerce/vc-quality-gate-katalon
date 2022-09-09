@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test forms on the Assets pages</description>
-   <name>Resources_Bulk-Assets</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>1d94d7ac-e88e-4e77-b533-f148980204fe</testCaseGuid>
-</TestCaseEntity>
