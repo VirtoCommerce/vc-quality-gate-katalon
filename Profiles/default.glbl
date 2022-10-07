@@ -346,22 +346,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>weight</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>height</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>width</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>length</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
