@@ -32,10 +32,11 @@ println GlobalVariable.keyword
 
 'UPDATE PRODUCT DIMENSIONS VARIABLES'
 GlobalVariable.weightUnit = 'pound'
-GlobalVariable.weight = '200.00'
-GlobalVariable.height = '200.00'
-GlobalVariable.width = '200.00'
-GlobalVariable.length = '200.00'
+GlobalVariable.weight =  '200.0000'
+GlobalVariable.height = '200.0000'
+GlobalVariable.width =  '200.0000'
+GlobalVariable.length =  '200.0000'
+ 
 
 
 'VERIFY VARIABLES'
