@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8118'</initValue>
+      <initValue>'https://vcps-regression.paas.govirto.com'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -523,5 +523,15 @@
       <description></description>
       <initValue>'false'</initValue>
       <name>isAdministratorStatus</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'admin'</initValue>
+      <name>adminUsername</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'store'</initValue>
+      <name>adminPassword</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
