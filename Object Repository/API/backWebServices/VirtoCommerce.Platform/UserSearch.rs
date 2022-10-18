@@ -21,15 +21,6 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
-      <webElementGuid>f7bb34cb-0816-4712-9150-9da00b135111</webElementGuid>
-   </httpHeaderProperties>
-   <httpHeaderProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>Authorization</name>
-      <type>Main</type>
-      <value>${GlobalVariable.token}</value>
-      <webElementGuid>ee2fb858-9128-4bfb-8bf3-3b9e76ab3713</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -37,7 +28,6 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
-      <webElementGuid>31460450-8837-4989-bb0e-df72a099b3f5</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

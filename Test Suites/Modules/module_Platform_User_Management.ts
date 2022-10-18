@@ -26,6 +26,13 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>efe8795f-1f8d-4796-b45b-0870c8c3b83f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserGetAllRequestsCheck</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>5754c69b-b1a4-46fe-87f4-a5ef326a1a8d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -26,18 +26,10 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>Authorization</name>
-      <type>Main</type>
-      <value>${GlobalVariable.token}</value>
-      <webElementGuid>ec7c9c12-ed60-452f-8525-f0bb87b4cd1f</webElementGuid>
-   </httpHeaderProperties>
-   <httpHeaderProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
-      <webElementGuid>8f9014f1-6659-4ed5-a4e6-5c8c91d6db72</webElementGuid>
+      <webElementGuid>ec7c9c12-ed60-452f-8525-f0bb87b4cd1f</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
