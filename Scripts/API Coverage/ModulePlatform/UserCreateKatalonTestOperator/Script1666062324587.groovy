@@ -15,8 +15,8 @@ WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePlatform/Authorizati
 
 
 'PREPARE DATA FOR KATALON OPERATOR ACCOUNT'
-//GlobalVariable.email = 'katalonTestOperator@email.com'
-GlobalVariable.userName = 'katalonTestOperator'
+//GlobalVariable.email = Randomly generated in userCreate
+GlobalVariable.userName = GlobalVariable.katalonUserName
 GlobalVariable.userType = 'SiteAdministrator'
 GlobalVariable.isAdministratorStatus = true
 
