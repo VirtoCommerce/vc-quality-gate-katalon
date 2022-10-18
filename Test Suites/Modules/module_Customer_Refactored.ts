@@ -14,7 +14,7 @@
    <testCaseLink>
       <guid>ffdd43b8-2a24-4f70-8fcf-095273f348c7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateKatalonTestOperator</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
