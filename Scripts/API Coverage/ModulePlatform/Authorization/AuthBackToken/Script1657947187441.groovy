@@ -23,8 +23,8 @@ def request = findTestObject('API/backWebServices/VirtoCommerce.Platform/Authori
 List<UrlEncodedBodyParameter> body = new ArrayList()
 body.add(new UrlEncodedBodyParameter('grant_type', 'password'))
 body.add(new UrlEncodedBodyParameter('scope', 'offline_access'))
-body.add(new UrlEncodedBodyParameter('username', GlobalVariable.adminUsername))
-body.add(new UrlEncodedBodyParameter('password', GlobalVariable.adminPassword))
+body.add(new UrlEncodedBodyParameter('username', 'admin'))
+body.add(new UrlEncodedBodyParameter('password', 'store'))
 
 request.setBodyContent(new HttpUrlEncodedBodyContent(body))
 response = WS.sendRequestAndVerify(request)
