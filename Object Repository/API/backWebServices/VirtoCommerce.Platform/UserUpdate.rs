@@ -31,6 +31,14 @@
       <value>${GlobalVariable.api_key}</value>
       <webElementGuid>d13ec565-503e-4717-bc77-e999c17c99a9</webElementGuid>
    </httpHeaderProperties>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Authorization</name>
+      <type>Main</type>
+      <value>${GlobalVariable.token}</value>
+      <webElementGuid>ce15cdc6-0621-49c8-93c9-ddb57c8c7cff</webElementGuid>
+   </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>PUT</restRequestMethod>

@@ -33,11 +33,16 @@ currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 operatorId = WS.getElementPropertyValue(currentUser, 'id')
 
 
-userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-WS.verifyElementPropertyValue(userByEmail, 'id', operatorId)
+userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail',[
+	('email') : GlobalVariable.email
+	]))
+WS.verifyElementPropertyValue(userByEmail, 'email', GlobalVariable.email)
 
-userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', operatorId)
+
+userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName',[
+	('name') : GlobalVariable.katalonUserName
+	]))
+WS.verifyElementPropertyValue(userByName, 'userName', GlobalVariable.katalonUserName)
 
 userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
 WS.verifyElementPropertyValue(userInfo, 'sub', operatorId)
@@ -45,4 +50,5 @@ WS.verifyElementPropertyValue(userInfo, 'sub', operatorId)
 responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById',[
 	('userId') : operatorId
 	]))
-WS.verifyElementPropertyValue(responseById, 'userName', 'operator@mail.com')
+WS.verifyElementPropertyValue(responseById, 'userName', GlobalVariable.katalonUserName)
+

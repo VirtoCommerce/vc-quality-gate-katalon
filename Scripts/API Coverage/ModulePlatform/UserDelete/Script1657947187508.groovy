@@ -26,6 +26,7 @@ WS.verifyElementPropertyValue(response, 'succeeded', true)
 
 
 // Verify that user is deleted
+GlobalVariable.token = '' //recent changes made it sensitive to token value need to clear it
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserSearch', [
 	('userName') : GlobalVariable.userName
 	]))

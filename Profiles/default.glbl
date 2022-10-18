@@ -534,4 +534,9 @@
       <initValue>'store'</initValue>
       <name>adminPassword</name>
    </GlobalVariableEntity>
-</GlobalVariableEntities>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'katalonTestOperator'</initValue>
+      <name>katalonUserName</name>
+   </GlobalVariableEntity>
+

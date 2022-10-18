@@ -19,7 +19,7 @@ import groovy.json.JsonSlurper as JsonSlurper
 
 //STEP | set new API key to Admin user
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeySet', [
-	('userName') : 'operator@mail.com',
+	('userName') : GlobalVariable.katalonUserName,
 	('api_key') : GlobalVariable.api_key,
 	('userId') : GlobalVariable.userId,
 	('apiKeyStatus') : GlobalVariable.apiKeyStatus
