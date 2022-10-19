@@ -532,7 +532,7 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'admin'</initValue>
-      <name>adminUsername</name>
+      <name>adminUserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
