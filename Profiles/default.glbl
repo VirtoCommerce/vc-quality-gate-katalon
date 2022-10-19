@@ -536,12 +536,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'katalonTestOperator'</initValue>
+      <initValue>'katalonOperator'</initValue>
       <name>katalonUserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'qwe'</initValue>
-      <name>qweTest</name>
+      <description>token for admin to create operator (separated as to avoid interderence with other tests)</description>
+      <initValue>''</initValue>
+      <name>katalonToken</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
