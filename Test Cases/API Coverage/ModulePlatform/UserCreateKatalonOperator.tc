@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create katalon tests operator and set apiKey so it could operate katalon test cases</description>
+   <name>UserCreateKatalonOperator</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>70560a16-6b87-4f35-b6bc-db06ed8bb374</testCaseGuid>
+</TestCaseEntity>
