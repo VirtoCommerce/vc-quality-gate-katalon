@@ -540,8 +540,8 @@
       <name>katalonUserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>token for admin to create operator (separated as to avoid interderence with other tests)</description>
-      <initValue>''</initValue>
-      <name>katalonToken</name>
+      <description>katalonOperator Email</description>
+      <initValue>'katalonOperator@mail.com'</initValue>
+      <name>katalonEmail</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

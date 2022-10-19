@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>UserCreate</name>
+   <name>UserCreateKatalon</name>
    <tag></tag>
    <elementGuidId>ec5d42e0-054b-4c40-b440-7c3dea251017</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -26,10 +26,10 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>api_key</name>
+      <name>Authorization</name>
       <type>Main</type>
-      <value>${GlobalVariable.api_key}</value>
-      <webElementGuid>ec7c9c12-ed60-452f-8525-f0bb87b4cd1f</webElementGuid>
+      <value>${GlobalVariable.token}</value>
+      <webElementGuid>73edfc50-9563-4a57-b819-73e975273961</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

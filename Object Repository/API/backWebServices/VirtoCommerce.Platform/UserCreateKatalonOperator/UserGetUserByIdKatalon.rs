@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>UserGetUserById</name>
+   <name>UserGetUserByIdKatalon</name>
    <tag></tag>
    <elementGuidId>00840faf-0f40-431f-b6ce-1e06aca0c17e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -22,9 +22,9 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>api_key</name>
+      <name>Authorization</name>
       <type>Main</type>
-      <value>${GlobalVariable.api_key}</value>
+      <value>${GlobalVariable.token}</value>
       <webElementGuid>c250730f-d758-4cfc-979d-2fd8a748efd9</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>

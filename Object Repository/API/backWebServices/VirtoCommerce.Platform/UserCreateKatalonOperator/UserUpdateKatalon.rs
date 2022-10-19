@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>UserUpdate</name>
+   <name>UserUpdateKatalon</name>
    <tag></tag>
    <elementGuidId>f7bd6e0f-e655-4041-a3ea-2a7d961bfb8e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -26,9 +26,9 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>api_key</name>
+      <name>Authorization</name>
       <type>Main</type>
-      <value>${GlobalVariable.api_key}</value>
+      <value>${GlobalVariable.token}</value>
       <webElementGuid>d13ec565-503e-4717-bc77-e999c17c99a9</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>

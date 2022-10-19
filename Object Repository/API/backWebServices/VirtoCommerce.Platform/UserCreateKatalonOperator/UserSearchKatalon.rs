@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>UserSearch</name>
+   <name>UserSearchKatalon</name>
    <tag></tag>
    <elementGuidId>14ee0485-b8de-43ed-a77b-fa2b2d9651ab</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -26,9 +26,9 @@
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>api_key</name>
+      <name>Authorization</name>
       <type>Main</type>
-      <value>${GlobalVariable.api_key}</value>
+      <value>${GlobalVariable.token}</value>
       <webElementGuid>089248bf-993b-47d2-880b-4d29c7bd802b</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
