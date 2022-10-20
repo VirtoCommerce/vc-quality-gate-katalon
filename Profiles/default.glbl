@@ -544,4 +544,9 @@
       <initValue>'katalonOperator@mail.com'</initValue>
       <name>katalonEmail</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the katalonOperator</description>
+      <initValue>''</initValue>
+      <name>katalonUserId</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
