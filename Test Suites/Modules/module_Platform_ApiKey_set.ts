@@ -12,17 +12,17 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>1a7cd933-dd7b-4ef5-99f1-2947153d6573</testSuiteGuid>
    <testCaseLink>
-      <guid>1589c985-efb2-4203-a9b7-ea14e6f2693c</guid>
+      <guid>645fe778-fcf8-4981-9863-acd795df51f6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/Authorization/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateKatalonOperator</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4c84e486-5f0b-4995-b151-4cf15fb90a49</guid>
+      <guid>35fd3538-23b0-471a-b0b9-a0658e5f9692</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserGetAllRequestsCheck</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

@@ -20,7 +20,7 @@ import org.openqa.selenium.Keys as Keys
 WebUI.comment('TEST CASE: Update existing ApiKey')
 
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ApiKeyUpdate', [
-	('userName') : 'operator@mail.com',
+	('userName') : GlobalVariable.katalonUserName,
 	('apiKeyId') : GlobalVariable.apiKeyId,
 	('api_key') : GlobalVariable.api_key+"upd", 
 	('userId') : GlobalVariable.userId,

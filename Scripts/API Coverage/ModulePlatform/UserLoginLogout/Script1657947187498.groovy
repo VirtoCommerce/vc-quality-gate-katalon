@@ -21,7 +21,10 @@ import org.openqa.selenium.Keys as Keys
 WebUI.comment('TEST CASE: User login/logout')
 
 //Login with default admin credentials
-response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserLogin'))
+response = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserLogin',[
+	('userName') : GlobalVariable.adminUserName,
+	('password') : GlobalVariable.adminPassword
+	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
 
 

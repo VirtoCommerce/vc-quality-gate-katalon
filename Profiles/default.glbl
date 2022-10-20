@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://vcps-regression.paas.govirto.com'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8017'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -526,17 +526,27 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'admin'</initValue>
-      <name>adminUsername</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'store'</initValue>
       <name>adminPassword</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'katalonTestOperator'</initValue>
+      <initValue>'admin'</initValue>
+      <name>adminUserName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'katalonOperator'</initValue>
       <name>katalonUserName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>katalonOperator Email</description>
+      <initValue>'katalonOperator@mail.com'</initValue>
+      <name>katalonEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the katalonOperator</description>
+      <initValue>''</initValue>
+      <name>katalonUserId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
