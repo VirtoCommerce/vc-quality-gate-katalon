@@ -30,19 +30,27 @@ WebUI.comment('TEST CASE: Check all GET requests related to User')
 
 
 currentUser = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetCurrentuser'))
-operatorId = WS.getElementPropertyValue(currentUser, 'id')
+katalonOperatorId = WS.getElementPropertyValue(currentUser, 'id')
 
 
-userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail'))
-WS.verifyElementPropertyValue(userByEmail, 'id', operatorId)
+userByEmail = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByEmail',[
+	('email') : GlobalVariable.katalonEmail
+	]))
+WS.verifyElementPropertyValue(userByEmail, 'id', katalonOperatorId)
 
-userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName'))
-WS.verifyElementPropertyValue(userByName, 'id', operatorId)
+
+userByName = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserByName',[
+	('userName') : GlobalVariable.katalonUserName
+	]))
+WS.verifyElementPropertyValue(userByName, 'id', katalonOperatorId)
+
 
 userInfo = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserinfo'))
-WS.verifyElementPropertyValue(userInfo, 'sub', operatorId)
+WS.verifyElementPropertyValue(userInfo, 'sub', katalonOperatorId)
+
 
 responseById = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserGetUserById',[
-	('userId') : operatorId
+	('userId') : katalonOperatorId
 	]))
-WS.verifyElementPropertyValue(responseById, 'userName', 'operator@mail.com')
+WS.verifyElementPropertyValue(responseById, 'userName', GlobalVariable.katalonUserName)
+
