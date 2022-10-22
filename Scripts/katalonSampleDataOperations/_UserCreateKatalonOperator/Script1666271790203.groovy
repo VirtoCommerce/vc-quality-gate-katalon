@@ -19,7 +19,7 @@ println GlobalVariable.token
 
 
 'CREATE KATALON USER'
-userCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserCreateKatalonOperator/UserCreateKatalon', [
+userCreate = WS.sendRequestAndVerify(findTestObject('Object Repository/API/katalonDataCreation/UserCreateKatalon', [
 	('email') : GlobalVariable.katalonEmail,
 	('userName') : GlobalVariable.katalonUserName,
 	('userType') : 'Customer'//hardcoded as user can not be manually created with any other userType
@@ -28,7 +28,7 @@ WS.verifyElementPropertyValue(userCreate, 'succeeded', true)
 
 
 'SEARCH FOR THE CREATED USER'
-userSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserCreateKatalonOperator/UserSearchKatalon', [
+userSearch = WS.sendRequestAndVerify(findTestObject('Object Repository/API/katalonDataCreation/UserSearchKatalon', [
 	('searchPhrase') : GlobalVariable.katalonUserName,
 	]))
 WS.verifyElementPropertyValue(userSearch, 'users[0].userName', GlobalVariable.katalonUserName)
@@ -43,7 +43,7 @@ WebUI.comment('USER ID is: ' + GlobalVariable.userId)
 WebUI.comment('TEST CASE: update created user')
 
 'GET CREATED USER DATA TO UPDATE USER'
-userGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserCreateKatalonOperator/UserGetUserByIdKatalon', [
+userGet = WS.sendRequestAndVerify(findTestObject('Object Repository/API/katalonDataCreation/UserGetUserByIdKatalon', [
 	('userId') : GlobalVariable.userId
 	]))
 userGetBody = userGet.getResponseBodyContent()
@@ -56,7 +56,7 @@ println userBodyJson
 
 
 'SEND REQUEST TO UPDATE THE CREATED USER (update is required to make a user lockble (workflow peculiarity))'
-RequestObject userBodyObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/UserCreateKatalonOperator/UserUpdateKatalon')
+RequestObject userBodyObject = findTestObject('Object Repository/API/katalonDataCreation/UserUpdateKatalon')
 userBodyObject.setBodyContent(new HttpTextBodyContent(userBodyJson))
 userUpdate = WS.sendRequestAndVerify(userBodyObject)
 WS.verifyElementPropertyValue(userUpdate, 'succeeded', true)
