@@ -19,4 +19,4 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search
 
 WebUI.comment('Waiting for drop index 10 sec')
 
-WS.delay(10)
+WS.delay(20)

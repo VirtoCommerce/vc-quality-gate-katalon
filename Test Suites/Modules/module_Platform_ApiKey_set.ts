@@ -15,7 +15,14 @@
       <guid>645fe778-fcf8-4981-9863-acd795df51f6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserCreateKatalonOperator</testCaseId>
+      <testCaseId>Test Cases/KatalonSampleDataOperations/KatalonUserCreateOperator</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>86de1dce-f91b-4ebe-9923-0e34668a7cdb</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/KatalonSampleDataOperations/KatalonDataCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

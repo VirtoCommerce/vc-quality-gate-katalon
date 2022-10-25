@@ -44,7 +44,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'katalonOperator'</defaultValue>
       <description></description>
       <id>2238c78b-7ee9-4d39-b624-b206365c9320</id>
       <masked>false</masked>
