@@ -19,13 +19,6 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>86de1dce-f91b-4ebe-9923-0e34668a7cdb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/KatalonSampleDataOperations/KatalonDataCreate</testCaseId>
-      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
-   </testCaseLink>
-   <testCaseLink>
       <guid>35fd3538-23b0-471a-b0b9-a0658e5f9692</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
