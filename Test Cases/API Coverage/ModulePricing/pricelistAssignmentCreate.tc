@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add an assignment to the pricelist</description>
+   <name>pricelistAssignmentCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d6680870-b54e-4be0-91fa-9efe5975d7ed</testCaseGuid>
+</TestCaseEntity>

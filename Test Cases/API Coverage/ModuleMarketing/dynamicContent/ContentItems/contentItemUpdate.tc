@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update the created content item</description>
+   <name>contentItemUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c020c576-d471-46e4-b076-8330553ab69d</testCaseGuid>
+</TestCaseEntity>

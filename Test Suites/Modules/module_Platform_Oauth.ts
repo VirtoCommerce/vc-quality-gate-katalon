@@ -15,18 +15,18 @@
       <guid>ce032d96-c9c2-456f-b548-b30afef66adb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/OauthClientCreate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/OauthClientCreate</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3743369d-9aa4-48ee-b96a-bbed9b4ac100</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/OauthClientSearch</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/OauthClientSearch</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3d3b0538-46c4-4309-acaa-57939856c23e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/OauthClientDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/OauthClientDelete</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

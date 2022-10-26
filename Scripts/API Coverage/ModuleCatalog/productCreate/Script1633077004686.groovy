@@ -41,9 +41,10 @@ WS.verifyElementPropertyValue(createUpdateProduct, 'weight', GlobalVariable.weig
 WS.verifyElementPropertyValue(createUpdateProduct, 'height', GlobalVariable.height)
 WS.verifyElementPropertyValue(createUpdateProduct, 'width', GlobalVariable.width)
 WS.verifyElementPropertyValue(createUpdateProduct, 'length', GlobalVariable.length)
+WS.verifyElementPropertyValue(createUpdateProduct, 'code', GlobalVariable.sku)
 
 
-'SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES'
+'SAVE PRODUCT ID TO USE IN UPDATE AND DELETE CASES'
 GlobalVariable.productId = WS.getElementPropertyValue(createUpdateProduct, 'id')
 WebUI.comment(GlobalVariable.productId)
 
@@ -52,12 +53,12 @@ WebUI.comment(GlobalVariable.productId)
 GlobalVariable.categoryName = WS.getElementPropertyValue(createUpdateProduct, 'path')
 WebUI.comment(GlobalVariable.categoryName)
 
+
 'VARIABLES CHECK'
 println GlobalVariable.keyword
 println GlobalVariable.productName
 println GlobalVariable.productId
 
 
-//'RETURN DATA'
-//return createUpdateProduct
+return createUpdateProduct
 

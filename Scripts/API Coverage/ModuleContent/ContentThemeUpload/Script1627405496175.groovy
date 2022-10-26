@@ -22,19 +22,19 @@ WebUI.comment('TEST CASE: Theme. Upload file from local')
 GlobalVariable.contentType = "themes"
 
 
-//UPDATE THE BLACKLIST CONFIGURATION
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+'UPDATE THE BLACKLIST CONFIGURATION'
+WS.callTestCase(findTestCase('API Coverage/ModulePlatform/SettingsUpdateBlacklist'), null,
 FailureHandling.STOP_ON_FAILURE)
 
 
-//Get store stats to get initial state. Set THEME count to compare with final result
+'Get store stats to get initial state. Set THEME count to compare with final result'
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
 	]))
 count = WS.getElementPropertyValue(stats, 'themesCount')
 
 
-//Upload .zip file to the platform to unpack it in the further steps
+'Upload .zip file to the platform to unpack it in the further steps'
 archiveName = 'qwetheme_test_x.zip'
 uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentFileNew', [
 	('contentType') : GlobalVariable.contentType,
@@ -43,7 +43,7 @@ uploadFileUrlLocal = WS.sendRequestAndVerify(findTestObject('API/backWebServices
 	]))
 
 
-//Verify the file has been uploaded
+'Verify the file has been uploaded'
 searchFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -52,11 +52,11 @@ searchFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCo
 WS.verifyElementPropertyValue(searchFile, '[0].name', archiveName)
 
 
-//Get uploaded archive path if file uploaded correctly
+'Get uploaded archive path if file uploaded correctly'
 archivePath = WS.getElementPropertyValue(uploadFileUrlLocal, '[0].url')
 println archivePath
 
-//Unpack the archive to its current location directory
+'Unpack the archive to its current location directory'
 folderName = archiveName.substring(0, archiveName.lastIndexOf("."))
 unpackArchive = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentUnpack', [
 	('contentType') : GlobalVariable.contentType,
@@ -66,7 +66,7 @@ unpackArchive = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virt
 	]))
 
 
-//Verify that the archive was successfully unpacked and unpacked file exists
+'Verify that the archive was successfully unpacked and unpacked file exists'
 fileName = 'qwetheme_test.html' //static file name in prepared ZIP file in TestFiles folder
 unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentGet', [
 	('contentType') : GlobalVariable.contentType,
@@ -75,7 +75,7 @@ unpackedHtmlFile = WS.sendRequestAndVerify(findTestObject('API/backWebServices/V
 	]))
 
 
-//Get the unpacked file data to set variables for the ContentMove request
+'Get the unpacked file data to set variables for the ContentMove request'
 fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentSearch', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -84,13 +84,13 @@ fileData = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 WS.verifyElementPropertyValue(fileData, '[0].name', fileName)
 
 
-//Set variables for the rename (ContentMove) request
+'Set variables for the rename (ContentMove) request'
 forbiddenFileName = fileName.replaceAll('.html', '.exe')
 oldUrl = WS.getElementPropertyValue(fileData, '[0].url')
 forbiddenUrl = oldUrl.replaceAll(fileName, forbiddenFileName)
 
 
-//Send ContentMove request to rename the page with the FORBIDDEN EXTENSION file
+'Send ContentMove request to rename the page with the FORBIDDEN EXTENSION file'
 errorMessage = 'This extension is not allowed. Please contact administrator.'
 forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
 	('contentType') : GlobalVariable.contentType ,
@@ -99,10 +99,17 @@ forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommer
 	('newUrl') : forbiddenUrl
 	]))
 WS.verifyResponseStatusCode(forbiddenRename, 500)
+/*According to the testrail documentation '405' error status code should be returned here, 
+ * yet '500' is implemented, so test cases utilize the actual state
+ * to keep things functioning.
+ * A bug report has been created for this issue. The bug is a low priority. 
+ * Here's a jira link:
+ * https://virtocommerce.atlassian.net/browse/PT-4899
+ */
 WS.containsString(forbiddenRename, errorMessage, false)
 
 
-//Delete the created folder
+'Delete the created folder'
 deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentDelete', [
 	('contentType') : GlobalVariable.contentType,
 	('storeId') : GlobalVariable.storeId,
@@ -110,7 +117,7 @@ deleteFolder = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Virto
 	]))
 
 
-//Get store stats to verify the added theme folder was deleted
+'Get store stats to verify the added theme folder was deleted'
 stats = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentStatsStoreGet', [
 	('storeId') : GlobalVariable.storeId
 	]))

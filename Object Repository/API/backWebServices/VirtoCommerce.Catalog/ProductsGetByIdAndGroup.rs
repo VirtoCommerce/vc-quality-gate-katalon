@@ -38,7 +38,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'3df8a98b-db6d-42d9-aa42-eb1d5099ce0c'</defaultValue>
+      <defaultValue>'f0ddac0d-f987-4ca9-b6cb-da250bd279c7'</defaultValue>
       <description>searched product id</description>
       <id>8b64082b-4e68-4358-b546-2618a39079d3</id>
       <masked>false</masked>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Get the list of documentTypes (member,product etc) available for indexation</description>
+   <name>GetIndex</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ca077c61-5360-46c4-a134-c87f8ad748a2</testCaseGuid>
+</TestCaseEntity>

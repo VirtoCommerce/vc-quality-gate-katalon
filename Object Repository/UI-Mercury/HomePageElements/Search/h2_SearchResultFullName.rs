@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>h2_SearchResultFullName</name>
+   <tag></tag>
+   <elementGuidId>684fb398-dda1-4803-b41f-d3c924863590</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>h2.text-center</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner grow&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;flex flex-col&quot;]/h1[@class=&quot;text-2xl md:mt-2 md:mb-4&quot;][count(. | //*[@class = 'text-2xl md:mt-2 md:mb-4']) = count(//*[@class = 'text-2xl md:mt-2 md:mb-4'])]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>h1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>text-2xl md:mt-2 md:mb-4</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value> Your search for &quot;printer&quot; revealed the following </value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner grow&quot;]/div[@class=&quot;max-w-screen-2xl px-5 md:px-12 mx-auto&quot;]/div[@class=&quot;flex items-start lg:gap-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow&quot;]/div[@class=&quot;flex flex-col&quot;]/h1[@class=&quot;text-2xl md:mt-2 md:mb-4&quot;]</value>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value></value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value></value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value></value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value></value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value></value>
+   </webElementXpaths>
+</WebElementEntity>

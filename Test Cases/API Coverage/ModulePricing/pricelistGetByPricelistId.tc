@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>get pricelist by its id</description>
+   <name>pricelistGetByPricelistId</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3d1d282b-94e6-4ec1-b882-b7c9200f4ef7</testCaseGuid>
+</TestCaseEntity>

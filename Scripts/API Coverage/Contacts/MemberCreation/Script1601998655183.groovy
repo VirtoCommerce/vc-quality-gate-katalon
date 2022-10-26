@@ -25,7 +25,12 @@ WebUI.comment("TYPES IS : " + memberType)
 for (int i; i < memberType.size(); i++) {
     WebUI.comment('Create user type ' + memberType.get(i))
 
-    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [('memberType') : memberType.get(i)]))
+    def response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [
+		('name') : GlobalVariable.firstName,
+		('firstName') : GlobalVariable.firstName,
+		('lastName') : GlobalVariable.lastName,
+		('fullName') : GlobalVariable.contactName,
+		('memberType') : memberType.get(i)]))
 
     def memberJson = new JsonSlurper().parseText(response.getResponseBodyContent())
     (GlobalVariable.memberId[i]) = memberJson.id 

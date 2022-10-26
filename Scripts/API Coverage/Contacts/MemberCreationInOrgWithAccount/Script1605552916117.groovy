@@ -25,7 +25,13 @@ import groovy.json.JsonOutput
 
 
 WebUI.comment("TEST CASE : Create new organization")
-def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [('memberType') : GlobalVariable.memberType[0]] ))
+def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [
+	('memberType') : GlobalVariable.memberType[0],
+	('name') : GlobalVariable.firstName,
+	('firstName') : GlobalVariable.firstName,
+	('lastName') : GlobalVariable.lastName,
+	('fullName') : GlobalVariable.contactName
+	]))
 def memberJson = new JsonSlurper().parseText(responseMemberCreate.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id
 
@@ -49,7 +55,7 @@ WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', GlobalVar
 WebUI.comment('TEST CASE : Remove Org and Contact relation')
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Contacts/ContactsUpdate', [
 	('contactId') : GlobalVariable.contactId, 
-	('fullName') : GlobalVariable.contactName
+	('fullName') : GlobalVariable.firstName
 	]))
 
 
@@ -75,7 +81,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platfo
 
 
 WebUI.comment("TEST CASE : Update user password as admin way")
-responseResetPassword = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/ResetPassword', [
+responseResetPassword = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserPassword/UserPasswordReset', [
 	('userName') : GlobalVariable.userName
 	]))
 WS.verifyElementPropertyValue(responseResetPassword, 'succeeded', true)

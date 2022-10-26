@@ -21,7 +21,7 @@ WebUI.comment('TEST CASE: Products management - assets get list')
 
 
 'FIND URL OF ASSETS'
-folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/AssetGetList', [
+folderList = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetGetList', [
 	('folderName') : '',
 	('keyword') : GlobalVariable.folderName
 	]))

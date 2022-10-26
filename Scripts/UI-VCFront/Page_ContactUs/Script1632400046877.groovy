@@ -20,24 +20,30 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.navigateToUrl(GlobalVariable.urlFront + '/contact-us')
 
+println('Current URL is: ' + WebUI.getUrl())
+
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 'Doe QA')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Email'), 'test@virtoway.com')
 
-WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
+//WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
 
-WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone'), '0123456789')
+//WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Phone'), '0123456789')
 
-WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')
+//WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/textarea_comments'), 'Test message')
+
+WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
 WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+
+WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Consent'), 150, 10)
 
 WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
 WebUI.verifyElementText(findTestObject('UI/UI-VCFront/Page_ThankYou/span_Thank_you'), 'Thank you!')
 
-assert WebUI.getUrl() == (GlobalVariable.urlFront + '/thank-you')
+assert WebUI.getUrl() == (GlobalVariable.urlFront + '/contact-us-thank-you')

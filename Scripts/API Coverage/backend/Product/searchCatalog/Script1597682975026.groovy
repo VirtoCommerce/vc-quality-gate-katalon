@@ -16,8 +16,8 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper
 
-def catalogRequest = findTestObject('API/backWebServices/VirtoCommerce.Catalog/ZHybrid/searchCatalog')
-def catalogResponse = WS.sendRequestAndVerify(catalogRequest)
+def catalogRequest = findTestObject('API/backWebServices/VirtoCommerce.Catalog/ZHybrid/searchCatalog', [('catalogName') : GlobalVariable.catalogName])
+def catalogResponse = WS.sendRequestAndVerify(catalogRequest, FailureHandling.STOP_ON_FAILURE)
 
 def catalogJson = new JsonSlurper().parseText(catalogResponse.getResponseBodyContent());
 def catalogJson2 = (catalogJson.'results')

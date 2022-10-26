@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>- create/delete asset folder @ /stores/...
+- upload/delete files</description>
+   <name>DRAFT.StoreAssets</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cd4b3231-3d7b-4973-8e0a-f0d69138a62b</testCaseGuid>
+</TestCaseEntity>

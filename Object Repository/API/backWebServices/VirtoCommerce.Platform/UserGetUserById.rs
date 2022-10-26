@@ -17,6 +17,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>2b24ee62-a16b-4016-b91e-4d73c24e9d79</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -24,6 +25,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>c250730f-d758-4cfc-979d-2fd8a748efd9</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -38,7 +40,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'1eb2fa8ac6574541afdb525833dadb46'</defaultValue>
+      <defaultValue>'867e85c0-9f76-418d-98ba-3aab6a5e2efa'</defaultValue>
       <description>Admin user ID</description>
       <id>18be38b2-f2a8-4368-8077-5a8267e6db5a</id>
       <masked>false</masked>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>input_FirstName</name>
+   <tag></tag>
+   <elementGuidId>9ba70bf5-cc4c-49ca-b809-d97fc50af8db</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>form div:nth-of-type(1) > [placeholder]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[1]/input</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>input</value>
+      <webElementGuid>6fa04d41-73a1-4e27-9155-ba7c736dbdc2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>name</name>
+      <type>Main</type>
+      <value>firstName</value>
+      <webElementGuid>cf9dfa94-9aa3-4f51-9cab-28acfd973de3</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>form div:nth-of-type(1) > [placeholder]</value>
+      <webElementGuid>47a10175-4b4c-4a40-bcba-0e1cee9fba8c</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create update delete settings for unit</description>
+   <name>coreUnitSettingsCreateUpdateDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d13ae536-59d8-4a44-83ab-769f57e63273</testCaseGuid>
+</TestCaseEntity>

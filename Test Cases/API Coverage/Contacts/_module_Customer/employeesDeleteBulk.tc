@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Delete all members by phrase &quot;Qwe&quot;</description>
+   <name>employeesDeleteBulk</name>
+   <tag></tag>
+   <comment>TEST CASE: Members BULK delete</comment>
+   <testCaseGuid>29a6c270-97e9-4d6a-9509-391ff800713e</testCaseGuid>
+</TestCaseEntity>

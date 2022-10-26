@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Generic back-end authorisation and save token</description>
+   <name>UserGetAuthorizationToken(Generic)</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9c817fb3-dcbe-479b-94e1-3dddfeee1d01</testCaseGuid>
+</TestCaseEntity>

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n  \&quot;roles\&quot;: [ ${roles} ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n  \&quot;roles\&quot;: [ ${roles} ],\n  \&quot;isAdministrator\&quot;: \&quot;${isAdministrator}\&quot;,\n  \&quot;lockoutEnabled\&quot;: true,\n  \&quot;status\&quot; : \&quot;New\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>cc9dc758-0458-4125-a043-1c0c8d0d77e5</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>d13ec565-503e-4717-bc77-e999c17c99a9</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -89,6 +91,20 @@
       <id>3b6ec929-ea75-4622-99a5-8b20bad848a2</id>
       <masked>false</masked>
       <name>roles</name>
+   </variables>
+   <variables>
+      <defaultValue>'false'</defaultValue>
+      <description></description>
+      <id>adf5d808-56d9-4ebb-865a-90c11b2b3dc4</id>
+      <masked>false</masked>
+      <name>isAdministrator</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a706e52f-473c-4b35-b8c4-b28a8cfb9956</id>
+      <masked>false</masked>
+      <name>userLockEnabled</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

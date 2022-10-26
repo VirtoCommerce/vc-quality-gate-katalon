@@ -16,16 +16,28 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import groovy.json.JsonSlurper as JsonSlurper
 
+'GET VENDOR DATA BY ID'
 
 WebUI.comment('Vendor ID : ' + GlobalVariable.memberId[2])
 
+
 WebUI.comment('TEST CASE : Vendor Get by Id 1 check')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetId', [('id') : GlobalVariable.memberId[2]] ))
+getVendorId = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetId', [
+	('id') : GlobalVariable.memberId[2]
+	]))
 
 
-WebUI.comment('TEST CASE : Vendor Get by Id BULK 2 check')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetIdsBulk', [('id') : GlobalVariable.memberId[2]] ))
+'GET BULK VENDOR DATA BY IDs'
+getVendorIdBulk = WebUI.comment('TEST CASE : Vendor Get by Id BULK 2 check')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsGetIdsBulk', [
+	('id') : GlobalVariable.memberId[2],
+	('storeId') : GlobalVariable.storeId,
+	('parentId') : GlobalVariable.memberId[0]
+	]))
 
 
-WebUI.comment('TEST CASE : Vendor seach')
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsSearch', [('searchPhrase') : GlobalVariable.firstName] ))
+'SEARCH VENDOR'
+searchVendor = WebUI.comment('TEST CASE : Vendor seach')
+WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Vendors/VendorsSearch', [
+	('searchPhrase') : GlobalVariable.firstName
+	]))

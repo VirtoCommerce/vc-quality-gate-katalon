@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\t\n  \&quot;apiKey\&quot;: \&quot;${api_key}\&quot;,  \n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userId\&quot;: \&quot;${userId}\&quot;,\n  \&quot;isActive\&quot;: true  \n}&quot;,
+  &quot;text&quot;: &quot;{\t\n  \&quot;apiKey\&quot;: \&quot;${api_key}\&quot;,  \n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userId\&quot;: \&quot;${userId}\&quot;,\n  \&quot;isActive\&quot;: \&quot;${apiKeyStatus}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -61,6 +61,13 @@
       <id>ad3f5597-5972-4c0a-b9a2-0bd25d559bc9</id>
       <masked>false</masked>
       <name>userName</name>
+   </variables>
+   <variables>
+      <defaultValue>'true'</defaultValue>
+      <description></description>
+      <id>270af3b6-e08b-4324-a613-8e0947f41a12</id>
+      <masked>false</masked>
+      <name>apiKeyStatus</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

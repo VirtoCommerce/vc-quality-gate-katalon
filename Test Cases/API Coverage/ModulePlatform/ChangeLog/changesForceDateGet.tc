@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>force changes andd get the last modified date to verify changes</description>
+   <name>changesForceDateGet</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>806acee4-1c6b-4ec2-af2b-a03183f700b9</testCaseGuid>
+</TestCaseEntity>

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;password\&quot;: \&quot;${password}\&quot;,\n  \&quot;memberId\&quot;: \&quot;${contactId}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;status\&quot;: \&quot;${status}\&quot;,\n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;roles\&quot;: [],\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;password\&quot;: \&quot;${password}\&quot;,\n  \&quot;memberId\&quot;: \&quot;${contactId}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;status\&quot;: \&quot;${status}\&quot;,\n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;roles\&quot;: [],\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;//,\n  //\&quot;lockoutEnabled\&quot;:true\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>33183432-f66f-48b0-aff4-96d511d8b681</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>ec7c9c12-ed60-452f-8525-f0bb87b4cd1f</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

@@ -12,45 +12,59 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>1a7cd933-dd7b-4ef5-99f1-2947153d6573</testSuiteGuid>
    <testCaseLink>
-      <guid>1589c985-efb2-4203-a9b7-ea14e6f2693c</guid>
+      <guid>645fe778-fcf8-4981-9863-acd795df51f6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/AuthBackToken</testCaseId>
+      <testCaseId>Test Cases/KatalonSampleDataOperations/KatalonUserCreateOperator</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>4c84e486-5f0b-4995-b151-4cf15fb90a49</guid>
+      <guid>86de1dce-f91b-4ebe-9923-0e34668a7cdb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+      <testCaseId>Test Cases/KatalonSampleDataOperations/KatalonDataCreate</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>35fd3538-23b0-471a-b0b9-a0658e5f9692</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserGetAllRequestsCheck</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>97ae6ab6-b92f-4d0a-b49c-0e73a7495d81</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeyUpdate</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeyUpdate</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>81f7f978-a82c-4e6f-b260-47681a04df11</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeyGet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeyGet</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>13510837-2231-4d5e-9db7-366ef73ca434</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeyDelete</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeyDelete</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>3d058b90-4497-4419-bf33-126aa18d10be</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/ApiKeySet</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>7ccb55c9-86ea-4651-ac31-53e7e367115d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Platform/UserLoginLogout</testCaseId>
+      <testCaseId>Test Cases/API Coverage/ModulePlatform/UserLoginLogout</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8107'</initValue>
+      <initValue>'https://docker.virtocommerce.com:8017'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -131,7 +131,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Electronics'</initValue>
+      <initValue>'katalonCatalog'</initValue>
       <name>catalogName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -141,7 +141,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Cell phones'</initValue>
+      <initValue>'katalonCategory'</initValue>
       <name>categoryName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -166,7 +166,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Electronics'</initValue>
+      <initValue>'katalonStore'</initValue>
       <name>storeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -226,7 +226,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not contain specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not contain specsymbols.',, ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not contain specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not contain specsymbols.', ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
       <name>folderNameList</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -325,8 +325,8 @@
       <name>categoryCode</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <description>search query. used in moduleCatalog suite.</description>
+      <initValue>'qwe'</initValue>
       <name>keyword</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -346,22 +346,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>weight</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>height</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>width</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>product dimension</description>
-      <initValue>'100.00'</initValue>
+      <initValue>'100.0000'</initValue>
       <name>length</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -373,5 +373,180 @@
       <description></description>
       <initValue>''</initValue>
       <name>uploadedFileName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QwePricelist'</initValue>
+      <name>pricelistName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created price</description>
+      <initValue>''</initValue>
+      <name>priceId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Id of the created assignment</description>
+      <initValue>''</initValue>
+      <name>assignmentId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>contentMenuId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>updaed name of the &quot;member&quot; entity</description>
+      <initValue>''</initValue>
+      <name>updatedMemberName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>list of passwords to validate</description>
+      <initValue>[('') : 'PasswordRequiresUniqueChars', ('a') : 'PasswordTooShort', ('aaaaaaaa') : 'Passwords must have at least one uppercase (\'A\'-\'Z\').', ('AAAAAAAA') : 'Passwords must have at least one lowercase (\'a\'-\'z\').', ('Password1') : 'true']</initValue>
+      <name>passwordsListContent</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>taskId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>array or object that contains assets data structure</description>
+      <initValue>''</initValue>
+      <name>assetsData</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>folderParentUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>['Billing', 'Shipping', 'BillingAndShipping']</initValue>
+      <name>addressTypes</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>promoId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QwePromo'</initValue>
+      <name>promoName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created coupon</description>
+      <initValue>''</initValue>
+      <name>couponId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>contentItemId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>name of the created content item</description>
+      <initValue>'QweItem'</initValue>
+      <name>contentItemName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created folder</description>
+      <initValue>''</initValue>
+      <name>folderId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>name of the created placeholder</description>
+      <initValue>'qwePlaceholder'</initValue>
+      <name>placeholderName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>placeholderId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qwePublication'</initValue>
+      <name>publicationName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created publication name</description>
+      <initValue>''</initValue>
+      <name>publicationId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>catalog personalisation tag</description>
+      <initValue>'qweTag'</initValue>
+      <name>tag</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the tag assignment</description>
+      <initValue>''</initValue>
+      <name>tagAssignmentId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>name of the creaed channel</description>
+      <initValue>'qweChan'</initValue>
+      <name>channelName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the created channel</description>
+      <initValue>[]</initValue>
+      <name>channelId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>completeness of the created channel</description>
+      <initValue>''</initValue>
+      <name>channelCompleteness</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>semantic url used in seoInfos (slug url)</description>
+      <initValue>'QWE'</initValue>
+      <name>semanticUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>apiKey isActive flag status (keep it true)</description>
+      <initValue>'true'</initValue>
+      <name>apiKeyStatus</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>set apiKey to regular user (not admin authhorization)</description>
+      <initValue>''</initValue>
+      <name>userApiKey</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>userType to set for the created/updated user</description>
+      <initValue>'Manager'</initValue>
+      <name>userType</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'false'</initValue>
+      <name>isAdministratorStatus</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'store'</initValue>
+      <name>adminPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'admin'</initValue>
+      <name>adminUserName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'katalonOperator'</initValue>
+      <name>katalonUserName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>katalonOperator Email</description>
+      <initValue>'katalonOperator@mail.com'</initValue>
+      <name>katalonEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>id of the katalonOperator</description>
+      <initValue>''</initValue>
+      <name>katalonUserId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

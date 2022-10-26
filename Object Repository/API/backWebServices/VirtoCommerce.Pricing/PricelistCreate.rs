@@ -3,14 +3,14 @@
    <description></description>
    <name>PricelistCreate</name>
    <tag></tag>
-   <elementGuidId>f44fa7f2-cd46-4bdb-9769-aa1ed5dcb810</elementGuidId>
+   <elementGuidId>beb6ba6e-95a9-4d84-b37b-cc694babd4fc</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;QwePricelist\&quot;,\n  \&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;\n//  \&quot;outerId\&quot;: \&quot;Electronics\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n  \&quot;currency\&quot;: \&quot;USD\&quot;\n//  \&quot;outerId\&quot;: \&quot;Electronics\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>created pricelist name</description>
+      <id>365b4434-f262-4313-8679-fc3ea68d0bac</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

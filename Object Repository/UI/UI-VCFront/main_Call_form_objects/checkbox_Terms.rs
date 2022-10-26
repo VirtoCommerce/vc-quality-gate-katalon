@@ -6,16 +6,16 @@
    <elementGuidId>3d8e7bfa-898d-48cf-af4b-a50a30ea6d34</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//form[@id='contact_us_form']/div[8]/label</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
-         <value>//label[@class = 'form-checkbox__label']</value>
+         <value>//label[@class = 'form-checkbox__label' and @for = 'agree']</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>label.form-checkbox__label</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//form[@id='contact_us_form']/div[8]/label</value>
       </entry>
    </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
@@ -35,7 +35,7 @@
       <value>form-checkbox__label</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>for</name>
       <type>Main</type>

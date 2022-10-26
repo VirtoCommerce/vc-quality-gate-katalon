@@ -24,10 +24,12 @@ WebUI.comment('TEST CASE: categories management - update a category')
 
 'UPDATE CATEGORY'
 GlobalVariable.categoryName = (GlobalVariable.categoryName + 'UPD')
+GlobalVariable.semanticUrl = GlobalVariable.categoryName//used for seoInfo
 categoryUpdate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesUpdate', [
 	('catalogId') : GlobalVariable.catalogId,
 	('code') : GlobalVariable.categoryCode,
 	('name') : GlobalVariable.categoryName,
-	('categoryId') : GlobalVariable.categoryId
+	('categoryId') : GlobalVariable.categoryId,
+	('semanticUrl') : GlobalVariable.semanticUrl
 	]))
 	

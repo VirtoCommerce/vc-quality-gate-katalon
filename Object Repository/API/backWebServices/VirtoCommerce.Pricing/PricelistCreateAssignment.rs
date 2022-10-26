@@ -3,14 +3,14 @@
    <description></description>
    <name>PricelistCreateAssignment</name>
    <tag></tag>
-   <elementGuidId>6dbbb122-cd63-4f1e-a9f8-024856493e49</elementGuidId>
+   <elementGuidId>70e5a737-1af8-4f18-9f87-b051f8801531</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n    \&quot;catalogId\&quot;: \&quot;${GlobalVariable.catalogId}\&quot;,\n    \&quot;pricelistId\&quot;: \&quot;${GlobalVariable.pricelistId}\&quot;,\n    \&quot;name\&quot;: \&quot;QweAssignment\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n    \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n    \&quot;pricelistId\&quot;: \&quot;${pricelistId}\&quot;,\n    \&quot;name\&quot;: \&quot;${name}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,27 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>id of the assigned catalog</description>
+      <id>5b6eb33e-5988-49ea-90d3-10e7dbbeda2f</id>
+      <masked>false</masked>
+      <name>catalogId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>id of the assigned pricelist</description>
+      <id>94c7952d-7fa2-406e-96a5-9f69230ccd31</id>
+      <masked>false</masked>
+      <name>pricelistId</name>
+   </variables>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>assignment name</description>
+      <id>eb381f14-533a-4f42-92d7-32dbe185ee4c</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

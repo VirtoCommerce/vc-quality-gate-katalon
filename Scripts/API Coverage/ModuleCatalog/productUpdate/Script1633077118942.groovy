@@ -18,7 +18,11 @@ import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
 
-WebUI.comment('TEST CASE: Products management - add product')
+WebUI.comment('TEST CASE: Products management - update product')
+/*This test case is very similar to
+ * createProduct, the main difference that it operates
+ * productId (id of the created product)
+ * which is not used in createProduct*/
 
 'UPDATE A PRODUCT'
 createUpdateProduct = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/ProductUpdate', 
@@ -27,13 +31,15 @@ createUpdateProduct = WS.sendRequestAndVerify(findTestObject('API/backWebService
 	('code') : GlobalVariable.sku,
 	('catalogId') : GlobalVariable.catalogId,
 	('categoryId') : GlobalVariable.categoryId,
+	//this is what makes it different
 	('id') : GlobalVariable.productId,
 	('content') : GlobalVariable.content,
 	('weightUnit') : GlobalVariable.weightUnit,
 	('weight') : GlobalVariable.weight,
 	('height') : GlobalVariable.height,
 	('width') : GlobalVariable.width,
-	('length') : GlobalVariable.length
+	('length') : GlobalVariable.length,
+	('assets') : GlobalVariable.assetsData 
 	]))
 WS.verifyElementPropertyValue(createUpdateProduct, 'name', GlobalVariable.productName)
 WS.verifyElementPropertyValue(createUpdateProduct, 'reviews[0].content', GlobalVariable.content)
@@ -45,7 +51,7 @@ WS.verifyElementPropertyValue(createUpdateProduct, 'length', GlobalVariable.leng
 WS.verifyElementPropertyValue(createUpdateProduct, 'id', GlobalVariable.productId)
 
 
-'SAVE CATALOG ID TO USE IN UPDATE AND DELETE CASES'
+'SAVE PRODUCT ID TO USE IN UPDATE AND DELETE CASES'
 GlobalVariable.productId = WS.getElementPropertyValue(createUpdateProduct, 'id')
 WebUI.comment(GlobalVariable.productId)
 
@@ -59,6 +65,6 @@ println GlobalVariable.keyword
 println GlobalVariable.productName
 println GlobalVariable.productId
 
-//'RETURN DATA'
-//return createUpdateProduct
+'RETURN DATA'
+return createUpdateProduct
 

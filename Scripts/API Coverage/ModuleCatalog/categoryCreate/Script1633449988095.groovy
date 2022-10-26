@@ -23,7 +23,7 @@ WebUI.comment('TEST CASE: categories management - create a new category')
 
 
 'CREATE NEW CATEGORY'
-GlobalVariable.categoryName = 'QWECategory'
+GlobalVariable.categoryName = 'Category'
 categoryCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesCreate', [
 	('catalogId') : GlobalVariable.catalogId,
 	('code') : GlobalVariable.categoryCode,
@@ -36,10 +36,6 @@ WS.verifyElementPropertyValue(categoryCreate, 'code', GlobalVariable.categoryCod
 
 
 'EXTRACT CATEGORY ID'
-//I guess it would be better to stick to the generic 'id' global variable
-//To keep things versitale, need to discuss
-//Ive read that it is possible to write return(test case name variable)
-//And it is possible to receive this in another test case, need to explore
 GlobalVariable.categoryId = WS.getElementPropertyValue(categoryCreate, 'id')
 WebUI.comment(GlobalVariable.categoryId)
 

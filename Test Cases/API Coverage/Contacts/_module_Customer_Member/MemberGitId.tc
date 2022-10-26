@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Member by ID - GET reques</description>
+   <name>MemberGitId</name>
+   <tag></tag>
+   <comment>TEST CASE: Member get by ID</comment>
+   <testCaseGuid>c28fb924-9f82-4ae6-b910-7f0e6e0aa0cb</testCaseGuid>
+</TestCaseEntity>

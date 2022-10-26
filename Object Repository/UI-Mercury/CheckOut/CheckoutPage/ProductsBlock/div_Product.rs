@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_Product</name>
+   <tag></tag>
+   <elementGuidId>96e50f55-ceb0-439a-812a-3ae7b9873006</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>.w-full.flex-grow div:nth-of-type(1) > .p-5 > .flex-col</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[2]/div/div/div/div/div/div[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>d898a701-9888-4e97-b51d-9fb67d33185a</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>.w-full.flex-grow div:nth-of-type(1) > .p-5 > .flex-col</value>
+      <webElementGuid>d7aa1eaa-2a71-4921-8f00-8a3ec9d5074d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>flex flex-col lg:flex-row lg:justify-between lg:items-center flex-1</value>
+      <webElementGuid>4232472c-0929-44b4-84da-2ec0e016256e</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[2]/div/div/div/div/div/div[2]</value>
+      <webElementGuid>3f348a29-bb44-4fd1-ae88-71a71dbb442c</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

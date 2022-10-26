@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete the created channel</description>
+   <name>channelsDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a0e951d3-5aa4-45c9-9754-338b06b28ab5</testCaseGuid>
+</TestCaseEntity>

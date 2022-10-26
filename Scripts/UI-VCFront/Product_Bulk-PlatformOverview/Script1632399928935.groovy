@@ -26,6 +26,8 @@ List<String> urls = [
 for (int i; i < urls.size(); i++) {
 	WebUI.navigateToUrl(GlobalVariable.urlFront + '/' + urls.get(i))
 	
+	println('Current URL is: ' + WebUI.getUrl())
+	
 	WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
 	WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 'Doe QA')
@@ -35,16 +37,18 @@ for (int i; i < urls.size(); i++) {
 	WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
 	
 	if (urls.get(i) == urls[0]) {
-		println urls.get(i)
-		WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Job_role'), 'QA')
+//		println urls.get(i)
+//		WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Job_role'), 'QA')
 		
 		WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 		
 		WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
 		
+		WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Consent'), 150, 10)
+		
 		WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 	} else {
-		println urls.get(i)
+//		println urls.get(i)
 		WebUI.selectOptionByValue(findTestObject('UI/UI-VCFront/main_Call_form_objects/select_Job_title'), 'Developer', true)
 		
 		WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)

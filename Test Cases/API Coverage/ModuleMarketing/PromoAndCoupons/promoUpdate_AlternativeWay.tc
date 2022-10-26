@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update promo via parsed get response and a dataTemplate</description>
+   <name>promoUpdate_AlternativeWay</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5274a30d-0e6a-464a-ac2e-e3704c8541ab</testCaseGuid>
+</TestCaseEntity>

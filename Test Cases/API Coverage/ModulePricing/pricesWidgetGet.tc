@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>get prices in the catalog/product blade</description>
+   <name>pricesWidgetGet</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>1c901324-388b-425e-bc55-a73a67768ded</testCaseGuid>
+</TestCaseEntity>

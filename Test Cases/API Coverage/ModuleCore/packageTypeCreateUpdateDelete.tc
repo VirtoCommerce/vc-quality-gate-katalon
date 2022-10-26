@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create update and delete packege type</description>
+   <name>packageTypeCreateUpdateDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>adaa953c-0812-4fcf-b055-40cd11b3107e</testCaseGuid>
+</TestCaseEntity>

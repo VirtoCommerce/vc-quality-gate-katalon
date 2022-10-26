@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete 2 organizations by orgIds</description>
+   <name>orgBulkDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d482e28f-e9ee-464f-a227-c8a29a35e0dd</testCaseGuid>
+</TestCaseEntity>

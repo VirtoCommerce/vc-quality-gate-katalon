@@ -19,10 +19,16 @@ import groovy.json.JsonSlurper
 
 WebUI.comment("TEST CASE: Members BULK Create")
 
+
+'CREATE BULK MEMBERS'
+name1 = GlobalVariable.firstName + '1'
+name2 = GlobalVariable.firstName + '2'
 //WebUI.comment("MEMBER ORG ID IS : " + GlobalVariable.memberType[0])
-
-responseBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreateBulk'))
-
+responseBulk = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreateBulk', [
+	('name1') : name1,
+	('name2') : name2,
+	('memberType') : GlobalVariable.memberType[0]
+	]))
 def memberJson = new JsonSlurper().parseText(responseBulk.getResponseBodyContent())
 GlobalVariable.memberId = memberJson.id
 WebUI.comment("MEMBER ID IS : " + GlobalVariable.memberId)

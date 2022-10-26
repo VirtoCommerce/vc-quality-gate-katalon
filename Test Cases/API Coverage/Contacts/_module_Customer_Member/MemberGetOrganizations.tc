@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Get Org info</description>
+   <name>MemberGetOrganizations</name>
+   <tag></tag>
+   <comment>TEST CASE: Member search ORGANIZATIONS</comment>
+   <testCaseGuid>d82899cf-3ed9-413c-91ad-e3a48dda3766</testCaseGuid>
+</TestCaseEntity>

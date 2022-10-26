@@ -17,6 +17,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>8845d677-534e-47d2-8e1f-0d3fe59e56cc</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -24,6 +25,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>c1c71865-f0cf-4383-8d98-2801da462a50</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -38,7 +40,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'Electronics'</defaultValue>
+      <defaultValue>'katalonStore'</defaultValue>
       <description></description>
       <id>8d203318-f8a2-4fb3-b676-4c1aa847c475</id>
       <masked>false</masked>

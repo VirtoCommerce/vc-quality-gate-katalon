@@ -6,20 +6,17 @@
    <elementGuidId>28477bf3-6bf3-4cd1-b8df-204ffd30efdd</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
-   <httpBodyContent>{
-  &quot;text&quot;: &quot;&quot;,
-  &quot;contentType&quot;: &quot;text/plain&quot;,
-  &quot;charset&quot;: &quot;UTF-8&quot;
-}</httpBodyContent>
-   <httpBodyType>text</httpBodyType>
+   <httpBodyContent></httpBodyContent>
+   <httpBodyType></httpBodyType>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>Content-Type</name>
       <type>Main</type>
-      <value>application/json</value>
+      <value>text/plain</value>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +25,7 @@
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
    </httpHeaderProperties>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/contacts?ids=${contactId}&amp;ids=${contactId2}</restUrl>
@@ -35,17 +33,20 @@
    <soapBody></soapBody>
    <soapHeader></soapHeader>
    <soapRequestMethod></soapRequestMethod>
+   <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
+   <socketTimeout>-1</socketTimeout>
+   <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>''</defaultValue>
-      <description></description>
+      <description>GlobalVariable.contactId</description>
       <id>1d850b35-193f-4926-a481-8568555dd375</id>
       <masked>false</masked>
       <name>contactId</name>
    </variables>
    <variables>
       <defaultValue>'0'</defaultValue>
-      <description></description>
+      <description>another GlobalVariable.contactId</description>
       <id>d78810e5-3fe5-445a-9470-a0509f551f9d</id>
       <masked>false</masked>
       <name>contactId2</name>
@@ -57,14 +58,13 @@ import com.kms.katalon.core.testobject.ResponseObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webservice.verification.WSResponseManager
 
-import groovy.json.JsonSlurper
-import internal.GlobalVariable as GlobalVariable
+import groovy.json.JsonOutput
 import com.kms.katalon.core.util.KeywordUtil
 
-RequestObject request = WSResponseManager.getInstance().getCurrentRequest()
-ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
 
-KeywordUtil.logInfo(response.responseBodyContent)
+ResponseObject response = WSResponseManager.getInstance().getCurrentResponse()
+def prettyJson = JsonOutput.prettyPrint(response.getResponseBodyContent())
+KeywordUtil.logInfo(prettyJson)
 WS.verifyResponseStatusCode(response, 204)</verificationScript>
    <wsdlAddress></wsdlAddress>
 </WebServiceRequestEntity>

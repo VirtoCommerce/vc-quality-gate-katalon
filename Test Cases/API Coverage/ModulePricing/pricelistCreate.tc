@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create new pricelist</description>
+   <name>pricelistCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bdb45f7e-879a-480b-8d81-9de7b6eaaa84</testCaseGuid>
+</TestCaseEntity>

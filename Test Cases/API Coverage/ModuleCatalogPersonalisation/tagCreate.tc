@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>add a tag to the platform dictionary </description>
+   <name>tagCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fed1c266-ca05-4253-9d4d-bfca95068499</testCaseGuid>
+</TestCaseEntity>

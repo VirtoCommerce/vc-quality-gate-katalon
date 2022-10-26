@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>the test is timing dependant. cancellation is only activated if indexation lasts long enough. Otherwise assertion for data not being updated fails.</description>
+   <name>zDRAFT.indexationRunAndCancel</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d5be3a32-dfcc-41fc-8b51-cac5869475e8</testCaseGuid>
+</TestCaseEntity>

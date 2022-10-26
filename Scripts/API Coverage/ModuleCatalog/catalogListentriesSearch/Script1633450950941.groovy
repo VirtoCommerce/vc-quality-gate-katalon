@@ -25,9 +25,9 @@ WebUI.comment('TEST CASE: Products management - Listentries Search')
 
 
 'VERIFY VARS'
-println GlobalVariable.keyword
-println GlobalVariable.productName
-println GlobalVariable.productId
+WebUI.comment(GlobalVariable.keyword)
+WebUI.comment(GlobalVariable.productName)
+WebUI.comment(GlobalVariable.productId)
 
 'SEARCH FOR THE PRODUCT'
 //Have deleted the "catalogId" request header from the request below as it was returning totalCount = 1,
@@ -42,20 +42,20 @@ println GlobalVariable.productId
 //WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/indexWithoutDeleting'))
 WS.delay(30)
-println GlobalVariable.keyword
+WebUI.comment(GlobalVariable.keyword)
  verifyDeleted = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Catalog/ListentriesSearch', [
-	('keyword') : GlobalVariable.keyword
+	('keyword') : GlobalVariable.keyword 
 	]))	
 //name = WS.getElementPropertyValue(verifyDeleted,'listEntries[0].name')
-//println name
+//WebUI.comment(name)
 //boolean verification = WS.containsString(verifyDeleted, GlobalVariable.keyword, false, FailureHandling.OPTIONAL)
-//println verification
+//WebUI.comment(verification)
 //assert verification == false
 WS.verifyElementPropertyValue(verifyDeleted, 'listEntries', '[]')
-
+return verifyDeleted
 
 'VERIFY VARS'
-println GlobalVariable.keyword
-println GlobalVariable.productName
-println GlobalVariable.productId
+WebUI.comment(GlobalVariable.keyword)
+WebUI.comment(GlobalVariable.productName)
+WebUI.comment(GlobalVariable.productId)
 

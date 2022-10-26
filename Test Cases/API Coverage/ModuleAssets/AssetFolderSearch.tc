@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Find the new folder in the list by keyword</description>
+   <name>AssetFolderSearch</name>
+   <tag></tag>
+   <comment>TEST CASE: Assets. Search folder
+Local URL is: &quot; + GlobalVariable.localUrl
+Folder URL is: &quot; + GlobalVariable.folderUrl</comment>
+   <testCaseGuid>e45c1541-ff96-4512-8372-91b9a7be4fa0</testCaseGuid>
+</TestCaseEntity>

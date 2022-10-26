@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>token validation scenarios</description>
+   <name>AuthValidation</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fdea454c-a883-4250-aec3-d47dc29d42d0</testCaseGuid>
+</TestCaseEntity>

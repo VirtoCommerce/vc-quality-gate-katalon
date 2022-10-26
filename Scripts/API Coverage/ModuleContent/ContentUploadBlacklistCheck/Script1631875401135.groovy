@@ -25,7 +25,7 @@ import com.kms.katalon.core.util.KeywordUtil
 WebUI.comment('TEST CASE: Content. Check errors during to uploading a new file')
 
 //UPDATE THE BLACKLIST CONFIGURATION
-WS.callTestCase(findTestCase('Test Cases/API Coverage/Platform/SettingsUpdateBlacklist'), null,
+WS.callTestCase(findTestCase('API Coverage/ModulePlatform/SettingsUpdateBlacklist'), null,
 FailureHandling.STOP_ON_FAILURE)
 
 
@@ -43,6 +43,6 @@ for (String contentType : contentTypes.keySet()) {
 		('folderName') : GlobalVariable.folderName,
 		('fileName') : fileName
 		]))//;FailureHandling.OPTIONAL
-	WS.verifyResponseStatusCode(upload, 500)
+	WS.verifyResponseStatusCode(upload, 405)
 	WS.containsString(upload, errorMessage, false)
 	}

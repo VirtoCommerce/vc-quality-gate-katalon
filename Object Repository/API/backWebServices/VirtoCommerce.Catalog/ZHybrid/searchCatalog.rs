@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${GlobalVariable.catalogName}\&quot;,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;searchPhrase\&quot;: \&quot;${catalogName}\&quot;,\n  \&quot;take\&quot;: 10\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -41,6 +41,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>'Headphones'</defaultValue>
+      <description></description>
+      <id>ec464c06-fa40-4549-b76a-8a28fbe3fb9d</id>
+      <masked>false</masked>
+      <name>catalogName</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

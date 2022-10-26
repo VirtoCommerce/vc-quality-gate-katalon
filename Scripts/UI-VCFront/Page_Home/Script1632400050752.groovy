@@ -20,6 +20,8 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.navigateToUrl(GlobalVariable.urlFront)
 
+println('Current URL is: ' + WebUI.getUrl())
+
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_First_name'), 'John QA')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 'Doe QA')
@@ -28,11 +30,13 @@ WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Email')
 
 WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Company'), 'VC QA test')
 
-WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Job_role'), 'QA')
+//WebUI.setText(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Job_role'), 'QA')
 
 WebUI.scrollToElement(findTestObject('UI/UI-VCFront/main_Call_form_objects/input_Last_name'), 1)
 
 WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Terms'), 150, 10)
+
+WebUI.clickOffset(findTestObject('UI/UI-VCFront/main_Call_form_objects/checkbox_Consent'), 150, 10)
 
 WebUI.click(findTestObject('UI/UI-VCFront/main_Call_form_objects/button_Submit'))
 
