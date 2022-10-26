@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>create catalog</description>
+   <description></description>
    <name>KatalonDataCreate</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>e58cac64-53db-47a0-ad52-bc5aad1edd11</testCaseGuid>
+   <testCaseGuid>ee35776d-49e5-4982-8744-846c6c7fde19</testCaseGuid>
 </TestCaseEntity>
