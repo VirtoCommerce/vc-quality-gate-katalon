@@ -15,14 +15,14 @@
       <guid>9172ca52-d308-4892-ba5d-86fdcdaa6d3d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/KatalonSampleDataOperations/KatalonCreateOperator</testCaseId>
+      <testCaseId>Test Cases/qweTest/KatalonCreateOperator</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
       <guid>50b02601-2617-45d4-960e-fbee5e33ef6e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/KatalonSampleDataOperations/KatalonDataCreate</testCaseId>
+      <testCaseId>Test Cases/qweTest/KatalonDataCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
