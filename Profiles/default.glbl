@@ -131,7 +131,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Electronics'</initValue>
+      <initValue>'katalonCatalog'</initValue>
       <name>catalogName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -141,7 +141,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Cell phones'</initValue>
+      <initValue>'katalonCategory'</initValue>
       <name>categoryName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -166,7 +166,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Electronics'</initValue>
+      <initValue>'katalonStore'</initValue>
       <name>storeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
