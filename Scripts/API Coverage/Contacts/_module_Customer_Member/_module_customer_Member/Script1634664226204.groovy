@@ -41,6 +41,10 @@ null)
 memberUpdate = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberUpdate'),
 	null)
 
+//memberUpdateDebug = WS.callTestCase(findTestCase('Test Cases/_DEBUG/_debug'),
+//	null)
+
+
 '6'
 memberGitId = WS.callTestCase(findTestCase('Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberGitId'),
 	null)
