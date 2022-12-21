@@ -12,24 +12,24 @@
    <rerunImmediately>false</rerunImmediately>
    <testSuiteGuid>ca8e399b-fc13-4871-971b-4d05f817d3a0</testSuiteGuid>
    <testCaseLink>
-      <guid>776516d4-10e6-488a-9113-aeba8fe6e62e</guid>
+      <guid>faae45a7-afa3-4864-aaa5-168f74542bec</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/Authorization/AuthBackToken</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/KatalonSampleData/KatalonCreateOperator</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>47873c37-9bf5-40e4-bc4b-a6be95427d4d</guid>
+      <guid>f6ba2472-a3b9-4787-8c6b-6ab039f526b4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModulePlatform/ApiKeySet</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/KatalonSampleData/KatalonDataCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>9957672d-d819-4adf-b385-a9d67c4f6b3d</guid>
+      <guid>74196e9d-c629-456e-b9bf-f172d7842261</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/Contacts/_module_Customer_Member/MemberCreation</testCaseId>
+      <testCaseId>Test Cases/API Coverage/Contacts/MemberCreation</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
