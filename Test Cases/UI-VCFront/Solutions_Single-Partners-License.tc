@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test forms on the Solution\Partners\License pages</description>
-   <name>Solutions_Single-Partners-License</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>9cb38a3a-03e3-4047-8309-cb9cbd752c7e</testCaseGuid>
-</TestCaseEntity>

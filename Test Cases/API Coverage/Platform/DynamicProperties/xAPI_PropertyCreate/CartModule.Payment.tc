@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create a new propertys for CartModule - Payment</description>
-   <name>CartModule.Payment</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>510633f9-a017-406e-bbfa-c67970781b63</testCaseGuid>
-</TestCaseEntity>

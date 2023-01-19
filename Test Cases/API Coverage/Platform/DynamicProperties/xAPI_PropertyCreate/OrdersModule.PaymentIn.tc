@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create a new propertys for OrdersModule - PaymentIn</description>
-   <name>OrdersModule.PaymentIn</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>ecdaa35b-65b4-4e31-b4b1-88357eebed5e</testCaseGuid>
-</TestCaseEntity>

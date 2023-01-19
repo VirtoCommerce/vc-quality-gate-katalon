@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test forms on the Solution\Partners pages</description>
-   <name>Solutions_Bulk-Partners</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>7e552875-22c8-41d5-940f-34d19a5cfab8</testCaseGuid>
-</TestCaseEntity>

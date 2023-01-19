@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>get assets folder urls' for uploading assetes</description>
-   <name>assetGetList</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>fb90b14b-596f-44c2-94c0-f5eef7a531bd</testCaseGuid>
-</TestCaseEntity>

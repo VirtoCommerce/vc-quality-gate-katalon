@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>update product</description>
-   <name>productUpdate</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>81ac8910-5c79-4589-81b1-da2a49f05592</testCaseGuid>
-</TestCaseEntity>

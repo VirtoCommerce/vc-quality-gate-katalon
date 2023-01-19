@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>AddProductToCart_Anonim_ProcessOrder_Air_Authorize</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>4004a5f0-ca2b-4a35-917f-d03c9191b974</testCaseGuid>
-</TestCaseEntity>

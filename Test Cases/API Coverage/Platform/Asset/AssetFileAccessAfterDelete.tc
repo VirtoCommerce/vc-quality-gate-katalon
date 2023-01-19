@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Check access to the deleted file. Unable to download</description>
-   <name>AssetFileAccessAfterDelete</name>
-   <tag></tag>
-   <comment>TEST CASE: Assets. Check access to file
-GlobalVariable.uploadFileUrl</comment>
-   <testCaseGuid>2cdaed9f-406b-473b-b6a1-31fd9686d3c9</testCaseGuid>
-</TestCaseEntity>

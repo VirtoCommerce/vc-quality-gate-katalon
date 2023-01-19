@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>verify object is deleted by  keyword (can be set in a dedicaded test case or in test suit precondition)
-May be related to all catalog entities (product/category/catalog)</description>
-   <name>catalogListentriesSearch</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>0dc1b9d0-70b2-491e-8cd8-e81c1ffee6ac</testCaseGuid>
-</TestCaseEntity>

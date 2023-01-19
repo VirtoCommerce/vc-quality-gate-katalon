@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>DiagnosticsSystemInfo</name>
-   <tag></tag>
-   <comment>TEST CASE: Get system information</comment>
-   <testCaseGuid>ea2ab938-13b3-409b-b4ea-2035e7ba75ab</testCaseGuid>
-</TestCaseEntity>

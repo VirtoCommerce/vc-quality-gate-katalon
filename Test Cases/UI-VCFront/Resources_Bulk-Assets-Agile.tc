@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test forms on the Assets\Agile pages</description>
-   <name>Resources_Bulk-Assets-Agile</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>21f9c3b3-5023-4670-9672-3f5d3dda0238</testCaseGuid>
-</TestCaseEntity>

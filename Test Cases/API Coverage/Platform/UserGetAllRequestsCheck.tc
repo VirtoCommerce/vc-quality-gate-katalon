@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Check 6 different Get requests for Admin user info </description>
-   <name>UserGetAllRequestsCheck</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>7b52f353-498f-4263-9fa4-0d5554ca0afe</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Get updated User by Id and verify changes</description>
-   <name>UserGetById</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>cb5eef0e-5e28-4ad1-bd51-d98199d1eccb</testCaseGuid>
-</TestCaseEntity>

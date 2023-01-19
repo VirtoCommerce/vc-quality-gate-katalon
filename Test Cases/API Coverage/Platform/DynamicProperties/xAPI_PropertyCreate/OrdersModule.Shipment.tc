@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create a new propertys for OrdersModule - Shipment</description>
-   <name>OrdersModule.Shipment</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>3a99023f-94f0-469a-8c22-97b7c4efe682</testCaseGuid>
-</TestCaseEntity>

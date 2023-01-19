@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>DRAFT.AssetFileUploadUrlCatalog</name>
-   <tag></tag>
-   <comment>TEST CASE: Assets. Upload ZIP file by URL</comment>
-   <testCaseGuid>36cf0aa3-8ec8-4781-baa9-69f72aa8a9b2</testCaseGuid>
-</TestCaseEntity>

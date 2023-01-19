@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>add (update) product image from assets</description>
-   <name>productUpdateImage</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>e215d77a-bd9f-45af-8aa6-e964a37b0ea9</testCaseGuid>
-</TestCaseEntity>

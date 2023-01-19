@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Add, update, delete new property of short text</description>
-   <name>CartModule.Payment</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>ea1327bc-23da-4b06-9bca-2353c05d9c02</testCaseGuid>
-</TestCaseEntity>

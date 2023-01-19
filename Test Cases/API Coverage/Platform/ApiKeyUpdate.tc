@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Update ApiKey</description>
-   <name>ApiKeyUpdate</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>078b41a0-5bc8-40a8-a9fa-25c37de0873c</testCaseGuid>
-</TestCaseEntity>

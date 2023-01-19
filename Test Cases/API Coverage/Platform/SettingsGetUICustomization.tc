@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Get UI customization info status</description>
-   <name>SettingsGetUICustomization</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>fb7e9f37-3c5d-4b5a-8c5b-ae36188101c6</testCaseGuid>
-</TestCaseEntity>

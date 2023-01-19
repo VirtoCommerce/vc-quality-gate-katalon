@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Search member in the list</description>
-   <name>MemberSearch</name>
-   <tag></tag>
-   <comment>TEST CASE: Member search</comment>
-   <testCaseGuid>3f0c4240-c9d9-4f9f-b734-cc28e436e33d</testCaseGuid>
-</TestCaseEntity>

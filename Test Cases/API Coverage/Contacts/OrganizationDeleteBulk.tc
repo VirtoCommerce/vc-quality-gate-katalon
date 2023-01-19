@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>OrganizationDeleteBulk</name>
-   <tag></tag>
-   <comment>TEST CASE: Organization BULK delete</comment>
-   <testCaseGuid>77271c5e-5bc3-43b1-a3e5-97452dcd5919</testCaseGuid>
-</TestCaseEntity>

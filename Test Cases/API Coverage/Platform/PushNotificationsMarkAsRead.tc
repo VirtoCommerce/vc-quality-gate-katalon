@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>PushNotificationsMarkAsRead</name>
-   <tag></tag>
-   <comment>TEST CASE: Mark Push Notifications as Read</comment>
-   <testCaseGuid>b3962b50-8d0b-47f9-9578-1974211de135</testCaseGuid>
-</TestCaseEntity>

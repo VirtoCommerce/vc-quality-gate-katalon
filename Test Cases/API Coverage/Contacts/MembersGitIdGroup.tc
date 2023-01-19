@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Get member ID</description>
-   <name>MembersGitIdGroup</name>
-   <tag></tag>
-   <comment>TEST CASE: Member get by ID group</comment>
-   <testCaseGuid>dac64683-e020-45be-8480-f8bceef0b4b8</testCaseGuid>
-</TestCaseEntity>

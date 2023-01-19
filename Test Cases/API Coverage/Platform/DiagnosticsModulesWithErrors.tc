@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>DiagnosticsModulesWithErrors</name>
-   <tag></tag>
-   <comment>TEST CASE: Get modules with errors</comment>
-   <testCaseGuid>9c648258-1a58-4a47-be73-1657654f66a5</testCaseGuid>
-</TestCaseEntity>

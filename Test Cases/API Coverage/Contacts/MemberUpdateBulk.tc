@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Update contact</description>
-   <name>MemberUpdateBulk</name>
-   <tag></tag>
-   <comment>TEST CASE: Member BULK update
-0 ID IS : &quot; + GlobalVariable.memberId[0] + &quot; AND &quot; + GlobalVariable.memberType[1]</comment>
-   <testCaseGuid>35daaf4d-f4fe-4139-9c12-cab4323abbaf</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Add, update, delete new property of short text</description>
-   <name>CartModule.Shipment</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>3930927d-80bc-4388-ad82-3eba7505b493</testCaseGuid>
-</TestCaseEntity>

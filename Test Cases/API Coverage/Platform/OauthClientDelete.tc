@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Delete OAuth client and verify</description>
-   <name>OauthClientDelete</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>48b19b36-bea0-470a-8282-b46495b7b199</testCaseGuid>
-</TestCaseEntity>

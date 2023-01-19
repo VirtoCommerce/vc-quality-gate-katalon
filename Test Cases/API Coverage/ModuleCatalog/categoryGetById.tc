@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Get the category</description>
-   <name>categoryGetById</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>de7ff1e3-7665-4892-a306-59f89473dee6</testCaseGuid>
-</TestCaseEntity>

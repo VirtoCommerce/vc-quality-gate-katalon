@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create a new propertys for CartModule - ShoppingCart</description>
-   <name>CartModule.ShoppingCart</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>8b9e13f4-1d2a-4036-8e9e-02e9e2629db3</testCaseGuid>
-</TestCaseEntity>

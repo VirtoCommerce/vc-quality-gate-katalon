@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>EmployeesCreation</name>
-   <tag></tag>
-   <comment>TEST CASE : Create employee
-ID IS : &quot; + GlobalVariable.employeeId</comment>
-   <testCaseGuid>0e4d776b-a787-47fe-b889-39f8186f275b</testCaseGuid>
-</TestCaseEntity>

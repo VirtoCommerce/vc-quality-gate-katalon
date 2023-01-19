@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>1. Create a product
-2. Get p.q product id</description>
-   <name>ProductCreate</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>b6f9c082-e1d2-40fb-a740-975079c43649</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create a new propertys for ContentModule - FrontMatterHeaders</description>
-   <name>ContentModule.FrontMatterHeaders</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>4014110d-2409-49f8-be26-ea20bad46abf</testCaseGuid>
-</TestCaseEntity>

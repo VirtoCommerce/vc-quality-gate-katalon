@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Update setting information of boolean type</description>
-   <name>SettingsUpdateBoolean</name>
-   <tag></tag>
-   <comment>TEST CASE: Update setting</comment>
-   <testCaseGuid>c38ee228-7cba-4687-89db-eda8a748ec0e</testCaseGuid>
-</TestCaseEntity>

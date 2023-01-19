@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create a new propertys for CustomerModule - Vendor</description>
-   <name>CustomerModule.Vendor</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>b4e6a89e-bbd2-45bb-9c4b-ecacf68d3fa7</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>This test check if sorting by ASC works properly for GraphQL products query</description>
-   <name>Products_Sort_ASC</name>
-   <tag>sorting, products</tag>
-   <comment></comment>
-   <testCaseGuid>9fdd982d-3cbe-4218-b89e-15ef29056105</testCaseGuid>
-</TestCaseEntity>

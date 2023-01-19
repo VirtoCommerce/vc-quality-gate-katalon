@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description></description>
-   <name>PushNotificationsSearch</name>
-   <tag></tag>
-   <comment>TEST CASE: Search Push Notifications</comment>
-   <testCaseGuid>9d2705aa-481e-4e0a-b43a-90d748b12177</testCaseGuid>
-</TestCaseEntity>

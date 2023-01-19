@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Test forms on the Solution\Partners\Cloud pages</description>
-   <name>Solutions_Single-Partners-Cloud</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>1f35165e-4c10-4fef-ac07-c252fd7864ba</testCaseGuid>
-</TestCaseEntity>

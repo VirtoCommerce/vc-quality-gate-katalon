@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>create blob folder for uploading assets</description>
-   <name>assetsCreateBlobFolder</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>d0ce4bfa-9b92-46fc-8764-8e3c67c5b911</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>Create a new propertys for CustomerModule - Employee</description>
-   <name>CustomerModule.Employee</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>b4fe33f7-983e-4a3b-bed1-f8b550274ff2</testCaseGuid>
-</TestCaseEntity>
