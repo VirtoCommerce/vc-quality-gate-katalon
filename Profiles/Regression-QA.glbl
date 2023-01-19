@@ -11,17 +11,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://regression-storefront.qa.govirto.com'</initValue>
+      <initValue>''</initValue>
       <name>urlFront</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ce3d045144724f2b9ad070180f3c7b82'</initValue>
+      <initValue>''</initValue>
       <name>api_key</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://regression-platform.qa.govirto.com'</initValue>
+      <initValue>''</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
