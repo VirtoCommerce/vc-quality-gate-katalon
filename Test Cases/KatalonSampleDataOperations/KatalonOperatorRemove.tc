@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>remove katalon operator</description>
+   <name>KatalonOperatorRemove</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d18bb009-6d68-468e-a380-f5d39c2f0b84</testCaseGuid>
+</TestCaseEntity>

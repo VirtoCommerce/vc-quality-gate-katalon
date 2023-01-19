@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Member update</description>
+   <name>MemberUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d7f19634-9e5f-4150-b9d2-223ec03f322c</testCaseGuid>
+</TestCaseEntity>

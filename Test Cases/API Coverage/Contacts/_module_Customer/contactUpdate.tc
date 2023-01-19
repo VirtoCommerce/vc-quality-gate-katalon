@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update contact name by contact id</description>
+   <name>contactUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d418e234-802d-4c65-8515-fd7e19c32497</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>get by id</description>
+   <name>organizationGet</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f58ea17d-6233-4382-84cf-658d5a1c2e66</testCaseGuid>
+</TestCaseEntity>

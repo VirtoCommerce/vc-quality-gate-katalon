@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create several products, add to pricelist, verify, delete</description>
+   <name>pricesAddDeleteBulk</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0416c045-e293-4347-bbfa-9b04080bb3f7</testCaseGuid>
+</TestCaseEntity>

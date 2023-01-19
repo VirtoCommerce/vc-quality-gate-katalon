@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>collect all the katalon related data</description>
+   <name>KatalonDataGet</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e8ff06f6-021a-44aa-9965-5328216e3940</testCaseGuid>
+</TestCaseEntity>

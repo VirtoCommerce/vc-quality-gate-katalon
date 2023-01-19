@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create update delete currency</description>
+   <name>currenciesCreateUpdateDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e5222ac2-f174-48e5-82ca-68b7f388ab1e</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>cerates data for several catalog conditions (one unique promo per condition)</description>
+   <name>z_DRAFT_promo_CreateTestData_SingleCycle</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>47cb1e44-c5b7-4f8c-a2fb-aa78841f521f</testCaseGuid>
+</TestCaseEntity>

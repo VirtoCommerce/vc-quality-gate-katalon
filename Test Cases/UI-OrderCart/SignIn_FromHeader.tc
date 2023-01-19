@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SignIn_FromHeader</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5c26112f-c156-4058-bf12-89cbf11f0b7a</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>c31602a6-2e3c-4ad8-8afb-c1e477038b71</id>
+      <masked>false</masked>
+      <name>login</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>40bab080-7371-4662-a731-143f22101a5d</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+</TestCaseEntity>

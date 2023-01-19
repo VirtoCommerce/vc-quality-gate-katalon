@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>div_GiftsBlock</name>
+   <tag></tag>
+   <elementGuidId>9cccd8a2-1fb0-493b-9340-97847b55689e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = '+ Add a GiftBox' or . = '+ Add a GiftBox')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>div</value>
+      <webElementGuid>57aba26e-f687-4511-b68f-daa3891d6b60</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>bg-white lg:mb-6 lg:rounded shadow-inner pb-8 lg:shadow</value>
+      <webElementGuid>9391dc52-e595-4f45-96e7-ecaaf5b18777</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;app&quot;)/div[@class=&quot;min-h-screen flex flex-col font-lato overflow-x-hidden&quot;]/div[@class=&quot;flex-grow flex flex-col&quot;]/div[@class=&quot;bg-gray-100 pt-7 pb-16 shadow-inner&quot;]/div[@class=&quot;max-w-screen-2xl md:px-12 mx-auto&quot;]/div[@class=&quot;flex flex-col lg:flex-row lg:flex-nowrap lg:space-x-6&quot;]/div[@class=&quot;lg:w-3/4 xl:w-4/5 flex-grow w-full&quot;]/div[@class=&quot;bg-white lg:mb-6 lg:rounded shadow-inner pb-8 lg:shadow&quot;]</value>
+      <webElementGuid>a48b0392-2384-4068-a72f-fcd848245f89</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>+ Add a GiftBox</value>
+      <webElementGuid>c66fc85b-11b6-4b08-97f6-b72ecb6049b8</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value></value>
+      <webElementGuid>8fda39e2-8ff6-49e4-8801-314a5f7bbf4e</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

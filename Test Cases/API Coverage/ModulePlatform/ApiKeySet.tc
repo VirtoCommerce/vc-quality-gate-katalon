@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Add api key to operator@mail.com user</description>
+   <name>ApiKeySet</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f036113b-893f-4b9f-ad3a-4c7c7b8d56a9</testCaseGuid>
+</TestCaseEntity>

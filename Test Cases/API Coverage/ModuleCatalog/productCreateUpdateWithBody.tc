@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create product (via generated body json)</description>
+   <name>productCreateUpdateWithBody</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bf95bd42-ec70-46d2-880d-b0f04513abfc</testCaseGuid>
+</TestCaseEntity>

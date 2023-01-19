@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>upload file to local storage</description>
+   <name>AssetFileUploadLocalStorage</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>349ffe39-6546-4cc5-9cc2-fe02335dacd9</testCaseGuid>
+</TestCaseEntity>

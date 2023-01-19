@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>GetExternalSignInProviders</name>
+   <tag></tag>
+   <comment>TEST CASE: Get installed modules
+json.results.size().toString()</comment>
+   <testCaseGuid>89478d53-ec7a-4f1c-9641-546f370e0a74</testCaseGuid>
+</TestCaseEntity>

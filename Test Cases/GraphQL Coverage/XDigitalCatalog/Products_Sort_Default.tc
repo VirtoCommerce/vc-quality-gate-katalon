@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This test check if sorting by default works properly for GraphQL products query</description>
+   <name>Products_Sort_Default</name>
+   <tag>sorting, products</tag>
+   <comment></comment>
+   <testCaseGuid>8168948c-6698-44b8-a5f8-49d0382a107b</testCaseGuid>
+</TestCaseEntity>

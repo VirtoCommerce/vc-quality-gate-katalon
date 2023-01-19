@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Upload file from local storage</description>
+   <name>AssetFileUploadLocal</name>
+   <tag></tag>
+   <comment>TEST CASE: Assets. Upload file from local
+GlobalVariable.folderUrl</comment>
+   <testCaseGuid>ca8fdeea-4cd6-41a5-a10d-dce51250a9af</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>OrganizationGetId</name>
+   <tag></tag>
+   <comment>TEST CASE: Get organization
+Organization Name: &quot; + responseJson.name
+Organization NameD. Global: &quot; + GlobalVariable.organizationName</comment>
+   <testCaseGuid>fdda46f7-df17-4bc3-9141-1343474d0d3e</testCaseGuid>
+</TestCaseEntity>

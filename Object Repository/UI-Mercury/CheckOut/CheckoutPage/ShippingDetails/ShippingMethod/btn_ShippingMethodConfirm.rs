@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>btn_ShippingMethodConfirm</name>
+   <tag></tag>
+   <elementGuidId>96f1c783-406f-484c-a218-a62a1c3545f3</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>.w-full.flex-grow > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(2) span:nth-of-type(1)
+</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[3]/div/div/div/div/div[2]/div[2]/button[2]/span</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>div.col-md-9</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>ok</value>
+      <webElementGuid>08de3135-9e54-4c7d-9b3b-7e5fd8f03f93</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>type</name>
+      <type>Main</type>
+      <value>button</value>
+      <webElementGuid>7af80689-7d1e-45df-944d-154543927be6</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>vc-button vc-button--md vc-button--primary w-1/2 lg:w-auto uppercase flex-grow lg:flex-grow-0 inline-flex lg:px-10</value>
+      <webElementGuid>30e3751e-ff4b-4aa5-a080-0a3d5d1cd574</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>.w-full.flex-grow > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) div:nth-of-type(2) span:nth-of-type(1)
+</value>
+      <webElementGuid>8d01a3cc-237f-403a-90d9-1be4f833d0fd</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//div[3]/div/div/div/div/div[2]/div[2]/button[2]/span</value>
+      <webElementGuid>c07f71e3-2f01-4a59-ac6d-c59671d53e88</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

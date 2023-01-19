@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>OrganizationSearch</name>
+   <tag></tag>
+   <comment>TEST CASE: Organization search
+Organization Name: &quot; + responseJson.results[0].name
+Organization NameD. Global: &quot; + GlobalVariable.organizationName</comment>
+   <testCaseGuid>a8698799-bfb4-4188-b60f-7913fd9c4f1c</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>edit the created channel</description>
+   <name>channelEdit</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5056ee4b-7679-41b1-8292-f5d0d2e7a871</testCaseGuid>
+</TestCaseEntity>

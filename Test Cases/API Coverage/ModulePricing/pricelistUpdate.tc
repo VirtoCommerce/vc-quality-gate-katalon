@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Relate new pricelist to new product</description>
+   <name>pricelistUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e1213cdc-1100-40c1-9c9d-4215aec949d1</testCaseGuid>
+</TestCaseEntity>

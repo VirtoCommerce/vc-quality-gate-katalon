@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create update and delete a coupon</description>
+   <name>promoCoupon_createUpdateDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b18f743a-b1fd-48f5-ad18-187ee8bcf653</testCaseGuid>
+</TestCaseEntity>

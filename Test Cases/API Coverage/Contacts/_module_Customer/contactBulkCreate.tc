@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>create two contacts and extract ids
+verify creation</description>
+   <name>contactBulkCreate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3b2b87a9-4d94-462c-8013-874f8271d744</testCaseGuid>
+</TestCaseEntity>

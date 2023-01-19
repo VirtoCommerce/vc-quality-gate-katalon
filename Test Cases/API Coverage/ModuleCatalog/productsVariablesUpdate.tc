@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>update variables product name &amp; content &amp; product dimensions</description>
+   <name>productsVariablesUpdate</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5f4bfde8-4ca2-4ad7-a195-085fa2894c8d</testCaseGuid>
+</TestCaseEntity>

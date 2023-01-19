@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>a_FilterPrice10-20</name>
+   <tag></tag>
+   <elementGuidId>fff305fc-48c0-4ee3-90d1-38090d58c34e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value> //a[contains(.,'$10.00 to $20.00 (3)')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>true</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>tag</name>
+      <type>Main</type>
+      <value>a</value>
+      <webElementGuid>64a02ce7-0275-48fe-b7ec-684d6591f6c7</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>custom-control-label d-inline-block text-body</value>
+      <webElementGuid>31ab79f7-74b1-4dde-81de-532f979474c2</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>vc-query-source</name>
+      <type>Main</type>
+      <value>{ terms: { 'price': ['10-20'] } }</value>
+      <webElementGuid>1dd72dcd-2eb9-429b-9364-93fce317139d</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>switchable</name>
+      <type>Main</type>
+      <value>true</value>
+      <webElementGuid>32a1150b-fd88-4619-b5f4-281fceb325bc</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>href</name>
+      <type>Main</type>
+      <value>https://webstore-storefront.qa.govirto.com/B2B-store/carriage-bolts?terms=price:10-20#/</value>
+      <webElementGuid>9ac0f3b3-8638-4b0f-a336-089aa7d02cd1</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+                                    $10.00 to $20.00 (3)
+                                </value>
+      <webElementGuid>04c6c044-b467-40f7-bb50-ccdf9726cf20</webElementGuid>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>id(&quot;accordiongroup-27-6532-card&quot;)/div[@class=&quot;card-body&quot;]/ol[@class=&quot;list-unstyled mt-2 mb-0 ng-scope&quot;]/li[@class=&quot;custom-control custom-checkbox&quot;]/a[@class=&quot;custom-control-label d-inline-block text-body&quot;]</value>
+      <webElementGuid>6330f7a9-e619-4037-b9e2-50c6651994e1</webElementGuid>
+   </webElementProperties>
+   <webElementXpaths>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:idRelative</name>
+      <type>Main</type>
+      <value>//div[@id='accordiongroup-27-6532-card']/div/ol/li[2]/a</value>
+      <webElementGuid>a3320e13-f679-4fed-abf0-78c511169fd9</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='(1)'])[3]/following::a[1]</value>
+      <webElementGuid>ec0efe95-87b7-469a-89d7-131953062c23</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <type>Main</type>
+      <value>//*/text()[normalize-space(.)='$10.00 to $20.00']/parent::*</value>
+      <webElementGuid>8b646e39-fc75-4f31-9bf4-acc3c231b4a7</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:href</name>
+      <type>Main</type>
+      <value>//a[contains(@href, 'https://webstore-storefront.qa.govirto.com/B2B-store/carriage-bolts?terms=price:10-20#/')]</value>
+      <webElementGuid>2a1166e3-e429-4f53-afa8-1c7110d75ab6</webElementGuid>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:position</name>
+      <type>Main</type>
+      <value>//ol/li[2]/a</value>
+      <webElementGuid>444c8e8f-96cb-40ce-9534-9a1bd3bcfccc</webElementGuid>
+   </webElementXpaths>
+</WebElementEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create test product</description>
+   <name>createProduct</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4bc46773-33c6-43bc-859c-19fda694d728</testCaseGuid>
+</TestCaseEntity>

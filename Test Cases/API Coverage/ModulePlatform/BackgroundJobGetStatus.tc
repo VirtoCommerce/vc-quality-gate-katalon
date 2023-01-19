@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BackgroundJobGetStatus</name>
+   <tag></tag>
+   <comment>TEST CASE: Get background job status</comment>
+   <testCaseGuid>0d9a09a5-89b0-4ce4-841f-a4725871ac0d</testCaseGuid>
+</TestCaseEntity>

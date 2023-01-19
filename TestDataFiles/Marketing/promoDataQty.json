@@ -1,0 +1,39 @@
+[
+{
+    "quantity": "7",
+    "quantitySecond": 0,
+    "compareCondition": "AtLeast",
+    "id": "ConditionInStockQuantity",
+    "children": [],
+    "excludingCategoryIds": [],
+    "excludingProductIds": []
+  },
+  {
+    "quantity": 7,
+    "quantitySecond": 0,
+    "compareCondition": "Exactly",
+    "id": "ConditionInStockQuantity",
+    "children": [],
+    "excludingCategoryIds": [],
+    "excludingProductIds": []
+  },
+  {
+    "quantity": "7",
+    "quantitySecond": 0,
+    "compareCondition": "IsLessThanOrEqual",
+    "id": "ConditionInStockQuantity",
+    "children": [],
+    "excludingCategoryIds": [],
+    "excludingProductIds": []
+  },
+  {
+    "quantity": 7,
+    "quantitySecond": "77",
+    "compareCondition": "Between",
+    "id": "ConditionInStockQuantity",
+    "children": [],
+    "excludingCategoryIds": [],
+    "excludingProductIds": []
+  }
+
+]

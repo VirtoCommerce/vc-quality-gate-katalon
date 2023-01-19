@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Organization cycle test</description>
+   <name>OrganizationCycleBulk</name>
+   <tag></tag>
+   <comment>TEST CASE : Create 2 new organizations BULK
+TEST CASE : Search new organizations and save Ids
+Organization ID : &quot; + orgId
+TEST CASE : Update organization BULK
+TEST CASE : Check Organization GET request by Id
+TEST CASE : Delete created organization BULK
+TEST CASE : Search deleted orgs. Count 0 in result - orgs were deleted</comment>
+   <testCaseGuid>24adbbc6-4a9a-439d-b4c6-18740ae576ca</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete price by its id</description>
+   <name>priceDeleteByPriceId</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3a2dd119-6a6b-41fd-9b06-ff0137faa25c</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,42 @@
+[
+{
+    "subTotal": 7,
+    "subTotalSecond": 0,
+    "excludingCategoryIds": [],
+    "excludingProductIds": [],
+    "compareCondition": "AtLeast",
+    "id": "ConditionCartSubtotalLeast",
+    "availableChildren": [],
+    "children": []
+  },
+  {
+    "subTotal": 7,
+    "subTotalSecond": 0,
+    "excludingCategoryIds": [],
+    "excludingProductIds": [],
+    "compareCondition": "Exactly",
+    "id": "ConditionCartSubtotalLeast",
+    "availableChildren": [],
+    "children": []
+  },
+  {
+    "subTotal": 7,
+    "subTotalSecond": 0,
+    "excludingCategoryIds": [],
+    "excludingProductIds": [],
+    "compareCondition": "IsLessThanOrEqual",
+    "id": "ConditionCartSubtotalLeast",
+    "availableChildren": [],
+    "children": []
+  },
+  {
+    "subTotal": 7,
+    "subTotalSecond": 10,
+    "excludingCategoryIds": [],
+    "excludingProductIds": [],
+    "compareCondition": "Between",
+    "id": "ConditionCartSubtotalLeast",
+    "availableChildren": [],
+    "children": []
+  }
+]

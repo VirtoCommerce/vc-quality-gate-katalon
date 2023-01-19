@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>remove katalon related data</description>
+   <name>KatalonDataRemove</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>bf63cce8-f75c-4526-ad55-f7fc93e15989</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>delete by organization Id</description>
+   <name>organizationDelete</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fb0833f5-fbf3-40d9-b285-a6334e2e3fc7</testCaseGuid>
+</TestCaseEntity>
