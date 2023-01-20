@@ -33,7 +33,7 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
-      <guid>17b62d0f-c8d0-442f-9342-51221083bf45</guid>
+      <guid>940c5313-6cf4-4a8c-a6a6-cc7d62adaad0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleSearch/BuildIndex</testCaseId>

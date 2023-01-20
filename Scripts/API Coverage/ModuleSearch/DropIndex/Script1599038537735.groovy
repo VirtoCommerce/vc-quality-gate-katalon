@@ -19,10 +19,10 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search
 
 WebUI.comment('Waiting for drop index 10 sec')
 
-WS.delay(10)
+WS.delay(30)
 
 
 //Use this as a temporary measure to avoid a bug
 //https://virtocommerce.atlassian.net/browse/PT-10217
-buidIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/BuildIndex'), 
-	null)
+//buidIndex = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/BuildIndex'), 
+//	null)
