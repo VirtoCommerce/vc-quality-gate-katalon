@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>module_Health_Check</name>
+   <name>katalonDataRemove</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -10,12 +10,12 @@
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <rerunImmediately>false</rerunImmediately>
-   <testSuiteGuid>7bb44cf7-1429-4f61-832c-ddcf8cb39704</testSuiteGuid>
+   <testSuiteGuid>873d019f-aedc-4a06-b923-76c42ef71136</testSuiteGuid>
    <testCaseLink>
-      <guid>0fbba785-11d5-40cc-ac8b-89499925b345</guid>
+      <guid>2575b8bf-10b9-4ea7-8a02-1f2e7a94ac4b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/API Coverage/ModuleHealthCheck/HealthCheck</testCaseId>
+      <testCaseId>Test Cases/KatalonSampleData/KatalonDataRemove</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>
