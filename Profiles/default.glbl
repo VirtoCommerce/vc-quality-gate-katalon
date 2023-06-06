@@ -21,6 +21,16 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'admin'</initValue>
+      <name>adminUserName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'store'</initValue>
+      <name>adminPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'QweUser'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
@@ -523,16 +533,6 @@
       <description></description>
       <initValue>'false'</initValue>
       <name>isAdministratorStatus</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'store'</initValue>
-      <name>adminPassword</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'admin'</initValue>
-      <name>adminUserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
