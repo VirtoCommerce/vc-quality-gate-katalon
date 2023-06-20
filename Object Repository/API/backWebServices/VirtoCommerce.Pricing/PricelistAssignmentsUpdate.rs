@@ -6,11 +6,12 @@
    <elementGuidId>66d8a7c0-631f-4642-9e47-62bb85f0c28f</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n /*see testCase \u0027API coverage/ModulePricing/pricelistAssignmentEdit\u0027\nfor the apropriate processing of this request.See the comment at the bottom of the tesCase to see the old implementation, that uses this exact body*/\n  \n    \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n\t\&quot;pricelistId\&quot;: \&quot;${pricelistId}\&quot;,\n\t\&quot;pricelist\&quot;: {\n\t\t\&quot;name\&quot;: \&quot;${pricelistName}\&quot;,\n\t\t\&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\&quot;createdDate\&quot;: \&quot;0001-01-01T00:00:00Z\&quot;,\n\t\t\&quot;id\&quot;: \&quot;${pricelistId}\&quot;\n\t},\n\t\&quot;name\&quot;: \&quot;${assignmentName}\&quot;,\n\t\&quot;priority\&quot;: 0,\n\t\&quot;dynamicExpression\&quot;: {\n\t\t\&quot;all\&quot;: true,\n\t\t\&quot;not\&quot;: false,\n\t\t\&quot;id\&quot;: \&quot;PriceConditionTree\&quot;,\n\t\t\&quot;children\&quot;: []\n\t},\n\t\&quot;createdBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;modifiedBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;id\&quot;: \&quot;${assignmentId}\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;catalogId\&quot;: \&quot;${catalogId}\&quot;,\n\t\&quot;pricelistId\&quot;: \&quot;${pricelistId}\&quot;,\n\t\&quot;pricelist\&quot;: {\n\t\t\&quot;name\&quot;: \&quot;${pricelistName}\&quot;,\n\t\t\&quot;description\&quot;: \&quot;Pricelist created by Katalon test\&quot;,\n\t\t\&quot;currency\&quot;: \&quot;USD\&quot;,\n\t\t\&quot;createdDate\&quot;: \&quot;0001-01-01T00:00:00Z\&quot;,\n\t\t\&quot;id\&quot;: \&quot;${pricelistId}\&quot;\n\t},\n\t\&quot;name\&quot;: \&quot;${assignmentName}\&quot;,\n\t\&quot;priority\&quot;: 0,\n\t\&quot;dynamicExpression\&quot;: {\n\t\t\&quot;all\&quot;: true,\n\t\t\&quot;not\&quot;: false,\n\t\t\&quot;id\&quot;: \&quot;PriceConditionTree\&quot;,\n\t\t\&quot;children\&quot;: []\n\t},\n\t\&quot;createdBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;modifiedBy\&quot;: \&quot;admin\&quot;,\n\t\&quot;id\&quot;: \&quot;${assignmentId}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>f19060aa-f4c3-4bbe-96cd-7307400f50f1</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>3a5e7e53-05a0-4bfd-a623-106d077b8257</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

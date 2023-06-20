@@ -6,11 +6,12 @@
    <elementGuidId>8acb3243-bbdf-4c36-a8d0-9766edd62ace</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20,\n  \&quot;responseGroup\&quot;: \&quot;WithPrices\&quot;,\n  \&quot;keyword\&quot;: \u0027${keyword}\u0027\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20,\n  \&quot;responseGroup\&quot;: \&quot;WithPrices\&quot;,\n  \&quot;keyword\&quot;: \&quot;${keyword}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>c706de6b-541c-4bec-adcd-d8829aad1914</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>5e5ab3e6-4068-4dc0-99e2-3834f9b82044</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>

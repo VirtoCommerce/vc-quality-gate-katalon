@@ -6,11 +6,12 @@
    <elementGuidId>15e2a6ec-37e7-4c71-bf3c-403ec9ed604a</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  //add search FFC\n  \&quot;fulfillmentCenterId\&quot;: \&quot;vendor-fulfillment\&quot;,\n  \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n  \&quot;inStockQuantity\&quot;: 90,\n  \&quot;allowBackorder\&quot;: false,\n  \&quot;allowPreorder\&quot;: false,\n  \&quot;status\&quot;: \&quot;Disabled\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;fulfillmentCenterId\&quot;: \&quot;vendor-fulfillment\&quot;,\n  \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n  \&quot;inStockQuantity\&quot;: 90,\n  \&quot;allowBackorder\&quot;: false,\n  \&quot;allowPreorder\&quot;: false,\n  \&quot;status\&quot;: \&quot;Disabled\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>2b13205e-6f31-447e-a34d-3d5efed7446c</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>8926de0e-96d2-4295-b834-ecbd1e08e056</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

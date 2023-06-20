@@ -6,11 +6,12 @@
    <elementGuidId>e6755879-0ed0-41e6-9b7f-19359e10d401</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${firstName}\&quot;,\n  \&quot;firstName\&quot;: \&quot;${firstName}\&quot;,\n  \&quot;middleName\&quot;: \&quot;Middle\&quot;,\n  \&quot;lastName\&quot;: \&quot;${lastName}\&quot;,\n  \&quot;fullName\&quot;: \&quot;${firstName}\&quot;,\n  \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;birthDate\&quot;: \&quot;2020-02-02T22:00:00.000Z\&quot;,\n  \&quot;timeZone\&quot;: \&quot;Europe/Moscow\&quot;,\n  \&quot;defaultLanguage\&quot;: \&quot;test lang\&quot;,\n  \&quot;photoUrl\&quot;: \&quot;qwe.test\&quot;,\n  \&quot;businessCategory\&quot;: \&quot;businessCategory\&quot;,\n  \&quot;description\&quot;: \&quot;Lorem ipsum\&quot;,\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;0123456789\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ],\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${firstName}\&quot;,\n  \&quot;firstName\&quot;: \&quot;${firstName}\&quot;,\n  \&quot;middleName\&quot;: \&quot;Middle\&quot;,\n  \&quot;lastName\&quot;: \&quot;${lastName}\&quot;,\n  \&quot;fullName\&quot;: \&quot;${firstName}\&quot;,\n  \&quot;memberType\&quot;: \&quot;${memberType}\&quot;,\n  \&quot;isActive\&quot;: true,\n  \&quot;birthDate\&quot;: \&quot;2020-02-02T22:00:00.000Z\&quot;,\n  \&quot;timeZone\&quot;: \&quot;Europe/Moscow\&quot;,\n  \&quot;defaultLanguage\&quot;: \&quot;test lang\&quot;,\n  \&quot;photoUrl\&quot;: \&quot;qwe.test\&quot;,\n  \&quot;businessCategory\&quot;: \&quot;businessCategory\&quot;,\n  \&quot;description\&quot;: \&quot;Lorem ipsum\&quot;,\n  \&quot;groups\&quot;: [\n    \&quot;TEST UG1\&quot;,\n    \&quot;TEST UG2\&quot;\n  ],\n  \&quot;phones\&quot;: [\n    \&quot;0123456789\&quot;\n  ],\n  \&quot;emails\&quot;: [\n    \&quot;test@test.com\&quot;\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>7a17cdef-6870-4e9e-876e-660d23420545</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>d58feee3-e7d8-4d38-8fbd-cf44833748b6</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

@@ -6,6 +6,7 @@
    <elementGuidId>5db6c83c-48dc-418f-b174-52cc5119c341</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -28,6 +29,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>multipart/form-data</value>
+      <webElementGuid>9b60d696-40de-442b-b54a-f94dda0a9b9a</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -35,6 +37,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>2c586a96-e4a2-40f2-ad5a-d7d2302744e7</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>7.9.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>

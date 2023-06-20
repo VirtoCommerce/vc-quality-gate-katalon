@@ -6,11 +6,12 @@
    <elementGuidId>cbe737be-ce29-4ad1-bc78-8b4df4e842e0</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[ \n  //NOTE: script view is used for the actual settings update\n  //this JSON purpose is to illustrate the scheme\n  {\n    \&quot;itHasValues\&quot;: true,\n    \&quot;restartRequired\&quot;: false,\n    \&quot;moduleId\&quot;: \&quot;VirtoCommerce.Core\&quot;,\n    \&quot;groupName\&quot;: \&quot;Core|General\&quot;,\n    \&quot;name\&quot;: \&quot;VirtoCommerce.Core.General.WeightUnits\&quot;,\n    \&quot;isHidden\&quot;: false,\n    \&quot;valueType\&quot;: \&quot;ShortText\&quot;,\n    \&quot;allowedValues\&quot;: [\n      \&quot;pound\&quot;,\n      \&quot;ounce\&quot;,\n      \&quot;gram\&quot;,\n      \&quot;${unitName}\&quot;\n    ],\n    \&quot;defaultValue\&quot;: \&quot;gram\&quot;,\n    \&quot;isDictionary\&quot;: true\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[ \n    {\n    \&quot;itHasValues\&quot;: true,\n    \&quot;restartRequired\&quot;: false,\n    \&quot;moduleId\&quot;: \&quot;VirtoCommerce.Core\&quot;,\n    \&quot;groupName\&quot;: \&quot;Core|General\&quot;,\n    \&quot;name\&quot;: \&quot;VirtoCommerce.Core.General.WeightUnits\&quot;,\n    \&quot;isHidden\&quot;: false,\n    \&quot;valueType\&quot;: \&quot;ShortText\&quot;,\n    \&quot;allowedValues\&quot;: [\n      \&quot;pound\&quot;,\n      \&quot;ounce\&quot;,\n      \&quot;gram\&quot;,\n      \&quot;${unitName}\&quot;\n    ],\n    \&quot;defaultValue\&quot;: \&quot;gram\&quot;,\n    \&quot;isDictionary\&quot;: true\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>9e98b639-71c2-4e7a-bc2c-e147154443fb</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>79e6b6de-29cc-4e09-aa7b-911ecbf55b57</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

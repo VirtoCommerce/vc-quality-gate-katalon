@@ -6,11 +6,12 @@
    <elementGuidId>f047e947-3859-4d10-b450-8748b779c19e</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;propertyId\&quot;: \&quot;${propertyId}\&quot;,\n    \&quot;name\&quot;: \&quot;${name}\&quot;,\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;propertyId\&quot;: \&quot;${propertyId}\&quot;,\n    \&quot;name\&quot;: \&quot;${name}\&quot;\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

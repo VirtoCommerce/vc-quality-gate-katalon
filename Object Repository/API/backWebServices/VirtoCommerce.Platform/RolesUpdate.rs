@@ -6,11 +6,12 @@
    <elementGuidId>a05221d8-9036-4f99-82e5-24a8db36c105</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;,\n   \&quot;description\&quot;: \&quot;${description}\&quot;,\n   \&quot;permissions\&quot;: [ ${permissions} ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n   \&quot;name\&quot;: \&quot;${name}\&quot;,\n   \&quot;id\&quot;: \&quot;${id}\&quot;,\n   \&quot;description\&quot;: \&quot;${description}\&quot;,\n   \&quot;permissions\&quot;: [ \&quot;${permissions}\&quot; ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>36fd40ae-60dc-4427-a969-cd4acd27aa0f</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>d39e8ce5-1050-4aeb-a5ed-bc148bf5c05d</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

@@ -6,11 +6,12 @@
    <elementGuidId>15758302-de7e-41d0-b7be-8c2725c066e3</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${currencyCode}\&quot;,\n  \&quot;name\&quot;: \&quot;${currencyName}\&quot;,\n  }&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${currencyCode}\&quot;,\n  \&quot;name\&quot;: \&quot;${currencyName}\&quot;\n  }&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>f642edab-7f02-4cc8-9973-edb6295bfa4a</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>a4e5be29-d41e-4882-9ba9-b2708ccd05c2</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

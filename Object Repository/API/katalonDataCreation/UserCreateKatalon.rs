@@ -6,11 +6,12 @@
    <elementGuidId>ec5d42e0-054b-4c40-b440-7c3dea251017</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;password\&quot;: \&quot;${password}\&quot;,\n  \&quot;memberId\&quot;: \&quot;${contactId}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;status\&quot;: \&quot;${status}\&quot;,\n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;roles\&quot;: [],\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n  //asdasd\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userType\&quot;: \&quot;${userType}\&quot;,\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;password\&quot;: \&quot;${password}\&quot;,\n  \&quot;memberId\&quot;: \&quot;${contactId}\&quot;,\n  \&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \&quot;status\&quot;: \&quot;${status}\&quot;,\n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;roles\&quot;: [],\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;\n  \n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

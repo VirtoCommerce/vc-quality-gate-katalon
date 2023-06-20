@@ -6,11 +6,12 @@
    <elementGuidId>78222d87-32c1-4273-99f5-d3d4d3de7ac6</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n  \&quot;roles\&quot;: [ ${roles} ],\n  \&quot;isAdministrator\&quot;: \&quot;${isAdministrator}\&quot;,\n  \&quot;lockoutEnabled\&quot;: true,\n  \&quot;status\&quot; : \&quot;New\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;userName\&quot;: \&quot;${userName}\&quot;,\n  \&quot;userType\&quot;:\&quot;${userType}\&quot;, \n  \&quot;email\&quot;: \&quot;${email}\&quot;,\n  \&quot;id\&quot;: \&quot;${userId}\&quot;,\n  \&quot;emailConfirmed\&quot;: \&quot;${emailConfirmed}\&quot;,\n  \&quot;roles\&quot;: [\&quot;${roles}\&quot;],\n  \&quot;isAdministrator\&quot;: \&quot;${isAdministrator}\&quot;,\n  \&quot;lockoutEnabled\&quot;: true,\n  \&quot;status\&quot; : \&quot;New\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>

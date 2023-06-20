@@ -6,11 +6,12 @@
    <elementGuidId>e50572cd-e3bd-4abc-a2d8-5be5293947aa</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${publicationName}\&quot;,\n\t\&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \t\&quot;contentItems\&quot;: [${contentItems}],\n  \t\&quot;contentPlaces\&quot;: [${contentPlaces}],\n  \t\&quot;description\&quot;: \&quot;${description}\&quot;,\n    \&quot;isActive\&quot;: \u0027${status}\u0027\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${publicationName}\&quot;,\n\t\&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \t\&quot;contentItems\&quot;: [\&quot;${contentItems}\&quot;],\n  \t\&quot;contentPlaces\&quot;: [\&quot;${contentPlaces}\&quot;],\n  \t\&quot;description\&quot;: \&quot;${description}\&quot;,\n    \&quot;isActive\&quot;: \&quot;${status}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +22,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>3f623bf2-97ca-4625-97a0-aed4d13b806e</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +30,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>24ffafee-d087-49ae-ac00-61caaadf00e8</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
