@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${currencyCode}\&quot;,\n  \&quot;name\&quot;: \&quot;${currencyName}\&quot;,\n  }&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;code\&quot;: \&quot;${currencyCode}\&quot;,\n  \&quot;name\&quot;: \&quot;${currencyName}\&quot;\n  }&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>b0670609-77e7-4fa9-9933-67b1ffb73cda</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>d26c17c7-0ee2-44ec-b963-8abb33b850ac</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
