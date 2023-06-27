@@ -21,6 +21,20 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: KATALON DATA REMOVE')
 
 
+
+'GET KATALON CONTACT ID'
+katalonContactGetId = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Customer/Members/MemberSearch',[
+	('searchPhrase') : GlobalVariable.katalonContactName
+	]))
+katalonContactId = WS.getElementPropertyValue(katalonContactGetId,'results[0].id')
+
+
+'DELETE KATALON CONTACT'
+katalonContactDelete = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Customer/Members/MemberDelete',[
+	('id') : katalonContactId
+	]))
+
+
 'DELETE THE CATALOG'
 searchCreated = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CatalogsSearch', [
 	('keyword') : GlobalVariable.catalogName
@@ -41,11 +55,39 @@ storeDelete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoC
 	]))
 
 
-'REMOVE OPERATOR'
-GlobalVariable.userName = GlobalVariable.katalonUserName
-katalonOperatorRemove = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserDelete', [
-	('userName') : GlobalVariable.userName]
-))
+'GET PRICELISTID TO DELETE ITS ASSIGNMENT'
+GlobalVariable.pricelistName = 'katalonPricelist'
+pricelistGet = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistGet'),null)
+GlobalVariable.pricelistId = WS.getElementPropertyValue(pricelistGet,'results[0].id')
+
+
+'DELETE PRICELIST ASSIGNMENT'
+verifyAssignment = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
+	null)
+GlobalVariable.assignmentId = WS.getElementPropertyValue(verifyAssignment,'results[0].id')
+deleteAssignment = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistAssignmentsDelete',[
+	('assignmentId') : GlobalVariable.assignmentId
+	]))
+
+
+'VERIFY THE ASSIGNMENT HAS BEEN DELETED'
+verifyDeleted = WS.callTestCase(findTestCase('API Coverage/ModulePricing/pricelistAssignmentsSearch'),
+	null
+	)
+WS.verifyElementPropertyValue(verifyDeleted, 'totalCount', '0')
+
+
+'DELETE THE PRICELIST'
+deletePricelist = WS.sendRequestAndVerify(findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Pricing/PricelistDelete',[
+	('id') : GlobalVariable.pricelistId
+	]))
+
+
+'VERIFY THE PRICELIST HAS BEEN DELETED'
+verifyDeleted = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePricing/pricelistGet'),
+	null
+	)
+WS.verifyElementPropertyValue(verifyDeleted,'totalCount','0')
 
 
 'RUN TOKEN AUTHORIZED INDEXATION'

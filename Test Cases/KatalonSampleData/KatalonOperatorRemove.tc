@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>KatalonCreateOperator</name>
+   <name>KatalonOperatorRemove</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>bb0129be-4309-4e8c-834e-64c27de9d512</testCaseGuid>
+   <testCaseGuid>aa51963d-5dbd-433f-99a0-9c18e6d9d3c1</testCaseGuid>
 </TestCaseEntity>

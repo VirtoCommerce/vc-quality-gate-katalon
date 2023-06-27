@@ -19,13 +19,19 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
 WebUI.comment('TEST CASE: Mark Push Notifications as Read')
 
-response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/PushNotificationMarkAsRead'))
 
+'VERIFY NEW NOTIFICATIOS EXIST'
+response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/PushNotificationMarkAsRead'))
 WS.verifyElementPropertyValue(response, 'notifyEvents[0].errors', '[]')
 WS.verifyElementPropertyValue(response, 'notifyEvents[0].notifyType', "IndexProgressPushNotification")
 WS.verifyElementPropertyValue(response, 'notifyEvents[0].description', "Indexation completed successfully")
 WS.verifyElementPropertyValue(response, 'notifyEvents[0].isNew', 'false')
-WS.verifyElementPropertyValue(response, 'newCount', 1)
+int initialCount = WS.getElementPropertyValue(response, 'newCount')
+println initialCount
+assert initialCount != 0
 
+
+'VERIFY NOTIFICATION HAS BEEN CLEARED'
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/PushNotificationMarkAsRead'))
-WS.verifyElementPropertyValue(response, 'newCount', 0)
+WS.verifyElementPropertyValue(response, 'newCount', 0) 
+

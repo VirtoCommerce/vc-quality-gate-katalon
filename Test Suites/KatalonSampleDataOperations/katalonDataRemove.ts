@@ -18,4 +18,11 @@
       <testCaseId>Test Cases/KatalonSampleData/KatalonDataRemove</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
+   <testCaseLink>
+      <guid>7ef70b21-5aba-4fd4-b612-b5b37f4f5673</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/KatalonSampleData/KatalonOperatorRemove</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
 </TestSuiteEntity>
