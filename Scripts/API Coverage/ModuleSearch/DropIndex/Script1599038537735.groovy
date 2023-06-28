@@ -27,7 +27,7 @@ eventsActualCount = eventsInitialCount
 
 
 'RUN INDEXATION'
-WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
+indexationRun = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
 
 
 'VERIFY THE OPERATION IS LOGGED IN THE SYSTEM EVENTS'
@@ -59,3 +59,7 @@ while (indexFinishingStatus == null) {
 		throw new com.kms.katalon.core.exception.StepFailedException('ERROR: Indexation is not egtting "finished" timestamp')
 	}
 }
+
+
+return indexationRun
+
