@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${publicationName}\&quot;,\n\t\&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \t\&quot;contentItems\&quot;: [${contentItems}],\n  \t\&quot;contentPlaces\&quot;: [${contentPlaces}],\n  \t\&quot;description\&quot;: \&quot;${description}\&quot;,\n    \&quot;isActive\&quot;: \u0027${status}\u0027\n}&quot;,
+  &quot;text&quot;: &quot;{\n\t\&quot;name\&quot;: \&quot;${publicationName}\&quot;,\n\t\&quot;storeId\&quot;: \&quot;${storeId}\&quot;,\n  \t\&quot;contentItems\&quot;: [${contentItems}],\n  \t\&quot;contentPlaces\&quot;: [${contentPlaces}],\n  \t\&quot;description\&quot;: \&quot;${description}\&quot;,\n    \&quot;isActive\&quot;: \&quot;${status}\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>5af56cd5-581f-4c31-9223-380c31eee438</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>c554c660-f1e2-485c-9040-dc9b695ecdf0</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

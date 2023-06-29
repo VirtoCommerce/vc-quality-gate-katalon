@@ -39,9 +39,8 @@ productInitalDate = WS.getElementPropertyValue(productInitialIndexationGet, '[0]
 
 
 'SEND REQUEST TO RUN PLATFORM INDEXATION'
-indexationRun = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Search/index'))
-WebUI.comment('Waiting for drop index 10 sec')
-WS.delay(10)
+indexationRun = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleSearch/DropIndex'),
+	null)
 GlobalVariable.taskId = WS.getElementPropertyValue(indexationRun, 'id')//used in index cancel test case
 
 

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;promotionId\&quot;: \&quot;${promoId}\&quot;,\n      \t\&quot;id\&quot; : \&quot;${couponId}\&quot;,\n\t\t\&quot;isNew\&quot;: true,\n\t\t\&quot;code\&quot;: \&quot;${couponName}\&quot;,\n\t\t\&quot;maxUsesNumber\&quot;: \&quot;${maxUsesNumber}\&quot;,\n\t\t\&quot;maxUsesPerUser\&quot;: \&quot;${maxUsesPerUser}\&quot;,\n\t\t\n\t}\n]&quot;,
+  &quot;text&quot;: &quot;[\n\t{\n\t\t\&quot;promotionId\&quot;: \&quot;${promoId}\&quot;,\n      \t\&quot;id\&quot; : \&quot;${couponId}\&quot;,\n\t\t\&quot;isNew\&quot;: true,\n\t\t\&quot;code\&quot;: \&quot;${couponName}\&quot;,\n\t\t\&quot;maxUsesNumber\&quot;: \&quot;${maxUsesNumber}\&quot;,\n\t\t\&quot;maxUsesPerUser\&quot;: \&quot;${maxUsesPerUser}\&quot;\n\t\t\n\t}\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>d317f646-7ab2-426c-8c09-21c60c8449c1</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>1347e439-136a-4b7c-8568-21859a43aa4d</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

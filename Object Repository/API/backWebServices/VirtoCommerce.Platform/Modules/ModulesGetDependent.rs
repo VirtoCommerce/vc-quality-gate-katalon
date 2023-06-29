@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;   //processed via parsing in the body of the\n  //related test case\n //the initial object body is left untouched\n//unless there\u0027s a need for change\n\n[\n {\n    \&quot;version\&quot;: \&quot;${GlobalVariable.storeModuleVersion}\&quot;,\n    \&quot;title\&quot;: \&quot;Store module\&quot;,\n    \&quot;validationErrors\&quot;: [],\n    \&quot;isRemovable\&quot;: false,\n    \&quot;isInstalled\&quot;: true,\n    \&quot;id\&quot;: \&quot;VirtoCommerce.Store\&quot;\n  }\n]\n&quot;,
+  &quot;text&quot;: &quot;[\n {\n    \&quot;version\&quot;: \&quot;${GlobalVariable.storeModuleVersion}\&quot;,\n    \&quot;title\&quot;: \&quot;Store module\&quot;,\n    \&quot;validationErrors\&quot;: [],\n    \&quot;isRemovable\&quot;: false,\n    \&quot;isInstalled\&quot;: true,\n    \&quot;id\&quot;: \&quot;VirtoCommerce.Store\&quot;\n  }\n]\n&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>ebef6ad2-4a1c-4d0a-84c8-427979614919</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>185a3380-11f4-4d0b-80a6-a7b126dba535</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

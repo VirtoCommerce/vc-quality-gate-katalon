@@ -15,7 +15,7 @@
       <guid>faae45a7-afa3-4864-aaa5-168f74542bec</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/KatalonSampleData/KatalonCreateOperator</testCaseId>
+      <testCaseId>Test Cases/KatalonSampleData/KatalonOperatorCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

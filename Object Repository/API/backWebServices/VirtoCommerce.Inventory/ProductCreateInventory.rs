@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  //add search FFC\n  \&quot;fulfillmentCenterId\&quot;: \&quot;vendor-fulfillment\&quot;,\n  \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n  \&quot;inStockQuantity\&quot;: 90,\n  \&quot;allowBackorder\&quot;: false,\n  \&quot;allowPreorder\&quot;: false,\n  \&quot;status\&quot;: \&quot;Disabled\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n\n  \&quot;fulfillmentCenterId\&quot;: \&quot;vendor-fulfillment\&quot;,\n  \&quot;productId\&quot;: \&quot;${GlobalVariable.productId}\&quot;,\n  \&quot;inStockQuantity\&quot;: 90,\n  \&quot;allowBackorder\&quot;: false,\n  \&quot;allowPreorder\&quot;: false,\n  \&quot;status\&quot;: \&quot;Disabled\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>0d521352-c3a6-4817-a7ef-401c139cd0e7</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>55b43c04-e53d-44a2-a0fa-80bf9591b88c</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>

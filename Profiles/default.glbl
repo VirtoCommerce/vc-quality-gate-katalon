@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://docker.virtocommerce.com:8017'</initValue>
+      <initValue>'https://vcps-regression.paas.govirto.com/'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -106,7 +106,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'154dbeaf-ba9b-40c9-a2bd-df9b4b07e1de'</initValue>
+      <initValue>''</initValue>
       <name>organizationId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -131,12 +131,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'f493e39d-370e-45a7-88d6-273cb9843898'</initValue>
+      <initValue>''</initValue>
       <name>employeeId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Id of catalog Electronics</description>
-      <initValue>'4974648a41df4e6ea67ef2ad76d7bbd4'</initValue>
+      <description></description>
+      <initValue>''</initValue>
       <name>catalogId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -146,7 +146,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'0d4ad9bab9184d69a6e586effdf9c2ea'</initValue>
+      <initValue>''</initValue>
       <name>categoryId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -225,8 +225,8 @@
       <name>indexDelay</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>operator@mail.com user ID</description>
-      <initValue>'0a773137-7ac5-4ebc-8d24-94419ed988b6'</initValue>
+      <description></description>
+      <initValue>''</initValue>
       <name>userId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -548,5 +548,10 @@
       <description>id of the katalonOperator</description>
       <initValue>''</initValue>
       <name>katalonUserId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>katalon sample data contact</description>
+      <initValue>'katalonContact'</initValue>
+      <name>katalonContactName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

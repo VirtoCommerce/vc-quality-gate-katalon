@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>KatalonCreateOperator</name>
+   <name>katalonDataGet</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>bb0129be-4309-4e8c-834e-64c27de9d512</testCaseGuid>
+   <testCaseGuid>80adba6f-8a5e-4dbc-9f00-e9e83c3b74f5</testCaseGuid>
 </TestCaseEntity>

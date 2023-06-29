@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n  {\n    \&quot;propertyId\&quot;: \&quot;${propertyId}\&quot;,\n    \&quot;name\&quot;: \&quot;${name}\&quot;,\n  }\n]&quot;,
+  &quot;text&quot;: &quot;[\n  {\n    \&quot;propertyId\&quot;: \&quot;${propertyId}\&quot;,\n    \&quot;name\&quot;: \&quot;${name}\&quot;\n  }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
