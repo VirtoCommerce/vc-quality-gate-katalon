@@ -23,11 +23,14 @@ WebUI.comment('TEST CASE : PRICES ADD DELETE BULK')
 def productIdList = []
 for (int i = 1; i < 3; i++) {
 	GlobalVariable.productName = GlobalVariable.productName+i
+	GlobalVariable.sku = GlobalVariable.sku + i
 	WS.callTestCase(findTestCase('Test Cases/API Coverage/ModuleCatalog/productCreate'),
 		null)
 	productIdList.add(GlobalVariable.productId)
 	}
 GlobalVariable.productId = productIdList
+println GlobalVariable.productId
+
 
 
 'ADD PRODUCTS TO THE PRICELIST USING PRODUCT IDs FROM THE LIST (one id per loop iteration)'
@@ -63,5 +66,4 @@ verifyCreated = WS.callTestCase(findTestCase('Test Cases/API Coverage/ModulePric
 	null) 
 assert (WS.containsString(verifyCreated,GlobalVariable.productId[1],false,FailureHandling.OPTIONAL)) == false
 assert (WS.containsString(verifyCreated,GlobalVariable.productId[0],false,FailureHandling.OPTIONAL)) == false
-
 

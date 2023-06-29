@@ -26,6 +26,13 @@
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>
+      <guid>825d6333-8b01-40dc-8b31-faaf966027ae</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/KatalonSampleData/katalonDataGet</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
       <guid>049a14a8-9d63-47d3-9f33-d4355bcb6bfd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;objectType\&quot;: \&quot;string\&quot;,\n  \&quot;storeId\&quot;: \&quot;string\&quot;,\n  \&quot;catalogId\&quot;: \&quot;string\&quot;,\n  \&quot;outline\&quot;: \&quot;string\&quot;,\n  \&quot;outlines\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;terms\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;userGroups\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;isFuzzySearch\&quot;: true,\n  \&quot;rawQuery\&quot;: \&quot;string\&quot;,\n  \&quot;includeFields\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;searchPhrase\&quot;: \&quot;string\&quot;,\n  \&quot;keyword\&quot;: \&quot;string\&quot;,\n  \&quot;responseGroup\&quot;: \&quot;string\&quot;,\n  \&quot;objectTypes\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;objectIds\&quot;: [\n    \&quot;string\&quot;\n  ],\n  \&quot;languageCode\&quot;: \&quot;string\&quot;,\n  \&quot;sort\&quot;: \&quot;string\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 0\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;catalogIds\&quot;: [\n    \&quot;${catalogId}\&quot;\n  ],\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +21,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>d7807260-9f34-4257-bd38-90823997f02e</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,6 +29,7 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>066a6a6e-581b-4e45-a951-0364651ee5b4</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
@@ -41,6 +43,13 @@
    <soapServiceFunction></soapServiceFunction>
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
+   <variables>
+      <defaultValue>''</defaultValue>
+      <description>id of the examined catalog</description>
+      <id>85297683-ac9e-4c1e-8894-c147a898f939</id>
+      <masked>false</masked>
+      <name>catalogId</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.ResponseObject

@@ -35,6 +35,7 @@ WebUI.comment('TEST CASE: categories management - create a new category')
 
 'CREATE KATALON CATEGORY'
 GlobalVariable.categoryName = 'katalonCategory'
+GlobalVariable.categoryCode = 'kat123'
 categoryCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Catalog/CategoriesCreate', [
 	('catalogId') : GlobalVariable.catalogId,
 	('code') : GlobalVariable.categoryCode,
