@@ -316,7 +316,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Variable to use for any ID in cases</description>
-      <initValue>''</initValue>
+      <initValue>'ec22cd0e-7d28-48b2-b2c9-d3b19cc71e3b'</initValue>
       <name>id</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -553,5 +553,15 @@
       <description>katalon sample data contact</description>
       <initValue>'katalonContact'</initValue>
       <name>katalonContactName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>product visibility</description>
+      <initValue>'false'</initValue>
+      <name>isActive</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ec22cd0e-7d28-48b2-b2c9-d3b19cc71e3b'</initValue>
+      <name>patchProductId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
