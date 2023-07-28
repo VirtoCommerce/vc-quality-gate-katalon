@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://vcps-regression.paas.govirto.com/'</initValue>
+      <initValue>'https://vcptcore-loadtest.paas.govirto.com'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -236,7 +236,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not contain specsymbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not contain specsymbols.', ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not contain special symbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not contain special symbols.', ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
       <name>folderNameList</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
