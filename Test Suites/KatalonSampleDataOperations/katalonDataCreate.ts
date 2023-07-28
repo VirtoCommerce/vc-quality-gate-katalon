@@ -14,7 +14,7 @@
    <testCaseLink>
       <guid>36a44cde-5f43-4f76-b096-8c9c9d46adb9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/KatalonSampleData/KatalonOperatorCreate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
@@ -22,7 +22,7 @@
       <guid>9e7da2a4-f18a-4723-a4db-139f14cb12ca</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/KatalonSampleData/KatalonDataCreate</testCaseId>
+      <testCaseId>Test Cases/KatalonSampleData/KatalonDataRemove</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

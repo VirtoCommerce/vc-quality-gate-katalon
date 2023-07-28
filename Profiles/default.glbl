@@ -16,7 +16,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://vcptcore-qa.paas.govirto.com'</initValue>
+      <initValue>'https://vcptcore-loadtest.paas.govirto.com'</initValue>
       <name>urlBack</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
