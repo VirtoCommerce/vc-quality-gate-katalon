@@ -96,8 +96,8 @@ delete = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommer
 
 //Verify the created list was successfully deleted
 deleteVerification = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/MenuLinkIdGet',[
-	('storeId') : "B2B-store",
-	('menuListId') : "123421"
+	('storeId') : GlobalVariable.storeId,
+	('menuListId') : GlobalVariable.contentMenuId
 	]))
 WS.verifyResponseStatusCode(deleteVerification, 200)
 deleteVerificationResponse = deleteVerification.getResponseBodyContent()
