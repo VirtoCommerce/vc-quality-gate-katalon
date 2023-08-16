@@ -99,7 +99,9 @@ deleteVerification = WS.sendRequest(findTestObject('API/backWebServices/VirtoCom
 	('storeId') : GlobalVariable.storeId,
 	('menuListId') : GlobalVariable.contentMenuId
 	]))
-WS.verifyResponseStatusCode(deleteVerification, 500)
+WS.verifyResponseStatusCode(deleteVerification, 200)
+deleteVerificationResponse = deleteVerification.getResponseBodyContent()
+assert deleteVerificationResponse == "null"
 
 
 //Get the count list state after delete. Compare with start result
