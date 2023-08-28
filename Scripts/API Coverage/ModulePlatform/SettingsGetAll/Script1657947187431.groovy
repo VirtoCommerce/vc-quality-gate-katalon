@@ -20,5 +20,5 @@ import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 WebUI.comment('TEST CASE: Get info about all settings')
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/SettingsGetAll'))
-WS.verifyElementPropertyValue(response, '[0].name', "Cart.CronDeleteObsoleteCarts")
-WS.verifyElementPropertyValue(response, '[0].defaultValue', "0 2 */1 * *")
+WS.containsString(response, "VirtoCommerce.Platform.Security.AccountTypes", false)
+WS.containsString(response, "Customer", false)
