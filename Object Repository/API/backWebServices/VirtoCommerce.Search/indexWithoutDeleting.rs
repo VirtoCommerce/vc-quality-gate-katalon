@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[\n    {\n        \&quot;documentType\&quot;: \&quot;Product\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Member\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Category\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    }\n]&quot;,
+  &quot;text&quot;: &quot;[\n    {\n        \&quot;documentType\&quot;: \&quot;Product\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Member\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;ContentFile\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    },\n    {\n        \&quot;documentType\&quot;: \&quot;Category\&quot;,\n        \&quot;deleteExistingIndex\&quot;: false\n    }\n]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
