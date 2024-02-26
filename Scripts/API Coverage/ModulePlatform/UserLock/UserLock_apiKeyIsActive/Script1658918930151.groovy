@@ -55,7 +55,7 @@ body.add(new UrlEncodedBodyParameter('password', GlobalVariable.userPassword))
 getTokenObject.setBodyContent(new HttpUrlEncodedBodyContent(body))
 getToken = WS.sendRequest(getTokenObject)
 WS.verifyResponseStatusCode(getToken, 400)
-WS.verifyElementPropertyValue(getToken,'errorDescription', 'The username/password couple is invalid.')
+WS.verifyElementPropertyValue(getToken,'errorDescription', 'Login attempt failed. Please check your credentials.')
 
 
 'CHECK LOCKED STATE RESPONSE'
