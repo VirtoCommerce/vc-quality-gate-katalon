@@ -78,7 +78,7 @@ GlobalVariable.token = ((authorizeJson.token_type + ' ') + authorizeJson.access_
 	} else {
 	  if (userNameList[a] == userNameList[1]) {
 	  WS.verifyResponseStatusCode(response, 400)
-	  assert authorizeJson.errorDescription == "The username/password couple is invalid."
+	  assert authorizeJson.errorDescription == "Login attempt failed. Please check your credentials."
 	  } else {
 		WS.verifyResponseStatusCode(response, 200)
 		RequestObject modulesAccessObject = findTestObject('Object Repository/API/backWebServices/VirtoCommerce.Platform/Modules/ModulesGetInstalled')
