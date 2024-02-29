@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>placeholder bulk delete</description>
-   <name>contentPlaceholderDeleteBulk</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>077ffdcc-5882-49bd-a840-b973830c7d06</testCaseGuid>
-</TestCaseEntity>

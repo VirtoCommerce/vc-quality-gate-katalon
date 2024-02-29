@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>delete the created content Item</description>
-   <name>contentItemDelete</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>da9f7a2d-e85c-4b34-ba74-01de824260e7</testCaseGuid>
-</TestCaseEntity>

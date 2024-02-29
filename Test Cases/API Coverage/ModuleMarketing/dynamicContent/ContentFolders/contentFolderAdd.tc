@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>add content folder</description>
-   <name>contentFolderAdd</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>c7ad1303-c63d-4a4d-ba03-aeecd8c48de5</testCaseGuid>
-</TestCaseEntity>

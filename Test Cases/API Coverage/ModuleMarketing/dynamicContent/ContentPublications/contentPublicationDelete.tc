@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>delete created content publication</description>
-   <name>contentPublicationDelete</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>aa5fc9a8-877e-430b-bc32-10b3ad11d7b5</testCaseGuid>
-</TestCaseEntity>

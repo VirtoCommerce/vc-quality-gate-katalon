@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>publication bulk delete</description>
-   <name>contentPublicationDeleteBulk</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>f90228b8-9ec1-4349-a217-00f0a2d3ceff</testCaseGuid>
-</TestCaseEntity>

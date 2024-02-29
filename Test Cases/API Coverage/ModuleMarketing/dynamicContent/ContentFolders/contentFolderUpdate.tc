@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>update the created folder </description>
-   <name>contentFolderUpdate</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>a43500ce-4515-47a6-8598-972df43264d7</testCaseGuid>
-</TestCaseEntity>

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<TestCaseEntity>
-   <description>bulk delete content items</description>
-   <name>contentItemDeleteBulk</name>
-   <tag></tag>
-   <comment></comment>
-   <testCaseGuid>46b7e3f8-56c8-4074-97b9-0bb0b4882dde</testCaseGuid>
-</TestCaseEntity>
