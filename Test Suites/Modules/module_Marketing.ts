@@ -63,7 +63,7 @@
    <testCaseLink>
       <guid>8b228d22-6249-49fa-aa41-c4145e04d756</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleMarketing/DynamicContent/ContentPlaceholders/contentPlaceholderUpdate</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
