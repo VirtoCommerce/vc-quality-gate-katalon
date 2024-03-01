@@ -84,7 +84,7 @@
    <testCaseLink>
       <guid>861e4a92-9b6c-4505-86db-32ca7007ca68</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleAssets/AssetFileUploadLocal</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>

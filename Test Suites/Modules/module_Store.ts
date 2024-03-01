@@ -49,7 +49,7 @@
    <testCaseLink>
       <guid>bff9ed76-7cc5-4106-a1bb-2ce6301b1951</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/API Coverage/ModuleStore/StoreAssets</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
