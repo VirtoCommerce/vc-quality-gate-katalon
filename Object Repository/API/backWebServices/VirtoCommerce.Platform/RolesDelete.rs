@@ -5,7 +5,9 @@
    <tag></tag>
    <elementGuidId>7ffd1030-1118-461b-8f48-de3713a01615</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -21,6 +23,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>4c0a936b-e535-4c2a-af20-6fc0ef112dac</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,9 +31,11 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>18351026-8a16-4a5f-ad72-c585741112b0</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>DELETE</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/platform/security/roles?ids=${roleId}</restUrl>
    <serviceType>RESTful</serviceType>
@@ -42,7 +47,7 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'2147047e-f39c-42e7-b71c-ef3d5146f313'</defaultValue>
       <description></description>
       <id>a3145a1e-3fd7-4cca-8993-f644f80c947a</id>
       <masked>false</masked>
