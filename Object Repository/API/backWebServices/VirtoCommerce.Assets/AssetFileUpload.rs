@@ -5,7 +5,9 @@
    <tag></tag>
    <elementGuidId>5db6c83c-48dc-418f-b174-52cc5119c341</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -21,6 +23,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>f6cdf277-fbb6-439b-8217-81617712e5e5</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,10 +31,12 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>0efec25f-d2ee-40ab-b560-b9bba691cea5</webElementGuid>
    </httpHeaderProperties>
    <katalonVersion>7.9.1</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/assets?folderUrl=${folderUrl}&amp;url=${url}</restUrl>
    <serviceType>RESTful</serviceType>
@@ -43,14 +48,14 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>'http://localhost:9107/assets/qwefolder'</defaultValue>
+      <defaultValue>'https://vcptcore-loadtest.govirto.com/cms-content/assets/qwefolder'</defaultValue>
       <description></description>
       <id>1c7ff1bb-764e-4657-9382-9e432f7a1237</id>
       <masked>false</masked>
       <name>folderUrl</name>
    </variables>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'https://raw.githubusercontent.com/VirtoCommerce/vc-quality-gate-katalon/testfile/test.sitemap'</defaultValue>
       <description></description>
       <id>283376ab-a096-420c-9ad4-e8c70cc047d5</id>
       <masked>false</masked>
