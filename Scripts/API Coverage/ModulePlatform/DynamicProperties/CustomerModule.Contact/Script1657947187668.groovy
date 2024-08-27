@@ -74,7 +74,7 @@ firstDictionaryItemDelete = WS.sendRequestAndVerify(findTestObject('API/backWebS
 	]))
 
 
-'VERIFY THAT THE DICTIONARY ITEM HAS BEEN ADDED TO THE PROPERTY'
+'VERIFY THAT THE DICTIONARY ITEM HAS BEEN DELETED'
 deletedFirstDictionaryItemSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/DynamicPropertyDictionaryItemSearch', [
 	('propertyType') : propertyType,
 	('propertyId') : propertyId,
@@ -179,3 +179,4 @@ deletedPropertySearch = WS.sendRequestAndVerify(findTestObject('API/backWebServi
 	]))
 WS.verifyElementPropertyValue(deletedPropertySearch, 'totalCount', 0)
 
+/**/

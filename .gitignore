@@ -52,6 +52,8 @@ settings/internal/com.kms.katalon.composer.testcase.properties
 
 Object Repository/API/backWebServices/_DEBUG
 Scripts/API Coverage/_DEBUG/
+Test Cases/_DEBUG/
+Scripts/_DEBUG/
 Test Cases/API Coverage/_DEBUG.tc
 Test Suites/Modules/_DEBUG.ts
 .groovy/

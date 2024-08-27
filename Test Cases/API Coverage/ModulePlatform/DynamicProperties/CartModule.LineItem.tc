@@ -4,5 +4,6 @@
    <name>CartModule.LineItem</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>d70d218c-13f4-437b-8f02-cb2165e70890</testCaseGuid>
 </TestCaseEntity>

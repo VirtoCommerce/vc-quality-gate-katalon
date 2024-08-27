@@ -5,7 +5,9 @@
    <tag></tag>
    <elementGuidId>d9e4d179-f974-4bb8-a3b2-9ce4f3dad0c8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -21,6 +23,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>cc156d82-8677-40ef-a26c-b6946ed50206</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,11 +31,13 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>99089e11-4fe2-4d94-b20d-5806e9068aa6</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${propertyIds}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/properties?propertyIds=${propertyIds}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

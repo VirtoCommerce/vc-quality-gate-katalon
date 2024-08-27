@@ -5,7 +5,9 @@
    <tag></tag>
    <elementGuidId>be2ac8b7-a272-4277-854b-8bb40da166bb</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>true</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -33,8 +35,9 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${propertyId}/dictionaryitems?ids=${dictionaryItemIds}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/dictionaryitems?ids=${dictionaryItemIds}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -58,7 +61,7 @@
       <name>propertyId</name>
    </variables>
    <variables>
-      <defaultValue>'f253e63a-84e7-446e-a871-c1486bffd117'</defaultValue>
+      <defaultValue>'f0322809-27a5-424c-8f1e-b0dffa1f03f3'</defaultValue>
       <description></description>
       <id>dca3cb61-d931-4692-863e-86b7458d5eb1</id>
       <masked>false</masked>

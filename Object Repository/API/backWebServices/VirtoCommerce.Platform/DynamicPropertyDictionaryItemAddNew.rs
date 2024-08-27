@@ -5,12 +5,14 @@
    <tag></tag>
    <elementGuidId>f72d7a3f-b98f-4240-8d48-d855dacd38a2</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;[{\n    \n    \&quot;name\&quot;: \&quot;${name}\&quot;\n}]&quot;,
+  &quot;text&quot;: &quot;[{\n    \&quot;propertyId\&quot;: \&quot;${propertyId}\&quot;,\n    \&quot;name\&quot;: \&quot;${name}\&quot;\n}]&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -33,8 +35,9 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${propertyId}/dictionaryitems</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/dictionaryitems?propertyId=${propertyId}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -51,7 +54,7 @@
       <name>propertyType</name>
    </variables>
    <variables>
-      <defaultValue>'88884a93-f165-424b-8a7c-159744e55fbf'</defaultValue>
+      <defaultValue>'9f956556-90c7-4a82-8b4c-d75b7899b503'</defaultValue>
       <description></description>
       <id>dca3cb61-d931-4692-863e-86b7458d5eb1</id>
       <masked>false</masked>

@@ -5,12 +5,14 @@
    <tag></tag>
    <elementGuidId>4a50e80e-8321-4cf9-9093-cbb7fd847b65</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;description\&quot;: \&quot;${description}\&quot;,\n  \&quot;objectType\&quot;: \&quot;${propertyType}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;id\&quot;: \&quot;${propertyId}\&quot;,\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;description\&quot;: \&quot;${description}\&quot;,\n  \&quot;objectType\&quot;: \&quot;${propertyType}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -33,8 +35,9 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>PUT</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties/${propertyId}</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/properties</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -44,21 +47,21 @@
    <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
-      <defaultValue>''</defaultValue>
+      <defaultValue>'ad249077-9ee7-4c5b-a91e-734eabc00ef3'</defaultValue>
       <description></description>
       <id>0e6ce4e9-1582-4a3b-ba4d-8be17e105388</id>
       <masked>false</masked>
       <name>propertyId</name>
    </variables>
    <variables>
-      <defaultValue>'UPD new'</defaultValue>
+      <defaultValue>'qweqweqweqwe'</defaultValue>
       <description></description>
       <id>7d4fc892-d213-4ec8-80fd-ffe13d5adc3f</id>
       <masked>false</masked>
       <name>name</name>
    </variables>
    <variables>
-      <defaultValue>'VirtoCommerce.StoreModule.Core.Model.Store'</defaultValue>
+      <defaultValue>'VirtoCommerce.CartModule.Core.Model.LineItem'</defaultValue>
       <description></description>
       <id>76a79459-5404-45e3-8f34-48b9d02845a2</id>
       <masked>false</masked>

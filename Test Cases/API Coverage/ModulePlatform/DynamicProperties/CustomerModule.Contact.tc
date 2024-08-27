@@ -5,5 +5,6 @@
    <tag></tag>
    <comment>TEST CASE: Add new property to VirtoCommerce.CustomerModule.Core.Model.Contact
 TEST CASE: Update property VirtoCommerce.CustomerModule.Core.Model.Contact</comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>d0742344-a377-46b6-916e-b76975d56c0b</testCaseGuid>
 </TestCaseEntity>

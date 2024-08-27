@@ -80,3 +80,4 @@ responseSearch3 = WS.sendRequestAndVerify(findTestObject('API/backWebServices/Vi
 	('keyword') : propertyName
 	]))
 WS.verifyElementPropertyValue(responseSearch3, 'totalCount', 0)
+/**/

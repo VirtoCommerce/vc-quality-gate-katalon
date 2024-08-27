@@ -5,12 +5,14 @@
    <tag></tag>
    <elementGuidId>52ff30a4-b594-4000-aeae-cec3854a9ec1</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;isRequired\&quot;: false,\n  \&quot;isArray\&quot;: \&quot;${isArray}\&quot;,\n  \&quot;isMultilingual\&quot;: \&quot;${isMultilingual}\&quot;,\n  \&quot;isDictionary\&quot;: \&quot;${isDictionary}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;: \&quot;${name}\&quot;,\n  \&quot;valueType\&quot;: \&quot;${valueType}\&quot;,\n  \&quot;objectType\&quot;: \&quot;${propertyType}\&quot;,\n  \&quot;isRequired\&quot;: false,\n  \&quot;isArray\&quot;: \&quot;${isArray}\&quot;,\n  \&quot;isMultilingual\&quot;: \&quot;${isMultilingual}\&quot;,\n  \&quot;isDictionary\&quot;: \&quot;${isDictionary}\&quot;,\n  \&quot;displayNames\&quot;: [\n    {\n      \&quot;locale\&quot;: \&quot;de-DE\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;en-US\&quot;\n    },\n    {\n      \&quot;locale\&quot;: \&quot;fr-FR\&quot;\n    }\n  ]\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -21,6 +23,7 @@
       <name>Content-Type</name>
       <type>Main</type>
       <value>application/json</value>
+      <webElementGuid>fd73aba3-e6ef-4a51-89c3-4e58cb12753d</webElementGuid>
    </httpHeaderProperties>
    <httpHeaderProperties>
       <isSelected>true</isSelected>
@@ -28,11 +31,13 @@
       <name>api_key</name>
       <type>Main</type>
       <value>${GlobalVariable.api_key}</value>
+      <webElementGuid>617ad63a-19e4-4355-b1f8-81662043e274</webElementGuid>
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>POST</restRequestMethod>
-   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/types/${propertyType}/properties</restUrl>
+   <restUrl>${GlobalVariable.urlBack}/api/platform/dynamic/properties</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
