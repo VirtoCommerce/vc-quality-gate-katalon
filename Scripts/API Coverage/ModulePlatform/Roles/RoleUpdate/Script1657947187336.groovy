@@ -23,7 +23,7 @@ GlobalVariable.roleName = GlobalVariable.roleName + "Updated"
 WebUI.comment(GlobalVariable.roleName)
 
 // set permission parameters to assign it to role
-GlobalVariable.rolePermission = "{\"id\":\"security:call_api\",\"name\":\"security:call_api\",\"assignedScopes\":[],\"availableScopes\":[]}"
+GlobalVariable.rolePermission = "{\"name\":\"platform:setting:access\",\"moduleId\":null,\"groupName\":\"Platform\",\"assignedScopes\":[],\"availableScopes\":[],\"isChecked\":true}"
 println GlobalVariable.rolePermission
 
 response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/RolesUpdate', [
@@ -33,3 +33,10 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('permissions') : GlobalVariable.rolePermission
 	]))
 WS.verifyElementPropertyValue(response, 'succeeded', true)
+
+
+
+
+
+
+

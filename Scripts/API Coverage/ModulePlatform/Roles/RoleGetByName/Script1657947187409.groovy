@@ -24,8 +24,9 @@ response = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoComm
 	('roleName') : GlobalVariable.roleName
 	]))
 WS.verifyElementPropertyValue(response, 'description', 'Description Updated')
-WS.verifyElementPropertyValue(response, 'permissions[0].id', "security:call_api")
-WS.verifyElementPropertyValue(response, 'permissions[0].name', "security:call_api")
+WS.verifyElementPropertyValue(response, 'permissions[0].moduleId', "null")
+WS.verifyElementPropertyValue(response, 'permissions[0].name', "platform:setting:access")
+WS.verifyElementPropertyValue(response, 'permissions[0].groupName', "Platform")
 WS.verifyElementPropertyValue(response, 'permissions[0].assignedScopes', '[]')
 WS.verifyElementPropertyValue(response, 'permissions[0].availableScopes', '[]')
 

@@ -7,5 +7,6 @@
 id
 GlobalVariable.roleID
 name</comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>fc4d6400-e2fd-4710-afdf-524e390b5c95</testCaseGuid>
 </TestCaseEntity>
