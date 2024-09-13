@@ -70,7 +70,6 @@ relativeUrl = WS.getElementPropertyValue(postData, '[0].relativeUrl')
 
 
 //Send ContentMove request to rename the blog with the FORBIDDEN EXTENSION file
-errorMessage = 'File extension .exe is not allowed. Please contact administrator.'
 forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -78,7 +77,7 @@ forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommer
 	('newUrl') : forbiddenUrl
 	]))
 WS.verifyResponseStatusCode(forbiddenRename, 500)
-WS.containsString(forbiddenRename, errorMessage, false)
+WS.containsString(forbiddenRename, GlobalVariable.forbiddenExtensionErrorMessage, false)
 
 //Send ContentMove request to rename the blog with the allowed extension file
 rename = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [

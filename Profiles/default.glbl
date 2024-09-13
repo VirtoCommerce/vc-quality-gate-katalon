@@ -554,4 +554,9 @@
       <initValue>'katalonContact'</initValue>
       <name>katalonContactName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'File extension .exe is not allowed. Please contact administrator.'</initValue>
+      <name>forbiddenExtensionErrorMessage</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

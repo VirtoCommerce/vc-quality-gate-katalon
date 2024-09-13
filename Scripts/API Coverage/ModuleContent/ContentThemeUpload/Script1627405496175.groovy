@@ -91,7 +91,6 @@ forbiddenUrl = oldUrl.replaceAll(fileName, forbiddenFileName)
 
 
 'Send ContentMove request to rename the page with the FORBIDDEN EXTENSION file'
-errorMessage = 'File extension .exe is not allowed. Please contact administrator.'
 forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,
@@ -106,7 +105,7 @@ WS.verifyResponseStatusCode(forbiddenRename, 500)
  * Here's a jira link:
  * https://virtocommerce.atlassian.net/browse/PT-4899
  */
-WS.containsString(forbiddenRename, errorMessage, false)
+WS.containsString(forbiddenRename, GlobalVariable.forbiddenExtensionErrorMessage, false)
 
 
 'Delete the created folder'

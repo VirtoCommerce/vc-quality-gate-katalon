@@ -31,7 +31,6 @@ FailureHandling.STOP_ON_FAILURE)
 
 //SET THE FILE NAME AND THE ERROR MESSAGE
 fileName = 'forbidden.exe'
-errorMessage = 'File extension .exe is not allowed. Please contact administrator.'
 
 
 //CREATE A MAP OF ENDPOINTS TO CHECK AND SEND EACH VALUE TO THE ENDPOINT
@@ -44,5 +43,5 @@ for (String contentType : contentTypes.keySet()) {
 		('fileName') : fileName
 		]))//;FailureHandling.OPTIONAL
 	WS.verifyResponseStatusCode(upload, 405)
-	WS.containsString(upload, errorMessage, false)
+	WS.containsString(upload, GlobalVariable.forbiddenExtensionErrorMessage, false)
 	}
