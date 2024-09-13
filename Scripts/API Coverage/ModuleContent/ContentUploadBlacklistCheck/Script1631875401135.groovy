@@ -31,7 +31,7 @@ FailureHandling.STOP_ON_FAILURE)
 
 //SET THE FILE NAME AND THE ERROR MESSAGE
 fileName = 'forbidden.exe'
-errorMessage = 'This extension is not allowed. Please contact administrator.'
+errorMessage = 'File extension .exe is not allowed. Please contact administrator.'
 
 
 //CREATE A MAP OF ENDPOINTS TO CHECK AND SEND EACH VALUE TO THE ENDPOINT

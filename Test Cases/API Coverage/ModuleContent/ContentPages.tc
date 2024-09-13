@@ -10,5 +10,6 @@
    <name>ContentPages</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>70573ee6-77d6-4c85-b4e5-cf4781af6504</testCaseGuid>
 </TestCaseEntity>

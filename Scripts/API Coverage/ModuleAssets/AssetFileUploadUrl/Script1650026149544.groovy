@@ -25,7 +25,7 @@ FailureHandling.STOP_ON_FAILURE)
 
 
 //UPLOAD A FILE WITH THE FORBIDDEN EXTENSION
-errorMessage = 'This extension is not allowed. Please contact administrator.'
+errorMessage = 'File extension .exe is not allowed. Please contact administrator.'
 forbiddenFileUrl = 'https://github.com/VirtoCommerce/vc-quality-gate-katalon/blob/b0a3649565d5555c1ded9e5d56955c4c5b01aa78/TestFiles/forbidden.exe'
 uploadForbiddenFileUrl = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Assets/AssetFileUpload', [
 	('folderUrl') : GlobalVariable.folderUrl,

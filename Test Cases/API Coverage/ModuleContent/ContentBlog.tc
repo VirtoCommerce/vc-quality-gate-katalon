@@ -10,5 +10,6 @@
    <name>ContentBlog</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>869ed2b6-c2a6-4b73-805e-d32d4683a8d0</testCaseGuid>
 </TestCaseEntity>

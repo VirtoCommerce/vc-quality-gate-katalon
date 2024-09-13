@@ -87,7 +87,7 @@ newUrl = oldUrl.replaceAll(fileName, newFileName)
 
 
 //Send ContentMove request to rename the page with the FORBIDDEN EXTENSION file
-errorMessage = 'This extension is not allowed. Please contact administrator.'
+errorMessage = 'File extension .exe is not allowed. Please contact administrator.'
 forbiddenRename = WS.sendRequest(findTestObject('API/backWebServices/VirtoCommerce.Content/ContentMove', [
 	('contentType') : GlobalVariable.contentType ,
 	('storeId') : GlobalVariable.storeId,

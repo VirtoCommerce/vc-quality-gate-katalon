@@ -6,5 +6,6 @@
    <name>ContentUploadBlacklistCheck</name>
    <tag></tag>
    <comment></comment>
+   <recordOption>OTHER</recordOption>
    <testCaseGuid>2ca99c89-de0c-4eba-a76a-2019db7edace</testCaseGuid>
 </TestCaseEntity>
