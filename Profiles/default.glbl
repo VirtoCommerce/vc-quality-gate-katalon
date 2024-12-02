@@ -236,7 +236,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Maximum length is 63. You entered 64', ('qw') : 'Minimum length is 3. You entered 2', ('_qw') : 'Folder name must not contain special symbols.', ('-qw') : 'Folder name must not starts with dash symbol.', ('QWERTY') : 'Folder name must not contain special symbols.', ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
+      <initValue>[('qweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqweqwea') : 'Folder name must be at most 63 characters long. You entered 64 characters.', ('qw') : 'Folder name must be at least 3 characters long. You entered 2 characters.', ('_qw') : 'Folder name must only contain lowercase letters, numbers, spaces, and single dashes.', ('-qw') : 'Folder name must not start with a dash symbol.', ('QWERTY') : 'Folder name must only contain lowercase letters, numbers, spaces, and single dashes.', ('qwe--qwe') : 'Folder name must not contain consecutive dash symbols.']</initValue>
       <name>folderNameList</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
