@@ -24,12 +24,14 @@ import groovy.json.JsonOutput
 
 
 WebUI.comment("TEST CASE : Create new organization")
+Random rnd = new Random()
+userEmail = rnd.nextInt(100)+'@email.com'
 def responseMemberCreate = WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberCreate', [
 		('memberType') : GlobalVariable.memberType[0],
 		('name') : GlobalVariable.firstName,
 		('firstName') : GlobalVariable.firstName,
 		('lastName') : GlobalVariable.lastName,
-		('fullName') : GlobalVariable.contactName,
+		('fullName') : GlobalVariable.contactName
 		]))
 
 GlobalVariable.memberId = WS.getElementPropertyValue(responseMemberCreate, 'id')
@@ -58,7 +60,7 @@ WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Custom
 
 
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+//WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
 
 
 WebUI.comment('TEST CASE: Check Contact in Org')
@@ -70,9 +72,8 @@ WS.verifyElementPropertyValue(responseContactsGet, 'organizations[0]', null)
 
 WebUI.comment("TEST CASE : Create user in account-contact")
 GlobalVariable.userName = 'tempuser'
-Random rnd = new Random()
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserCreate', [
-	('email') : rnd.nextInt(100)+'@email.com',
+	('email') : userEmail ,
 	('userName') : GlobalVariable.userName,
 	('contactId') : GlobalVariable.contactId
 	]))
@@ -89,18 +90,15 @@ WebUI.comment("TEST CASE : Delete created user")
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Platform/UserDelete', [
 	('userName') : GlobalVariable.userName
 	]))
-WS.delay(10)
-
 
 WebUI.comment(" TEST CASE : Delete all created members")
 WS.sendRequestAndVerify(findTestObject('API/backWebServices/VirtoCommerce.Customer/Members/MemberDeleteBulk', [
-	('keyword') : GlobalVariable.firstName
+	('searchPhrase') : GlobalVariable.firstName
 	]))
 
-
 // Re-index important to search items
-WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
-WS.delay(10)
+//WebUI.callTestCase(findTestCase('API Coverage/ModuleSearch/DropIndex'), [ : ], FailureHandling.STOP_ON_FAILURE)
+//WS.delay(10)
 
 
 WebUI.comment('TEST CASE : Search members. Count 0 in result - contact was deleted')
@@ -109,3 +107,5 @@ responseContactsSearch = WS.sendRequestAndVerify(findTestObject('API/backWebServ
 	]))
 // Count verification couldn't be stable for use, because it depends on the time of build index
 WS.verifyElementPropertyValue(responseContactsSearch, 'results', '[]')
+
+/**/

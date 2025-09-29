@@ -5,7 +5,9 @@
    <tag></tag>
    <elementGuidId>e6755879-0ed0-41e6-9b7f-19359e10d401</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <autoUpdateContent>false</autoUpdateContent>
    <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
@@ -33,6 +35,7 @@
    </httpHeaderProperties>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/members</restUrl>
    <serviceType>RESTful</serviceType>

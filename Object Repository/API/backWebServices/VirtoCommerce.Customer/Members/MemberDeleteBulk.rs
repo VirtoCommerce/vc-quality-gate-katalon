@@ -5,12 +5,14 @@
    <tag></tag>
    <elementGuidId>74c1e500-2cab-4a44-83d2-aa1158ac23ce</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
    <useRalativeImagePath>false</useRalativeImagePath>
-   <connectionTimeout>0</connectionTimeout>
+   <autoUpdateContent>false</autoUpdateContent>
+   <connectionTimeout>-1</connectionTimeout>
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;deepSearch\&quot;: true,\n  \&quot;searchPhrase\&quot;: \&quot;${keyword}\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 10\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;keyword\&quot;: \&quot;${searchPhrase}\&quot;,\n  \&quot;deepSearch\&quot;: true,\n  \&quot;sort\&quot;: \&quot;\&quot;,\n  \&quot;skip\&quot;: 0,\n  \&quot;take\&quot;: 20\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
@@ -31,8 +33,9 @@
       <value>${GlobalVariable.api_key}</value>
       <webElementGuid>a4bb2490-088d-49eb-a6fc-9530898b28b1</webElementGuid>
    </httpHeaderProperties>
-   <maxResponseSize>0</maxResponseSize>
+   <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
+   <path></path>
    <restRequestMethod>POST</restRequestMethod>
    <restUrl>${GlobalVariable.urlBack}/api/members/delete</restUrl>
    <serviceType>RESTful</serviceType>
@@ -41,7 +44,7 @@
    <soapRequestMethod></soapRequestMethod>
    <soapServiceEndpoint></soapServiceEndpoint>
    <soapServiceFunction></soapServiceFunction>
-   <socketTimeout>0</socketTimeout>
+   <socketTimeout>-1</socketTimeout>
    <useServiceInfoFromWsdl>true</useServiceInfoFromWsdl>
    <variables>
       <defaultValue>'qwe'</defaultValue>
