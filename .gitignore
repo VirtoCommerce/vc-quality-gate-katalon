@@ -57,3 +57,4 @@ Scripts/_DEBUG/
 Test Cases/API Coverage/_DEBUG.tc
 Test Suites/Modules/_DEBUG.ts
 .groovy/
+/.DS_Store
